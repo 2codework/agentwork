@@ -1,0 +1,2164 @@
+{
+  "schema_version": "creative.video.research.v1",
+  "checked_at": "2026-10-28",
+  "scope": "视频/动画/电影Agent专题：12个原创案例、16个技术节点；代表性研究而非穷尽目录。",
+  "execution_status": "read_only_primary_source_research_and_original_authoring_only",
+  "sources": [
+    {
+      "id": "vid-src-wan",
+      "title": "Wan2.2",
+      "url": "https://github.com/Wan-Video/Wan2.2",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": "2025-07-28",
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "2.2",
+      "evidence_locator": "README: model table / TI2V / I2V / S2V",
+      "evidence_scope": "官方公开推理代码与权重；5B TI2V示例24GB显存，A14B I2V及S2V示例80GB；这是指定配置的门槛，不是所有流程的成本。",
+      "date_kind": "announcement",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-ltxv",
+      "title": "LTX-Video",
+      "url": "https://github.com/Lightricks/LTX-Video",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": null,
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "LTX-Video legacy",
+      "evidence_locator": "README: New LTX-2",
+      "evidence_scope": "维护者声明LTX-2是主要开发入口；保留旧流程用于历史比较，迁移必须重核权重和接口。",
+      "date_kind": "unknown",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-ltx2",
+      "title": "LTX-2",
+      "url": "https://github.com/Lightricks/LTX-2",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": null,
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "LTX-2 family; revision not pinned",
+      "evidence_locator": "README / LICENSE / LICENSE-2 / LICENSE-2_x",
+      "evidence_scope": "官方音视频生成与LoRA训练仓库；存在多份许可，不能从开放代码推断全部权重无条件商用。",
+      "date_kind": "unknown",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-cog",
+      "title": "CogVideoX",
+      "url": "https://github.com/zai-org/CogVideo",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": "2024-08-06",
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "CogVideoX-2B/5B",
+      "evidence_locator": "README: Model-License / News",
+      "evidence_scope": "旧THUDM URL跳转此官方仓库；2B与5B权重许可不同，代码Apache-2.0并不覆盖所有权重。",
+      "date_kind": "announcement",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-cogpaper",
+      "title": "CogVideoX paper",
+      "url": "https://arxiv.org/abs/2408.06072",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": "2024-08-12",
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "v3 2025-03-26",
+      "evidence_locator": "abstract / submission history",
+      "evidence_scope": "视频时空VAE和扩散Transformer方法；论文版本性能不等于每个历史权重规格。",
+      "date_kind": "paper_submission",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-animatediff",
+      "title": "AnimateDiff",
+      "url": "https://github.com/guoyww/AnimateDiff",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": null,
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "revision unknown",
+      "evidence_locator": "README / license",
+      "evidence_scope": "运动模块框架，不是完整制片Agent；基础图像权重与LoRA许可另查。",
+      "date_kind": "unknown",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-animatepaper",
+      "title": "AnimateDiff paper",
+      "url": "https://arxiv.org/abs/2307.04725",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": "2023-07-10",
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "v2 2024-02-08",
+      "evidence_locator": "abstract / submission history",
+      "evidence_scope": "为同一基础图像模型家族增加可迁移运动模块；历史方法教学保留，不声称官方弃用。",
+      "date_kind": "paper_submission",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-tune",
+      "title": "Tune-A-Video",
+      "url": "https://github.com/showlab/Tune-A-Video",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": null,
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "ICCV 2023 implementation",
+      "evidence_locator": "README",
+      "evidence_scope": "单视频微调研究实现；不能默认兼容最新环境。",
+      "date_kind": "unknown",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-tunepaper",
+      "title": "Tune-A-Video paper",
+      "url": "https://arxiv.org/abs/2212.11565",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": "2022-12-22",
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "v2 2023-03-17",
+      "evidence_locator": "abstract / submission history",
+      "evidence_scope": "单视频微调与结构引导的历史路线。",
+      "date_kind": "paper_submission",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-comfy",
+      "title": "ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": null,
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "revision not pinned",
+      "evidence_locator": "README",
+      "evidence_scope": "图式推理编排工具；自定义节点是代码供应链边界，图本身不等于自主Agent。",
+      "date_kind": "unknown",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-whisper",
+      "title": "Whisper",
+      "url": "https://github.com/openai/whisper",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": null,
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "revision not pinned",
+      "evidence_locator": "README",
+      "evidence_scope": "自动语音识别工具/模型；不是配音或音色克隆。",
+      "date_kind": "unknown",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-whisperx",
+      "title": "WhisperX",
+      "url": "https://github.com/m-bain/whisperX",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": null,
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "revision not pinned",
+      "evidence_locator": "README: Diarization / Limitations",
+      "evidence_scope": "支持对齐流程；重叠语音及字典外内容有局限；说话人分离路径需要额外模型协议和令牌，本任务不启用。",
+      "date_kind": "unknown",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-ffmpeg",
+      "title": "FFmpeg",
+      "url": "https://ffmpeg.org/ffmpeg.html",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": null,
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "online documentation; local binary unknown",
+      "evidence_locator": "official command documentation",
+      "evidence_scope": "媒体处理工具；使用前核验构建参数和编码器许可。",
+      "date_kind": "unknown",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-otio",
+      "title": "OpenTimelineIO",
+      "url": "https://github.com/AcademySoftwareFoundation/OpenTimelineIO",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": null,
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "revision not pinned",
+      "evidence_locator": "README",
+      "evidence_scope": "剪辑时间线交换数据与API，不是视频渲染器。",
+      "date_kind": "unknown",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-kdenlive",
+      "title": "Kdenlive speech to text",
+      "url": "https://docs.kdenlive.org/en/effects_and_filters/speech_to_text.html",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": null,
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "26.08 manual",
+      "evidence_locator": "Speech Recognition",
+      "evidence_scope": "官方文档描述转录、字幕和按转录选片；功能需先配置识别引擎与模型。",
+      "date_kind": "unknown",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-filmagent",
+      "title": "FilmAgent",
+      "url": "https://filmagent.github.io/",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": null,
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "research project page",
+      "evidence_locator": "abstract / Unity Environment",
+      "evidence_scope": "虚拟3D空间的多角色制片研究；不能外推为任意实拍场景或免费端到端电影制作。",
+      "date_kind": "unknown",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-vimax",
+      "title": "ViMax",
+      "url": "https://github.com/HKUDS/ViMax",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": "2026-07-20",
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "v1.2.0 announcement; head not pinned",
+      "evidence_locator": "README: News / Quick Start",
+      "evidence_scope": "Agent编排脚本分镜及生成；示例要求LLM/图像/视频API配置，不能等同已支持无账号本地免费替代。",
+      "date_kind": "announcement",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-videoagent",
+      "title": "HKUDS VideoAgent",
+      "url": "https://github.com/HKUDS/VideoAgent",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": null,
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "head not pinned",
+      "evidence_locator": "README",
+      "evidence_scope": "视频理解、编辑、重制Agent框架；仅核验文档，无独立复现。",
+      "date_kind": "unknown",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-videoagentpaper",
+      "title": "VideoAgent editing paper",
+      "url": "https://arxiv.org/abs/2606.23327",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": "2026-06-22",
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "v1 metadata reviewed",
+      "evidence_locator": "abstract / metadata",
+      "evidence_scope": "编辑Agent研究；不导入作者成绩为通用质量承诺。",
+      "date_kind": "paper_submission",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    },
+    {
+      "id": "vid-src-understand",
+      "title": "VideoAgent long-form understanding",
+      "url": "https://arxiv.org/abs/2403.10517",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "publication_date": "2024-03-15",
+      "publication_date_note": "所示日期是来源标明事件/首次投稿，非本次核验日；null表示未核验",
+      "version": "paper metadata reviewed",
+      "evidence_locator": "abstract / metadata",
+      "evidence_scope": "长视频理解问答Agent，与HKUDS编辑框架同名但不是同一项目。",
+      "date_kind": "paper_submission",
+      "license_status": "未逐条审核；公开访问不等于许可复用。代码、权重、演示媒体与网站文本分别处理；本研究不复制外部媒体或代码。"
+    }
+  ],
+  "cases": [
+    {
+      "id": "video-brief-storyboard",
+      "title": "从一分钟原创短故事到可拍分镜",
+      "summary": "原创教学设计：从一分钟原创短故事到可拍分镜",
+      "roles": [
+        "视频制作学习者",
+        "内容编辑",
+        "Agent工作流设计者"
+      ],
+      "industries": [
+        "教育",
+        "创意内容"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "input": "原创故事：纸机器人阿棱在温室发现滴水，通过移动空杯保存雨水；无真实人物、品牌或现有影视角色。目标60秒，6镜头。",
+      "prompt": "将故事拆为6镜头；每镜写shot_id、时长、动作、景别、机位、起止状态、音效、禁改属性。只用一个主要动作，不添加科学结论。",
+      "steps": [
+        {
+          "title": "脚本约束",
+          "body": "列出起因、行动、结果各一句，建立阿棱为蓝色纸立方体、右侧白圆标记的角色卡。",
+          "check": "不得增添第二主角，三段因果可复述。"
+        },
+        {
+          "title": "分镜与连续性",
+          "body": "画6张原创线框草图，镜头时长8/10/10/12/12/8秒；把杯子左右位置和水位写入状态表。",
+          "check": "总时长60秒，前镜结束状态等于后镜开始状态。"
+        },
+        {
+          "title": "静态预演",
+          "body": "用草图和临时字幕排出animatic；只审节奏，不把静帧宣称成模型生成电影。",
+          "check": "观众无需旁白即可指出移动杯子的原因。"
+        },
+        {
+          "title": "审片冻结",
+          "body": "记录每镜通过/重做理由，冻结脚本v1与素材清单；生成阶段另行授权。",
+          "check": "全部镜头有输入与验收记录。"
+        }
+      ],
+      "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+      "rubric": [
+        "不得增添第二主角，三段因果可复述。",
+        "总时长60秒，前镜结束状态等于后镜开始状态。",
+        "观众无需旁白即可指出移动杯子的原因。",
+        "全部镜头有输入与验收记录。"
+      ],
+      "failure_recovery": "剧情漂移时回到三句梗概；镜头过长则拆动作，不靠延长生成硬凑。",
+      "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+      "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+      "compute_cost": "CPU可完成文本与静态预演；LLM和视频调用为可选且未执行。",
+      "source_ids": [
+        "vid-src-vimax",
+        "vid-src-filmagent",
+        "vid-src-otio"
+      ],
+      "sources": [
+        {
+          "title": "ViMax",
+          "url": "https://github.com/HKUDS/ViMax",
+          "evidence": "primary"
+        },
+        {
+          "title": "FilmAgent",
+          "url": "https://filmagent.github.io/",
+          "evidence": "primary"
+        },
+        {
+          "title": "OpenTimelineIO",
+          "url": "https://github.com/AcademySoftwareFoundation/OpenTimelineIO",
+          "evidence": "primary"
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+      "practice_status": "original_teaching_template_not_executed",
+      "modelatlas_node_ids": [
+        "vid-vimax",
+        "vid-filmagent",
+        "vid-otio"
+      ],
+      "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+      "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+    },
+    {
+      "id": "video-product-i2v",
+      "title": "虚构产品15秒图生视频演示",
+      "summary": "原创教学设计：虚构产品15秒图生视频演示",
+      "roles": [
+        "视频制作学习者",
+        "内容编辑",
+        "Agent工作流设计者"
+      ],
+      "industries": [
+        "教育",
+        "创意内容"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "input": "原创无品牌黄色保温杯正面、侧面、盖子三张自绘图；虚构说明只写外观，不宣称保温时长。",
+      "prompt": "基于已批准首帧做单次缓慢环绕；杯体保持圆柱、无新增字样；每镜只改变相机或盖子一个因素。",
+      "steps": [
+        {
+          "title": "资产审查",
+          "body": "对三视图建立asset_id和尺寸，透明/反射细节改为可验证的简化材质。",
+          "check": "无商标与侵权包装，三视图颜色一致。"
+        },
+        {
+          "title": "低成本镜头测试",
+          "body": "设计3段5秒镜头，先选一个模型支持的短片配置；记录seed、分辨率、帧数和参考图SHA。",
+          "check": "不把seed当一致性保证；只批准轮廓稳定小样。"
+        },
+        {
+          "title": "字幕后置",
+          "body": "镜内不生成卖点文字，剪辑阶段叠加“外观概念演示”。",
+          "check": "盖子没有穿模，杯把不增减，字幕可读。"
+        },
+        {
+          "title": "导出比较",
+          "body": "输出横版与竖版草案，保留原画幅检查裁切。",
+          "check": "15秒±1帧；产品无关键区域被切掉。"
+        }
+      ],
+      "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+      "rubric": [
+        "无商标与侵权包装，三视图颜色一致。",
+        "不把seed当一致性保证；只批准轮廓稳定小样。",
+        "盖子没有穿模，杯把不增减，字幕可读。",
+        "15秒±1帧；产品无关键区域被切掉。"
+      ],
+      "failure_recovery": "形状漂移退回静态三视图加相机推拉；不反复生成直到耗尽预算。",
+      "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+      "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+      "compute_cost": "Wan示例硬件门槛见节点；先批准一次小样，再根据实际每秒成本设置预算。",
+      "source_ids": [
+        "vid-src-wan",
+        "vid-src-comfy",
+        "vid-src-ffmpeg"
+      ],
+      "sources": [
+        {
+          "title": "Wan2.2",
+          "url": "https://github.com/Wan-Video/Wan2.2",
+          "evidence": "primary"
+        },
+        {
+          "title": "ComfyUI",
+          "url": "https://github.com/Comfy-Org/ComfyUI",
+          "evidence": "primary"
+        },
+        {
+          "title": "FFmpeg",
+          "url": "https://ffmpeg.org/ffmpeg.html",
+          "evidence": "primary"
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+      "practice_status": "original_teaching_template_not_executed",
+      "modelatlas_node_ids": [
+        "vid-wan22",
+        "vid-comfyui",
+        "vid-ffmpeg"
+      ],
+      "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+      "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+    },
+    {
+      "id": "video-training-chapters",
+      "title": "十分钟培训课拆成可维护章节",
+      "summary": "原创教学设计：十分钟培训课拆成可维护章节",
+      "roles": [
+        "视频制作学习者",
+        "内容编辑",
+        "Agent工作流设计者"
+      ],
+      "industries": [
+        "教育",
+        "创意内容"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "input": "原创虚构工具“纸盒台账”的离线示范屏幕与600字讲义；10分钟课程含5章，每章一个任务。",
+      "prompt": "按学习目标而非热词剪辑，给每章起止时间、原讲义证据、练习和错误示范；不得删除必要前提。",
+      "steps": [
+        {
+          "title": "教学脚本",
+          "body": "先写学员能完成的5个动作，每章安排演示、暂停练习、答案各一段。",
+          "check": "每个目标都有对应可观察操作。"
+        },
+        {
+          "title": "录制与配音计划",
+          "body": "使用无账号离线假界面；人声采用自写旁白自行录制的方案，未实际采集。",
+          "check": "无客户数据、密码、通知弹窗。"
+        },
+        {
+          "title": "转录剪辑",
+          "body": "建立时间码文字稿，将迟疑停顿标为可剪，将警告与前提标为不可剪。",
+          "check": "每次剪切保留句意；章节边界不切掉句首。"
+        },
+        {
+          "title": "维护发布包",
+          "body": "每章单独版本化，更新第二章只重导出对应段与总片。",
+          "check": "练习答案与画面版本匹配，输出带字幕及无字幕版。"
+        }
+      ],
+      "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+      "rubric": [
+        "每个目标都有对应可观察操作。",
+        "无客户数据、密码、通知弹窗。",
+        "每次剪切保留句意；章节边界不切掉句首。",
+        "练习答案与画面版本匹配，输出带字幕及无字幕版。"
+      ],
+      "failure_recovery": "ASR错术语以讲义校正；边界错切回原素材时间码；不重生成整片。",
+      "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+      "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+      "compute_cost": "CPU编辑可行但耗时未知；转录模型内存/速度按版本实测，不承诺实时。",
+      "source_ids": [
+        "vid-src-kdenlive",
+        "vid-src-whisper",
+        "vid-src-otio"
+      ],
+      "sources": [
+        {
+          "title": "Kdenlive speech to text",
+          "url": "https://docs.kdenlive.org/en/effects_and_filters/speech_to_text.html",
+          "evidence": "primary"
+        },
+        {
+          "title": "Whisper",
+          "url": "https://github.com/openai/whisper",
+          "evidence": "primary"
+        },
+        {
+          "title": "OpenTimelineIO",
+          "url": "https://github.com/AcademySoftwareFoundation/OpenTimelineIO",
+          "evidence": "primary"
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+      "practice_status": "original_teaching_template_not_executed",
+      "modelatlas_node_ids": [
+        "vid-kdenlive",
+        "vid-whisper",
+        "vid-otio"
+      ],
+      "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+      "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+    },
+    {
+      "id": "video-character-continuity",
+      "title": "原创动画角色跨镜头一致性",
+      "summary": "原创教学设计：原创动画角色跨镜头一致性",
+      "roles": [
+        "视频制作学习者",
+        "内容编辑",
+        "Agent工作流设计者"
+      ],
+      "industries": [
+        "教育",
+        "创意内容"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "input": "原创阿棱角色卡：蓝立方体、右侧白圆标记、短橙脚；4张自行绘制角度参考；四镜头取杯故事。",
+      "prompt": "逐镜检查颜色、标记侧别、肢体数量、道具持有与朝向；不通过则说明证据帧位置，不主观打高分。",
+      "steps": [
+        {
+          "title": "锁角色锚点",
+          "body": "写角色不变量与允许变化项，建立每镜起止姿势；统一光色参考。",
+          "check": "不变量可从图中人工检查而非只有形容词。"
+        },
+        {
+          "title": "单镜候选",
+          "body": "按模型已核实的参考条件生成计划，每镜最多两个候选，先关键帧再运动。",
+          "check": "候选记录独立ID；禁止借用真实人脸。"
+        },
+        {
+          "title": "接镜检查",
+          "body": "逐镜对照首/中/尾帧与前后接缝，特别检查白圆标记是否镜像。",
+          "check": "4镜关键锚点无矛盾；抽帧通过后仍全速看片。"
+        },
+        {
+          "title": "局部恢复",
+          "body": "仅重做失败镜，必要时改成遮挡转场或静态插图。",
+          "check": "复审相邻两镜，防止局部重做带来新跳轴。"
+        }
+      ],
+      "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+      "rubric": [
+        "不变量可从图中人工检查而非只有形容词。",
+        "候选记录独立ID；禁止借用真实人脸。",
+        "4镜关键锚点无矛盾；抽帧通过后仍全速看片。",
+        "复审相邻两镜，防止局部重做带来新跳轴。"
+      ],
+      "failure_recovery": "自动相似度只能预筛，不能证明身份一致；反复失败改传统关键帧动画。",
+      "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+      "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+      "compute_cost": "候选数×镜头数×重试计费；4镜×2候选是本教学预算上限，不是性能保证。",
+      "source_ids": [
+        "vid-src-wan",
+        "vid-src-ltx2",
+        "vid-src-vimax"
+      ],
+      "sources": [
+        {
+          "title": "Wan2.2",
+          "url": "https://github.com/Wan-Video/Wan2.2",
+          "evidence": "primary"
+        },
+        {
+          "title": "LTX-2",
+          "url": "https://github.com/Lightricks/LTX-2",
+          "evidence": "primary"
+        },
+        {
+          "title": "ViMax",
+          "url": "https://github.com/HKUDS/ViMax",
+          "evidence": "primary"
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+      "practice_status": "original_teaching_template_not_executed",
+      "modelatlas_node_ids": [
+        "vid-wan22",
+        "vid-ltx2",
+        "vid-vimax"
+      ],
+      "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。LTX-2仓库存在多份许可文件，需对应具体权重。",
+      "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+    },
+    {
+      "id": "video-silent-animation-loop",
+      "title": "无对白教育动画循环",
+      "summary": "原创教学设计：无对白教育动画循环",
+      "roles": [
+        "视频制作学习者",
+        "内容编辑",
+        "Agent工作流设计者"
+      ],
+      "industries": [
+        "教育",
+        "创意内容"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "input": "原创太阳、云、纸风车三层插画；8秒循环展示风车转动，不模拟真实气象。",
+      "prompt": "固定镜头，只让风车匀速转一圈；云位置固定；首尾视觉状态相同；不出现文字或人物。",
+      "steps": [
+        {
+          "title": "拆图层",
+          "body": "将背景和风车分为独立原创资产，定义旋转中心和循环周期。",
+          "check": "中心不漂移，所有元素有授权记录。"
+        },
+        {
+          "title": "两路线对照",
+          "body": "方案A为传统关键帧旋转；方案B为历史运动模块生成计划，仅讨论未执行。",
+          "check": "比较可控性与成本，不默认生成模型更好。"
+        },
+        {
+          "title": "循环接缝",
+          "body": "检查最后一帧到第一帧的位移和亮度，允许只对非语义背景做过渡。",
+          "check": "正常播放看不到明显跳动，主体不融化。"
+        },
+        {
+          "title": "教学交付",
+          "body": "保存无声循环、制作说明和闪烁检查记录。",
+          "check": "标为概念动画，避免声称物理正确模拟。"
+        }
+      ],
+      "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+      "rubric": [
+        "中心不漂移，所有元素有授权记录。",
+        "比较可控性与成本，不默认生成模型更好。",
+        "正常播放看不到明显跳动，主体不融化。",
+        "标为概念动画，避免声称物理正确模拟。"
+      ],
+      "failure_recovery": "循环失败回退关键帧旋转；不要用帧插值掩盖物体变形。",
+      "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+      "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+      "compute_cost": "传统2D旋转CPU预算低；AnimateDiff需匹配基础权重与运动模块，显存未知。",
+      "source_ids": [
+        "vid-src-animatediff",
+        "vid-src-animatepaper",
+        "vid-src-ffmpeg"
+      ],
+      "sources": [
+        {
+          "title": "AnimateDiff",
+          "url": "https://github.com/guoyww/AnimateDiff",
+          "evidence": "primary"
+        },
+        {
+          "title": "AnimateDiff paper",
+          "url": "https://arxiv.org/abs/2307.04725",
+          "evidence": "primary"
+        },
+        {
+          "title": "FFmpeg",
+          "url": "https://ffmpeg.org/ffmpeg.html",
+          "evidence": "primary"
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+      "practice_status": "original_teaching_template_not_executed",
+      "modelatlas_node_ids": [
+        "vid-animatediff",
+        "vid-ffmpeg"
+      ],
+      "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+      "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+    },
+    {
+      "id": "video-long-film-previs",
+      "title": "原创短片的长叙事预演",
+      "summary": "原创教学设计：原创短片的长叙事预演",
+      "roles": [
+        "视频制作学习者",
+        "内容编辑",
+        "Agent工作流设计者"
+      ],
+      "industries": [
+        "教育",
+        "创意内容"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "input": "原创12分钟虚拟短片《最后一张纸》，三场景两虚构纸角色；主题为修复旧纸盒，不改编已有作品。",
+      "prompt": "输出场景因果表与镜头依赖图；按场景制作，不要求单次模型生成12分钟；所有对白原创。",
+      "steps": [
+        {
+          "title": "长故事压缩",
+          "body": "列12个一分钟叙事节拍；每节拍标角色目标、冲突、解决及上一节拍依赖。",
+          "check": "删掉任一节拍能解释影响，不堆无关镜头。"
+        },
+        {
+          "title": "预算与资产复用",
+          "body": "将同一布景和道具资产复用，先做3分钟代表性animatic估算剩余工作。",
+          "check": "估算注明假设，未测数据不写成耗时结论。"
+        },
+        {
+          "title": "分角色审查",
+          "body": "编剧检查因果，摄影检查机位，制片检查授权与预算；人类解决相冲突建议。",
+          "check": "三类审查记录保留，Agent不得自行扩大预算。"
+        },
+        {
+          "title": "分场冻结",
+          "body": "场景逐个锁定并归档时间线，最终检查所有跨场道具与对白连续性。",
+          "check": "12分钟版本有镜头来源与修改日志。"
+        }
+      ],
+      "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+      "rubric": [
+        "删掉任一节拍能解释影响，不堆无关镜头。",
+        "估算注明假设，未测数据不写成耗时结论。",
+        "三类审查记录保留，Agent不得自行扩大预算。",
+        "12分钟版本有镜头来源与修改日志。"
+      ],
+      "failure_recovery": "长片漂移回到节拍表；API或资产许可未核清则停在预演，不声称已完成电影。",
+      "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+      "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+      "compute_cost": "生成长片成本按镜头重试估算，研究论文的虚拟环境效果不能换算商业制作成本。",
+      "source_ids": [
+        "vid-src-filmagent",
+        "vid-src-vimax",
+        "vid-src-otio"
+      ],
+      "sources": [
+        {
+          "title": "FilmAgent",
+          "url": "https://filmagent.github.io/",
+          "evidence": "primary"
+        },
+        {
+          "title": "ViMax",
+          "url": "https://github.com/HKUDS/ViMax",
+          "evidence": "primary"
+        },
+        {
+          "title": "OpenTimelineIO",
+          "url": "https://github.com/AcademySoftwareFoundation/OpenTimelineIO",
+          "evidence": "primary"
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+      "practice_status": "original_teaching_template_not_executed",
+      "modelatlas_node_ids": [
+        "vid-filmagent",
+        "vid-vimax",
+        "vid-otio"
+      ],
+      "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+      "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+    },
+    {
+      "id": "video-edit-original-footage",
+      "title": "原素材重剪为30秒科普预告",
+      "summary": "原创教学设计：原素材重剪为30秒科普预告",
+      "roles": [
+        "视频制作学习者",
+        "内容编辑",
+        "Agent工作流设计者"
+      ],
+      "industries": [
+        "教育",
+        "创意内容"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "input": "原创模拟素材清单：种子入土、浇水、发芽三段各20秒；讲义写明画面是示意，不是真实时间流逝。",
+      "prompt": "选出总长30秒、保留因果的片段；只输出时间码与剪辑理由，不虚构素材中不存在的开花画面。",
+      "steps": [
+        {
+          "title": "建索引",
+          "body": "每段记事件、可见证据、音轨、时间码、禁止推断项，保留原片只读。",
+          "check": "描述可回溯到具体段落。"
+        },
+        {
+          "title": "编辑决策",
+          "body": "给出入点出点和排序，明确是否加速及加速标识。",
+          "check": "不得通过倒序或删前提制造错误因果。"
+        },
+        {
+          "title": "剪辑预览",
+          "body": "用时间线而非覆写源文件操作，配无夸张承诺字幕。",
+          "check": "30秒±1帧，转场无黑帧或断句。"
+        },
+        {
+          "title": "前后对比",
+          "body": "审查摘要与原讲义差异；对未显示现象标缺素材。",
+          "check": "没有添加“实拍”“实验成功”误导字样。"
+        }
+      ],
+      "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+      "rubric": [
+        "描述可回溯到具体段落。",
+        "不得通过倒序或删前提制造错误因果。",
+        "30秒±1帧，转场无黑帧或断句。",
+        "没有添加“实拍”“实验成功”误导字样。"
+      ],
+      "failure_recovery": "检索错片即回查原时间码；素材不足做说明卡而非生成伪证。",
+      "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+      "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+      "compute_cost": "仅编辑不必调用视频生成模型；Agent后端/API成本未知且本轮不使用。",
+      "source_ids": [
+        "vid-src-videoagent",
+        "vid-src-videoagentpaper",
+        "vid-src-ffmpeg",
+        "vid-src-otio"
+      ],
+      "sources": [
+        {
+          "title": "HKUDS VideoAgent",
+          "url": "https://github.com/HKUDS/VideoAgent",
+          "evidence": "primary"
+        },
+        {
+          "title": "VideoAgent editing paper",
+          "url": "https://arxiv.org/abs/2606.23327",
+          "evidence": "primary"
+        },
+        {
+          "title": "FFmpeg",
+          "url": "https://ffmpeg.org/ffmpeg.html",
+          "evidence": "primary"
+        },
+        {
+          "title": "OpenTimelineIO",
+          "url": "https://github.com/AcademySoftwareFoundation/OpenTimelineIO",
+          "evidence": "primary"
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+      "practice_status": "original_teaching_template_not_executed",
+      "modelatlas_node_ids": [
+        "vid-videoagent-edit",
+        "vid-ffmpeg",
+        "vid-otio"
+      ],
+      "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+      "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+    },
+    {
+      "id": "video-caption-accessibility",
+      "title": "双语字幕与无障碍版本",
+      "summary": "原创教学设计：双语字幕与无障碍版本",
+      "roles": [
+        "视频制作学习者",
+        "内容编辑",
+        "Agent工作流设计者"
+      ],
+      "industries": [
+        "教育",
+        "创意内容"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "input": "原创90秒演示旁白，含术语“纸盒编号A17”和静音段；人工真值稿已设为练习输入。",
+      "prompt": "输出原文字幕、译文、时间码与不确定词；静音不补字，数字逐项核对；补充与理解相关的非语言声音说明。",
+      "steps": [
+        {
+          "title": "建立真值",
+          "body": "人工写术语表与说话段落，先标静音和重叠语音，再选择识别语言。",
+          "check": "A17不可变成A70；静音不出现幻觉句。"
+        },
+        {
+          "title": "对齐与翻译",
+          "body": "转录后先校文本再对齐，翻译保持警告和否定；不启用需令牌的分离模型。",
+          "check": "字幕时间不倒退、不越片尾；人名不猜。"
+        },
+        {
+          "title": "可读性检查",
+          "body": "教学目标每屏最多2行，中文每行≤18字；目标展示速度≤8字/秒，超出重断句。",
+          "check": "这些是本练习可调整标准，不冒充通用法规。"
+        },
+        {
+          "title": "无障碍交付",
+          "body": "输出可切换字幕、烧录预览和声音说明稿，分别审查遮挡。",
+          "check": "关键按钮、动作不被字幕遮住。"
+        }
+      ],
+      "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+      "rubric": [
+        "A17不可变成A70；静音不出现幻觉句。",
+        "字幕时间不倒退、不越片尾；人名不猜。",
+        "这些是本练习可调整标准，不冒充通用法规。",
+        "关键按钮、动作不被字幕遮住。"
+      ],
+      "failure_recovery": "对齐字典外词用人工时间码；重叠语音分段人工校对；不要把说话人编号当真实姓名。",
+      "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+      "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+      "compute_cost": "识别/对齐CPU或GPU均需测；下载模型及人工校对有成本，无令牌路径为本任务限制。",
+      "source_ids": [
+        "vid-src-whisper",
+        "vid-src-whisperx",
+        "vid-src-kdenlive"
+      ],
+      "sources": [
+        {
+          "title": "Whisper",
+          "url": "https://github.com/openai/whisper",
+          "evidence": "primary"
+        },
+        {
+          "title": "WhisperX",
+          "url": "https://github.com/m-bain/whisperX",
+          "evidence": "primary"
+        },
+        {
+          "title": "Kdenlive speech to text",
+          "url": "https://docs.kdenlive.org/en/effects_and_filters/speech_to_text.html",
+          "evidence": "primary"
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+      "practice_status": "original_teaching_template_not_executed",
+      "modelatlas_node_ids": [
+        "vid-whisper",
+        "vid-whisperx",
+        "vid-kdenlive"
+      ],
+      "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+      "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+    },
+    {
+      "id": "video-narration-sync",
+      "title": "不克隆音色的配音与节奏",
+      "summary": "原创教学设计：不克隆音色的配音与节奏",
+      "roles": [
+        "视频制作学习者",
+        "内容编辑",
+        "Agent工作流设计者"
+      ],
+      "industries": [
+        "教育",
+        "创意内容"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "input": "原创40秒纸盒分类说明稿；假想本人新录旁白或许可明确非模仿TTS，角色为无嘴纸机器人。",
+      "prompt": "按句分配镜头时长；保留呼吸停顿；不要模仿名人或现有角色音色，不做真人嘴型替换。",
+      "steps": [
+        {
+          "title": "旁白设计",
+          "body": "把说明分为四句，每句只包含一条操作；建立发音表。",
+          "check": "无未经证实性能声称，措辞与画面一致。"
+        },
+        {
+          "title": "音频优先",
+          "body": "先审核原创旁白时长，再安排B-roll；同步生成仅作为需另审许可的候选。",
+          "check": "声音素材归属与同意范围明确。"
+        },
+        {
+          "title": "对齐剪辑",
+          "body": "句子起止与动作对齐，转场放在停顿处，不压缩到词语失真。",
+          "check": "每句对应动作，终句没有截断尾音。"
+        },
+        {
+          "title": "混音质检",
+          "body": "检查爆音、突变、背景遮盖及单声道可懂度；记录实际峰值和测量工具。",
+          "check": "播放设备实听通过，不杜撰响度标准达标。"
+        }
+      ],
+      "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+      "rubric": [
+        "无未经证实性能声称，措辞与画面一致。",
+        "声音素材归属与同意范围明确。",
+        "每句对应动作，终句没有截断尾音。",
+        "播放设备实听通过，不杜撰响度标准达标。"
+      ],
+      "failure_recovery": "口型或同步不稳用非人形旁白镜头；声线许可不明则使用字幕，绝不代入真实人物。",
+      "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+      "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+      "compute_cost": "音视频联合生成通常额外算力；录音、剪辑、配乐版权不因开源模型而免费。",
+      "source_ids": [
+        "vid-src-ltx2",
+        "vid-src-wan",
+        "vid-src-ffmpeg"
+      ],
+      "sources": [
+        {
+          "title": "LTX-2",
+          "url": "https://github.com/Lightricks/LTX-2",
+          "evidence": "primary"
+        },
+        {
+          "title": "Wan2.2",
+          "url": "https://github.com/Wan-Video/Wan2.2",
+          "evidence": "primary"
+        },
+        {
+          "title": "FFmpeg",
+          "url": "https://ffmpeg.org/ffmpeg.html",
+          "evidence": "primary"
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+      "practice_status": "original_teaching_template_not_executed",
+      "modelatlas_node_ids": [
+        "vid-ltx2",
+        "vid-wan22",
+        "vid-ffmpeg"
+      ],
+      "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。LTX-2仓库存在多份许可文件，需对应具体权重。",
+      "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+    },
+    {
+      "id": "video-qc-evidence",
+      "title": "视频Agent的证据型质检",
+      "summary": "原创教学设计：视频Agent的证据型质检",
+      "roles": [
+        "视频制作学习者",
+        "内容编辑",
+        "Agent工作流设计者"
+      ],
+      "industries": [
+        "教育",
+        "创意内容"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "input": "原创60秒成片假想缺陷表：第2镜标记镜像、第4镜字幕超边、第5镜静音；另有一处暂时无法判断的道具跳变。",
+      "prompt": "对每个问题输出时间码、观察证据、严重度、是否需人工；无法判断就unknown；不要只给整体美观分。",
+      "steps": [
+        {
+          "title": "设检查集",
+          "body": "准备合成缺陷真值，覆盖黑帧、重复帧、断音、字错、授权缺失与误导标签。",
+          "check": "包含干净对照段，能估计误报。"
+        },
+        {
+          "title": "分层检测",
+          "body": "技术检查读取媒体属性，语义检查对照脚本，抽帧用于预筛。",
+          "check": "不能声称抽帧排除所有瞬时缺陷。"
+        },
+        {
+          "title": "人工复核",
+          "body": "逐条回放候选时间段；对unknown保留待办，不用模型自信覆盖。",
+          "check": "报告真阳性/误报/漏报样例而非只有平均分。"
+        },
+        {
+          "title": "阻断交付",
+          "body": "版权不明、伪造事实、重要字幕错字为阻断项；修复后重跑相关检查。",
+          "check": "每项有负责人、修复版本及复审结论。"
+        }
+      ],
+      "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+      "rubric": [
+        "包含干净对照段，能估计误报。",
+        "不能声称抽帧排除所有瞬时缺陷。",
+        "报告真阳性/误报/漏报样例而非只有平均分。",
+        "每项有负责人、修复版本及复审结论。"
+      ],
+      "failure_recovery": "质检模型漏检时扩大采样或全片人工回放；模型不能充当法律、肖像授权的最终裁判。",
+      "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+      "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+      "compute_cost": "检测token和帧数有成本，长视频分层筛选不是保证零漏检。",
+      "source_ids": [
+        "vid-src-understand",
+        "vid-src-ffmpeg",
+        "vid-src-whisper"
+      ],
+      "sources": [
+        {
+          "title": "VideoAgent long-form understanding",
+          "url": "https://arxiv.org/abs/2403.10517",
+          "evidence": "primary"
+        },
+        {
+          "title": "FFmpeg",
+          "url": "https://ffmpeg.org/ffmpeg.html",
+          "evidence": "primary"
+        },
+        {
+          "title": "Whisper",
+          "url": "https://github.com/openai/whisper",
+          "evidence": "primary"
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+      "practice_status": "original_teaching_template_not_executed",
+      "modelatlas_node_ids": [
+        "vid-videoagent-understand",
+        "vid-ffmpeg",
+        "vid-whisper"
+      ],
+      "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+      "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+    },
+    {
+      "id": "video-archive-reproducible",
+      "title": "项目归档与局部重做",
+      "summary": "原创教学设计：项目归档与局部重做",
+      "roles": [
+        "视频制作学习者",
+        "内容编辑",
+        "Agent工作流设计者"
+      ],
+      "industries": [
+        "教育",
+        "创意内容"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "input": "原创项目含6镜头、4张角色图、1份旁白、2种画幅与字幕；只归档合成素材。",
+      "prompt": "输出manifest：文件SHA256、来源与许可、prompt、seed、模型/运行时revision、时间线、父版本、审批与失败记录；缺值写unknown。",
+      "steps": [
+        {
+          "title": "冻结清单",
+          "body": "源素材只读，工作输出分离；每镜建立稳定ID，manifest不含密钥与个人路径。",
+          "check": "所有时间线引用可解析。"
+        },
+        {
+          "title": "版本差分",
+          "body": "修第3镜字幕只新增字幕与交付版本，记录父版本和原因。",
+          "check": "不覆盖原批准文件，差分范围准确。"
+        },
+        {
+          "title": "可迁移检查",
+          "body": "交换时间线检查入出点、帧率与媒体定位；特效兼容性列为人工核验。",
+          "check": "OTIO文件存在不代表所有剪辑软件效果无损兼容。"
+        },
+        {
+          "title": "恢复演练设计",
+          "body": "在空目录重新定位素材并核对hash，未知模型revision阻止声称完全复现。",
+          "check": "输出恢复报告、缺失项与可用静态降级包。"
+        }
+      ],
+      "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+      "rubric": [
+        "所有时间线引用可解析。",
+        "不覆盖原批准文件，差分范围准确。",
+        "OTIO文件存在不代表所有剪辑软件效果无损兼容。",
+        "输出恢复报告、缺失项与可用静态降级包。"
+      ],
+      "failure_recovery": "文件失链从manifest找原资产；模型已下架保留成片与配置，迁移重渲染视为新版本。",
+      "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+      "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+      "compute_cost": "存储、备份、数据传输和恢复工时必须预算；seed相同也不保证跨硬件逐位一致。",
+      "source_ids": [
+        "vid-src-otio",
+        "vid-src-comfy",
+        "vid-src-ffmpeg"
+      ],
+      "sources": [
+        {
+          "title": "OpenTimelineIO",
+          "url": "https://github.com/AcademySoftwareFoundation/OpenTimelineIO",
+          "evidence": "primary"
+        },
+        {
+          "title": "ComfyUI",
+          "url": "https://github.com/Comfy-Org/ComfyUI",
+          "evidence": "primary"
+        },
+        {
+          "title": "FFmpeg",
+          "url": "https://ffmpeg.org/ffmpeg.html",
+          "evidence": "primary"
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+      "practice_status": "original_teaching_template_not_executed",
+      "modelatlas_node_ids": [
+        "vid-otio",
+        "vid-comfyui",
+        "vid-ffmpeg"
+      ],
+      "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+      "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+    },
+    {
+      "id": "video-historical-edit-migration",
+      "title": "历史视频微调迁移教学",
+      "summary": "原创教学设计：历史视频微调迁移教学",
+      "roles": [
+        "视频制作学习者",
+        "内容编辑",
+        "Agent工作流设计者"
+      ],
+      "industries": [
+        "教育",
+        "创意内容"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "input": "原创2秒纸船驶过蓝纸背景的设计稿；比较旧单视频微调与现代参考图生成，不下载运行任何外部代码。",
+      "prompt": "建立对照表：训练是否需要、参考条件、运动保真、可控编辑、硬件、许可、环境；未知写unknown，禁止虚构获胜分数。",
+      "steps": [
+        {
+          "title": "还原历史假设",
+          "body": "分别记录论文版本、当时基础模型和训练输入，保留历史配置而不自动升级依赖。",
+          "check": "不把“历史”改写成维护者正式弃用。"
+        },
+        {
+          "title": "列替代路线",
+          "body": "免训练I2V适合尝试运动，传统动画适合精确路径；不是一比一模型替换。",
+          "check": "只有LTX迁移标记有维护者明确入口变化来源。"
+        },
+        {
+          "title": "设计公平比较",
+          "body": "同一原创角色、相同时长和输出分辨率，报告训练加推理总时间与失败率。",
+          "check": "无执行则表格为空，只有计划不能给成绩。"
+        },
+        {
+          "title": "保存迁移决策",
+          "body": "保留旧条目，另建替代案例链接、不可迁移项及许可差异。",
+          "check": "旧内容可查询，推荐与证据分离。"
+        }
+      ],
+      "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+      "rubric": [
+        "不把“历史”改写成维护者正式弃用。",
+        "只有LTX迁移标记有维护者明确入口变化来源。",
+        "无执行则表格为空，只有计划不能给成绩。",
+        "旧内容可查询，推荐与证据分离。"
+      ],
+      "failure_recovery": "依赖不兼容停在文档级复盘；不要未经授权安装旧依赖或强行执行来源代码。",
+      "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+      "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+      "compute_cost": "微调有额外训练成本；现代生成不自动更便宜，比较必须同时记人工重做与显存。",
+      "source_ids": [
+        "vid-src-tune",
+        "vid-src-tunepaper",
+        "vid-src-animatediff",
+        "vid-src-wan",
+        "vid-src-ltxv",
+        "vid-src-ltx2"
+      ],
+      "sources": [
+        {
+          "title": "Tune-A-Video",
+          "url": "https://github.com/showlab/Tune-A-Video",
+          "evidence": "primary"
+        },
+        {
+          "title": "Tune-A-Video paper",
+          "url": "https://arxiv.org/abs/2212.11565",
+          "evidence": "primary"
+        },
+        {
+          "title": "AnimateDiff",
+          "url": "https://github.com/guoyww/AnimateDiff",
+          "evidence": "primary"
+        },
+        {
+          "title": "Wan2.2",
+          "url": "https://github.com/Wan-Video/Wan2.2",
+          "evidence": "primary"
+        },
+        {
+          "title": "LTX-Video",
+          "url": "https://github.com/Lightricks/LTX-Video",
+          "evidence": "primary"
+        },
+        {
+          "title": "LTX-2",
+          "url": "https://github.com/Lightricks/LTX-2",
+          "evidence": "primary"
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+      "practice_status": "original_teaching_template_not_executed",
+      "modelatlas_node_ids": [
+        "vid-tune-a-video",
+        "vid-animatediff",
+        "vid-wan22",
+        "vid-ltx-video",
+        "vid-ltx2"
+      ],
+      "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。LTX-2仓库存在多份许可文件，需对应具体权重。",
+      "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "vid-wan22",
+      "title": "Wan2.2 文/图/音驱动视频",
+      "type": "model_family",
+      "category": "video-production",
+      "description_zh": "生成镜头的模型家族，不负责项目权限、预算、剪辑交付或事实核验。",
+      "source_ids": [
+        "vid-src-wan"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "2.2",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-wan"
+        ]
+      },
+      "compute_cost": "官方TI2V-5B示例至少24GB VRAM；A14B I2V/S2V示例80GB。实际耗时、电费、租赁价未知；不得把此门槛套用全部变体。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-ltx-video",
+      "title": "LTX-Video 历史入口",
+      "type": "model_family",
+      "category": "video-production",
+      "description_zh": "维护者已把主要开发入口转至LTX-2；旧版用于版本迁移教学。",
+      "source_ids": [
+        "vid-src-ltxv"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "LTX-Video legacy",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "superseded_per_maintainer",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [
+          "vid-ltx2"
+        ],
+        "source_ids": [
+          "vid-src-ltxv"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-ltx2",
+      "title": "LTX-2 音视频生成",
+      "type": "model_family",
+      "category": "video-production",
+      "description_zh": "音视频生成与训练实现，后端、权重许可和资源要求需逐版本固定。",
+      "source_ids": [
+        "vid-src-ltx2"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "LTX-2 family; revision not pinned",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-ltx2"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-cogvideox",
+      "title": "CogVideoX",
+      "type": "model_family",
+      "category": "video-production",
+      "description_zh": "视频扩散Transformer路线；代码与不同规模权重的许可边界须分开。",
+      "source_ids": [
+        "vid-src-cog",
+        "vid-src-cogpaper"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "CogVideoX-2B/5B / v3 2025-03-26",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-cog",
+          "vid-src-cogpaper"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-animatediff",
+      "title": "AnimateDiff 运动模块",
+      "type": "method",
+      "category": "video-production",
+      "description_zh": "在图像扩散基础上引入运动模块的历史代表方法；不是退役断言。",
+      "source_ids": [
+        "vid-src-animatediff",
+        "vid-src-animatepaper"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "revision unknown / v2 2024-02-08",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "historical_pinned_specification",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-animatediff",
+          "vid-src-animatepaper"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-tune-a-video",
+      "title": "Tune-A-Video 单视频微调",
+      "type": "method",
+      "category": "video-production",
+      "description_zh": "历史单视频微调研究；与免训练图生视频是不同成本/控制路线。",
+      "source_ids": [
+        "vid-src-tune",
+        "vid-src-tunepaper"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "ICCV 2023 implementation / v2 2023-03-17",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "historical_pinned_specification",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-tune",
+          "vid-src-tunepaper"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-comfyui",
+      "title": "ComfyUI 图式运行时",
+      "type": "runtime",
+      "category": "video-production",
+      "description_zh": "节点图连接模型和处理步骤；增加目标、状态、反馈及权限控制才构成本文Agent设计。",
+      "source_ids": [
+        "vid-src-comfy"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "revision not pinned",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-comfy"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-whisper",
+      "title": "Whisper 语音识别",
+      "type": "model_family",
+      "category": "video-production",
+      "description_zh": "用于字幕初稿，不生成声音；逐字与时间码仍需校对。",
+      "source_ids": [
+        "vid-src-whisper"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "revision not pinned",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-whisper"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-whisperx",
+      "title": "WhisperX 对齐流程",
+      "type": "tool",
+      "category": "video-production",
+      "description_zh": "识别与时间对齐工具；说话人编号不证明真实身份。",
+      "source_ids": [
+        "vid-src-whisperx"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "revision not pinned",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-whisperx"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-ffmpeg",
+      "title": "FFmpeg 媒体处理",
+      "type": "tool",
+      "category": "video-production",
+      "description_zh": "按明确输入参数执行剪裁、混流、编码，不自主决定叙事。",
+      "source_ids": [
+        "vid-src-ffmpeg"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "online documentation; local binary unknown",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-ffmpeg"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-otio",
+      "title": "OpenTimelineIO 时间线交换",
+      "type": "standard_or_format",
+      "category": "video-production",
+      "description_zh": "序列化编辑决策与素材引用；素材归档和渲染另做。",
+      "source_ids": [
+        "vid-src-otio"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "revision not pinned",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-otio"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-kdenlive",
+      "title": "Kdenlive 字幕与转录剪辑",
+      "type": "tool",
+      "category": "video-production",
+      "description_zh": "依据配置的识别引擎制作字幕与选片，人工保留最终剪辑决定。",
+      "source_ids": [
+        "vid-src-kdenlive"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "26.08 manual",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-kdenlive"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-filmagent",
+      "title": "FilmAgent 虚拟制片研究",
+      "type": "agent_system",
+      "category": "video-production",
+      "description_zh": "多角色在受限3D虚拟环境协作，需与实际电影拍摄能力区分。",
+      "source_ids": [
+        "vid-src-filmagent"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "research project page",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-filmagent"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-vimax",
+      "title": "ViMax 制片编排",
+      "type": "agent_system",
+      "category": "video-production",
+      "description_zh": "把策划、角色、镜头和生成连接起来；API配置示例不保证本地无付费互换。",
+      "source_ids": [
+        "vid-src-vimax"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "v1.2.0 announcement; head not pinned",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-vimax"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-videoagent-edit",
+      "title": "VideoAgent 编辑框架（HKUDS）",
+      "type": "agent_system",
+      "category": "video-production",
+      "description_zh": "多Agent编辑研究系统，不等于同名2024长视频问答项目。",
+      "source_ids": [
+        "vid-src-videoagent",
+        "vid-src-videoagentpaper"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "head not pinned / v1 metadata reviewed",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-videoagent",
+          "vid-src-videoagentpaper"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    },
+    {
+      "id": "vid-videoagent-understand",
+      "title": "VideoAgent 长视频理解（2024）",
+      "type": "agent_system",
+      "category": "video-production",
+      "description_zh": "检索视觉证据进行问答的研究系统，不应列作视频生成模型。",
+      "source_ids": [
+        "vid-src-understand"
+      ],
+      "checked_at": "2026-10-28",
+      "version": "paper metadata reviewed",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "lifecycle": {
+        "status": "historical_pinned_specification",
+        "as_of": "2026-10-28",
+        "applicable_version": "仅上述来源快照；部署前固定commit与权重SHA256",
+        "replacement_node_ids": [],
+        "source_ids": [
+          "vid-src-understand"
+        ]
+      },
+      "compute_cost": "GPU/CPU、运行时与显存需求未实测；按固定版本小样测量。",
+      "license": "代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核",
+      "availability": "只读研究；未安装、下载权重、调用模型或真实账户",
+      "misconceptions": [
+        "公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。"
+      ],
+      "steps_zh": [
+        "先阅读版本和许可，保存配置与来源。",
+        "只用原创合成输入建立小样与人工真值。",
+        "计量成本，逐镜头审查，保存失败，不以演示代替复现。"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "vid-whisperx",
+      "target": "vid-whisper",
+      "type": "uses",
+      "source_ids": [
+        "vid-src-whisperx"
+      ],
+      "verification_status": "primary_sources_reviewed_not_executed"
+    },
+    {
+      "source": "vid-ltx-video",
+      "target": "vid-ltx2",
+      "type": "superseded_by",
+      "source_ids": [
+        "vid-src-ltxv"
+      ],
+      "verification_status": "primary_sources_reviewed_not_executed"
+    },
+    {
+      "source": "vid-vimax",
+      "target": "vid-wan22",
+      "type": "learning_path",
+      "evidence_type": "editorial_learning_order",
+      "verification_status": "editorial_learning_relation",
+      "note_zh": "本教程的概念学习关联，不断言官方集成、兼容或技术派生。"
+    },
+    {
+      "source": "vid-filmagent",
+      "target": "vid-otio",
+      "type": "learning_path",
+      "evidence_type": "editorial_learning_order",
+      "verification_status": "editorial_learning_relation",
+      "note_zh": "本教程的概念学习关联，不断言官方集成、兼容或技术派生。"
+    },
+    {
+      "source": "vid-videoagent-edit",
+      "target": "vid-ffmpeg",
+      "type": "learning_path",
+      "evidence_type": "editorial_learning_order",
+      "verification_status": "editorial_learning_relation",
+      "note_zh": "本教程的概念学习关联，不断言官方集成、兼容或技术派生。"
+    },
+    {
+      "source": "vid-comfyui",
+      "target": "vid-otio",
+      "type": "learning_path",
+      "evidence_type": "editorial_learning_order",
+      "verification_status": "editorial_learning_relation",
+      "note_zh": "本教程的概念学习关联，不断言官方集成、兼容或技术派生。"
+    },
+    {
+      "source": "vid-wan22",
+      "target": "vid-whisper",
+      "type": "learning_path",
+      "evidence_type": "editorial_learning_order",
+      "verification_status": "editorial_learning_relation",
+      "note_zh": "本教程的概念学习关联，不断言官方集成、兼容或技术派生。"
+    },
+    {
+      "source": "vid-whisper",
+      "target": "vid-kdenlive",
+      "type": "learning_path",
+      "evidence_type": "editorial_learning_order",
+      "verification_status": "editorial_learning_relation",
+      "note_zh": "本教程的概念学习关联，不断言官方集成、兼容或技术派生。"
+    },
+    {
+      "source": "vid-kdenlive",
+      "target": "vid-otio",
+      "type": "learning_path",
+      "evidence_type": "editorial_learning_order",
+      "verification_status": "editorial_learning_relation",
+      "note_zh": "本教程的概念学习关联，不断言官方集成、兼容或技术派生。"
+    }
+  ],
+  "events": [],
+  "coverage_gaps": [
+    "未实测任何生成、编辑、转录或Agent原生链路；未安装第三方代码或下载权重。",
+    "未核实全量模型具体许可证条款、价格与各操作系统兼容性；Blender官方手册抓取返回402，未引用其具体功能。",
+    "Runway、Veo、Sora等付费/账号服务未执行；不以本轮检索暗示全行业覆盖。",
+    "未实测任何长片角色一致性、口型、完整版权清理或无障碍标准合规。"
+  ],
+  "integration": {
+    "agentwork": "cases字段接近content/cases.json v1；必须新增显式video适配器并保留raw_record，不修改现有roles/industries/learning适配器的默认假设。补充failure_recovery、compute_cost、permission_boundary进可见正文，防止归一化丢失。",
+    "modelatlas": "nodes/edges/sources可独立提取为研究bundle；本文件直接导入ModelAtlas仅显示节点，不自动显示案例。不得将case id写成悬空node edge。",
+    "cross_links": [
+      {
+        "agentwork_case_id": "video-brief-storyboard",
+        "modelatlas_node_ids": [
+          "vid-vimax",
+          "vid-filmagent",
+          "vid-otio"
+        ],
+        "relation": "editorial_application_not_native_integration",
+        "status": "proposed_not_merged"
+      },
+      {
+        "agentwork_case_id": "video-product-i2v",
+        "modelatlas_node_ids": [
+          "vid-wan22",
+          "vid-comfyui",
+          "vid-ffmpeg"
+        ],
+        "relation": "editorial_application_not_native_integration",
+        "status": "proposed_not_merged"
+      },
+      {
+        "agentwork_case_id": "video-training-chapters",
+        "modelatlas_node_ids": [
+          "vid-kdenlive",
+          "vid-whisper",
+          "vid-otio"
+        ],
+        "relation": "editorial_application_not_native_integration",
+        "status": "proposed_not_merged"
+      },
+      {
+        "agentwork_case_id": "video-character-continuity",
+        "modelatlas_node_ids": [
+          "vid-wan22",
+          "vid-ltx2",
+          "vid-vimax"
+        ],
+        "relation": "editorial_application_not_native_integration",
+        "status": "proposed_not_merged"
+      },
+      {
+        "agentwork_case_id": "video-silent-animation-loop",
+        "modelatlas_node_ids": [
+          "vid-animatediff",
+          "vid-ffmpeg"
+        ],
+        "relation": "editorial_application_not_native_integration",
+        "status": "proposed_not_merged"
+      },
+      {
+        "agentwork_case_id": "video-long-film-previs",
+        "modelatlas_node_ids": [
+          "vid-filmagent",
+          "vid-vimax",
+          "vid-otio"
+        ],
+        "relation": "editorial_application_not_native_integration",
+        "status": "proposed_not_merged"
+      },
+      {
+        "agentwork_case_id": "video-edit-original-footage",
+        "modelatlas_node_ids": [
+          "vid-videoagent-edit",
+          "vid-ffmpeg",
+          "vid-otio"
+        ],
+        "relation": "editorial_application_not_native_integration",
+        "status": "proposed_not_merged"
+      },
+      {
+        "agentwork_case_id": "video-caption-accessibility",
+        "modelatlas_node_ids": [
+          "vid-whisper",
+          "vid-whisperx",
+          "vid-kdenlive"
+        ],
+        "relation": "editorial_application_not_native_integration",
+        "status": "proposed_not_merged"
+      },
+      {
+        "agentwork_case_id": "video-narration-sync",
+        "modelatlas_node_ids": [
+          "vid-ltx2",
+          "vid-wan22",
+          "vid-ffmpeg"
+        ],
+        "relation": "editorial_application_not_native_integration",
+        "status": "proposed_not_merged"
+      },
+      {
+        "agentwork_case_id": "video-qc-evidence",
+        "modelatlas_node_ids": [
+          "vid-videoagent-understand",
+          "vid-ffmpeg",
+          "vid-whisper"
+        ],
+        "relation": "editorial_application_not_native_integration",
+        "status": "proposed_not_merged"
+      },
+      {
+        "agentwork_case_id": "video-archive-reproducible",
+        "modelatlas_node_ids": [
+          "vid-otio",
+          "vid-comfyui",
+          "vid-ffmpeg"
+        ],
+        "relation": "editorial_application_not_native_integration",
+        "status": "proposed_not_merged"
+      },
+      {
+        "agentwork_case_id": "video-historical-edit-migration",
+        "modelatlas_node_ids": [
+          "vid-tune-a-video",
+          "vid-animatediff",
+          "vid-wan22",
+          "vid-ltx-video",
+          "vid-ltx2"
+        ],
+        "relation": "editorial_application_not_native_integration",
+        "status": "proposed_not_merged"
+      }
+    ],
+    "type_policy": "模型生成信号；工具执行操作；运行时组织图；Agent有目标、状态、规划、反馈、权限与终止。媒体格式不是模型；同名项目必须组织+年份消歧。"
+  },
+  "maintenance": {
+    "triggers": [
+      "官方版本/许可/端点/硬件要求变更",
+      "模型替代或权重不可用",
+      "案例被实测发现失败",
+      "新增可信研究与同名歧义"
+    ],
+    "procedure": [
+      "记录原来源与日期，不覆盖历史事实。",
+      "核查更新来源并生成差异，未证实状态设unknown。",
+      "在另行授权的合成小样环境验证，仅记录真实运行证据。",
+      "审查失败与成本，人工批准后才更新展示层与交叉链接。"
+    ],
+    "not_scheduled": true
+  },
+  "validation": {
+    "checked_at": "2026-10-28",
+    "json_parse": "passed",
+    "case_references": "passed",
+    "agentwork_schema_validate": "passed: existing validate() called on 12 cases plus synthetic intro; build() not called",
+    "modelatlas_normalize": "passed: existing normalize([bundle]) returned 16 nodes, 9 edges, 20 sources; build() not called",
+    "runtime_execution": "not_performed",
+    "source_code_execution": "only existing two repository validation functions read/imported with PYTHONDONTWRITEBYTECODE=1; no third-party downloads/installation/execution",
+    "original_repository_writes": "none",
+    "remote_mutations": "none"
+  }
+}

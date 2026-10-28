@@ -1,6 +1,12 @@
 {
   "checked_at": "2026-10-28",
   "files_sha256": {
+    "research/creative-design.json": "032ffcd2305173b34d2d9498e02a41dda85d70ad3b665b56744ce9dc9d4f1dda",
+    "research/creative-design.md": "f4753b6645d6dcbe8ec4f206199c10e9a4be0daf209f46bef4cdf4c76a124398",
+    "research/creative-music.json": "de5e870a8ac7e8eef8d2c16000e2c919048b6079daa51752653b44350ddbef6a",
+    "research/creative-music.md": "a0ebab10aebda643b2fc1e003961416db7f10147e6183d1b70f54cb4a5cf0917",
+    "research/creative-video.json": "eabb96db919d6a3996e137332577962b3c1778eff439b0b6019483e1e0b38e33",
+    "research/creative-video.md": "df733481e52f84cc2317ad9a2171739ea884d7fe2bbab1125136594505b1702d",
     "research/industries.json": "d4c9ca926f72242ef2b341a850a502819031626d61250df24b35abd90bdf238a",
     "research/industries.md": "3d3e7ffbb1b7f2d7427186c64faad1dd45bd16fe8e50593cc658a4123c1bb185",
     "research/learning.json": "d70ed6b69eef27f9cafc2b0cdc7621227248f029287786e7cf1a723a1a38261a",

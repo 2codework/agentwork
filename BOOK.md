@@ -1,6 +1,6 @@
 # AgentWork · 开放实践手册
 
-> 自动从 content/ 与 research/ 生成；不要手工维护此文件。第一版，合成练习非真实部署证据。
+> 自动从 content/ 与 research/ 生成；不要手工维护此文件。r0.2 创作专题候选，r1 已上线；合成练习非真实部署证据。
 
 ## 入门：先定义一个有边界的任务
 
@@ -228,6 +228,6869 @@ unknown
 - 验收：每项任务可追溯；没有虚构日期或未经确认的指派。
 - 验收：无外部通知；待审批动作和风险在提案中明确。
 - 验收：报告包含原始结果、人工修订、错误计数，不能只写“看起来不错”。
+## 预约界面从需求到可验收原型
+
+预约界面从需求到可验收原型：合成教学流程，不是已部署产品效果案例。
+
+**证据边界：** 官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。
+
+### 合成输入
+
+虚构预约站：3步（日期/人数/确认）；时段09:00与10:00，10:00已满；人数1–4；移动宽375、桌面1440。
+
+### 提示词
+
+根据合成输入列状态机和屏幕清单。不要编造用户访谈。为满额、网络失败和返回修改设计明确反馈；先输出草图说明与验收表，不创建云文件。
+
+### 输出模板
+
+状态表、屏幕清单、低保真布局、交互验收记录。
+
+### 风险与授权
+
+仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。发现状态遗漏先修状态机再改视觉；网络结果未知先查状态，不重复提交。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+rolling remote MCP; write beta; WCAG 2.2 Recommendation 2024-12-12
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。
+
+### 最佳实践证据状态
+
+原创教学模板，非行业最佳或独立实测
+
+### 1. 步骤1
+
+把事实、假设、待确认分栏；画出状态及转移，含重复提交。
+
+**验收：** 全部3步和失败态有入口出口
+
+### 2. 步骤2
+
+先以文本框图设计两种布局，说明任务优先级与取舍。
+
+**验收：** 不允许选择已满时段；人数上限明确
+
+### 3. 步骤3
+
+用获批设计组件生成可编辑原型草案，绑定交互而非只做静态截图。
+
+**验收：** 返回后数据保持；重复提交不生成重复预约
+
+### 4. 步骤4
+
+逐条走查正常、已满、断网、返回修改；未完成的转移标记缺失。
+
+**验收：** 键盘流程可完成且焦点可见
+
+- 对应技术（编辑学习关系）：[Figma MCP设计上下文与写画布](https://2codework.github.io/modelatlas/?node=design-figma-mcp)
+- 对应技术（编辑学习关系）：[WCAG 2.2验收标准](https://2codework.github.io/modelatlas/?node=design-wcag)
+- agent_boundary：agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。
+- cost：未核验；执行前确认预算
+- permissions：['默认离线文本方案', '任何账户接入、上传、写入、付费、分享另行批准']
+- 验收：全部3步和失败态有入口出口
+- 验收：不允许选择已满时段；人数上限明确
+- 验收：返回后数据保持；重复提交不生成重复预约
+- 验收：键盘流程可完成且焦点可见
+- 来源：Figma MCP introduction — https://developers.figma.com/docs/figma-mcp-server/（核查：2026-10-28）
+
+- 来源：WCAG 2.2 — https://www.w3.org/TR/WCAG22/（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "design-ui-flow",
+  "title": "预约界面从需求到可验收原型",
+  "summary": "预约界面从需求到可验收原型：合成教学流程，不是已部署产品效果案例。",
+  "roles": [
+    "UI/UX设计师"
+  ],
+  "industries": [
+    "跨行业设计"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "execution_mode": "agent_orchestrated_proposal",
+  "input": "虚构预约站：3步（日期/人数/确认）；时段09:00与10:00，10:00已满；人数1–4；移动宽375、桌面1440。",
+  "prompt": "根据合成输入列状态机和屏幕清单。不要编造用户访谈。为满额、网络失败和返回修改设计明确反馈；先输出草图说明与验收表，不创建云文件。",
+  "steps": [
+    {
+      "title": "步骤1",
+      "body": "把事实、假设、待确认分栏；画出状态及转移，含重复提交。",
+      "check": "全部3步和失败态有入口出口"
+    },
+    {
+      "title": "步骤2",
+      "body": "先以文本框图设计两种布局，说明任务优先级与取舍。",
+      "check": "不允许选择已满时段；人数上限明确"
+    },
+    {
+      "title": "步骤3",
+      "body": "用获批设计组件生成可编辑原型草案，绑定交互而非只做静态截图。",
+      "check": "返回后数据保持；重复提交不生成重复预约"
+    },
+    {
+      "title": "步骤4",
+      "body": "逐条走查正常、已满、断网、返回修改；未完成的转移标记缺失。",
+      "check": "键盘流程可完成且焦点可见"
+    }
+  ],
+  "output": "状态表、屏幕清单、低保真布局、交互验收记录。",
+  "rubric": [
+    "全部3步和失败态有入口出口",
+    "不允许选择已满时段；人数上限明确",
+    "返回后数据保持；重复提交不生成重复预约",
+    "键盘流程可完成且焦点可见"
+  ],
+  "failure_recovery": "发现状态遗漏先修状态机再改视觉；网络结果未知先查状态，不重复提交。",
+  "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。发现状态遗漏先修状态机再改视觉；网络结果未知先查状态，不重复提交。",
+  "permissions": [
+    "默认离线文本方案",
+    "任何账户接入、上传、写入、付费、分享另行批准"
+  ],
+  "source_ids": [
+    "design-src-figma",
+    "design-src-wcag"
+  ],
+  "sources": [
+    {
+      "title": "Figma MCP introduction",
+      "url": "https://developers.figma.com/docs/figma-mcp-server/",
+      "evidence": "primary"
+    },
+    {
+      "title": "WCAG 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "evidence": "primary"
+    }
+  ],
+  "modelatlas_node_ids": [
+    "design-figma-mcp",
+    "design-wcag"
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "rolling remote MCP; write beta; WCAG 2.2 Recommendation 2024-12-12",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+  "practice_status": "原创教学模板，非行业最佳或独立实测",
+  "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+  "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+}
+```
+</details>
+
+## 组件感知的设计到代码交接
+
+组件感知的设计到代码交接：合成教学流程，不是已部署产品效果案例。
+
+**证据边界：** 官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。
+
+### 合成输入
+
+虚构Card：标题/正文/主按钮；已有PrimaryButton组件；间距8/16/24；分别给320与1280宽结构描述。
+
+### 提示词
+
+先列现有组件映射再规划实现。未知属性写unknown，禁造新组件替代现有按钮；输出变更计划、差异和测试矩阵。
+
+### 输出模板
+
+组件映射、局部代码提案、布局差异清单。
+
+### 风险与授权
+
+仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。上下文不足先请求较小frame或组件说明；不得将生成代码直接部署。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+rolling remote MCP; write beta; rolling docs; release unknown
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。
+
+### 最佳实践证据状态
+
+原创教学模板，非行业最佳或独立实测
+
+### 1. 步骤1
+
+读取批准范围内单一frame结构和变量，避免整文件无边界抓取。
+
+**验收：** 已有按钮复用且属性映射可追踪
+
+### 2. 步骤2
+
+建立设计节点→代码组件→属性映射表；找不到则暂停映射。
+
+**验收：** 两宽度不横向溢出
+
+### 3. 步骤3
+
+生成局部实现草稿，保持语义标题与按钮，明确断点规则。
+
+**验收：** 长标题不盖住操作
+
+### 4. 步骤4
+
+按两宽度及长标题检查；截图差异与人工判定分开。
+
+**验收：** 没有依据截图发明不可见功能
+
+- 对应技术（编辑学习关系）：[Figma MCP设计上下文与写画布](https://2codework.github.io/modelatlas/?node=design-figma-mcp)
+- 对应技术（编辑学习关系）：[Playwright视觉回归](https://2codework.github.io/modelatlas/?node=design-visual-regression)
+- agent_boundary：agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。
+- cost：未核验；执行前确认预算
+- permissions：['默认离线文本方案', '任何账户接入、上传、写入、付费、分享另行批准']
+- 验收：已有按钮复用且属性映射可追踪
+- 验收：两宽度不横向溢出
+- 验收：长标题不盖住操作
+- 验收：没有依据截图发明不可见功能
+- 来源：Figma MCP introduction — https://developers.figma.com/docs/figma-mcp-server/（核查：2026-10-28）
+
+- 来源：Playwright visual comparisons — https://playwright.dev/docs/test-snapshots（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "design-design-code",
+  "title": "组件感知的设计到代码交接",
+  "summary": "组件感知的设计到代码交接：合成教学流程，不是已部署产品效果案例。",
+  "roles": [
+    "设计工程师"
+  ],
+  "industries": [
+    "跨行业设计"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "execution_mode": "agent_orchestrated_proposal",
+  "input": "虚构Card：标题/正文/主按钮；已有PrimaryButton组件；间距8/16/24；分别给320与1280宽结构描述。",
+  "prompt": "先列现有组件映射再规划实现。未知属性写unknown，禁造新组件替代现有按钮；输出变更计划、差异和测试矩阵。",
+  "steps": [
+    {
+      "title": "步骤1",
+      "body": "读取批准范围内单一frame结构和变量，避免整文件无边界抓取。",
+      "check": "已有按钮复用且属性映射可追踪"
+    },
+    {
+      "title": "步骤2",
+      "body": "建立设计节点→代码组件→属性映射表；找不到则暂停映射。",
+      "check": "两宽度不横向溢出"
+    },
+    {
+      "title": "步骤3",
+      "body": "生成局部实现草稿，保持语义标题与按钮，明确断点规则。",
+      "check": "长标题不盖住操作"
+    },
+    {
+      "title": "步骤4",
+      "body": "按两宽度及长标题检查；截图差异与人工判定分开。",
+      "check": "没有依据截图发明不可见功能"
+    }
+  ],
+  "output": "组件映射、局部代码提案、布局差异清单。",
+  "rubric": [
+    "已有按钮复用且属性映射可追踪",
+    "两宽度不横向溢出",
+    "长标题不盖住操作",
+    "没有依据截图发明不可见功能"
+  ],
+  "failure_recovery": "上下文不足先请求较小frame或组件说明；不得将生成代码直接部署。",
+  "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。上下文不足先请求较小frame或组件说明；不得将生成代码直接部署。",
+  "permissions": [
+    "默认离线文本方案",
+    "任何账户接入、上传、写入、付费、分享另行批准"
+  ],
+  "source_ids": [
+    "design-src-figma",
+    "design-src-playwright"
+  ],
+  "sources": [
+    {
+      "title": "Figma MCP introduction",
+      "url": "https://developers.figma.com/docs/figma-mcp-server/",
+      "evidence": "primary"
+    },
+    {
+      "title": "Playwright visual comparisons",
+      "url": "https://playwright.dev/docs/test-snapshots",
+      "evidence": "primary"
+    }
+  ],
+  "modelatlas_node_ids": [
+    "design-figma-mcp",
+    "design-visual-regression"
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "rolling remote MCP; write beta; rolling docs; release unknown",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+  "practice_status": "原创教学模板，非行业最佳或独立实测",
+  "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+  "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+}
+```
+</details>
+
+## 品牌token规范化与双主题
+
+品牌token规范化与双主题：合成教学流程，不是已部署产品效果案例。
+
+**证据边界：** 官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。
+
+### 合成输入
+
+合成token：brand=#125C45，text=#12221A，space8=8px；暗色主题text=#F5FFF8；错误别名a→b→a。
+
+### 提示词
+
+以DTCG 2025.10为目标检查输入，给出语义命名、别名错误、迁移表和回滚方案。不要采用preview字段。
+
+### 输出模板
+
+tokens候选、旧新映射、引用图、兼容性报告。
+
+### 风险与授权
+
+仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。回滚至上次token快照；缺失字体/色彩空间转换规则不猜测。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+2025.10 final; WCAG 2.2 Recommendation 2024-12-12
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。
+
+### 最佳实践证据状态
+
+原创教学模板，非行业最佳或独立实测
+
+### 1. 步骤1
+
+区分原始值、语义角色、组件token，保留旧名映射。
+
+**验收：** a/b环必须报错
+
+### 2. 步骤2
+
+检测类型缺失、别名环及无效引用；先拒绝循环再转换。
+
+**验收：** 旧token消费者被列出
+
+### 3. 步骤3
+
+提议明暗主题映射及平台输出，不假设所有工具无损导入。
+
+**验收：** 三组件两主题有检查记录
+
+### 4. 步骤4
+
+用按钮/卡片/错误提示三个组件比对迁移前后并审批破坏变更。
+
+**验收：** 来源版本固定为2025.10而非draft
+
+- 对应技术（编辑学习关系）：[DTCG设计token交换](https://2codework.github.io/modelatlas/?node=design-dtcg)
+- 对应技术（编辑学习关系）：[WCAG 2.2验收标准](https://2codework.github.io/modelatlas/?node=design-wcag)
+- agent_boundary：agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。
+- cost：未核验；执行前确认预算
+- permissions：['默认离线文本方案', '任何账户接入、上传、写入、付费、分享另行批准']
+- 验收：a/b环必须报错
+- 验收：旧token消费者被列出
+- 验收：三组件两主题有检查记录
+- 验收：来源版本固定为2025.10而非draft
+- 来源：DTCG Format 2025.10 — https://www.designtokens.org/TR/2025.10/format/（核查：2026-10-28）
+
+- 来源：DTCG preview warning — https://www.designtokens.org/tr/drafts/format/（核查：2026-10-28）
+
+- 来源：WCAG 2.2 — https://www.w3.org/TR/WCAG22/（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "design-tokens-migration",
+  "title": "品牌token规范化与双主题",
+  "summary": "品牌token规范化与双主题：合成教学流程，不是已部署产品效果案例。",
+  "roles": [
+    "设计系统维护者"
+  ],
+  "industries": [
+    "跨行业设计"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "execution_mode": "agent_orchestrated_proposal",
+  "input": "合成token：brand=#125C45，text=#12221A，space8=8px；暗色主题text=#F5FFF8；错误别名a→b→a。",
+  "prompt": "以DTCG 2025.10为目标检查输入，给出语义命名、别名错误、迁移表和回滚方案。不要采用preview字段。",
+  "steps": [
+    {
+      "title": "步骤1",
+      "body": "区分原始值、语义角色、组件token，保留旧名映射。",
+      "check": "a/b环必须报错"
+    },
+    {
+      "title": "步骤2",
+      "body": "检测类型缺失、别名环及无效引用；先拒绝循环再转换。",
+      "check": "旧token消费者被列出"
+    },
+    {
+      "title": "步骤3",
+      "body": "提议明暗主题映射及平台输出，不假设所有工具无损导入。",
+      "check": "三组件两主题有检查记录"
+    },
+    {
+      "title": "步骤4",
+      "body": "用按钮/卡片/错误提示三个组件比对迁移前后并审批破坏变更。",
+      "check": "来源版本固定为2025.10而非draft"
+    }
+  ],
+  "output": "tokens候选、旧新映射、引用图、兼容性报告。",
+  "rubric": [
+    "a/b环必须报错",
+    "旧token消费者被列出",
+    "三组件两主题有检查记录",
+    "来源版本固定为2025.10而非draft"
+  ],
+  "failure_recovery": "回滚至上次token快照；缺失字体/色彩空间转换规则不猜测。",
+  "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。回滚至上次token快照；缺失字体/色彩空间转换规则不猜测。",
+  "permissions": [
+    "默认离线文本方案",
+    "任何账户接入、上传、写入、付费、分享另行批准"
+  ],
+  "source_ids": [
+    "design-src-tokens",
+    "design-src-tokens-draft",
+    "design-src-wcag"
+  ],
+  "sources": [
+    {
+      "title": "DTCG Format 2025.10",
+      "url": "https://www.designtokens.org/TR/2025.10/format/",
+      "evidence": "primary"
+    },
+    {
+      "title": "DTCG preview warning",
+      "url": "https://www.designtokens.org/tr/drafts/format/",
+      "evidence": "primary"
+    },
+    {
+      "title": "WCAG 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "evidence": "primary"
+    }
+  ],
+  "modelatlas_node_ids": [
+    "design-dtcg",
+    "design-wcag"
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "2025.10 final; WCAG 2.2 Recommendation 2024-12-12",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+  "practice_status": "原创教学模板，非行业最佳或独立实测",
+  "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+  "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+}
+```
+</details>
+
+## 表单可访问性审校
+
+表单可访问性审校：合成教学流程，不是已部署产品效果案例。
+
+**证据边界：** 官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。
+
+### 合成输入
+
+合成表单：只有占位符的邮箱框；红色边框提示错误；弹窗打开后焦点留在背景；按钮仅图标无名称。
+
+### 提示词
+
+建立问题→影响→候选修复→人工检查表。不得只凭截图认证WCAG合规；区分自动可检和人工必检。
+
+### 输出模板
+
+修复建议与证据矩阵，未覆盖标准明确标记。
+
+### 风险与授权
+
+仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。无法运行辅助技术则结果为not_tested；不能将自动扫描空列表升级为通过。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+WCAG 2.2 Recommendation 2024-12-12; docs 10.6
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。
+
+### 最佳实践证据状态
+
+原创教学模板，非行业最佳或独立实测
+
+### 1. 步骤1
+
+给每项问题建立可重复前置条件和键盘操作。
+
+**验收：** 四项合成缺陷均定位
+
+### 2. 步骤2
+
+增加标签、文本错误、控件名称和弹窗焦点策略方案。
+
+**验收：** 错误不只靠颜色
+
+### 3. 步骤3
+
+设计默认/焦点/错误/禁用状态组件测试；自动检查结果原样保留。
+
+**验收：** 弹窗键盘路径和关闭后焦点有说明
+
+### 4. 步骤4
+
+人工用Tab/Shift+Tab/Esc与辅助技术核验，并由责任人确认范围。
+
+**验收：** 不输出全站认证结论
+
+- 对应技术（编辑学习关系）：[WCAG 2.2验收标准](https://2codework.github.io/modelatlas/?node=design-wcag)
+- 对应技术（编辑学习关系）：[Storybook组件可访问性检查](https://2codework.github.io/modelatlas/?node=design-storybook-a11y)
+- agent_boundary：agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。
+- cost：未核验；执行前确认预算
+- permissions：['默认离线文本方案', '任何账户接入、上传、写入、付费、分享另行批准']
+- 验收：四项合成缺陷均定位
+- 验收：错误不只靠颜色
+- 验收：弹窗键盘路径和关闭后焦点有说明
+- 验收：不输出全站认证结论
+- 来源：WCAG 2.2 — https://www.w3.org/TR/WCAG22/（核查：2026-10-28）
+
+- 来源：Storybook accessibility tests — https://storybook.js.org/docs/writing-tests/accessibility-testing（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "design-a11y-audit",
+  "title": "表单可访问性审校",
+  "summary": "表单可访问性审校：合成教学流程，不是已部署产品效果案例。",
+  "roles": [
+    "可访问性设计师"
+  ],
+  "industries": [
+    "跨行业设计"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "execution_mode": "agent_orchestrated_proposal",
+  "input": "合成表单：只有占位符的邮箱框；红色边框提示错误；弹窗打开后焦点留在背景；按钮仅图标无名称。",
+  "prompt": "建立问题→影响→候选修复→人工检查表。不得只凭截图认证WCAG合规；区分自动可检和人工必检。",
+  "steps": [
+    {
+      "title": "步骤1",
+      "body": "给每项问题建立可重复前置条件和键盘操作。",
+      "check": "四项合成缺陷均定位"
+    },
+    {
+      "title": "步骤2",
+      "body": "增加标签、文本错误、控件名称和弹窗焦点策略方案。",
+      "check": "错误不只靠颜色"
+    },
+    {
+      "title": "步骤3",
+      "body": "设计默认/焦点/错误/禁用状态组件测试；自动检查结果原样保留。",
+      "check": "弹窗键盘路径和关闭后焦点有说明"
+    },
+    {
+      "title": "步骤4",
+      "body": "人工用Tab/Shift+Tab/Esc与辅助技术核验，并由责任人确认范围。",
+      "check": "不输出全站认证结论"
+    }
+  ],
+  "output": "修复建议与证据矩阵，未覆盖标准明确标记。",
+  "rubric": [
+    "四项合成缺陷均定位",
+    "错误不只靠颜色",
+    "弹窗键盘路径和关闭后焦点有说明",
+    "不输出全站认证结论"
+  ],
+  "failure_recovery": "无法运行辅助技术则结果为not_tested；不能将自动扫描空列表升级为通过。",
+  "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。无法运行辅助技术则结果为not_tested；不能将自动扫描空列表升级为通过。",
+  "permissions": [
+    "默认离线文本方案",
+    "任何账户接入、上传、写入、付费、分享另行批准"
+  ],
+  "source_ids": [
+    "design-src-wcag",
+    "design-src-storybook"
+  ],
+  "sources": [
+    {
+      "title": "WCAG 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "evidence": "primary"
+    },
+    {
+      "title": "Storybook accessibility tests",
+      "url": "https://storybook.js.org/docs/writing-tests/accessibility-testing",
+      "evidence": "primary"
+    }
+  ],
+  "modelatlas_node_ids": [
+    "design-wcag",
+    "design-storybook-a11y"
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "WCAG 2.2 Recommendation 2024-12-12; docs 10.6",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+  "practice_status": "原创教学模板，非行业最佳或独立实测",
+  "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+  "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+}
+```
+</details>
+
+## 虚构品牌视觉方向与权利清单
+
+虚构品牌视觉方向与权利清单：合成教学流程，不是已部署产品效果案例。
+
+**证据边界：** 官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。
+
+### 合成输入
+
+虚构品牌“苔光”：城市植物交换活动；温和、开放；只用几何叶片；不模仿现有商标；海报A4与1080方图。
+
+### 提示词
+
+提出三种视觉方向，每种说明色彩/字重/栅格/可读性。以原创几何形为基础；所有字体和图像来源待核验。不要宣称商标可注册。
+
+### 输出模板
+
+品牌方向、规范草案、资产许可清单、审阅差异。
+
+### 风险与授权
+
+仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。生成效果不稳定回到手工几何构图；品牌批准前不投放、不注册商标。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+Image5 / rolling API; unified SDK / REST rolling docs
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。
+
+### 最佳实践证据状态
+
+原创教学模板，非行业最佳或独立实测
+
+### 1. 步骤1
+
+提炼受众任务与不可变品牌约束；不冒充真实调研。
+
+**验收：** 三方向差异是结构而非只换色
+
+### 2. 步骤2
+
+给三种方向的文本moodboard和几何logo构成草图。
+
+**验收：** 小尺寸标识仍辨认
+
+### 3. 步骤3
+
+选一方向生成版式规则与素材登记表，商标清查另立任务。
+
+**验收：** 素材无来源时不得标可商用
+
+### 4. 步骤4
+
+按灰度、小尺寸、单色与长标题四场景审阅。
+
+**验收：** 没有复制现有品牌图形
+
+- 对应技术（编辑学习关系）：[Firefly图像生成与编辑](https://2codework.github.io/modelatlas/?node=design-firefly-image)
+- 对应技术（编辑学习关系）：[Canva模板数据填充与导出](https://2codework.github.io/modelatlas/?node=design-canva-template)
+- agent_boundary：agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。
+- cost：未核验；执行前确认预算
+- permissions：['默认离线文本方案', '任何账户接入、上传、写入、付费、分享另行批准']
+- 验收：三方向差异是结构而非只换色
+- 验收：小尺寸标识仍辨认
+- 验收：素材无来源时不得标可商用
+- 验收：没有复制现有品牌图形
+- 来源：Firefly API — https://developer.adobe.com/firefly-services/docs/firefly-api/（核查：2026-10-28）
+
+- 来源：Canva Content License Agreement — https://www.canva.com/policies/content-license-agreement/（核查：2026-10-28）
+
+- 来源：Adobe Generative AI User Guidelines — https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "design-brand-kit",
+  "title": "虚构品牌视觉方向与权利清单",
+  "summary": "虚构品牌视觉方向与权利清单：合成教学流程，不是已部署产品效果案例。",
+  "roles": [
+    "品牌设计师"
+  ],
+  "industries": [
+    "跨行业设计"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "execution_mode": "agent_orchestrated_proposal",
+  "input": "虚构品牌“苔光”：城市植物交换活动；温和、开放；只用几何叶片；不模仿现有商标；海报A4与1080方图。",
+  "prompt": "提出三种视觉方向，每种说明色彩/字重/栅格/可读性。以原创几何形为基础；所有字体和图像来源待核验。不要宣称商标可注册。",
+  "steps": [
+    {
+      "title": "步骤1",
+      "body": "提炼受众任务与不可变品牌约束；不冒充真实调研。",
+      "check": "三方向差异是结构而非只换色"
+    },
+    {
+      "title": "步骤2",
+      "body": "给三种方向的文本moodboard和几何logo构成草图。",
+      "check": "小尺寸标识仍辨认"
+    },
+    {
+      "title": "步骤3",
+      "body": "选一方向生成版式规则与素材登记表，商标清查另立任务。",
+      "check": "素材无来源时不得标可商用"
+    },
+    {
+      "title": "步骤4",
+      "body": "按灰度、小尺寸、单色与长标题四场景审阅。",
+      "check": "没有复制现有品牌图形"
+    }
+  ],
+  "output": "品牌方向、规范草案、资产许可清单、审阅差异。",
+  "rubric": [
+    "三方向差异是结构而非只换色",
+    "小尺寸标识仍辨认",
+    "素材无来源时不得标可商用",
+    "没有复制现有品牌图形"
+  ],
+  "failure_recovery": "生成效果不稳定回到手工几何构图；品牌批准前不投放、不注册商标。",
+  "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。生成效果不稳定回到手工几何构图；品牌批准前不投放、不注册商标。",
+  "permissions": [
+    "默认离线文本方案",
+    "任何账户接入、上传、写入、付费、分享另行批准"
+  ],
+  "source_ids": [
+    "design-src-firefly",
+    "design-src-adobe-rights",
+    "design-src-canva-rights"
+  ],
+  "sources": [
+    {
+      "title": "Firefly API",
+      "url": "https://developer.adobe.com/firefly-services/docs/firefly-api/",
+      "evidence": "primary"
+    },
+    {
+      "title": "Canva Content License Agreement",
+      "url": "https://www.canva.com/policies/content-license-agreement/",
+      "evidence": "primary"
+    },
+    {
+      "title": "Adobe Generative AI User Guidelines",
+      "url": "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html",
+      "evidence": "primary"
+    }
+  ],
+  "modelatlas_node_ids": [
+    "design-firefly-image",
+    "design-canva-template"
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "Image5 / rolling API; unified SDK / REST rolling docs",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+  "practice_status": "原创教学模板，非行业最佳或独立实测",
+  "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+  "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+}
+```
+</details>
+
+## 多语种海报变体与模板填充
+
+多语种海报变体与模板填充：合成教学流程，不是已部署产品效果案例。
+
+**证据边界：** 官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。
+
+### 合成输入
+
+虚构活动：苔光交换日，12月5日14:00，免费；英文标题Mosslight Exchange Day；1080×1080与1080×1920；保留顶部安全区。
+
+### 提示词
+
+创建字段字典与中英两尺寸变体计划，日期逐字保留。先输出4份文本排版草稿；不上传、不发布。
+
+### 输出模板
+
+字段JSON、4变体清单、溢出报告、批准表。
+
+### 风险与授权
+
+仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。模板权限不足返回人工填充指南；任务超时先查job结果再新建，避免重复计费。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+unified SDK / REST rolling docs
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。
+
+### 最佳实践证据状态
+
+原创教学模板，非行业最佳或独立实测
+
+### 1. 步骤1
+
+锁定事实字段、允许改写字段及字体覆盖范围。
+
+**验收：** 日期时间4份一致
+
+### 2. 步骤2
+
+把字段映射模板占位符，缺失字段停止该变体而不是留旧值。
+
+**验收：** 标题和正文可编辑
+
+### 3. 步骤3
+
+对4个变体逐一检查文字溢出、裁切、层级和安全区。
+
+**验收：** 长英文不遮挡信息
+
+### 4. 步骤4
+
+生成导出命名规则与人工批准表，批准后才考虑批量导出。
+
+**验收：** 每张都有素材许可登记
+
+- 对应技术（编辑学习关系）：[Canva模板数据填充与导出](https://2codework.github.io/modelatlas/?node=design-canva-template)
+- agent_boundary：agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。
+- cost：未核验；执行前确认预算
+- permissions：['默认离线文本方案', '任何账户接入、上传、写入、付费、分享另行批准']
+- 验收：日期时间4份一致
+- 验收：标题和正文可编辑
+- 验收：长英文不遮挡信息
+- 验收：每张都有素材许可登记
+- 来源：Canva REST APIs — https://www.canva.dev/docs/apps/rest-apis/（核查：2026-10-28）
+
+- 来源：Canva autofill — https://www.canva.dev/docs/apps/rest-apis/autofill-guide/（核查：2026-10-28）
+
+- 来源：Canva Content License Agreement — https://www.canva.com/policies/content-license-agreement/（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "design-poster-localize",
+  "title": "多语种海报变体与模板填充",
+  "summary": "多语种海报变体与模板填充：合成教学流程，不是已部署产品效果案例。",
+  "roles": [
+    "平面设计师"
+  ],
+  "industries": [
+    "跨行业设计"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "execution_mode": "agent_orchestrated_proposal",
+  "input": "虚构活动：苔光交换日，12月5日14:00，免费；英文标题Mosslight Exchange Day；1080×1080与1080×1920；保留顶部安全区。",
+  "prompt": "创建字段字典与中英两尺寸变体计划，日期逐字保留。先输出4份文本排版草稿；不上传、不发布。",
+  "steps": [
+    {
+      "title": "步骤1",
+      "body": "锁定事实字段、允许改写字段及字体覆盖范围。",
+      "check": "日期时间4份一致"
+    },
+    {
+      "title": "步骤2",
+      "body": "把字段映射模板占位符，缺失字段停止该变体而不是留旧值。",
+      "check": "标题和正文可编辑"
+    },
+    {
+      "title": "步骤3",
+      "body": "对4个变体逐一检查文字溢出、裁切、层级和安全区。",
+      "check": "长英文不遮挡信息"
+    },
+    {
+      "title": "步骤4",
+      "body": "生成导出命名规则与人工批准表，批准后才考虑批量导出。",
+      "check": "每张都有素材许可登记"
+    }
+  ],
+  "output": "字段JSON、4变体清单、溢出报告、批准表。",
+  "rubric": [
+    "日期时间4份一致",
+    "标题和正文可编辑",
+    "长英文不遮挡信息",
+    "每张都有素材许可登记"
+  ],
+  "failure_recovery": "模板权限不足返回人工填充指南；任务超时先查job结果再新建，避免重复计费。",
+  "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。模板权限不足返回人工填充指南；任务超时先查job结果再新建，避免重复计费。",
+  "permissions": [
+    "默认离线文本方案",
+    "任何账户接入、上传、写入、付费、分享另行批准"
+  ],
+  "source_ids": [
+    "design-src-canva",
+    "design-src-canva-autofill",
+    "design-src-canva-rights"
+  ],
+  "sources": [
+    {
+      "title": "Canva REST APIs",
+      "url": "https://www.canva.dev/docs/apps/rest-apis/",
+      "evidence": "primary"
+    },
+    {
+      "title": "Canva autofill",
+      "url": "https://www.canva.dev/docs/apps/rest-apis/autofill-guide/",
+      "evidence": "primary"
+    },
+    {
+      "title": "Canva Content License Agreement",
+      "url": "https://www.canva.com/policies/content-license-agreement/",
+      "evidence": "primary"
+    }
+  ],
+  "modelatlas_node_ids": [
+    "design-canva-template"
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "unified SDK / REST rolling docs",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+  "practice_status": "原创教学模板，非行业最佳或独立实测",
+  "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+  "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+}
+```
+</details>
+
+## 经典剪影矢量化与节点清理
+
+经典剪影矢量化与节点清理：合成教学流程，不是已部署产品效果案例。
+
+**证据边界：** 官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。
+
+### 合成输入
+
+原创合成黑色叶片剪影：白底、无纹理、两处尖角；目标24px图标及A4印刷。
+
+### 提示词
+
+描述单色描摹参数试验和节点清理流程，保留尖角；不要把照片自动描摹称为高质量logo恢复。
+
+### 输出模板
+
+原图引用、SVG路径方案、阈值对照与尺寸验收。
+
+### 风险与授权
+
+仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。过度简化回到上一版本；不用提高节点数掩盖输入不适合。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+guide 1.3; installed version unknown
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。
+
+### 最佳实践证据状态
+
+原创教学模板，非行业最佳或独立实测
+
+### 1. 步骤1
+
+先确认源图原创；复制原件作为只读对照。
+
+**验收：** 叶片内外轮廓闭合符合设计意图
+
+### 2. 步骤2
+
+用单色阈值候选比较轮廓，保留原始与生成路径分层。
+
+**验收：** 尖角未变圆
+
+### 3. 步骤3
+
+去除噪点和无意义节点，检查洞与尖角后保存可编辑SVG。
+
+**验收：** 没有外链位图伪装成纯矢量
+
+### 4. 步骤4
+
+在24px及大尺寸比较，复杂照片改用人工重绘或保留栅格。
+
+**验收：** 24px不糊成不可识别色块
+
+- 对应技术（编辑学习关系）：[Inkscape位图描摹](https://2codework.github.io/modelatlas/?node=design-inkscape-trace)
+- agent_boundary：agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。
+- cost：未核验；执行前确认预算
+- permissions：['默认离线文本方案', '任何账户接入、上传、写入、付费、分享另行批准']
+- 验收：叶片内外轮廓闭合符合设计意图
+- 验收：尖角未变圆
+- 验收：没有外链位图伪装成纯矢量
+- 验收：24px不糊成不可识别色块
+- 来源：Inkscape Beginners Guide: tracing — https://inkscape-manuals.readthedocs.io/en/latest/tracing-an-image.html（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "design-vector-trace",
+  "title": "经典剪影矢量化与节点清理",
+  "summary": "经典剪影矢量化与节点清理：合成教学流程，不是已部署产品效果案例。",
+  "roles": [
+    "矢量设计师"
+  ],
+  "industries": [
+    "跨行业设计"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "execution_mode": "ordinary_tool_workflow",
+  "input": "原创合成黑色叶片剪影：白底、无纹理、两处尖角；目标24px图标及A4印刷。",
+  "prompt": "描述单色描摹参数试验和节点清理流程，保留尖角；不要把照片自动描摹称为高质量logo恢复。",
+  "steps": [
+    {
+      "title": "步骤1",
+      "body": "先确认源图原创；复制原件作为只读对照。",
+      "check": "叶片内外轮廓闭合符合设计意图"
+    },
+    {
+      "title": "步骤2",
+      "body": "用单色阈值候选比较轮廓，保留原始与生成路径分层。",
+      "check": "尖角未变圆"
+    },
+    {
+      "title": "步骤3",
+      "body": "去除噪点和无意义节点，检查洞与尖角后保存可编辑SVG。",
+      "check": "没有外链位图伪装成纯矢量"
+    },
+    {
+      "title": "步骤4",
+      "body": "在24px及大尺寸比较，复杂照片改用人工重绘或保留栅格。",
+      "check": "24px不糊成不可识别色块"
+    }
+  ],
+  "output": "原图引用、SVG路径方案、阈值对照与尺寸验收。",
+  "rubric": [
+    "叶片内外轮廓闭合符合设计意图",
+    "尖角未变圆",
+    "没有外链位图伪装成纯矢量",
+    "24px不糊成不可识别色块"
+  ],
+  "failure_recovery": "过度简化回到上一版本；不用提高节点数掩盖输入不适合。",
+  "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。过度简化回到上一版本；不用提高节点数掩盖输入不适合。",
+  "permissions": [
+    "默认离线文本方案",
+    "任何账户接入、上传、写入、付费、分享另行批准"
+  ],
+  "source_ids": [
+    "design-src-inkscape"
+  ],
+  "sources": [
+    {
+      "title": "Inkscape Beginners Guide: tracing",
+      "url": "https://inkscape-manuals.readthedocs.io/en/latest/tracing-an-image.html",
+      "evidence": "primary"
+    }
+  ],
+  "modelatlas_node_ids": [
+    "design-inkscape-trace"
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "guide 1.3; installed version unknown",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+  "practice_status": "原创教学模板，非行业最佳或独立实测",
+  "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+  "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+}
+```
+</details>
+
+## 产品合成背景与保真验收
+
+产品合成背景与保真验收：合成教学流程，不是已部署产品效果案例。
+
+**证据边界：** 官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。
+
+### 合成输入
+
+虚构无商标白色圆柱杯，正面一条蓝线；合成背景“浅灰桌面与柔和侧光”；主体高度占画面60%。
+
+### 提示词
+
+只规划背景替换和阴影，杯体轮廓、蓝线位置和比例不得改变；输出保护区与拒收规则，不生成或调用API。
+
+### 输出模板
+
+编辑计划、候选评审表、拒收原因、源资产记录。
+
+### 风险与授权
+
+仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。模型改变主体则改为锁定前景的确定性合成；达预算停止，不无限重试。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+Image5 / rolling API; v2 GA
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。
+
+### 最佳实践证据状态
+
+原创教学模板，非行业最佳或独立实测
+
+### 1. 步骤1
+
+把产品轮廓与品牌细节列为锁定区域，背景列为可编辑区域。
+
+**验收：** 杯体与蓝线不走样
+
+### 2. 步骤2
+
+先给单张构图计划，再规划有限数量候选与预算上限。
+
+**验收：** 主体未被裁断
+
+### 3. 步骤3
+
+逐候选检查边缘光晕、接触阴影、蓝线漂移和比例变形。
+
+**验收：** 接触阴影方向一致
+
+### 4. 步骤4
+
+将可接受候选与原件并排审阅，标明合成非实拍。
+
+**验收：** 合成标注与输入来源齐全
+
+- 对应技术（编辑学习关系）：[Firefly图像生成与编辑](https://2codework.github.io/modelatlas/?node=design-firefly-image)
+- 对应技术（编辑学习关系）：[Photoshop API v2确定性编辑编排](https://2codework.github.io/modelatlas/?node=design-photoshop-v2)
+- agent_boundary：agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。
+- cost：未核验；执行前确认预算
+- permissions：['默认离线文本方案', '任何账户接入、上传、写入、付费、分享另行批准']
+- 验收：杯体与蓝线不走样
+- 验收：主体未被裁断
+- 验收：接触阴影方向一致
+- 验收：合成标注与输入来源齐全
+- 来源：Firefly API — https://developer.adobe.com/firefly-services/docs/firefly-api/（核查：2026-10-28）
+
+- 来源：Photoshop API — https://developer.adobe.com/firefly-services/docs/photoshop/（核查：2026-10-28）
+
+- 来源：Adobe Generative AI User Guidelines — https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "design-product-composite",
+  "title": "产品合成背景与保真验收",
+  "summary": "产品合成背景与保真验收：合成教学流程，不是已部署产品效果案例。",
+  "roles": [
+    "图像编辑师"
+  ],
+  "industries": [
+    "跨行业设计"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "execution_mode": "agent_orchestrated_proposal",
+  "input": "虚构无商标白色圆柱杯，正面一条蓝线；合成背景“浅灰桌面与柔和侧光”；主体高度占画面60%。",
+  "prompt": "只规划背景替换和阴影，杯体轮廓、蓝线位置和比例不得改变；输出保护区与拒收规则，不生成或调用API。",
+  "steps": [
+    {
+      "title": "步骤1",
+      "body": "把产品轮廓与品牌细节列为锁定区域，背景列为可编辑区域。",
+      "check": "杯体与蓝线不走样"
+    },
+    {
+      "title": "步骤2",
+      "body": "先给单张构图计划，再规划有限数量候选与预算上限。",
+      "check": "主体未被裁断"
+    },
+    {
+      "title": "步骤3",
+      "body": "逐候选检查边缘光晕、接触阴影、蓝线漂移和比例变形。",
+      "check": "接触阴影方向一致"
+    },
+    {
+      "title": "步骤4",
+      "body": "将可接受候选与原件并排审阅，标明合成非实拍。",
+      "check": "合成标注与输入来源齐全"
+    }
+  ],
+  "output": "编辑计划、候选评审表、拒收原因、源资产记录。",
+  "rubric": [
+    "杯体与蓝线不走样",
+    "主体未被裁断",
+    "接触阴影方向一致",
+    "合成标注与输入来源齐全"
+  ],
+  "failure_recovery": "模型改变主体则改为锁定前景的确定性合成；达预算停止，不无限重试。",
+  "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。模型改变主体则改为锁定前景的确定性合成；达预算停止，不无限重试。",
+  "permissions": [
+    "默认离线文本方案",
+    "任何账户接入、上传、写入、付费、分享另行批准"
+  ],
+  "source_ids": [
+    "design-src-firefly",
+    "design-src-photoshop",
+    "design-src-adobe-rights"
+  ],
+  "sources": [
+    {
+      "title": "Firefly API",
+      "url": "https://developer.adobe.com/firefly-services/docs/firefly-api/",
+      "evidence": "primary"
+    },
+    {
+      "title": "Photoshop API",
+      "url": "https://developer.adobe.com/firefly-services/docs/photoshop/",
+      "evidence": "primary"
+    },
+    {
+      "title": "Adobe Generative AI User Guidelines",
+      "url": "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html",
+      "evidence": "primary"
+    }
+  ],
+  "modelatlas_node_ids": [
+    "design-firefly-image",
+    "design-photoshop-v2"
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "Image5 / rolling API; v2 GA",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+  "practice_status": "原创教学模板，非行业最佳或独立实测",
+  "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+  "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+}
+```
+</details>
+
+## 局部图像修补与非目标区保护
+
+局部图像修补与非目标区保护：合成教学流程，不是已部署产品效果案例。
+
+**证据边界：** 官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。
+
+### 合成输入
+
+原创合成桌面图：纸张旁一处污点；纸上合成文字“DEMO 12”；只清除污点，不动文字与几何边缘。
+
+### 提示词
+
+给出局部蒙版与非目标区保护检查。只修改指定污点，若文字变化即拒收；输出修改日志。
+
+### 输出模板
+
+蒙版说明、编辑前后差异表、可回滚分层交付计划。
+
+### 风险与授权
+
+仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。文字或边缘受损立即回退；采用手工局部修补方案，不能用整体美观抵消错误。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+Image5 / rolling API; v2 GA
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。
+
+### 最佳实践证据状态
+
+原创教学模板，非行业最佳或独立实测
+
+### 1. 步骤1
+
+确定污点边界，另列文字保护区；记录原件校验值。
+
+**验收：** DEMO 12逐字保持
+
+### 2. 步骤2
+
+规划小蒙版与低影响编辑，先做一张而不是整图重生成。
+
+**验收：** 非目标区域无未经批准变化
+
+### 3. 步骤3
+
+对比非目标区与文字，标出所有额外变化并人工复核。
+
+**验收：** 修补不出现重复纹理
+
+### 4. 步骤4
+
+保留分层结果、原图和修改日志；仅交付核准版本。
+
+**验收：** 原件与参数保留
+
+- 对应技术（编辑学习关系）：[Firefly图像生成与编辑](https://2codework.github.io/modelatlas/?node=design-firefly-image)
+- 对应技术（编辑学习关系）：[Photoshop API v2确定性编辑编排](https://2codework.github.io/modelatlas/?node=design-photoshop-v2)
+- agent_boundary：agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。
+- cost：未核验；执行前确认预算
+- permissions：['默认离线文本方案', '任何账户接入、上传、写入、付费、分享另行批准']
+- 验收：DEMO 12逐字保持
+- 验收：非目标区域无未经批准变化
+- 验收：修补不出现重复纹理
+- 验收：原件与参数保留
+- 来源：Firefly API — https://developer.adobe.com/firefly-services/docs/firefly-api/（核查：2026-10-28）
+
+- 来源：Photoshop API — https://developer.adobe.com/firefly-services/docs/photoshop/（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "design-image-repair",
+  "title": "局部图像修补与非目标区保护",
+  "summary": "局部图像修补与非目标区保护：合成教学流程，不是已部署产品效果案例。",
+  "roles": [
+    "修图师"
+  ],
+  "industries": [
+    "跨行业设计"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "execution_mode": "agent_orchestrated_proposal",
+  "input": "原创合成桌面图：纸张旁一处污点；纸上合成文字“DEMO 12”；只清除污点，不动文字与几何边缘。",
+  "prompt": "给出局部蒙版与非目标区保护检查。只修改指定污点，若文字变化即拒收；输出修改日志。",
+  "steps": [
+    {
+      "title": "步骤1",
+      "body": "确定污点边界，另列文字保护区；记录原件校验值。",
+      "check": "DEMO 12逐字保持"
+    },
+    {
+      "title": "步骤2",
+      "body": "规划小蒙版与低影响编辑，先做一张而不是整图重生成。",
+      "check": "非目标区域无未经批准变化"
+    },
+    {
+      "title": "步骤3",
+      "body": "对比非目标区与文字，标出所有额外变化并人工复核。",
+      "check": "修补不出现重复纹理"
+    },
+    {
+      "title": "步骤4",
+      "body": "保留分层结果、原图和修改日志；仅交付核准版本。",
+      "check": "原件与参数保留"
+    }
+  ],
+  "output": "蒙版说明、编辑前后差异表、可回滚分层交付计划。",
+  "rubric": [
+    "DEMO 12逐字保持",
+    "非目标区域无未经批准变化",
+    "修补不出现重复纹理",
+    "原件与参数保留"
+  ],
+  "failure_recovery": "文字或边缘受损立即回退；采用手工局部修补方案，不能用整体美观抵消错误。",
+  "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。文字或边缘受损立即回退；采用手工局部修补方案，不能用整体美观抵消错误。",
+  "permissions": [
+    "默认离线文本方案",
+    "任何账户接入、上传、写入、付费、分享另行批准"
+  ],
+  "source_ids": [
+    "design-src-firefly",
+    "design-src-photoshop"
+  ],
+  "sources": [
+    {
+      "title": "Firefly API",
+      "url": "https://developer.adobe.com/firefly-services/docs/firefly-api/",
+      "evidence": "primary"
+    },
+    {
+      "title": "Photoshop API",
+      "url": "https://developer.adobe.com/firefly-services/docs/photoshop/",
+      "evidence": "primary"
+    }
+  ],
+  "modelatlas_node_ids": [
+    "design-firefly-image",
+    "design-photoshop-v2"
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "Image5 / rolling API; v2 GA",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+  "practice_status": "原创教学模板，非行业最佳或独立实测",
+  "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+  "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+}
+```
+</details>
+
+## 从事实表到可编辑演示
+
+从事实表到可编辑演示：合成教学流程，不是已部署产品效果案例。
+
+**证据边界：** 官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。
+
+### 合成输入
+
+虚构试验：A组10人7完成，B组10人8完成；仅演示，无显著性结论；3页：目的/结果/下一步；16:9。
+
+### 提示词
+
+制作3页内容与布局JSON草案，按7/10及8/10正确呈现；不得宣称B优于A已证实。每页留来源与讲者备注。
+
+### 输出模板
+
+3页结构草稿、数据对照、备注、逐页QA表。
+
+### 风险与授权
+
+仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。API对象ID冲突先读取现有页面；长文改写需保持事实，失败退回内容提纲。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+WCAG 2.2 Recommendation 2024-12-12; API v1
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。
+
+### 最佳实践证据状态
+
+原创教学模板，非行业最佳或独立实测
+
+### 1. 步骤1
+
+先列事实与不可推断项，再形成一页一主张故事线。
+
+**验收：** 数值7与8及分母10正确
+
+### 2. 步骤2
+
+按固定模板映射标题、正文、图表与备注，不烘焙成整页图片。
+
+**验收：** 不作未经验证显著性结论
+
+### 3. 步骤3
+
+逐页检查图表数值、阅读顺序、对齐与溢出。
+
+**验收：** 文字可编辑且无溢出
+
+### 4. 步骤4
+
+导出前检查页面图像和可编辑元素；发布/分享需审批。
+
+**验收：** 无授权素材不进入演示
+
+- 对应技术（编辑学习关系）：[Google Slides结构化排版](https://2codework.github.io/modelatlas/?node=design-slides-api)
+- 对应技术（编辑学习关系）：[WCAG 2.2验收标准](https://2codework.github.io/modelatlas/?node=design-wcag)
+- agent_boundary：agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。
+- cost：未核验；执行前确认预算
+- permissions：['默认离线文本方案', '任何账户接入、上传、写入、付费、分享另行批准']
+- 验收：数值7与8及分母10正确
+- 验收：不作未经验证显著性结论
+- 验收：文字可编辑且无溢出
+- 验收：无授权素材不进入演示
+- 来源：WCAG 2.2 — https://www.w3.org/TR/WCAG22/（核查：2026-10-28）
+
+- 来源：Google Slides API — https://developers.google.com/workspace/slides/api/guides/overview（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "design-slides-story",
+  "title": "从事实表到可编辑演示",
+  "summary": "从事实表到可编辑演示：合成教学流程，不是已部署产品效果案例。",
+  "roles": [
+    "演示设计师"
+  ],
+  "industries": [
+    "跨行业设计"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "execution_mode": "agent_orchestrated_proposal",
+  "input": "虚构试验：A组10人7完成，B组10人8完成；仅演示，无显著性结论；3页：目的/结果/下一步；16:9。",
+  "prompt": "制作3页内容与布局JSON草案，按7/10及8/10正确呈现；不得宣称B优于A已证实。每页留来源与讲者备注。",
+  "steps": [
+    {
+      "title": "步骤1",
+      "body": "先列事实与不可推断项，再形成一页一主张故事线。",
+      "check": "数值7与8及分母10正确"
+    },
+    {
+      "title": "步骤2",
+      "body": "按固定模板映射标题、正文、图表与备注，不烘焙成整页图片。",
+      "check": "不作未经验证显著性结论"
+    },
+    {
+      "title": "步骤3",
+      "body": "逐页检查图表数值、阅读顺序、对齐与溢出。",
+      "check": "文字可编辑且无溢出"
+    },
+    {
+      "title": "步骤4",
+      "body": "导出前检查页面图像和可编辑元素；发布/分享需审批。",
+      "check": "无授权素材不进入演示"
+    }
+  ],
+  "output": "3页结构草稿、数据对照、备注、逐页QA表。",
+  "rubric": [
+    "数值7与8及分母10正确",
+    "不作未经验证显著性结论",
+    "文字可编辑且无溢出",
+    "无授权素材不进入演示"
+  ],
+  "failure_recovery": "API对象ID冲突先读取现有页面；长文改写需保持事实，失败退回内容提纲。",
+  "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。API对象ID冲突先读取现有页面；长文改写需保持事实，失败退回内容提纲。",
+  "permissions": [
+    "默认离线文本方案",
+    "任何账户接入、上传、写入、付费、分享另行批准"
+  ],
+  "source_ids": [
+    "design-src-slides",
+    "design-src-wcag"
+  ],
+  "sources": [
+    {
+      "title": "WCAG 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "evidence": "primary"
+    },
+    {
+      "title": "Google Slides API",
+      "url": "https://developers.google.com/workspace/slides/api/guides/overview",
+      "evidence": "primary"
+    }
+  ],
+  "modelatlas_node_ids": [
+    "design-slides-api",
+    "design-wcag"
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "WCAG 2.2 Recommendation 2024-12-12; API v1",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+  "practice_status": "原创教学模板，非行业最佳或独立实测",
+  "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+  "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+}
+```
+</details>
+
+## 响应式视觉回归与差异分流
+
+响应式视觉回归与差异分流：合成教学流程，不是已部署产品效果案例。
+
+**证据边界：** 官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。
+
+### 合成输入
+
+合成网页组件：卡片3列→1列；宽320/768/1440；固定日期与字体；人为引入按钮溢出及2px间距变化。
+
+### 提示词
+
+提出可重复截图基线方案，把真实缺陷与环境噪声分开。基线更新必须人工批准；不调用浏览器。
+
+### 输出模板
+
+环境锁定表、差异分类、复现步骤、基线审批。
+
+### 风险与授权
+
+仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。字体加载失败先修环境再比；保留旧基线，禁止用大容差遮盖布局缺陷。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+rolling docs; release unknown
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。
+
+### 最佳实践证据状态
+
+原创教学模板，非行业最佳或独立实测
+
+### 1. 步骤1
+
+固定环境、浏览器、字体、动画和数据；建立基线批准记录。
+
+**验收：** 溢出必被列为缺陷
+
+### 2. 步骤2
+
+按三宽度截取同状态比较，并用结构断言辅助判断。
+
+**验收：** 三断点全覆盖
+
+### 3. 步骤3
+
+将溢出列为阻塞，间距差异列为待设计判断，不自动忽略。
+
+**验收：** 环境不一致不能直接比较通过率
+
+### 4. 步骤4
+
+仅修复或解释后批准基线；输出失败截图引用与复现步骤。
+
+**验收：** 没有自动接受所有新截图
+
+- 对应技术（编辑学习关系）：[Playwright视觉回归](https://2codework.github.io/modelatlas/?node=design-visual-regression)
+- agent_boundary：agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。
+- cost：未核验；执行前确认预算
+- permissions：['默认离线文本方案', '任何账户接入、上传、写入、付费、分享另行批准']
+- 验收：溢出必被列为缺陷
+- 验收：三断点全覆盖
+- 验收：环境不一致不能直接比较通过率
+- 验收：没有自动接受所有新截图
+- 来源：Playwright visual comparisons — https://playwright.dev/docs/test-snapshots（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "design-visual-qa",
+  "title": "响应式视觉回归与差异分流",
+  "summary": "响应式视觉回归与差异分流：合成教学流程，不是已部署产品效果案例。",
+  "roles": [
+    "设计QA"
+  ],
+  "industries": [
+    "跨行业设计"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "execution_mode": "agent_orchestrated_proposal",
+  "input": "合成网页组件：卡片3列→1列；宽320/768/1440；固定日期与字体；人为引入按钮溢出及2px间距变化。",
+  "prompt": "提出可重复截图基线方案，把真实缺陷与环境噪声分开。基线更新必须人工批准；不调用浏览器。",
+  "steps": [
+    {
+      "title": "步骤1",
+      "body": "固定环境、浏览器、字体、动画和数据；建立基线批准记录。",
+      "check": "溢出必被列为缺陷"
+    },
+    {
+      "title": "步骤2",
+      "body": "按三宽度截取同状态比较，并用结构断言辅助判断。",
+      "check": "三断点全覆盖"
+    },
+    {
+      "title": "步骤3",
+      "body": "将溢出列为阻塞，间距差异列为待设计判断，不自动忽略。",
+      "check": "环境不一致不能直接比较通过率"
+    },
+    {
+      "title": "步骤4",
+      "body": "仅修复或解释后批准基线；输出失败截图引用与复现步骤。",
+      "check": "没有自动接受所有新截图"
+    }
+  ],
+  "output": "环境锁定表、差异分类、复现步骤、基线审批。",
+  "rubric": [
+    "溢出必被列为缺陷",
+    "三断点全覆盖",
+    "环境不一致不能直接比较通过率",
+    "没有自动接受所有新截图"
+  ],
+  "failure_recovery": "字体加载失败先修环境再比；保留旧基线，禁止用大容差遮盖布局缺陷。",
+  "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。字体加载失败先修环境再比；保留旧基线，禁止用大容差遮盖布局缺陷。",
+  "permissions": [
+    "默认离线文本方案",
+    "任何账户接入、上传、写入、付费、分享另行批准"
+  ],
+  "source_ids": [
+    "design-src-playwright"
+  ],
+  "sources": [
+    {
+      "title": "Playwright visual comparisons",
+      "url": "https://playwright.dev/docs/test-snapshots",
+      "evidence": "primary"
+    }
+  ],
+  "modelatlas_node_ids": [
+    "design-visual-regression"
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "rolling docs; release unknown",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+  "practice_status": "原创教学模板，非行业最佳或独立实测",
+  "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+  "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+}
+```
+</details>
+
+## 资产权利与内容凭证交付
+
+资产权利与内容凭证交付：合成教学流程，不是已部署产品效果案例。
+
+**证据边界：** 官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。
+
+### 合成输入
+
+合成资产A原创几何图、B来源unknown、C带签名但无商业许可、D已获单项目许可；交付包需要公开再分发。
+
+### 提示词
+
+分别给可交付/阻塞/待核验结论；来源签名和版权授权独立判断。不把缺凭证认定为伪造。
+
+### 输出模板
+
+资产台账、凭证检查结果、许可阻塞表、交付清单。
+
+### 风险与授权
+
+仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。无法验证凭证保留原件和unknown；改用原创替代，不能去掉凭证掩盖来源。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+unified SDK / REST rolling docs; 2.5 October 2026
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。
+
+### 最佳实践证据状态
+
+原创教学模板，非行业最佳或独立实测
+
+### 1. 步骤1
+
+建立来源、创作者、工具、编辑、许可范围和批准人的登记字段。
+
+**验收：** B不误标可商用
+
+### 2. 步骤2
+
+核对凭证有效性与声明范围，单独核对商用/再分发权利。
+
+**验收：** C签名有效不等于有授权
+
+### 3. 步骤3
+
+把B/C/D放入待核验或限制队列；不因看起来可信就放行。
+
+**验收：** D单项目许可不自动再分发
+
+### 4. 步骤4
+
+导出原创资产及清单草案，元数据隐私审查后才考虑公开。
+
+**验收：** 声明unknown与invalid明确区分
+
+- 对应技术（编辑学习关系）：[C2PA素材来源链](https://2codework.github.io/modelatlas/?node=design-c2pa)
+- 对应技术（编辑学习关系）：[Canva模板数据填充与导出](https://2codework.github.io/modelatlas/?node=design-canva-template)
+- agent_boundary：agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。
+- cost：未核验；执行前确认预算
+- permissions：['默认离线文本方案', '任何账户接入、上传、写入、付费、分享另行批准']
+- 验收：B不误标可商用
+- 验收：C签名有效不等于有授权
+- 验收：D单项目许可不自动再分发
+- 验收：声明unknown与invalid明确区分
+- 验收：有效凭证不被解释为内容真实准确的证明
+- 来源：Canva Content License Agreement — https://www.canva.com/policies/content-license-agreement/（核查：2026-10-28）
+
+- 来源：C2PA specification 2.5 — https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html（核查：2026-10-28）
+
+- 来源：Adobe Generative AI User Guidelines — https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html（核查：2026-10-28）
+
+- 来源：C2PA explainer: provenance limits — https://c2pa.org/specifications/specifications/2.2/explainer/Explainer.html（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "design-asset-provenance",
+  "title": "资产权利与内容凭证交付",
+  "summary": "资产权利与内容凭证交付：合成教学流程，不是已部署产品效果案例。",
+  "roles": [
+    "设计运营"
+  ],
+  "industries": [
+    "跨行业设计"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "execution_mode": "agent_orchestrated_proposal",
+  "input": "合成资产A原创几何图、B来源unknown、C带签名但无商业许可、D已获单项目许可；交付包需要公开再分发。",
+  "prompt": "分别给可交付/阻塞/待核验结论；来源签名和版权授权独立判断。不把缺凭证认定为伪造。",
+  "steps": [
+    {
+      "title": "步骤1",
+      "body": "建立来源、创作者、工具、编辑、许可范围和批准人的登记字段。",
+      "check": "B不误标可商用"
+    },
+    {
+      "title": "步骤2",
+      "body": "核对凭证有效性与声明范围，单独核对商用/再分发权利。",
+      "check": "C签名有效不等于有授权"
+    },
+    {
+      "title": "步骤3",
+      "body": "把B/C/D放入待核验或限制队列；不因看起来可信就放行。",
+      "check": "D单项目许可不自动再分发"
+    },
+    {
+      "title": "步骤4",
+      "body": "导出原创资产及清单草案，元数据隐私审查后才考虑公开。",
+      "check": "声明unknown与invalid明确区分"
+    }
+  ],
+  "output": "资产台账、凭证检查结果、许可阻塞表、交付清单。",
+  "rubric": [
+    "B不误标可商用",
+    "C签名有效不等于有授权",
+    "D单项目许可不自动再分发",
+    "声明unknown与invalid明确区分",
+    "有效凭证不被解释为内容真实准确的证明"
+  ],
+  "failure_recovery": "无法验证凭证保留原件和unknown；改用原创替代，不能去掉凭证掩盖来源。",
+  "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。无法验证凭证保留原件和unknown；改用原创替代，不能去掉凭证掩盖来源。",
+  "permissions": [
+    "默认离线文本方案",
+    "任何账户接入、上传、写入、付费、分享另行批准"
+  ],
+  "source_ids": [
+    "design-src-c2pa",
+    "design-src-canva-rights",
+    "design-src-adobe-rights",
+    "design-src-c2pa-explainer"
+  ],
+  "sources": [
+    {
+      "title": "Canva Content License Agreement",
+      "url": "https://www.canva.com/policies/content-license-agreement/",
+      "evidence": "primary"
+    },
+    {
+      "title": "C2PA specification 2.5",
+      "url": "https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html",
+      "evidence": "primary"
+    },
+    {
+      "title": "Adobe Generative AI User Guidelines",
+      "url": "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html",
+      "evidence": "primary"
+    },
+    {
+      "title": "C2PA explainer: provenance limits",
+      "url": "https://c2pa.org/specifications/specifications/2.2/explainer/Explainer.html",
+      "evidence": "primary"
+    }
+  ],
+  "modelatlas_node_ids": [
+    "design-c2pa",
+    "design-canva-template"
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "unified SDK / REST rolling docs; 2.5 October 2026",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+  "practice_status": "原创教学模板，非行业最佳或独立实测",
+  "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+  "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+}
+```
+</details>
+
+## 历史PSD批处理到v2迁移练习
+
+历史PSD批处理到v2迁移练习：合成教学流程，不是已部署产品效果案例。
+
+**证据边界：** 官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。
+
+### 合成输入
+
+合成旧任务：v1替换一张海报图片与标题；外链资源可能过期；目标只生成迁移映射不发送请求。
+
+### 提示词
+
+保留v1历史接口说明并标deprecated，列v2迁移所需字段、未核验点和回滚条件。官方公告EOL为2026-07-31；不要猜测端点兼容或声称已测试服务响应。
+
+### 输出模板
+
+旧新映射、依赖台账、回滚与验收计划。
+
+### 风险与授权
+
+仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。无法映射时保留人工操作方案；禁直接对生产PSD重试未知写入。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+deprecated
+
+### 适用版本
+
+v2 GA; v1 deprecated; announced EOL 2026-07-31
+
+### 生命周期确认时间
+
+2026-10-28
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。 替代工具节点为design-photoshop-v2；没有已实测的同仓替代案例，因此replacement_case留空。
+
+### 最佳实践证据状态
+
+原创教学模板，非行业最佳或独立实测
+
+### 1. 步骤1
+
+冻结旧任务定义与示例输出，标出旧endpoint来源。
+
+**验收：** 明确v1 deprecated
+
+### 2. 步骤2
+
+根据迁移文档逐操作映射；未确认操作写unknown并停止。
+
+**验收：** 正确记载公告EOL 2026-07-31
+
+### 3. 步骤3
+
+规划小样本比较：字体、图层位置、外链访问和输出格式。
+
+**验收：** 外链资源权限及有效期有检查
+
+### 4. 步骤4
+
+通过验收后才申请切换；失败保持旧档案但不建议扩大旧集成。
+
+**验收：** 新旧输出差异有批准入口
+
+- 对应技术（编辑学习关系）：[Photoshop API v1历史工作流](https://2codework.github.io/modelatlas/?node=design-photoshop-v1)
+- 对应技术（编辑学习关系）：[Photoshop API v2确定性编辑编排](https://2codework.github.io/modelatlas/?node=design-photoshop-v2)
+- agent_boundary：agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。
+- cost：未核验；执行前确认预算
+- permissions：['默认离线文本方案', '任何账户接入、上传、写入、付费、分享另行批准']
+- 验收：明确v1 deprecated
+- 验收：正确记载公告EOL 2026-07-31
+- 验收：外链资源权限及有效期有检查
+- 验收：新旧输出差异有批准入口
+- 来源：Photoshop API — https://developer.adobe.com/firefly-services/docs/photoshop/（核查：2026-10-28）
+
+- 来源：Photoshop guides and migration — https://developer.adobe.com/firefly-services/docs/photoshop/guides/（核查：2026-10-28）
+
+- 来源：Photoshop v1 deprecation announcement — https://developer.adobe.com/firefly-services/docs/photoshop/getting-started/deprecation-announcement/（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "design-ps-legacy-migrate",
+  "title": "历史PSD批处理到v2迁移练习",
+  "summary": "历史PSD批处理到v2迁移练习：合成教学流程，不是已部署产品效果案例。",
+  "roles": [
+    "设计自动化工程师"
+  ],
+  "industries": [
+    "跨行业设计"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "execution_mode": "agent_orchestrated_proposal",
+  "input": "合成旧任务：v1替换一张海报图片与标题；外链资源可能过期；目标只生成迁移映射不发送请求。",
+  "prompt": "保留v1历史接口说明并标deprecated，列v2迁移所需字段、未核验点和回滚条件。官方公告EOL为2026-07-31；不要猜测端点兼容或声称已测试服务响应。",
+  "steps": [
+    {
+      "title": "步骤1",
+      "body": "冻结旧任务定义与示例输出，标出旧endpoint来源。",
+      "check": "明确v1 deprecated"
+    },
+    {
+      "title": "步骤2",
+      "body": "根据迁移文档逐操作映射；未确认操作写unknown并停止。",
+      "check": "正确记载公告EOL 2026-07-31"
+    },
+    {
+      "title": "步骤3",
+      "body": "规划小样本比较：字体、图层位置、外链访问和输出格式。",
+      "check": "外链资源权限及有效期有检查"
+    },
+    {
+      "title": "步骤4",
+      "body": "通过验收后才申请切换；失败保持旧档案但不建议扩大旧集成。",
+      "check": "新旧输出差异有批准入口"
+    }
+  ],
+  "output": "旧新映射、依赖台账、回滚与验收计划。",
+  "rubric": [
+    "明确v1 deprecated",
+    "正确记载公告EOL 2026-07-31",
+    "外链资源权限及有效期有检查",
+    "新旧输出差异有批准入口"
+  ],
+  "failure_recovery": "无法映射时保留人工操作方案；禁直接对生产PSD重试未知写入。",
+  "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。无法映射时保留人工操作方案；禁直接对生产PSD重试未知写入。",
+  "permissions": [
+    "默认离线文本方案",
+    "任何账户接入、上传、写入、付费、分享另行批准"
+  ],
+  "source_ids": [
+    "design-src-ps-migration",
+    "design-src-photoshop",
+    "design-src-ps-eol"
+  ],
+  "sources": [
+    {
+      "title": "Photoshop API",
+      "url": "https://developer.adobe.com/firefly-services/docs/photoshop/",
+      "evidence": "primary"
+    },
+    {
+      "title": "Photoshop guides and migration",
+      "url": "https://developer.adobe.com/firefly-services/docs/photoshop/guides/",
+      "evidence": "primary"
+    },
+    {
+      "title": "Photoshop v1 deprecation announcement",
+      "url": "https://developer.adobe.com/firefly-services/docs/photoshop/getting-started/deprecation-announcement/",
+      "evidence": "primary"
+    }
+  ],
+  "modelatlas_node_ids": [
+    "design-photoshop-v1",
+    "design-photoshop-v2"
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+  "lifecycle": "deprecated",
+  "lifecycle_as_of": "2026-10-28",
+  "applicable_versions": "v2 GA; v1 deprecated; announced EOL 2026-07-31",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。 替代工具节点为design-photoshop-v2；没有已实测的同仓替代案例，因此replacement_case留空。",
+  "practice_status": "原创教学模板，非行业最佳或独立实测",
+  "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+  "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+}
+```
+</details>
+
+## 无歌词配乐草图
+
+原创合成教学工作流：无歌词配乐草图。仅文档依据，尚未音频实测。
+
+**证据边界：** 官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。
+
+### 合成输入
+
+原创项目：20 秒虚构天文馆片头，无样本，无人声。
+
+### 提示词
+
+写三组音乐描述：节奏、乐器、情绪；不提艺人或既有旋律。每次只改变一个因素。
+
+### 输出模板
+
+三份 brief、候选编号、人工听评记录
+
+### 风险与授权
+
+生成不守时长就剪辑原创新音频并留尾音；雷同则拒收重写；仅使用原创或明确授权素材；输出发布需人工审核。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+historical
+
+### 适用版本
+
+研究版本 v1；本轮不声称为最新音乐模型
+
+### 生命周期确认时间
+
+2026-10-28
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+固定旧版用于理解方法；不因过时删除
+
+### 最佳实践证据状态
+
+原创教学模板，不声称最佳实践或已成功部署。
+
+### 1. 1. 确认非商业研究许可
+
+确认非商业研究许可。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 不含人声或既有歌曲指令
+
+### 2. 2. 制作三个不同织体的文字 brief
+
+制作三个不同织体的文字 brief。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 起落结构明确
+
+### 3. 3. 以后经授权生成短样并盲听排序
+
+以后经授权生成短样并盲听排序。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 不得把未生成音频标成成品
+
+### 4. 4. 归档提示和参数
+
+归档提示和参数。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 不得把未生成音频标成成品
+
+- 对应技术（编辑学习关系）：[MusicGen v1](https://2codework.github.io/modelatlas/?node=music-musicgen)
+- agent_boundary：模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。
+- cost：本地推理计算成本未知；不安装、不调用。
+- permissions：本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。
+- 验收：不含人声或既有歌曲指令
+- 验收：起落结构明确
+- 验收：不得把未生成音频标成成品
+- 来源：MusicGen model card — https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_MODEL_CARD.md（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "music-musicgen-sketch",
+  "title": "无歌词配乐草图",
+  "summary": "原创合成教学工作流：无歌词配乐草图。仅文档依据，尚未音频实测。",
+  "roles": [
+    "音乐制作人",
+    "音频编辑",
+    "Agent 开发者"
+  ],
+  "industries": [
+    "音乐与音频",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "1. 确认非商业研究许可",
+      "body": "确认非商业研究许可。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "不含人声或既有歌曲指令"
+    },
+    {
+      "title": "2. 制作三个不同织体的文字 brief",
+      "body": "制作三个不同织体的文字 brief。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "起落结构明确"
+    },
+    {
+      "title": "3. 以后经授权生成短样并盲听排序",
+      "body": "以后经授权生成短样并盲听排序。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "不得把未生成音频标成成品"
+    },
+    {
+      "title": "4. 归档提示和参数",
+      "body": "归档提示和参数。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "不得把未生成音频标成成品"
+    }
+  ],
+  "sources": [
+    {
+      "title": "MusicGen model card",
+      "url": "https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_MODEL_CARD.md",
+      "evidence": "primary"
+    }
+  ],
+  "source_ids": [
+    "music-src-musicgen"
+  ],
+  "input": "原创项目：20 秒虚构天文馆片头，无样本，无人声。",
+  "prompt": "写三组音乐描述：节奏、乐器、情绪；不提艺人或既有旋律。每次只改变一个因素。",
+  "output": "三份 brief、候选编号、人工听评记录",
+  "rubric": [
+    "不含人声或既有歌曲指令",
+    "起落结构明确",
+    "不得把未生成音频标成成品"
+  ],
+  "risks": "生成不守时长就剪辑原创新音频并留尾音；雷同则拒收重写；仅使用原创或明确授权素材；输出发布需人工审核。",
+  "failure_recovery": "生成不守时长就剪辑原创新音频并留尾音；雷同则拒收重写",
+  "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+  "cost": "本地推理计算成本未知；不安装、不调用。",
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+  "lifecycle": "historical",
+  "lifecycle_as_of": "2026-10-28",
+  "applicable_versions": "研究版本 v1；本轮不声称为最新音乐模型",
+  "replacement_case": "",
+  "historical_context": "固定旧版用于理解方法；不因过时删除",
+  "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+  "modelatlas_node_ids": [
+    "music-musicgen"
+  ],
+  "workflow_type": "human_supervised_agent_design",
+  "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+}
+```
+</details>
+
+## 和弦与节奏约束编曲
+
+原创合成教学工作流：和弦与节奏约束编曲。仅文档依据，尚未音频实测。
+
+**证据边界：** 官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。
+
+### 合成输入
+
+原创八小节 C–Am–F–G，拍速 96；自写鼓点事件表，无商曲旋律。
+
+### 提示词
+
+给出每个和弦起止秒数和鼓点，描述轻木质打击乐；保持主旋律留白。
+
+### 输出模板
+
+和弦时间表、输入清单、对照试听表
+
+### 风险与授权
+
+调性漂移时缩短段落；条件不兼容先修配置，不盲调 checkpoint；仅使用原创或明确授权素材；输出发布需人工审核。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+historical
+
+### 适用版本
+
+v1，400M/1B；历史研究方案保留
+
+### 生命周期确认时间
+
+2026-10-28
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+固定旧版用于理解方法；不因过时删除
+
+### 最佳实践证据状态
+
+原创教学模板，不声称最佳实践或已成功部署。
+
+### 1. 1. 将小节换算时间
+
+将小节换算时间。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 和弦变换不越界
+
+### 2. 2. 校验和弦映射和模型变体一致
+
+校验和弦映射和模型变体一致。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 节拍与鼓点可人工复核
+
+### 3. 3. 分别设计文本-only 与条件对照
+
+分别设计文本-only 与条件对照。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 实验不商用
+
+### 4. 4. 逐拍比对结构
+
+逐拍比对结构。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 实验不商用
+
+- 对应技术（编辑学习关系）：[JASCO v1](https://2codework.github.io/modelatlas/?node=music-jasco)
+- agent_boundary：模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。
+- cost：计算/依赖安装另授权；权重非商用。
+- permissions：本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。
+- 验收：和弦变换不越界
+- 验收：节拍与鼓点可人工复核
+- 验收：实验不商用
+- 来源：JASCO documentation — https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md（核查：2026-10-28）
+
+- 来源：JASCO model card — https://github.com/facebookresearch/audiocraft/blob/main/model_cards/JASCO_MODEL_CARD.md（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "music-jasco-arrangement",
+  "title": "和弦与节奏约束编曲",
+  "summary": "原创合成教学工作流：和弦与节奏约束编曲。仅文档依据，尚未音频实测。",
+  "roles": [
+    "音乐制作人",
+    "音频编辑",
+    "Agent 开发者"
+  ],
+  "industries": [
+    "音乐与音频",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "1. 将小节换算时间",
+      "body": "将小节换算时间。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "和弦变换不越界"
+    },
+    {
+      "title": "2. 校验和弦映射和模型变体一致",
+      "body": "校验和弦映射和模型变体一致。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "节拍与鼓点可人工复核"
+    },
+    {
+      "title": "3. 分别设计文本-only 与条件对照",
+      "body": "分别设计文本-only 与条件对照。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "实验不商用"
+    },
+    {
+      "title": "4. 逐拍比对结构",
+      "body": "逐拍比对结构。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "实验不商用"
+    }
+  ],
+  "sources": [
+    {
+      "title": "JASCO documentation",
+      "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+      "evidence": "primary"
+    },
+    {
+      "title": "JASCO model card",
+      "url": "https://github.com/facebookresearch/audiocraft/blob/main/model_cards/JASCO_MODEL_CARD.md",
+      "evidence": "primary"
+    }
+  ],
+  "source_ids": [
+    "music-src-jasco",
+    "music-src-jasco-card"
+  ],
+  "input": "原创八小节 C–Am–F–G，拍速 96；自写鼓点事件表，无商曲旋律。",
+  "prompt": "给出每个和弦起止秒数和鼓点，描述轻木质打击乐；保持主旋律留白。",
+  "output": "和弦时间表、输入清单、对照试听表",
+  "rubric": [
+    "和弦变换不越界",
+    "节拍与鼓点可人工复核",
+    "实验不商用"
+  ],
+  "risks": "调性漂移时缩短段落；条件不兼容先修配置，不盲调 checkpoint；仅使用原创或明确授权素材；输出发布需人工审核。",
+  "failure_recovery": "调性漂移时缩短段落；条件不兼容先修配置，不盲调 checkpoint",
+  "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+  "cost": "计算/依赖安装另授权；权重非商用。",
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+  "lifecycle": "historical",
+  "lifecycle_as_of": "2026-10-28",
+  "applicable_versions": "v1，400M/1B；历史研究方案保留",
+  "replacement_case": "",
+  "historical_context": "固定旧版用于理解方法；不因过时删除",
+  "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+  "modelatlas_node_ids": [
+    "music-jasco"
+  ],
+  "workflow_type": "human_supervised_agent_design",
+  "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+}
+```
+</details>
+
+## 原创歌词到完整歌曲结构
+
+原创合成教学工作流：原创歌词到完整歌曲结构。仅文档依据，尚未音频实测。
+
+**证据边界：** 官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。
+
+### 合成输入
+
+原创题目《纸船的早晨》，四句自写歌词，主歌-副歌-尾声，无参考录音。
+
+### 提示词
+
+只用我提供的原创句子；轻快木吉他，约两分钟；给出段落意图而非模仿歌手。
+
+### 输出模板
+
+结构表、音频候选 manifest、实际唱词对照
+
+### 风险与授权
+
+唱词错误则缩短歌词；不追求重复随机生成直到超预算；仅使用原创或明确授权素材；输出发布需人工审核。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+current
+
+### 适用版本
+
+lyria-3.5 / lyria-3-clip-preview；仅文档核查
+
+### 生命周期确认时间
+
+2026-10-28
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+当前仅确认官方文档陈述，未证明账号/地区实际可用
+
+### 最佳实践证据状态
+
+原创教学模板，不声称最佳实践或已成功部署。
+
+### 1. 1. 人工检查歌词原创性
+
+人工检查歌词原创性。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 无添加敏感/侵权词
+
+### 2. 2. 选完整歌曲或 Clip 而非混用
+
+选完整歌曲或 Clip 而非混用。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 副歌重复按计划
+
+### 3. 3. 设单次预算和候选数
+
+设单次预算和候选数。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 版本写明
+
+### 4. 4. 逐词听写复核并对结构打分
+
+逐词听写复核并对结构打分。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 版本写明
+
+- 对应技术（编辑学习关系）：[Lyria 3.5 / Clip](https://2codework.github.io/modelatlas/?node=music-lyria)
+- agent_boundary：模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。
+- cost：API 可能计费，运行前查看当前报价；本轮零调用。
+- permissions：本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。
+- 验收：无添加敏感/侵权词
+- 验收：副歌重复按计划
+- 验收：版本写明
+- 来源：Gemini music generation — https://ai.google.dev/gemini-api/docs/music-generation（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "music-lyria-song",
+  "title": "原创歌词到完整歌曲结构",
+  "summary": "原创合成教学工作流：原创歌词到完整歌曲结构。仅文档依据，尚未音频实测。",
+  "roles": [
+    "音乐制作人",
+    "音频编辑",
+    "Agent 开发者"
+  ],
+  "industries": [
+    "音乐与音频",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "1. 人工检查歌词原创性",
+      "body": "人工检查歌词原创性。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "无添加敏感/侵权词"
+    },
+    {
+      "title": "2. 选完整歌曲或 Clip 而非混用",
+      "body": "选完整歌曲或 Clip 而非混用。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "副歌重复按计划"
+    },
+    {
+      "title": "3. 设单次预算和候选数",
+      "body": "设单次预算和候选数。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "版本写明"
+    },
+    {
+      "title": "4. 逐词听写复核并对结构打分",
+      "body": "逐词听写复核并对结构打分。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "版本写明"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Gemini music generation",
+      "url": "https://ai.google.dev/gemini-api/docs/music-generation",
+      "evidence": "primary"
+    }
+  ],
+  "source_ids": [
+    "music-src-lyria"
+  ],
+  "input": "原创题目《纸船的早晨》，四句自写歌词，主歌-副歌-尾声，无参考录音。",
+  "prompt": "只用我提供的原创句子；轻快木吉他，约两分钟；给出段落意图而非模仿歌手。",
+  "output": "结构表、音频候选 manifest、实际唱词对照",
+  "rubric": [
+    "无添加敏感/侵权词",
+    "副歌重复按计划",
+    "版本写明"
+  ],
+  "risks": "唱词错误则缩短歌词；不追求重复随机生成直到超预算；仅使用原创或明确授权素材；输出发布需人工审核。",
+  "failure_recovery": "唱词错误则缩短歌词；不追求重复随机生成直到超预算",
+  "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+  "cost": "API 可能计费，运行前查看当前报价；本轮零调用。",
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+  "lifecycle": "current",
+  "lifecycle_as_of": "2026-10-28",
+  "applicable_versions": "lyria-3.5 / lyria-3-clip-preview；仅文档核查",
+  "replacement_case": "",
+  "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+  "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+  "modelatlas_node_ids": [
+    "music-lyria"
+  ],
+  "workflow_type": "human_supervised_agent_design",
+  "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+}
+```
+</details>
+
+## 歌词辅助与发行资格台账
+
+原创合成教学工作流：歌词辅助与发行资格台账。仅文档依据，尚未音频实测。
+
+**证据边界：** 官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。
+
+### 合成输入
+
+虚构原创四行歌词：纸船越过晨光/小巷收起雨凉/我们沿河慢唱/把远方放进行囊。
+
+### 提示词
+
+为原创歌词提出两种押韵与分段建议，不引用现有歌词，不模拟真实歌手；保留作者原稿。
+
+### 输出模板
+
+原创歌词 diff、权利台账、待确认清单
+
+### 风险与授权
+
+官方文字冲突交由现行条款/客服确认；不要靠升级推断追溯授权；仅使用原创或明确授权素材；输出发布需人工审核。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+新旧官方商业权利文字冲突，具体账户/模型未核实
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+当前仅确认官方文档陈述，未证明账号/地区实际可用
+
+### 最佳实践证据状态
+
+原创教学模板，不声称最佳实践或已成功部署。
+
+### 1. 1. 先做文本修订差异
+
+先做文本修订差异。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 无复制歌词
+
+### 2. 2. 记录模型、生成时账户和下载时账户
+
+记录模型、生成时账户和下载时账户。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 生成日与下载日分列
+
+### 3. 3. 对照新旧官方规则
+
+对照新旧官方规则。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 资格不明不得发布
+
+### 4. 4. 资格不清只保留私有练习
+
+资格不清只保留私有练习。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 资格不明不得发布
+
+- 对应技术（编辑学习关系）：[Suno generation service](https://2codework.github.io/modelatlas/?node=music-suno)
+- agent_boundary：模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。
+- cost：不购买套餐、不下载作品；商业发行需单独批准。
+- permissions：本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。
+- 验收：无复制歌词
+- 验收：生成日与下载日分列
+- 验收：资格不明不得发布
+- 来源：Suno downloads and terms update — https://www.suno.com/blog/suno-updates-tos（核查：2026-10-28）
+
+- 来源：Suno distribution help — https://help.suno.com/en/articles/2410177（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "music-suno-lyrics",
+  "title": "歌词辅助与发行资格台账",
+  "summary": "原创合成教学工作流：歌词辅助与发行资格台账。仅文档依据，尚未音频实测。",
+  "roles": [
+    "音乐制作人",
+    "音频编辑",
+    "Agent 开发者"
+  ],
+  "industries": [
+    "音乐与音频",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "1. 先做文本修订差异",
+      "body": "先做文本修订差异。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "无复制歌词"
+    },
+    {
+      "title": "2. 记录模型、生成时账户和下载时账户",
+      "body": "记录模型、生成时账户和下载时账户。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "生成日与下载日分列"
+    },
+    {
+      "title": "3. 对照新旧官方规则",
+      "body": "对照新旧官方规则。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "资格不明不得发布"
+    },
+    {
+      "title": "4. 资格不清只保留私有练习",
+      "body": "资格不清只保留私有练习。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "资格不明不得发布"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Suno downloads and terms update",
+      "url": "https://www.suno.com/blog/suno-updates-tos",
+      "evidence": "primary"
+    },
+    {
+      "title": "Suno distribution help",
+      "url": "https://help.suno.com/en/articles/2410177",
+      "evidence": "primary"
+    }
+  ],
+  "source_ids": [
+    "music-src-suno-new",
+    "music-src-suno-old"
+  ],
+  "input": "虚构原创四行歌词：纸船越过晨光/小巷收起雨凉/我们沿河慢唱/把远方放进行囊。",
+  "prompt": "为原创歌词提出两种押韵与分段建议，不引用现有歌词，不模拟真实歌手；保留作者原稿。",
+  "output": "原创歌词 diff、权利台账、待确认清单",
+  "rubric": [
+    "无复制歌词",
+    "生成日与下载日分列",
+    "资格不明不得发布"
+  ],
+  "risks": "官方文字冲突交由现行条款/客服确认；不要靠升级推断追溯授权；仅使用原创或明确授权素材；输出发布需人工审核。",
+  "failure_recovery": "官方文字冲突交由现行条款/客服确认；不要靠升级推断追溯授权",
+  "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+  "cost": "不购买套餐、不下载作品；商业发行需单独批准。",
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "新旧官方商业权利文字冲突，具体账户/模型未核实",
+  "replacement_case": "",
+  "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+  "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+  "modelatlas_node_ids": [
+    "music-suno"
+  ],
+  "workflow_type": "human_supervised_agent_design",
+  "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+}
+```
+</details>
+
+## 原创混合音轨分轨诊断
+
+原创合成教学工作流：原创混合音轨分轨诊断。仅文档依据，尚未音频实测。
+
+**证据边界：** 官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。
+
+### 合成输入
+
+自己合成的鼓、低音、人声占位和键盘四轨混合；保留真实独立轨作参考。
+
+### 提示词
+
+将混合分为四类；比较泄漏而非宣称恢复原始录音；不要提取商业歌曲伴奏。
+
+### 输出模板
+
+四轨输出计划、残留检查表、版本记录
+
+### 风险与授权
+
+出现抽吸/金属音优先用原创源轨；降输入电平检查削波；仅使用原创或明确授权素材；输出发布需人工审核。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+historical
+
+### 适用版本
+
+Meta 仓库已归档；保留只读复现实验
+
+### 生命周期确认时间
+
+2026-10-28
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+固定旧版用于理解方法；不因过时删除
+
+### 最佳实践证据状态
+
+原创教学模板，不声称最佳实践或已成功部署。
+
+### 1. 1. 保存输入与四轨基准
+
+保存输入与四轨基准。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 时长对齐
+
+### 2. 2. 固定历史 htdemucs 版本
+
+固定历史 htdemucs 版本。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 相加无明显偏移
+
+### 3. 3. 设计分轨/重合成对比
+
+设计分轨/重合成对比。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 不把分轨结果当原 stems
+
+### 4. 4. 听击乐尾音和人声残留
+
+听击乐尾音和人声残留。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 不把分轨结果当原 stems
+
+- 对应技术（编辑学习关系）：[HTDemucs v4](https://2codework.github.io/modelatlas/?node=music-demucs)
+- agent_boundary：模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。
+- cost：归档库不新装；依赖和资源成本未测。
+- permissions：本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。
+- 验收：时长对齐
+- 验收：相加无明显偏移
+- 验收：不把分轨结果当原 stems
+- 来源：Meta Demucs repository — https://github.com/facebookresearch/demucs（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "music-stem-separation",
+  "title": "原创混合音轨分轨诊断",
+  "summary": "原创合成教学工作流：原创混合音轨分轨诊断。仅文档依据，尚未音频实测。",
+  "roles": [
+    "音乐制作人",
+    "音频编辑",
+    "Agent 开发者"
+  ],
+  "industries": [
+    "音乐与音频",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "1. 保存输入与四轨基准",
+      "body": "保存输入与四轨基准。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "时长对齐"
+    },
+    {
+      "title": "2. 固定历史 htdemucs 版本",
+      "body": "固定历史 htdemucs 版本。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "相加无明显偏移"
+    },
+    {
+      "title": "3. 设计分轨/重合成对比",
+      "body": "设计分轨/重合成对比。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "不把分轨结果当原 stems"
+    },
+    {
+      "title": "4. 听击乐尾音和人声残留",
+      "body": "听击乐尾音和人声残留。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "不把分轨结果当原 stems"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Meta Demucs repository",
+      "url": "https://github.com/facebookresearch/demucs",
+      "evidence": "primary"
+    }
+  ],
+  "source_ids": [
+    "music-src-demucs"
+  ],
+  "input": "自己合成的鼓、低音、人声占位和键盘四轨混合；保留真实独立轨作参考。",
+  "prompt": "将混合分为四类；比较泄漏而非宣称恢复原始录音；不要提取商业歌曲伴奏。",
+  "output": "四轨输出计划、残留检查表、版本记录",
+  "rubric": [
+    "时长对齐",
+    "相加无明显偏移",
+    "不把分轨结果当原 stems"
+  ],
+  "risks": "出现抽吸/金属音优先用原创源轨；降输入电平检查削波；仅使用原创或明确授权素材；输出发布需人工审核。",
+  "failure_recovery": "出现抽吸/金属音优先用原创源轨；降输入电平检查削波",
+  "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+  "cost": "归档库不新装；依赖和资源成本未测。",
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+  "lifecycle": "historical",
+  "lifecycle_as_of": "2026-10-28",
+  "applicable_versions": "Meta 仓库已归档；保留只读复现实验",
+  "replacement_case": "",
+  "historical_context": "固定旧版用于理解方法；不因过时删除",
+  "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+  "modelatlas_node_ids": [
+    "music-demucs"
+  ],
+  "workflow_type": "human_supervised_agent_design",
+  "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+}
+```
+</details>
+
+## 混音助手的 A/B 实验
+
+原创合成教学工作流：混音助手的 A/B 实验。仅文档依据，尚未音频实测。
+
+**证据边界：** 官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。
+
+### 合成输入
+
+原创鼓、贝斯、合成器三轨；目标是低频分离而非更响。
+
+### 提示词
+
+给混音审阅 Agent：先列冲突频段假设，逐轨建议可逆调整，保留旁通对照。
+
+### 输出模板
+
+轨道处理记录、旁通快照、人工选择原因
+
+### 风险与授权
+
+刺耳/抽吸就旁通最近模块；回滚而非叠加补救；仅使用原创或明确授权素材；输出发布需人工审核。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+current
+
+### 适用版本
+
+Neutron 5；各版本模块差异需用户核实
+
+### 生命周期确认时间
+
+2026-10-28
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+当前仅确认官方文档陈述，未证明账号/地区实际可用
+
+### 最佳实践证据状态
+
+原创教学模板，不声称最佳实践或已成功部署。
+
+### 1. 1. 保存干声和快照
+
+保存干声和快照。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 没有依靠增益作弊
+
+### 2. 2. 在获授权 DAW 中分析代表段
+
+在获授权 DAW 中分析代表段。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 低频不互相遮盖
+
+### 3. 3. 一次改一个处理模块
+
+一次改一个处理模块。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 未超峰值
+
+### 4. 4. 等响度 A/B 与单声道试听
+
+等响度 A/B 与单声道试听。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 未超峰值
+
+- 对应技术（编辑学习关系）：[Neutron 5 Mix Assistant](https://2codework.github.io/modelatlas/?node=music-neutron)
+- agent_boundary：模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。
+- cost：插件付费/DAW 授权另核；本轮不操作软件。
+- permissions：本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。
+- 验收：没有依靠增益作弊
+- 验收：低频不互相遮盖
+- 验收：未超峰值
+- 来源：Neutron 5 official product — https://www.izotope.com/products/neutron/（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "music-mix-assistant",
+  "title": "混音助手的 A/B 实验",
+  "summary": "原创合成教学工作流：混音助手的 A/B 实验。仅文档依据，尚未音频实测。",
+  "roles": [
+    "音乐制作人",
+    "音频编辑",
+    "Agent 开发者"
+  ],
+  "industries": [
+    "音乐与音频",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "1. 保存干声和快照",
+      "body": "保存干声和快照。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "没有依靠增益作弊"
+    },
+    {
+      "title": "2. 在获授权 DAW 中分析代表段",
+      "body": "在获授权 DAW 中分析代表段。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "低频不互相遮盖"
+    },
+    {
+      "title": "3. 一次改一个处理模块",
+      "body": "一次改一个处理模块。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "未超峰值"
+    },
+    {
+      "title": "4. 等响度 A/B 与单声道试听",
+      "body": "等响度 A/B 与单声道试听。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "未超峰值"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Neutron 5 official product",
+      "url": "https://www.izotope.com/products/neutron/",
+      "evidence": "primary"
+    }
+  ],
+  "source_ids": [
+    "music-src-neutron"
+  ],
+  "input": "原创鼓、贝斯、合成器三轨；目标是低频分离而非更响。",
+  "prompt": "给混音审阅 Agent：先列冲突频段假设，逐轨建议可逆调整，保留旁通对照。",
+  "output": "轨道处理记录、旁通快照、人工选择原因",
+  "rubric": [
+    "没有依靠增益作弊",
+    "低频不互相遮盖",
+    "未超峰值"
+  ],
+  "risks": "刺耳/抽吸就旁通最近模块；回滚而非叠加补救；仅使用原创或明确授权素材；输出发布需人工审核。",
+  "failure_recovery": "刺耳/抽吸就旁通最近模块；回滚而非叠加补救",
+  "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+  "cost": "插件付费/DAW 授权另核；本轮不操作软件。",
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+  "lifecycle": "current",
+  "lifecycle_as_of": "2026-10-28",
+  "applicable_versions": "Neutron 5；各版本模块差异需用户核实",
+  "replacement_case": "",
+  "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+  "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+  "modelatlas_node_ids": [
+    "music-neutron"
+  ],
+  "workflow_type": "human_supervised_agent_design",
+  "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+}
+```
+</details>
+
+## 母带助手不等于一键发布
+
+原创合成教学工作流：母带助手不等于一键发布。仅文档依据，尚未音频实测。
+
+**证据边界：** 官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。
+
+### 合成输入
+
+原创立体声混音，有完整动态和峰值余量；不上传他人参考曲。
+
+### 提示词
+
+先选发行目标并记录目标值来源；助手只给初始建议，不把统一 LUFS 当所有平台标准。
+
+### 输出模板
+
+母带候选、测量表、平台交付要求链接
+
+### 风险与授权
+
+失真回到混音；过度限制降低处理量；保留可撤销链；仅使用原创或明确授权素材；输出发布需人工审核。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+current
+
+### 适用版本
+
+Ozone 12；版本/模块因授权级别不同
+
+### 生命周期确认时间
+
+2026-10-28
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+当前仅确认官方文档陈述，未证明账号/地区实际可用
+
+### 最佳实践证据状态
+
+原创教学模板，不声称最佳实践或已成功部署。
+
+### 1. 1. 保留未母带混音
+
+保留未母带混音。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 全曲非仅片段通过
+
+### 2. 2. 选择代表性响段分析
+
+选择代表性响段分析。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 真峰值满足项目明确要求
+
+### 3. 3. 等响度比较处理前后
+
+等响度比较处理前后。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 动态由人确认
+
+### 4. 4. 检查真峰值、削波、低频与安静段
+
+检查真峰值、削波、低频与安静段。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 动态由人确认
+
+- 对应技术（编辑学习关系）：[Ozone 12 Master Assistant](https://2codework.github.io/modelatlas/?node=music-ozone)
+- agent_boundary：模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。
+- cost：商业插件；不固定过时价格；交付标准逐平台核验。
+- permissions：本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。
+- 验收：全曲非仅片段通过
+- 验收：真峰值满足项目明确要求
+- 验收：动态由人确认
+- 来源：Ozone 12 user guide — https://docs.izotope.com/ozone12/en/index-en.html（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "music-master-assistant",
+  "title": "母带助手不等于一键发布",
+  "summary": "原创合成教学工作流：母带助手不等于一键发布。仅文档依据，尚未音频实测。",
+  "roles": [
+    "音乐制作人",
+    "音频编辑",
+    "Agent 开发者"
+  ],
+  "industries": [
+    "音乐与音频",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "1. 保留未母带混音",
+      "body": "保留未母带混音。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "全曲非仅片段通过"
+    },
+    {
+      "title": "2. 选择代表性响段分析",
+      "body": "选择代表性响段分析。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "真峰值满足项目明确要求"
+    },
+    {
+      "title": "3. 等响度比较处理前后",
+      "body": "等响度比较处理前后。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "动态由人确认"
+    },
+    {
+      "title": "4. 检查真峰值、削波、低频与安静段",
+      "body": "检查真峰值、削波、低频与安静段。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "动态由人确认"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ozone 12 user guide",
+      "url": "https://docs.izotope.com/ozone12/en/index-en.html",
+      "evidence": "primary"
+    }
+  ],
+  "source_ids": [
+    "music-src-ozone"
+  ],
+  "input": "原创立体声混音，有完整动态和峰值余量；不上传他人参考曲。",
+  "prompt": "先选发行目标并记录目标值来源；助手只给初始建议，不把统一 LUFS 当所有平台标准。",
+  "output": "母带候选、测量表、平台交付要求链接",
+  "rubric": [
+    "全曲非仅片段通过",
+    "真峰值满足项目明确要求",
+    "动态由人确认"
+  ],
+  "risks": "失真回到混音；过度限制降低处理量；保留可撤销链；仅使用原创或明确授权素材；输出发布需人工审核。",
+  "failure_recovery": "失真回到混音；过度限制降低处理量；保留可撤销链",
+  "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+  "cost": "商业插件；不固定过时价格；交付标准逐平台核验。",
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+  "lifecycle": "current",
+  "lifecycle_as_of": "2026-10-28",
+  "applicable_versions": "Ozone 12；版本/模块因授权级别不同",
+  "replacement_case": "",
+  "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+  "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+  "modelatlas_node_ids": [
+    "music-ozone"
+  ],
+  "workflow_type": "human_supervised_agent_design",
+  "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+}
+```
+</details>
+
+## 双主持播客多轨后期
+
+原创合成教学工作流：双主持播客多轨后期。仅文档依据，尚未音频实测。
+
+**证据边界：** 官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。
+
+### 合成输入
+
+两段本人授权录音的虚构科普对话，30 秒；一轨远一轨近，原创片头。
+
+### 提示词
+
+保留自然呼吸与停顿；先语音清晰后音乐 ducking；不自动剪掉改变意思的片段。
+
+### 输出模板
+
+节目 WAV/MP3 计划、处理参数表、问题时间码
+
+### 风险与授权
+
+降噪损伤就降低强度/禁用；错位先修对齐；失败不得重复计费提交；仅使用原创或明确授权素材；输出发布需人工审核。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+current
+
+### 适用版本
+
+2026 官方文档；可用额度未登录核验
+
+### 生命周期确认时间
+
+2026-10-28
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+当前仅确认官方文档陈述，未证明账号/地区实际可用
+
+### 最佳实践证据状态
+
+原创教学模板，不声称最佳实践或已成功部署。
+
+### 1. 1. 对齐轨道并标出音乐
+
+对齐轨道并标出音乐。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 两人音量均衡
+
+### 2. 2. 选适合语音的后期配置
+
+选适合语音的后期配置。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 词尾不被门限吃掉
+
+### 3. 3. 试听串音/噪声段
+
+试听串音/噪声段。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 音乐不盖对白
+
+### 4. 4. 输出并保留未处理原轨
+
+输出并保留未处理原轨。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 音乐不盖对白
+
+- 对应技术（编辑学习关系）：[Auphonic multitrack](https://2codework.github.io/modelatlas/?node=music-auphonic)
+- agent_boundary：模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。
+- cost：云处理时长预算和隐私同意；本轮无上传。
+- permissions：本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。
+- 验收：两人音量均衡
+- 验收：词尾不被门限吃掉
+- 验收：音乐不盖对白
+- 来源：Auphonic multitrack algorithms — https://us1.auphonic.com/help/algorithms/multitrack.html（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "music-podcast-post",
+  "title": "双主持播客多轨后期",
+  "summary": "原创合成教学工作流：双主持播客多轨后期。仅文档依据，尚未音频实测。",
+  "roles": [
+    "音乐制作人",
+    "音频编辑",
+    "Agent 开发者"
+  ],
+  "industries": [
+    "音乐与音频",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "1. 对齐轨道并标出音乐",
+      "body": "对齐轨道并标出音乐。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "两人音量均衡"
+    },
+    {
+      "title": "2. 选适合语音的后期配置",
+      "body": "选适合语音的后期配置。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "词尾不被门限吃掉"
+    },
+    {
+      "title": "3. 试听串音/噪声段",
+      "body": "试听串音/噪声段。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "音乐不盖对白"
+    },
+    {
+      "title": "4. 输出并保留未处理原轨",
+      "body": "输出并保留未处理原轨。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "音乐不盖对白"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Auphonic multitrack algorithms",
+      "url": "https://us1.auphonic.com/help/algorithms/multitrack.html",
+      "evidence": "primary"
+    }
+  ],
+  "source_ids": [
+    "music-src-auphonic"
+  ],
+  "input": "两段本人授权录音的虚构科普对话，30 秒；一轨远一轨近，原创片头。",
+  "prompt": "保留自然呼吸与停顿；先语音清晰后音乐 ducking；不自动剪掉改变意思的片段。",
+  "output": "节目 WAV/MP3 计划、处理参数表、问题时间码",
+  "rubric": [
+    "两人音量均衡",
+    "词尾不被门限吃掉",
+    "音乐不盖对白"
+  ],
+  "risks": "降噪损伤就降低强度/禁用；错位先修对齐；失败不得重复计费提交；仅使用原创或明确授权素材；输出发布需人工审核。",
+  "failure_recovery": "降噪损伤就降低强度/禁用；错位先修对齐；失败不得重复计费提交",
+  "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+  "cost": "云处理时长预算和隐私同意；本轮无上传。",
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+  "lifecycle": "current",
+  "lifecycle_as_of": "2026-10-28",
+  "applicable_versions": "2026 官方文档；可用额度未登录核验",
+  "replacement_case": "",
+  "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+  "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+  "modelatlas_node_ids": [
+    "music-auphonic"
+  ],
+  "workflow_type": "human_supervised_agent_design",
+  "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+}
+```
+</details>
+
+## Whisper 离线转写与人工校对
+
+原创合成教学工作流：Whisper 离线转写与人工校对。仅文档依据，尚未音频实测。
+
+**证据边界：** 官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。
+
+### 合成输入
+
+自读原创 45 秒天气科普稿，包含数字、专名和 5 秒静音；无个人数据。
+
+### 提示词
+
+逐字转写，标不确定词，不补写静音内容；专名以给定原创词表校对。
+
+### 输出模板
+
+逐字稿、错误表、静音误识别记录
+
+### 风险与授权
+
+错词重听短段；持续静音幻觉隔离片段；不通过猜测修复；仅使用原创或明确授权素材；输出发布需人工审核。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+current
+
+### 适用版本
+
+公开仓库文档已核；具体权重修订应固定
+
+### 生命周期确认时间
+
+2026-10-28
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+当前仅确认官方文档陈述，未证明账号/地区实际可用
+
+### 最佳实践证据状态
+
+原创教学模板，不声称最佳实践或已成功部署。
+
+### 1. 1. 留原稿为真值
+
+留原稿为真值。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 数字专名逐个核实
+
+### 2. 2. 固定权重和语言设置
+
+固定权重和语言设置。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 静音不幻觉
+
+### 3. 3. 对齐转写与录音
+
+对齐转写与录音。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 不把翻译当原语言转写
+
+### 4. 4. 计算本练习词/字错误并人工复核
+
+计算本练习词/字错误并人工复核。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 不把翻译当原语言转写
+
+- 对应技术（编辑学习关系）：[Whisper](https://2codework.github.io/modelatlas/?node=music-whisper)
+- agent_boundary：模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。
+- cost：MIT 不代表录音免授权；本地计算成本待测。
+- permissions：本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。
+- 验收：数字专名逐个核实
+- 验收：静音不幻觉
+- 验收：不把翻译当原语言转写
+- 来源：OpenAI Whisper repository — https://github.com/openai/whisper（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "music-speech-transcript",
+  "title": "Whisper 离线转写与人工校对",
+  "summary": "原创合成教学工作流：Whisper 离线转写与人工校对。仅文档依据，尚未音频实测。",
+  "roles": [
+    "音乐制作人",
+    "音频编辑",
+    "Agent 开发者"
+  ],
+  "industries": [
+    "音乐与音频",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "1. 留原稿为真值",
+      "body": "留原稿为真值。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "数字专名逐个核实"
+    },
+    {
+      "title": "2. 固定权重和语言设置",
+      "body": "固定权重和语言设置。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "静音不幻觉"
+    },
+    {
+      "title": "3. 对齐转写与录音",
+      "body": "对齐转写与录音。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "不把翻译当原语言转写"
+    },
+    {
+      "title": "4. 计算本练习词/字错误并人工复核",
+      "body": "计算本练习词/字错误并人工复核。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "不把翻译当原语言转写"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenAI Whisper repository",
+      "url": "https://github.com/openai/whisper",
+      "evidence": "primary"
+    }
+  ],
+  "source_ids": [
+    "music-src-whisper"
+  ],
+  "input": "自读原创 45 秒天气科普稿，包含数字、专名和 5 秒静音；无个人数据。",
+  "prompt": "逐字转写，标不确定词，不补写静音内容；专名以给定原创词表校对。",
+  "output": "逐字稿、错误表、静音误识别记录",
+  "rubric": [
+    "数字专名逐个核实",
+    "静音不幻觉",
+    "不把翻译当原语言转写"
+  ],
+  "risks": "错词重听短段；持续静音幻觉隔离片段；不通过猜测修复；仅使用原创或明确授权素材；输出发布需人工审核。",
+  "failure_recovery": "错词重听短段；持续静音幻觉隔离片段；不通过猜测修复",
+  "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+  "cost": "MIT 不代表录音免授权；本地计算成本待测。",
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+  "lifecycle": "current",
+  "lifecycle_as_of": "2026-10-28",
+  "applicable_versions": "公开仓库文档已核；具体权重修订应固定",
+  "replacement_case": "",
+  "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+  "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+  "modelatlas_node_ids": [
+    "music-whisper"
+  ],
+  "workflow_type": "human_supervised_agent_design",
+  "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+}
+```
+</details>
+
+## 旧说话人分离接口迁移审阅
+
+原创合成教学工作流：旧说话人分离接口迁移审阅。仅文档依据，尚未音频实测。
+
+**证据边界：** 官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。
+
+### 合成输入
+
+合成文本模拟三次说话轮换 A/B/A，无真人身份线索；仅设计测试。
+
+### 提示词
+
+检查旧集成的 model_id、截止日、段落字段；不要把 speaker_A 自动映射成实名。
+
+### 输出模板
+
+迁移清单、字段契约、回滚条件
+
+### 风险与授权
+
+新模型字段差异保留原始结果；不盲迁移；不能把文本模拟测试当音频实测；仅使用原创或明确授权素材；输出发布需人工审核。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+deprecated
+
+### 适用版本
+
+官方标弃用；旧集成截止 2027-02-26；不为新项目默认
+
+### 生命周期确认时间
+
+2026-10-28
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+固定旧版用于理解方法；不因过时删除
+
+### 最佳实践证据状态
+
+原创教学模板，不声称最佳实践或已成功部署。
+
+### 1. 1. 登记旧接口调用点
+
+登记旧接口调用点。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 旧模型不得作为新默认
+
+### 2. 2. 确认官方弃用期限
+
+确认官方弃用期限。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** speaker 与身份分离
+
+### 3. 3. 用匿名轮换 fixture 设计契约测试
+
+用匿名轮换 fixture 设计契约测试。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 替代未验证明确标未知
+
+### 4. 4. 新替代接口独立验证后才切换
+
+新替代接口独立验证后才切换。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 替代未验证明确标未知
+
+- 对应技术（编辑学习关系）：[gpt-4o-transcribe-diarize](https://2codework.github.io/modelatlas/?node=music-diarize)
+- agent_boundary：模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。
+- cost：旧 API 付费；不调用；替代模型未在本案例指定。
+- permissions：本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。
+- 验收：旧模型不得作为新默认
+- 验收：speaker 与身份分离
+- 验收：替代未验证明确标未知
+- 来源：OpenAI file transcription — https://developers.openai.com/api/docs/guides/speech-to-text（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "music-diarization-migrate",
+  "title": "旧说话人分离接口迁移审阅",
+  "summary": "原创合成教学工作流：旧说话人分离接口迁移审阅。仅文档依据，尚未音频实测。",
+  "roles": [
+    "音乐制作人",
+    "音频编辑",
+    "Agent 开发者"
+  ],
+  "industries": [
+    "音乐与音频",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "1. 登记旧接口调用点",
+      "body": "登记旧接口调用点。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "旧模型不得作为新默认"
+    },
+    {
+      "title": "2. 确认官方弃用期限",
+      "body": "确认官方弃用期限。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "speaker 与身份分离"
+    },
+    {
+      "title": "3. 用匿名轮换 fixture 设计契约测试",
+      "body": "用匿名轮换 fixture 设计契约测试。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "替代未验证明确标未知"
+    },
+    {
+      "title": "4. 新替代接口独立验证后才切换",
+      "body": "新替代接口独立验证后才切换。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "替代未验证明确标未知"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenAI file transcription",
+      "url": "https://developers.openai.com/api/docs/guides/speech-to-text",
+      "evidence": "primary"
+    }
+  ],
+  "source_ids": [
+    "music-src-asr"
+  ],
+  "input": "合成文本模拟三次说话轮换 A/B/A，无真人身份线索；仅设计测试。",
+  "prompt": "检查旧集成的 model_id、截止日、段落字段；不要把 speaker_A 自动映射成实名。",
+  "output": "迁移清单、字段契约、回滚条件",
+  "rubric": [
+    "旧模型不得作为新默认",
+    "speaker 与身份分离",
+    "替代未验证明确标未知"
+  ],
+  "risks": "新模型字段差异保留原始结果；不盲迁移；不能把文本模拟测试当音频实测；仅使用原创或明确授权素材；输出发布需人工审核。",
+  "failure_recovery": "新模型字段差异保留原始结果；不盲迁移；不能把文本模拟测试当音频实测",
+  "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+  "cost": "旧 API 付费；不调用；替代模型未在本案例指定。",
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+  "lifecycle": "deprecated",
+  "lifecycle_as_of": "2026-10-28",
+  "applicable_versions": "官方标弃用；旧集成截止 2027-02-26；不为新项目默认",
+  "replacement_case": "",
+  "historical_context": "固定旧版用于理解方法；不因过时删除",
+  "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+  "modelatlas_node_ids": [
+    "music-diarize"
+  ],
+  "workflow_type": "human_supervised_agent_design",
+  "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+}
+```
+</details>
+
+## 虚构游戏音效变体与循环
+
+原创合成教学工作流：虚构游戏音效变体与循环。仅文档依据，尚未音频实测。
+
+**证据边界：** 官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。
+
+### 合成输入
+
+虚构纸制机器人：展开纸翼、软木脚步、微风环境，无真实品牌声音。
+
+### 提示词
+
+纸翼缓慢展开，近距离、干声、无音乐无语言；另做柔和风循环，分别生成。
+
+### 输出模板
+
+音效命名表、候选试听表、循环接缝测试
+
+### 风险与授权
+
+复杂多事件失败就拆成单音；循环不平滑用淡化但保留原文件；仅使用原创或明确授权素材；输出发布需人工审核。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+current
+
+### 适用版本
+
+以当前 API 版本、格式能力为准
+
+### 生命周期确认时间
+
+2026-10-28
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+当前仅确认官方文档陈述，未证明账号/地区实际可用
+
+### 最佳实践证据状态
+
+原创教学模板，不声称最佳实践或已成功部署。
+
+### 1. 1. 拆分 one-shot 与 ambience brief
+
+拆分 one-shot 与 ambience brief。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 没有无意语言或背景音乐
+
+### 2. 2. 限制候选和秒数
+
+限制候选和秒数。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 起音适合交互
+
+### 3. 3. 核对输出格式
+
+核对输出格式。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 循环接缝无爆音
+
+### 4. 4. 拼接循环试听并标接缝
+
+拼接循环试听并标接缝。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 循环接缝无爆音
+
+- 对应技术（编辑学习关系）：[ElevenLabs SFX](https://2codework.github.io/modelatlas/?node=music-eleven-sfx)
+- agent_boundary：模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。
+- cost：按 credits/时长预算；不执行收费生成。
+- permissions：本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。
+- 验收：没有无意语言或背景音乐
+- 验收：起音适合交互
+- 验收：循环接缝无爆音
+- 来源：ElevenLabs Sound effects docs — https://elevenlabs.io/docs/overview/capabilities/sound-effects（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "music-sfx-foley",
+  "title": "虚构游戏音效变体与循环",
+  "summary": "原创合成教学工作流：虚构游戏音效变体与循环。仅文档依据，尚未音频实测。",
+  "roles": [
+    "音乐制作人",
+    "音频编辑",
+    "Agent 开发者"
+  ],
+  "industries": [
+    "音乐与音频",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "1. 拆分 one-shot 与 ambience brief",
+      "body": "拆分 one-shot 与 ambience brief。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "没有无意语言或背景音乐"
+    },
+    {
+      "title": "2. 限制候选和秒数",
+      "body": "限制候选和秒数。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "起音适合交互"
+    },
+    {
+      "title": "3. 核对输出格式",
+      "body": "核对输出格式。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "循环接缝无爆音"
+    },
+    {
+      "title": "4. 拼接循环试听并标接缝",
+      "body": "拼接循环试听并标接缝。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "循环接缝无爆音"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ElevenLabs Sound effects docs",
+      "url": "https://elevenlabs.io/docs/overview/capabilities/sound-effects",
+      "evidence": "primary"
+    }
+  ],
+  "source_ids": [
+    "music-src-sfx"
+  ],
+  "input": "虚构纸制机器人：展开纸翼、软木脚步、微风环境，无真实品牌声音。",
+  "prompt": "纸翼缓慢展开，近距离、干声、无音乐无语言；另做柔和风循环，分别生成。",
+  "output": "音效命名表、候选试听表、循环接缝测试",
+  "rubric": [
+    "没有无意语言或背景音乐",
+    "起音适合交互",
+    "循环接缝无爆音"
+  ],
+  "risks": "复杂多事件失败就拆成单音；循环不平滑用淡化但保留原文件；仅使用原创或明确授权素材；输出发布需人工审核。",
+  "failure_recovery": "复杂多事件失败就拆成单音；循环不平滑用淡化但保留原文件",
+  "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+  "cost": "按 credits/时长预算；不执行收费生成。",
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+  "lifecycle": "current",
+  "lifecycle_as_of": "2026-10-28",
+  "applicable_versions": "以当前 API 版本、格式能力为准",
+  "replacement_case": "",
+  "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+  "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+  "modelatlas_node_ids": [
+    "music-eleven-sfx"
+  ],
+  "workflow_type": "human_supervised_agent_design",
+  "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+}
+```
+</details>
+
+## 合法合成声线的原创微播客
+
+原创合成教学工作流：合法合成声线的原创微播客。仅文档依据，尚未音频实测。
+
+**证据边界：** 官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。
+
+### 合成输入
+
+自写 120 字纸船制作介绍，使用经授权产品声线；不指定名人/熟人。
+
+### 提示词
+
+用清晰温和、不模仿任何真实人物的声音，合理停顿；标注这是合成语音。
+
+### 输出模板
+
+脚本、声线授权说明、合成音频候选清单
+
+### 风险与授权
+
+读错改拼音/断句；不要上传他人录音克隆来修复；仅使用原创或明确授权素材；输出发布需人工审核。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+current
+
+### 适用版本
+
+具体 model_id/voice_id 运行前锁定，不把产品名当单一模型
+
+### 生命周期确认时间
+
+2026-10-28
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+当前仅确认官方文档陈述，未证明账号/地区实际可用
+
+### 最佳实践证据状态
+
+原创教学模板，不声称最佳实践或已成功部署。
+
+### 1. 1. 审批稿件与声线使用条件
+
+审批稿件与声线使用条件。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 无冒充
+
+### 2. 2. 锁定 model_id/voice_id
+
+锁定 model_id/voice_id。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 专名准确
+
+### 3. 3. 先短句测试专名
+
+先短句测试专名。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 听众能知道合成属性
+
+### 4. 4. 人工核对全文并保留 AI 标识
+
+人工核对全文并保留 AI 标识。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 条款适合目标用途
+
+- 对应技术（编辑学习关系）：[ElevenLabs TTS](https://2codework.github.io/modelatlas/?node=music-eleven-tts)
+- agent_boundary：模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。
+- cost：生成、商业使用和声线权限逐项确认；本轮不建账号。
+- permissions：本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。
+- 验收：无冒充
+- 验收：专名准确
+- 验收：听众能知道合成属性
+- 验收：条款适合目标用途
+- 来源：ElevenLabs TTS docs — https://elevenlabs.io/docs/overview/capabilities/text-to-speech（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "music-tts-podcast",
+  "title": "合法合成声线的原创微播客",
+  "summary": "原创合成教学工作流：合法合成声线的原创微播客。仅文档依据，尚未音频实测。",
+  "roles": [
+    "音乐制作人",
+    "音频编辑",
+    "Agent 开发者"
+  ],
+  "industries": [
+    "音乐与音频",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "1. 审批稿件与声线使用条件",
+      "body": "审批稿件与声线使用条件。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "无冒充"
+    },
+    {
+      "title": "2. 锁定 model_id/voice_id",
+      "body": "锁定 model_id/voice_id。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "专名准确"
+    },
+    {
+      "title": "3. 先短句测试专名",
+      "body": "先短句测试专名。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "听众能知道合成属性"
+    },
+    {
+      "title": "4. 人工核对全文并保留 AI 标识",
+      "body": "人工核对全文并保留 AI 标识。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "条款适合目标用途"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ElevenLabs TTS docs",
+      "url": "https://elevenlabs.io/docs/overview/capabilities/text-to-speech",
+      "evidence": "primary"
+    }
+  ],
+  "source_ids": [
+    "music-src-tts"
+  ],
+  "input": "自写 120 字纸船制作介绍，使用经授权产品声线；不指定名人/熟人。",
+  "prompt": "用清晰温和、不模仿任何真实人物的声音，合理停顿；标注这是合成语音。",
+  "output": "脚本、声线授权说明、合成音频候选清单",
+  "rubric": [
+    "无冒充",
+    "专名准确",
+    "听众能知道合成属性",
+    "条款适合目标用途"
+  ],
+  "risks": "读错改拼音/断句；不要上传他人录音克隆来修复；仅使用原创或明确授权素材；输出发布需人工审核。",
+  "failure_recovery": "读错改拼音/断句；不要上传他人录音克隆来修复",
+  "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+  "cost": "生成、商业使用和声线权限逐项确认；本轮不建账号。",
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+  "lifecycle": "current",
+  "lifecycle_as_of": "2026-10-28",
+  "applicable_versions": "具体 model_id/voice_id 运行前锁定，不把产品名当单一模型",
+  "replacement_case": "",
+  "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+  "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+  "modelatlas_node_ids": [
+    "music-eleven-tts"
+  ],
+  "workflow_type": "human_supervised_agent_design",
+  "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+}
+```
+</details>
+
+## 可访问性字幕从 ASR 到人工验收
+
+原创合成教学工作流：可访问性字幕从 ASR 到人工验收。仅文档依据，尚未音频实测。
+
+**证据边界：** 官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。
+
+### 合成输入
+
+原创 30 秒教程：对白、纸张撕裂声、结束铃声，含必要非语音信息。
+
+### 提示词
+
+制作同语言字幕；加入理解内容所需的声音标签和说话人变化，不猜不可辨词。
+
+### 输出模板
+
+WebVTT/SRT 草稿、校对记录、无声观看验收表
+
+### 风险与授权
+
+错时轴手工校准；快速对白重分行；字幕遮挡时调整播放器样式；仅使用原创或明确授权素材；输出发布需人工审核。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+current
+
+### 适用版本
+
+W3C WAI 教程当前可读；不宣称自动满足全部 WCAG
+
+### 生命周期确认时间
+
+2026-10-28
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+当前仅确认官方文档陈述，未证明账号/地区实际可用
+
+### 最佳实践证据状态
+
+原创教学模板，不声称最佳实践或已成功部署。
+
+### 1. 1. ASR 只作草稿
+
+ASR 只作草稿。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 起止时间顺序正确
+
+### 2. 2. 人工补非语音信息
+
+人工补非语音信息。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 声音信息不过量且必要
+
+### 3. 3. 调整同步和分行
+
+调整同步和分行。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 专名正确
+
+### 4. 4. 关闭音频观看检查是否可理解
+
+关闭音频观看检查是否可理解。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 不自动宣称 WCAG 合规
+
+- 对应技术（编辑学习关系）：[Accessible captions QA](https://2codework.github.io/modelatlas/?node=music-captions)
+- agent_boundary：模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。
+- cost：需人工校对时间；公开字幕须批准且避免个人信息泄漏。
+- permissions：本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。
+- 验收：起止时间顺序正确
+- 验收：声音信息不过量且必要
+- 验收：专名正确
+- 验收：不自动宣称 WCAG 合规
+- 来源：W3C WAI captions — https://www.w3.org/WAI/media/av/captions/（核查：2026-10-28）
+
+- 来源：OpenAI Whisper repository — https://github.com/openai/whisper（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "music-accessible-captions",
+  "title": "可访问性字幕从 ASR 到人工验收",
+  "summary": "原创合成教学工作流：可访问性字幕从 ASR 到人工验收。仅文档依据，尚未音频实测。",
+  "roles": [
+    "音乐制作人",
+    "音频编辑",
+    "Agent 开发者"
+  ],
+  "industries": [
+    "音乐与音频",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "1. ASR 只作草稿",
+      "body": "ASR 只作草稿。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "起止时间顺序正确"
+    },
+    {
+      "title": "2. 人工补非语音信息",
+      "body": "人工补非语音信息。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "声音信息不过量且必要"
+    },
+    {
+      "title": "3. 调整同步和分行",
+      "body": "调整同步和分行。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "专名正确"
+    },
+    {
+      "title": "4. 关闭音频观看检查是否可理解",
+      "body": "关闭音频观看检查是否可理解。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "不自动宣称 WCAG 合规"
+    }
+  ],
+  "sources": [
+    {
+      "title": "W3C WAI captions",
+      "url": "https://www.w3.org/WAI/media/av/captions/",
+      "evidence": "primary"
+    },
+    {
+      "title": "OpenAI Whisper repository",
+      "url": "https://github.com/openai/whisper",
+      "evidence": "primary"
+    }
+  ],
+  "source_ids": [
+    "music-src-captions",
+    "music-src-whisper"
+  ],
+  "input": "原创 30 秒教程：对白、纸张撕裂声、结束铃声，含必要非语音信息。",
+  "prompt": "制作同语言字幕；加入理解内容所需的声音标签和说话人变化，不猜不可辨词。",
+  "output": "WebVTT/SRT 草稿、校对记录、无声观看验收表",
+  "rubric": [
+    "起止时间顺序正确",
+    "声音信息不过量且必要",
+    "专名正确",
+    "不自动宣称 WCAG 合规"
+  ],
+  "risks": "错时轴手工校准；快速对白重分行；字幕遮挡时调整播放器样式；仅使用原创或明确授权素材；输出发布需人工审核。",
+  "failure_recovery": "错时轴手工校准；快速对白重分行；字幕遮挡时调整播放器样式",
+  "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+  "cost": "需人工校对时间；公开字幕须批准且避免个人信息泄漏。",
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+  "lifecycle": "current",
+  "lifecycle_as_of": "2026-10-28",
+  "applicable_versions": "W3C WAI 教程当前可读；不宣称自动满足全部 WCAG",
+  "replacement_case": "",
+  "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+  "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+  "modelatlas_node_ids": [
+    "music-captions"
+  ],
+  "workflow_type": "human_supervised_agent_design",
+  "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+}
+```
+</details>
+
+## 实时音乐控制的状态机演练
+
+原创合成教学工作流：实时音乐控制的状态机演练。仅文档依据，尚未音频实测。
+
+**证据边界：** 官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。
+
+### 合成输入
+
+原创控制序列：安静纹理→轻节奏→收束；用 mock 音频事件，不上演出系统。
+
+### 提示词
+
+设计人类停止按钮与预算/延迟边界；每次仅改变一个控制条件，丢帧回到安全静音。
+
+### 输出模板
+
+状态图、控制日志模板、延迟验收计划
+
+### 风险与授权
+
+缓冲不足渐隐；恢复从人工确认节点开始；不自动下载插件；仅使用原创或明确授权素材；输出发布需人工审核。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+current
+
+### 适用版本
+
+MRT2 main 文档核查；不下载 Mac 插件或运行推理
+
+### 生命周期确认时间
+
+2026-10-28
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+当前仅确认官方文档陈述，未证明账号/地区实际可用
+
+### 最佳实践证据状态
+
+原创教学模板，不声称最佳实践或已成功部署。
+
+### 1. 1. 建立时间线控制表
+
+建立时间线控制表。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 停止立即可用
+
+### 2. 2. 区分 MRT2 与 v1 legacy
+
+区分 MRT2 与 v1 legacy。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 不会无限自动生成
+
+### 3. 3. 模拟缓冲不足/停止/恢复
+
+模拟缓冲不足/停止/恢复。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 不把模拟延迟当实测
+
+### 4. 4. 检查事件记录和不重复触发
+
+检查事件记录和不重复触发。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。
+
+**验收：** 不把模拟延迟当实测
+
+- 对应技术（编辑学习关系）：[Magenta RealTime 2](https://2codework.github.io/modelatlas/?node=music-mrt2)
+- agent_boundary：模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。
+- cost：权重许可未完成审阅；不触及 Mac/远端/真实演出。
+- permissions：本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。
+- 验收：停止立即可用
+- 验收：不会无限自动生成
+- 验收：不把模拟延迟当实测
+- 来源：Magenta RealTime repository — https://github.com/magenta/magenta-realtime（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "music-mrt-live",
+  "title": "实时音乐控制的状态机演练",
+  "summary": "原创合成教学工作流：实时音乐控制的状态机演练。仅文档依据，尚未音频实测。",
+  "roles": [
+    "音乐制作人",
+    "音频编辑",
+    "Agent 开发者"
+  ],
+  "industries": [
+    "音乐与音频",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "1. 建立时间线控制表",
+      "body": "建立时间线控制表。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "停止立即可用"
+    },
+    {
+      "title": "2. 区分 MRT2 与 v1 legacy",
+      "body": "区分 MRT2 与 v1 legacy。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "不会无限自动生成"
+    },
+    {
+      "title": "3. 模拟缓冲不足/停止/恢复",
+      "body": "模拟缓冲不足/停止/恢复。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "不把模拟延迟当实测"
+    },
+    {
+      "title": "4. 检查事件记录和不重复触发",
+      "body": "检查事件记录和不重复触发。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+      "check": "不把模拟延迟当实测"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Magenta RealTime repository",
+      "url": "https://github.com/magenta/magenta-realtime",
+      "evidence": "primary"
+    }
+  ],
+  "source_ids": [
+    "music-src-mrt"
+  ],
+  "input": "原创控制序列：安静纹理→轻节奏→收束；用 mock 音频事件，不上演出系统。",
+  "prompt": "设计人类停止按钮与预算/延迟边界；每次仅改变一个控制条件，丢帧回到安全静音。",
+  "output": "状态图、控制日志模板、延迟验收计划",
+  "rubric": [
+    "停止立即可用",
+    "不会无限自动生成",
+    "不把模拟延迟当实测"
+  ],
+  "risks": "缓冲不足渐隐；恢复从人工确认节点开始；不自动下载插件；仅使用原创或明确授权素材；输出发布需人工审核。",
+  "failure_recovery": "缓冲不足渐隐；恢复从人工确认节点开始；不自动下载插件",
+  "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+  "cost": "权重许可未完成审阅；不触及 Mac/远端/真实演出。",
+  "checked_at": "2026-10-28",
+  "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+  "lifecycle": "current",
+  "lifecycle_as_of": "2026-10-28",
+  "applicable_versions": "MRT2 main 文档核查；不下载 Mac 插件或运行推理",
+  "replacement_case": "",
+  "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+  "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+  "modelatlas_node_ids": [
+    "music-mrt2"
+  ],
+  "workflow_type": "human_supervised_agent_design",
+  "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+}
+```
+</details>
+
+## 从一分钟原创短故事到可拍分镜
+
+原创教学设计：从一分钟原创短故事到可拍分镜
+
+**证据边界：** 来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。
+
+### 合成输入
+
+原创故事：纸机器人阿棱在温室发现滴水，通过移动空杯保存雨水；无真实人物、品牌或现有影视角色。目标60秒，6镜头。
+
+### 提示词
+
+将故事拆为6镜头；每镜写shot_id、时长、动作、景别、机位、起止状态、音效、禁改属性。只用一个主要动作，不添加科学结论。
+
+### 输出模板
+
+项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。
+
+### 风险与授权
+
+全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+来源快照见source_ids；完整链路兼容版本未实测。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 脚本约束
+
+列出起因、行动、结果各一句，建立阿棱为蓝色纸立方体、右侧白圆标记的角色卡。
+
+**验收：** 不得增添第二主角，三段因果可复述。
+
+### 2. 分镜与连续性
+
+画6张原创线框草图，镜头时长8/10/10/12/12/8秒；把杯子左右位置和水位写入状态表。
+
+**验收：** 总时长60秒，前镜结束状态等于后镜开始状态。
+
+### 3. 静态预演
+
+用草图和临时字幕排出animatic；只审节奏，不把静帧宣称成模型生成电影。
+
+**验收：** 观众无需旁白即可指出移动杯子的原因。
+
+### 4. 审片冻结
+
+记录每镜通过/重做理由，冻结脚本v1与素材清单；生成阶段另行授权。
+
+**验收：** 全部镜头有输入与验收记录。
+
+- 对应技术（编辑学习关系）：[ViMax 制片编排](https://2codework.github.io/modelatlas/?node=vid-vimax)
+- 对应技术（编辑学习关系）：[FilmAgent 虚拟制片研究](https://2codework.github.io/modelatlas/?node=vid-filmagent)
+- 对应技术（编辑学习关系）：[OpenTimelineIO 时间线交换](https://2codework.github.io/modelatlas/?node=vid-otio)
+- cost：CPU可完成文本与静态预演；LLM和视频调用为可选且未执行。
+- compute_cost：CPU可完成文本与静态预演；LLM和视频调用为可选且未执行。
+- 验收：不得增添第二主角，三段因果可复述。
+- 验收：总时长60秒，前镜结束状态等于后镜开始状态。
+- 验收：观众无需旁白即可指出移动杯子的原因。
+- 验收：全部镜头有输入与验收记录。
+- 来源：ViMax — https://github.com/HKUDS/ViMax（核查：2026-10-28）
+
+- 来源：FilmAgent — https://filmagent.github.io/（核查：2026-10-28）
+
+- 来源：OpenTimelineIO — https://github.com/AcademySoftwareFoundation/OpenTimelineIO（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "video-brief-storyboard",
+  "title": "从一分钟原创短故事到可拍分镜",
+  "summary": "原创教学设计：从一分钟原创短故事到可拍分镜",
+  "roles": [
+    "视频制作学习者",
+    "内容编辑",
+    "Agent工作流设计者"
+  ],
+  "industries": [
+    "教育",
+    "创意内容"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "input": "原创故事：纸机器人阿棱在温室发现滴水，通过移动空杯保存雨水；无真实人物、品牌或现有影视角色。目标60秒，6镜头。",
+  "prompt": "将故事拆为6镜头；每镜写shot_id、时长、动作、景别、机位、起止状态、音效、禁改属性。只用一个主要动作，不添加科学结论。",
+  "steps": [
+    {
+      "title": "脚本约束",
+      "body": "列出起因、行动、结果各一句，建立阿棱为蓝色纸立方体、右侧白圆标记的角色卡。",
+      "check": "不得增添第二主角，三段因果可复述。"
+    },
+    {
+      "title": "分镜与连续性",
+      "body": "画6张原创线框草图，镜头时长8/10/10/12/12/8秒；把杯子左右位置和水位写入状态表。",
+      "check": "总时长60秒，前镜结束状态等于后镜开始状态。"
+    },
+    {
+      "title": "静态预演",
+      "body": "用草图和临时字幕排出animatic；只审节奏，不把静帧宣称成模型生成电影。",
+      "check": "观众无需旁白即可指出移动杯子的原因。"
+    },
+    {
+      "title": "审片冻结",
+      "body": "记录每镜通过/重做理由，冻结脚本v1与素材清单；生成阶段另行授权。",
+      "check": "全部镜头有输入与验收记录。"
+    }
+  ],
+  "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+  "rubric": [
+    "不得增添第二主角，三段因果可复述。",
+    "总时长60秒，前镜结束状态等于后镜开始状态。",
+    "观众无需旁白即可指出移动杯子的原因。",
+    "全部镜头有输入与验收记录。"
+  ],
+  "failure_recovery": "剧情漂移时回到三句梗概；镜头过长则拆动作，不靠延长生成硬凑。",
+  "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+  "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+  "compute_cost": "CPU可完成文本与静态预演；LLM和视频调用为可选且未执行。",
+  "source_ids": [
+    "vid-src-vimax",
+    "vid-src-filmagent",
+    "vid-src-otio"
+  ],
+  "sources": [
+    {
+      "title": "ViMax",
+      "url": "https://github.com/HKUDS/ViMax",
+      "evidence": "primary"
+    },
+    {
+      "title": "FilmAgent",
+      "url": "https://filmagent.github.io/",
+      "evidence": "primary"
+    },
+    {
+      "title": "OpenTimelineIO",
+      "url": "https://github.com/AcademySoftwareFoundation/OpenTimelineIO",
+      "evidence": "primary"
+    }
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+  "practice_status": "original_teaching_template_not_executed",
+  "modelatlas_node_ids": [
+    "vid-vimax",
+    "vid-filmagent",
+    "vid-otio"
+  ],
+  "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+  "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+}
+```
+</details>
+
+## 虚构产品15秒图生视频演示
+
+原创教学设计：虚构产品15秒图生视频演示
+
+**证据边界：** 来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。
+
+### 合成输入
+
+原创无品牌黄色保温杯正面、侧面、盖子三张自绘图；虚构说明只写外观，不宣称保温时长。
+
+### 提示词
+
+基于已批准首帧做单次缓慢环绕；杯体保持圆柱、无新增字样；每镜只改变相机或盖子一个因素。
+
+### 输出模板
+
+项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。
+
+### 风险与授权
+
+全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+来源快照见source_ids；完整链路兼容版本未实测。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 资产审查
+
+对三视图建立asset_id和尺寸，透明/反射细节改为可验证的简化材质。
+
+**验收：** 无商标与侵权包装，三视图颜色一致。
+
+### 2. 低成本镜头测试
+
+设计3段5秒镜头，先选一个模型支持的短片配置；记录seed、分辨率、帧数和参考图SHA。
+
+**验收：** 不把seed当一致性保证；只批准轮廓稳定小样。
+
+### 3. 字幕后置
+
+镜内不生成卖点文字，剪辑阶段叠加“外观概念演示”。
+
+**验收：** 盖子没有穿模，杯把不增减，字幕可读。
+
+### 4. 导出比较
+
+输出横版与竖版草案，保留原画幅检查裁切。
+
+**验收：** 15秒±1帧；产品无关键区域被切掉。
+
+- 对应技术（编辑学习关系）：[Wan2.2 文/图/音驱动视频](https://2codework.github.io/modelatlas/?node=vid-wan22)
+- 对应技术（编辑学习关系）：[ComfyUI 图式运行时](https://2codework.github.io/modelatlas/?node=vid-comfyui)
+- 对应技术（编辑学习关系）：[FFmpeg 媒体处理](https://2codework.github.io/modelatlas/?node=vid-ffmpeg)
+- cost：Wan示例硬件门槛见节点；先批准一次小样，再根据实际每秒成本设置预算。
+- compute_cost：Wan示例硬件门槛见节点；先批准一次小样，再根据实际每秒成本设置预算。
+- 验收：无商标与侵权包装，三视图颜色一致。
+- 验收：不把seed当一致性保证；只批准轮廓稳定小样。
+- 验收：盖子没有穿模，杯把不增减，字幕可读。
+- 验收：15秒±1帧；产品无关键区域被切掉。
+- 来源：Wan2.2 — https://github.com/Wan-Video/Wan2.2（核查：2026-10-28）
+
+- 来源：ComfyUI — https://github.com/Comfy-Org/ComfyUI（核查：2026-10-28）
+
+- 来源：FFmpeg — https://ffmpeg.org/ffmpeg.html（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "video-product-i2v",
+  "title": "虚构产品15秒图生视频演示",
+  "summary": "原创教学设计：虚构产品15秒图生视频演示",
+  "roles": [
+    "视频制作学习者",
+    "内容编辑",
+    "Agent工作流设计者"
+  ],
+  "industries": [
+    "教育",
+    "创意内容"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "input": "原创无品牌黄色保温杯正面、侧面、盖子三张自绘图；虚构说明只写外观，不宣称保温时长。",
+  "prompt": "基于已批准首帧做单次缓慢环绕；杯体保持圆柱、无新增字样；每镜只改变相机或盖子一个因素。",
+  "steps": [
+    {
+      "title": "资产审查",
+      "body": "对三视图建立asset_id和尺寸，透明/反射细节改为可验证的简化材质。",
+      "check": "无商标与侵权包装，三视图颜色一致。"
+    },
+    {
+      "title": "低成本镜头测试",
+      "body": "设计3段5秒镜头，先选一个模型支持的短片配置；记录seed、分辨率、帧数和参考图SHA。",
+      "check": "不把seed当一致性保证；只批准轮廓稳定小样。"
+    },
+    {
+      "title": "字幕后置",
+      "body": "镜内不生成卖点文字，剪辑阶段叠加“外观概念演示”。",
+      "check": "盖子没有穿模，杯把不增减，字幕可读。"
+    },
+    {
+      "title": "导出比较",
+      "body": "输出横版与竖版草案，保留原画幅检查裁切。",
+      "check": "15秒±1帧；产品无关键区域被切掉。"
+    }
+  ],
+  "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+  "rubric": [
+    "无商标与侵权包装，三视图颜色一致。",
+    "不把seed当一致性保证；只批准轮廓稳定小样。",
+    "盖子没有穿模，杯把不增减，字幕可读。",
+    "15秒±1帧；产品无关键区域被切掉。"
+  ],
+  "failure_recovery": "形状漂移退回静态三视图加相机推拉；不反复生成直到耗尽预算。",
+  "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+  "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+  "compute_cost": "Wan示例硬件门槛见节点；先批准一次小样，再根据实际每秒成本设置预算。",
+  "source_ids": [
+    "vid-src-wan",
+    "vid-src-comfy",
+    "vid-src-ffmpeg"
+  ],
+  "sources": [
+    {
+      "title": "Wan2.2",
+      "url": "https://github.com/Wan-Video/Wan2.2",
+      "evidence": "primary"
+    },
+    {
+      "title": "ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "evidence": "primary"
+    },
+    {
+      "title": "FFmpeg",
+      "url": "https://ffmpeg.org/ffmpeg.html",
+      "evidence": "primary"
+    }
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+  "practice_status": "original_teaching_template_not_executed",
+  "modelatlas_node_ids": [
+    "vid-wan22",
+    "vid-comfyui",
+    "vid-ffmpeg"
+  ],
+  "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+  "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+}
+```
+</details>
+
+## 十分钟培训课拆成可维护章节
+
+原创教学设计：十分钟培训课拆成可维护章节
+
+**证据边界：** 来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。
+
+### 合成输入
+
+原创虚构工具“纸盒台账”的离线示范屏幕与600字讲义；10分钟课程含5章，每章一个任务。
+
+### 提示词
+
+按学习目标而非热词剪辑，给每章起止时间、原讲义证据、练习和错误示范；不得删除必要前提。
+
+### 输出模板
+
+项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。
+
+### 风险与授权
+
+全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+来源快照见source_ids；完整链路兼容版本未实测。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 教学脚本
+
+先写学员能完成的5个动作，每章安排演示、暂停练习、答案各一段。
+
+**验收：** 每个目标都有对应可观察操作。
+
+### 2. 录制与配音计划
+
+使用无账号离线假界面；人声采用自写旁白自行录制的方案，未实际采集。
+
+**验收：** 无客户数据、密码、通知弹窗。
+
+### 3. 转录剪辑
+
+建立时间码文字稿，将迟疑停顿标为可剪，将警告与前提标为不可剪。
+
+**验收：** 每次剪切保留句意；章节边界不切掉句首。
+
+### 4. 维护发布包
+
+每章单独版本化，更新第二章只重导出对应段与总片。
+
+**验收：** 练习答案与画面版本匹配，输出带字幕及无字幕版。
+
+- 对应技术（编辑学习关系）：[Kdenlive 字幕与转录剪辑](https://2codework.github.io/modelatlas/?node=vid-kdenlive)
+- 对应技术（编辑学习关系）：[Whisper 语音识别](https://2codework.github.io/modelatlas/?node=vid-whisper)
+- 对应技术（编辑学习关系）：[OpenTimelineIO 时间线交换](https://2codework.github.io/modelatlas/?node=vid-otio)
+- cost：CPU编辑可行但耗时未知；转录模型内存/速度按版本实测，不承诺实时。
+- compute_cost：CPU编辑可行但耗时未知；转录模型内存/速度按版本实测，不承诺实时。
+- 验收：每个目标都有对应可观察操作。
+- 验收：无客户数据、密码、通知弹窗。
+- 验收：每次剪切保留句意；章节边界不切掉句首。
+- 验收：练习答案与画面版本匹配，输出带字幕及无字幕版。
+- 来源：Kdenlive speech to text — https://docs.kdenlive.org/en/effects_and_filters/speech_to_text.html（核查：2026-10-28）
+
+- 来源：Whisper — https://github.com/openai/whisper（核查：2026-10-28）
+
+- 来源：OpenTimelineIO — https://github.com/AcademySoftwareFoundation/OpenTimelineIO（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "video-training-chapters",
+  "title": "十分钟培训课拆成可维护章节",
+  "summary": "原创教学设计：十分钟培训课拆成可维护章节",
+  "roles": [
+    "视频制作学习者",
+    "内容编辑",
+    "Agent工作流设计者"
+  ],
+  "industries": [
+    "教育",
+    "创意内容"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "input": "原创虚构工具“纸盒台账”的离线示范屏幕与600字讲义；10分钟课程含5章，每章一个任务。",
+  "prompt": "按学习目标而非热词剪辑，给每章起止时间、原讲义证据、练习和错误示范；不得删除必要前提。",
+  "steps": [
+    {
+      "title": "教学脚本",
+      "body": "先写学员能完成的5个动作，每章安排演示、暂停练习、答案各一段。",
+      "check": "每个目标都有对应可观察操作。"
+    },
+    {
+      "title": "录制与配音计划",
+      "body": "使用无账号离线假界面；人声采用自写旁白自行录制的方案，未实际采集。",
+      "check": "无客户数据、密码、通知弹窗。"
+    },
+    {
+      "title": "转录剪辑",
+      "body": "建立时间码文字稿，将迟疑停顿标为可剪，将警告与前提标为不可剪。",
+      "check": "每次剪切保留句意；章节边界不切掉句首。"
+    },
+    {
+      "title": "维护发布包",
+      "body": "每章单独版本化，更新第二章只重导出对应段与总片。",
+      "check": "练习答案与画面版本匹配，输出带字幕及无字幕版。"
+    }
+  ],
+  "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+  "rubric": [
+    "每个目标都有对应可观察操作。",
+    "无客户数据、密码、通知弹窗。",
+    "每次剪切保留句意；章节边界不切掉句首。",
+    "练习答案与画面版本匹配，输出带字幕及无字幕版。"
+  ],
+  "failure_recovery": "ASR错术语以讲义校正；边界错切回原素材时间码；不重生成整片。",
+  "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+  "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+  "compute_cost": "CPU编辑可行但耗时未知；转录模型内存/速度按版本实测，不承诺实时。",
+  "source_ids": [
+    "vid-src-kdenlive",
+    "vid-src-whisper",
+    "vid-src-otio"
+  ],
+  "sources": [
+    {
+      "title": "Kdenlive speech to text",
+      "url": "https://docs.kdenlive.org/en/effects_and_filters/speech_to_text.html",
+      "evidence": "primary"
+    },
+    {
+      "title": "Whisper",
+      "url": "https://github.com/openai/whisper",
+      "evidence": "primary"
+    },
+    {
+      "title": "OpenTimelineIO",
+      "url": "https://github.com/AcademySoftwareFoundation/OpenTimelineIO",
+      "evidence": "primary"
+    }
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+  "practice_status": "original_teaching_template_not_executed",
+  "modelatlas_node_ids": [
+    "vid-kdenlive",
+    "vid-whisper",
+    "vid-otio"
+  ],
+  "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+  "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+}
+```
+</details>
+
+## 原创动画角色跨镜头一致性
+
+原创教学设计：原创动画角色跨镜头一致性
+
+**证据边界：** 来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。
+
+### 合成输入
+
+原创阿棱角色卡：蓝立方体、右侧白圆标记、短橙脚；4张自行绘制角度参考；四镜头取杯故事。
+
+### 提示词
+
+逐镜检查颜色、标记侧别、肢体数量、道具持有与朝向；不通过则说明证据帧位置，不主观打高分。
+
+### 输出模板
+
+项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。
+
+### 风险与授权
+
+全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+来源快照见source_ids；完整链路兼容版本未实测。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 锁角色锚点
+
+写角色不变量与允许变化项，建立每镜起止姿势；统一光色参考。
+
+**验收：** 不变量可从图中人工检查而非只有形容词。
+
+### 2. 单镜候选
+
+按模型已核实的参考条件生成计划，每镜最多两个候选，先关键帧再运动。
+
+**验收：** 候选记录独立ID；禁止借用真实人脸。
+
+### 3. 接镜检查
+
+逐镜对照首/中/尾帧与前后接缝，特别检查白圆标记是否镜像。
+
+**验收：** 4镜关键锚点无矛盾；抽帧通过后仍全速看片。
+
+### 4. 局部恢复
+
+仅重做失败镜，必要时改成遮挡转场或静态插图。
+
+**验收：** 复审相邻两镜，防止局部重做带来新跳轴。
+
+- 对应技术（编辑学习关系）：[Wan2.2 文/图/音驱动视频](https://2codework.github.io/modelatlas/?node=vid-wan22)
+- 对应技术（编辑学习关系）：[LTX-2 音视频生成](https://2codework.github.io/modelatlas/?node=vid-ltx2)
+- 对应技术（编辑学习关系）：[ViMax 制片编排](https://2codework.github.io/modelatlas/?node=vid-vimax)
+- cost：候选数×镜头数×重试计费；4镜×2候选是本教学预算上限，不是性能保证。
+- compute_cost：候选数×镜头数×重试计费；4镜×2候选是本教学预算上限，不是性能保证。
+- 验收：不变量可从图中人工检查而非只有形容词。
+- 验收：候选记录独立ID；禁止借用真实人脸。
+- 验收：4镜关键锚点无矛盾；抽帧通过后仍全速看片。
+- 验收：复审相邻两镜，防止局部重做带来新跳轴。
+- 来源：Wan2.2 — https://github.com/Wan-Video/Wan2.2（核查：2026-10-28）
+
+- 来源：LTX-2 — https://github.com/Lightricks/LTX-2（核查：2026-10-28）
+
+- 来源：ViMax — https://github.com/HKUDS/ViMax（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "video-character-continuity",
+  "title": "原创动画角色跨镜头一致性",
+  "summary": "原创教学设计：原创动画角色跨镜头一致性",
+  "roles": [
+    "视频制作学习者",
+    "内容编辑",
+    "Agent工作流设计者"
+  ],
+  "industries": [
+    "教育",
+    "创意内容"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "input": "原创阿棱角色卡：蓝立方体、右侧白圆标记、短橙脚；4张自行绘制角度参考；四镜头取杯故事。",
+  "prompt": "逐镜检查颜色、标记侧别、肢体数量、道具持有与朝向；不通过则说明证据帧位置，不主观打高分。",
+  "steps": [
+    {
+      "title": "锁角色锚点",
+      "body": "写角色不变量与允许变化项，建立每镜起止姿势；统一光色参考。",
+      "check": "不变量可从图中人工检查而非只有形容词。"
+    },
+    {
+      "title": "单镜候选",
+      "body": "按模型已核实的参考条件生成计划，每镜最多两个候选，先关键帧再运动。",
+      "check": "候选记录独立ID；禁止借用真实人脸。"
+    },
+    {
+      "title": "接镜检查",
+      "body": "逐镜对照首/中/尾帧与前后接缝，特别检查白圆标记是否镜像。",
+      "check": "4镜关键锚点无矛盾；抽帧通过后仍全速看片。"
+    },
+    {
+      "title": "局部恢复",
+      "body": "仅重做失败镜，必要时改成遮挡转场或静态插图。",
+      "check": "复审相邻两镜，防止局部重做带来新跳轴。"
+    }
+  ],
+  "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+  "rubric": [
+    "不变量可从图中人工检查而非只有形容词。",
+    "候选记录独立ID；禁止借用真实人脸。",
+    "4镜关键锚点无矛盾；抽帧通过后仍全速看片。",
+    "复审相邻两镜，防止局部重做带来新跳轴。"
+  ],
+  "failure_recovery": "自动相似度只能预筛，不能证明身份一致；反复失败改传统关键帧动画。",
+  "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+  "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+  "compute_cost": "候选数×镜头数×重试计费；4镜×2候选是本教学预算上限，不是性能保证。",
+  "source_ids": [
+    "vid-src-wan",
+    "vid-src-ltx2",
+    "vid-src-vimax"
+  ],
+  "sources": [
+    {
+      "title": "Wan2.2",
+      "url": "https://github.com/Wan-Video/Wan2.2",
+      "evidence": "primary"
+    },
+    {
+      "title": "LTX-2",
+      "url": "https://github.com/Lightricks/LTX-2",
+      "evidence": "primary"
+    },
+    {
+      "title": "ViMax",
+      "url": "https://github.com/HKUDS/ViMax",
+      "evidence": "primary"
+    }
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+  "practice_status": "original_teaching_template_not_executed",
+  "modelatlas_node_ids": [
+    "vid-wan22",
+    "vid-ltx2",
+    "vid-vimax"
+  ],
+  "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。LTX-2仓库存在多份许可文件，需对应具体权重。",
+  "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+}
+```
+</details>
+
+## 无对白教育动画循环
+
+原创教学设计：无对白教育动画循环
+
+**证据边界：** 来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。
+
+### 合成输入
+
+原创太阳、云、纸风车三层插画；8秒循环展示风车转动，不模拟真实气象。
+
+### 提示词
+
+固定镜头，只让风车匀速转一圈；云位置固定；首尾视觉状态相同；不出现文字或人物。
+
+### 输出模板
+
+项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。
+
+### 风险与授权
+
+全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+来源快照见source_ids；完整链路兼容版本未实测。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 拆图层
+
+将背景和风车分为独立原创资产，定义旋转中心和循环周期。
+
+**验收：** 中心不漂移，所有元素有授权记录。
+
+### 2. 两路线对照
+
+方案A为传统关键帧旋转；方案B为历史运动模块生成计划，仅讨论未执行。
+
+**验收：** 比较可控性与成本，不默认生成模型更好。
+
+### 3. 循环接缝
+
+检查最后一帧到第一帧的位移和亮度，允许只对非语义背景做过渡。
+
+**验收：** 正常播放看不到明显跳动，主体不融化。
+
+### 4. 教学交付
+
+保存无声循环、制作说明和闪烁检查记录。
+
+**验收：** 标为概念动画，避免声称物理正确模拟。
+
+- 对应技术（编辑学习关系）：[AnimateDiff 运动模块](https://2codework.github.io/modelatlas/?node=vid-animatediff)
+- 对应技术（编辑学习关系）：[FFmpeg 媒体处理](https://2codework.github.io/modelatlas/?node=vid-ffmpeg)
+- cost：传统2D旋转CPU预算低；AnimateDiff需匹配基础权重与运动模块，显存未知。
+- compute_cost：传统2D旋转CPU预算低；AnimateDiff需匹配基础权重与运动模块，显存未知。
+- 验收：中心不漂移，所有元素有授权记录。
+- 验收：比较可控性与成本，不默认生成模型更好。
+- 验收：正常播放看不到明显跳动，主体不融化。
+- 验收：标为概念动画，避免声称物理正确模拟。
+- 来源：AnimateDiff — https://github.com/guoyww/AnimateDiff（核查：2026-10-28）
+
+- 来源：AnimateDiff paper — https://arxiv.org/abs/2307.04725（核查：2026-10-28）
+
+- 来源：FFmpeg — https://ffmpeg.org/ffmpeg.html（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "video-silent-animation-loop",
+  "title": "无对白教育动画循环",
+  "summary": "原创教学设计：无对白教育动画循环",
+  "roles": [
+    "视频制作学习者",
+    "内容编辑",
+    "Agent工作流设计者"
+  ],
+  "industries": [
+    "教育",
+    "创意内容"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "input": "原创太阳、云、纸风车三层插画；8秒循环展示风车转动，不模拟真实气象。",
+  "prompt": "固定镜头，只让风车匀速转一圈；云位置固定；首尾视觉状态相同；不出现文字或人物。",
+  "steps": [
+    {
+      "title": "拆图层",
+      "body": "将背景和风车分为独立原创资产，定义旋转中心和循环周期。",
+      "check": "中心不漂移，所有元素有授权记录。"
+    },
+    {
+      "title": "两路线对照",
+      "body": "方案A为传统关键帧旋转；方案B为历史运动模块生成计划，仅讨论未执行。",
+      "check": "比较可控性与成本，不默认生成模型更好。"
+    },
+    {
+      "title": "循环接缝",
+      "body": "检查最后一帧到第一帧的位移和亮度，允许只对非语义背景做过渡。",
+      "check": "正常播放看不到明显跳动，主体不融化。"
+    },
+    {
+      "title": "教学交付",
+      "body": "保存无声循环、制作说明和闪烁检查记录。",
+      "check": "标为概念动画，避免声称物理正确模拟。"
+    }
+  ],
+  "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+  "rubric": [
+    "中心不漂移，所有元素有授权记录。",
+    "比较可控性与成本，不默认生成模型更好。",
+    "正常播放看不到明显跳动，主体不融化。",
+    "标为概念动画，避免声称物理正确模拟。"
+  ],
+  "failure_recovery": "循环失败回退关键帧旋转；不要用帧插值掩盖物体变形。",
+  "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+  "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+  "compute_cost": "传统2D旋转CPU预算低；AnimateDiff需匹配基础权重与运动模块，显存未知。",
+  "source_ids": [
+    "vid-src-animatediff",
+    "vid-src-animatepaper",
+    "vid-src-ffmpeg"
+  ],
+  "sources": [
+    {
+      "title": "AnimateDiff",
+      "url": "https://github.com/guoyww/AnimateDiff",
+      "evidence": "primary"
+    },
+    {
+      "title": "AnimateDiff paper",
+      "url": "https://arxiv.org/abs/2307.04725",
+      "evidence": "primary"
+    },
+    {
+      "title": "FFmpeg",
+      "url": "https://ffmpeg.org/ffmpeg.html",
+      "evidence": "primary"
+    }
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+  "practice_status": "original_teaching_template_not_executed",
+  "modelatlas_node_ids": [
+    "vid-animatediff",
+    "vid-ffmpeg"
+  ],
+  "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+  "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+}
+```
+</details>
+
+## 原创短片的长叙事预演
+
+原创教学设计：原创短片的长叙事预演
+
+**证据边界：** 来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。
+
+### 合成输入
+
+原创12分钟虚拟短片《最后一张纸》，三场景两虚构纸角色；主题为修复旧纸盒，不改编已有作品。
+
+### 提示词
+
+输出场景因果表与镜头依赖图；按场景制作，不要求单次模型生成12分钟；所有对白原创。
+
+### 输出模板
+
+项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。
+
+### 风险与授权
+
+全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+来源快照见source_ids；完整链路兼容版本未实测。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 长故事压缩
+
+列12个一分钟叙事节拍；每节拍标角色目标、冲突、解决及上一节拍依赖。
+
+**验收：** 删掉任一节拍能解释影响，不堆无关镜头。
+
+### 2. 预算与资产复用
+
+将同一布景和道具资产复用，先做3分钟代表性animatic估算剩余工作。
+
+**验收：** 估算注明假设，未测数据不写成耗时结论。
+
+### 3. 分角色审查
+
+编剧检查因果，摄影检查机位，制片检查授权与预算；人类解决相冲突建议。
+
+**验收：** 三类审查记录保留，Agent不得自行扩大预算。
+
+### 4. 分场冻结
+
+场景逐个锁定并归档时间线，最终检查所有跨场道具与对白连续性。
+
+**验收：** 12分钟版本有镜头来源与修改日志。
+
+- 对应技术（编辑学习关系）：[FilmAgent 虚拟制片研究](https://2codework.github.io/modelatlas/?node=vid-filmagent)
+- 对应技术（编辑学习关系）：[ViMax 制片编排](https://2codework.github.io/modelatlas/?node=vid-vimax)
+- 对应技术（编辑学习关系）：[OpenTimelineIO 时间线交换](https://2codework.github.io/modelatlas/?node=vid-otio)
+- cost：生成长片成本按镜头重试估算，研究论文的虚拟环境效果不能换算商业制作成本。
+- compute_cost：生成长片成本按镜头重试估算，研究论文的虚拟环境效果不能换算商业制作成本。
+- 验收：删掉任一节拍能解释影响，不堆无关镜头。
+- 验收：估算注明假设，未测数据不写成耗时结论。
+- 验收：三类审查记录保留，Agent不得自行扩大预算。
+- 验收：12分钟版本有镜头来源与修改日志。
+- 来源：FilmAgent — https://filmagent.github.io/（核查：2026-10-28）
+
+- 来源：ViMax — https://github.com/HKUDS/ViMax（核查：2026-10-28）
+
+- 来源：OpenTimelineIO — https://github.com/AcademySoftwareFoundation/OpenTimelineIO（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "video-long-film-previs",
+  "title": "原创短片的长叙事预演",
+  "summary": "原创教学设计：原创短片的长叙事预演",
+  "roles": [
+    "视频制作学习者",
+    "内容编辑",
+    "Agent工作流设计者"
+  ],
+  "industries": [
+    "教育",
+    "创意内容"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "input": "原创12分钟虚拟短片《最后一张纸》，三场景两虚构纸角色；主题为修复旧纸盒，不改编已有作品。",
+  "prompt": "输出场景因果表与镜头依赖图；按场景制作，不要求单次模型生成12分钟；所有对白原创。",
+  "steps": [
+    {
+      "title": "长故事压缩",
+      "body": "列12个一分钟叙事节拍；每节拍标角色目标、冲突、解决及上一节拍依赖。",
+      "check": "删掉任一节拍能解释影响，不堆无关镜头。"
+    },
+    {
+      "title": "预算与资产复用",
+      "body": "将同一布景和道具资产复用，先做3分钟代表性animatic估算剩余工作。",
+      "check": "估算注明假设，未测数据不写成耗时结论。"
+    },
+    {
+      "title": "分角色审查",
+      "body": "编剧检查因果，摄影检查机位，制片检查授权与预算；人类解决相冲突建议。",
+      "check": "三类审查记录保留，Agent不得自行扩大预算。"
+    },
+    {
+      "title": "分场冻结",
+      "body": "场景逐个锁定并归档时间线，最终检查所有跨场道具与对白连续性。",
+      "check": "12分钟版本有镜头来源与修改日志。"
+    }
+  ],
+  "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+  "rubric": [
+    "删掉任一节拍能解释影响，不堆无关镜头。",
+    "估算注明假设，未测数据不写成耗时结论。",
+    "三类审查记录保留，Agent不得自行扩大预算。",
+    "12分钟版本有镜头来源与修改日志。"
+  ],
+  "failure_recovery": "长片漂移回到节拍表；API或资产许可未核清则停在预演，不声称已完成电影。",
+  "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+  "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+  "compute_cost": "生成长片成本按镜头重试估算，研究论文的虚拟环境效果不能换算商业制作成本。",
+  "source_ids": [
+    "vid-src-filmagent",
+    "vid-src-vimax",
+    "vid-src-otio"
+  ],
+  "sources": [
+    {
+      "title": "FilmAgent",
+      "url": "https://filmagent.github.io/",
+      "evidence": "primary"
+    },
+    {
+      "title": "ViMax",
+      "url": "https://github.com/HKUDS/ViMax",
+      "evidence": "primary"
+    },
+    {
+      "title": "OpenTimelineIO",
+      "url": "https://github.com/AcademySoftwareFoundation/OpenTimelineIO",
+      "evidence": "primary"
+    }
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+  "practice_status": "original_teaching_template_not_executed",
+  "modelatlas_node_ids": [
+    "vid-filmagent",
+    "vid-vimax",
+    "vid-otio"
+  ],
+  "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+  "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+}
+```
+</details>
+
+## 原素材重剪为30秒科普预告
+
+原创教学设计：原素材重剪为30秒科普预告
+
+**证据边界：** 来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。
+
+### 合成输入
+
+原创模拟素材清单：种子入土、浇水、发芽三段各20秒；讲义写明画面是示意，不是真实时间流逝。
+
+### 提示词
+
+选出总长30秒、保留因果的片段；只输出时间码与剪辑理由，不虚构素材中不存在的开花画面。
+
+### 输出模板
+
+项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。
+
+### 风险与授权
+
+全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+来源快照见source_ids；完整链路兼容版本未实测。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 建索引
+
+每段记事件、可见证据、音轨、时间码、禁止推断项，保留原片只读。
+
+**验收：** 描述可回溯到具体段落。
+
+### 2. 编辑决策
+
+给出入点出点和排序，明确是否加速及加速标识。
+
+**验收：** 不得通过倒序或删前提制造错误因果。
+
+### 3. 剪辑预览
+
+用时间线而非覆写源文件操作，配无夸张承诺字幕。
+
+**验收：** 30秒±1帧，转场无黑帧或断句。
+
+### 4. 前后对比
+
+审查摘要与原讲义差异；对未显示现象标缺素材。
+
+**验收：** 没有添加“实拍”“实验成功”误导字样。
+
+- 对应技术（编辑学习关系）：[VideoAgent 编辑框架（HKUDS）](https://2codework.github.io/modelatlas/?node=vid-videoagent-edit)
+- 对应技术（编辑学习关系）：[FFmpeg 媒体处理](https://2codework.github.io/modelatlas/?node=vid-ffmpeg)
+- 对应技术（编辑学习关系）：[OpenTimelineIO 时间线交换](https://2codework.github.io/modelatlas/?node=vid-otio)
+- cost：仅编辑不必调用视频生成模型；Agent后端/API成本未知且本轮不使用。
+- compute_cost：仅编辑不必调用视频生成模型；Agent后端/API成本未知且本轮不使用。
+- 验收：描述可回溯到具体段落。
+- 验收：不得通过倒序或删前提制造错误因果。
+- 验收：30秒±1帧，转场无黑帧或断句。
+- 验收：没有添加“实拍”“实验成功”误导字样。
+- 来源：HKUDS VideoAgent — https://github.com/HKUDS/VideoAgent（核查：2026-10-28）
+
+- 来源：VideoAgent editing paper — https://arxiv.org/abs/2606.23327（核查：2026-10-28）
+
+- 来源：FFmpeg — https://ffmpeg.org/ffmpeg.html（核查：2026-10-28）
+
+- 来源：OpenTimelineIO — https://github.com/AcademySoftwareFoundation/OpenTimelineIO（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "video-edit-original-footage",
+  "title": "原素材重剪为30秒科普预告",
+  "summary": "原创教学设计：原素材重剪为30秒科普预告",
+  "roles": [
+    "视频制作学习者",
+    "内容编辑",
+    "Agent工作流设计者"
+  ],
+  "industries": [
+    "教育",
+    "创意内容"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "input": "原创模拟素材清单：种子入土、浇水、发芽三段各20秒；讲义写明画面是示意，不是真实时间流逝。",
+  "prompt": "选出总长30秒、保留因果的片段；只输出时间码与剪辑理由，不虚构素材中不存在的开花画面。",
+  "steps": [
+    {
+      "title": "建索引",
+      "body": "每段记事件、可见证据、音轨、时间码、禁止推断项，保留原片只读。",
+      "check": "描述可回溯到具体段落。"
+    },
+    {
+      "title": "编辑决策",
+      "body": "给出入点出点和排序，明确是否加速及加速标识。",
+      "check": "不得通过倒序或删前提制造错误因果。"
+    },
+    {
+      "title": "剪辑预览",
+      "body": "用时间线而非覆写源文件操作，配无夸张承诺字幕。",
+      "check": "30秒±1帧，转场无黑帧或断句。"
+    },
+    {
+      "title": "前后对比",
+      "body": "审查摘要与原讲义差异；对未显示现象标缺素材。",
+      "check": "没有添加“实拍”“实验成功”误导字样。"
+    }
+  ],
+  "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+  "rubric": [
+    "描述可回溯到具体段落。",
+    "不得通过倒序或删前提制造错误因果。",
+    "30秒±1帧，转场无黑帧或断句。",
+    "没有添加“实拍”“实验成功”误导字样。"
+  ],
+  "failure_recovery": "检索错片即回查原时间码；素材不足做说明卡而非生成伪证。",
+  "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+  "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+  "compute_cost": "仅编辑不必调用视频生成模型；Agent后端/API成本未知且本轮不使用。",
+  "source_ids": [
+    "vid-src-videoagent",
+    "vid-src-videoagentpaper",
+    "vid-src-ffmpeg",
+    "vid-src-otio"
+  ],
+  "sources": [
+    {
+      "title": "HKUDS VideoAgent",
+      "url": "https://github.com/HKUDS/VideoAgent",
+      "evidence": "primary"
+    },
+    {
+      "title": "VideoAgent editing paper",
+      "url": "https://arxiv.org/abs/2606.23327",
+      "evidence": "primary"
+    },
+    {
+      "title": "FFmpeg",
+      "url": "https://ffmpeg.org/ffmpeg.html",
+      "evidence": "primary"
+    },
+    {
+      "title": "OpenTimelineIO",
+      "url": "https://github.com/AcademySoftwareFoundation/OpenTimelineIO",
+      "evidence": "primary"
+    }
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+  "practice_status": "original_teaching_template_not_executed",
+  "modelatlas_node_ids": [
+    "vid-videoagent-edit",
+    "vid-ffmpeg",
+    "vid-otio"
+  ],
+  "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+  "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+}
+```
+</details>
+
+## 双语字幕与无障碍版本
+
+原创教学设计：双语字幕与无障碍版本
+
+**证据边界：** 来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。
+
+### 合成输入
+
+原创90秒演示旁白，含术语“纸盒编号A17”和静音段；人工真值稿已设为练习输入。
+
+### 提示词
+
+输出原文字幕、译文、时间码与不确定词；静音不补字，数字逐项核对；补充与理解相关的非语言声音说明。
+
+### 输出模板
+
+项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。
+
+### 风险与授权
+
+全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+来源快照见source_ids；完整链路兼容版本未实测。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 建立真值
+
+人工写术语表与说话段落，先标静音和重叠语音，再选择识别语言。
+
+**验收：** A17不可变成A70；静音不出现幻觉句。
+
+### 2. 对齐与翻译
+
+转录后先校文本再对齐，翻译保持警告和否定；不启用需令牌的分离模型。
+
+**验收：** 字幕时间不倒退、不越片尾；人名不猜。
+
+### 3. 可读性检查
+
+教学目标每屏最多2行，中文每行≤18字；目标展示速度≤8字/秒，超出重断句。
+
+**验收：** 这些是本练习可调整标准，不冒充通用法规。
+
+### 4. 无障碍交付
+
+输出可切换字幕、烧录预览和声音说明稿，分别审查遮挡。
+
+**验收：** 关键按钮、动作不被字幕遮住。
+
+- 对应技术（编辑学习关系）：[Whisper 语音识别](https://2codework.github.io/modelatlas/?node=vid-whisper)
+- 对应技术（编辑学习关系）：[WhisperX 对齐流程](https://2codework.github.io/modelatlas/?node=vid-whisperx)
+- 对应技术（编辑学习关系）：[Kdenlive 字幕与转录剪辑](https://2codework.github.io/modelatlas/?node=vid-kdenlive)
+- cost：识别/对齐CPU或GPU均需测；下载模型及人工校对有成本，无令牌路径为本任务限制。
+- compute_cost：识别/对齐CPU或GPU均需测；下载模型及人工校对有成本，无令牌路径为本任务限制。
+- 验收：A17不可变成A70；静音不出现幻觉句。
+- 验收：字幕时间不倒退、不越片尾；人名不猜。
+- 验收：这些是本练习可调整标准，不冒充通用法规。
+- 验收：关键按钮、动作不被字幕遮住。
+- 来源：Whisper — https://github.com/openai/whisper（核查：2026-10-28）
+
+- 来源：WhisperX — https://github.com/m-bain/whisperX（核查：2026-10-28）
+
+- 来源：Kdenlive speech to text — https://docs.kdenlive.org/en/effects_and_filters/speech_to_text.html（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "video-caption-accessibility",
+  "title": "双语字幕与无障碍版本",
+  "summary": "原创教学设计：双语字幕与无障碍版本",
+  "roles": [
+    "视频制作学习者",
+    "内容编辑",
+    "Agent工作流设计者"
+  ],
+  "industries": [
+    "教育",
+    "创意内容"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "input": "原创90秒演示旁白，含术语“纸盒编号A17”和静音段；人工真值稿已设为练习输入。",
+  "prompt": "输出原文字幕、译文、时间码与不确定词；静音不补字，数字逐项核对；补充与理解相关的非语言声音说明。",
+  "steps": [
+    {
+      "title": "建立真值",
+      "body": "人工写术语表与说话段落，先标静音和重叠语音，再选择识别语言。",
+      "check": "A17不可变成A70；静音不出现幻觉句。"
+    },
+    {
+      "title": "对齐与翻译",
+      "body": "转录后先校文本再对齐，翻译保持警告和否定；不启用需令牌的分离模型。",
+      "check": "字幕时间不倒退、不越片尾；人名不猜。"
+    },
+    {
+      "title": "可读性检查",
+      "body": "教学目标每屏最多2行，中文每行≤18字；目标展示速度≤8字/秒，超出重断句。",
+      "check": "这些是本练习可调整标准，不冒充通用法规。"
+    },
+    {
+      "title": "无障碍交付",
+      "body": "输出可切换字幕、烧录预览和声音说明稿，分别审查遮挡。",
+      "check": "关键按钮、动作不被字幕遮住。"
+    }
+  ],
+  "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+  "rubric": [
+    "A17不可变成A70；静音不出现幻觉句。",
+    "字幕时间不倒退、不越片尾；人名不猜。",
+    "这些是本练习可调整标准，不冒充通用法规。",
+    "关键按钮、动作不被字幕遮住。"
+  ],
+  "failure_recovery": "对齐字典外词用人工时间码；重叠语音分段人工校对；不要把说话人编号当真实姓名。",
+  "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+  "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+  "compute_cost": "识别/对齐CPU或GPU均需测；下载模型及人工校对有成本，无令牌路径为本任务限制。",
+  "source_ids": [
+    "vid-src-whisper",
+    "vid-src-whisperx",
+    "vid-src-kdenlive"
+  ],
+  "sources": [
+    {
+      "title": "Whisper",
+      "url": "https://github.com/openai/whisper",
+      "evidence": "primary"
+    },
+    {
+      "title": "WhisperX",
+      "url": "https://github.com/m-bain/whisperX",
+      "evidence": "primary"
+    },
+    {
+      "title": "Kdenlive speech to text",
+      "url": "https://docs.kdenlive.org/en/effects_and_filters/speech_to_text.html",
+      "evidence": "primary"
+    }
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+  "practice_status": "original_teaching_template_not_executed",
+  "modelatlas_node_ids": [
+    "vid-whisper",
+    "vid-whisperx",
+    "vid-kdenlive"
+  ],
+  "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+  "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+}
+```
+</details>
+
+## 不克隆音色的配音与节奏
+
+原创教学设计：不克隆音色的配音与节奏
+
+**证据边界：** 来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。
+
+### 合成输入
+
+原创40秒纸盒分类说明稿；假想本人新录旁白或许可明确非模仿TTS，角色为无嘴纸机器人。
+
+### 提示词
+
+按句分配镜头时长；保留呼吸停顿；不要模仿名人或现有角色音色，不做真人嘴型替换。
+
+### 输出模板
+
+项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。
+
+### 风险与授权
+
+全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+来源快照见source_ids；完整链路兼容版本未实测。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 旁白设计
+
+把说明分为四句，每句只包含一条操作；建立发音表。
+
+**验收：** 无未经证实性能声称，措辞与画面一致。
+
+### 2. 音频优先
+
+先审核原创旁白时长，再安排B-roll；同步生成仅作为需另审许可的候选。
+
+**验收：** 声音素材归属与同意范围明确。
+
+### 3. 对齐剪辑
+
+句子起止与动作对齐，转场放在停顿处，不压缩到词语失真。
+
+**验收：** 每句对应动作，终句没有截断尾音。
+
+### 4. 混音质检
+
+检查爆音、突变、背景遮盖及单声道可懂度；记录实际峰值和测量工具。
+
+**验收：** 播放设备实听通过，不杜撰响度标准达标。
+
+- 对应技术（编辑学习关系）：[LTX-2 音视频生成](https://2codework.github.io/modelatlas/?node=vid-ltx2)
+- 对应技术（编辑学习关系）：[Wan2.2 文/图/音驱动视频](https://2codework.github.io/modelatlas/?node=vid-wan22)
+- 对应技术（编辑学习关系）：[FFmpeg 媒体处理](https://2codework.github.io/modelatlas/?node=vid-ffmpeg)
+- cost：音视频联合生成通常额外算力；录音、剪辑、配乐版权不因开源模型而免费。
+- compute_cost：音视频联合生成通常额外算力；录音、剪辑、配乐版权不因开源模型而免费。
+- 验收：无未经证实性能声称，措辞与画面一致。
+- 验收：声音素材归属与同意范围明确。
+- 验收：每句对应动作，终句没有截断尾音。
+- 验收：播放设备实听通过，不杜撰响度标准达标。
+- 来源：LTX-2 — https://github.com/Lightricks/LTX-2（核查：2026-10-28）
+
+- 来源：Wan2.2 — https://github.com/Wan-Video/Wan2.2（核查：2026-10-28）
+
+- 来源：FFmpeg — https://ffmpeg.org/ffmpeg.html（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "video-narration-sync",
+  "title": "不克隆音色的配音与节奏",
+  "summary": "原创教学设计：不克隆音色的配音与节奏",
+  "roles": [
+    "视频制作学习者",
+    "内容编辑",
+    "Agent工作流设计者"
+  ],
+  "industries": [
+    "教育",
+    "创意内容"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "input": "原创40秒纸盒分类说明稿；假想本人新录旁白或许可明确非模仿TTS，角色为无嘴纸机器人。",
+  "prompt": "按句分配镜头时长；保留呼吸停顿；不要模仿名人或现有角色音色，不做真人嘴型替换。",
+  "steps": [
+    {
+      "title": "旁白设计",
+      "body": "把说明分为四句，每句只包含一条操作；建立发音表。",
+      "check": "无未经证实性能声称，措辞与画面一致。"
+    },
+    {
+      "title": "音频优先",
+      "body": "先审核原创旁白时长，再安排B-roll；同步生成仅作为需另审许可的候选。",
+      "check": "声音素材归属与同意范围明确。"
+    },
+    {
+      "title": "对齐剪辑",
+      "body": "句子起止与动作对齐，转场放在停顿处，不压缩到词语失真。",
+      "check": "每句对应动作，终句没有截断尾音。"
+    },
+    {
+      "title": "混音质检",
+      "body": "检查爆音、突变、背景遮盖及单声道可懂度；记录实际峰值和测量工具。",
+      "check": "播放设备实听通过，不杜撰响度标准达标。"
+    }
+  ],
+  "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+  "rubric": [
+    "无未经证实性能声称，措辞与画面一致。",
+    "声音素材归属与同意范围明确。",
+    "每句对应动作，终句没有截断尾音。",
+    "播放设备实听通过，不杜撰响度标准达标。"
+  ],
+  "failure_recovery": "口型或同步不稳用非人形旁白镜头；声线许可不明则使用字幕，绝不代入真实人物。",
+  "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+  "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+  "compute_cost": "音视频联合生成通常额外算力；录音、剪辑、配乐版权不因开源模型而免费。",
+  "source_ids": [
+    "vid-src-ltx2",
+    "vid-src-wan",
+    "vid-src-ffmpeg"
+  ],
+  "sources": [
+    {
+      "title": "LTX-2",
+      "url": "https://github.com/Lightricks/LTX-2",
+      "evidence": "primary"
+    },
+    {
+      "title": "Wan2.2",
+      "url": "https://github.com/Wan-Video/Wan2.2",
+      "evidence": "primary"
+    },
+    {
+      "title": "FFmpeg",
+      "url": "https://ffmpeg.org/ffmpeg.html",
+      "evidence": "primary"
+    }
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+  "practice_status": "original_teaching_template_not_executed",
+  "modelatlas_node_ids": [
+    "vid-ltx2",
+    "vid-wan22",
+    "vid-ffmpeg"
+  ],
+  "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。LTX-2仓库存在多份许可文件，需对应具体权重。",
+  "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+}
+```
+</details>
+
+## 视频Agent的证据型质检
+
+原创教学设计：视频Agent的证据型质检
+
+**证据边界：** 来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。
+
+### 合成输入
+
+原创60秒成片假想缺陷表：第2镜标记镜像、第4镜字幕超边、第5镜静音；另有一处暂时无法判断的道具跳变。
+
+### 提示词
+
+对每个问题输出时间码、观察证据、严重度、是否需人工；无法判断就unknown；不要只给整体美观分。
+
+### 输出模板
+
+项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。
+
+### 风险与授权
+
+全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+来源快照见source_ids；完整链路兼容版本未实测。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 设检查集
+
+准备合成缺陷真值，覆盖黑帧、重复帧、断音、字错、授权缺失与误导标签。
+
+**验收：** 包含干净对照段，能估计误报。
+
+### 2. 分层检测
+
+技术检查读取媒体属性，语义检查对照脚本，抽帧用于预筛。
+
+**验收：** 不能声称抽帧排除所有瞬时缺陷。
+
+### 3. 人工复核
+
+逐条回放候选时间段；对unknown保留待办，不用模型自信覆盖。
+
+**验收：** 报告真阳性/误报/漏报样例而非只有平均分。
+
+### 4. 阻断交付
+
+版权不明、伪造事实、重要字幕错字为阻断项；修复后重跑相关检查。
+
+**验收：** 每项有负责人、修复版本及复审结论。
+
+- 对应技术（编辑学习关系）：[VideoAgent 长视频理解（2024）](https://2codework.github.io/modelatlas/?node=vid-videoagent-understand)
+- 对应技术（编辑学习关系）：[FFmpeg 媒体处理](https://2codework.github.io/modelatlas/?node=vid-ffmpeg)
+- 对应技术（编辑学习关系）：[Whisper 语音识别](https://2codework.github.io/modelatlas/?node=vid-whisper)
+- cost：检测token和帧数有成本，长视频分层筛选不是保证零漏检。
+- compute_cost：检测token和帧数有成本，长视频分层筛选不是保证零漏检。
+- 验收：包含干净对照段，能估计误报。
+- 验收：不能声称抽帧排除所有瞬时缺陷。
+- 验收：报告真阳性/误报/漏报样例而非只有平均分。
+- 验收：每项有负责人、修复版本及复审结论。
+- 来源：VideoAgent long-form understanding — https://arxiv.org/abs/2403.10517（核查：2026-10-28）
+
+- 来源：FFmpeg — https://ffmpeg.org/ffmpeg.html（核查：2026-10-28）
+
+- 来源：Whisper — https://github.com/openai/whisper（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "video-qc-evidence",
+  "title": "视频Agent的证据型质检",
+  "summary": "原创教学设计：视频Agent的证据型质检",
+  "roles": [
+    "视频制作学习者",
+    "内容编辑",
+    "Agent工作流设计者"
+  ],
+  "industries": [
+    "教育",
+    "创意内容"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "input": "原创60秒成片假想缺陷表：第2镜标记镜像、第4镜字幕超边、第5镜静音；另有一处暂时无法判断的道具跳变。",
+  "prompt": "对每个问题输出时间码、观察证据、严重度、是否需人工；无法判断就unknown；不要只给整体美观分。",
+  "steps": [
+    {
+      "title": "设检查集",
+      "body": "准备合成缺陷真值，覆盖黑帧、重复帧、断音、字错、授权缺失与误导标签。",
+      "check": "包含干净对照段，能估计误报。"
+    },
+    {
+      "title": "分层检测",
+      "body": "技术检查读取媒体属性，语义检查对照脚本，抽帧用于预筛。",
+      "check": "不能声称抽帧排除所有瞬时缺陷。"
+    },
+    {
+      "title": "人工复核",
+      "body": "逐条回放候选时间段；对unknown保留待办，不用模型自信覆盖。",
+      "check": "报告真阳性/误报/漏报样例而非只有平均分。"
+    },
+    {
+      "title": "阻断交付",
+      "body": "版权不明、伪造事实、重要字幕错字为阻断项；修复后重跑相关检查。",
+      "check": "每项有负责人、修复版本及复审结论。"
+    }
+  ],
+  "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+  "rubric": [
+    "包含干净对照段，能估计误报。",
+    "不能声称抽帧排除所有瞬时缺陷。",
+    "报告真阳性/误报/漏报样例而非只有平均分。",
+    "每项有负责人、修复版本及复审结论。"
+  ],
+  "failure_recovery": "质检模型漏检时扩大采样或全片人工回放；模型不能充当法律、肖像授权的最终裁判。",
+  "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+  "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+  "compute_cost": "检测token和帧数有成本，长视频分层筛选不是保证零漏检。",
+  "source_ids": [
+    "vid-src-understand",
+    "vid-src-ffmpeg",
+    "vid-src-whisper"
+  ],
+  "sources": [
+    {
+      "title": "VideoAgent long-form understanding",
+      "url": "https://arxiv.org/abs/2403.10517",
+      "evidence": "primary"
+    },
+    {
+      "title": "FFmpeg",
+      "url": "https://ffmpeg.org/ffmpeg.html",
+      "evidence": "primary"
+    },
+    {
+      "title": "Whisper",
+      "url": "https://github.com/openai/whisper",
+      "evidence": "primary"
+    }
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+  "practice_status": "original_teaching_template_not_executed",
+  "modelatlas_node_ids": [
+    "vid-videoagent-understand",
+    "vid-ffmpeg",
+    "vid-whisper"
+  ],
+  "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+  "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+}
+```
+</details>
+
+## 项目归档与局部重做
+
+原创教学设计：项目归档与局部重做
+
+**证据边界：** 来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。
+
+### 合成输入
+
+原创项目含6镜头、4张角色图、1份旁白、2种画幅与字幕；只归档合成素材。
+
+### 提示词
+
+输出manifest：文件SHA256、来源与许可、prompt、seed、模型/运行时revision、时间线、父版本、审批与失败记录；缺值写unknown。
+
+### 输出模板
+
+项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。
+
+### 风险与授权
+
+全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+来源快照见source_ids；完整链路兼容版本未实测。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 冻结清单
+
+源素材只读，工作输出分离；每镜建立稳定ID，manifest不含密钥与个人路径。
+
+**验收：** 所有时间线引用可解析。
+
+### 2. 版本差分
+
+修第3镜字幕只新增字幕与交付版本，记录父版本和原因。
+
+**验收：** 不覆盖原批准文件，差分范围准确。
+
+### 3. 可迁移检查
+
+交换时间线检查入出点、帧率与媒体定位；特效兼容性列为人工核验。
+
+**验收：** OTIO文件存在不代表所有剪辑软件效果无损兼容。
+
+### 4. 恢复演练设计
+
+在空目录重新定位素材并核对hash，未知模型revision阻止声称完全复现。
+
+**验收：** 输出恢复报告、缺失项与可用静态降级包。
+
+- 对应技术（编辑学习关系）：[OpenTimelineIO 时间线交换](https://2codework.github.io/modelatlas/?node=vid-otio)
+- 对应技术（编辑学习关系）：[ComfyUI 图式运行时](https://2codework.github.io/modelatlas/?node=vid-comfyui)
+- 对应技术（编辑学习关系）：[FFmpeg 媒体处理](https://2codework.github.io/modelatlas/?node=vid-ffmpeg)
+- cost：存储、备份、数据传输和恢复工时必须预算；seed相同也不保证跨硬件逐位一致。
+- compute_cost：存储、备份、数据传输和恢复工时必须预算；seed相同也不保证跨硬件逐位一致。
+- 验收：所有时间线引用可解析。
+- 验收：不覆盖原批准文件，差分范围准确。
+- 验收：OTIO文件存在不代表所有剪辑软件效果无损兼容。
+- 验收：输出恢复报告、缺失项与可用静态降级包。
+- 来源：OpenTimelineIO — https://github.com/AcademySoftwareFoundation/OpenTimelineIO（核查：2026-10-28）
+
+- 来源：ComfyUI — https://github.com/Comfy-Org/ComfyUI（核查：2026-10-28）
+
+- 来源：FFmpeg — https://ffmpeg.org/ffmpeg.html（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "video-archive-reproducible",
+  "title": "项目归档与局部重做",
+  "summary": "原创教学设计：项目归档与局部重做",
+  "roles": [
+    "视频制作学习者",
+    "内容编辑",
+    "Agent工作流设计者"
+  ],
+  "industries": [
+    "教育",
+    "创意内容"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "input": "原创项目含6镜头、4张角色图、1份旁白、2种画幅与字幕；只归档合成素材。",
+  "prompt": "输出manifest：文件SHA256、来源与许可、prompt、seed、模型/运行时revision、时间线、父版本、审批与失败记录；缺值写unknown。",
+  "steps": [
+    {
+      "title": "冻结清单",
+      "body": "源素材只读，工作输出分离；每镜建立稳定ID，manifest不含密钥与个人路径。",
+      "check": "所有时间线引用可解析。"
+    },
+    {
+      "title": "版本差分",
+      "body": "修第3镜字幕只新增字幕与交付版本，记录父版本和原因。",
+      "check": "不覆盖原批准文件，差分范围准确。"
+    },
+    {
+      "title": "可迁移检查",
+      "body": "交换时间线检查入出点、帧率与媒体定位；特效兼容性列为人工核验。",
+      "check": "OTIO文件存在不代表所有剪辑软件效果无损兼容。"
+    },
+    {
+      "title": "恢复演练设计",
+      "body": "在空目录重新定位素材并核对hash，未知模型revision阻止声称完全复现。",
+      "check": "输出恢复报告、缺失项与可用静态降级包。"
+    }
+  ],
+  "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+  "rubric": [
+    "所有时间线引用可解析。",
+    "不覆盖原批准文件，差分范围准确。",
+    "OTIO文件存在不代表所有剪辑软件效果无损兼容。",
+    "输出恢复报告、缺失项与可用静态降级包。"
+  ],
+  "failure_recovery": "文件失链从manifest找原资产；模型已下架保留成片与配置，迁移重渲染视为新版本。",
+  "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+  "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+  "compute_cost": "存储、备份、数据传输和恢复工时必须预算；seed相同也不保证跨硬件逐位一致。",
+  "source_ids": [
+    "vid-src-otio",
+    "vid-src-comfy",
+    "vid-src-ffmpeg"
+  ],
+  "sources": [
+    {
+      "title": "OpenTimelineIO",
+      "url": "https://github.com/AcademySoftwareFoundation/OpenTimelineIO",
+      "evidence": "primary"
+    },
+    {
+      "title": "ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "evidence": "primary"
+    },
+    {
+      "title": "FFmpeg",
+      "url": "https://ffmpeg.org/ffmpeg.html",
+      "evidence": "primary"
+    }
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+  "practice_status": "original_teaching_template_not_executed",
+  "modelatlas_node_ids": [
+    "vid-otio",
+    "vid-comfyui",
+    "vid-ffmpeg"
+  ],
+  "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。",
+  "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+}
+```
+</details>
+
+## 历史视频微调迁移教学
+
+原创教学设计：历史视频微调迁移教学
+
+**证据边界：** 来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。
+
+### 合成输入
+
+原创2秒纸船驶过蓝纸背景的设计稿；比较旧单视频微调与现代参考图生成，不下载运行任何外部代码。
+
+### 提示词
+
+建立对照表：训练是否需要、参考条件、运动保真、可控编辑、硬件、许可、环境；未知写unknown，禁止虚构获胜分数。
+
+### 输出模板
+
+项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。
+
+### 风险与授权
+
+全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+来源快照见source_ids；完整链路兼容版本未实测。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 还原历史假设
+
+分别记录论文版本、当时基础模型和训练输入，保留历史配置而不自动升级依赖。
+
+**验收：** 不把“历史”改写成维护者正式弃用。
+
+### 2. 列替代路线
+
+免训练I2V适合尝试运动，传统动画适合精确路径；不是一比一模型替换。
+
+**验收：** 只有LTX迁移标记有维护者明确入口变化来源。
+
+### 3. 设计公平比较
+
+同一原创角色、相同时长和输出分辨率，报告训练加推理总时间与失败率。
+
+**验收：** 无执行则表格为空，只有计划不能给成绩。
+
+### 4. 保存迁移决策
+
+保留旧条目，另建替代案例链接、不可迁移项及许可差异。
+
+**验收：** 旧内容可查询，推荐与证据分离。
+
+- 对应技术（编辑学习关系）：[Tune-A-Video 单视频微调](https://2codework.github.io/modelatlas/?node=vid-tune-a-video)
+- 对应技术（编辑学习关系）：[AnimateDiff 运动模块](https://2codework.github.io/modelatlas/?node=vid-animatediff)
+- 对应技术（编辑学习关系）：[Wan2.2 文/图/音驱动视频](https://2codework.github.io/modelatlas/?node=vid-wan22)
+- 对应技术（编辑学习关系）：[LTX-Video 历史入口](https://2codework.github.io/modelatlas/?node=vid-ltx-video)
+- 对应技术（编辑学习关系）：[LTX-2 音视频生成](https://2codework.github.io/modelatlas/?node=vid-ltx2)
+- cost：微调有额外训练成本；现代生成不自动更便宜，比较必须同时记人工重做与显存。
+- compute_cost：微调有额外训练成本；现代生成不自动更便宜，比较必须同时记人工重做与显存。
+- 验收：不把“历史”改写成维护者正式弃用。
+- 验收：只有LTX迁移标记有维护者明确入口变化来源。
+- 验收：无执行则表格为空，只有计划不能给成绩。
+- 验收：旧内容可查询，推荐与证据分离。
+- 来源：Tune-A-Video — https://github.com/showlab/Tune-A-Video（核查：2026-10-28）
+
+- 来源：Tune-A-Video paper — https://arxiv.org/abs/2212.11565（核查：2026-10-28）
+
+- 来源：AnimateDiff — https://github.com/guoyww/AnimateDiff（核查：2026-10-28）
+
+- 来源：Wan2.2 — https://github.com/Wan-Video/Wan2.2（核查：2026-10-28）
+
+- 来源：LTX-Video — https://github.com/Lightricks/LTX-Video（核查：2026-10-28）
+
+- 来源：LTX-2 — https://github.com/Lightricks/LTX-2（核查：2026-10-28）
+
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "video-historical-edit-migration",
+  "title": "历史视频微调迁移教学",
+  "summary": "原创教学设计：历史视频微调迁移教学",
+  "roles": [
+    "视频制作学习者",
+    "内容编辑",
+    "Agent工作流设计者"
+  ],
+  "industries": [
+    "教育",
+    "创意内容"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "input": "原创2秒纸船驶过蓝纸背景的设计稿；比较旧单视频微调与现代参考图生成，不下载运行任何外部代码。",
+  "prompt": "建立对照表：训练是否需要、参考条件、运动保真、可控编辑、硬件、许可、环境；未知写unknown，禁止虚构获胜分数。",
+  "steps": [
+    {
+      "title": "还原历史假设",
+      "body": "分别记录论文版本、当时基础模型和训练输入，保留历史配置而不自动升级依赖。",
+      "check": "不把“历史”改写成维护者正式弃用。"
+    },
+    {
+      "title": "列替代路线",
+      "body": "免训练I2V适合尝试运动，传统动画适合精确路径；不是一比一模型替换。",
+      "check": "只有LTX迁移标记有维护者明确入口变化来源。"
+    },
+    {
+      "title": "设计公平比较",
+      "body": "同一原创角色、相同时长和输出分辨率，报告训练加推理总时间与失败率。",
+      "check": "无执行则表格为空，只有计划不能给成绩。"
+    },
+    {
+      "title": "保存迁移决策",
+      "body": "保留旧条目，另建替代案例链接、不可迁移项及许可差异。",
+      "check": "旧内容可查询，推荐与证据分离。"
+    }
+  ],
+  "output": "项目包：brief.json / shots.json / asset-manifest.json / timeline / subtitles / qa.json / changelog；本轮只交付设计与研究，不交付实际影片。",
+  "rubric": [
+    "不把“历史”改写成维护者正式弃用。",
+    "只有LTX迁移标记有维护者明确入口变化来源。",
+    "无执行则表格为空，只有计划不能给成绩。",
+    "旧内容可查询，推荐与证据分离。"
+  ],
+  "failure_recovery": "依赖不兼容停在文档级复盘；不要未经授权安装旧依赖或强行执行来源代码。",
+  "risks": "全为原创合成教学输入与未执行设计；不使用真实账户、付费API、Mac、第三方执行代码或真实人脸/声音。不得做深伪、侵权剧本改编或伪实拍；发布前独立核素材/模型/声音/肖像/字体/音乐许可。",
+  "permission_boundary": "可在隔离环境规划合成输入；下载/安装/模型推理/付费/上传/发布与账户访问均未授权且未执行；新操作另审。",
+  "compute_cost": "微调有额外训练成本；现代生成不自动更便宜，比较必须同时记人工重做与显存。",
+  "source_ids": [
+    "vid-src-tune",
+    "vid-src-tunepaper",
+    "vid-src-animatediff",
+    "vid-src-wan",
+    "vid-src-ltxv",
+    "vid-src-ltx2"
+  ],
+  "sources": [
+    {
+      "title": "Tune-A-Video",
+      "url": "https://github.com/showlab/Tune-A-Video",
+      "evidence": "primary"
+    },
+    {
+      "title": "Tune-A-Video paper",
+      "url": "https://arxiv.org/abs/2212.11565",
+      "evidence": "primary"
+    },
+    {
+      "title": "AnimateDiff",
+      "url": "https://github.com/guoyww/AnimateDiff",
+      "evidence": "primary"
+    },
+    {
+      "title": "Wan2.2",
+      "url": "https://github.com/Wan-Video/Wan2.2",
+      "evidence": "primary"
+    },
+    {
+      "title": "LTX-Video",
+      "url": "https://github.com/Lightricks/LTX-Video",
+      "evidence": "primary"
+    },
+    {
+      "title": "LTX-2",
+      "url": "https://github.com/Lightricks/LTX-2",
+      "evidence": "primary"
+    }
+  ],
+  "checked_at": "2026-10-28",
+  "evidence_note": "来源证实技术或文档范围，不证明本原创案例已运行；无厂商案例复制、无收益承诺。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "来源快照见source_ids；完整链路兼容版本未实测。",
+  "replacement_case": "",
+  "historical_context": "首次收录2026-10-28；教学设计，不由访问日期推导现行生产最佳实践。",
+  "practice_status": "original_teaching_template_not_executed",
+  "modelatlas_node_ids": [
+    "vid-tune-a-video",
+    "vid-animatediff",
+    "vid-wan22",
+    "vid-ltx-video",
+    "vid-ltx2"
+  ],
+  "license": "输入与提示为本轮原创合成教学设计；生产素材、模型权重、声音、字体、音乐许可须逐项核验，当前未完成商业使用许可审核。LTX-2仓库存在多份许可文件，需对应具体权重。",
+  "tool_model_agent_distinction": "所列ModelAtlas节点明确type；本案例的策划/检查闭环是原创Agent设计，不表示所列单个模型或编辑器原生执行全部步骤。"
+}
+```
+</details>
+
 ## 制造：批次追溯时间线
 
 原创合成行业练习；以人工验收为最终检查。

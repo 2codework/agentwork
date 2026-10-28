@@ -53,9 +53,11 @@ def build():
         if p.is_file(): shutil.copyfile(p, dest/p.name)
     (dest/'data.json').write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n')
     (dest/'.nojekyll').touch()
+    shutil.copy2(ROOT/'BOOK.md',dest/'BOOK.md')
+    shutil.copytree(dest,ROOT/'docs',dirs_exist_ok=True)
     print(f'Built {len(data["cases"])} cases + {len(data["chapters"])} research chapters → site/')
 def write_book(data):
-    lines=['# AgentWork · 开放实践手册', '', '> 自动从 content/ 与 research/ 生成；不要手工维护此文件。第一版，合成练习非真实部署证据。', '']
+    lines=['# AgentWork · 开放实践手册', '', '> 自动从 content/ 与 research/ 生成；不要手工维护此文件。r0.2 创作专题候选，r1 已上线；合成练习非真实部署证据。', '']
     for chapter in data['book']:
         lines += ['## '+chapter['title'], '', chapter['body'], '', '**练习：** '+chapter['exercise'], '']
     for case in data['cases']:
@@ -63,6 +65,9 @@ def write_book(data):
         for key,label in [('input','合成输入'),('prompt','提示词'),('output','输出模板'),('risks','风险与授权'),('checked_at','来源核查日期'),('lifecycle','生命周期'),('applicable_versions','适用版本'),('lifecycle_as_of','生命周期确认时间'),('replacement_case','替代案例'),('historical_context','历史与适用边界'),('practice_status','最佳实践证据状态')]:
             if key in case: lines += ['### '+label, '',case[key], '']
         for i,step in enumerate(case['steps']): lines += [f"### {i+1}. {step['title']}", '',step['body'], '', '**验收：** '+step['check'], '']
+        for x in case.get('modelatlas_links',[]): lines+=['- 对应技术（编辑学习关系）：['+x['title']+']('+x['url']+')']
+        for key in ['agent_boundary','cost','compute_cost','permissions']:
+            if key in case: lines+=['- '+key+'：'+str(case[key])]
         for item in case.get('rubric',[]): lines += ['- 验收：'+item]
         for source in case['sources']: lines += ['- 来源：'+source['title']+' — '+source['url']+'（核查：'+source.get('checked_at','未提供')+'）', source.get('claim','')]
         if 'raw_record' in case: lines += ['', '<details><summary>完整研究记录（保留所有原字段）</summary>', '', '```json', json.dumps(case['raw_record'],ensure_ascii=False,indent=2), '```', '</details>', '']

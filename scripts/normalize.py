@@ -1,3 +1,4 @@
+import copy
 """Explicit research adapters. Preserve original records; reject unknown schemas."""
 def required(record, fields):
     missing = [k for k in fields if k not in record]
@@ -6,6 +7,23 @@ def required(record, fields):
 def normalize(name, doc):
     required(doc,['cases','sources','checked_at'])
     refs = {s['id']:s for s in doc['sources']}
+    if len(refs)!=len(doc['sources']): raise ValueError('Duplicate source ID')
+    if name.startswith('creative-'):
+        nodes={n['id']:n for n in doc['nodes']}
+        if len(nodes)!=len(doc['nodes']): raise ValueError('Duplicate node ID')
+        result=copy.deepcopy(doc['cases'])
+        for c in result:
+            c['raw_record']=copy.deepcopy(c)
+            c['modelatlas_links']=[]
+            for nid in c.get('modelatlas_node_ids',[]):
+                if nid not in nodes: raise ValueError('Dangling cross-repo node '+nid)
+                c['modelatlas_links'].append({'id':nid,'title':nodes[nid]['title'],'url':'https://2codework.github.io/modelatlas/?node='+nid})
+            for sid in c.get('source_ids',[]):
+                if sid not in refs: raise ValueError('Missing source '+sid)
+            for source in c['sources']:
+                source.setdefault('checked_at',doc['checked_at'])
+            c.setdefault('cost',c.get('compute_cost','未核验；执行前确认预算'))
+        return result
     result=[]
     for c in doc['cases']:
         required(c,['id','source_ids'])

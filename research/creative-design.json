@@ -1,0 +1,2610 @@
+{
+  "schema_version": "creative-design-research-1.0",
+  "title": "设计Agent：AgentWork × ModelAtlas独立研究增量",
+  "checked_at": "2026-10-28",
+  "scope_zh": "13个合成流程、12个工具/模型/标准节点；非所有设计工具全集。只写独立研究文件，未修改r1/远端。",
+  "verification": {
+    "primary_pages_opened": true,
+    "product_execution": false,
+    "models_run": false,
+    "accounts_used": false,
+    "private_files_used": false,
+    "remote_modified": false,
+    "claim_level": "documentation_review_not_reproduction"
+  },
+  "schema_alignment": {
+    "agentwork": "依据CONTENT_SCHEMA.md；cases保留必需字段与生命周期；新适配器尚未实现，不能声称可直接导入。",
+    "modelatlas": "依据systems.json节点/edges/source结构；保留模型/工具/标准类型；新增type/category需未来适配器确认。",
+    "integration_status": "proposed_not_merged",
+    "read_paths": [
+      "agentwork-r1/docs/CONTENT_SCHEMA.md",
+      "agentwork-r1/research/roles.json",
+      "agentwork-r1/content/cases.json",
+      "modelatlas-r1/SOURCE_METHOD.md",
+      "modelatlas-r1/data/research/systems.json"
+    ]
+  },
+  "taxonomy": {
+    "agent_workflow": "目标→计划→工具操作→观察→验收→有限修正，具备权限边界与状态记录；这里为提案未运行。",
+    "model_capability": "内容生成/编辑或理解，不自动等于端到端代理。",
+    "ordinary_tool": "执行明确命令或变换；API/MCP/自动化也不自动具备自主性。"
+  },
+  "sources": [
+    {
+      "id": "design-src-figma",
+      "title": "Figma MCP introduction",
+      "url": "https://developers.figma.com/docs/figma-mcp-server/",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "rolling docs; exact release unknown",
+      "verified_claim": "MCP提供设计上下文，也支持远端写原生画布；不是MCP本身自主制定任务。写入为beta且有席位条件。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-figma-access",
+      "title": "Figma access",
+      "url": "https://developers.figma.com/docs/figma-mcp-server/rate-limits-access/",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "rolling docs; exact release unknown",
+      "verified_claim": "功能受计划、席位与限流影响；执行前按当前账号复核。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-firefly",
+      "title": "Firefly API",
+      "url": "https://developer.adobe.com/firefly-services/docs/firefly-api/",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "Image5; rolling API docs",
+      "verified_claim": "含图像生成、合成、放大；文档列Image5及Instruct Edit；并非可靠性或质量实测。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-photoshop",
+      "title": "Photoshop API",
+      "url": "https://developer.adobe.com/firefly-services/docs/photoshop/",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "API v2",
+      "verified_claim": "v2为GA，支持linked smart objects，面向可编排编辑服务。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-ps-migration",
+      "title": "Photoshop guides and migration",
+      "url": "https://developer.adobe.com/firefly-services/docs/photoshop/guides/",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "v1 legacy / v2 recommended",
+      "verified_claim": "v1标deprecated，推荐迁移v2；准确EOL 2026-07-31另见design-src-ps-eol。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-canva",
+      "title": "Canva REST APIs",
+      "url": "https://www.canva.dev/docs/apps/rest-apis/",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "rolling docs; exact release unknown",
+      "verified_claim": "Connect旧入口重定向统一SDK；REST提供资产、设计等集成，preview不能视为稳定生产接口。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-canva-autofill",
+      "title": "Canva autofill",
+      "url": "https://www.canva.dev/docs/apps/rest-apis/autofill-guide/",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "rolling docs; exact release unknown",
+      "verified_claim": "官方提供数据填充品牌模板的工作流；具体资格与配额执行前重查。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-canva-rights",
+      "title": "Canva Content License Agreement",
+      "url": "https://www.canva.com/policies/content-license-agreement/",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "核验日条款; legal review required",
+      "verified_claim": "素材类别约束不同，混用按更严类别；免费素材也要核对具体来源与许可。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-tokens",
+      "title": "DTCG Format 2025.10",
+      "url": "https://www.designtokens.org/TR/2025.10/format/",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "2025.10; 2025-10-28",
+      "verified_claim": "稳定Final Community Group Report；不是W3C标准；定义交换token的格式。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-tokens-draft",
+      "title": "DTCG preview warning",
+      "url": "https://www.designtokens.org/tr/drafts/format/",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "draft 2026-09-08",
+      "verified_claim": "预览明确不可作为权威或实现依据；使用固定正式版。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-wcag",
+      "title": "WCAG 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "Recommendation 2024-12-12",
+      "verified_claim": "可测试的无障碍标准；2.2未废止2.0/2.1，推荐采用较新版本。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-inkscape",
+      "title": "Inkscape Beginners Guide: tracing",
+      "url": "https://inkscape-manuals.readthedocs.io/en/latest/tracing-an-image.html",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "Guide 1.3; app version unknown",
+      "verified_claim": "位图描摹生成路径，适合简单剪影；复杂颜色会生成大量对象，不保证完全一致。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-slides",
+      "title": "Google Slides API",
+      "url": "https://developers.google.com/workspace/slides/api/guides/overview",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "Slides API v1 documentation",
+      "verified_claim": "API可创建和修改演示文稿；batchUpdate可操作页面元素。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-playwright",
+      "title": "Playwright visual comparisons",
+      "url": "https://playwright.dev/docs/test-snapshots",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "rolling docs; exact release unknown",
+      "verified_claim": "截图比较依赖基线与环境一致；相同页面在不同系统等条件可能不同。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-storybook",
+      "title": "Storybook accessibility tests",
+      "url": "https://storybook.js.org/docs/writing-tests/accessibility-testing",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "docs 10.6",
+      "verified_claim": "提供组件无障碍测试文档；自动测试不替代全部人工评估。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-c2pa",
+      "title": "C2PA specification 2.5",
+      "url": "https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "2.5; October 2026",
+      "verified_claim": "内容凭证包含签名、绑定、断言和验证；来源链不能单独证明创作内容为真或拥有版权。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-adobe-rights",
+      "title": "Adobe Generative AI User Guidelines",
+      "url": "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "updated 2026-05-15",
+      "verified_claim": "使用受生成AI指南约束；输入与输出仍须独立权利审核，不能由品牌名推导免责。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-pw-license",
+      "title": "Playwright license",
+      "url": "https://github.com/microsoft/playwright/blob/main/LICENSE",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "main snapshot",
+      "verified_claim": "Apache-2.0；不等于被测试页面素材授权。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-sb-license",
+      "title": "Storybook license",
+      "url": "https://github.com/storybookjs/storybook/blob/next/LICENSE",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "next snapshot",
+      "verified_claim": "MIT；保留软件许可，第三方组件与素材另核。",
+      "notes_zh": "仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。"
+    },
+    {
+      "id": "design-src-ps-eol",
+      "title": "Photoshop v1 deprecation announcement",
+      "url": "https://developer.adobe.com/firefly-services/docs/photoshop/getting-started/deprecation-announcement/",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "notice 2026-04-20; EOL 2026-07-31",
+      "verified_claim": "官方公告弃用通知2026-04-20、EOL 2026-07-31；核验日已过公告EOL，未测试端点当前响应。",
+      "notes_zh": "独立审查反馈后实际打开核验；未执行服务。"
+    },
+    {
+      "id": "design-src-c2pa-explainer",
+      "title": "C2PA explainer: provenance limits",
+      "url": "https://c2pa.org/specifications/specifications/2.2/explainer/Explainer.html",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "2.2 explainer; sections 2 and 7.2.2",
+      "verified_claim": "来源凭证单独不能证明内容真实、准确或符合事实；它验证来源链和完整性，不替代事实核查或素材许可。",
+      "notes_zh": "独立审查反馈后实际打开核验；未执行服务。"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "design-figma-mcp",
+      "title": "Figma MCP设计上下文与写画布",
+      "type": "tool_interface",
+      "category": "creative-design",
+      "description_zh": "供外部agent读取设计结构并执行受控写入的接口，不是独立模型。",
+      "summary_zh": "供外部agent读取设计结构并执行受控写入的接口，不是独立模型。",
+      "source_ids": [
+        "design-src-figma",
+        "design-src-figma-access"
+      ],
+      "source_urls": [
+        "https://developers.figma.com/docs/figma-mcp-server/",
+        "https://developers.figma.com/docs/figma-mcp-server/rate-limits-access/"
+      ],
+      "version": "rolling remote MCP; write beta",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创教学方案，未执行",
+      "prerequisites": [],
+      "misconceptions": [
+        "MCP工具可用不代表批准改写全部设计文件。"
+      ],
+      "pitfalls": [
+        "MCP工具可用不代表批准改写全部设计文件。",
+        "写画布限remote MCP；desktop不支持该写能力。草稿外写入另需Full seat，不能混同为所有远端读写都需该席位。"
+      ],
+      "cost": {
+        "status": "partially_verified",
+        "details": "部分写入beta免费，正式计费将变化；草稿外写入有Full seat条件，具体额度unknown",
+        "exact_price": "unknown"
+      },
+      "license": {
+        "status": "source_reviewed",
+        "details": "proprietary service; complete contractual license unknown"
+      },
+      "image_rights": "使用原创合成图形；真实部署逐资产记录来源、许可、肖像/商标/字体/地域与再分发限制。工具许可不授予素材权利。",
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "rolling remote MCP; write beta",
+        "replacement_node_ids": [],
+        "note_zh": "文档状态不等于运行验证；具体账号与版本另验。",
+        "source_ids": [
+          "design-src-figma",
+          "design-src-figma-access"
+        ]
+      },
+      "steps_zh": [
+        "固定输入、权限与版本",
+        "草稿生成后按案例rubric检查",
+        "保留原件、差异与失败记录"
+      ],
+      "best_practice_path": {
+        "status": "editorial_guidance_not_executed",
+        "steps": [
+          "先做小批合成演练",
+          "人为核准验收基线",
+          "扩大范围前核验权利与成本"
+        ],
+        "acceptance_zh": "证据链齐全且未把工具调用说成自主代理。"
+      }
+    },
+    {
+      "id": "design-firefly-image",
+      "title": "Firefly图像生成与编辑",
+      "type": "model_service",
+      "category": "creative-design",
+      "description_zh": "图像能力服务；agent负责选择输入、检查约束与失败恢复。",
+      "summary_zh": "图像能力服务；agent负责选择输入、检查约束与失败恢复。",
+      "source_ids": [
+        "design-src-firefly",
+        "design-src-adobe-rights"
+      ],
+      "source_urls": [
+        "https://developer.adobe.com/firefly-services/docs/firefly-api/",
+        "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html"
+      ],
+      "version": "Image5 / rolling API",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创教学方案，未执行",
+      "prerequisites": [],
+      "misconceptions": [
+        "生成的产品外观与字样需要人工验证，不能直接当实拍。"
+      ],
+      "pitfalls": [
+        "生成的产品外观与字样需要人工验证，不能直接当实拍。"
+      ],
+      "cost": {
+        "status": "partially_verified",
+        "details": "商业API计费与合同unknown；本轮零调用",
+        "exact_price": "unknown"
+      },
+      "license": {
+        "status": "source_reviewed",
+        "details": "proprietary; output rights depend on applicable terms"
+      },
+      "image_rights": "使用原创合成图形；真实部署逐资产记录来源、许可、肖像/商标/字体/地域与再分发限制。工具许可不授予素材权利。",
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "Image5 / rolling API",
+        "replacement_node_ids": [],
+        "note_zh": "文档状态不等于运行验证；具体账号与版本另验。",
+        "source_ids": [
+          "design-src-firefly",
+          "design-src-adobe-rights"
+        ]
+      },
+      "steps_zh": [
+        "固定输入、权限与版本",
+        "草稿生成后按案例rubric检查",
+        "保留原件、差异与失败记录"
+      ],
+      "best_practice_path": {
+        "status": "editorial_guidance_not_executed",
+        "steps": [
+          "先做小批合成演练",
+          "人为核准验收基线",
+          "扩大范围前核验权利与成本"
+        ],
+        "acceptance_zh": "证据链齐全且未把工具调用说成自主代理。"
+      }
+    },
+    {
+      "id": "design-photoshop-v2",
+      "title": "Photoshop API v2确定性编辑编排",
+      "type": "tool_service",
+      "category": "creative-design",
+      "description_zh": "模板、图层及智能对象工作流的服务节点；不是全部操作都由生成模型完成。",
+      "summary_zh": "模板、图层及智能对象工作流的服务节点；不是全部操作都由生成模型完成。",
+      "source_ids": [
+        "design-src-photoshop",
+        "design-src-ps-migration"
+      ],
+      "source_urls": [
+        "https://developer.adobe.com/firefly-services/docs/photoshop/",
+        "https://developer.adobe.com/firefly-services/docs/photoshop/guides/"
+      ],
+      "version": "v2 GA",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创教学方案，未执行",
+      "prerequisites": [],
+      "misconceptions": [
+        "linked资源失效会破坏模板，不能只保存PSD而忽略依赖。"
+      ],
+      "pitfalls": [
+        "linked资源失效会破坏模板，不能只保存PSD而忽略依赖。"
+      ],
+      "cost": {
+        "status": "partially_verified",
+        "details": "商业服务合同与单价unknown",
+        "exact_price": "unknown"
+      },
+      "license": {
+        "status": "source_reviewed",
+        "details": "proprietary service; complete license unknown"
+      },
+      "image_rights": "使用原创合成图形；真实部署逐资产记录来源、许可、肖像/商标/字体/地域与再分发限制。工具许可不授予素材权利。",
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "v2 GA",
+        "replacement_node_ids": [],
+        "note_zh": "文档状态不等于运行验证；具体账号与版本另验。",
+        "source_ids": [
+          "design-src-photoshop",
+          "design-src-ps-migration"
+        ]
+      },
+      "steps_zh": [
+        "固定输入、权限与版本",
+        "草稿生成后按案例rubric检查",
+        "保留原件、差异与失败记录"
+      ],
+      "best_practice_path": {
+        "status": "editorial_guidance_not_executed",
+        "steps": [
+          "先做小批合成演练",
+          "人为核准验收基线",
+          "扩大范围前核验权利与成本"
+        ],
+        "acceptance_zh": "证据链齐全且未把工具调用说成自主代理。"
+      }
+    },
+    {
+      "id": "design-photoshop-v1",
+      "title": "Photoshop API v1历史工作流",
+      "type": "historical_tool",
+      "category": "creative-design",
+      "description_zh": "保留旧模板和接口迁移知识，不作为新接入首选。",
+      "summary_zh": "保留旧模板和接口迁移知识，不作为新接入首选。",
+      "source_ids": [
+        "design-src-ps-migration",
+        "design-src-ps-eol"
+      ],
+      "source_urls": [
+        "https://developer.adobe.com/firefly-services/docs/photoshop/guides/",
+        "https://developer.adobe.com/firefly-services/docs/photoshop/getting-started/deprecation-announcement/"
+      ],
+      "version": "v1 deprecated; announced EOL 2026-07-31",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创教学方案，未执行",
+      "prerequisites": [],
+      "misconceptions": [
+        "不能把旧教程原样用于v2。"
+      ],
+      "pitfalls": [
+        "不能把旧教程原样用于v2。"
+      ],
+      "cost": {
+        "status": "partially_verified",
+        "details": "历史合同unknown",
+        "exact_price": "unknown"
+      },
+      "license": {
+        "status": "unknown",
+        "details": "unknown"
+      },
+      "image_rights": "使用原创合成图形；真实部署逐资产记录来源、许可、肖像/商标/字体/地域与再分发限制。工具许可不授予素材权利。",
+      "lifecycle": {
+        "status": "deprecated",
+        "as_of": "2026-10-28",
+        "applicable_version": "v1 deprecated; announced EOL 2026-07-31",
+        "replacement_node_ids": [
+          "design-photoshop-v2"
+        ],
+        "note_zh": "核验日已过官方EOL日期；仅历史迁移参考，不测试服务响应。",
+        "source_ids": [
+          "design-src-ps-migration",
+          "design-src-ps-eol"
+        ]
+      },
+      "steps_zh": [
+        "固定输入、权限与版本",
+        "草稿生成后按案例rubric检查",
+        "保留原件、差异与失败记录"
+      ],
+      "best_practice_path": {
+        "status": "editorial_guidance_not_executed",
+        "steps": [
+          "先做小批合成演练",
+          "人为核准验收基线",
+          "扩大范围前核验权利与成本"
+        ],
+        "acceptance_zh": "证据链齐全且未把工具调用说成自主代理。"
+      }
+    },
+    {
+      "id": "design-canva-template",
+      "title": "Canva模板数据填充与导出",
+      "type": "tool_service",
+      "category": "creative-design",
+      "description_zh": "结构化模板自动化；内容规划和审校是agent层职责。",
+      "summary_zh": "结构化模板自动化；内容规划和审校是agent层职责。",
+      "source_ids": [
+        "design-src-canva",
+        "design-src-canva-autofill",
+        "design-src-canva-rights"
+      ],
+      "source_urls": [
+        "https://www.canva.dev/docs/apps/rest-apis/",
+        "https://www.canva.dev/docs/apps/rest-apis/autofill-guide/",
+        "https://www.canva.com/policies/content-license-agreement/"
+      ],
+      "version": "unified SDK / REST rolling docs",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创教学方案，未执行",
+      "prerequisites": [],
+      "misconceptions": [
+        "设计导出成功不代表每种素材都能再分发或用于logo。"
+      ],
+      "pitfalls": [
+        "设计导出成功不代表每种素材都能再分发或用于logo。"
+      ],
+      "cost": {
+        "status": "partially_verified",
+        "details": "账号、模板资格、商业计划与单价unknown",
+        "exact_price": "unknown"
+      },
+      "license": {
+        "status": "source_reviewed",
+        "details": "Canva content license by asset category; API terms unknown"
+      },
+      "image_rights": "使用原创合成图形；真实部署逐资产记录来源、许可、肖像/商标/字体/地域与再分发限制。工具许可不授予素材权利。",
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "unified SDK / REST rolling docs",
+        "replacement_node_ids": [],
+        "note_zh": "文档状态不等于运行验证；具体账号与版本另验。",
+        "source_ids": [
+          "design-src-canva",
+          "design-src-canva-autofill",
+          "design-src-canva-rights"
+        ]
+      },
+      "steps_zh": [
+        "固定输入、权限与版本",
+        "草稿生成后按案例rubric检查",
+        "保留原件、差异与失败记录"
+      ],
+      "best_practice_path": {
+        "status": "editorial_guidance_not_executed",
+        "steps": [
+          "先做小批合成演练",
+          "人为核准验收基线",
+          "扩大范围前核验权利与成本"
+        ],
+        "acceptance_zh": "证据链齐全且未把工具调用说成自主代理。"
+      }
+    },
+    {
+      "id": "design-dtcg",
+      "title": "DTCG设计token交换",
+      "type": "specification",
+      "category": "creative-design",
+      "description_zh": "跨设计工具与代码的语义变量交换；不是模型或agent。",
+      "summary_zh": "跨设计工具与代码的语义变量交换；不是模型或agent。",
+      "source_ids": [
+        "design-src-tokens",
+        "design-src-tokens-draft"
+      ],
+      "source_urls": [
+        "https://www.designtokens.org/TR/2025.10/format/",
+        "https://www.designtokens.org/tr/drafts/format/"
+      ],
+      "version": "2025.10 final",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创教学方案，未执行",
+      "prerequisites": [],
+      "misconceptions": [
+        "旧draft URL会漂移，不可当稳定实现契约。"
+      ],
+      "pitfalls": [
+        "旧draft URL会漂移，不可当稳定实现契约。"
+      ],
+      "cost": {
+        "status": "partially_verified",
+        "details": "公开阅读；工程集成成本unknown",
+        "exact_price": "unknown"
+      },
+      "license": {
+        "status": "source_reviewed",
+        "details": "W3C Community Final Specification Agreement; not W3C Standard"
+      },
+      "image_rights": "使用原创合成图形；真实部署逐资产记录来源、许可、肖像/商标/字体/地域与再分发限制。工具许可不授予素材权利。",
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "2025.10 final",
+        "replacement_node_ids": [],
+        "note_zh": "文档状态不等于运行验证；具体账号与版本另验。",
+        "source_ids": [
+          "design-src-tokens",
+          "design-src-tokens-draft"
+        ]
+      },
+      "steps_zh": [
+        "固定输入、权限与版本",
+        "草稿生成后按案例rubric检查",
+        "保留原件、差异与失败记录"
+      ],
+      "best_practice_path": {
+        "status": "editorial_guidance_not_executed",
+        "steps": [
+          "先做小批合成演练",
+          "人为核准验收基线",
+          "扩大范围前核验权利与成本"
+        ],
+        "acceptance_zh": "证据链齐全且未把工具调用说成自主代理。"
+      }
+    },
+    {
+      "id": "design-wcag",
+      "title": "WCAG 2.2验收标准",
+      "type": "standard",
+      "category": "creative-design",
+      "description_zh": "界面验收约束；模型可以辅助发现问题而不能认证合规。",
+      "summary_zh": "界面验收约束；模型可以辅助发现问题而不能认证合规。",
+      "source_ids": [
+        "design-src-wcag"
+      ],
+      "source_urls": [
+        "https://www.w3.org/TR/WCAG22/"
+      ],
+      "version": "WCAG 2.2 Recommendation 2024-12-12",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创教学方案，未执行",
+      "prerequisites": [],
+      "misconceptions": [
+        "无自动错误不等于完整通过，仍需键盘和辅助技术检查。"
+      ],
+      "pitfalls": [
+        "无自动错误不等于完整通过，仍需键盘和辅助技术检查。"
+      ],
+      "cost": {
+        "status": "partially_verified",
+        "details": "公开阅读；审计人力成本unknown",
+        "exact_price": "unknown"
+      },
+      "license": {
+        "status": "source_reviewed",
+        "details": "W3C document rules; not asset license"
+      },
+      "image_rights": "使用原创合成图形；真实部署逐资产记录来源、许可、肖像/商标/字体/地域与再分发限制。工具许可不授予素材权利。",
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "WCAG 2.2 Recommendation 2024-12-12",
+        "replacement_node_ids": [],
+        "note_zh": "文档状态不等于运行验证；具体账号与版本另验。",
+        "source_ids": [
+          "design-src-wcag"
+        ]
+      },
+      "steps_zh": [
+        "固定输入、权限与版本",
+        "草稿生成后按案例rubric检查",
+        "保留原件、差异与失败记录"
+      ],
+      "best_practice_path": {
+        "status": "editorial_guidance_not_executed",
+        "steps": [
+          "先做小批合成演练",
+          "人为核准验收基线",
+          "扩大范围前核验权利与成本"
+        ],
+        "acceptance_zh": "证据链齐全且未把工具调用说成自主代理。"
+      }
+    },
+    {
+      "id": "design-inkscape-trace",
+      "title": "Inkscape位图描摹",
+      "type": "ordinary_tool",
+      "category": "creative-design",
+      "description_zh": "经典矢量化流程，可被agent安排但本身无自主规划。",
+      "summary_zh": "经典矢量化流程，可被agent安排但本身无自主规划。",
+      "source_ids": [
+        "design-src-inkscape"
+      ],
+      "source_urls": [
+        "https://inkscape-manuals.readthedocs.io/en/latest/tracing-an-image.html"
+      ],
+      "version": "guide 1.3; installed version unknown",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创教学方案，未执行",
+      "prerequisites": [],
+      "misconceptions": [
+        "描摹不是原始曲线恢复，复杂照片不适合直接转logo。"
+      ],
+      "pitfalls": [
+        "描摹不是原始曲线恢复，复杂照片不适合直接转logo。"
+      ],
+      "cost": {
+        "status": "partially_verified",
+        "details": "本轮未安装；发布包费用unknown",
+        "exact_price": "unknown"
+      },
+      "license": {
+        "status": "unknown",
+        "details": "unknown"
+      },
+      "image_rights": "使用原创合成图形；真实部署逐资产记录来源、许可、肖像/商标/字体/地域与再分发限制。工具许可不授予素材权利。",
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "guide 1.3; installed version unknown",
+        "replacement_node_ids": [],
+        "note_zh": "文档状态不等于运行验证；具体账号与版本另验。",
+        "source_ids": [
+          "design-src-inkscape"
+        ]
+      },
+      "steps_zh": [
+        "固定输入、权限与版本",
+        "草稿生成后按案例rubric检查",
+        "保留原件、差异与失败记录"
+      ],
+      "best_practice_path": {
+        "status": "editorial_guidance_not_executed",
+        "steps": [
+          "先做小批合成演练",
+          "人为核准验收基线",
+          "扩大范围前核验权利与成本"
+        ],
+        "acceptance_zh": "证据链齐全且未把工具调用说成自主代理。"
+      }
+    },
+    {
+      "id": "design-slides-api",
+      "title": "Google Slides结构化排版",
+      "type": "tool_interface",
+      "category": "creative-design",
+      "description_zh": "把批准内容写入可编辑页面元素；API不是审美决策模型。",
+      "summary_zh": "把批准内容写入可编辑页面元素；API不是审美决策模型。",
+      "source_ids": [
+        "design-src-slides"
+      ],
+      "source_urls": [
+        "https://developers.google.com/workspace/slides/api/guides/overview"
+      ],
+      "version": "API v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创教学方案，未执行",
+      "prerequisites": [],
+      "misconceptions": [
+        "文本框写入成功不表示无溢出，必须检查渲染结果。"
+      ],
+      "pitfalls": [
+        "文本框写入成功不表示无溢出，必须检查渲染结果。"
+      ],
+      "cost": {
+        "status": "partially_verified",
+        "details": "配额、账号与收费unknown",
+        "exact_price": "unknown"
+      },
+      "license": {
+        "status": "source_reviewed",
+        "details": "proprietary service; asset rights separate"
+      },
+      "image_rights": "使用原创合成图形；真实部署逐资产记录来源、许可、肖像/商标/字体/地域与再分发限制。工具许可不授予素材权利。",
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "API v1",
+        "replacement_node_ids": [],
+        "note_zh": "文档状态不等于运行验证；具体账号与版本另验。",
+        "source_ids": [
+          "design-src-slides"
+        ]
+      },
+      "steps_zh": [
+        "固定输入、权限与版本",
+        "草稿生成后按案例rubric检查",
+        "保留原件、差异与失败记录"
+      ],
+      "best_practice_path": {
+        "status": "editorial_guidance_not_executed",
+        "steps": [
+          "先做小批合成演练",
+          "人为核准验收基线",
+          "扩大范围前核验权利与成本"
+        ],
+        "acceptance_zh": "证据链齐全且未把工具调用说成自主代理。"
+      }
+    },
+    {
+      "id": "design-visual-regression",
+      "title": "Playwright视觉回归",
+      "type": "evaluation_tool",
+      "category": "creative-design",
+      "description_zh": "基线截图对比帮助检测布局变化，不负责定义哪版更好。",
+      "summary_zh": "基线截图对比帮助检测布局变化，不负责定义哪版更好。",
+      "source_ids": [
+        "design-src-playwright",
+        "design-src-pw-license"
+      ],
+      "source_urls": [
+        "https://playwright.dev/docs/test-snapshots",
+        "https://github.com/microsoft/playwright/blob/main/LICENSE"
+      ],
+      "version": "rolling docs; release unknown",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创教学方案，未执行",
+      "prerequisites": [],
+      "misconceptions": [
+        "不得用自动更新基线掩盖缺陷。"
+      ],
+      "pitfalls": [
+        "不得用自动更新基线掩盖缺陷。"
+      ],
+      "cost": {
+        "status": "partially_verified",
+        "details": "Apache-2.0软件；CI/浏览器运行成本unknown",
+        "exact_price": "unknown"
+      },
+      "license": {
+        "status": "source_reviewed",
+        "details": "Apache-2.0"
+      },
+      "image_rights": "使用原创合成图形；真实部署逐资产记录来源、许可、肖像/商标/字体/地域与再分发限制。工具许可不授予素材权利。",
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "rolling docs; release unknown",
+        "replacement_node_ids": [],
+        "note_zh": "文档状态不等于运行验证；具体账号与版本另验。",
+        "source_ids": [
+          "design-src-playwright",
+          "design-src-pw-license"
+        ]
+      },
+      "steps_zh": [
+        "固定输入、权限与版本",
+        "草稿生成后按案例rubric检查",
+        "保留原件、差异与失败记录"
+      ],
+      "best_practice_path": {
+        "status": "editorial_guidance_not_executed",
+        "steps": [
+          "先做小批合成演练",
+          "人为核准验收基线",
+          "扩大范围前核验权利与成本"
+        ],
+        "acceptance_zh": "证据链齐全且未把工具调用说成自主代理。"
+      }
+    },
+    {
+      "id": "design-storybook-a11y",
+      "title": "Storybook组件可访问性检查",
+      "type": "evaluation_tool",
+      "category": "creative-design",
+      "description_zh": "在组件状态中检查可访问性问题，结合手工状态覆盖。",
+      "summary_zh": "在组件状态中检查可访问性问题，结合手工状态覆盖。",
+      "source_ids": [
+        "design-src-storybook",
+        "design-src-sb-license"
+      ],
+      "source_urls": [
+        "https://storybook.js.org/docs/writing-tests/accessibility-testing",
+        "https://github.com/storybookjs/storybook/blob/next/LICENSE"
+      ],
+      "version": "docs 10.6",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创教学方案，未执行",
+      "prerequisites": [],
+      "misconceptions": [
+        "默认状态通过不代表弹窗、错误态、加载态通过。"
+      ],
+      "pitfalls": [
+        "默认状态通过不代表弹窗、错误态、加载态通过。"
+      ],
+      "cost": {
+        "status": "partially_verified",
+        "details": "MIT软件；托管增值服务价格unknown",
+        "exact_price": "unknown"
+      },
+      "license": {
+        "status": "source_reviewed",
+        "details": "MIT"
+      },
+      "image_rights": "使用原创合成图形；真实部署逐资产记录来源、许可、肖像/商标/字体/地域与再分发限制。工具许可不授予素材权利。",
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "docs 10.6",
+        "replacement_node_ids": [],
+        "note_zh": "文档状态不等于运行验证；具体账号与版本另验。",
+        "source_ids": [
+          "design-src-storybook",
+          "design-src-sb-license"
+        ]
+      },
+      "steps_zh": [
+        "固定输入、权限与版本",
+        "草稿生成后按案例rubric检查",
+        "保留原件、差异与失败记录"
+      ],
+      "best_practice_path": {
+        "status": "editorial_guidance_not_executed",
+        "steps": [
+          "先做小批合成演练",
+          "人为核准验收基线",
+          "扩大范围前核验权利与成本"
+        ],
+        "acceptance_zh": "证据链齐全且未把工具调用说成自主代理。"
+      }
+    },
+    {
+      "id": "design-c2pa",
+      "title": "C2PA素材来源链",
+      "type": "specification",
+      "category": "creative-design",
+      "description_zh": "记录可验证来源与编辑声明，辅助资产交付审计。",
+      "summary_zh": "记录可验证来源与编辑声明，辅助资产交付审计。",
+      "source_ids": [
+        "design-src-c2pa",
+        "design-src-c2pa-explainer"
+      ],
+      "source_urls": [
+        "https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html",
+        "https://c2pa.org/specifications/specifications/2.2/explainer/Explainer.html"
+      ],
+      "version": "2.5 October 2026",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创教学方案，未执行",
+      "prerequisites": [],
+      "misconceptions": [
+        "凭证缺失不自动等于伪造；签名有效不等于版权可用。",
+        "来源凭证本身不能证明内容真实、准确或符合事实。"
+      ],
+      "pitfalls": [
+        "凭证缺失不自动等于伪造；签名有效不等于版权可用。",
+        "来源凭证本身不能证明内容真实、准确或符合事实。"
+      ],
+      "cost": {
+        "status": "partially_verified",
+        "details": "公开规范；签名证书/服务成本unknown",
+        "exact_price": "unknown"
+      },
+      "license": {
+        "status": "source_reviewed",
+        "details": "规范条款与实现许可分开; exact implementation license unknown"
+      },
+      "image_rights": "使用原创合成图形；真实部署逐资产记录来源、许可、肖像/商标/字体/地域与再分发限制。工具许可不授予素材权利。",
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "2.5 October 2026",
+        "replacement_node_ids": [],
+        "note_zh": "文档状态不等于运行验证；具体账号与版本另验。",
+        "source_ids": [
+          "design-src-c2pa"
+        ]
+      },
+      "steps_zh": [
+        "固定输入、权限与版本",
+        "草稿生成后按案例rubric检查",
+        "保留原件、差异与失败记录"
+      ],
+      "best_practice_path": {
+        "status": "editorial_guidance_not_executed",
+        "steps": [
+          "先做小批合成演练",
+          "人为核准验收基线",
+          "扩大范围前核验权利与成本"
+        ],
+        "acceptance_zh": "证据链齐全且未把工具调用说成自主代理。"
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "design-ui-flow",
+      "title": "预约界面从需求到可验收原型",
+      "summary": "预约界面从需求到可验收原型：合成教学流程，不是已部署产品效果案例。",
+      "roles": [
+        "UI/UX设计师"
+      ],
+      "industries": [
+        "跨行业设计"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "execution_mode": "agent_orchestrated_proposal",
+      "input": "虚构预约站：3步（日期/人数/确认）；时段09:00与10:00，10:00已满；人数1–4；移动宽375、桌面1440。",
+      "prompt": "根据合成输入列状态机和屏幕清单。不要编造用户访谈。为满额、网络失败和返回修改设计明确反馈；先输出草图说明与验收表，不创建云文件。",
+      "steps": [
+        {
+          "title": "步骤1",
+          "body": "把事实、假设、待确认分栏；画出状态及转移，含重复提交。",
+          "check": "全部3步和失败态有入口出口"
+        },
+        {
+          "title": "步骤2",
+          "body": "先以文本框图设计两种布局，说明任务优先级与取舍。",
+          "check": "不允许选择已满时段；人数上限明确"
+        },
+        {
+          "title": "步骤3",
+          "body": "用获批设计组件生成可编辑原型草案，绑定交互而非只做静态截图。",
+          "check": "返回后数据保持；重复提交不生成重复预约"
+        },
+        {
+          "title": "步骤4",
+          "body": "逐条走查正常、已满、断网、返回修改；未完成的转移标记缺失。",
+          "check": "键盘流程可完成且焦点可见"
+        }
+      ],
+      "output": "状态表、屏幕清单、低保真布局、交互验收记录。",
+      "rubric": [
+        "全部3步和失败态有入口出口",
+        "不允许选择已满时段；人数上限明确",
+        "返回后数据保持；重复提交不生成重复预约",
+        "键盘流程可完成且焦点可见"
+      ],
+      "failure_recovery": "发现状态遗漏先修状态机再改视觉；网络结果未知先查状态，不重复提交。",
+      "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。发现状态遗漏先修状态机再改视觉；网络结果未知先查状态，不重复提交。",
+      "permissions": [
+        "默认离线文本方案",
+        "任何账户接入、上传、写入、付费、分享另行批准"
+      ],
+      "source_ids": [
+        "design-src-figma",
+        "design-src-wcag"
+      ],
+      "sources": [
+        {
+          "title": "Figma MCP introduction",
+          "url": "https://developers.figma.com/docs/figma-mcp-server/",
+          "evidence": "primary"
+        },
+        {
+          "title": "WCAG 2.2",
+          "url": "https://www.w3.org/TR/WCAG22/",
+          "evidence": "primary"
+        }
+      ],
+      "modelatlas_node_ids": [
+        "design-figma-mcp",
+        "design-wcag"
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "rolling remote MCP; write beta; WCAG 2.2 Recommendation 2024-12-12",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+      "practice_status": "原创教学模板，非行业最佳或独立实测",
+      "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+      "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+    },
+    {
+      "id": "design-design-code",
+      "title": "组件感知的设计到代码交接",
+      "summary": "组件感知的设计到代码交接：合成教学流程，不是已部署产品效果案例。",
+      "roles": [
+        "设计工程师"
+      ],
+      "industries": [
+        "跨行业设计"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "execution_mode": "agent_orchestrated_proposal",
+      "input": "虚构Card：标题/正文/主按钮；已有PrimaryButton组件；间距8/16/24；分别给320与1280宽结构描述。",
+      "prompt": "先列现有组件映射再规划实现。未知属性写unknown，禁造新组件替代现有按钮；输出变更计划、差异和测试矩阵。",
+      "steps": [
+        {
+          "title": "步骤1",
+          "body": "读取批准范围内单一frame结构和变量，避免整文件无边界抓取。",
+          "check": "已有按钮复用且属性映射可追踪"
+        },
+        {
+          "title": "步骤2",
+          "body": "建立设计节点→代码组件→属性映射表；找不到则暂停映射。",
+          "check": "两宽度不横向溢出"
+        },
+        {
+          "title": "步骤3",
+          "body": "生成局部实现草稿，保持语义标题与按钮，明确断点规则。",
+          "check": "长标题不盖住操作"
+        },
+        {
+          "title": "步骤4",
+          "body": "按两宽度及长标题检查；截图差异与人工判定分开。",
+          "check": "没有依据截图发明不可见功能"
+        }
+      ],
+      "output": "组件映射、局部代码提案、布局差异清单。",
+      "rubric": [
+        "已有按钮复用且属性映射可追踪",
+        "两宽度不横向溢出",
+        "长标题不盖住操作",
+        "没有依据截图发明不可见功能"
+      ],
+      "failure_recovery": "上下文不足先请求较小frame或组件说明；不得将生成代码直接部署。",
+      "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。上下文不足先请求较小frame或组件说明；不得将生成代码直接部署。",
+      "permissions": [
+        "默认离线文本方案",
+        "任何账户接入、上传、写入、付费、分享另行批准"
+      ],
+      "source_ids": [
+        "design-src-figma",
+        "design-src-playwright"
+      ],
+      "sources": [
+        {
+          "title": "Figma MCP introduction",
+          "url": "https://developers.figma.com/docs/figma-mcp-server/",
+          "evidence": "primary"
+        },
+        {
+          "title": "Playwright visual comparisons",
+          "url": "https://playwright.dev/docs/test-snapshots",
+          "evidence": "primary"
+        }
+      ],
+      "modelatlas_node_ids": [
+        "design-figma-mcp",
+        "design-visual-regression"
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "rolling remote MCP; write beta; rolling docs; release unknown",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+      "practice_status": "原创教学模板，非行业最佳或独立实测",
+      "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+      "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+    },
+    {
+      "id": "design-tokens-migration",
+      "title": "品牌token规范化与双主题",
+      "summary": "品牌token规范化与双主题：合成教学流程，不是已部署产品效果案例。",
+      "roles": [
+        "设计系统维护者"
+      ],
+      "industries": [
+        "跨行业设计"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "execution_mode": "agent_orchestrated_proposal",
+      "input": "合成token：brand=#125C45，text=#12221A，space8=8px；暗色主题text=#F5FFF8；错误别名a→b→a。",
+      "prompt": "以DTCG 2025.10为目标检查输入，给出语义命名、别名错误、迁移表和回滚方案。不要采用preview字段。",
+      "steps": [
+        {
+          "title": "步骤1",
+          "body": "区分原始值、语义角色、组件token，保留旧名映射。",
+          "check": "a/b环必须报错"
+        },
+        {
+          "title": "步骤2",
+          "body": "检测类型缺失、别名环及无效引用；先拒绝循环再转换。",
+          "check": "旧token消费者被列出"
+        },
+        {
+          "title": "步骤3",
+          "body": "提议明暗主题映射及平台输出，不假设所有工具无损导入。",
+          "check": "三组件两主题有检查记录"
+        },
+        {
+          "title": "步骤4",
+          "body": "用按钮/卡片/错误提示三个组件比对迁移前后并审批破坏变更。",
+          "check": "来源版本固定为2025.10而非draft"
+        }
+      ],
+      "output": "tokens候选、旧新映射、引用图、兼容性报告。",
+      "rubric": [
+        "a/b环必须报错",
+        "旧token消费者被列出",
+        "三组件两主题有检查记录",
+        "来源版本固定为2025.10而非draft"
+      ],
+      "failure_recovery": "回滚至上次token快照；缺失字体/色彩空间转换规则不猜测。",
+      "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。回滚至上次token快照；缺失字体/色彩空间转换规则不猜测。",
+      "permissions": [
+        "默认离线文本方案",
+        "任何账户接入、上传、写入、付费、分享另行批准"
+      ],
+      "source_ids": [
+        "design-src-tokens",
+        "design-src-tokens-draft",
+        "design-src-wcag"
+      ],
+      "sources": [
+        {
+          "title": "DTCG Format 2025.10",
+          "url": "https://www.designtokens.org/TR/2025.10/format/",
+          "evidence": "primary"
+        },
+        {
+          "title": "DTCG preview warning",
+          "url": "https://www.designtokens.org/tr/drafts/format/",
+          "evidence": "primary"
+        },
+        {
+          "title": "WCAG 2.2",
+          "url": "https://www.w3.org/TR/WCAG22/",
+          "evidence": "primary"
+        }
+      ],
+      "modelatlas_node_ids": [
+        "design-dtcg",
+        "design-wcag"
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "2025.10 final; WCAG 2.2 Recommendation 2024-12-12",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+      "practice_status": "原创教学模板，非行业最佳或独立实测",
+      "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+      "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+    },
+    {
+      "id": "design-a11y-audit",
+      "title": "表单可访问性审校",
+      "summary": "表单可访问性审校：合成教学流程，不是已部署产品效果案例。",
+      "roles": [
+        "可访问性设计师"
+      ],
+      "industries": [
+        "跨行业设计"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "execution_mode": "agent_orchestrated_proposal",
+      "input": "合成表单：只有占位符的邮箱框；红色边框提示错误；弹窗打开后焦点留在背景；按钮仅图标无名称。",
+      "prompt": "建立问题→影响→候选修复→人工检查表。不得只凭截图认证WCAG合规；区分自动可检和人工必检。",
+      "steps": [
+        {
+          "title": "步骤1",
+          "body": "给每项问题建立可重复前置条件和键盘操作。",
+          "check": "四项合成缺陷均定位"
+        },
+        {
+          "title": "步骤2",
+          "body": "增加标签、文本错误、控件名称和弹窗焦点策略方案。",
+          "check": "错误不只靠颜色"
+        },
+        {
+          "title": "步骤3",
+          "body": "设计默认/焦点/错误/禁用状态组件测试；自动检查结果原样保留。",
+          "check": "弹窗键盘路径和关闭后焦点有说明"
+        },
+        {
+          "title": "步骤4",
+          "body": "人工用Tab/Shift+Tab/Esc与辅助技术核验，并由责任人确认范围。",
+          "check": "不输出全站认证结论"
+        }
+      ],
+      "output": "修复建议与证据矩阵，未覆盖标准明确标记。",
+      "rubric": [
+        "四项合成缺陷均定位",
+        "错误不只靠颜色",
+        "弹窗键盘路径和关闭后焦点有说明",
+        "不输出全站认证结论"
+      ],
+      "failure_recovery": "无法运行辅助技术则结果为not_tested；不能将自动扫描空列表升级为通过。",
+      "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。无法运行辅助技术则结果为not_tested；不能将自动扫描空列表升级为通过。",
+      "permissions": [
+        "默认离线文本方案",
+        "任何账户接入、上传、写入、付费、分享另行批准"
+      ],
+      "source_ids": [
+        "design-src-wcag",
+        "design-src-storybook"
+      ],
+      "sources": [
+        {
+          "title": "WCAG 2.2",
+          "url": "https://www.w3.org/TR/WCAG22/",
+          "evidence": "primary"
+        },
+        {
+          "title": "Storybook accessibility tests",
+          "url": "https://storybook.js.org/docs/writing-tests/accessibility-testing",
+          "evidence": "primary"
+        }
+      ],
+      "modelatlas_node_ids": [
+        "design-wcag",
+        "design-storybook-a11y"
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "WCAG 2.2 Recommendation 2024-12-12; docs 10.6",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+      "practice_status": "原创教学模板，非行业最佳或独立实测",
+      "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+      "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+    },
+    {
+      "id": "design-brand-kit",
+      "title": "虚构品牌视觉方向与权利清单",
+      "summary": "虚构品牌视觉方向与权利清单：合成教学流程，不是已部署产品效果案例。",
+      "roles": [
+        "品牌设计师"
+      ],
+      "industries": [
+        "跨行业设计"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "execution_mode": "agent_orchestrated_proposal",
+      "input": "虚构品牌“苔光”：城市植物交换活动；温和、开放；只用几何叶片；不模仿现有商标；海报A4与1080方图。",
+      "prompt": "提出三种视觉方向，每种说明色彩/字重/栅格/可读性。以原创几何形为基础；所有字体和图像来源待核验。不要宣称商标可注册。",
+      "steps": [
+        {
+          "title": "步骤1",
+          "body": "提炼受众任务与不可变品牌约束；不冒充真实调研。",
+          "check": "三方向差异是结构而非只换色"
+        },
+        {
+          "title": "步骤2",
+          "body": "给三种方向的文本moodboard和几何logo构成草图。",
+          "check": "小尺寸标识仍辨认"
+        },
+        {
+          "title": "步骤3",
+          "body": "选一方向生成版式规则与素材登记表，商标清查另立任务。",
+          "check": "素材无来源时不得标可商用"
+        },
+        {
+          "title": "步骤4",
+          "body": "按灰度、小尺寸、单色与长标题四场景审阅。",
+          "check": "没有复制现有品牌图形"
+        }
+      ],
+      "output": "品牌方向、规范草案、资产许可清单、审阅差异。",
+      "rubric": [
+        "三方向差异是结构而非只换色",
+        "小尺寸标识仍辨认",
+        "素材无来源时不得标可商用",
+        "没有复制现有品牌图形"
+      ],
+      "failure_recovery": "生成效果不稳定回到手工几何构图；品牌批准前不投放、不注册商标。",
+      "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。生成效果不稳定回到手工几何构图；品牌批准前不投放、不注册商标。",
+      "permissions": [
+        "默认离线文本方案",
+        "任何账户接入、上传、写入、付费、分享另行批准"
+      ],
+      "source_ids": [
+        "design-src-firefly",
+        "design-src-adobe-rights",
+        "design-src-canva-rights"
+      ],
+      "sources": [
+        {
+          "title": "Firefly API",
+          "url": "https://developer.adobe.com/firefly-services/docs/firefly-api/",
+          "evidence": "primary"
+        },
+        {
+          "title": "Canva Content License Agreement",
+          "url": "https://www.canva.com/policies/content-license-agreement/",
+          "evidence": "primary"
+        },
+        {
+          "title": "Adobe Generative AI User Guidelines",
+          "url": "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html",
+          "evidence": "primary"
+        }
+      ],
+      "modelatlas_node_ids": [
+        "design-firefly-image",
+        "design-canva-template"
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "Image5 / rolling API; unified SDK / REST rolling docs",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+      "practice_status": "原创教学模板，非行业最佳或独立实测",
+      "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+      "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+    },
+    {
+      "id": "design-poster-localize",
+      "title": "多语种海报变体与模板填充",
+      "summary": "多语种海报变体与模板填充：合成教学流程，不是已部署产品效果案例。",
+      "roles": [
+        "平面设计师"
+      ],
+      "industries": [
+        "跨行业设计"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "execution_mode": "agent_orchestrated_proposal",
+      "input": "虚构活动：苔光交换日，12月5日14:00，免费；英文标题Mosslight Exchange Day；1080×1080与1080×1920；保留顶部安全区。",
+      "prompt": "创建字段字典与中英两尺寸变体计划，日期逐字保留。先输出4份文本排版草稿；不上传、不发布。",
+      "steps": [
+        {
+          "title": "步骤1",
+          "body": "锁定事实字段、允许改写字段及字体覆盖范围。",
+          "check": "日期时间4份一致"
+        },
+        {
+          "title": "步骤2",
+          "body": "把字段映射模板占位符，缺失字段停止该变体而不是留旧值。",
+          "check": "标题和正文可编辑"
+        },
+        {
+          "title": "步骤3",
+          "body": "对4个变体逐一检查文字溢出、裁切、层级和安全区。",
+          "check": "长英文不遮挡信息"
+        },
+        {
+          "title": "步骤4",
+          "body": "生成导出命名规则与人工批准表，批准后才考虑批量导出。",
+          "check": "每张都有素材许可登记"
+        }
+      ],
+      "output": "字段JSON、4变体清单、溢出报告、批准表。",
+      "rubric": [
+        "日期时间4份一致",
+        "标题和正文可编辑",
+        "长英文不遮挡信息",
+        "每张都有素材许可登记"
+      ],
+      "failure_recovery": "模板权限不足返回人工填充指南；任务超时先查job结果再新建，避免重复计费。",
+      "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。模板权限不足返回人工填充指南；任务超时先查job结果再新建，避免重复计费。",
+      "permissions": [
+        "默认离线文本方案",
+        "任何账户接入、上传、写入、付费、分享另行批准"
+      ],
+      "source_ids": [
+        "design-src-canva",
+        "design-src-canva-autofill",
+        "design-src-canva-rights"
+      ],
+      "sources": [
+        {
+          "title": "Canva REST APIs",
+          "url": "https://www.canva.dev/docs/apps/rest-apis/",
+          "evidence": "primary"
+        },
+        {
+          "title": "Canva autofill",
+          "url": "https://www.canva.dev/docs/apps/rest-apis/autofill-guide/",
+          "evidence": "primary"
+        },
+        {
+          "title": "Canva Content License Agreement",
+          "url": "https://www.canva.com/policies/content-license-agreement/",
+          "evidence": "primary"
+        }
+      ],
+      "modelatlas_node_ids": [
+        "design-canva-template"
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "unified SDK / REST rolling docs",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+      "practice_status": "原创教学模板，非行业最佳或独立实测",
+      "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+      "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+    },
+    {
+      "id": "design-vector-trace",
+      "title": "经典剪影矢量化与节点清理",
+      "summary": "经典剪影矢量化与节点清理：合成教学流程，不是已部署产品效果案例。",
+      "roles": [
+        "矢量设计师"
+      ],
+      "industries": [
+        "跨行业设计"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "execution_mode": "ordinary_tool_workflow",
+      "input": "原创合成黑色叶片剪影：白底、无纹理、两处尖角；目标24px图标及A4印刷。",
+      "prompt": "描述单色描摹参数试验和节点清理流程，保留尖角；不要把照片自动描摹称为高质量logo恢复。",
+      "steps": [
+        {
+          "title": "步骤1",
+          "body": "先确认源图原创；复制原件作为只读对照。",
+          "check": "叶片内外轮廓闭合符合设计意图"
+        },
+        {
+          "title": "步骤2",
+          "body": "用单色阈值候选比较轮廓，保留原始与生成路径分层。",
+          "check": "尖角未变圆"
+        },
+        {
+          "title": "步骤3",
+          "body": "去除噪点和无意义节点，检查洞与尖角后保存可编辑SVG。",
+          "check": "没有外链位图伪装成纯矢量"
+        },
+        {
+          "title": "步骤4",
+          "body": "在24px及大尺寸比较，复杂照片改用人工重绘或保留栅格。",
+          "check": "24px不糊成不可识别色块"
+        }
+      ],
+      "output": "原图引用、SVG路径方案、阈值对照与尺寸验收。",
+      "rubric": [
+        "叶片内外轮廓闭合符合设计意图",
+        "尖角未变圆",
+        "没有外链位图伪装成纯矢量",
+        "24px不糊成不可识别色块"
+      ],
+      "failure_recovery": "过度简化回到上一版本；不用提高节点数掩盖输入不适合。",
+      "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。过度简化回到上一版本；不用提高节点数掩盖输入不适合。",
+      "permissions": [
+        "默认离线文本方案",
+        "任何账户接入、上传、写入、付费、分享另行批准"
+      ],
+      "source_ids": [
+        "design-src-inkscape"
+      ],
+      "sources": [
+        {
+          "title": "Inkscape Beginners Guide: tracing",
+          "url": "https://inkscape-manuals.readthedocs.io/en/latest/tracing-an-image.html",
+          "evidence": "primary"
+        }
+      ],
+      "modelatlas_node_ids": [
+        "design-inkscape-trace"
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "guide 1.3; installed version unknown",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+      "practice_status": "原创教学模板，非行业最佳或独立实测",
+      "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+      "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+    },
+    {
+      "id": "design-product-composite",
+      "title": "产品合成背景与保真验收",
+      "summary": "产品合成背景与保真验收：合成教学流程，不是已部署产品效果案例。",
+      "roles": [
+        "图像编辑师"
+      ],
+      "industries": [
+        "跨行业设计"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "execution_mode": "agent_orchestrated_proposal",
+      "input": "虚构无商标白色圆柱杯，正面一条蓝线；合成背景“浅灰桌面与柔和侧光”；主体高度占画面60%。",
+      "prompt": "只规划背景替换和阴影，杯体轮廓、蓝线位置和比例不得改变；输出保护区与拒收规则，不生成或调用API。",
+      "steps": [
+        {
+          "title": "步骤1",
+          "body": "把产品轮廓与品牌细节列为锁定区域，背景列为可编辑区域。",
+          "check": "杯体与蓝线不走样"
+        },
+        {
+          "title": "步骤2",
+          "body": "先给单张构图计划，再规划有限数量候选与预算上限。",
+          "check": "主体未被裁断"
+        },
+        {
+          "title": "步骤3",
+          "body": "逐候选检查边缘光晕、接触阴影、蓝线漂移和比例变形。",
+          "check": "接触阴影方向一致"
+        },
+        {
+          "title": "步骤4",
+          "body": "将可接受候选与原件并排审阅，标明合成非实拍。",
+          "check": "合成标注与输入来源齐全"
+        }
+      ],
+      "output": "编辑计划、候选评审表、拒收原因、源资产记录。",
+      "rubric": [
+        "杯体与蓝线不走样",
+        "主体未被裁断",
+        "接触阴影方向一致",
+        "合成标注与输入来源齐全"
+      ],
+      "failure_recovery": "模型改变主体则改为锁定前景的确定性合成；达预算停止，不无限重试。",
+      "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。模型改变主体则改为锁定前景的确定性合成；达预算停止，不无限重试。",
+      "permissions": [
+        "默认离线文本方案",
+        "任何账户接入、上传、写入、付费、分享另行批准"
+      ],
+      "source_ids": [
+        "design-src-firefly",
+        "design-src-photoshop",
+        "design-src-adobe-rights"
+      ],
+      "sources": [
+        {
+          "title": "Firefly API",
+          "url": "https://developer.adobe.com/firefly-services/docs/firefly-api/",
+          "evidence": "primary"
+        },
+        {
+          "title": "Photoshop API",
+          "url": "https://developer.adobe.com/firefly-services/docs/photoshop/",
+          "evidence": "primary"
+        },
+        {
+          "title": "Adobe Generative AI User Guidelines",
+          "url": "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html",
+          "evidence": "primary"
+        }
+      ],
+      "modelatlas_node_ids": [
+        "design-firefly-image",
+        "design-photoshop-v2"
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "Image5 / rolling API; v2 GA",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+      "practice_status": "原创教学模板，非行业最佳或独立实测",
+      "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+      "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+    },
+    {
+      "id": "design-image-repair",
+      "title": "局部图像修补与非目标区保护",
+      "summary": "局部图像修补与非目标区保护：合成教学流程，不是已部署产品效果案例。",
+      "roles": [
+        "修图师"
+      ],
+      "industries": [
+        "跨行业设计"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "execution_mode": "agent_orchestrated_proposal",
+      "input": "原创合成桌面图：纸张旁一处污点；纸上合成文字“DEMO 12”；只清除污点，不动文字与几何边缘。",
+      "prompt": "给出局部蒙版与非目标区保护检查。只修改指定污点，若文字变化即拒收；输出修改日志。",
+      "steps": [
+        {
+          "title": "步骤1",
+          "body": "确定污点边界，另列文字保护区；记录原件校验值。",
+          "check": "DEMO 12逐字保持"
+        },
+        {
+          "title": "步骤2",
+          "body": "规划小蒙版与低影响编辑，先做一张而不是整图重生成。",
+          "check": "非目标区域无未经批准变化"
+        },
+        {
+          "title": "步骤3",
+          "body": "对比非目标区与文字，标出所有额外变化并人工复核。",
+          "check": "修补不出现重复纹理"
+        },
+        {
+          "title": "步骤4",
+          "body": "保留分层结果、原图和修改日志；仅交付核准版本。",
+          "check": "原件与参数保留"
+        }
+      ],
+      "output": "蒙版说明、编辑前后差异表、可回滚分层交付计划。",
+      "rubric": [
+        "DEMO 12逐字保持",
+        "非目标区域无未经批准变化",
+        "修补不出现重复纹理",
+        "原件与参数保留"
+      ],
+      "failure_recovery": "文字或边缘受损立即回退；采用手工局部修补方案，不能用整体美观抵消错误。",
+      "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。文字或边缘受损立即回退；采用手工局部修补方案，不能用整体美观抵消错误。",
+      "permissions": [
+        "默认离线文本方案",
+        "任何账户接入、上传、写入、付费、分享另行批准"
+      ],
+      "source_ids": [
+        "design-src-firefly",
+        "design-src-photoshop"
+      ],
+      "sources": [
+        {
+          "title": "Firefly API",
+          "url": "https://developer.adobe.com/firefly-services/docs/firefly-api/",
+          "evidence": "primary"
+        },
+        {
+          "title": "Photoshop API",
+          "url": "https://developer.adobe.com/firefly-services/docs/photoshop/",
+          "evidence": "primary"
+        }
+      ],
+      "modelatlas_node_ids": [
+        "design-firefly-image",
+        "design-photoshop-v2"
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "Image5 / rolling API; v2 GA",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+      "practice_status": "原创教学模板，非行业最佳或独立实测",
+      "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+      "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+    },
+    {
+      "id": "design-slides-story",
+      "title": "从事实表到可编辑演示",
+      "summary": "从事实表到可编辑演示：合成教学流程，不是已部署产品效果案例。",
+      "roles": [
+        "演示设计师"
+      ],
+      "industries": [
+        "跨行业设计"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "execution_mode": "agent_orchestrated_proposal",
+      "input": "虚构试验：A组10人7完成，B组10人8完成；仅演示，无显著性结论；3页：目的/结果/下一步；16:9。",
+      "prompt": "制作3页内容与布局JSON草案，按7/10及8/10正确呈现；不得宣称B优于A已证实。每页留来源与讲者备注。",
+      "steps": [
+        {
+          "title": "步骤1",
+          "body": "先列事实与不可推断项，再形成一页一主张故事线。",
+          "check": "数值7与8及分母10正确"
+        },
+        {
+          "title": "步骤2",
+          "body": "按固定模板映射标题、正文、图表与备注，不烘焙成整页图片。",
+          "check": "不作未经验证显著性结论"
+        },
+        {
+          "title": "步骤3",
+          "body": "逐页检查图表数值、阅读顺序、对齐与溢出。",
+          "check": "文字可编辑且无溢出"
+        },
+        {
+          "title": "步骤4",
+          "body": "导出前检查页面图像和可编辑元素；发布/分享需审批。",
+          "check": "无授权素材不进入演示"
+        }
+      ],
+      "output": "3页结构草稿、数据对照、备注、逐页QA表。",
+      "rubric": [
+        "数值7与8及分母10正确",
+        "不作未经验证显著性结论",
+        "文字可编辑且无溢出",
+        "无授权素材不进入演示"
+      ],
+      "failure_recovery": "API对象ID冲突先读取现有页面；长文改写需保持事实，失败退回内容提纲。",
+      "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。API对象ID冲突先读取现有页面；长文改写需保持事实，失败退回内容提纲。",
+      "permissions": [
+        "默认离线文本方案",
+        "任何账户接入、上传、写入、付费、分享另行批准"
+      ],
+      "source_ids": [
+        "design-src-slides",
+        "design-src-wcag"
+      ],
+      "sources": [
+        {
+          "title": "WCAG 2.2",
+          "url": "https://www.w3.org/TR/WCAG22/",
+          "evidence": "primary"
+        },
+        {
+          "title": "Google Slides API",
+          "url": "https://developers.google.com/workspace/slides/api/guides/overview",
+          "evidence": "primary"
+        }
+      ],
+      "modelatlas_node_ids": [
+        "design-slides-api",
+        "design-wcag"
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "WCAG 2.2 Recommendation 2024-12-12; API v1",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+      "practice_status": "原创教学模板，非行业最佳或独立实测",
+      "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+      "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+    },
+    {
+      "id": "design-visual-qa",
+      "title": "响应式视觉回归与差异分流",
+      "summary": "响应式视觉回归与差异分流：合成教学流程，不是已部署产品效果案例。",
+      "roles": [
+        "设计QA"
+      ],
+      "industries": [
+        "跨行业设计"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "execution_mode": "agent_orchestrated_proposal",
+      "input": "合成网页组件：卡片3列→1列；宽320/768/1440；固定日期与字体；人为引入按钮溢出及2px间距变化。",
+      "prompt": "提出可重复截图基线方案，把真实缺陷与环境噪声分开。基线更新必须人工批准；不调用浏览器。",
+      "steps": [
+        {
+          "title": "步骤1",
+          "body": "固定环境、浏览器、字体、动画和数据；建立基线批准记录。",
+          "check": "溢出必被列为缺陷"
+        },
+        {
+          "title": "步骤2",
+          "body": "按三宽度截取同状态比较，并用结构断言辅助判断。",
+          "check": "三断点全覆盖"
+        },
+        {
+          "title": "步骤3",
+          "body": "将溢出列为阻塞，间距差异列为待设计判断，不自动忽略。",
+          "check": "环境不一致不能直接比较通过率"
+        },
+        {
+          "title": "步骤4",
+          "body": "仅修复或解释后批准基线；输出失败截图引用与复现步骤。",
+          "check": "没有自动接受所有新截图"
+        }
+      ],
+      "output": "环境锁定表、差异分类、复现步骤、基线审批。",
+      "rubric": [
+        "溢出必被列为缺陷",
+        "三断点全覆盖",
+        "环境不一致不能直接比较通过率",
+        "没有自动接受所有新截图"
+      ],
+      "failure_recovery": "字体加载失败先修环境再比；保留旧基线，禁止用大容差遮盖布局缺陷。",
+      "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。字体加载失败先修环境再比；保留旧基线，禁止用大容差遮盖布局缺陷。",
+      "permissions": [
+        "默认离线文本方案",
+        "任何账户接入、上传、写入、付费、分享另行批准"
+      ],
+      "source_ids": [
+        "design-src-playwright"
+      ],
+      "sources": [
+        {
+          "title": "Playwright visual comparisons",
+          "url": "https://playwright.dev/docs/test-snapshots",
+          "evidence": "primary"
+        }
+      ],
+      "modelatlas_node_ids": [
+        "design-visual-regression"
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "rolling docs; release unknown",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+      "practice_status": "原创教学模板，非行业最佳或独立实测",
+      "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+      "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+    },
+    {
+      "id": "design-asset-provenance",
+      "title": "资产权利与内容凭证交付",
+      "summary": "资产权利与内容凭证交付：合成教学流程，不是已部署产品效果案例。",
+      "roles": [
+        "设计运营"
+      ],
+      "industries": [
+        "跨行业设计"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "execution_mode": "agent_orchestrated_proposal",
+      "input": "合成资产A原创几何图、B来源unknown、C带签名但无商业许可、D已获单项目许可；交付包需要公开再分发。",
+      "prompt": "分别给可交付/阻塞/待核验结论；来源签名和版权授权独立判断。不把缺凭证认定为伪造。",
+      "steps": [
+        {
+          "title": "步骤1",
+          "body": "建立来源、创作者、工具、编辑、许可范围和批准人的登记字段。",
+          "check": "B不误标可商用"
+        },
+        {
+          "title": "步骤2",
+          "body": "核对凭证有效性与声明范围，单独核对商用/再分发权利。",
+          "check": "C签名有效不等于有授权"
+        },
+        {
+          "title": "步骤3",
+          "body": "把B/C/D放入待核验或限制队列；不因看起来可信就放行。",
+          "check": "D单项目许可不自动再分发"
+        },
+        {
+          "title": "步骤4",
+          "body": "导出原创资产及清单草案，元数据隐私审查后才考虑公开。",
+          "check": "声明unknown与invalid明确区分"
+        }
+      ],
+      "output": "资产台账、凭证检查结果、许可阻塞表、交付清单。",
+      "rubric": [
+        "B不误标可商用",
+        "C签名有效不等于有授权",
+        "D单项目许可不自动再分发",
+        "声明unknown与invalid明确区分",
+        "有效凭证不被解释为内容真实准确的证明"
+      ],
+      "failure_recovery": "无法验证凭证保留原件和unknown；改用原创替代，不能去掉凭证掩盖来源。",
+      "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。无法验证凭证保留原件和unknown；改用原创替代，不能去掉凭证掩盖来源。",
+      "permissions": [
+        "默认离线文本方案",
+        "任何账户接入、上传、写入、付费、分享另行批准"
+      ],
+      "source_ids": [
+        "design-src-c2pa",
+        "design-src-canva-rights",
+        "design-src-adobe-rights",
+        "design-src-c2pa-explainer"
+      ],
+      "sources": [
+        {
+          "title": "Canva Content License Agreement",
+          "url": "https://www.canva.com/policies/content-license-agreement/",
+          "evidence": "primary"
+        },
+        {
+          "title": "C2PA specification 2.5",
+          "url": "https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html",
+          "evidence": "primary"
+        },
+        {
+          "title": "Adobe Generative AI User Guidelines",
+          "url": "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html",
+          "evidence": "primary"
+        },
+        {
+          "title": "C2PA explainer: provenance limits",
+          "url": "https://c2pa.org/specifications/specifications/2.2/explainer/Explainer.html",
+          "evidence": "primary"
+        }
+      ],
+      "modelatlas_node_ids": [
+        "design-c2pa",
+        "design-canva-template"
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "unified SDK / REST rolling docs; 2.5 October 2026",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。",
+      "practice_status": "原创教学模板，非行业最佳或独立实测",
+      "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+      "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+    },
+    {
+      "id": "design-ps-legacy-migrate",
+      "title": "历史PSD批处理到v2迁移练习",
+      "summary": "历史PSD批处理到v2迁移练习：合成教学流程，不是已部署产品效果案例。",
+      "roles": [
+        "设计自动化工程师"
+      ],
+      "industries": [
+        "跨行业设计"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "execution_mode": "agent_orchestrated_proposal",
+      "input": "合成旧任务：v1替换一张海报图片与标题；外链资源可能过期；目标只生成迁移映射不发送请求。",
+      "prompt": "保留v1历史接口说明并标deprecated，列v2迁移所需字段、未核验点和回滚条件。官方公告EOL为2026-07-31；不要猜测端点兼容或声称已测试服务响应。",
+      "steps": [
+        {
+          "title": "步骤1",
+          "body": "冻结旧任务定义与示例输出，标出旧endpoint来源。",
+          "check": "明确v1 deprecated"
+        },
+        {
+          "title": "步骤2",
+          "body": "根据迁移文档逐操作映射；未确认操作写unknown并停止。",
+          "check": "正确记载公告EOL 2026-07-31"
+        },
+        {
+          "title": "步骤3",
+          "body": "规划小样本比较：字体、图层位置、外链访问和输出格式。",
+          "check": "外链资源权限及有效期有检查"
+        },
+        {
+          "title": "步骤4",
+          "body": "通过验收后才申请切换；失败保持旧档案但不建议扩大旧集成。",
+          "check": "新旧输出差异有批准入口"
+        }
+      ],
+      "output": "旧新映射、依赖台账、回滚与验收计划。",
+      "rubric": [
+        "明确v1 deprecated",
+        "正确记载公告EOL 2026-07-31",
+        "外链资源权限及有效期有检查",
+        "新旧输出差异有批准入口"
+      ],
+      "failure_recovery": "无法映射时保留人工操作方案；禁直接对生产PSD重试未知写入。",
+      "risks": "仅使用本条合成输入；真实素材、云上传、付费生成、外部写入/发布均先审批。无法映射时保留人工操作方案；禁直接对生产PSD重试未知写入。",
+      "permissions": [
+        "默认离线文本方案",
+        "任何账户接入、上传、写入、付费、分享另行批准"
+      ],
+      "source_ids": [
+        "design-src-ps-migration",
+        "design-src-photoshop",
+        "design-src-ps-eol"
+      ],
+      "sources": [
+        {
+          "title": "Photoshop API",
+          "url": "https://developer.adobe.com/firefly-services/docs/photoshop/",
+          "evidence": "primary"
+        },
+        {
+          "title": "Photoshop guides and migration",
+          "url": "https://developer.adobe.com/firefly-services/docs/photoshop/guides/",
+          "evidence": "primary"
+        },
+        {
+          "title": "Photoshop v1 deprecation announcement",
+          "url": "https://developer.adobe.com/firefly-services/docs/photoshop/getting-started/deprecation-announcement/",
+          "evidence": "primary"
+        }
+      ],
+      "modelatlas_node_ids": [
+        "design-photoshop-v1",
+        "design-photoshop-v2"
+      ],
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持所用底层能力；端到端步骤与指标是原创教学建议；未运行或评测。",
+      "lifecycle": "deprecated",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "v2 GA; v1 deprecated; announced EOL 2026-07-31",
+      "replacement_case": "",
+      "historical_context": "首次收录2026-10-28；经典方法与新接口均保留，不将访问日期当验证成功日期。 替代工具节点为design-photoshop-v2；没有已实测的同仓替代案例，因此replacement_case留空。",
+      "practice_status": "原创教学模板，非行业最佳或独立实测",
+      "agent_boundary": "agent可规划分解、提出修改、观察验收并决定有限重试；模型生成内容；工具执行明确操作。当前仅方案，未执行自主循环。",
+      "measurement": "记录耗时、尝试次数、人工修改数、关键错误与费用；无基线不宣称效率提升。"
+    }
+  ],
+  "edges": [
+    {
+      "source": "design-dtcg",
+      "target": "design-figma-mcp",
+      "type": "provides_design_context",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "design-src-figma",
+        "design-src-figma-access",
+        "design-src-tokens",
+        "design-src-tokens-draft"
+      ]
+    },
+    {
+      "source": "design-wcag",
+      "target": "design-storybook-a11y",
+      "type": "guides_evaluation",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "design-src-sb-license",
+        "design-src-storybook",
+        "design-src-wcag"
+      ]
+    },
+    {
+      "source": "design-photoshop-v1",
+      "target": "design-photoshop-v2",
+      "type": "superseded_by",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "design-src-ps-migration",
+        "design-src-photoshop"
+      ]
+    },
+    {
+      "source": "design-c2pa",
+      "target": "design-firefly-image",
+      "type": "audits_provenance",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "design-src-c2pa",
+        "design-src-firefly",
+        "design-src-adobe-rights"
+      ]
+    },
+    {
+      "source": "design-visual-regression",
+      "target": "design-figma-mcp",
+      "type": "evaluates_output",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "design-src-pw-license",
+        "design-src-figma",
+        "design-src-playwright",
+        "design-src-figma-access"
+      ]
+    }
+  ],
+  "cross_repo_relations": [
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-ui-flow",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-figma-mcp",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-figma",
+        "design-src-wcag"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-ui-flow",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-wcag",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-figma",
+        "design-src-wcag"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-design-code",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-figma-mcp",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-figma",
+        "design-src-playwright"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-design-code",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-visual-regression",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-figma",
+        "design-src-playwright"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-tokens-migration",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-dtcg",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-tokens",
+        "design-src-tokens-draft",
+        "design-src-wcag"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-tokens-migration",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-wcag",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-tokens",
+        "design-src-tokens-draft",
+        "design-src-wcag"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-a11y-audit",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-wcag",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-wcag",
+        "design-src-storybook"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-a11y-audit",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-storybook-a11y",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-wcag",
+        "design-src-storybook"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-brand-kit",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-firefly-image",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-firefly",
+        "design-src-adobe-rights",
+        "design-src-canva-rights"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-brand-kit",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-canva-template",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-firefly",
+        "design-src-adobe-rights",
+        "design-src-canva-rights"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-poster-localize",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-canva-template",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-canva",
+        "design-src-canva-autofill",
+        "design-src-canva-rights"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-vector-trace",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-inkscape-trace",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-inkscape"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-product-composite",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-firefly-image",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-firefly",
+        "design-src-photoshop",
+        "design-src-adobe-rights"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-product-composite",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-photoshop-v2",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-firefly",
+        "design-src-photoshop",
+        "design-src-adobe-rights"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-image-repair",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-firefly-image",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-firefly",
+        "design-src-photoshop"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-image-repair",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-photoshop-v2",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-firefly",
+        "design-src-photoshop"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-slides-story",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-slides-api",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-slides",
+        "design-src-wcag"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-slides-story",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-wcag",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-slides",
+        "design-src-wcag"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-visual-qa",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-visual-regression",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-playwright"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-asset-provenance",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-c2pa",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-c2pa",
+        "design-src-canva-rights",
+        "design-src-adobe-rights"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-asset-provenance",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-canva-template",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-c2pa",
+        "design-src-canva-rights",
+        "design-src-adobe-rights"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-ps-legacy-migrate",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-photoshop-v1",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-ps-migration",
+        "design-src-photoshop"
+      ],
+      "status": "proposed_not_merged"
+    },
+    {
+      "source_repo": "AgentWork",
+      "source_id": "design-ps-legacy-migrate",
+      "target_repo": "ModelAtlas",
+      "target_id": "design-photoshop-v2",
+      "type": "uses_or_evaluates",
+      "evidence_type": "editorial_workflow_mapping",
+      "source_ids": [
+        "design-src-ps-migration",
+        "design-src-photoshop"
+      ],
+      "status": "proposed_not_merged"
+    }
+  ],
+  "maintenance": {
+    "status": "plan_only_not_scheduled",
+    "triggers": [
+      "发布前复核所有滚动文档与账号资格",
+      "供应商版本/价格/许可变动时重查相关节点",
+      "API弃用公告时保留旧节点并补迁移边"
+    ],
+    "required_evidence": [
+      "checked_at与固定版本",
+      "功能主张所对应原文定位",
+      "合成运行记录与失败样例",
+      "许可和成本批准",
+      "人工验收"
+    ],
+    "stop_rule": "只有具体授权后才运行真实API；预算/权限/权利未知即停止相关执行，不伪造完成。"
+  },
+  "coverage_gaps": [
+    "未比较真实生成质量、成本、速度或生产部署效果",
+    "Inkscape官网教程与许可页面403；使用维护指南验证描摹功能，软件许可仍unknown",
+    "Canva直接猜测autofill路径不可访问，已通过官方文档链接定位正确指南",
+    "未覆盖3D/CAD/工业设计/字体生成/印前色彩管理等后续专题",
+    "价格、区域可用性、账号权限和具体输出法律地位不由通用文档完整确定"
+  ]
+}

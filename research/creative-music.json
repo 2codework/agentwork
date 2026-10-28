@@ -1,0 +1,1661 @@
+{
+  "schema_version": "creative-research.music.v1",
+  "checked_at": "2026-10-28",
+  "scope": "音乐/音频专题候选，不是全部市场覆盖，不修改迁移中 r1 项目",
+  "verification_status": "documentation_review_only",
+  "cases": [
+    {
+      "id": "music-musicgen-sketch",
+      "title": "无歌词配乐草图",
+      "summary": "原创合成教学工作流：无歌词配乐草图。仅文档依据，尚未音频实测。",
+      "roles": [
+        "音乐制作人",
+        "音频编辑",
+        "Agent 开发者"
+      ],
+      "industries": [
+        "音乐与音频",
+        "创意教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "1. 确认非商业研究许可",
+          "body": "确认非商业研究许可。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "不含人声或既有歌曲指令"
+        },
+        {
+          "title": "2. 制作三个不同织体的文字 brief",
+          "body": "制作三个不同织体的文字 brief。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "起落结构明确"
+        },
+        {
+          "title": "3. 以后经授权生成短样并盲听排序",
+          "body": "以后经授权生成短样并盲听排序。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "不得把未生成音频标成成品"
+        },
+        {
+          "title": "4. 归档提示和参数",
+          "body": "归档提示和参数。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "不得把未生成音频标成成品"
+        }
+      ],
+      "sources": [
+        {
+          "title": "MusicGen model card",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_MODEL_CARD.md",
+          "evidence": "primary"
+        }
+      ],
+      "source_ids": [
+        "music-src-musicgen"
+      ],
+      "input": "原创项目：20 秒虚构天文馆片头，无样本，无人声。",
+      "prompt": "写三组音乐描述：节奏、乐器、情绪；不提艺人或既有旋律。每次只改变一个因素。",
+      "output": "三份 brief、候选编号、人工听评记录",
+      "rubric": [
+        "不含人声或既有歌曲指令",
+        "起落结构明确",
+        "不得把未生成音频标成成品"
+      ],
+      "risks": "生成不守时长就剪辑原创新音频并留尾音；雷同则拒收重写；仅使用原创或明确授权素材；输出发布需人工审核。",
+      "failure_recovery": "生成不守时长就剪辑原创新音频并留尾音；雷同则拒收重写",
+      "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+      "cost": "本地推理计算成本未知；不安装、不调用。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+      "lifecycle": "historical",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "研究版本 v1；本轮不声称为最新音乐模型",
+      "replacement_case": "",
+      "historical_context": "固定旧版用于理解方法；不因过时删除",
+      "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+      "modelatlas_node_ids": [
+        "music-musicgen"
+      ],
+      "workflow_type": "human_supervised_agent_design",
+      "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+    },
+    {
+      "id": "music-jasco-arrangement",
+      "title": "和弦与节奏约束编曲",
+      "summary": "原创合成教学工作流：和弦与节奏约束编曲。仅文档依据，尚未音频实测。",
+      "roles": [
+        "音乐制作人",
+        "音频编辑",
+        "Agent 开发者"
+      ],
+      "industries": [
+        "音乐与音频",
+        "创意教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "1. 将小节换算时间",
+          "body": "将小节换算时间。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "和弦变换不越界"
+        },
+        {
+          "title": "2. 校验和弦映射和模型变体一致",
+          "body": "校验和弦映射和模型变体一致。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "节拍与鼓点可人工复核"
+        },
+        {
+          "title": "3. 分别设计文本-only 与条件对照",
+          "body": "分别设计文本-only 与条件对照。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "实验不商用"
+        },
+        {
+          "title": "4. 逐拍比对结构",
+          "body": "逐拍比对结构。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "实验不商用"
+        }
+      ],
+      "sources": [
+        {
+          "title": "JASCO documentation",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+          "evidence": "primary"
+        },
+        {
+          "title": "JASCO model card",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/model_cards/JASCO_MODEL_CARD.md",
+          "evidence": "primary"
+        }
+      ],
+      "source_ids": [
+        "music-src-jasco",
+        "music-src-jasco-card"
+      ],
+      "input": "原创八小节 C–Am–F–G，拍速 96；自写鼓点事件表，无商曲旋律。",
+      "prompt": "给出每个和弦起止秒数和鼓点，描述轻木质打击乐；保持主旋律留白。",
+      "output": "和弦时间表、输入清单、对照试听表",
+      "rubric": [
+        "和弦变换不越界",
+        "节拍与鼓点可人工复核",
+        "实验不商用"
+      ],
+      "risks": "调性漂移时缩短段落；条件不兼容先修配置，不盲调 checkpoint；仅使用原创或明确授权素材；输出发布需人工审核。",
+      "failure_recovery": "调性漂移时缩短段落；条件不兼容先修配置，不盲调 checkpoint",
+      "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+      "cost": "计算/依赖安装另授权；权重非商用。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+      "lifecycle": "historical",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "v1，400M/1B；历史研究方案保留",
+      "replacement_case": "",
+      "historical_context": "固定旧版用于理解方法；不因过时删除",
+      "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+      "modelatlas_node_ids": [
+        "music-jasco"
+      ],
+      "workflow_type": "human_supervised_agent_design",
+      "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+    },
+    {
+      "id": "music-lyria-song",
+      "title": "原创歌词到完整歌曲结构",
+      "summary": "原创合成教学工作流：原创歌词到完整歌曲结构。仅文档依据，尚未音频实测。",
+      "roles": [
+        "音乐制作人",
+        "音频编辑",
+        "Agent 开发者"
+      ],
+      "industries": [
+        "音乐与音频",
+        "创意教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "1. 人工检查歌词原创性",
+          "body": "人工检查歌词原创性。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "无添加敏感/侵权词"
+        },
+        {
+          "title": "2. 选完整歌曲或 Clip 而非混用",
+          "body": "选完整歌曲或 Clip 而非混用。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "副歌重复按计划"
+        },
+        {
+          "title": "3. 设单次预算和候选数",
+          "body": "设单次预算和候选数。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "版本写明"
+        },
+        {
+          "title": "4. 逐词听写复核并对结构打分",
+          "body": "逐词听写复核并对结构打分。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "版本写明"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Gemini music generation",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation",
+          "evidence": "primary"
+        }
+      ],
+      "source_ids": [
+        "music-src-lyria"
+      ],
+      "input": "原创题目《纸船的早晨》，四句自写歌词，主歌-副歌-尾声，无参考录音。",
+      "prompt": "只用我提供的原创句子；轻快木吉他，约两分钟；给出段落意图而非模仿歌手。",
+      "output": "结构表、音频候选 manifest、实际唱词对照",
+      "rubric": [
+        "无添加敏感/侵权词",
+        "副歌重复按计划",
+        "版本写明"
+      ],
+      "risks": "唱词错误则缩短歌词；不追求重复随机生成直到超预算；仅使用原创或明确授权素材；输出发布需人工审核。",
+      "failure_recovery": "唱词错误则缩短歌词；不追求重复随机生成直到超预算",
+      "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+      "cost": "API 可能计费，运行前查看当前报价；本轮零调用。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "lyria-3.5 / lyria-3-clip-preview；仅文档核查",
+      "replacement_case": "",
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+      "modelatlas_node_ids": [
+        "music-lyria"
+      ],
+      "workflow_type": "human_supervised_agent_design",
+      "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+    },
+    {
+      "id": "music-suno-lyrics",
+      "title": "歌词辅助与发行资格台账",
+      "summary": "原创合成教学工作流：歌词辅助与发行资格台账。仅文档依据，尚未音频实测。",
+      "roles": [
+        "音乐制作人",
+        "音频编辑",
+        "Agent 开发者"
+      ],
+      "industries": [
+        "音乐与音频",
+        "创意教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "1. 先做文本修订差异",
+          "body": "先做文本修订差异。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "无复制歌词"
+        },
+        {
+          "title": "2. 记录模型、生成时账户和下载时账户",
+          "body": "记录模型、生成时账户和下载时账户。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "生成日与下载日分列"
+        },
+        {
+          "title": "3. 对照新旧官方规则",
+          "body": "对照新旧官方规则。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "资格不明不得发布"
+        },
+        {
+          "title": "4. 资格不清只保留私有练习",
+          "body": "资格不清只保留私有练习。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "资格不明不得发布"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Suno downloads and terms update",
+          "url": "https://www.suno.com/blog/suno-updates-tos",
+          "evidence": "primary"
+        },
+        {
+          "title": "Suno distribution help",
+          "url": "https://help.suno.com/en/articles/2410177",
+          "evidence": "primary"
+        }
+      ],
+      "source_ids": [
+        "music-src-suno-new",
+        "music-src-suno-old"
+      ],
+      "input": "虚构原创四行歌词：纸船越过晨光/小巷收起雨凉/我们沿河慢唱/把远方放进行囊。",
+      "prompt": "为原创歌词提出两种押韵与分段建议，不引用现有歌词，不模拟真实歌手；保留作者原稿。",
+      "output": "原创歌词 diff、权利台账、待确认清单",
+      "rubric": [
+        "无复制歌词",
+        "生成日与下载日分列",
+        "资格不明不得发布"
+      ],
+      "risks": "官方文字冲突交由现行条款/客服确认；不要靠升级推断追溯授权；仅使用原创或明确授权素材；输出发布需人工审核。",
+      "failure_recovery": "官方文字冲突交由现行条款/客服确认；不要靠升级推断追溯授权",
+      "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+      "cost": "不购买套餐、不下载作品；商业发行需单独批准。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "新旧官方商业权利文字冲突，具体账户/模型未核实",
+      "replacement_case": "",
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+      "modelatlas_node_ids": [
+        "music-suno"
+      ],
+      "workflow_type": "human_supervised_agent_design",
+      "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+    },
+    {
+      "id": "music-stem-separation",
+      "title": "原创混合音轨分轨诊断",
+      "summary": "原创合成教学工作流：原创混合音轨分轨诊断。仅文档依据，尚未音频实测。",
+      "roles": [
+        "音乐制作人",
+        "音频编辑",
+        "Agent 开发者"
+      ],
+      "industries": [
+        "音乐与音频",
+        "创意教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "1. 保存输入与四轨基准",
+          "body": "保存输入与四轨基准。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "时长对齐"
+        },
+        {
+          "title": "2. 固定历史 htdemucs 版本",
+          "body": "固定历史 htdemucs 版本。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "相加无明显偏移"
+        },
+        {
+          "title": "3. 设计分轨/重合成对比",
+          "body": "设计分轨/重合成对比。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "不把分轨结果当原 stems"
+        },
+        {
+          "title": "4. 听击乐尾音和人声残留",
+          "body": "听击乐尾音和人声残留。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "不把分轨结果当原 stems"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Meta Demucs repository",
+          "url": "https://github.com/facebookresearch/demucs",
+          "evidence": "primary"
+        }
+      ],
+      "source_ids": [
+        "music-src-demucs"
+      ],
+      "input": "自己合成的鼓、低音、人声占位和键盘四轨混合；保留真实独立轨作参考。",
+      "prompt": "将混合分为四类；比较泄漏而非宣称恢复原始录音；不要提取商业歌曲伴奏。",
+      "output": "四轨输出计划、残留检查表、版本记录",
+      "rubric": [
+        "时长对齐",
+        "相加无明显偏移",
+        "不把分轨结果当原 stems"
+      ],
+      "risks": "出现抽吸/金属音优先用原创源轨；降输入电平检查削波；仅使用原创或明确授权素材；输出发布需人工审核。",
+      "failure_recovery": "出现抽吸/金属音优先用原创源轨；降输入电平检查削波",
+      "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+      "cost": "归档库不新装；依赖和资源成本未测。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+      "lifecycle": "historical",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "Meta 仓库已归档；保留只读复现实验",
+      "replacement_case": "",
+      "historical_context": "固定旧版用于理解方法；不因过时删除",
+      "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+      "modelatlas_node_ids": [
+        "music-demucs"
+      ],
+      "workflow_type": "human_supervised_agent_design",
+      "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+    },
+    {
+      "id": "music-mix-assistant",
+      "title": "混音助手的 A/B 实验",
+      "summary": "原创合成教学工作流：混音助手的 A/B 实验。仅文档依据，尚未音频实测。",
+      "roles": [
+        "音乐制作人",
+        "音频编辑",
+        "Agent 开发者"
+      ],
+      "industries": [
+        "音乐与音频",
+        "创意教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "1. 保存干声和快照",
+          "body": "保存干声和快照。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "没有依靠增益作弊"
+        },
+        {
+          "title": "2. 在获授权 DAW 中分析代表段",
+          "body": "在获授权 DAW 中分析代表段。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "低频不互相遮盖"
+        },
+        {
+          "title": "3. 一次改一个处理模块",
+          "body": "一次改一个处理模块。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "未超峰值"
+        },
+        {
+          "title": "4. 等响度 A/B 与单声道试听",
+          "body": "等响度 A/B 与单声道试听。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "未超峰值"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Neutron 5 official product",
+          "url": "https://www.izotope.com/products/neutron/",
+          "evidence": "primary"
+        }
+      ],
+      "source_ids": [
+        "music-src-neutron"
+      ],
+      "input": "原创鼓、贝斯、合成器三轨；目标是低频分离而非更响。",
+      "prompt": "给混音审阅 Agent：先列冲突频段假设，逐轨建议可逆调整，保留旁通对照。",
+      "output": "轨道处理记录、旁通快照、人工选择原因",
+      "rubric": [
+        "没有依靠增益作弊",
+        "低频不互相遮盖",
+        "未超峰值"
+      ],
+      "risks": "刺耳/抽吸就旁通最近模块；回滚而非叠加补救；仅使用原创或明确授权素材；输出发布需人工审核。",
+      "failure_recovery": "刺耳/抽吸就旁通最近模块；回滚而非叠加补救",
+      "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+      "cost": "插件付费/DAW 授权另核；本轮不操作软件。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "Neutron 5；各版本模块差异需用户核实",
+      "replacement_case": "",
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+      "modelatlas_node_ids": [
+        "music-neutron"
+      ],
+      "workflow_type": "human_supervised_agent_design",
+      "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+    },
+    {
+      "id": "music-master-assistant",
+      "title": "母带助手不等于一键发布",
+      "summary": "原创合成教学工作流：母带助手不等于一键发布。仅文档依据，尚未音频实测。",
+      "roles": [
+        "音乐制作人",
+        "音频编辑",
+        "Agent 开发者"
+      ],
+      "industries": [
+        "音乐与音频",
+        "创意教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "1. 保留未母带混音",
+          "body": "保留未母带混音。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "全曲非仅片段通过"
+        },
+        {
+          "title": "2. 选择代表性响段分析",
+          "body": "选择代表性响段分析。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "真峰值满足项目明确要求"
+        },
+        {
+          "title": "3. 等响度比较处理前后",
+          "body": "等响度比较处理前后。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "动态由人确认"
+        },
+        {
+          "title": "4. 检查真峰值、削波、低频与安静段",
+          "body": "检查真峰值、削波、低频与安静段。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "动态由人确认"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ozone 12 user guide",
+          "url": "https://docs.izotope.com/ozone12/en/index-en.html",
+          "evidence": "primary"
+        }
+      ],
+      "source_ids": [
+        "music-src-ozone"
+      ],
+      "input": "原创立体声混音，有完整动态和峰值余量；不上传他人参考曲。",
+      "prompt": "先选发行目标并记录目标值来源；助手只给初始建议，不把统一 LUFS 当所有平台标准。",
+      "output": "母带候选、测量表、平台交付要求链接",
+      "rubric": [
+        "全曲非仅片段通过",
+        "真峰值满足项目明确要求",
+        "动态由人确认"
+      ],
+      "risks": "失真回到混音；过度限制降低处理量；保留可撤销链；仅使用原创或明确授权素材；输出发布需人工审核。",
+      "failure_recovery": "失真回到混音；过度限制降低处理量；保留可撤销链",
+      "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+      "cost": "商业插件；不固定过时价格；交付标准逐平台核验。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "Ozone 12；版本/模块因授权级别不同",
+      "replacement_case": "",
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+      "modelatlas_node_ids": [
+        "music-ozone"
+      ],
+      "workflow_type": "human_supervised_agent_design",
+      "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+    },
+    {
+      "id": "music-podcast-post",
+      "title": "双主持播客多轨后期",
+      "summary": "原创合成教学工作流：双主持播客多轨后期。仅文档依据，尚未音频实测。",
+      "roles": [
+        "音乐制作人",
+        "音频编辑",
+        "Agent 开发者"
+      ],
+      "industries": [
+        "音乐与音频",
+        "创意教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "1. 对齐轨道并标出音乐",
+          "body": "对齐轨道并标出音乐。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "两人音量均衡"
+        },
+        {
+          "title": "2. 选适合语音的后期配置",
+          "body": "选适合语音的后期配置。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "词尾不被门限吃掉"
+        },
+        {
+          "title": "3. 试听串音/噪声段",
+          "body": "试听串音/噪声段。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "音乐不盖对白"
+        },
+        {
+          "title": "4. 输出并保留未处理原轨",
+          "body": "输出并保留未处理原轨。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "音乐不盖对白"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Auphonic multitrack algorithms",
+          "url": "https://us1.auphonic.com/help/algorithms/multitrack.html",
+          "evidence": "primary"
+        }
+      ],
+      "source_ids": [
+        "music-src-auphonic"
+      ],
+      "input": "两段本人授权录音的虚构科普对话，30 秒；一轨远一轨近，原创片头。",
+      "prompt": "保留自然呼吸与停顿；先语音清晰后音乐 ducking；不自动剪掉改变意思的片段。",
+      "output": "节目 WAV/MP3 计划、处理参数表、问题时间码",
+      "rubric": [
+        "两人音量均衡",
+        "词尾不被门限吃掉",
+        "音乐不盖对白"
+      ],
+      "risks": "降噪损伤就降低强度/禁用；错位先修对齐；失败不得重复计费提交；仅使用原创或明确授权素材；输出发布需人工审核。",
+      "failure_recovery": "降噪损伤就降低强度/禁用；错位先修对齐；失败不得重复计费提交",
+      "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+      "cost": "云处理时长预算和隐私同意；本轮无上传。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "2026 官方文档；可用额度未登录核验",
+      "replacement_case": "",
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+      "modelatlas_node_ids": [
+        "music-auphonic"
+      ],
+      "workflow_type": "human_supervised_agent_design",
+      "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+    },
+    {
+      "id": "music-speech-transcript",
+      "title": "Whisper 离线转写与人工校对",
+      "summary": "原创合成教学工作流：Whisper 离线转写与人工校对。仅文档依据，尚未音频实测。",
+      "roles": [
+        "音乐制作人",
+        "音频编辑",
+        "Agent 开发者"
+      ],
+      "industries": [
+        "音乐与音频",
+        "创意教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "1. 留原稿为真值",
+          "body": "留原稿为真值。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "数字专名逐个核实"
+        },
+        {
+          "title": "2. 固定权重和语言设置",
+          "body": "固定权重和语言设置。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "静音不幻觉"
+        },
+        {
+          "title": "3. 对齐转写与录音",
+          "body": "对齐转写与录音。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "不把翻译当原语言转写"
+        },
+        {
+          "title": "4. 计算本练习词/字错误并人工复核",
+          "body": "计算本练习词/字错误并人工复核。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "不把翻译当原语言转写"
+        }
+      ],
+      "sources": [
+        {
+          "title": "OpenAI Whisper repository",
+          "url": "https://github.com/openai/whisper",
+          "evidence": "primary"
+        }
+      ],
+      "source_ids": [
+        "music-src-whisper"
+      ],
+      "input": "自读原创 45 秒天气科普稿，包含数字、专名和 5 秒静音；无个人数据。",
+      "prompt": "逐字转写，标不确定词，不补写静音内容；专名以给定原创词表校对。",
+      "output": "逐字稿、错误表、静音误识别记录",
+      "rubric": [
+        "数字专名逐个核实",
+        "静音不幻觉",
+        "不把翻译当原语言转写"
+      ],
+      "risks": "错词重听短段；持续静音幻觉隔离片段；不通过猜测修复；仅使用原创或明确授权素材；输出发布需人工审核。",
+      "failure_recovery": "错词重听短段；持续静音幻觉隔离片段；不通过猜测修复",
+      "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+      "cost": "MIT 不代表录音免授权；本地计算成本待测。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "公开仓库文档已核；具体权重修订应固定",
+      "replacement_case": "",
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+      "modelatlas_node_ids": [
+        "music-whisper"
+      ],
+      "workflow_type": "human_supervised_agent_design",
+      "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+    },
+    {
+      "id": "music-diarization-migrate",
+      "title": "旧说话人分离接口迁移审阅",
+      "summary": "原创合成教学工作流：旧说话人分离接口迁移审阅。仅文档依据，尚未音频实测。",
+      "roles": [
+        "音乐制作人",
+        "音频编辑",
+        "Agent 开发者"
+      ],
+      "industries": [
+        "音乐与音频",
+        "创意教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "1. 登记旧接口调用点",
+          "body": "登记旧接口调用点。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "旧模型不得作为新默认"
+        },
+        {
+          "title": "2. 确认官方弃用期限",
+          "body": "确认官方弃用期限。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "speaker 与身份分离"
+        },
+        {
+          "title": "3. 用匿名轮换 fixture 设计契约测试",
+          "body": "用匿名轮换 fixture 设计契约测试。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "替代未验证明确标未知"
+        },
+        {
+          "title": "4. 新替代接口独立验证后才切换",
+          "body": "新替代接口独立验证后才切换。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "替代未验证明确标未知"
+        }
+      ],
+      "sources": [
+        {
+          "title": "OpenAI file transcription",
+          "url": "https://developers.openai.com/api/docs/guides/speech-to-text",
+          "evidence": "primary"
+        }
+      ],
+      "source_ids": [
+        "music-src-asr"
+      ],
+      "input": "合成文本模拟三次说话轮换 A/B/A，无真人身份线索；仅设计测试。",
+      "prompt": "检查旧集成的 model_id、截止日、段落字段；不要把 speaker_A 自动映射成实名。",
+      "output": "迁移清单、字段契约、回滚条件",
+      "rubric": [
+        "旧模型不得作为新默认",
+        "speaker 与身份分离",
+        "替代未验证明确标未知"
+      ],
+      "risks": "新模型字段差异保留原始结果；不盲迁移；不能把文本模拟测试当音频实测；仅使用原创或明确授权素材；输出发布需人工审核。",
+      "failure_recovery": "新模型字段差异保留原始结果；不盲迁移；不能把文本模拟测试当音频实测",
+      "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+      "cost": "旧 API 付费；不调用；替代模型未在本案例指定。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+      "lifecycle": "deprecated",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "官方标弃用；旧集成截止 2027-02-26；不为新项目默认",
+      "replacement_case": "",
+      "historical_context": "固定旧版用于理解方法；不因过时删除",
+      "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+      "modelatlas_node_ids": [
+        "music-diarize"
+      ],
+      "workflow_type": "human_supervised_agent_design",
+      "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+    },
+    {
+      "id": "music-sfx-foley",
+      "title": "虚构游戏音效变体与循环",
+      "summary": "原创合成教学工作流：虚构游戏音效变体与循环。仅文档依据，尚未音频实测。",
+      "roles": [
+        "音乐制作人",
+        "音频编辑",
+        "Agent 开发者"
+      ],
+      "industries": [
+        "音乐与音频",
+        "创意教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "1. 拆分 one-shot 与 ambience brief",
+          "body": "拆分 one-shot 与 ambience brief。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "没有无意语言或背景音乐"
+        },
+        {
+          "title": "2. 限制候选和秒数",
+          "body": "限制候选和秒数。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "起音适合交互"
+        },
+        {
+          "title": "3. 核对输出格式",
+          "body": "核对输出格式。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "循环接缝无爆音"
+        },
+        {
+          "title": "4. 拼接循环试听并标接缝",
+          "body": "拼接循环试听并标接缝。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "循环接缝无爆音"
+        }
+      ],
+      "sources": [
+        {
+          "title": "ElevenLabs Sound effects docs",
+          "url": "https://elevenlabs.io/docs/overview/capabilities/sound-effects",
+          "evidence": "primary"
+        }
+      ],
+      "source_ids": [
+        "music-src-sfx"
+      ],
+      "input": "虚构纸制机器人：展开纸翼、软木脚步、微风环境，无真实品牌声音。",
+      "prompt": "纸翼缓慢展开，近距离、干声、无音乐无语言；另做柔和风循环，分别生成。",
+      "output": "音效命名表、候选试听表、循环接缝测试",
+      "rubric": [
+        "没有无意语言或背景音乐",
+        "起音适合交互",
+        "循环接缝无爆音"
+      ],
+      "risks": "复杂多事件失败就拆成单音；循环不平滑用淡化但保留原文件；仅使用原创或明确授权素材；输出发布需人工审核。",
+      "failure_recovery": "复杂多事件失败就拆成单音；循环不平滑用淡化但保留原文件",
+      "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+      "cost": "按 credits/时长预算；不执行收费生成。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "以当前 API 版本、格式能力为准",
+      "replacement_case": "",
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+      "modelatlas_node_ids": [
+        "music-eleven-sfx"
+      ],
+      "workflow_type": "human_supervised_agent_design",
+      "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+    },
+    {
+      "id": "music-tts-podcast",
+      "title": "合法合成声线的原创微播客",
+      "summary": "原创合成教学工作流：合法合成声线的原创微播客。仅文档依据，尚未音频实测。",
+      "roles": [
+        "音乐制作人",
+        "音频编辑",
+        "Agent 开发者"
+      ],
+      "industries": [
+        "音乐与音频",
+        "创意教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "1. 审批稿件与声线使用条件",
+          "body": "审批稿件与声线使用条件。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "无冒充"
+        },
+        {
+          "title": "2. 锁定 model_id/voice_id",
+          "body": "锁定 model_id/voice_id。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "专名准确"
+        },
+        {
+          "title": "3. 先短句测试专名",
+          "body": "先短句测试专名。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "听众能知道合成属性"
+        },
+        {
+          "title": "4. 人工核对全文并保留 AI 标识",
+          "body": "人工核对全文并保留 AI 标识。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "条款适合目标用途"
+        }
+      ],
+      "sources": [
+        {
+          "title": "ElevenLabs TTS docs",
+          "url": "https://elevenlabs.io/docs/overview/capabilities/text-to-speech",
+          "evidence": "primary"
+        }
+      ],
+      "source_ids": [
+        "music-src-tts"
+      ],
+      "input": "自写 120 字纸船制作介绍，使用经授权产品声线；不指定名人/熟人。",
+      "prompt": "用清晰温和、不模仿任何真实人物的声音，合理停顿；标注这是合成语音。",
+      "output": "脚本、声线授权说明、合成音频候选清单",
+      "rubric": [
+        "无冒充",
+        "专名准确",
+        "听众能知道合成属性",
+        "条款适合目标用途"
+      ],
+      "risks": "读错改拼音/断句；不要上传他人录音克隆来修复；仅使用原创或明确授权素材；输出发布需人工审核。",
+      "failure_recovery": "读错改拼音/断句；不要上传他人录音克隆来修复",
+      "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+      "cost": "生成、商业使用和声线权限逐项确认；本轮不建账号。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "具体 model_id/voice_id 运行前锁定，不把产品名当单一模型",
+      "replacement_case": "",
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+      "modelatlas_node_ids": [
+        "music-eleven-tts"
+      ],
+      "workflow_type": "human_supervised_agent_design",
+      "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+    },
+    {
+      "id": "music-accessible-captions",
+      "title": "可访问性字幕从 ASR 到人工验收",
+      "summary": "原创合成教学工作流：可访问性字幕从 ASR 到人工验收。仅文档依据，尚未音频实测。",
+      "roles": [
+        "音乐制作人",
+        "音频编辑",
+        "Agent 开发者"
+      ],
+      "industries": [
+        "音乐与音频",
+        "创意教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "1. ASR 只作草稿",
+          "body": "ASR 只作草稿。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "起止时间顺序正确"
+        },
+        {
+          "title": "2. 人工补非语音信息",
+          "body": "人工补非语音信息。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "声音信息不过量且必要"
+        },
+        {
+          "title": "3. 调整同步和分行",
+          "body": "调整同步和分行。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "专名正确"
+        },
+        {
+          "title": "4. 关闭音频观看检查是否可理解",
+          "body": "关闭音频观看检查是否可理解。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "不自动宣称 WCAG 合规"
+        }
+      ],
+      "sources": [
+        {
+          "title": "W3C WAI captions",
+          "url": "https://www.w3.org/WAI/media/av/captions/",
+          "evidence": "primary"
+        },
+        {
+          "title": "OpenAI Whisper repository",
+          "url": "https://github.com/openai/whisper",
+          "evidence": "primary"
+        }
+      ],
+      "source_ids": [
+        "music-src-captions",
+        "music-src-whisper"
+      ],
+      "input": "原创 30 秒教程：对白、纸张撕裂声、结束铃声，含必要非语音信息。",
+      "prompt": "制作同语言字幕；加入理解内容所需的声音标签和说话人变化，不猜不可辨词。",
+      "output": "WebVTT/SRT 草稿、校对记录、无声观看验收表",
+      "rubric": [
+        "起止时间顺序正确",
+        "声音信息不过量且必要",
+        "专名正确",
+        "不自动宣称 WCAG 合规"
+      ],
+      "risks": "错时轴手工校准；快速对白重分行；字幕遮挡时调整播放器样式；仅使用原创或明确授权素材；输出发布需人工审核。",
+      "failure_recovery": "错时轴手工校准；快速对白重分行；字幕遮挡时调整播放器样式",
+      "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+      "cost": "需人工校对时间；公开字幕须批准且避免个人信息泄漏。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "W3C WAI 教程当前可读；不宣称自动满足全部 WCAG",
+      "replacement_case": "",
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+      "modelatlas_node_ids": [
+        "music-captions"
+      ],
+      "workflow_type": "human_supervised_agent_design",
+      "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+    },
+    {
+      "id": "music-mrt-live",
+      "title": "实时音乐控制的状态机演练",
+      "summary": "原创合成教学工作流：实时音乐控制的状态机演练。仅文档依据，尚未音频实测。",
+      "roles": [
+        "音乐制作人",
+        "音频编辑",
+        "Agent 开发者"
+      ],
+      "industries": [
+        "音乐与音频",
+        "创意教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "1. 建立时间线控制表",
+          "body": "建立时间线控制表。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "停止立即可用"
+        },
+        {
+          "title": "2. 区分 MRT2 与 v1 legacy",
+          "body": "区分 MRT2 与 v1 legacy。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "不会无限自动生成"
+        },
+        {
+          "title": "3. 模拟缓冲不足/停止/恢复",
+          "body": "模拟缓冲不足/停止/恢复。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "不把模拟延迟当实测"
+        },
+        {
+          "title": "4. 检查事件记录和不重复触发",
+          "body": "检查事件记录和不重复触发。记录输入版本、人工决策和可撤销状态；以下为待执行教学步骤。",
+          "check": "不把模拟延迟当实测"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Magenta RealTime repository",
+          "url": "https://github.com/magenta/magenta-realtime",
+          "evidence": "primary"
+        }
+      ],
+      "source_ids": [
+        "music-src-mrt"
+      ],
+      "input": "原创控制序列：安静纹理→轻节奏→收束；用 mock 音频事件，不上演出系统。",
+      "prompt": "设计人类停止按钮与预算/延迟边界；每次仅改变一个控制条件，丢帧回到安全静音。",
+      "output": "状态图、控制日志模板、延迟验收计划",
+      "rubric": [
+        "停止立即可用",
+        "不会无限自动生成",
+        "不把模拟延迟当实测"
+      ],
+      "risks": "缓冲不足渐隐；恢复从人工确认节点开始；不自动下载插件；仅使用原创或明确授权素材；输出发布需人工审核。",
+      "failure_recovery": "缓冲不足渐隐；恢复从人工确认节点开始；不自动下载插件",
+      "permissions": "本轮仅研究和生成教材；不安装、不上传、不付费、不连账户、不发布。未来外部调用需明确预算、输入授权和人工批准。",
+      "cost": "权重许可未完成审阅；不触及 Mac/远端/真实演出。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方来源只支持工具/模型能力与限制；步骤、输入、提示词与验收是本项目原创教学设计；未做音频生成、监听或部署实测。",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "MRT2 main 文档核查；不下载 Mac 插件或运行推理",
+      "replacement_case": "",
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "practice_status": "原创教学模板，不声称最佳实践或已成功部署。",
+      "modelatlas_node_ids": [
+        "music-mrt2"
+      ],
+      "workflow_type": "human_supervised_agent_design",
+      "agent_boundary": "模型负责音频/文字推理，工具执行有限操作；Agent 负责计划、预算、版本、验收与人工审批。本案例未实现自主工具循环。"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "music-musicgen",
+      "title": "MusicGen v1",
+      "kind": "model",
+      "description_zh": "离散音频 token 自回归音乐生成，学习文本和旋律条件。",
+      "source_ids": [
+        "music-src-musicgen"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "historical",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "研究版本 v1；本轮不声称为最新音乐模型",
+      "license_notes": "代码 MIT / 权重 CC-BY-NC 4.0；仅按许可允许的非商业研究使用",
+      "prerequisites": [],
+      "historical_context": "固定旧版用于理解方法；不因过时删除",
+      "replaced_by": []
+    },
+    {
+      "id": "music-jasco",
+      "title": "JASCO v1",
+      "kind": "model",
+      "description_zh": "Flow Matching 加入时间局部和弦、鼓与旋律控制。",
+      "source_ids": [
+        "music-src-jasco",
+        "music-src-jasco-card"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "historical",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "v1，400M/1B；历史研究方案保留",
+      "license_notes": "代码 MIT / 权重 CC-BY-NC 4.0",
+      "prerequisites": [],
+      "historical_context": "固定旧版用于理解方法；不因过时删除",
+      "replaced_by": []
+    },
+    {
+      "id": "music-stable-audio-open",
+      "title": "Stable Audio Open 1.0",
+      "kind": "model",
+      "description_zh": "开放权重音效与音频生成；不等同于当前云服务版本。",
+      "source_ids": [
+        "music-src-stable",
+        "music-src-stable-license"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "historical",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "固定 1.0；新版本另行核验",
+      "license_notes": "Stable Audio Open 1.0 的 LICENSE.md 标 2024-07-05 Community License；商业使用须注册，关联实体合计年收入超过 100 万美元触发另行许可要求；分发有归属声明等义务。仍需就具体部署完整审阅，不是无条件商用。",
+      "prerequisites": [],
+      "historical_context": "固定旧版用于理解方法；不因过时删除",
+      "replaced_by": []
+    },
+    {
+      "id": "music-demucs",
+      "title": "HTDemucs v4",
+      "kind": "model",
+      "description_zh": "波形/频谱混合模型分离人声、鼓、贝斯及其他。",
+      "source_ids": [
+        "music-src-demucs"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "historical",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "Meta 仓库已归档；保留只读复现实验",
+      "license_notes": "需复核模型与依赖许可；分轨不消除原曲权利",
+      "prerequisites": [],
+      "historical_context": "固定旧版用于理解方法；不因过时删除",
+      "replaced_by": []
+    },
+    {
+      "id": "music-whisper",
+      "title": "Whisper",
+      "kind": "model",
+      "description_zh": "多语种 ASR、语音翻译与语言识别。",
+      "source_ids": [
+        "music-src-whisper"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "公开仓库文档已核；具体权重修订应固定",
+      "license_notes": "代码与权重 MIT；语料录音仍需同意",
+      "prerequisites": [],
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "replaced_by": []
+    },
+    {
+      "id": "music-diarize",
+      "title": "gpt-4o-transcribe-diarize",
+      "kind": "model",
+      "description_zh": "说话人标签转写的旧 API 专用模型。",
+      "source_ids": [
+        "music-src-asr"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "deprecated",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "官方标弃用；旧集成截止 2027-02-26；不为新项目默认",
+      "license_notes": "API 计费；上传前取得录音/数据处理许可",
+      "prerequisites": [],
+      "historical_context": "固定旧版用于理解方法；不因过时删除",
+      "replaced_by": []
+    },
+    {
+      "id": "music-lyria",
+      "title": "Lyria 3.5 / Clip",
+      "kind": "model",
+      "description_zh": "Gemini API 音乐生成；Clip 预览与完整歌曲模型区分。",
+      "source_ids": [
+        "music-src-lyria"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "lyria-3.5 / lyria-3-clip-preview；仅文档核查",
+      "license_notes": "云 API 额度与服务条款；输出权利不等于版权登记保证",
+      "prerequisites": [],
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "replaced_by": []
+    },
+    {
+      "id": "music-suno",
+      "title": "Suno generation service",
+      "kind": "tool",
+      "description_zh": "歌曲/歌词/编曲产品入口，底层版本与下载政策需分开记。",
+      "source_ids": [
+        "music-src-suno-new",
+        "music-src-suno-old"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "新旧官方商业权利文字冲突，具体账户/模型未核实",
+      "license_notes": "付费/免费和生成/下载日期分列，发行前确认现行条款与权益",
+      "prerequisites": [],
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "replaced_by": []
+    },
+    {
+      "id": "music-neutron",
+      "title": "Neutron 5 Mix Assistant",
+      "kind": "tool",
+      "description_zh": "轨道混音建议与处理，供人类监听修改。",
+      "source_ids": [
+        "music-src-neutron"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "Neutron 5；各版本模块差异需用户核实",
+      "license_notes": "商业插件；未购买/未安装；参考素材须有权",
+      "prerequisites": [],
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "replaced_by": []
+    },
+    {
+      "id": "music-ozone",
+      "title": "Ozone 12 Master Assistant",
+      "kind": "tool",
+      "description_zh": "母带处理建议和信号链，不替代听感判断。",
+      "source_ids": [
+        "music-src-ozone"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "Ozone 12；版本/模块因授权级别不同",
+      "license_notes": "商业插件；不承诺固定价格；禁止盗版",
+      "prerequisites": [],
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "replaced_by": []
+    },
+    {
+      "id": "music-auphonic",
+      "title": "Auphonic multitrack",
+      "kind": "tool",
+      "description_zh": "语音多轨自适应后期和混音输出。",
+      "source_ids": [
+        "music-src-auphonic"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "2026 官方文档；可用额度未登录核验",
+      "license_notes": "按服务额度/时长核账；上传受隐私与合同限制",
+      "prerequisites": [],
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "replaced_by": []
+    },
+    {
+      "id": "music-eleven-sfx",
+      "title": "ElevenLabs SFX",
+      "kind": "model",
+      "description_zh": "文本描述生成音效，含时长与循环控制。",
+      "source_ids": [
+        "music-src-sfx"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "以当前 API 版本、格式能力为准",
+      "license_notes": "按时长/credits 预算；素材/发行权另审",
+      "prerequisites": [],
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "replaced_by": []
+    },
+    {
+      "id": "music-eleven-tts",
+      "title": "ElevenLabs TTS",
+      "kind": "model",
+      "description_zh": "文字到语音；仅使用有合法授权的产品内置或设计声线。",
+      "source_ids": [
+        "music-src-tts"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "具体 model_id/voice_id 运行前锁定，不把产品名当单一模型",
+      "license_notes": "付费额度与声线使用条件复核；不克隆、冒充真人",
+      "prerequisites": [],
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "replaced_by": []
+    },
+    {
+      "id": "music-captions",
+      "title": "Accessible captions QA",
+      "kind": "standard",
+      "description_zh": "同步语音和必要非语音文字信息；自动输出需人工核对。",
+      "source_ids": [
+        "music-src-captions"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "W3C WAI 教程当前可读；不宣称自动满足全部 WCAG",
+      "license_notes": "人工校对成本；录音和转写均需最小化访问",
+      "prerequisites": [],
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "replaced_by": []
+    },
+    {
+      "id": "music-mrt2",
+      "title": "Magenta RealTime 2",
+      "kind": "model",
+      "description_zh": "交互式实时音乐生成；v1 为 legacy 分支。",
+      "source_ids": [
+        "music-src-mrt"
+      ],
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "current",
+      "lifecycle_as_of": "2026-10-28",
+      "applicable_versions": "MRT2 main 文档核查；不下载 Mac 插件或运行推理",
+      "license_notes": "代码 Apache-2.0；权重许可未完成独立审查，商用待确认",
+      "prerequisites": [],
+      "historical_context": "当前仅确认官方文档陈述，未证明账号/地区实际可用",
+      "replaced_by": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "music-src-musicgen",
+      "title": "MusicGen model card",
+      "url": "https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_MODEL_CARD.md",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": "2023-05",
+      "published_at_note": "日期含义以 claim_scope 为准",
+      "evidence_locator": "Model details / License",
+      "claim_scope": "代码 MIT；权重 CC-BY-NC 4.0；训练时间不是发布日期。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-jasco",
+      "title": "JASCO documentation",
+      "url": "https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": null,
+      "published_at_note": "页面无明确发布日期或此日期为特殊事件，见 claim_scope",
+      "evidence_locator": "Conditioning / Generation",
+      "claim_scope": "文本与和弦、鼓、旋律条件控制；不是自主 Agent。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-jasco-card",
+      "title": "JASCO model card",
+      "url": "https://github.com/facebookresearch/audiocraft/blob/main/model_cards/JASCO_MODEL_CARD.md",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": "2024-11",
+      "published_at_note": "日期含义以 claim_scope 为准",
+      "evidence_locator": "Model details / License",
+      "claim_scope": "模型 v1；代码 MIT，权重 CC-BY-NC 4.0。日期为训练月份。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-stable",
+      "title": "Stable Audio Open research",
+      "url": "https://stability.ai/news-updates/stable-audio-open-research-paper",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": "2024-07-22",
+      "published_at_note": "日期含义以 claim_scope 为准",
+      "evidence_locator": "Key Takeaways",
+      "claim_scope": "开放权重文字到音频研究；许可证须逐模型复核。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-stable-license",
+      "title": "Stable Audio Open 1.0 license",
+      "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0/blob/main/LICENSE.md",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": "2024-07-05",
+      "published_at_note": "许可文件 Last Updated，不是模型发布日期",
+      "evidence_locator": "Sections III-IV; Last Updated",
+      "claim_scope": "Stable Audio Open 1.0 的 LICENSE.md 标 2024-07-05 Community License；商业使用须注册，关联实体合计年收入超过 100 万美元触发另行许可要求；分发有归属声明等义务。仍需就具体部署完整审阅，不是无条件商用。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-demucs",
+      "title": "Meta Demucs repository",
+      "url": "https://github.com/facebookresearch/demucs",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": "2025-01-01",
+      "published_at_note": "日期含义以 claim_scope 为准",
+      "evidence_locator": "Archive notice / README",
+      "claim_scope": "归档日期；维护者说明停止积极维护，历史 v4/HTDemucs。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-whisper",
+      "title": "OpenAI Whisper repository",
+      "url": "https://github.com/openai/whisper",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": null,
+      "published_at_note": "页面无明确发布日期或此日期为特殊事件，见 claim_scope",
+      "evidence_locator": "README / License",
+      "claim_scope": "语音识别/翻译；代码和权重 MIT。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-asr",
+      "title": "OpenAI file transcription",
+      "url": "https://developers.openai.com/api/docs/guides/speech-to-text",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": null,
+      "published_at_note": "页面无明确发布日期或此日期为特殊事件，见 claim_scope",
+      "evidence_locator": "Speaker diarization",
+      "claim_scope": "gpt-4o-transcribe-diarize 已弃用，旧集成可用至 2027-02-26；并非推荐普通转写默认。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-lyria",
+      "title": "Gemini music generation",
+      "url": "https://ai.google.dev/gemini-api/docs/music-generation",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": null,
+      "published_at_note": "页面无明确发布日期或此日期为特殊事件，见 claim_scope",
+      "evidence_locator": "Model table",
+      "claim_scope": "本次页面为 Lyria 3.5 和 lyria-3-clip-preview；不要继续把旧版本当现行。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-suno-new",
+      "title": "Suno downloads and terms update",
+      "url": "https://www.suno.com/blog/suno-updates-tos",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": "2026-08-10",
+      "published_at_note": "日期含义以 claim_scope 为准",
+      "evidence_locator": "Commercial use / download limits",
+      "claim_scope": "9 月 3 日起新下载规则；付费下载口径与旧帮助页存在差异，具体歌曲资格需核对条款。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-suno-old",
+      "title": "Suno distribution help",
+      "url": "https://help.suno.com/en/articles/2410177",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": "2025-12-17",
+      "published_at_note": "日期含义以 claim_scope 为准",
+      "evidence_locator": "Commercial rights",
+      "claim_scope": "旧帮助页强调生成时订阅；不能忽视后续更新。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-neutron",
+      "title": "Neutron 5 official product",
+      "url": "https://www.izotope.com/products/neutron/",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": null,
+      "published_at_note": "页面无明确发布日期或此日期为特殊事件，见 claim_scope",
+      "evidence_locator": "Mix Assistant",
+      "claim_scope": "混音辅助产品，不公开底层模型权重。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-ozone",
+      "title": "Ozone 12 user guide",
+      "url": "https://docs.izotope.com/ozone12/en/index-en.html",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": null,
+      "published_at_note": "页面无明确发布日期或此日期为特殊事件，见 claim_scope",
+      "evidence_locator": "Master Assistant / Signal Flow",
+      "claim_scope": "母带助手与音频处理模块，不等于自主 Agent。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-auphonic",
+      "title": "Auphonic multitrack algorithms",
+      "url": "https://us1.auphonic.com/help/algorithms/multitrack.html",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": null,
+      "published_at_note": "页面无明确发布日期或此日期为特殊事件，见 claim_scope",
+      "evidence_locator": "Multitrack Post Production Algorithms",
+      "claim_scope": "面向语音节目多轨后期；自动处理与最终响度/真峰值限制。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-sfx",
+      "title": "ElevenLabs Sound effects docs",
+      "url": "https://elevenlabs.io/docs/overview/capabilities/sound-effects",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": null,
+      "published_at_note": "页面无明确发布日期或此日期为特殊事件，见 claim_scope",
+      "evidence_locator": "Usage / Key facts",
+      "claim_scope": "文本音效、时长与循环控制；服务收费及输出格式需依调用时文档确认。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-tts",
+      "title": "ElevenLabs TTS docs",
+      "url": "https://elevenlabs.io/docs/overview/capabilities/text-to-speech",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": null,
+      "published_at_note": "页面无明确发布日期或此日期为特殊事件，见 claim_scope",
+      "evidence_locator": "Voice options / models",
+      "claim_scope": "内置/设计声线与模型有不同适用条件；本教程不克隆真人。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-captions",
+      "title": "W3C WAI captions",
+      "url": "https://www.w3.org/WAI/media/av/captions/",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": null,
+      "published_at_note": "页面无明确发布日期或此日期为特殊事件，见 claim_scope",
+      "evidence_locator": "Automatic Captions are Not Sufficient",
+      "claim_scope": "字幕需包括必要非语音信息并人工校对自动结果。",
+      "verification_status": "source_reviewed_not_replicated"
+    },
+    {
+      "id": "music-src-mrt",
+      "title": "Magenta RealTime repository",
+      "url": "https://github.com/magenta/magenta-realtime",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "published_at": null,
+      "published_at_note": "页面无明确发布日期或此日期为特殊事件，见 claim_scope",
+      "evidence_locator": "README / v1_legacy",
+      "claim_scope": "当前 main 为 MRT2；v1 移往 v1_legacy。代码 Apache-2.0 不能单独证明所有权重商用权。",
+      "verification_status": "source_reviewed_not_replicated"
+    }
+  ],
+  "events": [],
+  "edges": [],
+  "cross_project_links": [
+    {
+      "case_id": "music-musicgen-sketch",
+      "node_id": "music-musicgen",
+      "relation": "uses_or_teaches",
+      "evidence_type": "editorial_learning_relation",
+      "verification_status": "editorial_learning_relation"
+    },
+    {
+      "case_id": "music-jasco-arrangement",
+      "node_id": "music-jasco",
+      "relation": "uses_or_teaches",
+      "evidence_type": "editorial_learning_relation",
+      "verification_status": "editorial_learning_relation"
+    },
+    {
+      "case_id": "music-lyria-song",
+      "node_id": "music-lyria",
+      "relation": "uses_or_teaches",
+      "evidence_type": "editorial_learning_relation",
+      "verification_status": "editorial_learning_relation"
+    },
+    {
+      "case_id": "music-suno-lyrics",
+      "node_id": "music-suno",
+      "relation": "uses_or_teaches",
+      "evidence_type": "editorial_learning_relation",
+      "verification_status": "editorial_learning_relation"
+    },
+    {
+      "case_id": "music-stem-separation",
+      "node_id": "music-demucs",
+      "relation": "uses_or_teaches",
+      "evidence_type": "editorial_learning_relation",
+      "verification_status": "editorial_learning_relation"
+    },
+    {
+      "case_id": "music-mix-assistant",
+      "node_id": "music-neutron",
+      "relation": "uses_or_teaches",
+      "evidence_type": "editorial_learning_relation",
+      "verification_status": "editorial_learning_relation"
+    },
+    {
+      "case_id": "music-master-assistant",
+      "node_id": "music-ozone",
+      "relation": "uses_or_teaches",
+      "evidence_type": "editorial_learning_relation",
+      "verification_status": "editorial_learning_relation"
+    },
+    {
+      "case_id": "music-podcast-post",
+      "node_id": "music-auphonic",
+      "relation": "uses_or_teaches",
+      "evidence_type": "editorial_learning_relation",
+      "verification_status": "editorial_learning_relation"
+    },
+    {
+      "case_id": "music-speech-transcript",
+      "node_id": "music-whisper",
+      "relation": "uses_or_teaches",
+      "evidence_type": "editorial_learning_relation",
+      "verification_status": "editorial_learning_relation"
+    },
+    {
+      "case_id": "music-diarization-migrate",
+      "node_id": "music-diarize",
+      "relation": "uses_or_teaches",
+      "evidence_type": "editorial_learning_relation",
+      "verification_status": "editorial_learning_relation"
+    },
+    {
+      "case_id": "music-sfx-foley",
+      "node_id": "music-eleven-sfx",
+      "relation": "uses_or_teaches",
+      "evidence_type": "editorial_learning_relation",
+      "verification_status": "editorial_learning_relation"
+    },
+    {
+      "case_id": "music-tts-podcast",
+      "node_id": "music-eleven-tts",
+      "relation": "uses_or_teaches",
+      "evidence_type": "editorial_learning_relation",
+      "verification_status": "editorial_learning_relation"
+    },
+    {
+      "case_id": "music-accessible-captions",
+      "node_id": "music-captions",
+      "relation": "uses_or_teaches",
+      "evidence_type": "editorial_learning_relation",
+      "verification_status": "editorial_learning_relation"
+    },
+    {
+      "case_id": "music-mrt-live",
+      "node_id": "music-mrt2",
+      "relation": "uses_or_teaches",
+      "evidence_type": "editorial_learning_relation",
+      "verification_status": "editorial_learning_relation"
+    }
+  ],
+  "coverage_gaps": [
+    "未进行真实生成/试听/时延或音质评测",
+    "未验证账户、地区可用性、价格和购买条件",
+    "未覆盖全部 DAW、唱声合成、空间音频、乐谱 OCR、音频修复产品",
+    "Stable Audio 精确商业许可证适用与 Suno 冲突条款需要发行前专项复核",
+    "没有镜像模型权重、训练音频或版权歌词"
+  ],
+  "schema_compatibility": {
+    "agentwork": "cases 已按 content schema 必需字段提供；研究包须显式适配，不直接覆盖 cases.json",
+    "modelatlas": "nodes/sources/events/edges 为 build.normalize 可接受结构，技术节点 kind 保留模型/工具/标准区分",
+    "cross_project": "cross_project_links 为本候选扩展，不能冒充现有构建已支持；整合时需明确 adapter"
+  },
+  "maintenance": {
+    "triggers": [
+      "模型版本、弃用公告、许可、下载与定价规则变化",
+      "调用失败或社区报告须回到官方证据复核"
+    ],
+    "procedure": [
+      "保留旧版与变更原因",
+      "先更新来源和 lifecycle，再回归引用与教程断言",
+      "运行实测需额外明确授权和预算；不能升级证据等级"
+    ],
+    "no_scheduled_job_created": true
+  },
+  "validation": {
+    "checked_at": "2026-10-28",
+    "modelatlas_normalize": "passed on this standalone bundle",
+    "agentwork_required_fields": "passed 14 case shape/step/ID/link checks; not full AgentWork build",
+    "audio_runtime": "not_run",
+    "r1_mutation": "none; read schema/normalizer only"
+  }
+}
