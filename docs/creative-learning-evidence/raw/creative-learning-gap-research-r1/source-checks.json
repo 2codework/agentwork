@@ -1,0 +1,216 @@
+{
+  "checked_at": "2026-10-28",
+  "method": "web搜索定位后直接打开官方帮助/产品/仓库；记录失败和重定向，不复制页面全文。",
+  "checks": [
+    {
+      "id": "ableton-comp",
+      "url": "https://help.ableton.com/hc/en-us/articles/360019092580-Comping-in-Live-FAQ",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "Comping自Live 11起；Take Lanes/Draw Mode；Intro/Standard/Suite支持comping，linked-track editing限Standard/Suite。",
+      "limitations": ""
+    },
+    {
+      "id": "ableton-auth",
+      "url": "https://help.ableton.com/hc/en-us/articles/209773585-Authorizing-Live-Online",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "需授权；在线登录账户选择许可证，亦有离线授权路径。",
+      "limitations": ""
+    },
+    {
+      "id": "ableton-buy",
+      "url": "https://help.ableton.com/hc/en-us/articles/209772965-Buying-Live-FAQ",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "购买和升级价格依许可/账户；不引用价格。",
+      "limitations": ""
+    },
+    {
+      "id": "muse-parts",
+      "url": "https://handbook.musescore.org/basics/parts",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "MuseScore 4默认乐器分谱，Parts选择，File Export分开/合并输出，默认PDF。",
+      "limitations": ""
+    },
+    {
+      "id": "muse-install",
+      "url": "https://handbook.musescore.org/en_gb/introduction/download-and-installation",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "官方下载免费且无需账户或订阅；可选生态服务不能据此推定免费。",
+      "limitations": ""
+    },
+    {
+      "id": "muse-license",
+      "url": "https://github.com/musescore/MuseScore",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "README明确Studio GPL version 3.0；不等于乐谱、字体、音色均GPL。",
+      "limitations": ""
+    },
+    {
+      "id": "kden-proxy",
+      "url": "https://docs.kdenlive.org/en/user_interface/menu/media_menu.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "26.08手册：启用项目代理后创建Proxy Clip；P标记；最终渲染使用原素材。",
+      "limitations": "文档版本标签不是本机版本，也不是发布日期。"
+    },
+    {
+      "id": "kden-license",
+      "url": "https://github.com/KDE/kdenlive",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "KDE官方镜像说明免费开源；仓库显示GPL-3.0，主开发在KDE Invent。",
+      "limitations": "分发二进制及各组件仍须核查对应版本许可证。"
+    },
+    {
+      "id": "kden-broken",
+      "url": "https://docs.kdenlive.org/en/project_and_asset_management/project_bin/proxy_clips.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "tool_open_error",
+      "supported_claim": "无事实依赖",
+      "limitations": "web open Internal Error；改用已打开官方Media Menu，不认定产品不可用。"
+    },
+    {
+      "id": "indesign-package",
+      "url": "https://helpx.adobe.com/indesign/desktop/print/preflight/package-files-for-output.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": "2026-06-02",
+      "date_semantics": "page_update_or_explicit_announcement_only",
+      "status": "opened_primary",
+      "supported_claim": "File Package前预检；可包含链接、IDML、PDF；Adobe Fonts激活字体不拷入；隐藏非打印资产有可选包含项。",
+      "limitations": ""
+    },
+    {
+      "id": "font-rights",
+      "url": "https://helpx.adobe.com/fonts/web/getting-and-using-fonts/package-font-files.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": "2025-11-12",
+      "date_semantics": "page_update_or_explicit_announcement_only",
+      "status": "opened_primary",
+      "supported_claim": "字体传输依具体EULA；Adobe Fonts不可拷贝移动；收件人可能须独立许可。",
+      "limitations": ""
+    },
+    {
+      "id": "indesign-pay",
+      "url": "https://www.adobe.com/products/indesign/free-trial-download.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "Creative Cloud会员；7日试用不取消会转收费，不执行注册或试用。",
+      "limitations": ""
+    },
+    {
+      "id": "underlord-help",
+      "url": "https://help.descript.com/getting-started/underlord-beta-your-ai-co-editor-in-descript",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "Beta co-editor；项目右侧入口；可选底层模型；提示推理及工具均计积分，成本非确定。",
+      "limitations": "旧hc文章URL重定向至本页；不冻结模型选择器列表。"
+    },
+    {
+      "id": "underlord-product",
+      "url": "https://www.descript.com/underlord",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "官方称agentic video co-editor；Free有限使用，付费分级。",
+      "limitations": "营销能力不是实测质量；本包不复制动态价格和额度。"
+    },
+    {
+      "id": "underlord-v2",
+      "url": "https://feedback.descript.com/changelog/announcingunderlord-v2",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "历史v2公告讲计划/自纠正/模型选择；旧Labs退出开关是临时说明。",
+      "limitations": "页面未显示可靠绝对发布日期，date保持null；不把旧模型表或临时开关当现行。"
+    },
+    {
+      "id": "underlord-revert",
+      "url": "https://help.descript.com/ai-assistant/revert",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "官方提供Undo/rollback学习入口。",
+      "limitations": ""
+    },
+    {
+      "id": "underlord-terms",
+      "url": "https://www.descript.com/terms",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "用户需拥有上传/分享权；生成输出权利限法律可保护范围；外部自动化不能由本研究推定授权。",
+      "limitations": ""
+    },
+    {
+      "id": "express-overview",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-overview.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": "2026-10-22",
+      "date_semantics": "page_update_or_explicit_announcement_only",
+      "status": "opened_primary",
+      "supported_claim": "Beta会话设计/局部调整；个人Free/Premium渐进开放，桌面web；不支持Teams/Enterprise/Education；地区与语言有限。",
+      "limitations": ""
+    },
+    {
+      "id": "express-how",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/get-started-with-the-adobe-express-ai-assistant.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": "2026-10-22",
+      "date_semantics": "page_update_or_explicit_announcement_only",
+      "status": "opened_primary",
+      "supported_claim": "主页提示、补信息、四候选、对话修改/手工编辑/Download；Chats不共享给协作者。",
+      "limitations": ""
+    },
+    {
+      "id": "express-history",
+      "url": "https://news.adobe.com/news/2025/10/adobe-max-2025-express-ai-assistant",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": "2025-10-28",
+      "date_semantics": "page_update_or_explicit_announcement_only",
+      "status": "opened_primary",
+      "supported_claim": "官方2025-10-28宣布beta；未来企业功能描述不是现行可用证据。",
+      "limitations": ""
+    },
+    {
+      "id": "express-faq-redirect",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-faq.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "redirect_with_search_body_conflict",
+      "supported_claim": "搜索缓存有10月5日额度细则，但打开重定向overview且无credits文本，未确认额度。",
+      "limitations": "不得将缓存的每日次数/积分豁免直接纳入现行指南。"
+    }
+  ]
+}

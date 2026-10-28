@@ -1,0 +1,69 @@
+{
+  "checked_at": "2026-10-28",
+  "method": "independent official web open/find; no browser/product execution",
+  "checks": [
+    {
+      "id": "underlord-help",
+      "url": "https://help.descript.com/getting-started/underlord-beta-your-ai-co-editor-in-descript",
+      "qa_status": "opened_primary",
+      "evidence_locator": "L249–269",
+      "qa_observation_zh": "Beta；右侧项目入口；可选底层模型；推理与工具消耗积分且同提示成本不确定。"
+    },
+    {
+      "id": "underlord-product",
+      "url": "https://www.descript.com/underlord",
+      "qa_status": "opened_primary",
+      "evidence_locator": "L89–115; L244–304",
+      "qa_observation_zh": "agentic video co-editor分类及Free有限使用有支持；不固定价格/额度、不将营销质量当实测。"
+    },
+    {
+      "id": "underlord-v2",
+      "url": "https://feedback.descript.com/changelog/announcingunderlord-v2",
+      "qa_status": "opened_primary",
+      "evidence_locator": "L20–46; L62–66",
+      "qa_observation_zh": "历史公告有计划/自纠正；临时Labs开关非当前保证；未见可靠绝对日期。"
+    },
+    {
+      "id": "underlord-revert",
+      "url": "https://help.descript.com/ai-assistant/revert",
+      "qa_status": "opened_primary",
+      "evidence_locator": "L244–275",
+      "qa_observation_zh": "三种恢复路径；Revert检查点仅当前session，刷新/关闭项目后改用Version History。"
+    },
+    {
+      "id": "underlord-terms",
+      "url": "https://www.descript.com/terms",
+      "qa_status": "opened_primary",
+      "evidence_locator": "§8.1 L89–92; §8.4 L101–109",
+      "qa_observation_zh": "上传分享须有权利；输出权属受可保护法律范围限制，仍须审核且可能非独有/侵权。不是法律结论。"
+    },
+    {
+      "id": "express-overview",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-overview.html",
+      "qa_status": "opened_primary",
+      "evidence_locator": "L712–750",
+      "qa_observation_zh": "2026-10-22更新；Beta会话助手；个人Free/Premium渐进、桌面web；排除所列地区，语言列表不含中文；Chats不与协作者共享。"
+    },
+    {
+      "id": "express-how",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/get-started-with-the-adobe-express-ai-assistant.html",
+      "qa_status": "opened_primary",
+      "evidence_locator": "L712–750",
+      "qa_observation_zh": "提示→补资料→四候选→对话/手工修改→下载/分享文档流程。实际分享仍需批准。"
+    },
+    {
+      "id": "express-history",
+      "url": "https://news.adobe.com/news/2025/10/adobe-max-2025-express-ai-assistant",
+      "qa_status": "opened_primary",
+      "evidence_locator": "L3; L8–13",
+      "qa_observation_zh": "2025-10-28 Beta公告，未来企业计划不能当当前权限；会话及手工编辑。"
+    },
+    {
+      "id": "express-faq-redirect",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-faq.html",
+      "qa_status": "not_retried_prior_redirect_conflict",
+      "evidence_locator": "original source-checks record",
+      "qa_observation_zh": "保留原重定向/搜索缓存冲突；本轮不重试该页，不确认精确积分/价格，不标原页成功。"
+    }
+  ]
+}

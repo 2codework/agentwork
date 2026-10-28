@@ -10,8 +10,14 @@ class OfflineOfficeLabTests(unittest.TestCase):
   self.assertEqual(m['cases'],132)
   self.assertEqual(hashlib.sha256((LAB/'qa/FINAL-VALIDATION.json').read_bytes()).hexdigest(),'21eeace0d7fb96066590a2c14981b68d34a5762559609fe513299a89d307f0ff')
   for folder in ('site','docs'):
-   self.assertEqual(hashlib.sha256((ROOT/folder/'data.json').read_bytes()).hexdigest(),m['baseline_data_sha256'])
-   self.assertEqual(len(json.loads((ROOT/folder/'data.json').read_text())['cases']),132)
+   frozen=json.loads((ROOT/'tests/fixtures/creative-learning-baseline.json').read_text())
+   self.assertEqual(frozen['baseline_data_sha256'],m['baseline_data_sha256']) # historical lab-only byte contract retained
+   data=json.loads((ROOT/folder/'data.json').read_text())
+   digest=lambda v:hashlib.sha256(json.dumps(v,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+   self.assertEqual({k:digest(v) for k,v in data.items() if k!='cases'},frozen['other_top_level'])
+   self.assertEqual({c['id']:digest(c) for c in data['cases'] if c['id'] in frozen['cases']},frozen['cases'])
+   self.assertEqual({c['id'] for c in data['cases']}-set(frozen['cases']),set(frozen['new_case_ids']))
+   self.assertEqual(len(data['cases']),138)
   qa=json.loads((LAB/'qa/FINAL-VALIDATION.json').read_text())
   for name,h in qa['input_sha256'].items():self.assertEqual(hashlib.sha256((LAB/'source'/name).read_bytes()).hexdigest(),h)
  def test_zip_members_and_reproducibility(self):

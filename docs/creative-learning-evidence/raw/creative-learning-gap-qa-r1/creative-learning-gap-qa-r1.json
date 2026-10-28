@@ -1,0 +1,99 @@
+{
+  "schema_version": "creative-learning-gap-qa-r1.v1",
+  "checked_at": "2026-10-28",
+  "items": [
+    {
+      "id": "gap-underlord-review",
+      "decision": "fix",
+      "required_changes": [
+        "Revert检查点仅当前session；刷新/关闭后走Version History。",
+        "Version History恢复影响整个项目全部compositions/files；先预览并人工审查协作者变化再批准Restore。"
+      ],
+      "accepted_classification": "agentic_application_feature",
+      "unknowns": [
+        "精确价格/积分与用户资格",
+        "质量与恢复效果",
+        "未完整素材/第三方条款权利审核"
+      ]
+    },
+    {
+      "id": "gap-express-targeted",
+      "decision": "accept",
+      "accepted_classification": "conversational_ai_assistant",
+      "unknowns": [
+        "FAQ重定向冲突不重试、不标成功",
+        "精确价格/积分",
+        "用户实际开放资格",
+        "商业再分发权利及全部素材/Stock许可"
+      ]
+    },
+    {
+      "id": "gap-ableton-comp",
+      "decision": "accept",
+      "reason": "所提步骤与版本边界成立，保持普通DAW编辑，不泛化Lite或AI效果。",
+      "required_classification": "deterministic_software_workflow",
+      "execution_status": "never-run",
+      "unknowns": [
+        "实际产品操作与输出质量未测",
+        "所有具体素材/字体/插件/编码权利未作逐项审计"
+      ],
+      "integration_guardrails": [
+        "不得升级为AI或Agent效果",
+        "原创合成教学验收是设计而非厂商实测承诺",
+        "精确首发与用户账号价格保持未知"
+      ]
+    },
+    {
+      "id": "gap-muse-parts",
+      "decision": "accept",
+      "reason": "所提分谱/导出步骤及Studio许可成立，保持排版工作流非Agent。",
+      "required_classification": "deterministic_software_workflow",
+      "execution_status": "never-run",
+      "unknowns": [
+        "实际产品操作与输出质量未测",
+        "所有具体素材/字体/插件/编码权利未作逐项审计"
+      ],
+      "integration_guardrails": [
+        "不得升级为AI或Agent效果",
+        "原创合成教学验收是设计而非厂商实测承诺",
+        "精确首发与用户账号价格保持未知"
+      ]
+    },
+    {
+      "id": "gap-kden-proxy",
+      "decision": "accept",
+      "reason": "代理/原片步骤成立。离线canonical确有vid-kdenlive，复用节点，不重复新增Kdenlive产品。",
+      "required_classification": "deterministic_software_workflow",
+      "execution_status": "never-run",
+      "unknowns": [
+        "实际产品操作与输出质量未测",
+        "所有具体素材/字体/插件/编码权利未作逐项审计"
+      ],
+      "integration_guardrails": [
+        "不得升级为AI或Agent效果",
+        "原创合成教学验收是设计而非厂商实测承诺",
+        "精确首发与用户账号价格保持未知"
+      ]
+    },
+    {
+      "id": "gap-indesign-preflight",
+      "decision": "accept",
+      "reason": "打包/预检及字体许可关键边界成立。font-rights原页本轮失败需保留unknown；新增独立官方FAQ而非伪称原页成功。",
+      "required_classification": "deterministic_software_workflow",
+      "execution_status": "never-run",
+      "unknowns": [
+        "实际产品操作与输出质量未测",
+        "所有具体素材/字体/插件/编码权利未作逐项审计"
+      ],
+      "integration_guardrails": [
+        "不得升级为AI或Agent效果",
+        "原创合成教学验收是设计而非厂商实测承诺",
+        "精确首发与用户账号价格保持未知"
+      ]
+    }
+  ],
+  "source_checks_file": "source-checks.json",
+  "canonical_modified": false,
+  "original_bytes_preserved": true,
+  "execution_status": "never-run"
+}

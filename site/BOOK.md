@@ -22145,3 +22145,1192 @@ original_teaching_template_not_executed
 }
 ```
 </details>
+
+## 视频Agent：Underlord粗剪的差异审查与回滚
+
+分类：agentic_application_feature。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。 既有FilmAgent/ViMax为研究编排，HKUDS VideoAgent与Kdenlive案例不覆盖商用会话剪辑的积分/回滚。
+
+**证据边界：** 仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。
+
+### 合成输入
+
+只用原创/授权且无个人敏感信息的合成教学素材
+原创具体任务：用一份自写90秒科普讲解及对应自录素材设计45秒粗剪；三项核心事实标为不可删除，不采用声线克隆、生成配音或外部素材。
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 提示词
+
+仅设计教学练习，不运行产品、购买/试用、上传、克隆声音、外发或发布。
+分类：agentic_application_feature。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。
+原始输入：只用原创/授权且无个人敏感信息的合成教学素材
+目标：既有FilmAgent/ViMax为研究编排，HKUDS VideoAgent与Kdenlive案例不覆盖商用会话剪辑的积分/回滚。
+步骤依据：
+打开已有授权项目的Underlord侧栏
+给明确剪辑目标、禁止改动和长度约束
+对照转录稿逐处检查编辑：当前session可在对应Underlord响应下Revert；刷新或关闭项目后改用File > Version history。先预览所选历史版本，核对整个项目全部compositions/files及协作者变更；确认恢复影响获准后才Restore Version。
+预期验收：
+先设计原始稿/剪后稿差异表，关键事实零删改
+检查断句、画面跳切与字幕同步；不以工具自述判成功
+记录提示前后Usage，达到自定预算即停；未经批准不发布
+设计两个恢复分支：当前会话Revert，以及刷新/关闭后Version History；不得把checkpoint写成永久存在。
+Version History恢复影响全项目全部compositions/files，不只当前片段；先预览并审查协作者变化，再批准Restore。恢复后逐项核对，不能凭按钮点击或助手自述判成功；不承诺积分退回。
+缺账号/许可/预算/素材授权则停止并列缺项；不能将软件权限当操作授权。
+
+原创纸面练习（never-run）：用一份自写90秒科普讲解及对应自录素材设计45秒粗剪；三项核心事实标为不可删除，不采用声线克隆、生成配音或外部素材。
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+1. 在纸面台账列原片段时间、事实句与允许删掉的重复语，保留未编辑副本。
+2. 写出仅压缩重复内容的受限请求及自定积分上限；待有授权再导入产品，不将本课当授权。
+3. 对每个拟删片段记录理由及可接受/拒绝决定；禁止因助手自述而跳过声音和画面复核。
+4. 设计当前session Revert与关闭后Version History两条恢复路径；后者先列全项目影响和协作者修改再审批。
+停止条件：不可删除事实被改动；预算不明或达到上限；历史版本含未批准的协作者变化；人物或媒体权利不明
+
+### 输出模板
+
+待审练习记录：输入资产与授权清单；版本/账号/预算检查；逐步操作计划；预期验收表（未观察）；失败恢复与人工批准点；来源/未知项清单。不得虚构实测输出。
+待产出而非已产出：原片/粗剪差异表；不变量检查清单；Usage前后记录模板；项目级恢复审批单
+
+### 风险与授权
+
+这是官方agentic应用功能，不是某单一模型。仅UI学习设计；本轮不调用API/MCP、不上传、不支付、不克隆声音、不发布。 恢复操作也是有副作用的项目修改，须先核对范围；本轮未执行Revert、Undo或Restore，也不保证无限历史保留。
+许可：服务条款而非开源模型许可；素材/人物同意/输出权利单独核验，不声称输出天然无版权风险。
+账号与费用：Descript账户与计划；Free有限Underlord，付费能力/高阶模型不同；每次推理+工具均可能计费，同提示成本不固定。
+原创练习停止条件：不可删除事实被改动；预算不明或达到上限；历史版本含未批准的协作者变化；人物或媒体权利不明
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+帮助页当前Beta；v2历史公告日期未知，旧Labs开关与模型名不保留为现行操作。；精确首发日期unknown，来源更新日期不是产品首发。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+帮助页当前Beta；v2历史公告日期未知，旧Labs开关与模型名不保留为现行操作。
+
+### 最佳实践证据状态
+
+documentation-only / never-run；原创教学提案，不是实测最佳实践。
+
+### 1. 待执行步骤 1
+
+打开已有授权项目的Underlord侧栏
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 2. 待执行步骤 2
+
+给明确剪辑目标、禁止改动和长度约束
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 3. 待执行步骤 3
+
+对照转录稿逐处检查编辑：当前session可在对应Underlord响应下Revert；刷新或关闭项目后改用File > Version history。先预览所选历史版本，核对整个项目全部compositions/files及协作者变更；确认恢复影响获准后才Restore Version。
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 4. 原创练习步骤 1（未执行）
+
+在纸面台账列原片段时间、事实句与允许删掉的重复语，保留未编辑副本。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 5. 原创练习步骤 2（未执行）
+
+写出仅压缩重复内容的受限请求及自定积分上限；待有授权再导入产品，不将本课当授权。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 6. 原创练习步骤 3（未执行）
+
+对每个拟删片段记录理由及可接受/拒绝决定；禁止因助手自述而跳过声音和画面复核。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 7. 原创练习步骤 4（未执行）
+
+设计当前session Revert与关闭后Version History两条恢复路径；后者先列全项目影响和协作者修改再审批。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+- 对应技术（编辑学习关系）：[Descript Underlord（对应技术/工具）](https://2codework.github.io/modelatlas/?node=creative-underlord)
+- agent_boundary：分类：agentic_application_feature。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。 这是官方agentic应用功能，不是某单一模型。仅UI学习设计；本轮不调用API/MCP、不上传、不支付、不克隆声音、不发布。 恢复操作也是有副作用的项目修改，须先核对范围；本轮未执行Revert、Undo或Restore，也不保证无限历史保留。
+- cost：Descript账户与计划；Free有限Underlord，付费能力/高阶模型不同；每次推理+工具均可能计费，同提示成本不固定。
+- permissions：本练习仅纸面设计；执行、上传、计费、恢复协作项目、下载受限素材和对外发布均未获本练习自动授权。
+- 验收：先设计原始稿/剪后稿差异表，关键事实零删改
+- 验收：检查断句、画面跳切与字幕同步；不以工具自述判成功
+- 验收：记录提示前后Usage，达到自定预算即停；未经批准不发布
+- 验收：设计两个恢复分支：当前会话Revert，以及刷新/关闭后Version History；不得把checkpoint写成永久存在。
+- 验收：Version History恢复影响全项目全部compositions/files，不只当前片段；先预览并审查协作者变化，再批准Restore。恢复后逐项核对，不能凭按钮点击或助手自述判成功；不承诺积分退回。
+- 验收：预期交付物（未观察）：原片/粗剪差异表
+- 验收：预期交付物（未观察）：不变量检查清单
+- 验收：预期交付物（未观察）：Usage前后记录模板
+- 验收：预期交付物（未观察）：项目级恢复审批单
+- 验收：停止条件：不可删除事实被改动
+- 验收：停止条件：预算不明或达到上限
+- 验收：停止条件：历史版本含未批准的协作者变化
+- 验收：停止条件：人物或媒体权利不明
+- 来源：underlord-help — https://help.descript.com/getting-started/underlord-beta-your-ai-co-editor-in-descript（核查：2026-10-28）
+Beta co-editor；项目右侧入口；可选底层模型；提示推理及工具均计积分，成本非确定。；原观察：opened_primary；独立QA：opened_primary；限制：旧hc文章URL重定向至本页；不冻结模型选择器列表。
+- 来源：underlord-product — https://www.descript.com/underlord（核查：2026-10-28）
+官方称agentic video co-editor；Free有限使用，付费分级。；原观察：opened_primary；独立QA：opened_primary；限制：营销能力不是实测质量；本包不复制动态价格和额度。
+- 来源：underlord-v2 — https://feedback.descript.com/changelog/announcingunderlord-v2（核查：2026-10-28）
+历史v2公告讲计划/自纠正/模型选择；旧Labs退出开关是临时说明。；原观察：opened_primary；独立QA：opened_primary；限制：页面未显示可靠绝对发布日期，date保持null；不把旧模型表或临时开关当现行。
+- 来源：underlord-revert — https://help.descript.com/ai-assistant/revert（核查：2026-10-28）
+响应Revert checkpoint仅当前session；刷新/关闭项目后使用Version History，另有单步Undo。；原观察：opened_primary；独立QA：opened_primary；限制：不推出永久checkpoint、无限保留或积分退款。
+- 来源：underlord-terms — https://www.descript.com/terms（核查：2026-10-28）
+用户需拥有上传/分享权；生成输出权利限法律可保护范围；外部自动化不能由本研究推定授权。；原观察：opened_primary；独立QA：opened_primary；限制：
+- 来源：underlord-history-independent — https://help.descript.com/working-in-projects/version-history（核查：2026-10-28）
+可预览版本，Restore出现协作者冲突确认；恢复影响项目所有compositions/files，必须先审查协作者变更。；原观察：independently_opened_primary；独立QA：opened_primary；限制：独立来源；不能将它的成功记作另一个URL成功。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "gap-underlord-review",
+  "title": "视频Agent：Underlord粗剪的差异审查与回滚",
+  "domain": "视频",
+  "product_name": "Descript Underlord",
+  "entity_type": "agentic_application_feature",
+  "is_foundation_model": false,
+  "gap_vs_existing": "既有FilmAgent/ViMax为研究编排，HKUDS VideoAgent与Kdenlive案例不覆盖商用会话剪辑的积分/回滚。",
+  "learning_value": "高：补真正创作agent与成本/失败恢复",
+  "visible_documented_path": [
+    "打开已有授权项目的Underlord侧栏",
+    "给明确剪辑目标、禁止改动和长度约束",
+    "对照转录稿逐处检查编辑：当前session可在对应Underlord响应下Revert；刷新或关闭项目后改用File > Version history。先预览所选历史版本，核对整个项目全部compositions/files及协作者变更；确认恢复影响获准后才Restore Version。"
+  ],
+  "original_exercise": {
+    "status": "proposed_not_executed",
+    "fixture": "只用原创/授权且无个人敏感信息的合成教学素材",
+    "acceptance_checks": [
+      "先设计原始稿/剪后稿差异表，关键事实零删改",
+      "检查断句、画面跳切与字幕同步；不以工具自述判成功",
+      "记录提示前后Usage，达到自定预算即停；未经批准不发布",
+      "设计两个恢复分支：当前会话Revert，以及刷新/关闭后Version History；不得把checkpoint写成永久存在。",
+      "Version History恢复影响全项目全部compositions/files，不只当前片段；先预览并审查协作者变化，再批准Restore。恢复后逐项核对，不能凭按钮点击或助手自述判成功；不承诺积分退回。"
+    ]
+  },
+  "access_and_payment": "Descript账户与计划；Free有限Underlord，付费能力/高阶模型不同；每次推理+工具均可能计费，同提示成本不固定。",
+  "license_and_rights": "服务条款而非开源模型许可；素材/人物同意/输出权利单独核验，不声称输出天然无版权风险。",
+  "automation_boundary": "这是官方agentic应用功能，不是某单一模型。仅UI学习设计；本轮不调用API/MCP、不上传、不支付、不克隆声音、不发布。 恢复操作也是有副作用的项目修改，须先核对范围；本轮未执行Revert、Undo或Restore，也不保证无限历史保留。",
+  "lifecycle": {
+    "status": "documented_beta",
+    "release_date": null,
+    "date_note": "unknown；不从checked_at或手册版本反推出首发日期",
+    "history": "帮助页当前Beta；v2历史公告日期未知，旧Labs开关与模型名不保留为现行操作。"
+  },
+  "source_ids": [
+    "underlord-help",
+    "underlord-product",
+    "underlord-v2",
+    "underlord-revert",
+    "underlord-terms",
+    "underlord-history-independent"
+  ],
+  "verification": {
+    "documentation_review": true,
+    "product_run": false,
+    "account_login": false,
+    "api_key_used": false,
+    "output_quality_verified": false
+  },
+  "integration_proposal": {
+    "agentwork": "新增带人工闸门的学习案例，标synthetic；不要宣称agent已执行",
+    "modelatlas": "产品/应用功能节点，不归入基础模型；Kdenlive复用现有vid-kdenlive而非重复工具节点"
+  }
+}
+```
+</details>
+
+## 设计AI助手：局部修改与人工接管
+
+分类：conversational_ai_assistant。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。 不同于已覆盖Firefly图像API、Photoshop API和Canva模板填充；补会话中保持设计不变量与手工接管。
+
+**证据边界：** 仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。
+
+### 合成输入
+
+只用原创/授权且无个人敏感信息的合成教学素材
+原创具体任务：为虚构社区读书会设计海报，只把时间从周六14:00改为周日15:00；书名、地点与自定品牌色必须保留。
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 提示词
+
+仅设计教学练习，不运行产品、购买/试用、上传、克隆声音、外发或发布。
+分类：conversational_ai_assistant。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。
+原始输入：只用原创/授权且无个人敏感信息的合成教学素材
+目标：不同于已覆盖Firefly图像API、Photoshop API和Canva模板填充；补会话中保持设计不变量与手工接管。
+步骤依据：
+在主页用提示生成虚构活动海报并补齐占位信息
+选择候选后只修改指定文字/元素，保留其余布局
+需要时Open in editor并关闭AI Assistant转手工编辑；只准备下载审稿
+预期验收：
+把日期/地址/品牌色列为不变量并逐项对照
+检查字体、对比度、文字溢出与非目标区变化
+协作者不能看到私有Chats，因此交付独立变更说明，而非假设聊天会共享
+缺账号/许可/预算/素材授权则停止并列缺项；不能将软件权限当操作授权。
+
+原创纸面练习（never-run）：为虚构社区读书会设计海报，只把时间从周六14:00改为周日15:00；书名、地点与自定品牌色必须保留。
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+1. 在纸上列活动字段、允许修改区与三项不变量；先确认地区、账户与语言资格，不能访问则停留在离线练习。
+2. 写一条生成请求和一条局部修改请求，分开审查，不让修改要求扩展成整页重做。
+3. 设计对话编辑与手工接管对照表：哪些变化接受，哪些需Open in editor进一步修正。
+4. 准备独立变更说明供协作者阅读；Chats私有不能作为交付依据。
+停止条件：账户/地区不支持；费用规则不清且下一步可能收费；非目标文字、色彩或图层被改变；字体或Stock素材许可未知
+
+### 输出模板
+
+待审练习记录：输入资产与授权清单；版本/账号/预算检查；逐步操作计划；预期验收表（未观察）；失败恢复与人工批准点；来源/未知项清单。不得虚构实测输出。
+待产出而非已产出：结构化活动字段表；修改前后不变量表；图像/字体权利台账；不依赖私有Chats的交付说明
+
+### 风险与授权
+
+称会话AI助手，不称基础模型或无限自治Agent。只设计受控提示和人工审批；不承诺跨应用自动化/API。
+许可：Adobe服务与素材/字体规则另核；本轮未核完全部生成与Stock许可，商业再分发资格unknown，不替代法务审查。
+账号与费用：个人Free/Premium、桌面web、渐进Beta；Teams/Enterprise/Education不支持。现行页排除中国等地区，支持English/Bahasa Indonesia/Brazilian Portuguese/Hindi，未列中文。具体积分规则本次未确认。
+原创练习停止条件：账户/地区不支持；费用规则不清且下一步可能收费；非目标文字、色彩或图层被改变；字体或Stock素材许可未知
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+2025-10-28 beta公告仅作历史；2026-10-22现行帮助页仍Beta。旧FAQ缓存计费表与直接打开结果冲突。；精确首发日期unknown，来源更新日期不是产品首发。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+2025-10-28 beta公告仅作历史；2026-10-22现行帮助页仍Beta。旧FAQ缓存计费表与直接打开结果冲突。
+
+### 最佳实践证据状态
+
+documentation-only / never-run；原创教学提案，不是实测最佳实践。
+
+### 1. 待执行步骤 1
+
+在主页用提示生成虚构活动海报并补齐占位信息
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 2. 待执行步骤 2
+
+选择候选后只修改指定文字/元素，保留其余布局
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 3. 待执行步骤 3
+
+需要时Open in editor并关闭AI Assistant转手工编辑；只准备下载审稿
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 4. 原创练习步骤 1（未执行）
+
+在纸上列活动字段、允许修改区与三项不变量；先确认地区、账户与语言资格，不能访问则停留在离线练习。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 5. 原创练习步骤 2（未执行）
+
+写一条生成请求和一条局部修改请求，分开审查，不让修改要求扩展成整页重做。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 6. 原创练习步骤 3（未执行）
+
+设计对话编辑与手工接管对照表：哪些变化接受，哪些需Open in editor进一步修正。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 7. 原创练习步骤 4（未执行）
+
+准备独立变更说明供协作者阅读；Chats私有不能作为交付依据。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+- 对应技术（编辑学习关系）：[Adobe Express AI Assistant（对应技术/工具）](https://2codework.github.io/modelatlas/?node=creative-express-ai-assistant)
+- agent_boundary：分类：conversational_ai_assistant。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。 称会话AI助手，不称基础模型或无限自治Agent。只设计受控提示和人工审批；不承诺跨应用自动化/API。
+- cost：个人Free/Premium、桌面web、渐进Beta；Teams/Enterprise/Education不支持。现行页排除中国等地区，支持English/Bahasa Indonesia/Brazilian Portuguese/Hindi，未列中文。具体积分规则本次未确认。
+- permissions：本练习仅纸面设计；执行、上传、计费、恢复协作项目、下载受限素材和对外发布均未获本练习自动授权。
+- 验收：把日期/地址/品牌色列为不变量并逐项对照
+- 验收：检查字体、对比度、文字溢出与非目标区变化
+- 验收：协作者不能看到私有Chats，因此交付独立变更说明，而非假设聊天会共享
+- 验收：预期交付物（未观察）：结构化活动字段表
+- 验收：预期交付物（未观察）：修改前后不变量表
+- 验收：预期交付物（未观察）：图像/字体权利台账
+- 验收：预期交付物（未观察）：不依赖私有Chats的交付说明
+- 验收：停止条件：账户/地区不支持
+- 验收：停止条件：费用规则不清且下一步可能收费
+- 验收：停止条件：非目标文字、色彩或图层被改变
+- 验收：停止条件：字体或Stock素材许可未知
+- 来源：express-overview — https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-overview.html（核查：2026-10-28）
+Beta会话设计/局部调整；个人Free/Premium渐进开放，桌面web；不支持Teams/Enterprise/Education；地区与语言有限。；原观察：opened_primary；独立QA：opened_primary；限制：
+- 来源：express-how — https://helpx.adobe.com/express/web/ai-assistant/get-started-with-the-adobe-express-ai-assistant.html（核查：2026-10-28）
+主页提示、补信息、四候选、对话修改/手工编辑/Download；Chats不共享给协作者。；原观察：opened_primary；独立QA：opened_primary；限制：
+- 来源：express-history — https://news.adobe.com/news/2025/10/adobe-max-2025-express-ai-assistant（核查：2026-10-28）
+官方2025-10-28宣布beta；未来企业功能描述不是现行可用证据。；原观察：opened_primary；独立QA：opened_primary；限制：
+- 来源：express-faq-redirect — https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-faq.html（核查：2026-10-28）
+搜索缓存有10月5日额度细则，但打开重定向overview且无credits文本，未确认额度。；原观察：redirect_with_search_body_conflict；独立QA：not_retried_prior_redirect_conflict；限制：不得将缓存的每日次数/积分豁免直接纳入现行指南。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "gap-express-targeted",
+  "title": "设计AI助手：局部修改与人工接管",
+  "domain": "设计",
+  "product_name": "Adobe Express AI Assistant",
+  "entity_type": "conversational_ai_assistant",
+  "is_foundation_model": false,
+  "gap_vs_existing": "不同于已覆盖Firefly图像API、Photoshop API和Canva模板填充；补会话中保持设计不变量与手工接管。",
+  "learning_value": "高：补真实设计助手，同时公开地域/账号障碍",
+  "visible_documented_path": [
+    "在主页用提示生成虚构活动海报并补齐占位信息",
+    "选择候选后只修改指定文字/元素，保留其余布局",
+    "需要时Open in editor并关闭AI Assistant转手工编辑；只准备下载审稿"
+  ],
+  "original_exercise": {
+    "status": "proposed_not_executed",
+    "fixture": "只用原创/授权且无个人敏感信息的合成教学素材",
+    "acceptance_checks": [
+      "把日期/地址/品牌色列为不变量并逐项对照",
+      "检查字体、对比度、文字溢出与非目标区变化",
+      "协作者不能看到私有Chats，因此交付独立变更说明，而非假设聊天会共享"
+    ]
+  },
+  "access_and_payment": "个人Free/Premium、桌面web、渐进Beta；Teams/Enterprise/Education不支持。现行页排除中国等地区，支持English/Bahasa Indonesia/Brazilian Portuguese/Hindi，未列中文。具体积分规则本次未确认。",
+  "license_and_rights": "Adobe服务与素材/字体规则另核；本轮未核完全部生成与Stock许可，商业再分发资格unknown，不替代法务审查。",
+  "automation_boundary": "称会话AI助手，不称基础模型或无限自治Agent。只设计受控提示和人工审批；不承诺跨应用自动化/API。",
+  "lifecycle": {
+    "status": "documented_beta",
+    "release_date": null,
+    "date_note": "unknown；不从checked_at或手册版本反推出首发日期",
+    "history": "2025-10-28 beta公告仅作历史；2026-10-22现行帮助页仍Beta。旧FAQ缓存计费表与直接打开结果冲突。"
+  },
+  "source_ids": [
+    "express-overview",
+    "express-how",
+    "express-history",
+    "express-faq-redirect"
+  ],
+  "verification": {
+    "documentation_review": true,
+    "product_run": false,
+    "account_login": false,
+    "api_key_used": false,
+    "output_quality_verified": false
+  },
+  "integration_proposal": {
+    "agentwork": "新增带人工闸门的学习案例，标synthetic；不要宣称agent已执行",
+    "modelatlas": "产品/应用功能节点，不归入基础模型；Kdenlive复用现有vid-kdenlive而非重复工具节点"
+  }
+}
+```
+</details>
+
+## 音乐制作：多录次拼接与联动编辑验收
+
+分类：deterministic_software_workflow。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。 现有生成、分轨、混音、母带与频谱修复未讲真实多录次选段。
+
+**证据边界：** 仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。
+
+### 合成输入
+
+只用原创/授权且无个人敏感信息的合成教学素材
+原创具体任务：用原创8小节旋律的两次演奏设计拼接，分别标出节奏最稳与表情最佳的片段；这不是AI自动选优。
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 提示词
+
+仅设计教学练习，不运行产品、购买/试用、上传、克隆声音、外发或发布。
+分类：deterministic_software_workflow。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。
+原始输入：只用原创/授权且无个人敏感信息的合成教学素材
+目标：现有生成、分轨、混音、母带与频谱修复未讲真实多录次选段。
+步骤依据：
+Arrangement View显示Take Lanes；Automation Mode时先退出
+在Draw Mode将录次选段编入主轨
+需要多麦同步编辑时核对Standard/Suite的linked-track能力
+预期验收：
+原创8小节两次录音只是自定练习，不是厂商建议
+保留全部原始录次与选段表
+逐个接点试听爆音/呼吸截断，多麦对照相位与同步
+缺账号/许可/预算/素材授权则停止并列缺项；不能将软件权限当操作授权。
+
+原创纸面练习（never-run）：用原创8小节旋律的两次演奏设计拼接，分别标出节奏最稳与表情最佳的片段；这不是AI自动选优。
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+1. 给两次录音命名并记录同一节拍基准，原文件只读保留。
+2. 绘制Take Lanes到主轨的选段表，每次拼接保留来源录次与小节范围。
+3. 把多麦场景单独列为Standard/Suite联动编辑扩展，不给Intro/Lite假设相同权限。
+4. 安排接点试听、单声道对照和恢复原录次检查；未监听则只提交待验收设计。
+停止条件：版本不含所需联动功能；原始录次丢失；接点爆音或呼吸截断未复核；采样或插件素材来源不明
+
+### 输出模板
+
+待审练习记录：输入资产与授权清单；版本/账号/预算检查；逐步操作计划；预期验收表（未观察）；失败恢复与人工批准点；来源/未知项清单。不得虚构实测输出。
+待产出而非已产出：录次来源清单；逐小节选段表；接点试听记录模板；同步/相位待查项
+
+### 风险与授权
+
+普通DAW编辑功能，不是音乐Agent或生成模型；未证实API自治控制，不运行产品。
+许可：软件许可不授予录音、采样、插件素材再分发权；确切EULA条款未完整复核。
+账号与费用：付费许可/授权软件；在线授权需要Ableton账户，亦有离线路径。Comping支持Intro/Standard/Suite，联动轨编辑限Standard/Suite；不泛化到Lite。
+原创练习停止条件：版本不含所需联动功能；原始录次丢失；接点爆音或呼吸截断未复核；采样或插件素材来源不明
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+官方FAQ称自Live 11起提供comping；首发日期unknown。；精确首发日期unknown，来源更新日期不是产品首发。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+官方FAQ称自Live 11起提供comping；首发日期unknown。
+
+### 最佳实践证据状态
+
+documentation-only / never-run；原创教学提案，不是实测最佳实践。
+
+### 1. 待执行步骤 1
+
+Arrangement View显示Take Lanes；Automation Mode时先退出
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 2. 待执行步骤 2
+
+在Draw Mode将录次选段编入主轨
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 3. 待执行步骤 3
+
+需要多麦同步编辑时核对Standard/Suite的linked-track能力
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 4. 原创练习步骤 1（未执行）
+
+给两次录音命名并记录同一节拍基准，原文件只读保留。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 5. 原创练习步骤 2（未执行）
+
+绘制Take Lanes到主轨的选段表，每次拼接保留来源录次与小节范围。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 6. 原创练习步骤 3（未执行）
+
+把多麦场景单独列为Standard/Suite联动编辑扩展，不给Intro/Lite假设相同权限。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 7. 原创练习步骤 4（未执行）
+
+安排接点试听、单声道对照和恢复原录次检查；未监听则只提交待验收设计。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+- 对应技术（编辑学习关系）：[Ableton Live comping / linked-track editing（对应技术/工具）](https://2codework.github.io/modelatlas/?node=creative-ableton-live)
+- agent_boundary：分类：deterministic_software_workflow。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。 普通DAW编辑功能，不是音乐Agent或生成模型；未证实API自治控制，不运行产品。
+- cost：付费许可/授权软件；在线授权需要Ableton账户，亦有离线路径。Comping支持Intro/Standard/Suite，联动轨编辑限Standard/Suite；不泛化到Lite。
+- permissions：本练习仅纸面设计；执行、上传、计费、恢复协作项目、下载受限素材和对外发布均未获本练习自动授权。
+- 验收：原创8小节两次录音只是自定练习，不是厂商建议
+- 验收：保留全部原始录次与选段表
+- 验收：逐个接点试听爆音/呼吸截断，多麦对照相位与同步
+- 验收：预期交付物（未观察）：录次来源清单
+- 验收：预期交付物（未观察）：逐小节选段表
+- 验收：预期交付物（未观察）：接点试听记录模板
+- 验收：预期交付物（未观察）：同步/相位待查项
+- 验收：停止条件：版本不含所需联动功能
+- 验收：停止条件：原始录次丢失
+- 验收：停止条件：接点爆音或呼吸截断未复核
+- 验收：停止条件：采样或插件素材来源不明
+- 来源：ableton-comp — https://help.ableton.com/hc/en-us/articles/360019092580-Comping-in-Live-FAQ（核查：2026-10-28）
+Comping自Live 11起；Take Lanes/Draw Mode；Intro/Standard/Suite支持comping，linked-track editing限Standard/Suite。；原观察：opened_primary；独立QA：opened_primary；限制：
+- 来源：ableton-auth — https://help.ableton.com/hc/en-us/articles/209773585-Authorizing-Live-Online（核查：2026-10-28）
+需授权；在线登录账户选择许可证，亦有离线授权路径。；原观察：opened_primary；独立QA：opened_primary；限制：
+- 来源：ableton-buy — https://help.ableton.com/hc/en-us/articles/209772965-Buying-Live-FAQ（核查：2026-10-28）
+购买和升级价格依许可/账户；不引用价格。；原观察：opened_primary；独立QA：opened_primary；限制：
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "gap-ableton-comp",
+  "title": "音乐制作：多录次拼接与联动编辑验收",
+  "domain": "音乐",
+  "product_name": "Ableton Live comping / linked-track editing",
+  "entity_type": "deterministic_software_workflow",
+  "is_foundation_model": false,
+  "gap_vs_existing": "现有生成、分轨、混音、母带与频谱修复未讲真实多录次选段。",
+  "learning_value": "中高：生成草图之后的真实演奏编辑",
+  "visible_documented_path": [
+    "Arrangement View显示Take Lanes；Automation Mode时先退出",
+    "在Draw Mode将录次选段编入主轨",
+    "需要多麦同步编辑时核对Standard/Suite的linked-track能力"
+  ],
+  "original_exercise": {
+    "status": "proposed_not_executed",
+    "fixture": "只用原创/授权且无个人敏感信息的合成教学素材",
+    "acceptance_checks": [
+      "原创8小节两次录音只是自定练习，不是厂商建议",
+      "保留全部原始录次与选段表",
+      "逐个接点试听爆音/呼吸截断，多麦对照相位与同步"
+    ]
+  },
+  "access_and_payment": "付费许可/授权软件；在线授权需要Ableton账户，亦有离线路径。Comping支持Intro/Standard/Suite，联动轨编辑限Standard/Suite；不泛化到Lite。",
+  "license_and_rights": "软件许可不授予录音、采样、插件素材再分发权；确切EULA条款未完整复核。",
+  "automation_boundary": "普通DAW编辑功能，不是音乐Agent或生成模型；未证实API自治控制，不运行产品。",
+  "lifecycle": {
+    "status": "documented_product_workflow",
+    "release_date": null,
+    "date_note": "unknown；不从checked_at或手册版本反推出首发日期",
+    "history": "官方FAQ称自Live 11起提供comping；首发日期unknown。"
+  },
+  "source_ids": [
+    "ableton-comp",
+    "ableton-auth",
+    "ableton-buy"
+  ],
+  "verification": {
+    "documentation_review": true,
+    "product_run": false,
+    "account_login": false,
+    "api_key_used": false,
+    "output_quality_verified": false
+  },
+  "integration_proposal": {
+    "agentwork": "新增带人工闸门的学习案例，标synthetic；不要宣称agent已执行",
+    "modelatlas": "产品/应用功能节点，不归入基础模型；Kdenlive复用现有vid-kdenlive而非重复工具节点"
+  }
+}
+```
+</details>
+
+## 音乐交付：总谱到演奏分谱
+
+分类：deterministic_software_workflow。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。 现有音乐案例偏音频，缺少排练/演奏所需的可读分谱交付。
+
+**证据边界：** 仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。
+
+### 合成输入
+
+只用原创/授权且无个人敏感信息的合成教学素材
+原创具体任务：为自写四声部16小节练习设计总谱和四份分谱的交付目录，另留一份缺乐器名的反例作人工校验。
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 提示词
+
+仅设计教学练习，不运行产品、购买/试用、上传、克隆声音、外发或发布。
+分类：deterministic_software_workflow。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。
+原始输入：只用原创/授权且无个人敏感信息的合成教学素材
+目标：现有音乐案例偏音频，缺少排练/演奏所需的可读分谱交付。
+步骤依据：
+Parts打开默认或自定义分谱
+File Export选择各分谱并决定分开或合并
+输出PDF供排练前人工审阅
+预期验收：
+原创四声部短曲，逐谱核对乐器名/小节数/休止
+人工检查翻页、断行与碰撞，不将自动生成等同可演奏
+保存源文件和分谱清单并区分音频试听与纸面谱面验收
+缺账号/许可/预算/素材授权则停止并列缺项；不能将软件权限当操作授权。
+
+原创纸面练习（never-run）：为自写四声部16小节练习设计总谱和四份分谱的交付目录，另留一份缺乐器名的反例作人工校验。
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+1. 列四声部名称、目标文件名、小节数以及各谱应包含的乐段。
+2. 设计Parts选择与单独/合并PDF导出分支，不混用旧版Export Parts菜单。
+3. 人工逐谱核对乐器名、小节、休止、翻页与碰撞；音频播放不能替代谱面审阅。
+4. 将总谱源文件、分谱目录与导出清单对应，保留可编辑版本以便下一次修订。
+停止条件：原曲或编曲权限未知；分谱声部遗漏；版面碰撞或翻页不可用；把在线乐谱订阅误当Studio必要条件
+
+### 输出模板
+
+待审练习记录：输入资产与授权清单；版本/账号/预算检查；逐步操作计划；预期验收表（未观察）；失败恢复与人工批准点；来源/未知项清单。不得虚构实测输出。
+待产出而非已产出：总谱/分谱映射表；PDF导出命名清单；翻页与可读性审查单
+
+### 风险与授权
+
+排版软件，不是生成音乐模型/Agent；只做手册UI流程，不宣称插件/CLI已核验。
+许可：Studio代码GPL 3.0；乐谱著作权、字体和音源单独许可，不自动继承GPL。
+账号与费用：官方下载Studio免费且无需账户/订阅；不把MuseScore.com乐谱服务或额外音源混同桌面软件。
+原创练习停止条件：原曲或编曲权限未知；分谱声部遗漏；版面碰撞或翻页不可用；把在线乐谱订阅误当Studio必要条件
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+Parts页明确MuseScore 4，日期未知；不混用旧版File Export Parts菜单。；精确首发日期unknown，来源更新日期不是产品首发。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+Parts页明确MuseScore 4，日期未知；不混用旧版File Export Parts菜单。
+
+### 最佳实践证据状态
+
+documentation-only / never-run；原创教学提案，不是实测最佳实践。
+
+### 1. 待执行步骤 1
+
+Parts打开默认或自定义分谱
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 2. 待执行步骤 2
+
+File Export选择各分谱并决定分开或合并
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 3. 待执行步骤 3
+
+输出PDF供排练前人工审阅
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 4. 原创练习步骤 1（未执行）
+
+列四声部名称、目标文件名、小节数以及各谱应包含的乐段。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 5. 原创练习步骤 2（未执行）
+
+设计Parts选择与单独/合并PDF导出分支，不混用旧版Export Parts菜单。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 6. 原创练习步骤 3（未执行）
+
+人工逐谱核对乐器名、小节、休止、翻页与碰撞；音频播放不能替代谱面审阅。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 7. 原创练习步骤 4（未执行）
+
+将总谱源文件、分谱目录与导出清单对应，保留可编辑版本以便下一次修订。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+- 对应技术（编辑学习关系）：[MuseScore Studio Parts（对应技术/工具）](https://2codework.github.io/modelatlas/?node=creative-musescore-studio)
+- agent_boundary：分类：deterministic_software_workflow。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。 排版软件，不是生成音乐模型/Agent；只做手册UI流程，不宣称插件/CLI已核验。
+- cost：官方下载Studio免费且无需账户/订阅；不把MuseScore.com乐谱服务或额外音源混同桌面软件。
+- permissions：本练习仅纸面设计；执行、上传、计费、恢复协作项目、下载受限素材和对外发布均未获本练习自动授权。
+- 验收：原创四声部短曲，逐谱核对乐器名/小节数/休止
+- 验收：人工检查翻页、断行与碰撞，不将自动生成等同可演奏
+- 验收：保存源文件和分谱清单并区分音频试听与纸面谱面验收
+- 验收：预期交付物（未观察）：总谱/分谱映射表
+- 验收：预期交付物（未观察）：PDF导出命名清单
+- 验收：预期交付物（未观察）：翻页与可读性审查单
+- 验收：停止条件：原曲或编曲权限未知
+- 验收：停止条件：分谱声部遗漏
+- 验收：停止条件：版面碰撞或翻页不可用
+- 验收：停止条件：把在线乐谱订阅误当Studio必要条件
+- 来源：muse-parts — https://handbook.musescore.org/basics/parts（核查：2026-10-28）
+MuseScore 4默认乐器分谱，Parts选择，File Export分开/合并输出，默认PDF。；原观察：opened_primary；独立QA：opened_primary；限制：
+- 来源：muse-install — https://handbook.musescore.org/en_gb/introduction/download-and-installation（核查：2026-10-28）
+官方下载免费且无需账户或订阅；可选生态服务不能据此推定免费。；原观察：opened_primary；独立QA：opened_primary；限制：
+- 来源：muse-license — https://github.com/musescore/MuseScore（核查：2026-10-28）
+README明确Studio GPL version 3.0；不等于乐谱、字体、音色均GPL。；原观察：opened_primary；独立QA：opened_primary；限制：
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "gap-muse-parts",
+  "title": "音乐交付：总谱到演奏分谱",
+  "domain": "音乐",
+  "product_name": "MuseScore Studio Parts",
+  "entity_type": "deterministic_software_workflow",
+  "is_foundation_model": false,
+  "gap_vs_existing": "现有音乐案例偏音频，缺少排练/演奏所需的可读分谱交付。",
+  "learning_value": "中高：低门槛、可离线学习的音乐交付补齐",
+  "visible_documented_path": [
+    "Parts打开默认或自定义分谱",
+    "File Export选择各分谱并决定分开或合并",
+    "输出PDF供排练前人工审阅"
+  ],
+  "original_exercise": {
+    "status": "proposed_not_executed",
+    "fixture": "只用原创/授权且无个人敏感信息的合成教学素材",
+    "acceptance_checks": [
+      "原创四声部短曲，逐谱核对乐器名/小节数/休止",
+      "人工检查翻页、断行与碰撞，不将自动生成等同可演奏",
+      "保存源文件和分谱清单并区分音频试听与纸面谱面验收"
+    ]
+  },
+  "access_and_payment": "官方下载Studio免费且无需账户/订阅；不把MuseScore.com乐谱服务或额外音源混同桌面软件。",
+  "license_and_rights": "Studio代码GPL 3.0；乐谱著作权、字体和音源单独许可，不自动继承GPL。",
+  "automation_boundary": "排版软件，不是生成音乐模型/Agent；只做手册UI流程，不宣称插件/CLI已核验。",
+  "lifecycle": {
+    "status": "documented_product_workflow",
+    "release_date": null,
+    "date_note": "unknown；不从checked_at或手册版本反推出首发日期",
+    "history": "Parts页明确MuseScore 4，日期未知；不混用旧版File Export Parts菜单。"
+  },
+  "source_ids": [
+    "muse-parts",
+    "muse-install",
+    "muse-license"
+  ],
+  "verification": {
+    "documentation_review": true,
+    "product_run": false,
+    "account_login": false,
+    "api_key_used": false,
+    "output_quality_verified": false
+  },
+  "integration_proposal": {
+    "agentwork": "新增带人工闸门的学习案例，标synthetic；不要宣称agent已执行",
+    "modelatlas": "产品/应用功能节点，不归入基础模型；Kdenlive复用现有vid-kdenlive而非重复工具节点"
+  }
+}
+```
+</details>
+
+## 视频剪辑：代理预览与原片交付验证
+
+分类：deterministic_software_workflow。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。 既有Kdenlive节点覆盖转录字幕；没有代理编辑与原片渲染身份检查。
+
+**证据边界：** 仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。
+
+### 合成输入
+
+只用原创/授权且无个人敏感信息的合成教学素材
+原创具体任务：以三段自有高分辨率素材设计20秒短片，另设一次原片临时不可访问的失败情景；不得把代理文件当最终原片交付。
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 提示词
+
+仅设计教学练习，不运行产品、购买/试用、上传、克隆声音、外发或发布。
+分类：deterministic_software_workflow。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。
+原始输入：只用原创/授权且无个人敏感信息的合成教学素材
+目标：既有Kdenlive节点覆盖转录字幕；没有代理编辑与原片渲染身份检查。
+步骤依据：
+项目设置启用代理
+素材箱选择Proxy Clip，观察P标记
+保留原素材；最终渲染按文档使用原文件
+预期验收：
+自有高分辨率短片制作代理与源片映射清单
+对比切点、时长与帧率；代理低清不是导出质量验收
+设计源文件缺失的失败场景：不得把代理静默冒充交付，停止并恢复源文件
+缺账号/许可/预算/素材授权则停止并列缺项；不能将软件权限当操作授权。
+
+原创纸面练习（never-run）：以三段自有高分辨率素材设计20秒短片，另设一次原片临时不可访问的失败情景；不得把代理文件当最终原片交付。
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+1. 记录每段原片与拟生成代理的文件身份、时长、帧率与位置，不移动真实素材。
+2. 纸面安排项目代理开关、素材箱P标记及时间线切点检查。
+3. 将代理预览质量与最终原片渲染验收分开，设计源片在线/缺失两组测试。
+4. 若源片缺失则停止交付，恢复映射后重新核对切点、字幕与导出分辨率；不声称本轮已恢复。
+停止条件：原片不可访问；代理与原片对应不明；时长或帧率不一致；导出仍未通过人工观看
+
+### 输出模板
+
+待审练习记录：输入资产与授权清单；版本/账号/预算检查；逐步操作计划；预期验收表（未观察）；失败恢复与人工批准点；来源/未知项清单。不得虚构实测输出。
+待产出而非已产出：原片—代理映射表；切点与帧率检查单；源片缺失恢复计划
+
+### 风险与授权
+
+普通确定性编辑流程，不是视频Agent；未验证外部编排接口。
+许可：官方仓库显示GPL-3.0，组件许可按具体版本核验；软件许可不授予素材/编码专利权。
+账号与费用：免费开源本地编辑器；所选工作流不涉及付费云服务/模型key。无账户步骤出现在所核UI文档，账号要求推断限此流程。
+原创练习停止条件：原片不可访问；代理与原片对应不明；时长或帧率不一致；导出仍未通过人工观看
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+当前读取26.08手册；这是版本标签非发布时间；旧猜测代理路径工具打开报错不等于功能停用。；精确首发日期unknown，来源更新日期不是产品首发。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+当前读取26.08手册；这是版本标签非发布时间；旧猜测代理路径工具打开报错不等于功能停用。
+
+### 最佳实践证据状态
+
+documentation-only / never-run；原创教学提案，不是实测最佳实践。
+
+### 1. 待执行步骤 1
+
+项目设置启用代理
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 2. 待执行步骤 2
+
+素材箱选择Proxy Clip，观察P标记
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 3. 待执行步骤 3
+
+保留原素材；最终渲染按文档使用原文件
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 4. 原创练习步骤 1（未执行）
+
+记录每段原片与拟生成代理的文件身份、时长、帧率与位置，不移动真实素材。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 5. 原创练习步骤 2（未执行）
+
+纸面安排项目代理开关、素材箱P标记及时间线切点检查。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 6. 原创练习步骤 3（未执行）
+
+将代理预览质量与最终原片渲染验收分开，设计源片在线/缺失两组测试。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 7. 原创练习步骤 4（未执行）
+
+若源片缺失则停止交付，恢复映射后重新核对切点、字幕与导出分辨率；不声称本轮已恢复。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+- 对应技术（编辑学习关系）：[Kdenlive Proxy Clips（对应技术/工具）](https://2codework.github.io/modelatlas/?node=vid-kdenlive)
+- agent_boundary：分类：deterministic_software_workflow。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。 普通确定性编辑流程，不是视频Agent；未验证外部编排接口。
+- cost：免费开源本地编辑器；所选工作流不涉及付费云服务/模型key。无账户步骤出现在所核UI文档，账号要求推断限此流程。
+- permissions：本练习仅纸面设计；执行、上传、计费、恢复协作项目、下载受限素材和对外发布均未获本练习自动授权。
+- 验收：自有高分辨率短片制作代理与源片映射清单
+- 验收：对比切点、时长与帧率；代理低清不是导出质量验收
+- 验收：设计源文件缺失的失败场景：不得把代理静默冒充交付，停止并恢复源文件
+- 验收：预期交付物（未观察）：原片—代理映射表
+- 验收：预期交付物（未观察）：切点与帧率检查单
+- 验收：预期交付物（未观察）：源片缺失恢复计划
+- 验收：停止条件：原片不可访问
+- 验收：停止条件：代理与原片对应不明
+- 验收：停止条件：时长或帧率不一致
+- 验收：停止条件：导出仍未通过人工观看
+- 来源：kden-proxy — https://docs.kdenlive.org/en/user_interface/menu/media_menu.html（核查：2026-10-28）
+26.08手册：启用项目代理后创建Proxy Clip；P标记；最终渲染使用原素材。；原观察：opened_primary；独立QA：opened_primary；限制：文档版本标签不是本机版本，也不是发布日期。
+- 来源：kden-license — https://github.com/KDE/kdenlive（核查：2026-10-28）
+KDE官方镜像说明免费开源；仓库显示GPL-3.0，主开发在KDE Invent。；原观察：opened_primary；独立QA：opened_primary；限制：分发二进制及各组件仍须核查对应版本许可证。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "gap-kden-proxy",
+  "title": "视频剪辑：代理预览与原片交付验证",
+  "domain": "视频",
+  "product_name": "Kdenlive Proxy Clips",
+  "entity_type": "deterministic_software_workflow",
+  "is_foundation_model": false,
+  "gap_vs_existing": "既有Kdenlive节点覆盖转录字幕；没有代理编辑与原片渲染身份检查。",
+  "learning_value": "高：补实际剪辑交付可靠性，复用已有工具节点",
+  "visible_documented_path": [
+    "项目设置启用代理",
+    "素材箱选择Proxy Clip，观察P标记",
+    "保留原素材；最终渲染按文档使用原文件"
+  ],
+  "original_exercise": {
+    "status": "proposed_not_executed",
+    "fixture": "只用原创/授权且无个人敏感信息的合成教学素材",
+    "acceptance_checks": [
+      "自有高分辨率短片制作代理与源片映射清单",
+      "对比切点、时长与帧率；代理低清不是导出质量验收",
+      "设计源文件缺失的失败场景：不得把代理静默冒充交付，停止并恢复源文件"
+    ]
+  },
+  "access_and_payment": "免费开源本地编辑器；所选工作流不涉及付费云服务/模型key。无账户步骤出现在所核UI文档，账号要求推断限此流程。",
+  "license_and_rights": "官方仓库显示GPL-3.0，组件许可按具体版本核验；软件许可不授予素材/编码专利权。",
+  "automation_boundary": "普通确定性编辑流程，不是视频Agent；未验证外部编排接口。",
+  "lifecycle": {
+    "status": "documented_product_workflow",
+    "release_date": null,
+    "date_note": "unknown；不从checked_at或手册版本反推出首发日期",
+    "history": "当前读取26.08手册；这是版本标签非发布时间；旧猜测代理路径工具打开报错不等于功能停用。"
+  },
+  "source_ids": [
+    "kden-proxy",
+    "kden-license"
+  ],
+  "verification": {
+    "documentation_review": true,
+    "product_run": false,
+    "account_login": false,
+    "api_key_used": false,
+    "output_quality_verified": false
+  },
+  "integration_proposal": {
+    "agentwork": "新增带人工闸门的学习案例，标synthetic；不要宣称agent已执行",
+    "modelatlas": "产品/应用功能节点，不归入基础模型；Kdenlive复用现有vid-kdenlive而非重复工具节点"
+  }
+}
+```
+</details>
+
+## 设计交付：印前预检、打包与字体授权隔离
+
+分类：deterministic_software_workflow。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。 已有演示、海报和C2PA；缺少印刷源文件交接的缺链、字体与隐藏资产泄露检查。
+
+**证据边界：** 仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。
+
+### 合成输入
+
+只用原创/授权且无个人敏感信息的合成教学素材
+原创具体任务：为虚构展览设计两页印刷交付包的检查清单；设置缺链接图片、未获转发许可字体、隐藏内部备注三种反例。
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 提示词
+
+仅设计教学练习，不运行产品、购买/试用、上传、克隆声音、外发或发布。
+分类：deterministic_software_workflow。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。
+原始输入：只用原创/授权且无个人敏感信息的合成教学素材
+目标：已有演示、海报和C2PA；缺少印刷源文件交接的缺链、字体与隐藏资产泄露检查。
+步骤依据：
+File Package检查摘要，有错返回Window Output Preflight
+只选择需交付的链接/IDML/PDF等，不默认包含隐藏非打印素材
+核查字体许可后生成待审批包与报告
+预期验收：
+设计自有海报并设置缺图/缺字体反例，先阻断再修复
+审查隐藏层、非打印内容、联系信息是否应出包
+分离嵌入PDF与字体文件再分发；指定收件方须自行许可的字体
+IDML兼容仍需实际重开渲染，不能凭勾选判成功
+缺账号/许可/预算/素材授权则停止并列缺项；不能将软件权限当操作授权。
+
+原创纸面练习（never-run）：为虚构展览设计两页印刷交付包的检查清单；设置缺链接图片、未获转发许可字体、隐藏内部备注三种反例。
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+1. 列明印厂需要的源文件、PDF、IDML和链接，不预设必须交付所有资产。
+2. 设计File Package摘要检查与返回Preflight处理问题的分支；发现错误不能直接忽略。
+3. 逐项判定字体是否能传、是否由收件方自行许可；正确嵌入PDF不等于允许复制字体文件。
+4. 排除不应外发的隐藏/非打印内容，先审查包清单再批准发送；IDML重开和印刷效果仍待实测。
+停止条件：Preflight关键错误未解决；字体文件不可再分发；隐藏内容含不应外发信息；收件方/印刷要求未确认
+
+### 输出模板
+
+待审练习记录：输入资产与授权清单；版本/账号/预算检查；逐步操作计划；预期验收表（未观察）；失败恢复与人工批准点；来源/未知项清单。不得虚构实测输出。
+待产出而非已产出：打包资产清单；缺链/字体问题清单；隐藏内容与联系方式审查表；收件方字体许可说明
+
+### 风险与授权
+
+排版交付软件，不是设计Agent；不使用脚本/API/Server，不自动发印厂。
+许可：Adobe Fonts文件不可拷贝移动；其他字体依各EULA与收件方许可。Package按钮不是再分发授权。
+账号与费用：Creative Cloud会员与Adobe账户；官方试用7日不取消转收费。本研究未注册试用、订阅或付款。
+原创练习停止条件：Preflight关键错误未解决；字体文件不可再分发；隐藏内容含不应外发信息；收件方/印刷要求未确认
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+打包帮助更新2026-06-02、字体说明2025-11-12；首发unknown，不将旧CS手册当现行。；精确首发日期unknown，来源更新日期不是产品首发。
+
+### 生命周期确认时间
+
+未核查
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+打包帮助更新2026-06-02、字体说明2025-11-12；首发unknown，不将旧CS手册当现行。
+
+### 最佳实践证据状态
+
+documentation-only / never-run；原创教学提案，不是实测最佳实践。
+
+### 1. 待执行步骤 1
+
+File Package检查摘要，有错返回Window Output Preflight
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 2. 待执行步骤 2
+
+只选择需交付的链接/IDML/PDF等，不默认包含隐藏非打印素材
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 3. 待执行步骤 3
+
+核查字体许可后生成待审批包与报告
+
+**验收：** 未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。
+
+### 4. 原创练习步骤 1（未执行）
+
+列明印厂需要的源文件、PDF、IDML和链接，不预设必须交付所有资产。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 5. 原创练习步骤 2（未执行）
+
+设计File Package摘要检查与返回Preflight处理问题的分支；发现错误不能直接忽略。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 6. 原创练习步骤 3（未执行）
+
+逐项判定字体是否能传、是否由收件方自行许可；正确嵌入PDF不等于允许复制字体文件。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+### 7. 原创练习步骤 4（未执行）
+
+排除不应外发的隐藏/非打印内容，先审查包清单再批准发送；IDML重开和印刷效果仍待实测。
+
+**验收：** 本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+
+- 对应技术（编辑学习关系）：[Adobe InDesign Package / Preflight（对应技术/工具）](https://2codework.github.io/modelatlas/?node=creative-indesign)
+- agent_boundary：分类：deterministic_software_workflow。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。 排版交付软件，不是设计Agent；不使用脚本/API/Server，不自动发印厂。
+- cost：Creative Cloud会员与Adobe账户；官方试用7日不取消转收费。本研究未注册试用、订阅或付款。
+- permissions：本练习仅纸面设计；执行、上传、计费、恢复协作项目、下载受限素材和对外发布均未获本练习自动授权。
+- 验收：设计自有海报并设置缺图/缺字体反例，先阻断再修复
+- 验收：审查隐藏层、非打印内容、联系信息是否应出包
+- 验收：分离嵌入PDF与字体文件再分发；指定收件方须自行许可的字体
+- 验收：IDML兼容仍需实际重开渲染，不能凭勾选判成功
+- 验收：预期交付物（未观察）：打包资产清单
+- 验收：预期交付物（未观察）：缺链/字体问题清单
+- 验收：预期交付物（未观察）：隐藏内容与联系方式审查表
+- 验收：预期交付物（未观察）：收件方字体许可说明
+- 验收：停止条件：Preflight关键错误未解决
+- 验收：停止条件：字体文件不可再分发
+- 验收：停止条件：隐藏内容含不应外发信息
+- 验收：停止条件：收件方/印刷要求未确认
+- 来源：indesign-package — https://helpx.adobe.com/indesign/desktop/print/preflight/package-files-for-output.html（核查：2026-10-28）
+File Package前预检；可包含链接、IDML、PDF；Adobe Fonts激活字体不拷入；隐藏非打印资产有可选包含项。；原观察：opened_primary；独立QA：opened_primary；限制：
+- 来源：font-rights — https://helpx.adobe.com/fonts/web/getting-and-using-fonts/package-font-files.html（核查：2026-10-28）
+字体传输依具体EULA；Adobe Fonts不可拷贝移动；收件人可能须独立许可。；原观察：opened_primary；独立QA：tool_open_error；限制：
+- 来源：indesign-pay — https://www.adobe.com/products/indesign/free-trial-download.html（核查：2026-10-28）
+Creative Cloud会员；7日试用不取消会转收费，不执行注册或试用。；原观察：opened_primary；独立QA：opened_primary；限制：
+- 来源：font-licensing-faq-independent — https://helpx.adobe.com/fonts/web/font-licensing/font-licensing.html（核查：2026-10-28）
+不同官方页面独立支持：Adobe Fonts文件不能转移/打包；直接编辑需收件人自有许可；正确嵌入PDF与传递字体文件不同；本地其他字体依各自EULA。不是失败原页成功。；原观察：independently_opened_primary；独立QA：opened_primary；限制：独立来源；不能将它的成功记作另一个URL成功。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "gap-indesign-preflight",
+  "title": "设计交付：印前预检、打包与字体授权隔离",
+  "domain": "设计",
+  "product_name": "Adobe InDesign Package / Preflight",
+  "entity_type": "deterministic_software_workflow",
+  "is_foundation_model": false,
+  "gap_vs_existing": "已有演示、海报和C2PA；缺少印刷源文件交接的缺链、字体与隐藏资产泄露检查。",
+  "learning_value": "高：可验证的交付闸门而非又一生成入口",
+  "visible_documented_path": [
+    "File Package检查摘要，有错返回Window Output Preflight",
+    "只选择需交付的链接/IDML/PDF等，不默认包含隐藏非打印素材",
+    "核查字体许可后生成待审批包与报告"
+  ],
+  "original_exercise": {
+    "status": "proposed_not_executed",
+    "fixture": "只用原创/授权且无个人敏感信息的合成教学素材",
+    "acceptance_checks": [
+      "设计自有海报并设置缺图/缺字体反例，先阻断再修复",
+      "审查隐藏层、非打印内容、联系信息是否应出包",
+      "分离嵌入PDF与字体文件再分发；指定收件方须自行许可的字体",
+      "IDML兼容仍需实际重开渲染，不能凭勾选判成功"
+    ]
+  },
+  "access_and_payment": "Creative Cloud会员与Adobe账户；官方试用7日不取消转收费。本研究未注册试用、订阅或付款。",
+  "license_and_rights": "Adobe Fonts文件不可拷贝移动；其他字体依各EULA与收件方许可。Package按钮不是再分发授权。",
+  "automation_boundary": "排版交付软件，不是设计Agent；不使用脚本/API/Server，不自动发印厂。",
+  "lifecycle": {
+    "status": "documented_product_workflow",
+    "release_date": null,
+    "date_note": "unknown；不从checked_at或手册版本反推出首发日期",
+    "history": "打包帮助更新2026-06-02、字体说明2025-11-12；首发unknown，不将旧CS手册当现行。"
+  },
+  "source_ids": [
+    "indesign-package",
+    "font-rights",
+    "indesign-pay",
+    "font-licensing-faq-independent"
+  ],
+  "verification": {
+    "documentation_review": true,
+    "product_run": false,
+    "account_login": false,
+    "api_key_used": false,
+    "output_quality_verified": false
+  },
+  "integration_proposal": {
+    "agentwork": "新增带人工闸门的学习案例，标synthetic；不要宣称agent已执行",
+    "modelatlas": "产品/应用功能节点，不归入基础模型；Kdenlive复用现有vid-kdenlive而非重复工具节点"
+  }
+}
+```
+</details>

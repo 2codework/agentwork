@@ -1,0 +1,422 @@
+{
+  "checked_at": "2026-10-28",
+  "source_count": 23,
+  "status_semantics": "status保留初始观察；independent_qa保存后续轮次结果；失败不能被其他URL成功覆盖。",
+  "checks": [
+    {
+      "id": "ableton-comp",
+      "url": "https://help.ableton.com/hc/en-us/articles/360019092580-Comping-in-Live-FAQ",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "Comping自Live 11起；Take Lanes/Draw Mode；Intro/Standard/Suite支持comping，linked-track editing限Standard/Suite。",
+      "limitations": "",
+      "independent_qa": {
+        "source_id": "ableton-comp",
+        "url": "https://help.ableton.com/hc/en-us/articles/360019092580-Comping-in-Live-FAQ",
+        "qa_status": "opened_primary",
+        "checked_at": "2026-10-28",
+        "note": "Take Lanes/Draw Mode步骤与Automation Mode限制成立；Intro/Standard/Suite comping，Standard/Suite linked-track；自Live 11但无首发日。",
+        "evidence_locator": "Comping FAQ lines 13–27, 59–61"
+      }
+    },
+    {
+      "id": "ableton-auth",
+      "url": "https://help.ableton.com/hc/en-us/articles/209773585-Authorizing-Live-Online",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "需授权；在线登录账户选择许可证，亦有离线授权路径。",
+      "limitations": "",
+      "independent_qa": {
+        "source_id": "ableton-auth",
+        "url": "https://help.ableton.com/hc/en-us/articles/209773585-Authorizing-Live-Online",
+        "qa_status": "opened_primary",
+        "checked_at": "2026-10-28",
+        "note": "需在线或离线授权；在线流程登录账户并选择许可证。仅文档未操作。",
+        "evidence_locator": "lines 14–39"
+      }
+    },
+    {
+      "id": "ableton-buy",
+      "url": "https://help.ableton.com/hc/en-us/articles/209772965-Buying-Live-FAQ",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "购买和升级价格依许可/账户；不引用价格。",
+      "limitations": "",
+      "independent_qa": {
+        "source_id": "ableton-buy",
+        "url": "https://help.ableton.com/hc/en-us/articles/209772965-Buying-Live-FAQ",
+        "qa_status": "opened_primary",
+        "checked_at": "2026-10-28",
+        "note": "升级价格按已登记许可/账户个性化；未采纳金额。",
+        "evidence_locator": "lines 17–25"
+      }
+    },
+    {
+      "id": "muse-parts",
+      "url": "https://handbook.musescore.org/basics/parts",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "MuseScore 4默认乐器分谱，Parts选择，File Export分开/合并输出，默认PDF。",
+      "limitations": "",
+      "independent_qa": {
+        "source_id": "muse-parts",
+        "url": "https://handbook.musescore.org/basics/parts",
+        "qa_status": "opened_primary",
+        "checked_at": "2026-10-28",
+        "note": "每乐器默认分谱，Parts打开；File Export选择各谱、合并或独立文件，默认PDF。",
+        "evidence_locator": "lines 7–18, 140–149"
+      }
+    },
+    {
+      "id": "muse-install",
+      "url": "https://handbook.musescore.org/en_gb/introduction/download-and-installation",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "官方下载免费且无需账户或订阅；可选生态服务不能据此推定免费。",
+      "limitations": "",
+      "independent_qa": {
+        "source_id": "muse-install",
+        "url": "https://handbook.musescore.org/en_gb/introduction/download-and-installation",
+        "qa_status": "opened_primary",
+        "checked_at": "2026-10-28",
+        "note": "Studio免费下载不需账户或订阅；不扩展至MuseHub附加产品/乐谱服务。",
+        "evidence_locator": "lines 4, 16"
+      }
+    },
+    {
+      "id": "muse-license",
+      "url": "https://github.com/musescore/MuseScore",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "README明确Studio GPL version 3.0；不等于乐谱、字体、音色均GPL。",
+      "limitations": "",
+      "independent_qa": {
+        "source_id": "muse-license",
+        "url": "https://github.com/musescore/MuseScore",
+        "qa_status": "opened_primary",
+        "checked_at": "2026-10-28",
+        "note": "官方仓库README声明Studio GPL 3.0；不作素材字体音源全量权利结论。",
+        "evidence_locator": "README License, line 280"
+      }
+    },
+    {
+      "id": "kden-proxy",
+      "url": "https://docs.kdenlive.org/en/user_interface/menu/media_menu.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "26.08手册：启用项目代理后创建Proxy Clip；P标记；最终渲染使用原素材。",
+      "limitations": "文档版本标签不是本机版本，也不是发布日期。",
+      "independent_qa": {
+        "source_id": "kden-proxy",
+        "url": "https://docs.kdenlive.org/en/user_interface/menu/media_menu.html",
+        "qa_status": "opened_primary",
+        "checked_at": "2026-10-28",
+        "note": "26.08手册项目设置开启后Proxy Clip产生P标识，最终渲染换回原始文件；版本非事件日期。",
+        "evidence_locator": "Proxy Clip lines 352–359"
+      }
+    },
+    {
+      "id": "kden-license",
+      "url": "https://github.com/KDE/kdenlive",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "KDE官方镜像说明免费开源；仓库显示GPL-3.0，主开发在KDE Invent。",
+      "limitations": "分发二进制及各组件仍须核查对应版本许可证。",
+      "independent_qa": {
+        "source_id": "kden-license",
+        "url": "https://github.com/KDE/kdenlive",
+        "qa_status": "opened_primary",
+        "checked_at": "2026-10-28",
+        "note": "KDE官方GitHub仓库显示GPL-3.0及free/open-source；组件全许可证未审计。",
+        "evidence_locator": "repository license / README lines 216–222"
+      }
+    },
+    {
+      "id": "kden-broken",
+      "url": "https://docs.kdenlive.org/en/project_and_asset_management/project_bin/proxy_clips.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "tool_open_error",
+      "supported_claim": "无事实依赖",
+      "limitations": "web open Internal Error；改用已打开官方Media Menu，不认定产品不可用。",
+      "independent_qa": {
+        "source_id": "kden-broken",
+        "url": "https://docs.kdenlive.org/en/project_and_asset_management/project_bin/proxy_clips.html",
+        "qa_status": "not_retried_prior_failure",
+        "checked_at": "2026-10-28",
+        "note": "原research记录工具失败，本QA按要求未重试，不作本轮打开成功。",
+        "evidence_locator": "prior source-checks only"
+      }
+    },
+    {
+      "id": "indesign-package",
+      "url": "https://helpx.adobe.com/indesign/desktop/print/preflight/package-files-for-output.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": "2026-06-02",
+      "date_semantics": "page_update_or_explicit_announcement_only",
+      "status": "opened_primary",
+      "supported_claim": "File Package前预检；可包含链接、IDML、PDF；Adobe Fonts激活字体不拷入；隐藏非打印资产有可选包含项。",
+      "limitations": "",
+      "independent_qa": {
+        "source_id": "indesign-package",
+        "url": "https://helpx.adobe.com/indesign/desktop/print/preflight/package-files-for-output.html",
+        "qa_status": "opened_primary",
+        "checked_at": "2026-10-28",
+        "note": "File Package检查摘要，错误返回Window Output Preflight；可选链接/IDML/PDF；Adobe Fonts不复制，隐藏非打印资产须选择。",
+        "evidence_locator": "body lines 1414–1439"
+      }
+    },
+    {
+      "id": "font-rights",
+      "url": "https://helpx.adobe.com/fonts/web/getting-and-using-fonts/package-font-files.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": "2025-11-12",
+      "date_semantics": "page_update_or_explicit_announcement_only",
+      "status": "opened_primary",
+      "supported_claim": "字体传输依具体EULA；Adobe Fonts不可拷贝移动；收件人可能须独立许可。",
+      "limitations": "",
+      "independent_qa": {
+        "source_id": "font-rights",
+        "url": "https://helpx.adobe.com/fonts/web/getting-and-using-fonts/package-font-files.html",
+        "qa_status": "tool_open_error",
+        "checked_at": "2026-10-28",
+        "note": "本轮打开UnexpectedStatusCode；未重试、未改原历史成功记录；另一个官方字体许可FAQ支持关键限制。",
+        "evidence_locator": "web open error"
+      }
+    },
+    {
+      "id": "indesign-pay",
+      "url": "https://www.adobe.com/products/indesign/free-trial-download.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "Creative Cloud会员；7日试用不取消会转收费，不执行注册或试用。",
+      "limitations": "",
+      "independent_qa": {
+        "source_id": "indesign-pay",
+        "url": "https://www.adobe.com/products/indesign/free-trial-download.html",
+        "qa_status": "opened_primary",
+        "checked_at": "2026-10-28",
+        "note": "官方页明确7日试用后自动转付费CC会员，除非取消；未试用/登录/采集具体价格。",
+        "evidence_locator": "lines 188–213"
+      }
+    },
+    {
+      "id": "underlord-help",
+      "url": "https://help.descript.com/getting-started/underlord-beta-your-ai-co-editor-in-descript",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "Beta co-editor；项目右侧入口；可选底层模型；提示推理及工具均计积分，成本非确定。",
+      "limitations": "旧hc文章URL重定向至本页；不冻结模型选择器列表。",
+      "independent_qa": {
+        "url": "https://help.descript.com/getting-started/underlord-beta-your-ai-co-editor-in-descript",
+        "qa_status": "opened_primary",
+        "evidence_locator": "L249–269",
+        "qa_observation_zh": "Beta；右侧项目入口；可选底层模型；推理与工具消耗积分且同提示成本不确定。",
+        "source_id": "underlord-help",
+        "checked_at": "2026-10-28"
+      }
+    },
+    {
+      "id": "underlord-product",
+      "url": "https://www.descript.com/underlord",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "官方称agentic video co-editor；Free有限使用，付费分级。",
+      "limitations": "营销能力不是实测质量；本包不复制动态价格和额度。",
+      "independent_qa": {
+        "url": "https://www.descript.com/underlord",
+        "qa_status": "opened_primary",
+        "evidence_locator": "L89–115; L244–304",
+        "qa_observation_zh": "agentic video co-editor分类及Free有限使用有支持；不固定价格/额度、不将营销质量当实测。",
+        "source_id": "underlord-product",
+        "checked_at": "2026-10-28"
+      }
+    },
+    {
+      "id": "underlord-v2",
+      "url": "https://feedback.descript.com/changelog/announcingunderlord-v2",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "历史v2公告讲计划/自纠正/模型选择；旧Labs退出开关是临时说明。",
+      "limitations": "页面未显示可靠绝对发布日期，date保持null；不把旧模型表或临时开关当现行。",
+      "independent_qa": {
+        "url": "https://feedback.descript.com/changelog/announcingunderlord-v2",
+        "qa_status": "opened_primary",
+        "evidence_locator": "L20–46; L62–66",
+        "qa_observation_zh": "历史公告有计划/自纠正；临时Labs开关非当前保证；未见可靠绝对日期。",
+        "source_id": "underlord-v2",
+        "checked_at": "2026-10-28"
+      }
+    },
+    {
+      "id": "underlord-revert",
+      "url": "https://help.descript.com/ai-assistant/revert",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "响应Revert checkpoint仅当前session；刷新/关闭项目后使用Version History，另有单步Undo。",
+      "limitations": "不推出永久checkpoint、无限保留或积分退款。",
+      "independent_qa": {
+        "url": "https://help.descript.com/ai-assistant/revert",
+        "qa_status": "opened_primary",
+        "evidence_locator": "L244–275",
+        "qa_observation_zh": "三种恢复路径；Revert检查点仅当前session，刷新/关闭项目后改用Version History。",
+        "source_id": "underlord-revert",
+        "checked_at": "2026-10-28"
+      }
+    },
+    {
+      "id": "underlord-terms",
+      "url": "https://www.descript.com/terms",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "opened_primary",
+      "supported_claim": "用户需拥有上传/分享权；生成输出权利限法律可保护范围；外部自动化不能由本研究推定授权。",
+      "limitations": "",
+      "independent_qa": {
+        "url": "https://www.descript.com/terms",
+        "qa_status": "opened_primary",
+        "evidence_locator": "§8.1 L89–92; §8.4 L101–109",
+        "qa_observation_zh": "上传分享须有权利；输出权属受可保护法律范围限制，仍须审核且可能非独有/侵权。不是法律结论。",
+        "source_id": "underlord-terms",
+        "checked_at": "2026-10-28"
+      }
+    },
+    {
+      "id": "express-overview",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-overview.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": "2026-10-22",
+      "date_semantics": "page_update_or_explicit_announcement_only",
+      "status": "opened_primary",
+      "supported_claim": "Beta会话设计/局部调整；个人Free/Premium渐进开放，桌面web；不支持Teams/Enterprise/Education；地区与语言有限。",
+      "limitations": "",
+      "independent_qa": {
+        "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-overview.html",
+        "qa_status": "opened_primary",
+        "evidence_locator": "L712–750",
+        "qa_observation_zh": "2026-10-22更新；Beta会话助手；个人Free/Premium渐进、桌面web；排除所列地区，语言列表不含中文；Chats不与协作者共享。",
+        "source_id": "express-overview",
+        "checked_at": "2026-10-28"
+      }
+    },
+    {
+      "id": "express-how",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/get-started-with-the-adobe-express-ai-assistant.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": "2026-10-22",
+      "date_semantics": "page_update_or_explicit_announcement_only",
+      "status": "opened_primary",
+      "supported_claim": "主页提示、补信息、四候选、对话修改/手工编辑/Download；Chats不共享给协作者。",
+      "limitations": "",
+      "independent_qa": {
+        "url": "https://helpx.adobe.com/express/web/ai-assistant/get-started-with-the-adobe-express-ai-assistant.html",
+        "qa_status": "opened_primary",
+        "evidence_locator": "L712–750",
+        "qa_observation_zh": "提示→补资料→四候选→对话/手工修改→下载/分享文档流程。实际分享仍需批准。",
+        "source_id": "express-how",
+        "checked_at": "2026-10-28"
+      }
+    },
+    {
+      "id": "express-history",
+      "url": "https://news.adobe.com/news/2025/10/adobe-max-2025-express-ai-assistant",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": "2025-10-28",
+      "date_semantics": "page_update_or_explicit_announcement_only",
+      "status": "opened_primary",
+      "supported_claim": "官方2025-10-28宣布beta；未来企业功能描述不是现行可用证据。",
+      "limitations": "",
+      "independent_qa": {
+        "url": "https://news.adobe.com/news/2025/10/adobe-max-2025-express-ai-assistant",
+        "qa_status": "opened_primary",
+        "evidence_locator": "L3; L8–13",
+        "qa_observation_zh": "2025-10-28 Beta公告，未来企业计划不能当当前权限；会话及手工编辑。",
+        "source_id": "express-history",
+        "checked_at": "2026-10-28"
+      }
+    },
+    {
+      "id": "express-faq-redirect",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-faq.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "redirect_with_search_body_conflict",
+      "supported_claim": "搜索缓存有10月5日额度细则，但打开重定向overview且无credits文本，未确认额度。",
+      "limitations": "不得将缓存的每日次数/积分豁免直接纳入现行指南。",
+      "independent_qa": {
+        "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-faq.html",
+        "qa_status": "not_retried_prior_redirect_conflict",
+        "evidence_locator": "original source-checks record",
+        "qa_observation_zh": "保留原重定向/搜索缓存冲突；本轮不重试该页，不确认精确积分/价格，不标原页成功。",
+        "source_id": "express-faq-redirect",
+        "checked_at": "2026-10-28"
+      }
+    },
+    {
+      "id": "font-licensing-faq-independent",
+      "url": "https://helpx.adobe.com/fonts/web/font-licensing/font-licensing.html",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": "2026-03-27",
+      "date_semantics": "page_update",
+      "status": "independently_opened_primary",
+      "supported_claim": "不同官方页面独立支持：Adobe Fonts文件不能转移/打包；直接编辑需收件人自有许可；正确嵌入PDF与传递字体文件不同；本地其他字体依各自EULA。不是失败原页成功。",
+      "limitations": "独立来源；不能将它的成功记作另一个URL成功。",
+      "independent_qa": {
+        "source_id": "font-licensing-faq-independent",
+        "url": "https://helpx.adobe.com/fonts/web/font-licensing/font-licensing.html",
+        "qa_status": "opened_primary",
+        "checked_at": "2026-10-28",
+        "publication_or_update_date": "2026-03-27",
+        "note": "不同官方页面独立支持：Adobe Fonts文件不能转移/打包；直接编辑需收件人自有许可；正确嵌入PDF与传递字体文件不同；本地其他字体依各自EULA。不是失败原页成功。",
+        "evidence_locator": "lines 116–117,128–130,137–152"
+      }
+    },
+    {
+      "id": "underlord-history-independent",
+      "url": "https://help.descript.com/working-in-projects/version-history",
+      "checked_at": "2026-10-28",
+      "publication_or_update_date": null,
+      "date_semantics": "unknown",
+      "status": "independently_opened_primary",
+      "supported_claim": "可预览版本，Restore出现协作者冲突确认；恢复影响项目所有compositions/files，必须先审查协作者变更。",
+      "limitations": "独立来源；不能将它的成功记作另一个URL成功。",
+      "independent_qa": {
+        "source_id": "underlord-history-independent",
+        "url": "https://help.descript.com/working-in-projects/version-history",
+        "qa_status": "opened_primary",
+        "checked_at": "2026-10-28",
+        "evidence_locator": "L249–252",
+        "note": "可预览版本，Restore出现协作者冲突确认；恢复影响项目所有compositions/files，必须先审查协作者变更。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-28",
+  "before_sha256": {
+    "creative-learning-gap-research-r1.json": "a9e97edb60b53acff3666081408ad6e51cf5354d3c2f73c897a5ad6301a00d98",
+    "source-checks.json": "297f0be310813920e1a1b5a0f1bcca1d00408bfec4611716cdda5c3f44c2c893",
+    "creative-learning-gap-research-r1.md": "be66cb13d10ed1cd3972b891e42826901d1b0077be6d348ede66eb8568a7f624"
+  },
+  "changes": [
+    {
+      "case": "gap-underlord-review",
+      "fields": [
+        "visible_documented_path",
+        "original_exercise.acceptance_checks",
+        "automation_boundary",
+        "source_ids"
+      ],
+      "reason": "补session边界、项目级恢复影响、协作者审批及未执行限制。"
+    },
+    {
+      "case": "gap-indesign-preflight",
+      "fields": [
+        "source_ids"
+      ],
+      "reason": "附独立字体许可FAQ，保留原页各轮状态。"
+    },
+    {
+      "case": null,
+      "fields": [
+        "sources.independent_qa",
+        "unresolved",
+        "revision"
+      ],
+      "reason": "附独立QA证据，不覆盖旧源成功/失败历史。"
+    }
+  ],
+  "canonical_modified": false,
+  "product_execution": false
+}

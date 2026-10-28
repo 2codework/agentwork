@@ -5,6 +5,7 @@ from normalize import normalize
 import asset_versions
 import mcp_learning
 import creative_workflows
+import creative_gaps
 import office_agents
 import assistant_workspace
 import regional_office
@@ -61,6 +62,7 @@ def build():
     data["cases"].extend(office_cases)
     data["cases"].extend(assistant_workspace.load(ROOT))
     data["cases"].extend(regional_office.load(ROOT))
+    data["cases"].extend(creative_gaps.load(ROOT))
     validate(data)
     write_book(data)
     dest = ROOT/'site'
@@ -74,6 +76,7 @@ def build():
     assistant_workspace.publish(ROOT,dest)
     regional_office.publish(ROOT,dest)
     offline_office_lab.publish(ROOT,dest)
+    creative_gaps.publish(ROOT,dest)
     (dest/'.nojekyll').touch()
     shutil.copy2(ROOT/'BOOK.md',dest/'BOOK.md')
     asset_versions.pin(dest)

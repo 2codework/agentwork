@@ -31,7 +31,7 @@ class RegionalTests(unittest.TestCase):
   self.r['sources'][0]['url']='https://user:pass@example.org'
   with self.assertRaises(ValueError):R.adapt(self.r)
  def test_book_and_outputs(self):
-  data=json.loads((ROOT/'site/data.json').read_text());self.assertEqual(len(data['cases']),132)
+  data=json.loads((ROOT/'site/data.json').read_text());self.assertEqual(len(data['cases']),138)
   book=(ROOT/'BOOK.md').read_text()
   for c in R.adapt(self.r):
    for k in ['title','input','risks','historical_context','output']:self.assertIn(c[k],book)

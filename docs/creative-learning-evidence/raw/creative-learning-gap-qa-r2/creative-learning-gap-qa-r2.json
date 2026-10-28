@@ -1,0 +1,104 @@
+{
+  "schema_version": "creative-learning-gap-qa-r2.v1",
+  "checked_at": "2026-10-28T22:09:54.368866+00:00",
+  "final": true,
+  "decision": "accept_documentation_only",
+  "scope": "仅R2离线修订闭环；对照本轮既有独立官方来源QA，不重新请求网页，不扩展研究。",
+  "r2_sha256": {
+    "creative-learning-gap-research-r2.json": "530aaf53c18574618b2dcfec44796be769aab75f6f9f9945cd773b2f03b7dc88",
+    "creative-learning-gap-research-r2.md": "d7ec8fe47312378a5c2efcb68c4671a9155d0f7af43423e61fd3d81d99aafbb3",
+    "source-checks.json": "edb65c8b13c57c4cc257aca05eaf03a5d0c13d62942103a65b43c52c23277e74"
+  },
+  "r1_and_before_qa_byte_identical": true,
+  "original_sha256": {
+    "creative-learning-gap-research-r1.json": "a9e97edb60b53acff3666081408ad6e51cf5354d3c2f73c897a5ad6301a00d98",
+    "creative-learning-gap-research-r1.md": "be66cb13d10ed1cd3972b891e42826901d1b0077be6d348ede66eb8568a7f624",
+    "source-checks.json": "297f0be310813920e1a1b5a0f1bcca1d00408bfec4611716cdda5c3f44c2c893"
+  },
+  "underlord_required_fixes": {
+    "current_session_revert_only": "closed",
+    "refresh_or_close_use_version_history": "closed",
+    "restore_all_project_compositions_files": "closed",
+    "preview_collaborator_review_and_approval": "closed",
+    "post_restore_manual_checks_no_refund_or_infinite_history_promise": "present"
+  },
+  "source_checks_count": 23,
+  "source_checks_equal_embedded_sources": true,
+  "failed_and_redirect_status_history_preserved": true,
+  "items": [
+    {
+      "id": "gap-underlord-review",
+      "decision": "accept",
+      "entity_type": "agentic_application_feature",
+      "execution_status": "never-run",
+      "remaining_unknowns": [
+        "精确价格/积分与用户资格",
+        "质量与恢复效果",
+        "未完整素材/第三方条款权利审核"
+      ],
+      "note": "两项必修已关闭；仅资料与学习设计签收。"
+    },
+    {
+      "id": "gap-express-targeted",
+      "decision": "accept",
+      "entity_type": "conversational_ai_assistant",
+      "execution_status": "never-run",
+      "remaining_unknowns": [
+        "FAQ重定向冲突不重试、不标成功",
+        "精确价格/积分",
+        "用户实际开放资格",
+        "商业再分发权利及全部素材/Stock许可"
+      ],
+      "note": "既有accept维持；非运行或法律权利认证。"
+    },
+    {
+      "id": "gap-ableton-comp",
+      "decision": "accept",
+      "entity_type": "deterministic_software_workflow",
+      "execution_status": "never-run",
+      "remaining_unknowns": [
+        "实际产品操作与输出质量未测",
+        "所有具体素材/字体/插件/编码权利未作逐项审计"
+      ],
+      "note": "既有accept维持；非运行或法律权利认证。"
+    },
+    {
+      "id": "gap-muse-parts",
+      "decision": "accept",
+      "entity_type": "deterministic_software_workflow",
+      "execution_status": "never-run",
+      "remaining_unknowns": [
+        "实际产品操作与输出质量未测",
+        "所有具体素材/字体/插件/编码权利未作逐项审计"
+      ],
+      "note": "既有accept维持；非运行或法律权利认证。"
+    },
+    {
+      "id": "gap-kden-proxy",
+      "decision": "accept",
+      "entity_type": "deterministic_software_workflow",
+      "execution_status": "never-run",
+      "remaining_unknowns": [
+        "实际产品操作与输出质量未测",
+        "所有具体素材/字体/插件/编码权利未作逐项审计"
+      ],
+      "note": "既有accept维持；非运行或法律权利认证。"
+    },
+    {
+      "id": "gap-indesign-preflight",
+      "decision": "accept",
+      "entity_type": "deterministic_software_workflow",
+      "execution_status": "never-run",
+      "remaining_unknowns": [
+        "实际产品操作与输出质量未测",
+        "所有具体素材/字体/插件/编码权利未作逐项审计"
+      ],
+      "note": "既有accept维持；非运行或法律权利认证。"
+    }
+  ],
+  "research_or_qa_r1_modified": false,
+  "canonical_modified": false,
+  "product_execution": false,
+  "account_access": false,
+  "mac_access": false
+}
