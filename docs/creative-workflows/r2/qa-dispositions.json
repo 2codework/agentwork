@@ -1,0 +1,188 @@
+{
+  "reviewed_at": "2026-10-28",
+  "input_sha256": "24a1f02e9ca32711d05e6a0ce8a43d6c32d2c13dee6914bfd9ef0a9273dcf21f",
+  "markdown_sha256": "dfc0f4e0dc26d713eaa1cc381bf72fe92f6d8c6d79f23b0767706f22e6bb35c2",
+  "baseline_sha256": "6d0a34adeda2408ce9917c06247d9239e66a744b3ec86dc11b4c17be5918c723",
+  "baseline_case_count": 97,
+  "case_count": 9,
+  "source_count": 12,
+  "summary": {
+    "accept": 7,
+    "fix": 2,
+    "reject": 0
+  },
+  "scope": "Independent official documentation read, source/licensing/version bounds, all97 baseline titles and goals; detailed nearest-neighbor workflow comparisons. Not product execution, simulation, commercial license clearance or exhaustive industry coverage.",
+  "sources": [
+    {
+      "id": "r2-freecad",
+      "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Creating_a_simple_part_with_PartDesign.md",
+      "independent_open": "success",
+      "publication_date_verified": false
+    },
+    {
+      "id": "r2-openscad",
+      "url": "https://openscad.org/cheatsheet/",
+      "independent_open": "success",
+      "publication_date_verified": false
+    },
+    {
+      "id": "r2-godot-formats",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/available_formats.html",
+      "independent_open": "success",
+      "publication_date_verified": false
+    },
+    {
+      "id": "r2-godot-config",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/import_configuration.html",
+      "independent_open": "success",
+      "publication_date_verified": false
+    },
+    {
+      "id": "r2-godot-advanced",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/advanced_import_settings.html",
+      "independent_open": "success",
+      "publication_date_verified": false
+    },
+    {
+      "id": "r2-godot-sprite",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/2d/2d_sprite_animation.html",
+      "independent_open": "success",
+      "publication_date_verified": false
+    },
+    {
+      "id": "r2-impress-master",
+      "url": "https://help.libreoffice.org/latest/en-US/text/simpress/01/03150000.html",
+      "independent_open": "success",
+      "publication_date_verified": false
+    },
+    {
+      "id": "r2-impress-change",
+      "url": "https://help.libreoffice.org/latest/en-US/text/simpress/guide/masterpage.html",
+      "independent_open": "success",
+      "publication_date_verified": false
+    },
+    {
+      "id": "r2-impress-handout",
+      "url": "https://help.libreoffice.org/latest/en-US/text/simpress/guide/printing.html",
+      "independent_open": "success",
+      "publication_date_verified": false
+    },
+    {
+      "id": "r2-audacity-spectral",
+      "url": "https://manual.audacityteam.org/man/spectral_selection.html",
+      "independent_open": "success",
+      "publication_date_verified": false
+    },
+    {
+      "id": "r2-ffmpeg-loudnorm",
+      "url": "https://ffmpeg.org/ffmpeg-filters.html#loudnorm",
+      "independent_open": "success",
+      "publication_date_verified": false
+    },
+    {
+      "id": "r2-ffmpeg-license",
+      "url": "https://ffmpeg.org/legal.html",
+      "independent_open": "success",
+      "publication_date_verified": false
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "creative-r2-freecad-constrained-part",
+      "disposition": "accept",
+      "reason": "Accept as original dimensional adaptation, not a reproduction of the tutorial geometry. Official archived tutorial supports Body, constrained sketches, Pad/Pocket and editing dimensions. Archive status does not establish software obsolescence.",
+      "source_ids": [
+        "r2-freecad"
+      ],
+      "id_collision": false,
+      "execution_verified": false
+    },
+    {
+      "case_id": "creative-r2-openscad-parameter-guard",
+      "disposition": "accept",
+      "reason": "Accept with historical v2021.01 label. Official cheatsheet supports assert, cylinder, translate, difference and preview/render distinction; tolerance and dimensions are original design choices. Prefer explicit conjunction (outer > inner && inner > 0 && height > 0) in any eventual code, not a chained comparison.",
+      "source_ids": [
+        "r2-openscad"
+      ],
+      "id_collision": false,
+      "execution_verified": false
+    },
+    {
+      "case_id": "creative-r2-gltf-handoff",
+      "disposition": "accept",
+      "reason": "Accept. Official docs support complete glTF asset copying, separate import settings, .blend external dependency and OBJ animation limitations; original size/checklist is not claimed executed.",
+      "source_ids": [
+        "r2-godot-formats",
+        "r2-godot-config"
+      ],
+      "id_collision": false,
+      "execution_verified": false
+    },
+    {
+      "case_id": "creative-r2-game-collision",
+      "disposition": "accept",
+      "reason": "Accept. Advanced settings document Static/Dynamic body types and restrict Trimesh to static bodies. Convex/primitive dynamic choice and future drop-test bounds are accurate.",
+      "source_ids": [
+        "r2-godot-advanced"
+      ],
+      "id_collision": false,
+      "execution_verified": false
+    },
+    {
+      "case_id": "creative-r2-sprite-sheet",
+      "disposition": "fix",
+      "reason": "Fix dedup rationale, not workflow. Existing video-silent-animation-loop includes BOTH traditional keyframe and historical model routes; distinguish the new deliverable as editable SpriteFrames plus sheet slicing and FPS/frame-order evidence rather than implying the older case is diffusion-only.",
+      "source_ids": [
+        "r2-godot-sprite"
+      ],
+      "id_collision": false,
+      "execution_verified": false
+    },
+    {
+      "case_id": "creative-r2-impress-master",
+      "disposition": "accept",
+      "reason": "Accept. Official help supports master views and current-slide versus all-slide application; preserve special-slide validation. Current help identifies 26.8, not proof of installed version.",
+      "source_ids": [
+        "r2-impress-master",
+        "r2-impress-change"
+      ],
+      "id_collision": false,
+      "execution_verified": false
+    },
+    {
+      "case_id": "creative-r2-impress-handouts",
+      "disposition": "accept",
+      "reason": "Accept. Official help supports Handouts selection, per-page count and Notes/Handouts header/footer settings. Print-to-file is expressly conditional and no PDF output is claimed.",
+      "source_ids": [
+        "r2-impress-handout"
+      ],
+      "id_collision": false,
+      "execution_verified": false
+    },
+    {
+      "case_id": "creative-r2-spectral-hum",
+      "disposition": "accept",
+      "reason": "Accept as bounded workflow design. Official manual supports dedicated spectral effects for time/frequency ranges, distinguishes ordinary delete and narrows suitable noise. No promise of restoration or listening test.",
+      "source_ids": [
+        "r2-audacity-spectral"
+      ],
+      "id_collision": false,
+      "execution_verified": false
+    },
+    {
+      "case_id": "creative-r2-loudness-two-pass",
+      "disposition": "fix",
+      "reason": "Fix operational evidence instructions. Explicitly set print_format=json (or summary) in SECOND pass and output verification pass, preserving logs, because default is none. Clearly map input_i/input_lra/input_tp/input_thresh to measured_I/measured_LRA/measured_TP/measured_thresh and target_offset to offset. Keep fallback/sample-rate and no-universal-target caveats.",
+      "source_ids": [
+        "r2-ffmpeg-loudnorm",
+        "r2-ffmpeg-license"
+      ],
+      "id_collision": false,
+      "execution_verified": false
+    }
+  ],
+  "blockers": {
+    "new": [],
+    "blender": "Prior three HTTP402 entries preserved as uncertain; not retried and no alternate route used."
+  }
+}

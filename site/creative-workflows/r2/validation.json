@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-10-28",
+  "validation": {
+    "status": "passed_structural_and_manual_dedup_review_only",
+    "product_execution": false,
+    "offline_simulation_execution": false,
+    "accounts_used": false,
+    "paid_assets_or_apis": false,
+    "repo_writes": false,
+    "case_count": 9,
+    "source_count": 12,
+    "baseline_case_count": 97,
+    "proposed_node_count": 6,
+    "proposed_node_ids": [
+      "design-freecad-partdesign",
+      "design-godot-asset-pipeline",
+      "design-godot-spriteframes",
+      "design-libreoffice-impress",
+      "design-openscad",
+      "music-audacity-spectral"
+    ],
+    "checks": [
+      "unique_case_ids",
+      "no_id_collision_with_97_case_baseline",
+      "all_source_ids_resolve",
+      "all_cases_have_required_fields",
+      "all_execution_flags_false",
+      "unknown_publication_dates_null",
+      "manual_goal_and_deliverable_dedup_review",
+      "independent_12_official_sources_reviewed",
+      "second_pass_and_verification_statistics_explicit",
+      "sprite_dedup_baseline_keyframe_route_preserved"
+    ],
+    "limits": "结构检查不是产品实测；去重按标题/目标/交付物人工比较，未证明所有语义无重叠。"
+  },
+  "artifacts": [
+    {
+      "path": "creative-workflows-r2/creative-workflows-r2.json",
+      "sha256": "875dd0859f2e781ac06e848566daf313335636d5385b3b29cd0932b923b02524"
+    },
+    {
+      "path": "creative-workflows-r2/creative-workflows-r2.md",
+      "sha256": "d87722341f5c982ed2a83f0cf64e1e8dfcf1117c11fc1de32b903ecf0f9fa293"
+    }
+  ],
+  "independent_qa": {
+    "report": "creative-workflows-qa-r2/REPORT.md",
+    "original_dispositions": "7 accept / 2 fix / 0 reject",
+    "corrections": "Both narrow fixes applied; no operation executed",
+    "before_snapshot": "creative-workflows-qa-r2/before"
+  }
+}

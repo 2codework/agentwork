@@ -13995,6 +13995,1703 @@
         }
       ],
       "lesson_markdown": "### 学习目标\n\n读取一组明确固定2026-07-28的tools/list消息，不偷用旧版初始化状态。\n\n### 前置知识\n\n- 能阅读JSON对象与数组\n\n- Python 3.10+，仅标准库；无需账号、网络、SDK或模型\n\n### 固定版本\n\nMCP 2026-07-28 fixed wire subset; no SDK\n\n### 生命周期\n\ncurrent\n\n### 核查日期\n\n2026-10-28\n\n### 未实测边界\n\n官方材料已阅读；只有自编离线模拟契约接受测试。未运行MCP SDK、真实服务或模型。\n\n### 权限\n\n仅本地读取教学JSON与运行随附原创标准库校验器；不授予下载执行外部skill、连接服务、发消息、写远端或处理凭据的权限。\n\n### 风险\n\n全部数据为合成；提示词不是安全隔离措施。fixture通过不能证明SDK兼容、网络传输、OAuth或模型行为。\n\n### 失败处理\n\n先在临时副本修正被指出的字段或顺序，再运行本地测试。外部操作结果若未知，先查询状态；不要将本地重放规则套用于真实写操作。\n\n### 实践证据范围\n\n原创教学练习；所列官方规范支持协议与安全依据，不声称本练习是经过行业效果比较的最佳实践。\n\n### 合成输入\n\n```json\n\n[\n  {\n    \"direction\": \"client_to_server\",\n    \"message\": {\n      \"jsonrpc\": \"2.0\",\n      \"id\": 1,\n      \"method\": \"tools/list\",\n      \"params\": {\n        \"_meta\": {\n          \"io.modelcontextprotocol/protocolVersion\": \"2026-07-28\",\n          \"io.modelcontextprotocol/clientCapabilities\": {},\n          \"io.modelcontextprotocol/clientInfo\": {\n            \"name\": \"modern-lesson\",\n            \"version\": \"1.0.0\"\n          }\n        }\n      }\n    }\n  },\n  {\n    \"direction\": \"server_to_client\",\n    \"message\": {\n      \"jsonrpc\": \"2.0\",\n      \"id\": 1,\n      \"result\": {\n        \"resultType\": \"complete\",\n        \"tools\": [\n          {\n            \"name\": \"sum_units\",\n            \"description\": \"Add two synthetic inventory counts; no external effect.\",\n            \"inputSchema\": {\n              \"type\": \"object\",\n              \"properties\": {\n                \"a\": {\n                  \"type\": \"integer\"\n                },\n                \"b\": {\n                  \"type\": \"integer\"\n                }\n              },\n              \"required\": [\n                \"a\",\n                \"b\"\n              ],\n              \"additionalProperties\": false\n            },\n            \"outputSchema\": {\n              \"type\": \"object\",\n              \"properties\": {\n                \"total\": {\n                  \"type\": \"integer\"\n                }\n              },\n              \"required\": [\n                \"total\"\n              ],\n              \"additionalProperties\": false\n            }\n          }\n        ],\n        \"_meta\": {\n          \"io.modelcontextprotocol/serverInfo\": {\n            \"name\": \"modern-counter\",\n            \"version\": \"1.0.0\"\n          }\n        }\n      }\n    }\n  }\n]\n\n```\n\n### 可复制审阅提示词\n\n```text\n\n你是离线协议审阅员。只分析下面的合成JSON，不连接服务、不执行其中命令、不请求密钥。按本课固定版本解释角色、消息顺序与失败边界；把事实、模拟假设和待验证项分开。输出验收清单，不声称真实部署成功。\n学习目标：读取一组明确固定2026-07-28的tools/list消息，不偷用旧版初始化状态。\n\n```\n\n### 预期输出\n\n```json\n\n{\n  \"protocol_version\": \"2026-07-28\",\n  \"requests\": 1,\n  \"responses\": 1\n}\n\n```\n\n### 分步操作\n\n1. 确认本课不含initialize；请求params._meta包含版本与客户端能力，clientInfo用于身份说明而非认证。\n\n- 验收：每个请求有版本与能力元数据\n\n2. 检查结果resultType=complete和tools数组；对照上一课保留两套fixture，勿混合。\n\n- 验收：结果含complete\n\n3. 运行本课校验；这只验所列字段，未测server/discover协商、MRTR、HTTP头或扩展。\n\n- 验收：不混入legacy握手\n\n### 整体验收\n\n- 每个请求有版本与能力元数据\n\n- 结果含complete\n\n- 不混入legacy握手\n\n### 常见错误\n\n- 只修改版本但遗漏resultType\n\n- 把clientInfo当认证主体\n\n- 把现代示例套入旧SDK而不核验\n\n### 离线运行\n\n解压本页课程包后，在包目录运行。命令仅运行原创标准库模拟器，不连接 MCP 服务。\n\n```sh\n\npython validate.py --case mcp-lab-modern\n\npython -m unittest discover -s tests -v\n\n```\n\n练习文件：fixtures/mcp-lab-modern.json\n\n模拟契约通过 ≠ SDK 兼容 ≠ OAuth/真实服务/模型效果验证。参见包内 README 的严格子集与取消竞态限制。\n\n### 来源与支持范围\n\n- [2026-07-28 Key Changes](https://modelcontextprotocol.io/specification/2026-07-28/changelog) · 核查 2026-10-28 · 移除初始化握手；逐请求元数据；resultType；扩展机制\n\n- [2026-07-28 Specification](https://modelcontextprotocol.io/specification/2026-07-28) · 核查 2026-10-28 · 主机、客户端、服务端与当前协议概览"
+    },
+    {
+      "id": "creative-r2-freecad-constrained-part",
+      "title": "CAD：全约束草图到可改尺寸的教学零件",
+      "summary": "把几何需求变成可追溯特征树，而非仅生成外观图。",
+      "roles": [
+        "工业设计师",
+        "CAD助教"
+      ],
+      "industries": [
+        "创意设计与教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "待执行步骤 1",
+          "body": "新建文档，切到 Part Design，创建 Body。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 2",
+          "body": "在 XY 平面新建闭合矩形草图；将一角约束到原点，水平/垂直及长宽约束为40和30毫米；确认自由度为0。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 3",
+          "body": "关闭草图，Pad 5毫米；保存基线。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 4",
+          "body": "在顶面新建圆，半径3毫米，圆心距草图原点20/15毫米；全约束后 Pocket 选 Through all。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 5",
+          "body": "另存变体，将矩形长度改为50毫米；检查孔位置和特征树错误，记录设计意图是否要求重新居中。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "FreeCAD archived PartDesign tutorial",
+          "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Creating_a_simple_part_with_PartDesign.md",
+          "evidence": "primary",
+          "checked_at": "2026-10-28",
+          "claim": "草图约束、Pad、Pocket 与尺寸修改；教程标注 0.17 or above；main 未固定 SHA；仅文档核验，非操作结果。",
+          "raw_source": {
+            "id": "r2-freecad",
+            "title": "FreeCAD archived PartDesign tutorial",
+            "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Creating_a_simple_part_with_PartDesign.md",
+            "primary": true,
+            "access_checked_at": "2026-10-28",
+            "access_status": "web_open_verified",
+            "publication_date": null,
+            "publication_date_note": "未核实发布日期；不以抓取日代替发布日期",
+            "version": "教程标注 0.17 or above；main 未固定 SHA",
+            "verified_scope": "草图约束、Pad、Pocket 与尺寸修改",
+            "caveat": "仓库页面明确标注 2026-04-01 归档；不是软件被废弃的证据。"
+          }
+        }
+      ],
+      "source_ids": [
+        "r2-freecad"
+      ],
+      "input": "40×30×5毫米块和一个半径3毫米孔的原创尺寸卡",
+      "prompt": "仅设计本练习，不执行软件、安装、上传、打印或外发。\n前置：\n未来需经授权的 FreeCAD 安装；记录实际版本\n毫米尺寸表；仅非承重虚构零件\n合成输入：\n40×30×5毫米块和一个半径3毫米孔的原创尺寸卡\n纸面沙盒（未运行）：纸面列出40→50变化后哪些尺寸应变；故意省略圆心位置约束并预测自由度风险。\n预期而非结果：识别圆可移动，不宣称实体建模已通过。\n输出：\n待执行 FCStd 基线/变体\n尺寸-约束-特征对照表\nAgent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "output": "待执行 FCStd 基线/变体\n尺寸-约束-特征对照表",
+      "rubric": [
+        "草图0自由度",
+        "Pad/Pocket无错误",
+        "变更有人工设计意图签核"
+      ],
+      "risks": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。\n失败与恢复：\n草图端点重叠但不重合：检查 Coincident，不盲加约束\n过约束：退回最近约束并记录\n面附着/尺寸变化后重建失败：停在最后有效版本，人工修复引用\n许可边界：软件/文档/零件权利分开核验；不复制教程图片，不用于工程安全认证。\n版本边界：历史教程0.17+，当前UI/拓扑行为未实测；归档日期不代表软件停更。",
+      "failure_recovery": "草图端点重叠但不重合：检查 Coincident，不盲加约束\n过约束：退回最近约束并记录\n面附着/尺寸变化后重建失败：停在最后有效版本，人工修复引用",
+      "license": "软件/文档/零件权利分开核验；不复制教程图片，不用于工程安全认证。",
+      "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。",
+      "cost": "本轮未运行；未来授权执行前核对安装、素材及计算预算。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持工具范围；尺寸、参数目标、步骤及验收为原创教学适配，产品与沙盒均未执行。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "历史教程0.17+，当前UI/拓扑行为未实测；归档日期不代表软件停更。",
+      "replacement_case": "",
+      "historical_context": "documented_candidate只表示待执行教学提案，不表示工具现行或已弃用。",
+      "practice_status": "original_teaching_template_not_executed",
+      "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "workflow_type": "human_supervised_agent_design",
+      "modelatlas_node_ids": [
+        "design-freecad-partdesign"
+      ],
+      "modelatlas_links": [
+        {
+          "id": "design-freecad-partdesign",
+          "title": "FreeCAD Part Design · 参数化教学工具",
+          "url": "https://2codework.github.io/modelatlas/?node=design-freecad-partdesign"
+        }
+      ],
+      "raw_record": {
+        "id": "creative-r2-freecad-constrained-part",
+        "title": "CAD：全约束草图到可改尺寸的教学零件",
+        "roles": [
+          "工业设计师",
+          "CAD助教"
+        ],
+        "goal": "把几何需求变成可追溯特征树，而非仅生成外观图。",
+        "prerequisites": [
+          "未来需经授权的 FreeCAD 安装；记录实际版本",
+          "毫米尺寸表；仅非承重虚构零件"
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "新建文档，切到 Part Design，创建 Body。"
+          },
+          {
+            "order": 2,
+            "action": "在 XY 平面新建闭合矩形草图；将一角约束到原点，水平/垂直及长宽约束为40和30毫米；确认自由度为0。"
+          },
+          {
+            "order": 3,
+            "action": "关闭草图，Pad 5毫米；保存基线。"
+          },
+          {
+            "order": 4,
+            "action": "在顶面新建圆，半径3毫米，圆心距草图原点20/15毫米；全约束后 Pocket 选 Through all。"
+          },
+          {
+            "order": 5,
+            "action": "另存变体，将矩形长度改为50毫米；检查孔位置和特征树错误，记录设计意图是否要求重新居中。"
+          }
+        ],
+        "inputs": [
+          "40×30×5毫米块和一个半径3毫米孔的原创尺寸卡"
+        ],
+        "outputs": [
+          "待执行 FCStd 基线/变体",
+          "尺寸-约束-特征对照表"
+        ],
+        "failure_modes_and_recovery": [
+          "草图端点重叠但不重合：检查 Coincident，不盲加约束",
+          "过约束：退回最近约束并记录",
+          "面附着/尺寸变化后重建失败：停在最后有效版本，人工修复引用"
+        ],
+        "safe_sandbox_exercise": {
+          "status": "proposed_not_run",
+          "task": "纸面列出40→50变化后哪些尺寸应变；故意省略圆心位置约束并预测自由度风险。",
+          "expected": "识别圆可移动，不宣称实体建模已通过。"
+        },
+        "source_ids": [
+          "r2-freecad"
+        ],
+        "modelatlas_links": [
+          {
+            "node_id": "design-freecad-partdesign",
+            "status": "proposed_separate_node",
+            "type": "tool"
+          }
+        ],
+        "non_duplicate_rationale": "97案例没有参数化CAD/全约束特征树；不同于产品图片合成。",
+        "version_caveats": "历史教程0.17+，当前UI/拓扑行为未实测；归档日期不代表软件停更。",
+        "licensing_caveats": "软件/文档/零件权利分开核验；不复制教程图片，不用于工程安全认证。",
+        "acceptance_criteria": [
+          "草图0自由度",
+          "Pad/Pocket无错误",
+          "变更有人工设计意图签核"
+        ],
+        "lifecycle": "historical_documentation_retained",
+        "checked_at": "2026-10-28",
+        "workflow_type": "human_supervised_agent_design",
+        "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+        "verification": {
+          "documented_workflow": true,
+          "original_instructional_adaptation": true,
+          "offline_simulation_executed": false,
+          "product_executed": false,
+          "actual_tested": false
+        },
+        "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。"
+      }
+    },
+    {
+      "id": "creative-r2-openscad-parameter-guard",
+      "title": "CAD：带边界校验的参数化环形垫片",
+      "summary": "先拒绝非法参数，再产生可复查几何。",
+      "roles": [
+        "参数化设计师",
+        "创意编程教师"
+      ],
+      "industries": [
+        "创意设计与教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "待执行步骤 1",
+          "body": "建立外径20、内径8、高度3三个变量，声明单位毫米。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 2",
+          "body": "使用 assert 要求外径>内径>0且高度>0。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 3",
+          "body": "difference 中放外圆柱；内圆柱向下偏移0.1毫米且高度增加0.2毫米，避免共面边界。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 4",
+          "body": "先预览，再完整渲染；检查孔贯通、轮廓连续；本轮不运行。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 5",
+          "body": "对内径8、12、22建立参数表：22必须拒绝；保存源码和预期，不送打印。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "OpenSCAD CheatSheet",
+          "url": "https://openscad.org/cheatsheet/",
+          "evidence": "primary",
+          "checked_at": "2026-10-28",
+          "claim": "变量、assert、cube、cylinder、translate、difference 与预览/渲染；v2021.01；仅文档核验，非操作结果。",
+          "raw_source": {
+            "id": "r2-openscad",
+            "title": "OpenSCAD CheatSheet",
+            "url": "https://openscad.org/cheatsheet/",
+            "primary": true,
+            "access_checked_at": "2026-10-28",
+            "access_status": "web_open_verified",
+            "publication_date": null,
+            "publication_date_note": "未核实发布日期；不以抓取日代替发布日期",
+            "version": "v2021.01",
+            "verified_scope": "变量、assert、cube、cylinder、translate、difference 与预览/渲染",
+            "caveat": "官方站点速查表；链接到社区手册不等于本轮已核验该手册。"
+          }
+        }
+      ],
+      "source_ids": [
+        "r2-openscad"
+      ],
+      "input": "三组原创参数",
+      "prompt": "仅设计本练习，不执行软件、安装、上传、打印或外发。\n前置：\n未来需授权 OpenSCAD；记录版本\n原创非功能性展示尺寸\n合成输入：\n三组原创参数\n纸面沙盒（未运行）：手工计算三组内外径关系，拒绝22；不启动 CAD。\n预期而非结果：2组合法，1组拒绝；不是打印验证。\n输出：\n待执行 .scad 源码\n合法/非法参数与预期矩阵\nAgent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "output": "待执行 .scad 源码\n合法/非法参数与预期矩阵",
+      "rubric": [
+        "非法参数先失败",
+        "孔不封闭",
+        "记录版本和尺寸单位"
+      ],
+      "risks": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。\n失败与恢复：\n等径或负值：assert 拒绝\n共面导致布尔问题：保留微小贯穿余量\n预览正常不代表最终实体正确：要求完整渲染复核\n许可边界：速查表显示CC-BY；引用链接而不复制版面；源码/输出模型与第三方库许可分开。\n版本边界：速查表明确v2021.01；不声称最新发行版。",
+      "failure_recovery": "等径或负值：assert 拒绝\n共面导致布尔问题：保留微小贯穿余量\n预览正常不代表最终实体正确：要求完整渲染复核",
+      "license": "速查表显示CC-BY；引用链接而不复制版面；源码/输出模型与第三方库许可分开。",
+      "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。",
+      "cost": "本轮未运行；未来授权执行前核对安装、素材及计算预算。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持工具范围；尺寸、参数目标、步骤及验收为原创教学适配，产品与沙盒均未执行。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "速查表明确v2021.01；不声称最新发行版。",
+      "replacement_case": "",
+      "historical_context": "documented_candidate只表示待执行教学提案，不表示工具现行或已弃用。",
+      "practice_status": "original_teaching_template_not_executed",
+      "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "workflow_type": "human_supervised_agent_design",
+      "modelatlas_node_ids": [
+        "design-openscad"
+      ],
+      "modelatlas_links": [
+        {
+          "id": "design-openscad",
+          "title": "OpenSCAD · 代码几何教学工具",
+          "url": "https://2codework.github.io/modelatlas/?node=design-openscad"
+        }
+      ],
+      "raw_record": {
+        "id": "creative-r2-openscad-parameter-guard",
+        "title": "CAD：带边界校验的参数化环形垫片",
+        "roles": [
+          "参数化设计师",
+          "创意编程教师"
+        ],
+        "goal": "先拒绝非法参数，再产生可复查几何。",
+        "prerequisites": [
+          "未来需授权 OpenSCAD；记录版本",
+          "原创非功能性展示尺寸"
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "建立外径20、内径8、高度3三个变量，声明单位毫米。"
+          },
+          {
+            "order": 2,
+            "action": "使用 assert 要求外径>内径>0且高度>0。"
+          },
+          {
+            "order": 3,
+            "action": "difference 中放外圆柱；内圆柱向下偏移0.1毫米且高度增加0.2毫米，避免共面边界。"
+          },
+          {
+            "order": 4,
+            "action": "先预览，再完整渲染；检查孔贯通、轮廓连续；本轮不运行。"
+          },
+          {
+            "order": 5,
+            "action": "对内径8、12、22建立参数表：22必须拒绝；保存源码和预期，不送打印。"
+          }
+        ],
+        "inputs": [
+          "三组原创参数"
+        ],
+        "outputs": [
+          "待执行 .scad 源码",
+          "合法/非法参数与预期矩阵"
+        ],
+        "failure_modes_and_recovery": [
+          "等径或负值：assert 拒绝",
+          "共面导致布尔问题：保留微小贯穿余量",
+          "预览正常不代表最终实体正确：要求完整渲染复核"
+        ],
+        "safe_sandbox_exercise": {
+          "status": "proposed_not_run",
+          "task": "手工计算三组内外径关系，拒绝22；不启动 CAD。",
+          "expected": "2组合法，1组拒绝；不是打印验证。"
+        },
+        "source_ids": [
+          "r2-openscad"
+        ],
+        "modelatlas_links": [
+          {
+            "node_id": "design-openscad",
+            "status": "proposed_separate_node",
+            "type": "tool"
+          }
+        ],
+        "non_duplicate_rationale": "新增代码驱动几何参数边界，非已有视觉token迁移。",
+        "version_caveats": "速查表明确v2021.01；不声称最新发行版。",
+        "licensing_caveats": "速查表显示CC-BY；引用链接而不复制版面；源码/输出模型与第三方库许可分开。",
+        "acceptance_criteria": [
+          "非法参数先失败",
+          "孔不封闭",
+          "记录版本和尺寸单位"
+        ],
+        "lifecycle": "documented_candidate",
+        "checked_at": "2026-10-28",
+        "workflow_type": "human_supervised_agent_design",
+        "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+        "verification": {
+          "documented_workflow": true,
+          "original_instructional_adaptation": true,
+          "offline_simulation_executed": false,
+          "product_executed": false,
+          "actual_tested": false
+        },
+        "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。"
+      }
+    },
+    {
+      "id": "creative-r2-gltf-handoff",
+      "title": "3D：从美术源文件到游戏 glTF 交接",
+      "summary": "验证网格、纹理和尺度在跨工具交接中未丢失。",
+      "roles": [
+        "技术美术",
+        "3D设计师"
+      ],
+      "industries": [
+        "创意设计与教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "待执行步骤 1",
+          "body": "建立资产清单：主文件、纹理、参考尺寸、材质名。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 2",
+          "body": "把GLB或GLTF+BIN+纹理完整复制到空白项目专用目录。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 3",
+          "body": "等待导入；选资源打开 Import/Advanced，检查根节点类型与缩放。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 4",
+          "body": "对照参考检查尺寸、朝向、法线与贴图；不要用OBJ承载骨骼动画。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 5",
+          "body": "另存使用该资产的Godot场景；变更源文件后再导入并比较清单。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Godot available 3D formats",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/available_formats.html",
+          "evidence": "primary",
+          "checked_at": "2026-10-28",
+          "claim": "glTF 导入、外置纹理、blend 依赖 Blender；OBJ 不保留骨骼动画；stable 滚动文档；具体版本未固定；仅文档核验，非操作结果。",
+          "raw_source": {
+            "id": "r2-godot-formats",
+            "title": "Godot available 3D formats",
+            "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/available_formats.html",
+            "primary": true,
+            "access_checked_at": "2026-10-28",
+            "access_status": "web_open_verified",
+            "publication_date": null,
+            "publication_date_note": "未核实发布日期；不以抓取日代替发布日期",
+            "version": "stable 滚动文档；具体版本未固定",
+            "verified_scope": "glTF 导入、外置纹理、blend 依赖 Blender；OBJ 不保留骨骼动画",
+            "caveat": "旧 Godot 4.0/3.0 文档不可当作当前 FBX 导入依据。"
+          }
+        },
+        {
+          "title": "Godot import configuration",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/import_configuration.html",
+          "evidence": "primary",
+          "checked_at": "2026-10-28",
+          "claim": "导入设置、根节点缩放、切线、独立场景保存；stable 滚动文档；具体版本未固定；仅文档核验，非操作结果。",
+          "raw_source": {
+            "id": "r2-godot-config",
+            "title": "Godot import configuration",
+            "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/import_configuration.html",
+            "primary": true,
+            "access_checked_at": "2026-10-28",
+            "access_status": "web_open_verified",
+            "publication_date": null,
+            "publication_date_note": "未核实发布日期；不以抓取日代替发布日期",
+            "version": "stable 滚动文档；具体版本未固定",
+            "verified_scope": "导入设置、根节点缩放、切线、独立场景保存",
+            "caveat": ""
+          }
+        }
+      ],
+      "source_ids": [
+        "r2-godot-formats",
+        "r2-godot-config"
+      ],
+      "input": "原创1米立方体和自绘双色贴图的待建资产包",
+      "prompt": "仅设计本练习，不执行软件、安装、上传、打印或外发。\n前置：\n未来授权的 Godot；预先自制GLB/GLTF，不需本轮Blender执行\n记录源应用/导出器版本与资产权利\n合成输入：\n原创1米立方体和自绘双色贴图的待建资产包\n纸面沙盒（未运行）：纸面删除一个纹理引用，检查交接清单能否发现缺件。\n预期而非结果：明确拒收缺件包。\n输出：\n导入设置记录\n资产缺失/尺度差异清单\n待执行场景\nAgent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "output": "导入设置记录\n资产缺失/尺度差异清单\n待执行场景",
+      "rubric": [
+        "尺度与参考一致",
+        "无丢纹理",
+        "源文件未被覆盖"
+      ],
+      "risks": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。\n失败与恢复：\n缺贴图：检查相对路径和完整资产包\n尺度错误：记录Root Scale及Apply Root Scale，勿反复叠乘\nblend直接导入依赖外部Blender：缺依赖时改由有授权者提供GLB，不绕过环境限制\n许可边界：仅原创几何与纹理；引擎许可不授予第三方模型/字体权利。\n版本边界：stable滚动文档；正式实践固定Godot与导出器版本。",
+      "failure_recovery": "缺贴图：检查相对路径和完整资产包\n尺度错误：记录Root Scale及Apply Root Scale，勿反复叠乘\nblend直接导入依赖外部Blender：缺依赖时改由有授权者提供GLB，不绕过环境限制",
+      "license": "仅原创几何与纹理；引擎许可不授予第三方模型/字体权利。",
+      "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。",
+      "cost": "本轮未运行；未来授权执行前核对安装、素材及计算预算。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持工具范围；尺寸、参数目标、步骤及验收为原创教学适配，产品与沙盒均未执行。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "stable滚动文档；正式实践固定Godot与导出器版本。",
+      "replacement_case": "",
+      "historical_context": "documented_candidate只表示待执行教学提案，不表示工具现行或已弃用。",
+      "practice_status": "original_teaching_template_not_executed",
+      "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "workflow_type": "human_supervised_agent_design",
+      "modelatlas_node_ids": [
+        "design-godot-asset-pipeline"
+      ],
+      "modelatlas_links": [
+        {
+          "id": "design-godot-asset-pipeline",
+          "title": "Godot · 3D资产与碰撞教学工具",
+          "url": "https://2codework.github.io/modelatlas/?node=design-godot-asset-pipeline"
+        }
+      ],
+      "raw_record": {
+        "id": "creative-r2-gltf-handoff",
+        "title": "3D：从美术源文件到游戏 glTF 交接",
+        "roles": [
+          "技术美术",
+          "3D设计师"
+        ],
+        "goal": "验证网格、纹理和尺度在跨工具交接中未丢失。",
+        "prerequisites": [
+          "未来授权的 Godot；预先自制GLB/GLTF，不需本轮Blender执行",
+          "记录源应用/导出器版本与资产权利"
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "建立资产清单：主文件、纹理、参考尺寸、材质名。"
+          },
+          {
+            "order": 2,
+            "action": "把GLB或GLTF+BIN+纹理完整复制到空白项目专用目录。"
+          },
+          {
+            "order": 3,
+            "action": "等待导入；选资源打开 Import/Advanced，检查根节点类型与缩放。"
+          },
+          {
+            "order": 4,
+            "action": "对照参考检查尺寸、朝向、法线与贴图；不要用OBJ承载骨骼动画。"
+          },
+          {
+            "order": 5,
+            "action": "另存使用该资产的Godot场景；变更源文件后再导入并比较清单。"
+          }
+        ],
+        "inputs": [
+          "原创1米立方体和自绘双色贴图的待建资产包"
+        ],
+        "outputs": [
+          "导入设置记录",
+          "资产缺失/尺度差异清单",
+          "待执行场景"
+        ],
+        "failure_modes_and_recovery": [
+          "缺贴图：检查相对路径和完整资产包",
+          "尺度错误：记录Root Scale及Apply Root Scale，勿反复叠乘",
+          "blend直接导入依赖外部Blender：缺依赖时改由有授权者提供GLB，不绕过环境限制"
+        ],
+        "safe_sandbox_exercise": {
+          "status": "proposed_not_run",
+          "task": "纸面删除一个纹理引用，检查交接清单能否发现缺件。",
+          "expected": "明确拒收缺件包。"
+        },
+        "source_ids": [
+          "r2-godot-formats",
+          "r2-godot-config"
+        ],
+        "modelatlas_links": [
+          {
+            "node_id": "design-godot-asset-pipeline",
+            "status": "proposed_separate_node",
+            "type": "tool"
+          }
+        ],
+        "non_duplicate_rationale": "现有视频图生模型和项目归档不覆盖3D资源格式/单位交接。",
+        "version_caveats": "stable滚动文档；正式实践固定Godot与导出器版本。",
+        "licensing_caveats": "仅原创几何与纹理；引擎许可不授予第三方模型/字体权利。",
+        "acceptance_criteria": [
+          "尺度与参考一致",
+          "无丢纹理",
+          "源文件未被覆盖"
+        ],
+        "lifecycle": "documented_candidate",
+        "checked_at": "2026-10-28",
+        "workflow_type": "human_supervised_agent_design",
+        "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+        "verification": {
+          "documented_workflow": true,
+          "original_instructional_adaptation": true,
+          "offline_simulation_executed": false,
+          "product_executed": false,
+          "actual_tested": false
+        },
+        "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。"
+      }
+    },
+    {
+      "id": "creative-r2-game-collision",
+      "title": "游戏资产：静态场景与动态道具碰撞分别验收",
+      "summary": "避免用渲染网格的外观代替碰撞行为验证。",
+      "roles": [
+        "技术美术",
+        "游戏关卡设计师"
+      ],
+      "industries": [
+        "创意设计与教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "待执行步骤 1",
+          "body": "导入两件原创简模并打开Advanced Import Settings。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 2",
+          "body": "对地板节点启用Generate > Physics，Body Type选Static；按需求选Trimesh。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 3",
+          "body": "对动态道具选Dynamic并选原始/凸形状，不将Trimesh用于动态体。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 4",
+          "body": "在隔离测试场景预览碰撞形状，人工比对边界和穿透风险。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 5",
+          "body": "未来运行掉落试验，保存接触/穿透结果；若失败先简化碰撞形状，不直接发布。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Godot advanced import settings",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/advanced_import_settings.html",
+          "evidence": "primary",
+          "checked_at": "2026-10-28",
+          "claim": "逐节点物理形状、静态/动态类型、外置材质；stable 滚动文档；具体版本未固定；仅文档核验，非操作结果。",
+          "raw_source": {
+            "id": "r2-godot-advanced",
+            "title": "Godot advanced import settings",
+            "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/advanced_import_settings.html",
+            "primary": true,
+            "access_checked_at": "2026-10-28",
+            "access_status": "web_open_verified",
+            "publication_date": null,
+            "publication_date_note": "未核实发布日期；不以抓取日代替发布日期",
+            "version": "stable 滚动文档；具体版本未固定",
+            "verified_scope": "逐节点物理形状、静态/动态类型、外置材质",
+            "caveat": "Trimesh 只能配静态碰撞体；不能把精确三角碰撞直接用于动态物体。"
+          }
+        }
+      ],
+      "source_ids": [
+        "r2-godot-advanced"
+      ],
+      "input": "地板与方块角色表",
+      "prompt": "仅设计本练习，不执行软件、安装、上传、打印或外发。\n前置：\n未来授权Godot和原创简模\n静态地板/动态方块的角色表\n合成输入：\n地板与方块角色表\n纸面沙盒（未运行）：给三张角色卡分配Static/Dynamic及允许形状，故意加入Dynamic+Trimesh。\n预期而非结果：拒绝不匹配组合。\n输出：\n碰撞类型配置表\n待执行测试场景与失败记录\nAgent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "output": "碰撞类型配置表\n待执行测试场景与失败记录",
+      "rubric": [
+        "动态体不使用Trimesh",
+        "角色与碰撞类型一致",
+        "运行结果空白直至实际测试"
+      ],
+      "risks": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。\n失败与恢复：\n动态Trimesh不适用：换凸/原始形状\n凸分解过细：降低精度并重新检查几何\n视觉正确但穿透：检查实际碰撞体，不标实测通过\n许可边界：使用原创几何，不使用文档中的第三方椅子模型。\n版本边界：菜单以stable文档为依据；没有帧率或物理稳定性测量。",
+      "failure_recovery": "动态Trimesh不适用：换凸/原始形状\n凸分解过细：降低精度并重新检查几何\n视觉正确但穿透：检查实际碰撞体，不标实测通过",
+      "license": "使用原创几何，不使用文档中的第三方椅子模型。",
+      "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。",
+      "cost": "本轮未运行；未来授权执行前核对安装、素材及计算预算。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持工具范围；尺寸、参数目标、步骤及验收为原创教学适配，产品与沙盒均未执行。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "菜单以stable文档为依据；没有帧率或物理稳定性测量。",
+      "replacement_case": "",
+      "historical_context": "documented_candidate只表示待执行教学提案，不表示工具现行或已弃用。",
+      "practice_status": "original_teaching_template_not_executed",
+      "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "workflow_type": "human_supervised_agent_design",
+      "modelatlas_node_ids": [
+        "design-godot-asset-pipeline"
+      ],
+      "modelatlas_links": [
+        {
+          "id": "design-godot-asset-pipeline",
+          "title": "Godot · 3D资产与碰撞教学工具",
+          "url": "https://2codework.github.io/modelatlas/?node=design-godot-asset-pipeline"
+        }
+      ],
+      "raw_record": {
+        "id": "creative-r2-game-collision",
+        "title": "游戏资产：静态场景与动态道具碰撞分别验收",
+        "roles": [
+          "技术美术",
+          "游戏关卡设计师"
+        ],
+        "goal": "避免用渲染网格的外观代替碰撞行为验证。",
+        "prerequisites": [
+          "未来授权Godot和原创简模",
+          "静态地板/动态方块的角色表"
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "导入两件原创简模并打开Advanced Import Settings。"
+          },
+          {
+            "order": 2,
+            "action": "对地板节点启用Generate > Physics，Body Type选Static；按需求选Trimesh。"
+          },
+          {
+            "order": 3,
+            "action": "对动态道具选Dynamic并选原始/凸形状，不将Trimesh用于动态体。"
+          },
+          {
+            "order": 4,
+            "action": "在隔离测试场景预览碰撞形状，人工比对边界和穿透风险。"
+          },
+          {
+            "order": 5,
+            "action": "未来运行掉落试验，保存接触/穿透结果；若失败先简化碰撞形状，不直接发布。"
+          }
+        ],
+        "inputs": [
+          "地板与方块角色表"
+        ],
+        "outputs": [
+          "碰撞类型配置表",
+          "待执行测试场景与失败记录"
+        ],
+        "failure_modes_and_recovery": [
+          "动态Trimesh不适用：换凸/原始形状",
+          "凸分解过细：降低精度并重新检查几何",
+          "视觉正确但穿透：检查实际碰撞体，不标实测通过"
+        ],
+        "safe_sandbox_exercise": {
+          "status": "proposed_not_run",
+          "task": "给三张角色卡分配Static/Dynamic及允许形状，故意加入Dynamic+Trimesh。",
+          "expected": "拒绝不匹配组合。"
+        },
+        "source_ids": [
+          "r2-godot-advanced"
+        ],
+        "modelatlas_links": [
+          {
+            "node_id": "design-godot-asset-pipeline",
+            "status": "proposed_separate_node",
+            "type": "tool"
+          }
+        ],
+        "non_duplicate_rationale": "与3D外观交接不同：独立验证物理类型和碰撞语义；97案例无此任务。",
+        "version_caveats": "菜单以stable文档为依据；没有帧率或物理稳定性测量。",
+        "licensing_caveats": "使用原创几何，不使用文档中的第三方椅子模型。",
+        "acceptance_criteria": [
+          "动态体不使用Trimesh",
+          "角色与碰撞类型一致",
+          "运行结果空白直至实际测试"
+        ],
+        "lifecycle": "documented_candidate",
+        "checked_at": "2026-10-28",
+        "workflow_type": "human_supervised_agent_design",
+        "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+        "verification": {
+          "documented_workflow": true,
+          "original_instructional_adaptation": true,
+          "offline_simulation_executed": false,
+          "product_executed": false,
+          "actual_tested": false
+        },
+        "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。"
+      }
+    },
+    {
+      "id": "creative-r2-sprite-sheet",
+      "title": "动画：原创精灵表切帧与循环验收",
+      "summary": "把逐格美术转成可调帧率的动画资源。",
+      "roles": [
+        "2D动画师",
+        "游戏美术"
+      ],
+      "industries": [
+        "创意设计与教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "待执行步骤 1",
+          "body": "在空白场景添加AnimatedSprite2D，新建SpriteFrames资源。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 2",
+          "body": "打开资源，选Add frames from a Sprite Sheet并指定原创图片。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 3",
+          "body": "设置横4纵1，按顺序选帧；命名idle。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 4",
+          "body": "设8FPS与循环，预览首尾衔接；记录透明边缘和角色锚点是否跳动。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 5",
+          "body": "增加第二个动作时另建动画名；保留原帧序与FPS记录，不通过加速掩盖漏帧。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Godot 2D sprite animation",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/2d/2d_sprite_animation.html",
+          "evidence": "primary",
+          "checked_at": "2026-10-28",
+          "claim": "SpriteFrames、sprite sheet 网格、FPS、预览及播放控制；stable / AnimatedSprite2D；仅文档核验，非操作结果。",
+          "raw_source": {
+            "id": "r2-godot-sprite",
+            "title": "Godot 2D sprite animation",
+            "url": "https://docs.godotengine.org/en/stable/tutorials/2d/2d_sprite_animation.html",
+            "primary": true,
+            "access_checked_at": "2026-10-28",
+            "access_status": "web_open_verified",
+            "publication_date": null,
+            "publication_date_note": "未核实发布日期；不以抓取日代替发布日期",
+            "version": "stable / AnimatedSprite2D",
+            "verified_scope": "SpriteFrames、sprite sheet 网格、FPS、预览及播放控制",
+            "caveat": "不下载文档示例美术；素材署名和许可需独立核验。"
+          }
+        }
+      ],
+      "source_ids": [
+        "r2-godot-sprite"
+      ],
+      "input": "自绘四帧呼吸圆点",
+      "prompt": "仅设计本练习，不执行软件、安装、上传、打印或外发。\n前置：\n未来授权Godot\n原创128×32像素四帧横向精灵表，无第三方角色\n合成输入：\n自绘四帧呼吸圆点\n纸面沙盒（未运行）：用帧编号0,1,2,3计算8FPS的一轮时长，并检查错序0,2,1,3。\n预期而非结果：周期0.5秒；错序需人工复核，未做视觉预览。\n输出：\n待执行SpriteFrames资源\n帧序/FPS验收表\nAgent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "output": "待执行SpriteFrames资源\n帧序/FPS验收表",
+      "rubric": [
+        "四帧顺序正确",
+        "每轮0.5秒为本练习目标",
+        "透明边缘与循环需未来视觉验收"
+      ],
+      "risks": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。\n失败与恢复：\n网格错误：确认图片尺寸可整除\n边缘跳动：统一锚点与透明留白\n首尾重复造成停顿：人工决定是否删除冗余帧\n许可边界：不下载官方教程示例素材；自绘，不模仿受保护角色。\n版本边界：Godot4命名AnimatedSprite2D；旧版本类名和界面需迁移。",
+      "failure_recovery": "网格错误：确认图片尺寸可整除\n边缘跳动：统一锚点与透明留白\n首尾重复造成停顿：人工决定是否删除冗余帧",
+      "license": "不下载官方教程示例素材；自绘，不模仿受保护角色。",
+      "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。",
+      "cost": "本轮未运行；未来授权执行前核对安装、素材及计算预算。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持工具范围；尺寸、参数目标、步骤及验收为原创教学适配，产品与沙盒均未执行。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "Godot4命名AnimatedSprite2D；旧版本类名和界面需迁移。",
+      "replacement_case": "",
+      "historical_context": "documented_candidate只表示待执行教学提案，不表示工具现行或已弃用。",
+      "practice_status": "original_teaching_template_not_executed",
+      "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "workflow_type": "human_supervised_agent_design",
+      "modelatlas_node_ids": [
+        "design-godot-spriteframes"
+      ],
+      "modelatlas_links": [
+        {
+          "id": "design-godot-spriteframes",
+          "title": "Godot SpriteFrames · 逐帧动画教学工具",
+          "url": "https://2codework.github.io/modelatlas/?node=design-godot-spriteframes"
+        }
+      ],
+      "raw_record": {
+        "id": "creative-r2-sprite-sheet",
+        "title": "动画：原创精灵表切帧与循环验收",
+        "roles": [
+          "2D动画师",
+          "游戏美术"
+        ],
+        "goal": "把逐格美术转成可调帧率的动画资源。",
+        "prerequisites": [
+          "未来授权Godot",
+          "原创128×32像素四帧横向精灵表，无第三方角色"
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "在空白场景添加AnimatedSprite2D，新建SpriteFrames资源。"
+          },
+          {
+            "order": 2,
+            "action": "打开资源，选Add frames from a Sprite Sheet并指定原创图片。"
+          },
+          {
+            "order": 3,
+            "action": "设置横4纵1，按顺序选帧；命名idle。"
+          },
+          {
+            "order": 4,
+            "action": "设8FPS与循环，预览首尾衔接；记录透明边缘和角色锚点是否跳动。"
+          },
+          {
+            "order": 5,
+            "action": "增加第二个动作时另建动画名；保留原帧序与FPS记录，不通过加速掩盖漏帧。"
+          }
+        ],
+        "inputs": [
+          "自绘四帧呼吸圆点"
+        ],
+        "outputs": [
+          "待执行SpriteFrames资源",
+          "帧序/FPS验收表"
+        ],
+        "failure_modes_and_recovery": [
+          "网格错误：确认图片尺寸可整除",
+          "边缘跳动：统一锚点与透明留白",
+          "首尾重复造成停顿：人工决定是否删除冗余帧"
+        ],
+        "safe_sandbox_exercise": {
+          "status": "proposed_not_run",
+          "task": "用帧编号0,1,2,3计算8FPS的一轮时长，并检查错序0,2,1,3。",
+          "expected": "周期0.5秒；错序需人工复核，未做视觉预览。"
+        },
+        "source_ids": [
+          "r2-godot-sprite"
+        ],
+        "modelatlas_links": [
+          {
+            "node_id": "design-godot-spriteframes",
+            "status": "proposed_separate_node",
+            "type": "tool"
+          }
+        ],
+        "non_duplicate_rationale": "既有video-silent-animation-loop同时包含传统关键帧与历史生成模型路线；本案新增SpriteFrames资源、精灵表切帧、帧序与FPS交接验收，不重复视频循环交付。",
+        "version_caveats": "Godot4命名AnimatedSprite2D；旧版本类名和界面需迁移。",
+        "licensing_caveats": "不下载官方教程示例素材；自绘，不模仿受保护角色。",
+        "acceptance_criteria": [
+          "四帧顺序正确",
+          "每轮0.5秒为本练习目标",
+          "透明边缘与循环需未来视觉验收"
+        ],
+        "lifecycle": "documented_candidate",
+        "checked_at": "2026-10-28",
+        "workflow_type": "human_supervised_agent_design",
+        "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+        "verification": {
+          "documented_workflow": true,
+          "original_instructional_adaptation": true,
+          "offline_simulation_executed": false,
+          "product_executed": false,
+          "actual_tested": false
+        },
+        "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。"
+      }
+    },
+    {
+      "id": "creative-r2-impress-master",
+      "title": "演示设计：母版变更的局部与全局影响控制",
+      "summary": "统一视觉层级而不误覆盖特殊页面。",
+      "roles": [
+        "演示设计师",
+        "品牌运营"
+      ],
+      "industries": [
+        "创意设计与教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "待执行步骤 1",
+          "body": "复制源演示建立工作副本；标出5页常规页与1页特殊页。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 2",
+          "body": "View > Master Slide设置共用标题样式和背景元素，退出母版视图。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 3",
+          "body": "选常规页，使用Change Slide Master/Load加载自制母版；先仅对当前页应用。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 4",
+          "body": "确认无溢出后再有意选择全局替换；特殊页保留单独母版或单页重设。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 5",
+          "body": "逐页检查标题、页脚、文本边界和对比；保存变更清单与原稿。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Impress master view",
+          "url": "https://help.libreoffice.org/latest/en-US/text/simpress/01/03150000.html",
+          "evidence": "primary",
+          "checked_at": "2026-10-28",
+          "claim": "母版视图和共用元素；页面显示 LibreOffice 26.8 Help；仅文档核验，非操作结果。",
+          "raw_source": {
+            "id": "r2-impress-master",
+            "title": "Impress master view",
+            "url": "https://help.libreoffice.org/latest/en-US/text/simpress/01/03150000.html",
+            "primary": true,
+            "access_checked_at": "2026-10-28",
+            "access_status": "web_open_verified",
+            "publication_date": null,
+            "publication_date_note": "未核实发布日期；不以抓取日代替发布日期",
+            "version": "页面显示 LibreOffice 26.8 Help",
+            "verified_scope": "母版视图和共用元素",
+            "caveat": ""
+          }
+        },
+        {
+          "title": "Impress changing master",
+          "url": "https://help.libreoffice.org/latest/en-US/text/simpress/guide/masterpage.html",
+          "evidence": "primary",
+          "checked_at": "2026-10-28",
+          "claim": "应用单页/全部母版及加载模板；页面显示 LibreOffice 26.8 Help；仅文档核验，非操作结果。",
+          "raw_source": {
+            "id": "r2-impress-change",
+            "title": "Impress changing master",
+            "url": "https://help.libreoffice.org/latest/en-US/text/simpress/guide/masterpage.html",
+            "primary": true,
+            "access_checked_at": "2026-10-28",
+            "access_status": "web_open_verified",
+            "publication_date": null,
+            "publication_date_note": "未核实发布日期；不以抓取日代替发布日期",
+            "version": "页面显示 LibreOffice 26.8 Help",
+            "verified_scope": "应用单页/全部母版及加载模板",
+            "caveat": ""
+          }
+        }
+      ],
+      "source_ids": [
+        "r2-impress-master",
+        "r2-impress-change"
+      ],
+      "input": "原创6页课程与两类页面映射",
+      "prompt": "仅设计本练习，不执行软件、安装、上传、打印或外发。\n前置：\n未来授权LibreOffice Impress；记录安装版\n自制6页演示和原创母版\n合成输入：\n原创6页课程与两类页面映射\n纸面沙盒（未运行）：给6页标母版ID，在纸面模拟只改1页和改全部。\n预期而非结果：影响范围不同，特殊页不能默默覆盖。\n输出：\n待执行可编辑演示\n母版-页面映射与差异记录\nAgent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "output": "待执行可编辑演示\n母版-页面映射与差异记录",
+      "rubric": [
+        "特殊页保留设计",
+        "标题与页脚不溢出",
+        "可编辑源保留"
+      ],
+      "risks": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。\n失败与恢复：\n误勾全局：撤回并恢复副本\n直接格式覆盖母版：检查例外，不宣称一键修复\n字体替换：记录并人工调整\n许可边界：自制模板及可用字体；帮助文本MPL2.0不等于所有模板许可相同。\n版本边界：访问页显示26.8 Help；不同平台菜单名称可能有差异。",
+      "failure_recovery": "误勾全局：撤回并恢复副本\n直接格式覆盖母版：检查例外，不宣称一键修复\n字体替换：记录并人工调整",
+      "license": "自制模板及可用字体；帮助文本MPL2.0不等于所有模板许可相同。",
+      "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。",
+      "cost": "本轮未运行；未来授权执行前核对安装、素材及计算预算。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持工具范围；尺寸、参数目标、步骤及验收为原创教学适配，产品与沙盒均未执行。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "访问页显示26.8 Help；不同平台菜单名称可能有差异。",
+      "replacement_case": "",
+      "historical_context": "documented_candidate只表示待执行教学提案，不表示工具现行或已弃用。",
+      "practice_status": "original_teaching_template_not_executed",
+      "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "workflow_type": "human_supervised_agent_design",
+      "modelatlas_node_ids": [
+        "design-libreoffice-impress"
+      ],
+      "modelatlas_links": [
+        {
+          "id": "design-libreoffice-impress",
+          "title": "LibreOffice Impress · 演示交付教学工具",
+          "url": "https://2codework.github.io/modelatlas/?node=design-libreoffice-impress"
+        }
+      ],
+      "raw_record": {
+        "id": "creative-r2-impress-master",
+        "title": "演示设计：母版变更的局部与全局影响控制",
+        "roles": [
+          "演示设计师",
+          "品牌运营"
+        ],
+        "goal": "统一视觉层级而不误覆盖特殊页面。",
+        "prerequisites": [
+          "未来授权LibreOffice Impress；记录安装版",
+          "自制6页演示和原创母版"
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "复制源演示建立工作副本；标出5页常规页与1页特殊页。"
+          },
+          {
+            "order": 2,
+            "action": "View > Master Slide设置共用标题样式和背景元素，退出母版视图。"
+          },
+          {
+            "order": 3,
+            "action": "选常规页，使用Change Slide Master/Load加载自制母版；先仅对当前页应用。"
+          },
+          {
+            "order": 4,
+            "action": "确认无溢出后再有意选择全局替换；特殊页保留单独母版或单页重设。"
+          },
+          {
+            "order": 5,
+            "action": "逐页检查标题、页脚、文本边界和对比；保存变更清单与原稿。"
+          }
+        ],
+        "inputs": [
+          "原创6页课程与两类页面映射"
+        ],
+        "outputs": [
+          "待执行可编辑演示",
+          "母版-页面映射与差异记录"
+        ],
+        "failure_modes_and_recovery": [
+          "误勾全局：撤回并恢复副本",
+          "直接格式覆盖母版：检查例外，不宣称一键修复",
+          "字体替换：记录并人工调整"
+        ],
+        "safe_sandbox_exercise": {
+          "status": "proposed_not_run",
+          "task": "给6页标母版ID，在纸面模拟只改1页和改全部。",
+          "expected": "影响范围不同，特殊页不能默默覆盖。"
+        },
+        "source_ids": [
+          "r2-impress-master",
+          "r2-impress-change"
+        ],
+        "modelatlas_links": [
+          {
+            "node_id": "design-libreoffice-impress",
+            "status": "proposed_separate_node",
+            "type": "tool"
+          }
+        ],
+        "non_duplicate_rationale": "既有design-slides-story侧重事实到叙事/API；此案专门处理母版影响范围。",
+        "version_caveats": "访问页显示26.8 Help；不同平台菜单名称可能有差异。",
+        "licensing_caveats": "自制模板及可用字体；帮助文本MPL2.0不等于所有模板许可相同。",
+        "acceptance_criteria": [
+          "特殊页保留设计",
+          "标题与页脚不溢出",
+          "可编辑源保留"
+        ],
+        "lifecycle": "documented_candidate",
+        "checked_at": "2026-10-28",
+        "workflow_type": "human_supervised_agent_design",
+        "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+        "verification": {
+          "documented_workflow": true,
+          "original_instructional_adaptation": true,
+          "offline_simulation_executed": false,
+          "product_executed": false,
+          "actual_tested": false
+        },
+        "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。"
+      }
+    },
+    {
+      "id": "creative-r2-impress-handouts",
+      "title": "演示交付：讲义与讲者备注分版防泄漏",
+      "summary": "把投影稿、学员讲义与内部备注明确分离。",
+      "roles": [
+        "培训设计师",
+        "培训运营"
+      ],
+      "industries": [
+        "创意设计与教育"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "待执行步骤 1",
+          "body": "创建交付清单，区分学员版与讲者版。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 2",
+          "body": "File > Print中Document选Handouts，设每页3张；先只预览不发送。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 3",
+          "body": "在Handout视图配置Notes and Handouts的页眉页脚，标注学员版并Apply to All。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 4",
+          "body": "另一次选择Notes制作讲者版预览，检查备注可见性；不要混为学员讲义。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 5",
+          "body": "人工检查页序、字号及是否含备注；只在确认本地打印到文件能力后未来另存两个文件，否则记录阻塞。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Impress printing presentations",
+          "url": "https://help.libreoffice.org/latest/en-US/text/simpress/guide/printing.html",
+          "evidence": "primary",
+          "checked_at": "2026-10-28",
+          "claim": "打印讲义/备注、每页张数和页眉页脚；页面显示 LibreOffice 26.8 Help；仅文档核验，非操作结果。",
+          "raw_source": {
+            "id": "r2-impress-handout",
+            "title": "Impress printing presentations",
+            "url": "https://help.libreoffice.org/latest/en-US/text/simpress/guide/printing.html",
+            "primary": true,
+            "access_checked_at": "2026-10-28",
+            "access_status": "web_open_verified",
+            "publication_date": null,
+            "publication_date_note": "未核实发布日期；不以抓取日代替发布日期",
+            "version": "页面显示 LibreOffice 26.8 Help",
+            "verified_scope": "打印讲义/备注、每页张数和页眉页脚",
+            "caveat": "打印到文件能力取决于本地系统；本轮未验证 PDF 输出。"
+          }
+        }
+      ],
+      "source_ids": [
+        "r2-impress-handout"
+      ],
+      "input": "原创6页演示；虚构备注",
+      "prompt": "仅设计本练习，不执行软件、安装、上传、打印或外发。\n前置：\n未来授权Impress；不连接实体打印机\n虚构6页内容；内部备注仅写虚构提醒\n合成输入：\n原创6页演示；虚构备注\n纸面沙盒（未运行）：分拣三条虚构备注到学员可见/仅讲者，模拟选错Notes。\n预期而非结果：学员版不得包含内部备注。\n输出：\n两份待执行交付设置\n学员/讲者泄漏检查表\nAgent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "output": "两份待执行交付设置\n学员/讲者泄漏检查表",
+      "rubric": [
+        "学员版不含内部备注",
+        "页序完整",
+        "没有未授权打印/外发"
+      ],
+      "risks": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。\n失败与恢复：\n讲义太小：减少每页张数\n误选Notes：取消作业并重新预览\n本地无打印到文件：不发送打印、不假称已生成PDF\n许可边界：不分发模板字体或第三方插图；讲义版权与软件版权独立。\n版本边界：26.8帮助；打印对话框/输出文件能力依OS变化。",
+      "failure_recovery": "讲义太小：减少每页张数\n误选Notes：取消作业并重新预览\n本地无打印到文件：不发送打印、不假称已生成PDF",
+      "license": "不分发模板字体或第三方插图；讲义版权与软件版权独立。",
+      "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。",
+      "cost": "本轮未运行；未来授权执行前核对安装、素材及计算预算。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持工具范围；尺寸、参数目标、步骤及验收为原创教学适配，产品与沙盒均未执行。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "26.8帮助；打印对话框/输出文件能力依OS变化。",
+      "replacement_case": "",
+      "historical_context": "documented_candidate只表示待执行教学提案，不表示工具现行或已弃用。",
+      "practice_status": "original_teaching_template_not_executed",
+      "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "workflow_type": "human_supervised_agent_design",
+      "modelatlas_node_ids": [
+        "design-libreoffice-impress"
+      ],
+      "modelatlas_links": [
+        {
+          "id": "design-libreoffice-impress",
+          "title": "LibreOffice Impress · 演示交付教学工具",
+          "url": "https://2codework.github.io/modelatlas/?node=design-libreoffice-impress"
+        }
+      ],
+      "raw_record": {
+        "id": "creative-r2-impress-handouts",
+        "title": "演示交付：讲义与讲者备注分版防泄漏",
+        "roles": [
+          "培训设计师",
+          "培训运营"
+        ],
+        "goal": "把投影稿、学员讲义与内部备注明确分离。",
+        "prerequisites": [
+          "未来授权Impress；不连接实体打印机",
+          "虚构6页内容；内部备注仅写虚构提醒"
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "创建交付清单，区分学员版与讲者版。"
+          },
+          {
+            "order": 2,
+            "action": "File > Print中Document选Handouts，设每页3张；先只预览不发送。"
+          },
+          {
+            "order": 3,
+            "action": "在Handout视图配置Notes and Handouts的页眉页脚，标注学员版并Apply to All。"
+          },
+          {
+            "order": 4,
+            "action": "另一次选择Notes制作讲者版预览，检查备注可见性；不要混为学员讲义。"
+          },
+          {
+            "order": 5,
+            "action": "人工检查页序、字号及是否含备注；只在确认本地打印到文件能力后未来另存两个文件，否则记录阻塞。"
+          }
+        ],
+        "inputs": [
+          "原创6页演示；虚构备注"
+        ],
+        "outputs": [
+          "两份待执行交付设置",
+          "学员/讲者泄漏检查表"
+        ],
+        "failure_modes_and_recovery": [
+          "讲义太小：减少每页张数",
+          "误选Notes：取消作业并重新预览",
+          "本地无打印到文件：不发送打印、不假称已生成PDF"
+        ],
+        "safe_sandbox_exercise": {
+          "status": "proposed_not_run",
+          "task": "分拣三条虚构备注到学员可见/仅讲者，模拟选错Notes。",
+          "expected": "学员版不得包含内部备注。"
+        },
+        "source_ids": [
+          "r2-impress-handout"
+        ],
+        "modelatlas_links": [
+          {
+            "node_id": "design-libreoffice-impress",
+            "status": "proposed_separate_node",
+            "type": "tool"
+          }
+        ],
+        "non_duplicate_rationale": "新增面向受众的交付版式/备注隔离，不重复幻灯叙事或字幕无障碍。",
+        "version_caveats": "26.8帮助；打印对话框/输出文件能力依OS变化。",
+        "licensing_caveats": "不分发模板字体或第三方插图；讲义版权与软件版权独立。",
+        "acceptance_criteria": [
+          "学员版不含内部备注",
+          "页序完整",
+          "没有未授权打印/外发"
+        ],
+        "lifecycle": "documented_candidate",
+        "checked_at": "2026-10-28",
+        "workflow_type": "human_supervised_agent_design",
+        "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+        "verification": {
+          "documented_workflow": true,
+          "original_instructional_adaptation": true,
+          "offline_simulation_executed": false,
+          "product_executed": false,
+          "actual_tested": false
+        },
+        "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。"
+      }
+    },
+    {
+      "id": "creative-r2-spectral-hum",
+      "title": "音频后期：窄带嗡声的最小破坏修复",
+      "summary": "仅处理定位到的窄带干扰，不把降噪当作万能人声恢复。",
+      "roles": [
+        "音频后期师",
+        "播客剪辑师"
+      ],
+      "industries": [
+        "音乐与音频"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "待执行步骤 1",
+          "body": "保存未处理副本，记录轨道和项目采样率。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 2",
+          "body": "切到Spectrogram并启用Spectral Selection。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 3",
+          "body": "圈定嗡声所在时间和窄频带，记下上下频率；保持在轨道Nyquist内。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 4",
+          "body": "使用专用Spectral edit效果预览处理；不要用普通Delete代替频带编辑。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 5",
+          "body": "在相同监听电平比较前后，检查目标频带及邻近内容；损伤明显则撤销并缩小范围。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Audacity spectral selection",
+          "url": "https://manual.audacityteam.org/man/spectral_selection.html",
+          "evidence": "primary",
+          "checked_at": "2026-10-28",
+          "claim": "时间+频率选择及专用 spectral effects；Development Manual；具体安装版未知；仅文档核验，非操作结果。",
+          "raw_source": {
+            "id": "r2-audacity-spectral",
+            "title": "Audacity spectral selection",
+            "url": "https://manual.audacityteam.org/man/spectral_selection.html",
+            "primary": true,
+            "access_checked_at": "2026-10-28",
+            "access_status": "web_open_verified",
+            "publication_date": null,
+            "publication_date_note": "未核实发布日期；不以抓取日代替发布日期",
+            "version": "Development Manual；具体安装版未知",
+            "verified_scope": "时间+频率选择及专用 spectral effects",
+            "caveat": "对单一恒定频率少量谐波更适合；普通剪切会忽略频率范围。"
+          }
+        }
+      ],
+      "source_ids": [
+        "r2-audacity-spectral"
+      ],
+      "input": "拟自制50Hz嗡声叠加原创测试信号",
+      "prompt": "仅设计本练习，不执行软件、安装、上传、打印或外发。\n前置：\n未来授权Audacity\n未来自制测试音/原创录音；不含真实敏感对话\n合成输入：\n拟自制50Hz嗡声叠加原创测试信号\n纸面沙盒（未运行）：对48kHz轨道标出50Hz目标带和30kHz非法选择。\n预期而非结果：Nyquist为24kHz，30kHz选择应拒绝；没有生成/聆听音频。\n输出：\n待执行修复副本\n频段/时间/参数与人工听评表\nAgent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "output": "待执行修复副本\n频段/时间/参数与人工听评表",
+      "rubric": [
+        "时间区域外不得误删",
+        "频带合理",
+        "未听评不得称修复成功"
+      ],
+      "risks": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。\n失败与恢复：\n交通/铃声宽带复杂：不承诺可修复，转人工判断\n普通删除影响全频：撤销\n越过Nyquist或项目/轨道采样率不符：修正选择\n许可边界：只用原创测试信号；录音授权、软件与插件许可分别核验。\n版本边界：Development Manual不等于已安装版本；先核对效果菜单。",
+      "failure_recovery": "交通/铃声宽带复杂：不承诺可修复，转人工判断\n普通删除影响全频：撤销\n越过Nyquist或项目/轨道采样率不符：修正选择",
+      "license": "只用原创测试信号；录音授权、软件与插件许可分别核验。",
+      "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。",
+      "cost": "本轮未运行；未来授权执行前核对安装、素材及计算预算。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持工具范围；尺寸、参数目标、步骤及验收为原创教学适配，产品与沙盒均未执行。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "Development Manual不等于已安装版本；先核对效果菜单。",
+      "replacement_case": "",
+      "historical_context": "documented_candidate只表示待执行教学提案，不表示工具现行或已弃用。",
+      "practice_status": "original_teaching_template_not_executed",
+      "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "workflow_type": "human_supervised_agent_design",
+      "modelatlas_node_ids": [
+        "music-audacity-spectral"
+      ],
+      "modelatlas_links": [
+        {
+          "id": "music-audacity-spectral",
+          "title": "Audacity · 频谱编辑教学工具",
+          "url": "https://2codework.github.io/modelatlas/?node=music-audacity-spectral"
+        }
+      ],
+      "raw_record": {
+        "id": "creative-r2-spectral-hum",
+        "title": "音频后期：窄带嗡声的最小破坏修复",
+        "roles": [
+          "音频后期师",
+          "播客剪辑师"
+        ],
+        "goal": "仅处理定位到的窄带干扰，不把降噪当作万能人声恢复。",
+        "prerequisites": [
+          "未来授权Audacity",
+          "未来自制测试音/原创录音；不含真实敏感对话"
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "保存未处理副本，记录轨道和项目采样率。"
+          },
+          {
+            "order": 2,
+            "action": "切到Spectrogram并启用Spectral Selection。"
+          },
+          {
+            "order": 3,
+            "action": "圈定嗡声所在时间和窄频带，记下上下频率；保持在轨道Nyquist内。"
+          },
+          {
+            "order": 4,
+            "action": "使用专用Spectral edit效果预览处理；不要用普通Delete代替频带编辑。"
+          },
+          {
+            "order": 5,
+            "action": "在相同监听电平比较前后，检查目标频带及邻近内容；损伤明显则撤销并缩小范围。"
+          }
+        ],
+        "inputs": [
+          "拟自制50Hz嗡声叠加原创测试信号"
+        ],
+        "outputs": [
+          "待执行修复副本",
+          "频段/时间/参数与人工听评表"
+        ],
+        "failure_modes_and_recovery": [
+          "交通/铃声宽带复杂：不承诺可修复，转人工判断",
+          "普通删除影响全频：撤销",
+          "越过Nyquist或项目/轨道采样率不符：修正选择"
+        ],
+        "safe_sandbox_exercise": {
+          "status": "proposed_not_run",
+          "task": "对48kHz轨道标出50Hz目标带和30kHz非法选择。",
+          "expected": "Nyquist为24kHz，30kHz选择应拒绝；没有生成/聆听音频。"
+        },
+        "source_ids": [
+          "r2-audacity-spectral"
+        ],
+        "modelatlas_links": [
+          {
+            "node_id": "music-audacity-spectral",
+            "status": "proposed_separate_node",
+            "type": "tool"
+          }
+        ],
+        "non_duplicate_rationale": "现有播客后期是Auphonic多轨处理；新增局部时频编辑的破坏边界。",
+        "version_caveats": "Development Manual不等于已安装版本；先核对效果菜单。",
+        "licensing_caveats": "只用原创测试信号；录音授权、软件与插件许可分别核验。",
+        "acceptance_criteria": [
+          "时间区域外不得误删",
+          "频带合理",
+          "未听评不得称修复成功"
+        ],
+        "lifecycle": "documented_candidate",
+        "checked_at": "2026-10-28",
+        "workflow_type": "human_supervised_agent_design",
+        "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+        "verification": {
+          "documented_workflow": true,
+          "original_instructional_adaptation": true,
+          "offline_simulation_executed": false,
+          "product_executed": false,
+          "actual_tested": false
+        },
+        "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。"
+      }
+    },
+    {
+      "id": "creative-r2-loudness-two-pass",
+      "title": "音频交付：双遍响度归一化与测量回执",
+      "summary": "将测量、处理与重新测量分开，留下可审计参数。",
+      "roles": [
+        "音频交付工程师",
+        "视频后期师"
+      ],
+      "industries": [
+        "音乐与音频"
+      ],
+      "evidence": "synthetic",
+      "synthetic": true,
+      "steps": [
+        {
+          "title": "待执行步骤 1",
+          "body": "记录输入哈希、声道、版本和48kHz输出目标；先保存副本。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 2",
+          "body": "第一遍以loudnorm I=-16:LRA=11:TP=-1.5:print_format=json测量到null输出，保留日志。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 3",
+          "body": "将第一遍JSON的input_i/input_lra/input_tp/input_thresh分别填入第二遍measured_I/measured_LRA/measured_TP/measured_thresh，将target_offset填入offset；保持同一输入和目标。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 4",
+          "body": "第二遍显式设置linear=true及print_format=json（或summary），并以-ar 48000输出新PCM WAV；保存统计日志并核对实际线性/动态模式，不能假设必定线性。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        },
+        {
+          "title": "待执行步骤 5",
+          "body": "对输出重新测量时同样显式设置print_format=json（或summary）并保存日志，再人工听评；与交付约定比较，失败保留记录而非覆盖原件。",
+          "check": "对照整体验收逐项记录；未执行不标通过。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "FFmpeg loudnorm filter",
+          "url": "https://ffmpeg.org/ffmpeg-filters.html#loudnorm",
+          "evidence": "primary",
+          "checked_at": "2026-10-28",
+          "claim": "双遍测量参数、线性模式退回动态、显式输出采样率；在线文档；本地二进制未知；仅文档核验，非操作结果。",
+          "raw_source": {
+            "id": "r2-ffmpeg-loudnorm",
+            "title": "FFmpeg loudnorm filter",
+            "url": "https://ffmpeg.org/ffmpeg-filters.html#loudnorm",
+            "primary": true,
+            "access_checked_at": "2026-10-28",
+            "access_status": "web_open_verified",
+            "publication_date": null,
+            "publication_date_note": "未核实发布日期；不以抓取日代替发布日期",
+            "version": "在线文档；本地二进制未知",
+            "verified_scope": "双遍测量参数、线性模式退回动态、显式输出采样率",
+            "caveat": "目标响度由交付合同决定；不能把示例值称为所有平台标准。"
+          }
+        },
+        {
+          "title": "FFmpeg legal",
+          "url": "https://ffmpeg.org/legal.html",
+          "evidence": "primary",
+          "checked_at": "2026-10-28",
+          "claim": "LGPL 基础与可选 GPL 构建组件；访问日页面；具体构建未知；仅文档核验，非操作结果。",
+          "raw_source": {
+            "id": "r2-ffmpeg-license",
+            "title": "FFmpeg legal",
+            "url": "https://ffmpeg.org/legal.html",
+            "primary": true,
+            "access_checked_at": "2026-10-28",
+            "access_status": "web_open_verified",
+            "publication_date": null,
+            "publication_date_note": "未核实发布日期；不以抓取日代替发布日期",
+            "version": "访问日页面；具体构建未知",
+            "verified_scope": "LGPL 基础与可选 GPL 构建组件",
+            "caveat": "分发二进制、链接库与音频素材权利是不同问题；非法律结论。"
+          }
+        }
+      ],
+      "source_ids": [
+        "r2-ffmpeg-loudnorm",
+        "r2-ffmpeg-license"
+      ],
+      "input": "原创PCM WAV与目标卡",
+      "prompt": "仅设计本练习，不执行软件、安装、上传、打印或外发。\n前置：\n未来授权FFmpeg且含loudnorm\n原创PCM WAV、明确的本练习目标：I=-16,LRA=11,TP=-1.5，非平台通用标准\n合成输入：\n原创PCM WAV与目标卡\n纸面沙盒（未运行）：虚构输入I=-20、TP=-3，若线性增益+4dB则TP=+1，超过-1.5上限。\n预期而非结果：识别不可直接线性放大；不得声称实际输出达标。\n输出：\n待执行归一化WAV\n两遍参数及复测日志\nAgent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "output": "待执行归一化WAV\n两遍参数及复测日志",
+      "rubric": [
+        "记录实际线性/动态模式",
+        "48kHz输出核对",
+        "输出复测和听评未完成不得称交付通过"
+      ],
+      "risks": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。\n失败与恢复：\n线性条件不满足会回退动态：记录模式并人工判断\n静音/非有限测量：停止，不盲填NaN\n输入变更：重做第一遍\n动态模式内部升采样：明确输出采样率\n许可边界：FFmpeg构建可能LGPL/GPL不同；不分发二进制。音频权利独立，示例目标非合规保证。\n版本边界：在线FFmpeg选项可能超出旧构建；正式执行前固定版本并查滤镜帮助。",
+      "failure_recovery": "线性条件不满足会回退动态：记录模式并人工判断\n静音/非有限测量：停止，不盲填NaN\n输入变更：重做第一遍\n动态模式内部升采样：明确输出采样率",
+      "license": "FFmpeg构建可能LGPL/GPL不同；不分发二进制。音频权利独立，示例目标非合规保证。",
+      "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。",
+      "cost": "本轮未运行；未来授权执行前核对安装、素材及计算预算。",
+      "checked_at": "2026-10-28",
+      "evidence_note": "官方文档支持工具范围；尺寸、参数目标、步骤及验收为原创教学适配，产品与沙盒均未执行。",
+      "lifecycle": "unknown",
+      "lifecycle_as_of": "未核查",
+      "applicable_versions": "在线FFmpeg选项可能超出旧构建；正式执行前固定版本并查滤镜帮助。",
+      "replacement_case": "",
+      "historical_context": "documented_candidate只表示待执行教学提案，不表示工具现行或已弃用。",
+      "practice_status": "original_teaching_template_not_executed",
+      "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+      "workflow_type": "human_supervised_agent_design",
+      "modelatlas_node_ids": [
+        "vid-ffmpeg"
+      ],
+      "modelatlas_links": [
+        {
+          "id": "vid-ffmpeg",
+          "title": "FFmpeg（已有普通工具节点）",
+          "url": "https://2codework.github.io/modelatlas/?node=vid-ffmpeg"
+        }
+      ],
+      "raw_record": {
+        "id": "creative-r2-loudness-two-pass",
+        "title": "音频交付：双遍响度归一化与测量回执",
+        "roles": [
+          "音频交付工程师",
+          "视频后期师"
+        ],
+        "goal": "将测量、处理与重新测量分开，留下可审计参数。",
+        "prerequisites": [
+          "未来授权FFmpeg且含loudnorm",
+          "原创PCM WAV、明确的本练习目标：I=-16,LRA=11,TP=-1.5，非平台通用标准"
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "记录输入哈希、声道、版本和48kHz输出目标；先保存副本。"
+          },
+          {
+            "order": 2,
+            "action": "第一遍以loudnorm I=-16:LRA=11:TP=-1.5:print_format=json测量到null输出，保留日志。"
+          },
+          {
+            "order": 3,
+            "action": "将第一遍JSON的input_i/input_lra/input_tp/input_thresh分别填入第二遍measured_I/measured_LRA/measured_TP/measured_thresh，将target_offset填入offset；保持同一输入和目标。"
+          },
+          {
+            "order": 4,
+            "action": "第二遍显式设置linear=true及print_format=json（或summary），并以-ar 48000输出新PCM WAV；保存统计日志并核对实际线性/动态模式，不能假设必定线性。"
+          },
+          {
+            "order": 5,
+            "action": "对输出重新测量时同样显式设置print_format=json（或summary）并保存日志，再人工听评；与交付约定比较，失败保留记录而非覆盖原件。"
+          }
+        ],
+        "inputs": [
+          "原创PCM WAV与目标卡"
+        ],
+        "outputs": [
+          "待执行归一化WAV",
+          "两遍参数及复测日志"
+        ],
+        "failure_modes_and_recovery": [
+          "线性条件不满足会回退动态：记录模式并人工判断",
+          "静音/非有限测量：停止，不盲填NaN",
+          "输入变更：重做第一遍",
+          "动态模式内部升采样：明确输出采样率"
+        ],
+        "safe_sandbox_exercise": {
+          "status": "proposed_not_run",
+          "task": "虚构输入I=-20、TP=-3，若线性增益+4dB则TP=+1，超过-1.5上限。",
+          "expected": "识别不可直接线性放大；不得声称实际输出达标。"
+        },
+        "source_ids": [
+          "r2-ffmpeg-loudnorm",
+          "r2-ffmpeg-license"
+        ],
+        "modelatlas_links": [
+          {
+            "node_id": "vid-ffmpeg",
+            "status": "existing_verified",
+            "type": "tool"
+          }
+        ],
+        "non_duplicate_rationale": "现有母带助手/Auphonic不是显式双遍测量回执；已有vid-ffmpeg可复用，不增假模型。",
+        "version_caveats": "在线FFmpeg选项可能超出旧构建；正式执行前固定版本并查滤镜帮助。",
+        "licensing_caveats": "FFmpeg构建可能LGPL/GPL不同；不分发二进制。音频权利独立，示例目标非合规保证。",
+        "acceptance_criteria": [
+          "记录实际线性/动态模式",
+          "48kHz输出核对",
+          "输出复测和听评未完成不得称交付通过"
+        ],
+        "lifecycle": "documented_candidate",
+        "checked_at": "2026-10-28",
+        "workflow_type": "human_supervised_agent_design",
+        "agent_boundary": "Agent仅提议参数、校验清单和记录证据；软件执行明确操作，人类决定审美和最终交付。本轮没有实现或执行自主循环。",
+        "verification": {
+          "documented_workflow": true,
+          "original_instructional_adaptation": true,
+          "offline_simulation_executed": false,
+          "product_executed": false,
+          "actual_tested": false
+        },
+        "permissions": "本轮只读公开文档+编写教材；未安装、调用产品/API、付费、登录、上传素材、使用Mac、改写仓库或制造实体。"
+      }
     }
   ],
   "chapters": [

@@ -1,0 +1,32 @@
+{
+  "original_dispositions_preserved": true,
+  "corrected_disposition": "accept_all_9_as_documented_unexecuted_proposals",
+  "corrections": [
+    {
+      "before": "不是扩散式视频循环：新增可编辑逐帧资源与游戏引擎切帧。",
+      "after": "既有video-silent-animation-loop同时包含传统关键帧与历史生成模型路线；本案新增SpriteFrames资源、精灵表切帧、帧序与FPS交接验收，不重复视频循环交付。"
+    },
+    {
+      "before": "将测得I/LRA/TP/thresh及target_offset填入第二遍对应measured_*与offset参数；保持同一输入和目标。",
+      "after": "将第一遍JSON的input_i/input_lra/input_tp/input_thresh分别填入第二遍measured_I/measured_LRA/measured_TP/measured_thresh，将target_offset填入offset；保持同一输入和目标。"
+    },
+    {
+      "before": "指定linear=true与-ar 48000输出新PCM WAV；查日志确认实际模式，不能假设必定线性。",
+      "after": "第二遍显式设置linear=true及print_format=json（或summary），并以-ar 48000输出新PCM WAV；保存统计日志并核对实际线性/动态模式，不能假设必定线性。"
+    },
+    {
+      "before": "对输出再测量并人工听评；与交付约定比较，失败保留记录而非覆盖原件。",
+      "after": "对输出重新测量时同样显式设置print_format=json（或summary）并保存日志，再人工听评；与交付约定比较，失败保留记录而非覆盖原件。"
+    }
+  ],
+  "before": {
+    "creative-workflows-r2.md": "dfc0f4e0dc26d713eaa1cc381bf72fe92f6d8c6d79f23b0767706f22e6bb35c2",
+    "creative-workflows-r2.json": "24a1f02e9ca32711d05e6a0ce8a43d6c32d2c13dee6914bfd9ef0a9273dcf21f",
+    "validation.json": "92011734c2bc2abaaa091546688f563195977a14aeacd5ec543390a2ce490e47"
+  },
+  "after": {
+    "creative-workflows-r2.md": "d87722341f5c982ed2a83f0cf64e1e8dfcf1117c11fc1de32b903ecf0f9fa293",
+    "creative-workflows-r2.json": "875dd0859f2e781ac06e848566daf313335636d5385b3b29cd0932b923b02524",
+    "validation.json": "f0f2dad0b87f63a62eddfea8c38accea026ec2dea774934a28958b2b56d0b13f"
+  }
+}

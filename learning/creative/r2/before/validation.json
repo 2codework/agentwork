@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-28",
+  "validation": {
+    "status": "passed_structural_and_manual_dedup_review_only",
+    "product_execution": false,
+    "offline_simulation_execution": false,
+    "accounts_used": false,
+    "paid_assets_or_apis": false,
+    "repo_writes": false,
+    "case_count": 9,
+    "source_count": 12,
+    "baseline_case_count": 97,
+    "proposed_node_count": 6,
+    "proposed_node_ids": [
+      "design-freecad-partdesign",
+      "design-godot-asset-pipeline",
+      "design-godot-spriteframes",
+      "design-libreoffice-impress",
+      "design-openscad",
+      "music-audacity-spectral"
+    ],
+    "checks": [
+      "unique_case_ids",
+      "no_id_collision_with_97_case_baseline",
+      "all_source_ids_resolve",
+      "all_cases_have_required_fields",
+      "all_execution_flags_false",
+      "unknown_publication_dates_null",
+      "manual_goal_and_deliverable_dedup_review"
+    ],
+    "limits": "结构检查不是产品实测；去重按标题/目标/交付物人工比较，未证明所有语义无重叠。"
+  },
+  "artifacts": [
+    {
+      "path": "creative-workflows-r2/creative-workflows-r2.json",
+      "sha256": "24a1f02e9ca32711d05e6a0ce8a43d6c32d2c13dee6914bfd9ef0a9273dcf21f"
+    },
+    {
+      "path": "creative-workflows-r2/creative-workflows-r2.md",
+      "sha256": "dfc0f4e0dc26d713eaa1cc381bf72fe92f6d8c6d79f23b0767706f22e6bb35c2"
+    }
+  ]
+}

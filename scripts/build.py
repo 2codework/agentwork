@@ -4,6 +4,7 @@ sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
 from normalize import normalize
 import asset_versions
 import mcp_learning
+import creative_workflows
 from pathlib import Path
 from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
@@ -50,6 +51,8 @@ def build():
     chapters, lessons, _ = mcp_learning.load(ROOT)
     data["book"].extend(chapters)
     data["cases"].extend(lessons)
+    creative_cases, _ = creative_workflows.load(ROOT)
+    data["cases"].extend(creative_cases)
     validate(data)
     write_book(data)
     dest = ROOT/'site'
@@ -58,6 +61,7 @@ def build():
         if p.is_file(): shutil.copyfile(p, dest/p.name)
     (dest/'data.json').write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n')
     mcp_learning.publish(ROOT,dest)
+    creative_workflows.publish(ROOT,dest)
     (dest/'.nojekyll').touch()
     shutil.copy2(ROOT/'BOOK.md',dest/'BOOK.md')
     asset_versions.pin(dest)
@@ -81,5 +85,5 @@ def write_book(data):
         for item in case.get('rubric',[]): lines += ['- 验收：'+item]
         for source in case['sources']: lines += ['- 来源：'+source['title']+' — '+source['url']+'（核查：'+source.get('checked_at','未提供')+'）', source.get('claim','')]
         if 'raw_record' in case: lines += ['', '<details><summary>完整研究记录（保留所有原字段）</summary>', '', '```json', json.dumps(case['raw_record'],ensure_ascii=False,indent=2), '```', '</details>', '']
-    (ROOT/'BOOK.md').write_text('\n'.join(lines)+'\n')
+    (ROOT/'BOOK.md').write_text('\n'.join(lines).rstrip()+'\n')
 if __name__ == '__main__': build()
