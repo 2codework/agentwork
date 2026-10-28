@@ -69,7 +69,7 @@ def build():
     dest.mkdir(exist_ok=True)
     for p in (ROOT/'web').iterdir():
         if p.is_file(): shutil.copyfile(p, dest/p.name)
-    (dest/'data.json').write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n')
+    (dest/'data.json').write_text(json.dumps(data, ensure_ascii=False, separators=(',',':'))+'\n')
     mcp_learning.publish(ROOT,dest)
     creative_workflows.publish(ROOT,dest)
     office_agents.publish(ROOT,dest)
