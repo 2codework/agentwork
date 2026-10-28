@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-28",
+  "files_sha256": {
+    "research/industries.json": "d4c9ca926f72242ef2b341a850a502819031626d61250df24b35abd90bdf238a",
+    "research/industries.md": "3d3e7ffbb1b7f2d7427186c64faad1dd45bd16fe8e50593cc658a4123c1bb185",
+    "research/learning.json": "d70ed6b69eef27f9cafc2b0cdc7621227248f029287786e7cf1a723a1a38261a",
+    "research/learning.md": "23cc9c669fe781cf354b63114ffdf9ffcd2c04135a70bdd7c0d4a5b836d1d7ac",
+    "research/roles.json": "e2829e21120076feb9257d2e3711aec7dfddef38e828234ab265cbcfc7f0c1d8",
+    "research/roles.md": "095abd18cf8bbf434ffcd4ef5678070e7de50d1a0db9d8752c3a7780e2acd6c5"
+  }
+}

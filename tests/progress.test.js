@@ -1,0 +1,10 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {validateProgress}=require('../web/app.js');
+const ids=new Set(['example']);
+assert.deepEqual(validateProgress({schema_version:1,completed:{example:'2026-10-28T12:00:00.000Z',unknown:'bad'}},ids),{example:'2026-10-28T12:00:00.000Z'});
+for(const bad of [null,{}, {schema_version:2,completed:{}},{schema_version:1,completed:[]},{schema_version:1,completed:{example:true}},{schema_version:1,completed:{example:'2026-99-99Tbad'}}]) assert.throws(()=>validateProgress(bad,ids));
+assert.deepEqual(validateProgress(JSON.parse('{"schema_version":1,"completed":{"__proto__":"2026-10-28T12:00:00.000Z"}}'),ids),{});
+for(const date of ['2026-02-30T12:00:00.000Z','2026-10-28T12:00','2026-10-28T12:00:00Z','2025-02-29T12:00:00.000Z']) assert.throws(()=>validateProgress({schema_version:1,completed:{example:date}},ids));
+assert.deepEqual(validateProgress({schema_version:1,completed:{example:'2024-02-29T12:00:00.000Z'}},ids),{example:'2024-02-29T12:00:00.000Z'});
+console.log('Progress validation: 13 assertions passed');
