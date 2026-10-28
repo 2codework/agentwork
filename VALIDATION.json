@@ -1,7 +1,7 @@
 {
-  "version": "regional-office-integration-r1-isolated-candidate",
+  "version": "regional-office-ci-fix-r1",
   "checked_at": "2026-10-28",
-  "baseline_commit": "90b10f0e0e165c35ca7f3b7fa69a1a42216c9985",
+  "baseline_commit": "e061ac1a188bb03491b715504ad87c67cb4c0583",
   "counts": {
     "cases": 132,
     "regional_office": 7
@@ -363,6 +363,7 @@
     "site/regional-office/r1/raw/validation.json": "03b1a1c2d07cc39801ea6ac769cb36308fe61a22aa494d65eacf2878315f7337",
     "site/style.css": "ff5e0aa1987242f4f9a4702eb9ce40e544bf631cabb00b1a2c41d54cf09d5ce2",
     "tests/assistant-ui.test.js": "ab34f6b6925916ef8c2960e5ed1e4a82084f943bc22e5198f380ad7bd6e4cfb1",
+    "tests/fixtures/regional-office-baseline.json": "bd4ae92e2b896dcf902bc2e870402a73f5b9a2500dc30923a2b379a8383f814b",
     "tests/office-ui.test.js": "7c52a7c1cd6b24c1d5fd8c855bd74b2a27ec57d753c442aef03a6c9532e90497",
     "tests/progress.test.js": "4edfc0a0e968dfb404f54267bf39adbb43a60c0f3fd3529231cd6aeb2047c6ac",
     "tests/reader.test.js": "e117bc13982b5c365833a14dddc95e1e2ae811be72ca223de912a6014fb75bca",
@@ -380,10 +381,11 @@
     "tests/test_normalize.py": "4d0dd52a923168a3b27be16e9512e12f0fba9f674d0c821568fc73cb7134ccba",
     "tests/test_office_agents.py": "b6bd47cb456642fb0c09bcc20aab8f18be975ec837d0c571fb72ce29296b34cc",
     "tests/test_reader_layout.py": "3f9b9bab18cf5460a9167173dfdcfe033437dc570faf856664e656a4d6ed04bd",
-    "tests/test_regional_office.py": "900437fc8a6a75a54b10d7d3b701dfb9bcd0e9f1de98dbc09e8f155193361d2f",
+    "tests/test_regional_office.py": "7254087de57c5b0289588e422e50eff41b9c8473ffa799611e2309c79df3d97a",
     "web/app.js": "00aa50c849ee7467cbaf16116372a336b3bb8402382435ecb6f857266862df8e",
     "web/index.html": "cd79a41ba9100f72509dad822ca0864b17f9ae02f2f692cee93102fba6ccf9b3",
     "web/reader.js": "4d919c9514587551770f690833d1e82faa70c6bcc903ee550d25e835eb9fcd9d",
     "web/style.css": "ff5e0aa1987242f4f9a4702eb9ce40e544bf631cabb00b1a2c41d54cf09d5ce2"
-  }
+  },
+  "ci_portability": "no .git metadata; offline fixture replaces historical git show; full 125 case preservation retained"
 }

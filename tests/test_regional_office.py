@@ -1,4 +1,4 @@
-import copy,json,sys,unittest,subprocess
+import copy,json,sys,unittest,hashlib
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 import regional_office as R
@@ -38,7 +38,13 @@ class RegionalTests(unittest.TestCase):
   self.assertEqual((ROOT/'REGIONAL_OFFICE.md').read_bytes(),(ROOT/'learning/regional-office/r1/raw/regional-office.zh.md').read_bytes())
   self.assertEqual((ROOT/'REGIONAL_OFFICE.md').read_bytes(),(ROOT/'docs/REGIONAL_OFFICE.md').read_bytes())
  def test_old_cases_exact(self):
-  old=json.loads(subprocess.check_output(['git','show','90b10f0e0e165c35ca7f3b7fa69a1a42216c9985:docs/data.json'],cwd=ROOT));new=json.loads((ROOT/'docs/data.json').read_text());self.assertEqual(new['cases'][:125],old['cases'])
-  for k in old:
-   if k!='cases':self.assertEqual(new[k],old[k],k)
+  frozen=json.loads((ROOT/'tests/fixtures/regional-office-baseline.json').read_text())
+  self.assertEqual(frozen['source_commit'],'90b10f0e0e165c35ca7f3b7fa69a1a42216c9985')
+  self.assertEqual(frozen['source_sha256'],'0ff50100f7bb477de6ee97585646fa16072c6a1bae44a73ea74b6c2b541abf8c')
+  self.assertEqual(frozen['case_count'],125)
+  def digest(value):return hashlib.sha256(json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
+  new=json.loads((ROOT/'docs/data.json').read_text());old_cases=new['cases'][:125]
+  self.assertEqual([c['id'] for c in old_cases],frozen['case_order'])
+  self.assertEqual({c['id']:digest(c) for c in old_cases},frozen['cases_sha256'])
+  self.assertEqual({k:digest(v) for k,v in new.items() if k!='cases'},frozen['other_top_level_sha256'])
 if __name__=='__main__':unittest.main()
