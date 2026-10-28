@@ -2,6 +2,7 @@
 import json, re, shutil, sys
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
 from normalize import normalize
+import mcp_learning
 from pathlib import Path
 from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,6 +46,9 @@ def build():
         doc = json.loads(p.read_text())
         data['cases'].extend(normalize(p.stem,doc))
         data['chapters'].append({'id':p.stem,'title':{'roles':'岗位地图','learning':'学习方法','industries':'行业地图'}.get(p.stem,p.stem), 'data':doc})
+    chapters, lessons, _ = mcp_learning.load(ROOT)
+    data["book"].extend(chapters)
+    data["cases"].extend(lessons)
     validate(data)
     write_book(data)
     dest = ROOT/'site'
@@ -52,15 +56,19 @@ def build():
     for p in (ROOT/'web').iterdir():
         if p.is_file(): shutil.copyfile(p, dest/p.name)
     (dest/'data.json').write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n')
+    mcp_learning.publish(ROOT,dest)
     (dest/'.nojekyll').touch()
     shutil.copy2(ROOT/'BOOK.md',dest/'BOOK.md')
     shutil.copytree(dest,ROOT/'docs',dirs_exist_ok=True)
     print(f'Built {len(data["cases"])} cases + {len(data["chapters"])} research chapters → site/')
 def write_book(data):
-    lines=['# AgentWork · 开放实践手册', '', '> 自动从 content/ 与 research/ 生成；不要手工维护此文件。r0.2 创作专题候选，r1 已上线；合成练习非真实部署证据。', '']
+    lines=['# AgentWork · 开放实践手册', '', '> 自动从 content/ 与 research/ 生成；不要手工维护此文件。MCP 深教程整合候选，既有站点已上线；合成练习非真实部署证据。', '']
     for chapter in data['book']:
         lines += ['## '+chapter['title'], '', chapter['body'], '', '**练习：** '+chapter['exercise'], '']
     for case in data['cases']:
+        if 'lesson_markdown' in case:
+            lines += ['## '+case['title'],case['lesson_markdown'], '- 对应技术：'+case['modelatlas_links'][0]['url'], '<details><summary>原始资料 · 历史采集快照</summary>', '```json', json.dumps(case['raw_record'],ensure_ascii=False,indent=2), '```', '</details>']
+            continue
         lines += ['## '+case['title'], '', case['summary'], '', '**证据边界：** '+case.get('evidence_note','原创合成案例，未实测'), '']
         for key,label in [('input','合成输入'),('prompt','提示词'),('output','输出模板'),('risks','风险与授权'),('checked_at','来源核查日期'),('lifecycle','生命周期'),('applicable_versions','适用版本'),('lifecycle_as_of','生命周期确认时间'),('replacement_case','替代案例'),('historical_context','历史与适用边界'),('practice_status','最佳实践证据状态')]:
             if key in case: lines += ['### '+label, '',case[key], '']

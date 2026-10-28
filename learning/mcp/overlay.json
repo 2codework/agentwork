@@ -1,0 +1,23 @@
+{
+  "schema_version": "mcp.learning.overlay.v1",
+  "checked_at": "2026-10-28",
+  "skills_note": "Skills over MCP 已发布，官方工作组记载 SEP-2640 为 Final。资源检索不等于激活 skill；代码执行与权限授予需要逐 skill 明确批准。扩展使用 server/discover 声明，不套用历史 initialize 握手。宿主与 SDK 的具体支持仍须逐产品、逐版本核查；本教程未测试任何宿主。",
+  "sources": [
+    {
+      "id": "skills-extension",
+      "title": "Skills over MCP overview",
+      "url": "https://modelcontextprotocol.io/extensions/skills/overview",
+      "scope": "扩展、检索与激活区别、逐 skill 批准、server/discover 声明",
+      "checked_at": "2026-10-28",
+      "evidence": "primary"
+    },
+    {
+      "id": "skills-working-group",
+      "title": "Skills over MCP working group",
+      "url": "https://modelcontextprotocol.io/community/working-groups/skills-over-mcp",
+      "scope": "SEP-2640 Final；宿主支持不可推定",
+      "checked_at": "2026-10-28",
+      "evidence": "primary"
+    }
+  ]
+}

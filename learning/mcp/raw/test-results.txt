@@ -1,0 +1,23 @@
+test_all_fixtures (test_contract.ContractTests.test_all_fixtures) ... ok
+test_bad_argument (test_contract.ContractTests.test_bad_argument) ... ok
+test_bad_total (test_contract.ContractTests.test_bad_total) ... ok
+test_before_initialize (test_contract.ContractTests.test_before_initialize) ... ok
+test_boolean_id (test_contract.ContractTests.test_boolean_id) ... ok
+test_cancel_initialize (test_contract.ContractTests.test_cancel_initialize) ... ok
+test_cancel_unknown (test_contract.ContractTests.test_cancel_unknown) ... ok
+test_duplicate_id (test_contract.ContractTests.test_duplicate_id) ... ok
+test_history_preserved (test_contract.ContractTests.test_history_preserved) ... ok
+test_injection_allowlist (test_contract.ContractTests.test_injection_allowlist) ... ok
+test_metadata_and_sources (test_contract.ContractTests.test_metadata_and_sources) ... ok
+test_modern_missing_meta (test_contract.ContractTests.test_modern_missing_meta) ... ok
+test_modern_missing_result_type (test_contract.ContractTests.test_modern_missing_result_type) ... ok
+test_result_error_exclusive (test_contract.ContractTests.test_result_error_exclusive) ... ok
+test_scope_still_needs_approval (test_contract.ContractTests.test_scope_still_needs_approval) ... ok
+test_skill_name (test_contract.ContractTests.test_skill_name) ... ok
+test_wrong_id (test_contract.ContractTests.test_wrong_id) ... ok
+test_wrong_version (test_contract.ContractTests.test_wrong_version) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.005s
+
+OK

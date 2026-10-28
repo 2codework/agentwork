@@ -1,0 +1,35 @@
+{
+  "case_id": "mcp-lab-scope",
+  "kind": "scope",
+  "protocol_version": null,
+  "input": {
+    "granted_scopes": [
+      "inventory:read"
+    ],
+    "actions": [
+      {
+        "name": "read_inventory",
+        "requires": [
+          "inventory:read"
+        ],
+        "external_effect": false
+      },
+      {
+        "name": "delete_inventory",
+        "requires": [
+          "inventory:write"
+        ],
+        "external_effect": true
+      }
+    ],
+    "user_approved_effects": false
+  },
+  "expected": {
+    "allowed": [
+      "read_inventory"
+    ],
+    "denied": [
+      "delete_inventory"
+    ]
+  }
+}

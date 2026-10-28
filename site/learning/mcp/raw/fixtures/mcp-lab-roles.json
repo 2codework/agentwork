@@ -1,0 +1,16 @@
+{
+  "case_id": "mcp-lab-roles",
+  "kind": "roles",
+  "protocol_version": null,
+  "input": {
+    "host": "inventory-review-ui",
+    "client": "inventory-connector",
+    "server": "synthetic-counter",
+    "model_action": "propose sum_units",
+    "user_action": "review proposal"
+  },
+  "expected": {
+    "role_count": 3,
+    "network_calls": 0
+  }
+}

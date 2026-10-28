@@ -1,0 +1,27 @@
+{
+  "case_id": "mcp-lab-migration",
+  "kind": "migration",
+  "protocol_version": null,
+  "input": {
+    "archived_versions": [
+      "2025-06-18",
+      "2025-11-25"
+    ],
+    "target_protocol": "2026-07-28",
+    "sdk_documentation_line": "v2",
+    "package_patch": "not selected; no installation",
+    "changes": [
+      "review per-request metadata",
+      "remove modern initialize handshake",
+      "require modern resultType",
+      "separate legacy cancellation behavior",
+      "review opt-in extensions"
+    ],
+    "history_policy": "retain original fixtures"
+  },
+  "expected": {
+    "history_retained": true,
+    "target": "2026-07-28",
+    "sdk_executed": false
+  }
+}

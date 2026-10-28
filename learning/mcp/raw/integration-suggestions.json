@@ -1,0 +1,254 @@
+{
+  "schema_version": "mcp.learning.integration-suggestions.v1",
+  "checked_at": "2026-10-28",
+  "status": "suggestions_only_not_merged",
+  "agentwork_mapping": "cases.json uses schema_version 1; render all pedagogical extension fields",
+  "modelatlas_tutorial_nodes": [
+    {
+      "id": "mcp-lab-roles-tutorial",
+      "title": "01 主机、客户端、服务端：先画责任边界",
+      "type": "tutorial",
+      "category": "agents",
+      "description_zh": "区分模型建议、客户端发消息与服务端执行，避免把模型当MCP客户端。",
+      "prerequisites": [
+        "sys-mcp",
+        "agents"
+      ],
+      "source_ids": [
+        "mcp-modern"
+      ],
+      "version": "MCP 2026-07-28 overview; original role exercise v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "offline_contract_only",
+      "agentwork_case_id": "mcp-lab-roles",
+      "relation_evidence_type": "editorial_learning_order",
+      "lifecycle": "current"
+    },
+    {
+      "id": "mcp-lab-initialize-tutorial",
+      "title": "02 旧版initialize：协议协商不是登录",
+      "type": "tutorial",
+      "category": "agents",
+      "description_zh": "用完整三段握手理解2025-11-25版的准备状态。",
+      "prerequisites": [
+        "sys-mcp"
+      ],
+      "source_ids": [
+        "mcp-life"
+      ],
+      "version": "MCP 2025-11-25; original offline contract v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "offline_contract_only",
+      "agentwork_case_id": "mcp-lab-initialize",
+      "relation_evidence_type": "editorial_learning_order",
+      "lifecycle": "historical"
+    },
+    {
+      "id": "mcp-lab-tools-tutorial",
+      "title": "03 发现工具，再调用：库存合成加法",
+      "type": "tutorial",
+      "category": "agents",
+      "description_zh": "完成tools/list → 参数检查 → tools/call，算出7+5=12。",
+      "prerequisites": [
+        "sys-mcp",
+        "sys-promptcontracts"
+      ],
+      "source_ids": [
+        "mcp-tools"
+      ],
+      "version": "MCP 2025-11-25; original offline contract v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "offline_contract_only",
+      "agentwork_case_id": "mcp-lab-tools",
+      "relation_evidence_type": "editorial_learning_order",
+      "lifecycle": "historical"
+    },
+    {
+      "id": "mcp-lab-resources-prompts-tutorial",
+      "title": "04 Resources与Prompts：数据不等于指令授权",
+      "type": "tutorial",
+      "category": "agents",
+      "description_zh": "读取一个资源、获取一个模板，不把获取模板误报为模型已经回答。",
+      "prerequisites": [
+        "sys-mcp",
+        "sys-promptcontracts"
+      ],
+      "source_ids": [
+        "mcp-resources",
+        "mcp-prompts"
+      ],
+      "version": "MCP 2025-11-25; original offline contract v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "offline_contract_only",
+      "agentwork_case_id": "mcp-lab-resources-prompts",
+      "relation_evidence_type": "editorial_learning_order",
+      "lifecycle": "historical"
+    },
+    {
+      "id": "mcp-lab-errors-tutorial",
+      "title": "05 结构化结果与两层错误",
+      "type": "tutorial",
+      "category": "agents",
+      "description_zh": "区分工具执行失败isError和JSON-RPC方法错误。",
+      "prerequisites": [
+        "sys-mcp"
+      ],
+      "source_ids": [
+        "mcp-tools"
+      ],
+      "version": "MCP 2025-11-25; original offline contract v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "offline_contract_only",
+      "agentwork_case_id": "mcp-lab-errors",
+      "relation_evidence_type": "editorial_learning_order",
+      "lifecycle": "historical"
+    },
+    {
+      "id": "mcp-lab-cancel-tutorial",
+      "title": "06 请求ID与取消：已请求停止不等于回滚",
+      "type": "tutorial",
+      "category": "agents",
+      "description_zh": "对一个在途加法请求发取消通知，保留取消竞态边界。",
+      "prerequisites": [
+        "sys-mcp"
+      ],
+      "source_ids": [
+        "mcp-cancel"
+      ],
+      "version": "MCP 2025-11-25; original offline contract v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "offline_contract_only",
+      "agentwork_case_id": "mcp-lab-cancel",
+      "relation_evidence_type": "editorial_learning_order",
+      "lifecycle": "historical"
+    },
+    {
+      "id": "mcp-lab-scope-tutorial",
+      "title": "07 授权范围：可见工具不等于可执行动作",
+      "type": "tutorial",
+      "category": "agents",
+      "description_zh": "用本地策略表判断读库存与删除库存权限；不实现OAuth。",
+      "prerequisites": [
+        "sys-mcp",
+        "sys-promptcontracts"
+      ],
+      "source_ids": [
+        "mcp-auth",
+        "mcp-security"
+      ],
+      "version": "MCP 2025-11-25; original offline contract v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "offline_contract_only",
+      "agentwork_case_id": "mcp-lab-scope",
+      "relation_evidence_type": "editorial_learning_order",
+      "lifecycle": "historical"
+    },
+    {
+      "id": "mcp-lab-injection-tutorial",
+      "title": "08 提示注入边界：提取数据，拒绝越权指令",
+      "type": "tutorial",
+      "category": "agents",
+      "description_zh": "面对资源中嵌入的恶意命令，只保留任务所需事实。",
+      "prerequisites": [
+        "sys-mcp",
+        "sys-promptcontracts"
+      ],
+      "source_ids": [
+        "mcp-security",
+        "mcp-modern"
+      ],
+      "version": "MCP 2025-11-25; original offline contract v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "offline_contract_only",
+      "agentwork_case_id": "mcp-lab-injection",
+      "relation_evidence_type": "editorial_learning_order",
+      "lifecycle": "historical"
+    },
+    {
+      "id": "mcp-lab-skill-tutorial",
+      "title": "09 Skill、提示词、MCP：三个层次一起练",
+      "type": "tutorial",
+      "category": "agents",
+      "description_zh": "编写一个原创skill教学文本，映射工作方法与工具接口，绝不下载执行外部包。",
+      "prerequisites": [
+        "sys-skills",
+        "sys-mcp",
+        "sys-promptcontracts"
+      ],
+      "source_ids": [
+        "skills",
+        "mcp-modern"
+      ],
+      "version": "Agent Skills unversioned specification snapshot 2026-10-28; MCP 2026-07-28 overview",
+      "checked_at": "2026-10-28",
+      "verification_status": "offline_contract_only",
+      "agentwork_case_id": "mcp-lab-skill",
+      "relation_evidence_type": "editorial_learning_order",
+      "lifecycle": "current"
+    },
+    {
+      "id": "mcp-lab-debug-tutorial",
+      "title": "10 调试与验收：故意破坏三处契约",
+      "type": "tutorial",
+      "category": "agents",
+      "description_zh": "通过独立负例测试定位ID、参数类型、握手顺序错误。",
+      "prerequisites": [
+        "sys-mcp"
+      ],
+      "source_ids": [
+        "mcp-life",
+        "mcp-tools",
+        "mcp-cancel"
+      ],
+      "version": "MCP 2025-11-25; original offline contract v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "offline_contract_only",
+      "agentwork_case_id": "mcp-lab-debug",
+      "relation_evidence_type": "editorial_learning_order",
+      "lifecycle": "historical"
+    },
+    {
+      "id": "mcp-lab-migration-tutorial",
+      "title": "11 保留旧教程：2025-06-18 → 2025-11-25 → 2026-07-28",
+      "type": "tutorial",
+      "category": "agents",
+      "description_zh": "建立迁移清单而非全局替换日期，保留历史输入与失败边界。",
+      "prerequisites": [
+        "sys-mcp",
+        "sys-skills"
+      ],
+      "source_ids": [
+        "mcp-june",
+        "mcp-modern-changes",
+        "sdk-v1",
+        "sdk-v2"
+      ],
+      "version": "Comparison: 2025-06-18 / 2025-11-25 / 2026-07-28; SDK docs v1.x / v2; no exact SDK package tested",
+      "checked_at": "2026-10-28",
+      "verification_status": "offline_contract_only",
+      "agentwork_case_id": "mcp-lab-migration",
+      "relation_evidence_type": "editorial_learning_order",
+      "lifecycle": "current"
+    },
+    {
+      "id": "mcp-lab-modern-tutorial",
+      "title": "12 新版对照：逐请求元数据与complete结果",
+      "type": "tutorial",
+      "category": "agents",
+      "description_zh": "读取一组明确固定2026-07-28的tools/list消息，不偷用旧版初始化状态。",
+      "prerequisites": [
+        "sys-mcp"
+      ],
+      "source_ids": [
+        "mcp-modern-changes",
+        "mcp-modern"
+      ],
+      "version": "MCP 2026-07-28 fixed wire subset; no SDK",
+      "checked_at": "2026-10-28",
+      "verification_status": "offline_contract_only",
+      "agentwork_case_id": "mcp-lab-modern",
+      "relation_evidence_type": "editorial_learning_order",
+      "lifecycle": "current"
+    }
+  ]
+}

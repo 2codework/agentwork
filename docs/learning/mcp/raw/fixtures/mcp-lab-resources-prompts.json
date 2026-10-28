@@ -1,0 +1,115 @@
+{
+  "case_id": "mcp-lab-resources-prompts",
+  "kind": "legacy",
+  "protocol_version": "2025-11-25",
+  "input": [
+    {
+      "direction": "client_to_server",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "initialize",
+        "params": {
+          "protocolVersion": "2025-11-25",
+          "capabilities": {},
+          "clientInfo": {
+            "name": "lesson-client",
+            "version": "1.0.0"
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": {
+          "protocolVersion": "2025-11-25",
+          "capabilities": {
+            "tools": {},
+            "resources": {},
+            "prompts": {}
+          },
+          "serverInfo": {
+            "name": "lesson-server",
+            "version": "1.0.0"
+          }
+        }
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "notifications/initialized"
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "resources/read",
+        "params": {
+          "uri": "lesson://stock/summary"
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "result": {
+          "contents": [
+            {
+              "uri": "lesson://stock/summary",
+              "mimeType": "text/plain",
+              "text": "Synthetic stock: 12 units."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "method": "prompts/get",
+        "params": {
+          "name": "explain_stock",
+          "arguments": {
+            "audience": "beginner"
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "result": {
+          "description": "Explain synthetic stock to a beginner.",
+          "messages": [
+            {
+              "role": "user",
+              "content": {
+                "type": "text",
+                "text": "Explain what 12 synthetic units means. Do not infer sales."
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "expected": {
+    "status": "ready",
+    "requests": 3,
+    "responses": 3,
+    "cancelled": 0
+  }
+}

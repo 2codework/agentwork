@@ -1,0 +1,80 @@
+{
+  "case_id": "mcp-lab-modern",
+  "kind": "modern",
+  "protocol_version": "2026-07-28",
+  "input": [
+    {
+      "direction": "client_to_server",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "tools/list",
+        "params": {
+          "_meta": {
+            "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+            "io.modelcontextprotocol/clientCapabilities": {},
+            "io.modelcontextprotocol/clientInfo": {
+              "name": "modern-lesson",
+              "version": "1.0.0"
+            }
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": {
+          "resultType": "complete",
+          "tools": [
+            {
+              "name": "sum_units",
+              "description": "Add two synthetic inventory counts; no external effect.",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "a": {
+                    "type": "integer"
+                  },
+                  "b": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "a",
+                  "b"
+                ],
+                "additionalProperties": false
+              },
+              "outputSchema": {
+                "type": "object",
+                "properties": {
+                  "total": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "total"
+                ],
+                "additionalProperties": false
+              }
+            }
+          ],
+          "_meta": {
+            "io.modelcontextprotocol/serverInfo": {
+              "name": "modern-counter",
+              "version": "1.0.0"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "expected": {
+    "protocol_version": "2026-07-28",
+    "requests": 1,
+    "responses": 1
+  }
+}

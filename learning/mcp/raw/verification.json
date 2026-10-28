@@ -1,0 +1,111 @@
+{
+  "verification": "original_offline_contract_only",
+  "cases_passed": 12,
+  "results": [
+    {
+      "case_id": "mcp-lab-cancel",
+      "output": {
+        "status": "ready",
+        "requests": 3,
+        "responses": 2,
+        "cancelled": 1
+      }
+    },
+    {
+      "case_id": "mcp-lab-debug",
+      "output": {
+        "status": "ready",
+        "requests": 3,
+        "responses": 3,
+        "cancelled": 0
+      }
+    },
+    {
+      "case_id": "mcp-lab-errors",
+      "output": {
+        "status": "ready",
+        "requests": 5,
+        "responses": 5,
+        "cancelled": 0
+      }
+    },
+    {
+      "case_id": "mcp-lab-initialize",
+      "output": {
+        "status": "ready",
+        "requests": 1,
+        "responses": 1,
+        "cancelled": 0
+      }
+    },
+    {
+      "case_id": "mcp-lab-injection",
+      "output": {
+        "extracted": {
+          "units": 12
+        },
+        "executed_actions": []
+      }
+    },
+    {
+      "case_id": "mcp-lab-migration",
+      "output": {
+        "history_retained": true,
+        "target": "2026-07-28",
+        "sdk_executed": false
+      }
+    },
+    {
+      "case_id": "mcp-lab-modern",
+      "output": {
+        "protocol_version": "2026-07-28",
+        "requests": 1,
+        "responses": 1
+      }
+    },
+    {
+      "case_id": "mcp-lab-resources-prompts",
+      "output": {
+        "status": "ready",
+        "requests": 3,
+        "responses": 3,
+        "cancelled": 0
+      }
+    },
+    {
+      "case_id": "mcp-lab-roles",
+      "output": {
+        "role_count": 3,
+        "network_calls": 0
+      }
+    },
+    {
+      "case_id": "mcp-lab-scope",
+      "output": {
+        "allowed": [
+          "read_inventory"
+        ],
+        "denied": [
+          "delete_inventory"
+        ]
+      }
+    },
+    {
+      "case_id": "mcp-lab-skill",
+      "output": {
+        "skill_name": "inventory-explainer",
+        "installed": false,
+        "executed_scripts": 0
+      }
+    },
+    {
+      "case_id": "mcp-lab-tools",
+      "output": {
+        "status": "ready",
+        "requests": 3,
+        "responses": 3,
+        "cancelled": 0
+      }
+    }
+  ]
+}

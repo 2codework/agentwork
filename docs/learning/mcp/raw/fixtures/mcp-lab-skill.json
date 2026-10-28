@@ -1,0 +1,16 @@
+{
+  "case_id": "mcp-lab-skill",
+  "kind": "skill",
+  "protocol_version": null,
+  "input": {
+    "directory": "inventory-explainer",
+    "skill_md": "---\nname: inventory-explainer\ndescription: Explain synthetic inventory JSON when a learner asks for a count review.\n---\nRead only the supplied units field. State missing data. Do not send or delete anything. Return a review checklist.\n",
+    "prompt": "Explain 12 synthetic units without inferring sales.",
+    "mcp_tool": "sum_units"
+  },
+  "expected": {
+    "skill_name": "inventory-explainer",
+    "installed": false,
+    "executed_scripts": 0
+  }
+}
