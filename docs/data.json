@@ -17991,7 +17991,7 @@
       ],
       "assistant_workspace": {
         "entity_type": "historical_executable_agent_surface",
-        "platform_family_id": "ChatGPT",
+        "platform_family_id": "OpenAI",
         "execution_status": "never-run",
         "proof_level": "documentation-only",
         "permission_boundary": "历史设计对重大操作请求授权，可接管/停止；本练习不进入账号。",
@@ -18219,7 +18219,7 @@
       ],
       "assistant_workspace": {
         "entity_type": "research_feature",
-        "platform_family_id": "Deep",
+        "platform_family_id": "OpenAI",
         "execution_status": "never-run",
         "proof_level": "documentation-only",
         "permission_boundary": "用户可审改研究计划、调整可访问来源及中断。；Chat研究仅用应用读取动作；应用权限、角色和源系统权限共同约束。",
@@ -18484,7 +18484,7 @@
       ],
       "assistant_workspace": {
         "entity_type": "executable_agent_product_surface",
-        "platform_family_id": "Claude",
+        "platform_family_id": "Anthropic",
         "execution_status": "never-run",
         "proof_level": "documentation-only",
         "permission_boundary": "审批取决于Manual/Auto及连接工具策略，不承诺每次都问。；手动模式仍要核对已Always allow工具；不得把模式当唯一防线。；本练习禁computer use和连接器，限定合成输入及单独输出目录。",
@@ -18729,7 +18729,7 @@
       ],
       "assistant_workspace": {
         "entity_type": "research_feature",
-        "platform_family_id": "Research",
+        "platform_family_id": "Anthropic",
         "execution_status": "never-run",
         "proof_level": "documentation-only",
         "permission_boundary": "已启用连接器可被研究自动调用，不会逐次询问；因此练习先设计零连接器范围。；发布/分享属于另一步骤，必须人审。",
@@ -18929,7 +18929,7 @@
       ],
       "assistant_workspace": {
         "entity_type": "research_feature",
-        "platform_family_id": "Deep",
+        "platform_family_id": "Google",
         "execution_status": "never-run",
         "proof_level": "documentation-only",
         "permission_boundary": "可编辑计划，再点Start research；源选择不是所有写动作授权。；Gmail/Drive须Workspace应用连接；本练习只设计公开Search来源，不连接。",
