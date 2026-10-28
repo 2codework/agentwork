@@ -17729,3 +17729,1875 @@ LGPL 基础与可选 GPL 构建组件；访问日页面；具体构建未知；�
 }
 ```
 </details>
+
+## AI by Zapier（agentic step）：人监督合成练习
+
+命名办公 Agent 系统的人监督合成练习：在 Zap 中进行分类、推理、工具调用和结构化输出。文档支持不等于已验证成效。
+
+**证据边界：** documentation-only / never-run；11 个命名实体、10 个平台家族的代表批次，不是全球全集；无真实部署或收益证据。
+
+### 合成输入
+
+虚构工单 T-41：要求修改收货备注
+
+### 提示词
+
+仅在纸面设计本合成练习，不连接真实账户、不执行工具、不发送或上传。
+先列读写工具并使用虚构输入
+写工具开启逐次审批，检查输出字段
+人工比较工具参数后决定是否运行；上线另行授权
+记录执行身份、目标、参数、审批和预期；没有执行则保持 never-run。
+
+### 输出模板
+
+预期而非实测：分类 delivery_change；提出改动，不自动对真实订单写入
+
+### 风险与授权
+
+权限：通过连接账户操作；管理员可禁用 agentic/tool calling。
+确认：逐工具 Require approval before running 需主动开启；默认不暂停确认。发布审批与运行审批不同。
+局限：迁移不拆分工具为独立 Zap 步骤；旧 Agent 与新 Zap 同时启用可能重复执行；全 Zap 测试也消耗任务；本研究不测试；仅指可选择并调用工具的 agentic 配置；普通 Zap 或单次 AI 转换不自动属于 Agent。
+未知：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+现行迁移目标；不等于底层模型
+
+### 生命周期确认时间
+
+未以统一软件状态推断
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+保留旧/新实体及来源更新观察差异；文档更新时间不是产品发布日期。
+文档：Migrating from Agents to AI by Zapier；Updated October 01, 2026 08:00；时区未知；仅文档更新时间，不是产品发布日期；证据读取：official_documentation
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 纸面步骤 1
+
+先列读写工具并使用虚构输入
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 2. 纸面步骤 2
+
+写工具开启逐次审批，检查输出字段
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 3. 纸面步骤 3
+
+人工比较工具参数后决定是否运行；上线另行授权
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+- 对应技术（编辑学习关系）：[AI by Zapier（agentic step）](https://2codework.github.io/modelatlas/?node=office-ai-by-zapier)
+- agent_boundary：workflow_agent_component；不是基础模型，不把普通确定性自动化整体算 Agent。
+- cost：任务制计费已记录；金额与账户额度未核验
+- 验收：没有把未知信息填成事实
+- 验收：敏感写入不越过该产品实际支持的批准边界
+- 验收：保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run
+- 来源：Migrating from Agents to AI by Zapier — https://help.zapier.com/hc/en-us/articles/47402591569805-Migrating-from-Agents-to-AI-by-Zapier（核查：2026-10-28）
+Updated October 01, 2026 08:00；时区未知；仅文档更新时间，不是产品发布日期；official_documentation；只支持文档范围，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "entity": {
+    "id": "office-ai-by-zapier",
+    "name": "AI by Zapier（agentic step）",
+    "entity_type": "workflow_agent_component",
+    "is_model": false,
+    "domain": "office_agent_system",
+    "lifecycle": "现行迁移目标；不等于底层模型",
+    "source_checked_date": "2026-10-28",
+    "proof_level": "documentation-only",
+    "runtime_verified": false,
+    "global_completeness": false,
+    "supported_workflows": [
+      "在 Zap 中进行分类、推理、工具调用和结构化输出"
+    ],
+    "permission_boundary": "通过连接账户操作；管理员可禁用 agentic/tool calling。",
+    "confirmation_boundary": "逐工具 Require approval before running 需主动开启；默认不暂停确认。发布审批与运行审批不同。",
+    "access_and_pricing": "任务制计费已记录；金额与账户额度未核验",
+    "human_supervised_steps": [
+      "先列读写工具并使用虚构输入",
+      "写工具开启逐次审批，检查输出字段",
+      "人工比较工具参数后决定是否运行；上线另行授权"
+    ],
+    "synthetic_example": {
+      "input": "虚构工单 T-41：要求修改收货备注",
+      "expected": "分类 delivery_change；提出改动，不自动对真实订单写入"
+    },
+    "limitations": [
+      "迁移不拆分工具为独立 Zap 步骤",
+      "旧 Agent 与新 Zap 同时启用可能重复执行",
+      "全 Zap 测试也消耗任务；本研究不测试",
+      "仅指可选择并调用工具的 agentic 配置；普通 Zap 或单次 AI 转换不自动属于 Agent。"
+    ],
+    "source_ids": [
+      "zap-migrate"
+    ],
+    "unknowns": [
+      "未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测"
+    ],
+    "integration_status": "raw_research_not_canonical",
+    "dedup_checks": {
+      "agentwork": {
+        "named_entity_title_match": false
+      },
+      "modelatlas": {
+        "named_entity_title_match": false
+      }
+    },
+    "platform_family_id": "zapier",
+    "execution_status": "never-run"
+  },
+  "case": {
+    "id": "office-ai-by-zapier-lab",
+    "system_id": "office-ai-by-zapier",
+    "title": "AI by Zapier（agentic step）：人监督合成练习",
+    "proof_level": "documentation-only",
+    "synthetic": true,
+    "steps": [
+      "先列读写工具并使用虚构输入",
+      "写工具开启逐次审批，检查输出字段",
+      "人工比较工具参数后决定是否运行；上线另行授权"
+    ],
+    "input": "虚构工单 T-41：要求修改收货备注",
+    "expected": "分类 delivery_change；提出改动，不自动对真实订单写入",
+    "acceptance": [
+      "没有把未知信息填成事实",
+      "敏感写入不越过该产品实际支持的批准边界",
+      "保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run"
+    ],
+    "source_ids": [
+      "zap-migrate"
+    ],
+    "execution_status": "never-run",
+    "runtime_verified": false
+  }
+}
+```
+</details>
+
+## Zapier Agents：人监督合成练习
+
+命名办公 Agent 系统的人监督合成练习：按触发器或交互执行连接应用动作；查询连接知识源。文档支持不等于已验证成效。
+
+**证据边界：** documentation-only / never-run；11 个命名实体、10 个平台家族的代表批次，不是全球全集；无真实部署或收益证据。
+
+### 合成输入
+
+虚构客户问发票状态
+
+### 提示词
+
+仅在纸面设计本合成练习，不连接真实账户、不执行工具、不发送或上传。
+盘点旧 Agent 触发器、知识源与工具
+用合成工单写暂停检查点
+评估迁移差异，保留人工审批；不直接双跑生产
+记录执行身份、目标、参数、审批和预期；没有执行则保持 never-run。
+
+### 输出模板
+
+预期而非实测：查阅样例状态，生成待审核回复
+
+### 风险与授权
+
+权限：只使用提供给 Agent 的工具及账户连接；不得把指令视为连接权限。
+确认：旧文档支持在指令中加入暂停征求确认，并配置消息动作；不把自然语言指令当独立强制安全控制。
+局限：当前迁移目标为 AI by Zapier；不能假设旧版全部功能迁移等价
+未知：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+迁移中历史入口；官方未给停用日期，不能标成已关闭
+
+### 生命周期确认时间
+
+未以统一软件状态推断
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+保留旧/新实体及来源更新观察差异；文档更新时间不是产品发布日期。
+文档：Build an agent in Zapier Agents；Updated October 01, 2026 07:59；时区未知；仅文档更新时间，不是产品发布日期；证据读取：official_documentation
+文档：Add approval steps to your agent’s instructions；Updated October 01, 2026 07:59；时区未知；仅文档更新时间，不是产品发布日期；证据读取：official_documentation
+文档：Migrating from Agents to AI by Zapier；Updated October 01, 2026 08:00；时区未知；仅文档更新时间，不是产品发布日期；证据读取：official_documentation
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 纸面步骤 1
+
+盘点旧 Agent 触发器、知识源与工具
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 2. 纸面步骤 2
+
+用合成工单写暂停检查点
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 3. 纸面步骤 3
+
+评估迁移差异，保留人工审批；不直接双跑生产
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+- 对应技术（编辑学习关系）：[Zapier Agents](https://2codework.github.io/modelatlas/?node=office-zapier-agents)
+- agent_boundary：hosted_agent_service；不是基础模型，不把普通确定性自动化整体算 Agent。
+- cost：需授权账户/连接；具体套餐、区域可用性及价格未核验
+- 验收：没有把未知信息填成事实
+- 验收：敏感写入不越过该产品实际支持的批准边界
+- 验收：保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run
+- 来源：Build an agent in Zapier Agents — https://help.zapier.com/hc/en-us/articles/24393442652557-Build-an-agent-in-Zapier-Agents（核查：2026-10-28）
+Updated October 01, 2026 07:59；时区未知；仅文档更新时间，不是产品发布日期；official_documentation；只支持文档范围，未操作产品。
+- 来源：Add approval steps to your agent’s instructions — https://help.zapier.com/hc/en-us/articles/41776074420493-Add-approval-steps-to-your-agent-s-instructions（核查：2026-10-28）
+Updated October 01, 2026 07:59；时区未知；仅文档更新时间，不是产品发布日期；official_documentation；只支持文档范围，未操作产品。
+- 来源：Migrating from Agents to AI by Zapier — https://help.zapier.com/hc/en-us/articles/47402591569805-Migrating-from-Agents-to-AI-by-Zapier（核查：2026-10-28）
+Updated October 01, 2026 08:00；时区未知；仅文档更新时间，不是产品发布日期；official_documentation；只支持文档范围，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "entity": {
+    "id": "office-zapier-agents",
+    "name": "Zapier Agents",
+    "entity_type": "hosted_agent_service",
+    "is_model": false,
+    "domain": "office_agent_system",
+    "lifecycle": "迁移中历史入口；官方未给停用日期，不能标成已关闭",
+    "source_checked_date": "2026-10-28",
+    "proof_level": "documentation-only",
+    "runtime_verified": false,
+    "global_completeness": false,
+    "supported_workflows": [
+      "按触发器或交互执行连接应用动作",
+      "查询连接知识源"
+    ],
+    "permission_boundary": "只使用提供给 Agent 的工具及账户连接；不得把指令视为连接权限。",
+    "confirmation_boundary": "旧文档支持在指令中加入暂停征求确认，并配置消息动作；不把自然语言指令当独立强制安全控制。",
+    "access_and_pricing": "需授权账户/连接；具体套餐、区域可用性及价格未核验",
+    "human_supervised_steps": [
+      "盘点旧 Agent 触发器、知识源与工具",
+      "用合成工单写暂停检查点",
+      "评估迁移差异，保留人工审批；不直接双跑生产"
+    ],
+    "synthetic_example": {
+      "input": "虚构客户问发票状态",
+      "expected": "查阅样例状态，生成待审核回复"
+    },
+    "limitations": [
+      "当前迁移目标为 AI by Zapier",
+      "不能假设旧版全部功能迁移等价"
+    ],
+    "source_ids": [
+      "zap-build",
+      "zap-approval",
+      "zap-migrate"
+    ],
+    "unknowns": [
+      "未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测"
+    ],
+    "integration_status": "raw_research_not_canonical",
+    "dedup_checks": {
+      "agentwork": {
+        "named_entity_title_match": false
+      },
+      "modelatlas": {
+        "named_entity_title_match": false
+      }
+    },
+    "platform_family_id": "zapier",
+    "execution_status": "never-run"
+  },
+  "case": {
+    "id": "office-zapier-agents-lab",
+    "system_id": "office-zapier-agents",
+    "title": "Zapier Agents：人监督合成练习",
+    "proof_level": "documentation-only",
+    "synthetic": true,
+    "steps": [
+      "盘点旧 Agent 触发器、知识源与工具",
+      "用合成工单写暂停检查点",
+      "评估迁移差异，保留人工审批；不直接双跑生产"
+    ],
+    "input": "虚构客户问发票状态",
+    "expected": "查阅样例状态，生成待审核回复",
+    "acceptance": [
+      "没有把未知信息填成事实",
+      "敏感写入不越过该产品实际支持的批准边界",
+      "保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run"
+    ],
+    "source_ids": [
+      "zap-build",
+      "zap-approval",
+      "zap-migrate"
+    ],
+    "execution_status": "never-run",
+    "runtime_verified": false
+  }
+}
+```
+</details>
+
+## Make AI Agents (New)：人监督合成练习
+
+命名办公 Agent 系统的人监督合成练习：在场景中选择模块、子场景、MCP 与子 Agent 工具；处理输入文件并返回结构化结果。文档支持不等于已验证成效。
+
+**证据边界：** documentation-only / never-run；11 个命名实体、10 个平台家族的代表批次，不是全球全集；无真实部署或收益证据。
+
+### 合成输入
+
+三条虚构项目进展记录
+
+### 提示词
+
+仅在纸面设计本合成练习，不连接真实账户、不执行工具、不发送或上传。
+新建未启用的场景并填写合成请求
+添加只读工具和少量知识文件，禁用写工具
+检查执行步骤与结构化结果，人工处理后续变更
+记录执行身份、目标、参数、审批和预期；没有执行则保持 never-run。
+
+### 输出模板
+
+预期而非实测：输出 risk、owner、next_action，缺失 owner 标未知
+
+### 风险与授权
+
+权限：Agent 只能调用启用的工具；工具背后连接权限须单独审查。
+确认：已读文档未证明统一逐工具强制审批开关；采用禁用写工具、先输出建议、人工另行执行的教学边界。
+局限：聊天测试会调用工具，不是无副作用预览；子 Agent 嵌套只支持一层；知识上传也会消耗 tokens；仅登记明确的 Agent 配置，不把普通确定性工作流整体统计为 Agent。
+未知：通用审批机制未由本次来源确认；未实测；open beta 功能与价格会变化
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+New，官方发布页仍标 open beta；不要混入旧版教程
+
+### 生命周期确认时间
+
+未以统一软件状态推断
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+保留旧/新实体及来源更新观察差异；文档更新时间不是产品发布日期。
+文档：Meet the new Make AI Agents app；New；页面标记 open beta；证据读取：official_documentation
+文档：Create your first AI agent；Make AI Agent (New)；滚动文档；证据读取：official_documentation
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 纸面步骤 1
+
+新建未启用的场景并填写合成请求
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 2. 纸面步骤 2
+
+添加只读工具和少量知识文件，禁用写工具
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 3. 纸面步骤 3
+
+检查执行步骤与结构化结果，人工处理后续变更
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+- 对应技术（编辑学习关系）：[Make AI Agents (New)](https://2codework.github.io/modelatlas/?node=office-make-ai-agents-new)
+- agent_boundary：hosted_workflow_agent_platform；不是基础模型，不把普通确定性自动化整体算 Agent。
+- cost：官方称所有套餐可用 Make AI Provider，自带 provider 连接需付费套餐；金额未核验
+- 验收：没有把未知信息填成事实
+- 验收：敏感写入不越过该产品实际支持的批准边界
+- 验收：保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run
+- 来源：Meet the new Make AI Agents app — https://help.make.com/meet-the-new-make-ai-agents-app（核查：2026-10-28）
+New；页面标记 open beta；official_documentation；只支持文档范围，未操作产品。
+- 来源：Create your first AI agent — https://help.make.com/create-your-first-ai-agent（核查：2026-10-28）
+Make AI Agent (New)；滚动文档；official_documentation；只支持文档范围，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "entity": {
+    "id": "office-make-ai-agents-new",
+    "name": "Make AI Agents (New)",
+    "entity_type": "hosted_workflow_agent_platform",
+    "is_model": false,
+    "domain": "office_agent_system",
+    "lifecycle": "New，官方发布页仍标 open beta；不要混入旧版教程",
+    "source_checked_date": "2026-10-28",
+    "proof_level": "documentation-only",
+    "runtime_verified": false,
+    "global_completeness": false,
+    "supported_workflows": [
+      "在场景中选择模块、子场景、MCP 与子 Agent 工具",
+      "处理输入文件并返回结构化结果"
+    ],
+    "permission_boundary": "Agent 只能调用启用的工具；工具背后连接权限须单独审查。",
+    "confirmation_boundary": "已读文档未证明统一逐工具强制审批开关；采用禁用写工具、先输出建议、人工另行执行的教学边界。",
+    "access_and_pricing": "官方称所有套餐可用 Make AI Provider，自带 provider 连接需付费套餐；金额未核验",
+    "human_supervised_steps": [
+      "新建未启用的场景并填写合成请求",
+      "添加只读工具和少量知识文件，禁用写工具",
+      "检查执行步骤与结构化结果，人工处理后续变更"
+    ],
+    "synthetic_example": {
+      "input": "三条虚构项目进展记录",
+      "expected": "输出 risk、owner、next_action，缺失 owner 标未知"
+    },
+    "limitations": [
+      "聊天测试会调用工具，不是无副作用预览",
+      "子 Agent 嵌套只支持一层",
+      "知识上传也会消耗 tokens",
+      "仅登记明确的 Agent 配置，不把普通确定性工作流整体统计为 Agent。"
+    ],
+    "source_ids": [
+      "make-new",
+      "make-create"
+    ],
+    "unknowns": [
+      "通用审批机制未由本次来源确认",
+      "未实测；open beta 功能与价格会变化"
+    ],
+    "integration_status": "raw_research_not_canonical",
+    "dedup_checks": {
+      "agentwork": {
+        "named_entity_title_match": false
+      },
+      "modelatlas": {
+        "named_entity_title_match": false
+      }
+    },
+    "platform_family_id": "make",
+    "execution_status": "never-run"
+  },
+  "case": {
+    "id": "office-make-ai-agents-new-lab",
+    "system_id": "office-make-ai-agents-new",
+    "title": "Make AI Agents (New)：人监督合成练习",
+    "proof_level": "documentation-only",
+    "synthetic": true,
+    "steps": [
+      "新建未启用的场景并填写合成请求",
+      "添加只读工具和少量知识文件，禁用写工具",
+      "检查执行步骤与结构化结果，人工处理后续变更"
+    ],
+    "input": "三条虚构项目进展记录",
+    "expected": "输出 risk、owner、next_action，缺失 owner 标未知",
+    "acceptance": [
+      "没有把未知信息填成事实",
+      "敏感写入不越过该产品实际支持的批准边界",
+      "保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run"
+    ],
+    "source_ids": [
+      "make-new",
+      "make-create"
+    ],
+    "execution_status": "never-run",
+    "runtime_verified": false
+  }
+}
+```
+</details>
+
+## Relevance AI Agents：人监督合成练习
+
+命名办公 Agent 系统的人监督合成练习：构建工具驱动的 Agent 与多 Agent 团队；分类、查询与受监督的跨工具工作流。文档支持不等于已验证成效。
+
+**证据边界：** documentation-only / never-run；11 个命名实体、10 个平台家族的代表批次，不是全球全集；无真实部署或收益证据。
+
+### 合成输入
+
+虚构采购请求 Q-12 缺少数量
+
+### 提示词
+
+仅在纸面设计本合成练习，不连接真实账户、不执行工具、不发送或上传。
+设计虚构供应商问题分流 Agent
+连接最少工具，将写入工具设 HITL
+检查拟执行工具并批准/拒绝，再审结果
+记录执行身份、目标、参数、审批和预期；没有执行则保持 never-run。
+
+### 输出模板
+
+预期而非实测：要求补充数量，不建立真实采购单
+
+### 风险与授权
+
+权限：为 Agent 显式连接工具；各工具账户权限和审批模式需要分别设置。
+确认：每个工具可设 Autopilot 或 Human-in-the-Loop；后者要求显式批准才能使用。
+局限：审批配置不等于结果正确或合规认证；不同界面版本命名需现场核对
+未知：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+当前官方文档可访问；版本未标
+
+### 生命周期确认时间
+
+未以统一软件状态推断
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+保留旧/新实体及来源更新观察差异；文档更新时间不是产品发布日期。
+文档：Relevance AI Introduction；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+文档：Approval Mode；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 纸面步骤 1
+
+设计虚构供应商问题分流 Agent
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 2. 纸面步骤 2
+
+连接最少工具，将写入工具设 HITL
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 3. 纸面步骤 3
+
+检查拟执行工具并批准/拒绝，再审结果
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+- 对应技术（编辑学习关系）：[Relevance AI Agents](https://2codework.github.io/modelatlas/?node=office-relevance-ai)
+- agent_boundary：low_no_code_agent_platform；不是基础模型，不把普通确定性自动化整体算 Agent。
+- cost：需授权账户/连接；具体套餐、区域可用性及价格未核验
+- 验收：没有把未知信息填成事实
+- 验收：敏感写入不越过该产品实际支持的批准边界
+- 验收：保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run
+- 来源：Relevance AI Introduction — https://relevanceai.com/docs/get-started/introduction（核查：2026-10-28）
+未显示文档发布日期/版本；以访问日为准；official_documentation；只支持文档范围，未操作产品。
+- 来源：Approval Mode — https://relevanceai.com/docs/build/agents/give-your-agent-tasks/approval-mode（核查：2026-10-28）
+未显示文档发布日期/版本；以访问日为准；official_documentation；只支持文档范围，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "entity": {
+    "id": "office-relevance-ai",
+    "name": "Relevance AI Agents",
+    "entity_type": "low_no_code_agent_platform",
+    "is_model": false,
+    "domain": "office_agent_system",
+    "lifecycle": "当前官方文档可访问；版本未标",
+    "source_checked_date": "2026-10-28",
+    "proof_level": "documentation-only",
+    "runtime_verified": false,
+    "global_completeness": false,
+    "supported_workflows": [
+      "构建工具驱动的 Agent 与多 Agent 团队",
+      "分类、查询与受监督的跨工具工作流"
+    ],
+    "permission_boundary": "为 Agent 显式连接工具；各工具账户权限和审批模式需要分别设置。",
+    "confirmation_boundary": "每个工具可设 Autopilot 或 Human-in-the-Loop；后者要求显式批准才能使用。",
+    "access_and_pricing": "需授权账户/连接；具体套餐、区域可用性及价格未核验",
+    "human_supervised_steps": [
+      "设计虚构供应商问题分流 Agent",
+      "连接最少工具，将写入工具设 HITL",
+      "检查拟执行工具并批准/拒绝，再审结果"
+    ],
+    "synthetic_example": {
+      "input": "虚构采购请求 Q-12 缺少数量",
+      "expected": "要求补充数量，不建立真实采购单"
+    },
+    "limitations": [
+      "审批配置不等于结果正确或合规认证",
+      "不同界面版本命名需现场核对"
+    ],
+    "source_ids": [
+      "rel-intro",
+      "rel-approval"
+    ],
+    "unknowns": [
+      "未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测"
+    ],
+    "integration_status": "raw_research_not_canonical",
+    "dedup_checks": {
+      "agentwork": {
+        "named_entity_title_match": false
+      },
+      "modelatlas": {
+        "named_entity_title_match": false
+      }
+    },
+    "platform_family_id": "relevance-ai",
+    "execution_status": "never-run"
+  },
+  "case": {
+    "id": "office-relevance-ai-lab",
+    "system_id": "office-relevance-ai",
+    "title": "Relevance AI Agents：人监督合成练习",
+    "proof_level": "documentation-only",
+    "synthetic": true,
+    "steps": [
+      "设计虚构供应商问题分流 Agent",
+      "连接最少工具，将写入工具设 HITL",
+      "检查拟执行工具并批准/拒绝，再审结果"
+    ],
+    "input": "虚构采购请求 Q-12 缺少数量",
+    "expected": "要求补充数量，不建立真实采购单",
+    "acceptance": [
+      "没有把未知信息填成事实",
+      "敏感写入不越过该产品实际支持的批准边界",
+      "保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run"
+    ],
+    "source_ids": [
+      "rel-intro",
+      "rel-approval"
+    ],
+    "execution_status": "never-run",
+    "runtime_verified": false
+  }
+}
+```
+</details>
+
+## Notion Custom Agents：人监督合成练习
+
+命名办公 Agent 系统的人监督合成练习：按触发器、计划进行页面/数据库整理；跨授权 Notion 与连接工具生成团队更新。文档支持不等于已验证成效。
+
+**证据边界：** documentation-only / never-run；11 个命名实体、10 个平台家族的代表批次，不是全球全集；无真实部署或收益证据。
+
+### 合成输入
+
+虚构 A/B 项目页各两项状态
+
+### 提示词
+
+仅在纸面设计本合成练习，不连接真实账户、不执行工具、不发送或上传。
+创建仅自己可用的 Agent
+Tools and Access 只加入虚构项目页，先不启用计划
+运行整理要求，检查输出及分享对象后人工保存/共享
+记录执行身份、目标、参数、审批和预期；没有执行则保持 never-run。
+
+### 输出模板
+
+预期而非实测：周报草稿，未注明日期的项列为待核实
+
+### 风险与授权
+
+权限：拥有独立资源权限，不继承触发者权限；使用者可能经 Agent 读取或编辑自己无直接访问权的资源。
+确认：已读来源未证明所有写入逐次确认；授权资源和共享 Agent 本身都是风险边界。教学只授只读源，产出由人审核。
+局限：共享 Agent 可扩大可见性；删掉个人页面权限不一定阻止经 Agent 获取；不能用当前用户权限继承的表述
+未知：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+当前文档；与按需 Notion Agent 分开
+
+### 生命周期确认时间
+
+未以统一软件状态推断
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+保留旧/新实体及来源更新观察差异；文档更新时间不是产品发布日期。
+文档：Custom Agents in Notion；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+文档：Custom Agents sharing and permissions；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 纸面步骤 1
+
+创建仅自己可用的 Agent
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 2. 纸面步骤 2
+
+Tools and Access 只加入虚构项目页，先不启用计划
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 3. 纸面步骤 3
+
+运行整理要求，检查输出及分享对象后人工保存/共享
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+- 对应技术（编辑学习关系）：[Notion Custom Agents](https://2codework.github.io/modelatlas/?node=office-notion-custom-agents)
+- agent_boundary：workspace_agent_service；不是基础模型，不把普通确定性自动化整体算 Agent。
+- cost：需授权账户/连接；具体套餐、区域可用性及价格未核验
+- 验收：没有把未知信息填成事实
+- 验收：敏感写入不越过该产品实际支持的批准边界
+- 验收：保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run
+- 来源：Custom Agents in Notion — https://www.notion.com/help/custom-agents（核查：2026-10-28）
+未显示文档发布日期/版本；以访问日为准；official_documentation；只支持文档范围，未操作产品。
+- 来源：Custom Agents sharing and permissions — https://www.notion.com/en-gb/help/custom-agents-sharing-and-permissions（核查：2026-10-28）
+未显示文档发布日期/版本；以访问日为准；official_documentation；只支持文档范围，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "entity": {
+    "id": "office-notion-custom-agents",
+    "name": "Notion Custom Agents",
+    "entity_type": "workspace_agent_service",
+    "is_model": false,
+    "domain": "office_agent_system",
+    "lifecycle": "当前文档；与按需 Notion Agent 分开",
+    "source_checked_date": "2026-10-28",
+    "proof_level": "documentation-only",
+    "runtime_verified": false,
+    "global_completeness": false,
+    "supported_workflows": [
+      "按触发器、计划进行页面/数据库整理",
+      "跨授权 Notion 与连接工具生成团队更新"
+    ],
+    "permission_boundary": "拥有独立资源权限，不继承触发者权限；使用者可能经 Agent 读取或编辑自己无直接访问权的资源。",
+    "confirmation_boundary": "已读来源未证明所有写入逐次确认；授权资源和共享 Agent 本身都是风险边界。教学只授只读源，产出由人审核。",
+    "access_and_pricing": "需授权账户/连接；具体套餐、区域可用性及价格未核验",
+    "human_supervised_steps": [
+      "创建仅自己可用的 Agent",
+      "Tools and Access 只加入虚构项目页，先不启用计划",
+      "运行整理要求，检查输出及分享对象后人工保存/共享"
+    ],
+    "synthetic_example": {
+      "input": "虚构 A/B 项目页各两项状态",
+      "expected": "周报草稿，未注明日期的项列为待核实"
+    },
+    "limitations": [
+      "共享 Agent 可扩大可见性；删掉个人页面权限不一定阻止经 Agent 获取",
+      "不能用当前用户权限继承的表述"
+    ],
+    "source_ids": [
+      "notion-custom",
+      "notion-perm"
+    ],
+    "unknowns": [
+      "未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测"
+    ],
+    "integration_status": "raw_research_not_canonical",
+    "dedup_checks": {
+      "agentwork": {
+        "named_entity_title_match": false
+      },
+      "modelatlas": {
+        "named_entity_title_match": false
+      }
+    },
+    "platform_family_id": "notion",
+    "execution_status": "never-run"
+  },
+  "case": {
+    "id": "office-notion-custom-agents-lab",
+    "system_id": "office-notion-custom-agents",
+    "title": "Notion Custom Agents：人监督合成练习",
+    "proof_level": "documentation-only",
+    "synthetic": true,
+    "steps": [
+      "创建仅自己可用的 Agent",
+      "Tools and Access 只加入虚构项目页，先不启用计划",
+      "运行整理要求，检查输出及分享对象后人工保存/共享"
+    ],
+    "input": "虚构 A/B 项目页各两项状态",
+    "expected": "周报草稿，未注明日期的项列为待核实",
+    "acceptance": [
+      "没有把未知信息填成事实",
+      "敏感写入不越过该产品实际支持的批准边界",
+      "保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run"
+    ],
+    "source_ids": [
+      "notion-custom",
+      "notion-perm"
+    ],
+    "execution_status": "never-run",
+    "runtime_verified": false
+  }
+}
+```
+</details>
+
+## Glean Workflow agents：人监督合成练习
+
+命名办公 Agent 系统的人监督合成练习：检索上下文后创建工单/文档并分享链接；查询指标并组织项目更新。文档支持不等于已验证成效。
+
+**证据边界：** documentation-only / never-run；11 个命名实体、10 个平台家族的代表批次，不是全球全集；无真实部署或收益证据。
+
+### 合成输入
+
+虚构 Jira 事项 DEMO-1 与状态说明
+
+### 提示词
+
+仅在纸面设计本合成练习，不连接真实账户、不执行工具、不发送或上传。
+管理员确认允许的只读工具和身份
+构建读取样例进展→产出草稿流程
+不启用未核验的写步骤；人工检查后写入目标系统
+记录执行身份、目标、参数、审批和预期；没有执行则保持 never-run。
+
+### 输出模板
+
+预期而非实测：项目更新草稿和建议跟进项
+
+### 风险与授权
+
+权限：管理员启用并认证工具，构建者选择流程工具；依赖配置的应用身份权限。
+确认：文档中个人 Always allow/Needs approval 设置明确适用于 Glean Assistant；不能直接宣称覆盖所有 Workflow/Autonomous Agent。流程写入审批需具体配置核验。
+局限：索引 connector 不等于实时执行 tool；个人 Assistant 审批设置不能外推为自动 Agent 默认
+未知：Workflow agent 各触发方式的强制审批边界需专项核验；价格、地区与租户功能未知；未实测
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+当前官方工具文档；与 Assistant、Autonomous Agents 分开
+
+### 生命周期确认时间
+
+未以统一软件状态推断
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+保留旧/新实体及来源更新观察差异；文档更新时间不是产品发布日期。
+文档：Overview and concepts: tools；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation_search_full_text; direct_open_empty
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 纸面步骤 1
+
+管理员确认允许的只读工具和身份
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 2. 纸面步骤 2
+
+构建读取样例进展→产出草稿流程
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 3. 纸面步骤 3
+
+不启用未核验的写步骤；人工检查后写入目标系统
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+- 对应技术（编辑学习关系）：[Glean Workflow agents](https://2codework.github.io/modelatlas/?node=office-glean-workflow-agents)
+- agent_boundary：enterprise_workflow_agent_service；不是基础模型，不把普通确定性自动化整体算 Agent。
+- cost：需授权账户/连接；具体套餐、区域可用性及价格未核验
+- 验收：没有把未知信息填成事实
+- 验收：敏感写入不越过该产品实际支持的批准边界
+- 验收：保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run
+- 来源：Overview and concepts: tools — https://docs.glean.com/agents/actions/introduction-to-actions（核查：2026-10-28）
+未显示文档发布日期/版本；以访问日为准；official_documentation_search_full_text; direct_open_empty；只支持文档范围，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "entity": {
+    "id": "office-glean-workflow-agents",
+    "name": "Glean Workflow agents",
+    "entity_type": "enterprise_workflow_agent_service",
+    "is_model": false,
+    "domain": "office_agent_system",
+    "lifecycle": "当前官方工具文档；与 Assistant、Autonomous Agents 分开",
+    "source_checked_date": "2026-10-28",
+    "proof_level": "documentation-only",
+    "runtime_verified": false,
+    "global_completeness": false,
+    "supported_workflows": [
+      "检索上下文后创建工单/文档并分享链接",
+      "查询指标并组织项目更新"
+    ],
+    "permission_boundary": "管理员启用并认证工具，构建者选择流程工具；依赖配置的应用身份权限。",
+    "confirmation_boundary": "文档中个人 Always allow/Needs approval 设置明确适用于 Glean Assistant；不能直接宣称覆盖所有 Workflow/Autonomous Agent。流程写入审批需具体配置核验。",
+    "access_and_pricing": "需授权账户/连接；具体套餐、区域可用性及价格未核验",
+    "human_supervised_steps": [
+      "管理员确认允许的只读工具和身份",
+      "构建读取样例进展→产出草稿流程",
+      "不启用未核验的写步骤；人工检查后写入目标系统"
+    ],
+    "synthetic_example": {
+      "input": "虚构 Jira 事项 DEMO-1 与状态说明",
+      "expected": "项目更新草稿和建议跟进项"
+    },
+    "limitations": [
+      "索引 connector 不等于实时执行 tool",
+      "个人 Assistant 审批设置不能外推为自动 Agent 默认"
+    ],
+    "source_ids": [
+      "glean-tools"
+    ],
+    "unknowns": [
+      "Workflow agent 各触发方式的强制审批边界需专项核验",
+      "价格、地区与租户功能未知；未实测"
+    ],
+    "integration_status": "raw_research_not_canonical",
+    "dedup_checks": {
+      "agentwork": {
+        "named_entity_title_match": false
+      },
+      "modelatlas": {
+        "named_entity_title_match": false
+      }
+    },
+    "platform_family_id": "glean",
+    "execution_status": "never-run"
+  },
+  "case": {
+    "id": "office-glean-workflow-agents-lab",
+    "system_id": "office-glean-workflow-agents",
+    "title": "Glean Workflow agents：人监督合成练习",
+    "proof_level": "documentation-only",
+    "synthetic": true,
+    "steps": [
+      "管理员确认允许的只读工具和身份",
+      "构建读取样例进展→产出草稿流程",
+      "不启用未核验的写步骤；人工检查后写入目标系统"
+    ],
+    "input": "虚构 Jira 事项 DEMO-1 与状态说明",
+    "expected": "项目更新草稿和建议跟进项",
+    "acceptance": [
+      "没有把未知信息填成事实",
+      "敏感写入不越过该产品实际支持的批准边界",
+      "保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run"
+    ],
+    "source_ids": [
+      "glean-tools"
+    ],
+    "execution_status": "never-run",
+    "runtime_verified": false
+  }
+}
+```
+</details>
+
+## Microsoft Copilot Studio custom agents：人监督合成练习
+
+命名办公 Agent 系统的人监督合成练习：通过配置的知识、工具和主题编排业务对话；将请求路由到连接器或工作流。文档支持不等于已验证成效。
+
+**证据边界：** documentation-only / never-run；11 个命名实体、10 个平台家族的代表批次，不是全球全集；无真实部署或收益证据。
+
+### 合成输入
+
+虚构设备支持申请，部门未填
+
+### 提示词
+
+仅在纸面设计本合成练习，不连接真实账户、不执行工具、不发送或上传。
+为虚构服务申请建立 Agent 和输入字段
+选择最终用户身份并开启敏感工具确认
+核对申请对象和字段，拒绝错误参数；异步触发另核验
+记录执行身份、目标、参数、审批和预期；没有执行则保持 never-run。
+
+### 输出模板
+
+预期而非实测：补问部门后生成工单建议，确认前不提交
+
+### 风险与授权
+
+权限：工具可用 End user 或 Maker-provided 身份，不能假定总是用户权限；管理员治理另计。
+确认：Ask the end user before running 默认 No；必须为敏感工具显式开启。该选项描述的是终端用户聊天体验。
+局限：聊天确认不能自动外推到所有自治触发；Maker-provided 凭证可能扩大执行身份范围；本次工具文档面向 standard-harness agents/agent flows，不推广到所有 harness。
+未知：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+当前 custom agent 工具文档；不是 Copilot 模型
+
+### 生命周期确认时间
+
+未以统一软件状态推断
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+保留旧/新实体及来源更新观察差异；文档更新时间不是产品发布日期。
+文档：Add tools to custom agents；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+文档：Configure user authentication for tools；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 纸面步骤 1
+
+为虚构服务申请建立 Agent 和输入字段
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 2. 纸面步骤 2
+
+选择最终用户身份并开启敏感工具确认
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 3. 纸面步骤 3
+
+核对申请对象和字段，拒绝错误参数；异步触发另核验
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+- 对应技术（编辑学习关系）：[Microsoft Copilot Studio custom agents](https://2codework.github.io/modelatlas/?node=office-copilot-studio)
+- agent_boundary：low_code_agent_platform；不是基础模型，不把普通确定性自动化整体算 Agent。
+- cost：需授权账户/连接；具体套餐、区域可用性及价格未核验
+- 验收：没有把未知信息填成事实
+- 验收：敏感写入不越过该产品实际支持的批准边界
+- 验收：保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run
+- 来源：Add tools to custom agents — https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent（核查：2026-10-28）
+未显示文档发布日期/版本；以访问日为准；official_documentation；只支持文档范围，未操作产品。
+- 来源：Configure user authentication for tools — https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication（核查：2026-10-28）
+未显示文档发布日期/版本；以访问日为准；official_documentation；只支持文档范围，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "entity": {
+    "id": "office-copilot-studio",
+    "name": "Microsoft Copilot Studio custom agents",
+    "entity_type": "low_code_agent_platform",
+    "is_model": false,
+    "domain": "office_agent_system",
+    "lifecycle": "当前 custom agent 工具文档；不是 Copilot 模型",
+    "source_checked_date": "2026-10-28",
+    "proof_level": "documentation-only",
+    "runtime_verified": false,
+    "global_completeness": false,
+    "supported_workflows": [
+      "通过配置的知识、工具和主题编排业务对话",
+      "将请求路由到连接器或工作流"
+    ],
+    "permission_boundary": "工具可用 End user 或 Maker-provided 身份，不能假定总是用户权限；管理员治理另计。",
+    "confirmation_boundary": "Ask the end user before running 默认 No；必须为敏感工具显式开启。该选项描述的是终端用户聊天体验。",
+    "access_and_pricing": "需授权账户/连接；具体套餐、区域可用性及价格未核验",
+    "human_supervised_steps": [
+      "为虚构服务申请建立 Agent 和输入字段",
+      "选择最终用户身份并开启敏感工具确认",
+      "核对申请对象和字段，拒绝错误参数；异步触发另核验"
+    ],
+    "synthetic_example": {
+      "input": "虚构设备支持申请，部门未填",
+      "expected": "补问部门后生成工单建议，确认前不提交"
+    },
+    "limitations": [
+      "聊天确认不能自动外推到所有自治触发",
+      "Maker-provided 凭证可能扩大执行身份范围",
+      "本次工具文档面向 standard-harness agents/agent flows，不推广到所有 harness。"
+    ],
+    "source_ids": [
+      "copilot-tools",
+      "copilot-auth"
+    ],
+    "unknowns": [
+      "未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测"
+    ],
+    "integration_status": "raw_research_not_canonical",
+    "dedup_checks": {
+      "agentwork": {
+        "named_entity_title_match": false
+      },
+      "modelatlas": {
+        "named_entity_title_match": false
+      }
+    },
+    "platform_family_id": "microsoft-copilot-studio",
+    "execution_status": "never-run"
+  },
+  "case": {
+    "id": "office-copilot-studio-lab",
+    "system_id": "office-copilot-studio",
+    "title": "Microsoft Copilot Studio custom agents：人监督合成练习",
+    "proof_level": "documentation-only",
+    "synthetic": true,
+    "steps": [
+      "为虚构服务申请建立 Agent 和输入字段",
+      "选择最终用户身份并开启敏感工具确认",
+      "核对申请对象和字段，拒绝错误参数；异步触发另核验"
+    ],
+    "input": "虚构设备支持申请，部门未填",
+    "expected": "补问部门后生成工单建议，确认前不提交",
+    "acceptance": [
+      "没有把未知信息填成事实",
+      "敏感写入不越过该产品实际支持的批准边界",
+      "保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run"
+    ],
+    "source_ids": [
+      "copilot-tools",
+      "copilot-auth"
+    ],
+    "execution_status": "never-run",
+    "runtime_verified": false
+  }
+}
+```
+</details>
+
+## Airtable Omni：人监督合成练习
+
+命名办公 Agent 系统的人监督合成练习：多步整理/修改数据与构建应用；分析文档、解释自动化失败。文档支持不等于已验证成效。
+
+**证据边界：** documentation-only / never-run；11 个命名实体、10 个平台家族的代表批次，不是全球全集；无真实部署或收益证据。
+
+### 合成输入
+
+虚构任务 A 已完成、B 延迟两日
+
+### 提示词
+
+仅在纸面设计本合成练习，不连接真实账户、不执行工具、不发送或上传。
+使用隔离的虚构项目 base
+请 Omni 汇总数据并说明拟改字段
+人核验记录和权限，再决定变更；不要自动发布共享界面
+记录执行身份、目标、参数、审批和预期；没有执行则保持 never-run。
+
+### 输出模板
+
+预期而非实测：状态汇总，B 标为需人工跟进
+
+### 风险与授权
+
+权限：镜像交互用户在 base/interface 的权限，字段和表权限仍约束修改。
+确认：官方文档称删除记录、表或页面前均确认；读取 base 外内容（如网页/搜索结果）后修改 base 前确认。发布 interface 和启用 automation 留给用户；不能推断所有写入均需确认。
+局限：不能配置 workspace/base 权限或导出数据；撤销有范围限制，不能依赖全量回滚
+未知：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+当前官方滚动文档；当前绝对更新时间未知，保留历史显示与 QA 相对日期观察差异
+
+### 生命周期确认时间
+
+未以统一软件状态推断
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+保留旧/新实体及来源更新观察差异；文档更新时间不是产品发布日期。
+文档：Using Omni AI in Airtable；本次独立 QA 显示 Last updated 1 day ago；当前绝对更新时间未知，不从相对时间推算；证据读取：official_documentation
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 纸面步骤 1
+
+使用隔离的虚构项目 base
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 2. 纸面步骤 2
+
+请 Omni 汇总数据并说明拟改字段
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 3. 纸面步骤 3
+
+人核验记录和权限，再决定变更；不要自动发布共享界面
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+- 对应技术（编辑学习关系）：[Airtable Omni](https://2codework.github.io/modelatlas/?node=office-airtable-omni)
+- agent_boundary：workspace_agent_assistant；不是基础模型，不把普通确定性自动化整体算 Agent。
+- cost：所有套餐可访问；完整使用需要 AI credits 与启用 AI；金额未核验
+- 验收：没有把未知信息填成事实
+- 验收：敏感写入不越过该产品实际支持的批准边界
+- 验收：保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run
+- 来源：Using Omni AI in Airtable — https://support.airtable.com/articles/1744327578-using-omni-ai-in-airtable（核查：2026-10-28）
+本次独立 QA 显示 Last updated 1 day ago；当前绝对更新时间未知，不从相对时间推算；official_documentation；只支持文档范围，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "entity": {
+    "id": "office-airtable-omni",
+    "name": "Airtable Omni",
+    "entity_type": "workspace_agent_assistant",
+    "is_model": false,
+    "domain": "office_agent_system",
+    "lifecycle": "当前官方滚动文档；当前绝对更新时间未知，保留历史显示与 QA 相对日期观察差异",
+    "source_checked_date": "2026-10-28",
+    "proof_level": "documentation-only",
+    "runtime_verified": false,
+    "global_completeness": false,
+    "supported_workflows": [
+      "多步整理/修改数据与构建应用",
+      "分析文档、解释自动化失败"
+    ],
+    "permission_boundary": "镜像交互用户在 base/interface 的权限，字段和表权限仍约束修改。",
+    "confirmation_boundary": "官方文档称删除记录、表或页面前均确认；读取 base 外内容（如网页/搜索结果）后修改 base 前确认。发布 interface 和启用 automation 留给用户；不能推断所有写入均需确认。",
+    "access_and_pricing": "所有套餐可访问；完整使用需要 AI credits 与启用 AI；金额未核验",
+    "human_supervised_steps": [
+      "使用隔离的虚构项目 base",
+      "请 Omni 汇总数据并说明拟改字段",
+      "人核验记录和权限，再决定变更；不要自动发布共享界面"
+    ],
+    "synthetic_example": {
+      "input": "虚构任务 A 已完成、B 延迟两日",
+      "expected": "状态汇总，B 标为需人工跟进"
+    },
+    "limitations": [
+      "不能配置 workspace/base 权限或导出数据",
+      "撤销有范围限制，不能依赖全量回滚"
+    ],
+    "source_ids": [
+      "omni"
+    ],
+    "unknowns": [
+      "未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测"
+    ],
+    "integration_status": "raw_research_not_canonical",
+    "dedup_checks": {
+      "agentwork": {
+        "named_entity_title_match": false
+      },
+      "modelatlas": {
+        "named_entity_title_match": false
+      }
+    },
+    "platform_family_id": "airtable",
+    "execution_status": "never-run"
+  },
+  "case": {
+    "id": "office-airtable-omni-lab",
+    "system_id": "office-airtable-omni",
+    "title": "Airtable Omni：人监督合成练习",
+    "proof_level": "documentation-only",
+    "synthetic": true,
+    "steps": [
+      "使用隔离的虚构项目 base",
+      "请 Omni 汇总数据并说明拟改字段",
+      "人核验记录和权限，再决定变更；不要自动发布共享界面"
+    ],
+    "input": "虚构任务 A 已完成、B 延迟两日",
+    "expected": "状态汇总，B 标为需人工跟进",
+    "acceptance": [
+      "没有把未知信息填成事实",
+      "敏感写入不越过该产品实际支持的批准边界",
+      "保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run"
+    ],
+    "source_ids": [
+      "omni"
+    ],
+    "execution_status": "never-run",
+    "runtime_verified": false
+  }
+}
+```
+</details>
+
+## Lindy：人监督合成练习
+
+命名办公 Agent 系统的人监督合成练习：收件箱草稿、会议准备、团队研究和例行任务。文档支持不等于已验证成效。
+
+**证据边界：** documentation-only / never-run；11 个命名实体、10 个平台家族的代表批次，不是全球全集；无真实部署或收益证据。
+
+### 合成输入
+
+虚构客户希望改期，未给时区
+
+### 提示词
+
+仅在纸面设计本合成练习，不连接真实账户、不执行工具、不发送或上传。
+选择 Email Drafting 例程而非泛化发送任务
+用虚构来信确定语气和升级规则
+审核 drafts 文件夹中收件人、事实和正文；由人发送
+记录执行身份、目标、参数、审批和预期；没有执行则保持 never-run。
+
+### 输出模板
+
+预期而非实测：草稿询问时区，不直接发送会议邀请
+
+### 风险与授权
+
+权限：个人连接仅本人用；团队连接以被共享账户身份工作。连接开通时其动作整体启用。
+确认：集成 guardrails 只覆盖共享 Slack 线程写操作；不覆盖读取、Web chat、Slack DM、iMessage/SMS。个人 Email Drafting 例程另规定草稿由用户审改发送。
+局限：不能把共享线程 guardrail 说成全渠道安全网；集成级规则不能区分同一集成的不同账户
+未知：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+当前文档；旧 Academy action-configuration 已重定向
+
+### 生命周期确认时间
+
+未以统一软件状态推断
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+保留旧/新实体及来源更新观察差异；文档更新时间不是产品发布日期。
+文档：What is Lindy?；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+文档：Integrations；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+文档：Email Drafting；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 纸面步骤 1
+
+选择 Email Drafting 例程而非泛化发送任务
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 2. 纸面步骤 2
+
+用虚构来信确定语气和升级规则
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 3. 纸面步骤 3
+
+审核 drafts 文件夹中收件人、事实和正文；由人发送
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+- 对应技术（编辑学习关系）：[Lindy](https://2codework.github.io/modelatlas/?node=office-lindy)
+- agent_boundary：hosted_personal_team_agent_service；不是基础模型，不把普通确定性自动化整体算 Agent。
+- cost：需授权账户/连接；具体套餐、区域可用性及价格未核验
+- 验收：没有把未知信息填成事实
+- 验收：敏感写入不越过该产品实际支持的批准边界
+- 验收：保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run
+- 来源：What is Lindy? — https://docs.lindy.ai/（核查：2026-10-28）
+未显示文档发布日期/版本；以访问日为准；official_documentation；只支持文档范围，未操作产品。
+- 来源：Integrations — https://docs.lindy.ai/integrations/overview（核查：2026-10-28）
+未显示文档发布日期/版本；以访问日为准；official_documentation；只支持文档范围，未操作产品。
+- 来源：Email Drafting — https://docs.lindy.ai/features/inbox-management/email-drafting（核查：2026-10-28）
+未显示文档发布日期/版本；以访问日为准；official_documentation；只支持文档范围，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "entity": {
+    "id": "office-lindy",
+    "name": "Lindy",
+    "entity_type": "hosted_personal_team_agent_service",
+    "is_model": false,
+    "domain": "office_agent_system",
+    "lifecycle": "当前文档；旧 Academy action-configuration 已重定向",
+    "source_checked_date": "2026-10-28",
+    "proof_level": "documentation-only",
+    "runtime_verified": false,
+    "global_completeness": false,
+    "supported_workflows": [
+      "收件箱草稿、会议准备、团队研究和例行任务"
+    ],
+    "permission_boundary": "个人连接仅本人用；团队连接以被共享账户身份工作。连接开通时其动作整体启用。",
+    "confirmation_boundary": "集成 guardrails 只覆盖共享 Slack 线程写操作；不覆盖读取、Web chat、Slack DM、iMessage/SMS。个人 Email Drafting 例程另规定草稿由用户审改发送。",
+    "access_and_pricing": "需授权账户/连接；具体套餐、区域可用性及价格未核验",
+    "human_supervised_steps": [
+      "选择 Email Drafting 例程而非泛化发送任务",
+      "用虚构来信确定语气和升级规则",
+      "审核 drafts 文件夹中收件人、事实和正文；由人发送"
+    ],
+    "synthetic_example": {
+      "input": "虚构客户希望改期，未给时区",
+      "expected": "草稿询问时区，不直接发送会议邀请"
+    },
+    "limitations": [
+      "不能把共享线程 guardrail 说成全渠道安全网",
+      "集成级规则不能区分同一集成的不同账户"
+    ],
+    "source_ids": [
+      "lindy-home",
+      "lindy-integrations",
+      "lindy-drafts"
+    ],
+    "unknowns": [
+      "未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测"
+    ],
+    "integration_status": "raw_research_not_canonical",
+    "dedup_checks": {
+      "agentwork": {
+        "named_entity_title_match": false
+      },
+      "modelatlas": {
+        "named_entity_title_match": false
+      }
+    },
+    "platform_family_id": "lindy",
+    "execution_status": "never-run"
+  },
+  "case": {
+    "id": "office-lindy-lab",
+    "system_id": "office-lindy",
+    "title": "Lindy：人监督合成练习",
+    "proof_level": "documentation-only",
+    "synthetic": true,
+    "steps": [
+      "选择 Email Drafting 例程而非泛化发送任务",
+      "用虚构来信确定语气和升级规则",
+      "审核 drafts 文件夹中收件人、事实和正文；由人发送"
+    ],
+    "input": "虚构客户希望改期，未给时区",
+    "expected": "草稿询问时区，不直接发送会议邀请",
+    "acceptance": [
+      "没有把未知信息填成事实",
+      "敏感写入不越过该产品实际支持的批准边界",
+      "保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run"
+    ],
+    "source_ids": [
+      "lindy-home",
+      "lindy-integrations",
+      "lindy-drafts"
+    ],
+    "execution_status": "never-run",
+    "runtime_verified": false
+  }
+}
+```
+</details>
+
+## n8n AI Agent node + human review：人监督合成练习
+
+命名办公 Agent 系统的人监督合成练习：工具驱动工作流，选择性人工审批；处理分类结果并拟议写入操作。文档支持不等于已验证成效。
+
+**证据边界：** documentation-only / never-run；11 个命名实体、10 个平台家族的代表批次，不是全球全集；无真实部署或收益证据。
+
+### 合成输入
+
+虚构 T-9 建议状态 resolved 但证据不足
+
+### 提示词
+
+仅在纸面设计本合成练习，不连接真实账户、不执行工具、不发送或上传。
+创建合成工单输入及 Agent 节点
+将写工具接入 human review 并展示 tool name/parameters
+人工拒绝错误目标，确认拒绝不写入后再评估上线
+记录执行身份、目标、参数、审批和预期；没有执行则保持 never-run。
+
+### 输出模板
+
+预期而非实测：审核者拒绝，目标状态不变
+
+### 风险与授权
+
+权限：节点使用配置的凭证；须最小化工具与审批渠道权限。
+确认：工具接到 human review 节点后执行前暂停；Approve 用模型给定输入执行，Deny 取消该操作并通知 AI；只保护接入的工具。
+局限：批准输入不等于输入正确；必须明确拒绝后的行为；真实暂停/取消未实测；仅登记明确的 Agent 配置，不把普通确定性工作流整体统计为 Agent。
+未知：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+当前滚动文档；运行软件版本未核验
+
+### 生命周期确认时间
+
+未以统一软件状态推断
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+保留旧/新实体及来源更新观察差异；文档更新时间不是产品发布日期。
+文档：Human-in-the-loop for tools；旧 URL advanced-ai/human-in-the-loop-tools/ 重定向到此页；证据读取：official_documentation
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 纸面步骤 1
+
+创建合成工单输入及 Agent 节点
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 2. 纸面步骤 2
+
+将写工具接入 human review 并展示 tool name/parameters
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 3. 纸面步骤 3
+
+人工拒绝错误目标，确认拒绝不写入后再评估上线
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+- 对应技术（编辑学习关系）：[n8n AI Agent node + human review](https://2codework.github.io/modelatlas/?node=office-n8n-ai-agent)
+- agent_boundary：workflow_orchestration_component；不是基础模型，不把普通确定性自动化整体算 Agent。
+- cost：需要配置 n8n、模型及工具/审批渠道连接；部署方式、许可及总成本未核验
+- 验收：没有把未知信息填成事实
+- 验收：敏感写入不越过该产品实际支持的批准边界
+- 验收：保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run
+- 来源：Human-in-the-loop for tools — https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md（核查：2026-10-28）
+旧 URL advanced-ai/human-in-the-loop-tools/ 重定向到此页；official_documentation；只支持文档范围，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "entity": {
+    "id": "office-n8n-ai-agent",
+    "name": "n8n AI Agent node + human review",
+    "entity_type": "workflow_orchestration_component",
+    "is_model": false,
+    "domain": "office_agent_system",
+    "lifecycle": "当前滚动文档；运行软件版本未核验",
+    "source_checked_date": "2026-10-28",
+    "proof_level": "documentation-only",
+    "runtime_verified": false,
+    "global_completeness": false,
+    "supported_workflows": [
+      "工具驱动工作流，选择性人工审批",
+      "处理分类结果并拟议写入操作"
+    ],
+    "permission_boundary": "节点使用配置的凭证；须最小化工具与审批渠道权限。",
+    "confirmation_boundary": "工具接到 human review 节点后执行前暂停；Approve 用模型给定输入执行，Deny 取消该操作并通知 AI；只保护接入的工具。",
+    "access_and_pricing": "需要配置 n8n、模型及工具/审批渠道连接；部署方式、许可及总成本未核验",
+    "human_supervised_steps": [
+      "创建合成工单输入及 Agent 节点",
+      "将写工具接入 human review 并展示 tool name/parameters",
+      "人工拒绝错误目标，确认拒绝不写入后再评估上线"
+    ],
+    "synthetic_example": {
+      "input": "虚构 T-9 建议状态 resolved 但证据不足",
+      "expected": "审核者拒绝，目标状态不变"
+    },
+    "limitations": [
+      "批准输入不等于输入正确",
+      "必须明确拒绝后的行为；真实暂停/取消未实测",
+      "仅登记明确的 Agent 配置，不把普通确定性工作流整体统计为 Agent。"
+    ],
+    "source_ids": [
+      "n8n-hitl"
+    ],
+    "unknowns": [
+      "未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测"
+    ],
+    "integration_status": "raw_research_not_canonical",
+    "dedup_checks": {
+      "agentwork": {
+        "named_entity_title_match": false
+      },
+      "modelatlas": {
+        "named_entity_title_match": false
+      }
+    },
+    "platform_family_id": "n8n",
+    "execution_status": "never-run"
+  },
+  "case": {
+    "id": "office-n8n-ai-agent-lab",
+    "system_id": "office-n8n-ai-agent",
+    "title": "n8n AI Agent node + human review：人监督合成练习",
+    "proof_level": "documentation-only",
+    "synthetic": true,
+    "steps": [
+      "创建合成工单输入及 Agent 节点",
+      "将写工具接入 human review 并展示 tool name/parameters",
+      "人工拒绝错误目标，确认拒绝不写入后再评估上线"
+    ],
+    "input": "虚构 T-9 建议状态 resolved 但证据不足",
+    "expected": "审核者拒绝，目标状态不变",
+    "acceptance": [
+      "没有把未知信息填成事实",
+      "敏感写入不越过该产品实际支持的批准边界",
+      "保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run"
+    ],
+    "source_ids": [
+      "n8n-hitl"
+    ],
+    "execution_status": "never-run",
+    "runtime_verified": false
+  }
+}
+```
+</details>
+
+## Atlassian Rovo agents in Slack：人监督合成练习
+
+命名办公 Agent 系统的人监督合成练习：在 Slack 检索与整理上下文；拟创建/更新 Jira、发布 Confluence 或调用连接工具。文档支持不等于已验证成效。
+
+**证据边界：** documentation-only / never-run；11 个命名实体、10 个平台家族的代表批次，不是全球全集；无真实部署或收益证据。
+
+### 合成输入
+
+虚构入职事项：测试账户未开通
+
+### 提示词
+
+仅在纸面设计本合成练习，不连接真实账户、不执行工具、不发送或上传。
+先在私密回复中请求虚构事项摘要
+要求起草 DEMO 工单，核对项目与负责人
+确认正确动作后才允许提交；公开分享另行检查
+记录执行身份、目标、参数、审批和预期；没有执行则保持 never-run。
+
+### 输出模板
+
+预期而非实测：工单预览，负责人缺失时先补问
+
+### 风险与授权
+
+权限：DM/私密回复按用户权限；公开回复按 Rovo 自身访问范围；行动按用户权限。
+确认：创建/更新 Jira、发布 Confluence 或第三方动作前预览并要求确认；即使公开线程，动作向用户私下确认。
+局限：更改 Agent 权限不会撤回已发回复；Slack 语义不能外推到所有 Rovo 客户端
+未知：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+当前 Slack app 文档；不等同底层模型
+
+### 生命周期确认时间
+
+未以统一软件状态推断
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+保留旧/新实体及来源更新观察差异；文档更新时间不是产品发布日期。
+文档：Use the Rovo app for Slack；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 纸面步骤 1
+
+先在私密回复中请求虚构事项摘要
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 2. 纸面步骤 2
+
+要求起草 DEMO 工单，核对项目与负责人
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+### 3. 纸面步骤 3
+
+确认正确动作后才允许提交；公开分享另行检查
+
+**验收：** 仅检查计划是否明确权限、目标和确认边界；未执行不能记作通过。
+
+- 对应技术（编辑学习关系）：[Atlassian Rovo agents in Slack](https://2codework.github.io/modelatlas/?node=office-rovo-slack)
+- agent_boundary：workspace_agent_client_surface；不是基础模型，不把普通确定性自动化整体算 Agent。
+- cost：需授权账户/连接；具体套餐、区域可用性及价格未核验
+- 验收：没有把未知信息填成事实
+- 验收：敏感写入不越过该产品实际支持的批准边界
+- 验收：保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run
+- 来源：Use the Rovo app for Slack — https://support.atlassian.com/rovo/docs/using-the-atlassian-rovo-slack-app/（核查：2026-10-28）
+未显示文档发布日期/版本；以访问日为准；official_documentation；只支持文档范围，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "entity": {
+    "id": "office-rovo-slack",
+    "name": "Atlassian Rovo agents in Slack",
+    "entity_type": "workspace_agent_client_surface",
+    "is_model": false,
+    "domain": "office_agent_system",
+    "lifecycle": "当前 Slack app 文档；不等同底层模型",
+    "source_checked_date": "2026-10-28",
+    "proof_level": "documentation-only",
+    "runtime_verified": false,
+    "global_completeness": false,
+    "supported_workflows": [
+      "在 Slack 检索与整理上下文",
+      "拟创建/更新 Jira、发布 Confluence 或调用连接工具"
+    ],
+    "permission_boundary": "DM/私密回复按用户权限；公开回复按 Rovo 自身访问范围；行动按用户权限。",
+    "confirmation_boundary": "创建/更新 Jira、发布 Confluence 或第三方动作前预览并要求确认；即使公开线程，动作向用户私下确认。",
+    "access_and_pricing": "需授权账户/连接；具体套餐、区域可用性及价格未核验",
+    "human_supervised_steps": [
+      "先在私密回复中请求虚构事项摘要",
+      "要求起草 DEMO 工单，核对项目与负责人",
+      "确认正确动作后才允许提交；公开分享另行检查"
+    ],
+    "synthetic_example": {
+      "input": "虚构入职事项：测试账户未开通",
+      "expected": "工单预览，负责人缺失时先补问"
+    },
+    "limitations": [
+      "更改 Agent 权限不会撤回已发回复",
+      "Slack 语义不能外推到所有 Rovo 客户端"
+    ],
+    "source_ids": [
+      "rovo-slack"
+    ],
+    "unknowns": [
+      "未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测"
+    ],
+    "integration_status": "raw_research_not_canonical",
+    "dedup_checks": {
+      "agentwork": {
+        "named_entity_title_match": false
+      },
+      "modelatlas": {
+        "named_entity_title_match": false
+      }
+    },
+    "platform_family_id": "atlassian-rovo",
+    "execution_status": "never-run"
+  },
+  "case": {
+    "id": "office-rovo-slack-lab",
+    "system_id": "office-rovo-slack",
+    "title": "Atlassian Rovo agents in Slack：人监督合成练习",
+    "proof_level": "documentation-only",
+    "synthetic": true,
+    "steps": [
+      "先在私密回复中请求虚构事项摘要",
+      "要求起草 DEMO 工单，核对项目与负责人",
+      "确认正确动作后才允许提交；公开分享另行检查"
+    ],
+    "input": "虚构入职事项：测试账户未开通",
+    "expected": "工单预览，负责人缺失时先补问",
+    "acceptance": [
+      "没有把未知信息填成事实",
+      "敏感写入不越过该产品实际支持的批准边界",
+      "保留权限身份、目标、参数、审批及结果证据；未运行则标 never-run"
+    ],
+    "source_ids": [
+      "rovo-slack"
+    ],
+    "execution_status": "never-run",
+    "runtime_verified": false
+  }
+}
+```
+</details>

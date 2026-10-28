@@ -1,0 +1,200 @@
+{
+  "status": "passed",
+  "checks": [
+    "11 unique entities",
+    "18 source ids resolve",
+    "11 original synthetic cases",
+    "all records non-model and documentation-only",
+    "22 baseline/entity alias scans show zero named-title/name/id matches"
+  ],
+  "dedup_method": "Case-insensitive substring aliases across nested id/name/title; this proves named catalog gap at these baseline snapshots, not absence of every possible semantic overlap.",
+  "dedup_checks": [
+    {
+      "baseline": "https://github.com/2codework/agentwork",
+      "entity": "office-ai-by-zapier",
+      "aliases": [
+        "ai by zapier"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/agentwork",
+      "entity": "office-zapier-agents",
+      "aliases": [
+        "zapier agents"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/agentwork",
+      "entity": "office-make-ai-agents-new",
+      "aliases": [
+        "make ai agent"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/agentwork",
+      "entity": "office-relevance-ai",
+      "aliases": [
+        "relevance ai"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/agentwork",
+      "entity": "office-notion-custom-agents",
+      "aliases": [
+        "notion custom agent",
+        "custom agents in notion"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/agentwork",
+      "entity": "office-glean-workflow-agents",
+      "aliases": [
+        "glean"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/agentwork",
+      "entity": "office-copilot-studio",
+      "aliases": [
+        "copilot studio"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/agentwork",
+      "entity": "office-airtable-omni",
+      "aliases": [
+        "airtable omni",
+        "omni ai"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/agentwork",
+      "entity": "office-lindy",
+      "aliases": [
+        "lindy"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/agentwork",
+      "entity": "office-n8n-ai-agent",
+      "aliases": [
+        "n8n"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/agentwork",
+      "entity": "office-rovo-slack",
+      "aliases": [
+        "rovo"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/modelatlas",
+      "entity": "office-ai-by-zapier",
+      "aliases": [
+        "ai by zapier"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/modelatlas",
+      "entity": "office-zapier-agents",
+      "aliases": [
+        "zapier agents"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/modelatlas",
+      "entity": "office-make-ai-agents-new",
+      "aliases": [
+        "make ai agent"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/modelatlas",
+      "entity": "office-relevance-ai",
+      "aliases": [
+        "relevance ai"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/modelatlas",
+      "entity": "office-notion-custom-agents",
+      "aliases": [
+        "notion custom agent",
+        "custom agents in notion"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/modelatlas",
+      "entity": "office-glean-workflow-agents",
+      "aliases": [
+        "glean"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/modelatlas",
+      "entity": "office-copilot-studio",
+      "aliases": [
+        "copilot studio"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/modelatlas",
+      "entity": "office-airtable-omni",
+      "aliases": [
+        "airtable omni",
+        "omni ai"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/modelatlas",
+      "entity": "office-lindy",
+      "aliases": [
+        "lindy"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/modelatlas",
+      "entity": "office-n8n-ai-agent",
+      "aliases": [
+        "n8n"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "https://github.com/2codework/modelatlas",
+      "entity": "office-rovo-slack",
+      "aliases": [
+        "rovo"
+      ],
+      "matches": []
+    }
+  ],
+  "not_tested": [
+    "product runtime",
+    "accounts",
+    "approval UI enforcement",
+    "pricing",
+    "real workflow outcomes"
+  ]
+}

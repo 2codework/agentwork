@@ -1,0 +1,54 @@
+# Independent office-agent r1 source/schema QA
+
+Audit date: 2026-10-28 UTC. Scope: read-only candidate inspection and official public documentation. Disposition: **conditionally suitable for raw candidate review, not canonical admission or runtime validation**. 11 named entities, 10 manually grouped platform families, 18 source records, 11 synthetic workflows. No account signup, product execution, paid calls, data uploads, credential access, native app access, canonical edits, or research edits occurred.
+
+## Immediate corrections
+
+1. **Airtable confirmation scope:** `office-airtable-omni.confirmation_boundary` should explicitly include record deletion, not just table/interface-page deletion. Replacement: `官方文档称删除记录、表或页面前均确认；读取 base 外内容（如网页/搜索结果）后修改 base 前确认。发布 interface 和启用 automation 留给用户；不能推断所有写入均需确认。` Source: [Using Omni](https://support.airtable.com/articles/1744327578-using-omni-ai-in-airtable), capabilities paragraph and external-content paragraph.
+2. **Source-date precision:** `zap-migrate` now exposes `Updated October 01, 2026 08:00`; `zap-approval` and `zap-build` expose `Updated October 01, 2026 07:59`. Use displayed timestamps without inventing timezone. The Airtable source in this audit displays `Last updated 1 day ago`, not the candidate's exact October 26 date. Retain exact date only with preserved evidence from the original observation; otherwise use the observed relative text and checked date. Do not infer a calendar date from relative time.
+3. **Explicit unexecuted state:** add `execution_status: "never-run"` and `runtime_verified: false` to every raw case. Existing `proof_level: documentation-only`, `synthetic: true`, record runtime flags and report caveats are sound; an acceptance sentence saying to mark unrun cases does not itself provide a machine-readable case state.
+4. **Agent vs automation taxonomy:** AI by Zapier is an agentic *step/component* within a Zap, not every AI by Zapier step or every Zap. Prefer `workflow_agent_component` (or document why current `hosted_workflow_agent_service` is retained). Preserve `agentic step` in display name. Explicitly distinguish deterministic automation and single-turn AI transforms from tool-selecting agentic configurations. Do not count ordinary Zap/Make/n8n workflows wholesale as agents.
+5. **Count reproducibility:** add `platform_family_id` to records, assigning both Zapier entities to `zapier`, all others to their respective family. The prose 10-family count is reasonable but not currently derivable from an explicit field.
+6. **Validation wording:** `validation.json.status: passed` should be labeled as structural checks only, e.g. `structural_validation_status: passed`. It is not a full source, runtime, global-completeness, permission-enforcement, or canonical-readiness pass.
+
+## Per-entity dispositions
+
+| Entity | Disposition | Evidence and precise boundary |
+|---|---|---|
+| AI by Zapier (agentic step) | Keep with taxonomy/date correction | [Migration](https://help.zapier.com/hc/en-us/articles/47402591569805-Migrating-from-Agents-to-AI-by-Zapier) documents agentic execution inside one Zap step, explicit per-tool approval opt-in, default no confirmation, and no Agents shutdown date. Do not generalize to all Zaps. |
+| Zapier Agents | Keep as migrating legacy entry, not discontinued | Same migration source plus [approval instructions](https://help.zapier.com/hc/en-us/articles/41776074420493-Add-approval-steps-to-your-agent-s-instructions) and [build guide](https://help.zapier.com/hc/en-us/articles/24393442652557-Build-an-agent-in-Zapier-Agents). Instruction-based pause is correctly not represented as independently verified enforcement. Update document dates. |
+| Make AI Agents (New) | Keep, beta and New qualifier mandatory | [Release](https://help.make.com/meet-the-new-make-ai-agents-app) marks open beta. [Creation guide](https://help.make.com/create-your-first-ai-agent) confirms chat calls tools, disabled tools are not called, knowledge uploads consume tokens, and nesting is one level. No universal approval mechanism established. |
+| Relevance AI Agents | Keep | [Introduction](https://relevanceai.com/docs/get-started/introduction), [Approval Mode](https://relevanceai.com/docs/build/agents/give-your-agent-tasks/approval-mode): per-tool Autopilot versus explicit Human-in-the-Loop approval. No runtime effectiveness or compliance certification established. |
+| Notion Custom Agents | Keep | [Custom Agents](https://www.notion.com/help/custom-agents), [permissions](https://www.notion.com/en-gb/help/custom-agents-sharing-and-permissions): independently granted resource access, no inherited creator/triggerer permissions; agent sharing can expose data the user cannot directly access. Keep separate from on-demand Notion Agent. |
+| Glean Workflow agents | Keep with source retrieval caveat | [Tools overview](https://docs.glean.com/agents/actions/introduction-to-actions) direct extraction returned zero lines; official-domain search supplied full text. Distinguishes Workflow and Autonomous Agents, connectors and tools; personal permission settings explicitly apply to Glean Assistant. Tenant-specific workflow write approval remains unverified. |
+| Microsoft Copilot Studio custom agents | Keep | [Tools](https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent) explicitly sets Ask the end user before running to No by default for end-user chat. [Authentication](https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication) plus tools page distinguish End user and Maker-provided. Note current tools page scopes itself to standard-harness agents/agent flows; do not extend to every harness or autonomous trigger. |
+| Airtable Omni | Keep with confirmation/date correction | [Omni](https://support.airtable.com/articles/1744327578-using-omni-ai-in-airtable) supports multi-step planning, user's base/interface permission mirroring, and the correction above. Also note interface conditional-visibility rules are not a security boundary and interface-only collaborator write setting defaults On if adding detailed operational guidance. |
+| Lindy | Keep | [Overview](https://docs.lindy.ai/), [integrations](https://docs.lindy.ai/integrations/overview), [email drafting](https://docs.lindy.ai/features/inbox-management/email-drafting). Shared Slack write guardrails are not read, web-chat, Slack-DM, iMessage or SMS protections. Personal drafting routine deposits drafts for human review/edit/send; do not generalize this to all email actions. |
+| n8n AI Agent node + human review | Keep as component, not all n8n automation | [HITL](https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md) documents selected-tool pause, Approve with AI inputs, Deny cancellation and informing AI. Runtime cancellation remains never-run; no licensing claim made. |
+| Atlassian Rovo agents in Slack | Keep as client surface, not platform-wide guarantee | [Slack app](https://support.atlassian.com/rovo/docs/using-the-atlassian-rovo-slack-app/) confirms private user access, public own access, private confirmation and user credentials for listed actions. Already-posted responses persist after permission changes. |
+
+## Structural checks actually performed
+
+- JSON parsed successfully; 11 distinct entity IDs, 18 distinct source IDs, 11 cases.
+- Every entity/case source ID resolves; every case system ID resolves.
+- Embedded sources exactly match standalone sources.json.
+- Every entity has `runtime_verified: false` and documentation-only proof; every case synthetic/documentation-only.
+- Missing explicit per-case execution state and platform family field as noted above.
+- This audit did not rerun public-repository alias scans or verify baseline remote SHAs. Existing scan is narrow named-entity gap evidence, not semantic deduplication. No formal external schema contract was supplied; do not describe this as schema-standard conformance.
+
+## Exact unresolved actions/targets/reasons
+
+- Action: directly extract Glean source body. Target: `https://docs.glean.com/agents/actions/introduction-to-actions`. State: **uncertain extraction**, not denied. Reason: tool returned zero lines; official-domain indexed text corroborated claims. No alternate identity, proxy or access-control workaround used.
+- Action: verify Airtable absolute update timestamp. Target: same Omni source above. State: **uncertain**. Reason: current observation exposes only relative update wording; candidate exact date lacks retained evidence in supplied files.
+- Action: execute product workflows/validate enforcement. Target: all 11 entities. State: **not performed/outside audit scope**, not access-denied. Reason: documentation-only scope, no signup/paid calls/data uploads authorized.
+- Action: establish comprehensive global coverage, actual regional availability, full current pricing, legal/licensing suitability or measured outcomes. Target: guide as a whole. State: **pending separate evidence**, not established by these sources. Existing non-completeness and no-ROI caveats must remain.
+
+No denied URL was retried and no access denial occurred during this audit. Product-doc authorization boilerplate on Microsoft pages did not prevent public article text being returned; no sign-in was attempted. All proposed changes remain recommendations; candidate source files and canonical repositories were not changed.
+
+## Final correction recheck — 2026-10-28
+
+All six requested corrections are present in the revised JSON/Markdown/case bundle, including standard-harness scoping. Airtable's original absolute date is explicitly a historical researcher observation; the current absolute update date is null/unknown. I independently confirm the current relative observation, not the historical original capture. Zapier times remain documentation-update metadata with unknown timezone. Preserved before-qa files match all seven recorded SHA256 values.
+
+**GO for integration solely as documentation-backed, unexecuted synthetic candidate material**, keeping entity type, lifecycle, permission scope, source retrieval caveats, unknowns and never-run flags intact. This is not evidence of deployed performance, global completeness, tested approval enforcement, unrestricted availability, legal suitability, or a model lineage. Repository-level admission/schema/dedup gates remain the integrating parent's responsibility. No canonical changes were performed by this auditor.
+
+Final static checks pass: 11 entities, 10 explicit families, 18 resolving sources, 11 never-run cases, embedded/standalone source parity. Final exact input hashes are in `final-hashes.json`; machine-readable recheck is `recheck.json`. Original audit findings above are retained as history and are resolved by this recheck except the intentionally documented evidence/runtime limitations.

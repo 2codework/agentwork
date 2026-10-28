@@ -5,6 +5,7 @@ from normalize import normalize
 import asset_versions
 import mcp_learning
 import creative_workflows
+import office_agents
 from pathlib import Path
 from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
@@ -53,6 +54,8 @@ def build():
     data["cases"].extend(lessons)
     creative_cases, _ = creative_workflows.load(ROOT)
     data["cases"].extend(creative_cases)
+    office_cases, _ = office_agents.load(ROOT)
+    data["cases"].extend(office_cases)
     validate(data)
     write_book(data)
     dest = ROOT/'site'
@@ -62,6 +65,7 @@ def build():
     (dest/'data.json').write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n')
     mcp_learning.publish(ROOT,dest)
     creative_workflows.publish(ROOT,dest)
+    office_agents.publish(ROOT,dest)
     (dest/'.nojekyll').touch()
     shutil.copy2(ROOT/'BOOK.md',dest/'BOOK.md')
     asset_versions.pin(dest)

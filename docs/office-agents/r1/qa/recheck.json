@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-28",
+  "checks": {
+    "counts": true,
+    "families": true,
+    "case_states": true,
+    "embedded_sources": true,
+    "source_refs": true,
+    "records_unexecuted": true
+  },
+  "disposition": "pass_for_documentation_only_candidate_integration",
+  "runtime_verified": false,
+  "canonical_write_performed": false
+}

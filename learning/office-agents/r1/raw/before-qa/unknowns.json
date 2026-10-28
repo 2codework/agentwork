@@ -1,0 +1,20 @@
+{
+  "scope": "11 个命名实体/版本/客户端面，10 个供应商/平台家族；不是全球全量，也不是 11 个基础模型。",
+  "execution": "只浏览官方资料与检查现有公开仓库对应本地数据；没有登录产品、付费调用、发送、创建账户或运行 Agent。",
+  "source_limits": [
+    "Glean 直接打开正文为空；官方搜索索引完整文本可读，单独标记证据来源",
+    "Lindy .md 路由内容类型不受浏览工具支持；正常 HTML 路由成功，不再使用旧 Academy 教程",
+    "GitHub 网页浏览 cache miss；官方 GitHub connector 成功核实 main SHA 与本地相同。"
+  ],
+  "global_unknowns": [
+    "各地区实际可用性、企业合同、税费、全部套餐和实付价格未核验",
+    "没有实际部署效果、精度、节省时间或 ROI 证据",
+    "平台版本滚动更新；集成动作和权限须在授权后重新验证"
+  ],
+  "future_admission": "先审计每一条命名实体和权限条件；AW 可收为合成练习，MA 应以 service/platform/client/component 类型纳入，不能登记为 model checkpoint。",
+  "next_research_gaps": [
+    "OpenAI ChatGPT agent：待单独读取官方 OpenAI 资料与去重，不在本批准入；未断言当前接入、价格或能力。",
+    "Anthropic Claude 办公代理/用户所称 Cowork：名称、生命周期、权限与运行面待官方来源核验，不在本批准入。",
+    "Google、Salesforce、ServiceNow 等办公 Agent 系统及亚洲供应商：另批核对具体命名实体；不以供应商品牌直接充当可用 Agent。"
+  ]
+}

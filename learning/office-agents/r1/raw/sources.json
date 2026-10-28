@@ -1,0 +1,156 @@
+[
+  {
+    "id": "zap-migrate",
+    "title": "Migrating from Agents to AI by Zapier",
+    "url": "https://help.zapier.com/hc/en-us/articles/47402591569805-Migrating-from-Agents-to-AI-by-Zapier",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "Updated October 01, 2026 08:00；时区未知；仅文档更新时间，不是产品发布日期",
+    "evidence": "official_documentation",
+    "prior_document_version_or_date": "页面显示 Updated 26 days ago；不推算精确发布日期"
+  },
+  {
+    "id": "zap-approval",
+    "title": "Add approval steps to your agent’s instructions",
+    "url": "https://help.zapier.com/hc/en-us/articles/41776074420493-Add-approval-steps-to-your-agent-s-instructions",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "Updated October 01, 2026 07:59；时区未知；仅文档更新时间，不是产品发布日期",
+    "evidence": "official_documentation",
+    "prior_document_version_or_date": "未显示文档发布日期/版本；以访问日为准"
+  },
+  {
+    "id": "zap-build",
+    "title": "Build an agent in Zapier Agents",
+    "url": "https://help.zapier.com/hc/en-us/articles/24393442652557-Build-an-agent-in-Zapier-Agents",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "Updated October 01, 2026 07:59；时区未知；仅文档更新时间，不是产品发布日期",
+    "evidence": "official_documentation",
+    "prior_document_version_or_date": "未显示文档发布日期/版本；以访问日为准"
+  },
+  {
+    "id": "make-new",
+    "title": "Meet the new Make AI Agents app",
+    "url": "https://help.make.com/meet-the-new-make-ai-agents-app",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "New；页面标记 open beta",
+    "evidence": "official_documentation"
+  },
+  {
+    "id": "make-create",
+    "title": "Create your first AI agent",
+    "url": "https://help.make.com/create-your-first-ai-agent",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "Make AI Agent (New)；滚动文档",
+    "evidence": "official_documentation"
+  },
+  {
+    "id": "rel-intro",
+    "title": "Relevance AI Introduction",
+    "url": "https://relevanceai.com/docs/get-started/introduction",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "未显示文档发布日期/版本；以访问日为准",
+    "evidence": "official_documentation"
+  },
+  {
+    "id": "rel-approval",
+    "title": "Approval Mode",
+    "url": "https://relevanceai.com/docs/build/agents/give-your-agent-tasks/approval-mode",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "未显示文档发布日期/版本；以访问日为准",
+    "evidence": "official_documentation"
+  },
+  {
+    "id": "notion-custom",
+    "title": "Custom Agents in Notion",
+    "url": "https://www.notion.com/help/custom-agents",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "未显示文档发布日期/版本；以访问日为准",
+    "evidence": "official_documentation"
+  },
+  {
+    "id": "notion-perm",
+    "title": "Custom Agents sharing and permissions",
+    "url": "https://www.notion.com/en-gb/help/custom-agents-sharing-and-permissions",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "未显示文档发布日期/版本；以访问日为准",
+    "evidence": "official_documentation"
+  },
+  {
+    "id": "glean-tools",
+    "title": "Overview and concepts: tools",
+    "url": "https://docs.glean.com/agents/actions/introduction-to-actions",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "未显示文档发布日期/版本；以访问日为准",
+    "evidence": "official_documentation_search_full_text; direct_open_empty"
+  },
+  {
+    "id": "copilot-tools",
+    "title": "Add tools to custom agents",
+    "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "未显示文档发布日期/版本；以访问日为准",
+    "evidence": "official_documentation"
+  },
+  {
+    "id": "copilot-auth",
+    "title": "Configure user authentication for tools",
+    "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "未显示文档发布日期/版本；以访问日为准",
+    "evidence": "official_documentation"
+  },
+  {
+    "id": "omni",
+    "title": "Using Omni AI in Airtable",
+    "url": "https://support.airtable.com/articles/1744327578-using-omni-ai-in-airtable",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "本次独立 QA 显示 Last updated 1 day ago；当前绝对更新时间未知，不从相对时间推算",
+    "evidence": "official_documentation",
+    "current_absolute_document_update_date": null,
+    "historical_observation": {
+      "checked_date": "2026-10-28",
+      "displayed_text": "Last updated: October 26, 2026",
+      "method": "原始研究 web search 结果正文明确显示；与独立 QA 后续相对时间显示不同，保留观察差异，不将其当当前绝对时间保证",
+      "source_url": "https://support.airtable.com/articles/1744327578-using-omni-ai-in-airtable"
+    }
+  },
+  {
+    "id": "lindy-home",
+    "title": "What is Lindy?",
+    "url": "https://docs.lindy.ai/",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "未显示文档发布日期/版本；以访问日为准",
+    "evidence": "official_documentation"
+  },
+  {
+    "id": "lindy-integrations",
+    "title": "Integrations",
+    "url": "https://docs.lindy.ai/integrations/overview",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "未显示文档发布日期/版本；以访问日为准",
+    "evidence": "official_documentation"
+  },
+  {
+    "id": "lindy-drafts",
+    "title": "Email Drafting",
+    "url": "https://docs.lindy.ai/features/inbox-management/email-drafting",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "未显示文档发布日期/版本；以访问日为准",
+    "evidence": "official_documentation"
+  },
+  {
+    "id": "n8n-hitl",
+    "title": "Human-in-the-loop for tools",
+    "url": "https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "旧 URL advanced-ai/human-in-the-loop-tools/ 重定向到此页",
+    "evidence": "official_documentation"
+  },
+  {
+    "id": "rovo-slack",
+    "title": "Use the Rovo app for Slack",
+    "url": "https://support.atlassian.com/rovo/docs/using-the-atlassian-rovo-slack-app/",
+    "source_checked_date": "2026-10-28",
+    "document_version_or_date": "未显示文档发布日期/版本；以访问日为准",
+    "evidence": "official_documentation"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "status": "awaiting_independent_recheck",
+  "before_manifest": "before-qa/sha256.json",
+  "applied": [
+    "Airtable confirmation includes records",
+    "document-update timestamps qualified",
+    "agentic component taxonomy",
+    "11 cases never-run",
+    "10 explicit platform families",
+    "structural-only validation language",
+    "Copilot harness scope"
+  ],
+  "canonical_modified": false
+}

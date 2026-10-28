@@ -1,0 +1,28 @@
+{
+  "audit_date": "2026-10-28",
+  "scope": "independent_source_and_structural_audit",
+  "disposition": "conditional_raw_candidate_review_only",
+  "canonical_admission": false,
+  "runtime_verified": false,
+  "counts": {
+    "entities": 11,
+    "source_records": 18,
+    "synthetic_cases": 11,
+    "platform_families_manually_grouped": 10
+  },
+  "checks": {
+    "distinct_entity_ids": true,
+    "embedded_sources_match": true,
+    "source_refs_resolve": true,
+    "case_system_refs_resolve": true,
+    "records_documentation_only_unexecuted": true,
+    "cases_synthetic_documentation_only": true
+  },
+  "recommended_schema_additions": [
+    "cases.execution_status=never-run",
+    "cases.runtime_verified=false",
+    "records.platform_family_id"
+  ],
+  "access_denials": [],
+  "candidate_files_modified": false
+}
