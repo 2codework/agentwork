@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "entity_count": 8,
+  "sources": 16,
+  "canonical_counts": {
+    "agentwork_cases": 117,
+    "modelatlas_nodes": 222
+  },
+  "checks": [
+    "JSON parse",
+    "unique entity IDs",
+    "all source references resolve",
+    "steps and acceptance and unknowns present",
+    "all executions never-run",
+    "canonical input hashes unchanged"
+  ],
+  "never_run": [
+    "product UI",
+    "model invocation",
+    "automation",
+    "account verification",
+    "link HTTP checker"
+  ],
+  "limits": [
+    "Official pages inspected through web tool; no raw HTML snapshots",
+    "No live entitlement, price or output efficacy verification"
+  ]
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "oa-agent-help",
+    "url": "https://help.openai.com/en/articles/11752874-chatgpt-agent",
+    "checked_at": "2026-10-28",
+    "verdict": "accept",
+    "evidence_zh": "Overview L16 声明 no longer available；L19–33 保留启动及套餐说明。仅接受文档冲突事实，不足以证明所有代理功能或所有账号停用。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "oa-agent-launch",
+    "url": "https://openai.com/index/introducing-chatgpt-agent/",
+    "checked_at": "2026-10-28",
+    "verdict": "accept",
+    "evidence_zh": "L13 2025-07-17；L21 发布文已过时；L59–60 历史虚拟电脑与重大动作授权。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "oa-dr-launch",
+    "url": "https://openai.com/index/introducing-deep-research/",
+    "checked_at": "2026-10-28",
+    "verdict": "accept",
+    "evidence_zh": "L13 2025-02-02；L39 2026-02-10更新；L42 原研究功能与agent增强功能并列，不能合并生命周期。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "oa-dr-help",
+    "url": "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt",
+    "checked_at": "2026-10-28",
+    "verdict": "accept",
+    "evidence_zh": "L19–24审改计划；L56–59应用权限及只读动作；L104–106国家/套餐约束。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "cl-cowork",
+    "url": "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork",
+    "checked_at": "2026-10-28",
+    "verdict": "accept",
+    "evidence_zh": "L47–53付费及平台/组织条件；L60云会话；L159–173新体验Auto/Manual及旧Skip表。Manual不等于每项工具必问。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "cl-safety",
+    "url": "https://support.claude.com/en/articles/13364135-use-claude-cowork-safely",
+    "checked_at": "2026-10-28",
+    "verdict": "accept",
+    "evidence_zh": "L63–65云隔离、桌面桥接、服务器处理、权限风险相互独立。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "cl-releases",
+    "url": "https://support.claude.com/en/articles/12138966-release-notes",
+    "checked_at": "2026-10-28",
+    "verdict": "accept",
+    "evidence_zh": "2026-01-12 Max/macOS本地VM预览；04-09 macOS/Windows GA；07-07从Max起逐步云会话扩展；09-16逐步统一对话。不可把当前云架构回填历史。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "cl-research",
+    "url": "https://support.claude.com/en/articles/11088861-use-research-on-claude",
+    "checked_at": "2026-10-28",
+    "verdict": "fix",
+    "evidence_zh": "L40 当前相对更新时间为 over 2 weeks ago，不是原 over a week ago；L46–55核心功能支持原结论；L73–75当前模型文档不可等于账号实测。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "cl-research-launch",
+    "url": "https://www.anthropic.com/news/research",
+    "checked_at": "2026-10-28",
+    "verdict": "accept",
+    "evidence_zh": "请求URL自动重定向到 https://claude.com/resources/articles/research；L29 2025-04-15。首发early beta地区/计划不同于当前。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "g-dr",
+    "url": "https://support.google.com/gemini/answer/15719111?hl=en",
+    "checked_at": "2026-10-28",
+    "verdict": "accept",
+    "evidence_zh": "L25–42年龄、登录、Thinking与Pro、限额；L48–55连接来源/审计划；L65视觉限制、L76 Keep Activity。仅Gemini Apps范围。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "p-projects",
+    "url": "https://www.perplexity.ai/en-GB/hub/products/projects",
+    "checked_at": "2026-10-28",
+    "verdict": "accept",
+    "evidence_zh": "FAQ L520–534明确Spaces自动迁移threads/files/history；L530–531个人连接/记忆不合并，fork不继承作者访问权。新能力并非仅改名。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "p-projects-change",
+    "url": "https://www.perplexity.ai/changelog/shared-workspaces-personal-computer-for-windows-and-model-council",
+    "checked_at": "2026-10-28",
+    "verdict": "fix",
+    "evidence_zh": "显示08/04/26；本页及slug未明确月日顺序。原2026-08-04应改raw_date=08/04/26、normalized_date=null；不是首次Spaces发布日。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "p-feb-change",
+    "url": "https://www.perplexity.ai/changelog/what-we-shipped---february-6th-2026",
+    "checked_at": "2026-10-28",
+    "verdict": "fix",
+    "evidence_zh": "显示02/05/26，URL含February-6th-2026，提供二月上下文但具体日期不一致。保留raw_date与URL日期提示、normalized_date=null，不把二者强行消歧。L33确认Labs旧名，不证明准确改名生效时刻或旧资产迁移。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "p-pro",
+    "url": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro",
+    "checked_at": "2026-10-28",
+    "verdict": "fix",
+    "evidence_zh": "L125–130支持Research自动模型组合和Create产物；L215 Last modified on October 26, 2026，原2026-07-21不能当本次当前元数据。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "p-plans",
+    "url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+    "checked_at": "2026-10-28",
+    "verdict": "fix",
+    "evidence_zh": "L159每30天生成额度；L272–280 Free研究有限、无文件/app生成；L235 API另计；L413更新时间2026-10-08，原09-02需修。组织文件库退役不等于Spaces迁移。",
+    "raw_snapshot_saved": false
+  },
+  {
+    "id": "p-labs",
+    "url": "https://www.perplexity.ai/en-GB/hub/blog/introducing-perplexity-labs",
+    "checked_at": "2026-10-28",
+    "verdict": "unknown",
+    "evidence_zh": "本次唯一打开失败：(400) Timeout fetching。未重试、未改路径、未用索引补正文。原资料无原始快照，无法独立复验其历史代码/资产/Research命名主张。",
+    "raw_snapshot_saved": false
+  }
+]

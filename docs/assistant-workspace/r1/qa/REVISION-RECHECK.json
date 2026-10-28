@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-10-28",
+  "mode": "local_only_no_network",
+  "verdict": "accept_with_documented_unknowns",
+  "entity_count": 8,
+  "source_count": 16,
+  "original_9_hashes_match": true,
+  "revised_input_sha256": {
+    "EVIDENCE.md": "99d74deacbd29dded979fd71d95f9b7574b9dacf4ccf91fe8fb3e03ca70b6992",
+    "GUIDE.zh-CN.md": "b4f98dcdd36a19009269993791351a5151f3ed8b25bb5a1278ad4d3b7c1ee993",
+    "QA-REVISION.json": "18a58f2d48017f5e7a446b5f26821a3927f50d7b83606826df8042fe17232692",
+    "README.md": "aef143fa960481eba47ec21b771312a89f3fb8e7a49949b439cf754907ed829a",
+    "VALIDATION.json": "6a86fe9627a8b4d51dbd2aeed8371de033b69651dedeaec2e460bdb12a79fa70",
+    "build.py": "8a5876c2485b3a87a7a1d8fef85d04085b125f49fa36c325cbaf78abbef85050",
+    "dedup.json": "1f7127896dfd118d06cf0463d3be673e2e7b13602c17186d3214b96160441aeb",
+    "research.json": "a1f816599f8b702884b4e1e47338dd4098d0f371abbf2638912af4633f3a55e1",
+    "sources.json": "737b86c73453c78ab71aa50b4e9f7c8b1638d88afc66cc05d004c4711429ce13",
+    "unknowns.json": "807da2a77a03a04666a0830369f55cb465bd3fec0b26be2b0ee75b618f439d28"
+  },
+  "checks": [
+    "原9文件保存在before-qa且逐字节哈希一致",
+    "8实体指南与JSON的范围、资格、权限、限制、任务步骤与验收一致",
+    "agent仅文档冲突且retirement=null",
+    "Perplexity raw日期保留且normalized_date=null",
+    "旧文档更新观察与QA新观察同时保留",
+    "Spaces迁移范围收紧到threads/files/history；私有权限不继承",
+    "Labs旧名关系与历史正文复验unknown分开",
+    "两个失败来源保留，复核未发请求"
+  ],
+  "original_qa_status": "5个fix已按要求处置；原来源unknown未因修订变为证实",
+  "renderer_history_present": true,
+  "canonical_modified": false,
+  "integration_performed": false
+}

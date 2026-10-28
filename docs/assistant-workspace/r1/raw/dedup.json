@@ -1,0 +1,75 @@
+{
+  "checked_at": "2026-10-28",
+  "canonical_counts": {
+    "agentwork_cases": 117,
+    "modelatlas_nodes": 222
+  },
+  "input_files": [
+    {
+      "path": "github-migration-r1/public/agentwork/docs/data.json",
+      "sha256": "d16e7ee00c95dab28cf1f3827173ed50a793100676dc7a40cd4a4a268af8afff"
+    },
+    {
+      "path": "github-migration-r1/public/modelatlas/docs/data.json",
+      "sha256": "c6fc70a87a6481147707963f88cf814c5629e5e4790b68acf89922e160c943fb"
+    }
+  ],
+  "checks": [
+    {
+      "dataset": "agentwork",
+      "term": "chatgpt agent",
+      "matches": []
+    },
+    {
+      "dataset": "agentwork",
+      "term": "deep research",
+      "matches": []
+    },
+    {
+      "dataset": "agentwork",
+      "term": "cowork",
+      "matches": []
+    },
+    {
+      "dataset": "agentwork",
+      "term": "perplexity",
+      "matches": []
+    },
+    {
+      "dataset": "agentwork",
+      "term": "claude research",
+      "matches": []
+    },
+    {
+      "dataset": "modelatlas",
+      "term": "chatgpt agent",
+      "matches": []
+    },
+    {
+      "dataset": "modelatlas",
+      "term": "deep research",
+      "matches": []
+    },
+    {
+      "dataset": "modelatlas",
+      "term": "cowork",
+      "matches": []
+    },
+    {
+      "dataset": "modelatlas",
+      "term": "perplexity",
+      "matches": []
+    },
+    {
+      "dataset": "modelatlas",
+      "term": "claude research",
+      "matches": []
+    }
+  ],
+  "conclusion_zh": "命名实体无直接重复；GPT/Gemini家族节点不是这些应用功能。原始content/cases.json仅2示例，实际以docs/data.json的117案例核对。",
+  "initial_observation": {
+    "agentwork_cases": 117,
+    "modelatlas_nodes": 211,
+    "note_zh": "初始查看为211，生成快照时其他并行工作已更新为222；本任务未改canonical。"
+  }
+}

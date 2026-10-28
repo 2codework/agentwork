@@ -1,0 +1,249 @@
+{
+  "checked_at": "2026-10-28",
+  "qa_inputs": [
+    "../assistant-workspace-qa-r1/entities.qa.json",
+    "../assistant-workspace-qa-r1/sources.qa.json"
+  ],
+  "original_file_count": 9,
+  "original_hashes_match_qa_inputs": true,
+  "before_qa": "before-qa",
+  "entity_dispositions": [
+    {
+      "id": "assistant-chatgpt-agent",
+      "name": "ChatGPT agent",
+      "verdict": "fix",
+      "fixes_zh": [
+        "将 scope_zh 的“1历史停用实体”、availability_zh 的“已停用”、练习“记录停用结论”改为：当前官方帮助页顶部称不再可用，同页保留旧启动/套餐文案；当前文档存在冲突。",
+        "建议 lifecycle_status=documentation_unavailability_notice_with_conflicting_legacy_text；retirement继续null。禁止推断所有代理能力停用或Work功能/计费等价。"
+      ],
+      "accepted_scope_zh": "仅官方文档所述功能/版本边界；不是账户资格、真实执行效果或全球穷尽目录验证。",
+      "source_ids": [
+        "oa-agent-help",
+        "oa-agent-launch"
+      ],
+      "unknowns_zh": [
+        "精确停用日期",
+        "替代产品功能/计费是否完全等价"
+      ],
+      "disposition": "applied"
+    },
+    {
+      "id": "assistant-chatgpt-deep-research",
+      "name": "Deep research in ChatGPT",
+      "verdict": "accept",
+      "fixes_zh": [],
+      "accepted_scope_zh": "仅官方文档所述功能/版本边界；不是账户资格、真实执行效果或全球穷尽目录验证。",
+      "source_ids": [
+        "oa-dr-launch",
+        "oa-dr-help"
+      ],
+      "unknowns_zh": [
+        "当前账户可用性和剩余额度",
+        "具体模型版本",
+        "实时套餐价格"
+      ],
+      "disposition": "retained"
+    },
+    {
+      "id": "assistant-claude-cowork",
+      "name": "Claude Cowork",
+      "verdict": "accept",
+      "fixes_zh": [],
+      "accepted_scope_zh": "仅官方文档所述功能/版本边界；不是账户资格、真实执行效果或全球穷尽目录验证。",
+      "source_ids": [
+        "cl-cowork",
+        "cl-safety",
+        "cl-releases"
+      ],
+      "unknowns_zh": [
+        "用户实际界面是否统一",
+        "具体客户端build与地区",
+        "Linux本地浏览器/文件能力的完整矩阵"
+      ],
+      "disposition": "retained"
+    },
+    {
+      "id": "assistant-claude-research",
+      "name": "Research in Claude",
+      "verdict": "fix",
+      "fixes_zh": [
+        "刷新相对更新时间为本轮看到的 over 2 weeks ago，不能换算精确日。"
+      ],
+      "accepted_scope_zh": "仅官方文档所述功能/版本边界；不是账户资格、真实执行效果或全球穷尽目录验证。",
+      "source_ids": [
+        "cl-research",
+        "cl-research-launch"
+      ],
+      "unknowns_zh": [
+        "动态底层模型配置是否已到本账户",
+        "实际额度和价格",
+        "连接工具自动调用的具体权限配置"
+      ],
+      "disposition": "applied"
+    },
+    {
+      "id": "assistant-gemini-apps-deep-research",
+      "name": "Deep Research in Gemini Apps",
+      "verdict": "accept",
+      "fixes_zh": [],
+      "accepted_scope_zh": "仅官方文档所述功能/版本边界；不是账户资格、真实执行效果或全球穷尽目录验证。",
+      "source_ids": [
+        "g-dr"
+      ],
+      "unknowns_zh": [
+        "首发日期未在本批证实",
+        "文档精确更新时间",
+        "当前地区/组织资格和额度"
+      ],
+      "disposition": "retained"
+    },
+    {
+      "id": "assistant-perplexity-projects",
+      "name": "Perplexity Projects（原 Spaces）",
+      "verdict": "fix",
+      "fixes_zh": [
+        "documented_migration_update从ISO断言改为raw_date=08/04/26、normalized_date=null（月日序未独立证实）。关联p-plans更新时间改为2026-10-08。明确自动迁移对象为threads/files/history，不延伸到所有连接器、私人记忆、权限或组织文件库。"
+      ],
+      "accepted_scope_zh": "仅官方文档所述功能/版本边界；不是账户资格、真实执行效果或全球穷尽目录验证。",
+      "source_ids": [
+        "p-projects",
+        "p-projects-change",
+        "p-plans"
+      ],
+      "unknowns_zh": [
+        "首次Projects发布日",
+        "当前套餐精确资格与价格",
+        "自动迁移在用户账号上的实际结果"
+      ],
+      "disposition": "applied"
+    },
+    {
+      "id": "assistant-perplexity-research",
+      "name": "Perplexity Research / Deep Research",
+      "verdict": "fix",
+      "fixes_zh": [
+        "upgrade_visible_date保留02/05/26，另记URL February-6th-2026；精确升级事件日期为unknown。关联p-pro/p-plans更新时间分别改为2026-10-26和2026-10-08。首发日期保持null，不重试已失败首发页。"
+      ],
+      "accepted_scope_zh": "仅官方文档所述功能/版本边界；不是账户资格、真实执行效果或全球穷尽目录验证。",
+      "source_ids": [
+        "p-feb-change",
+        "p-pro",
+        "p-plans"
+      ],
+      "unknowns_zh": [
+        "首发正文抓取失败，未据索引猜日期",
+        "准确模型路由和账户额度",
+        "审批机制完整矩阵"
+      ],
+      "disposition": "applied"
+    },
+    {
+      "id": "assistant-perplexity-create-files-apps",
+      "name": "Perplexity Create files and apps（原 Labs）",
+      "verdict": "fix",
+      "fixes_zh": [
+        "rename_evidence_date保留02/05/26及URL日期冲突，规范日期null。document_update及p-pro改为2026-10-26；p-plans改为2026-10-08。",
+        "p-labs历史正文在本轮无法复验，证据状态unknown；可保留由p-feb-change独立证实的旧名关系，不声称Labs旧资产全部迁移、执行环境或权限完全相同。"
+      ],
+      "accepted_scope_zh": "仅官方文档所述功能/版本边界；不是账户资格、真实执行效果或全球穷尽目录验证。",
+      "source_ids": [
+        "p-feb-change",
+        "p-pro",
+        "p-plans",
+        "p-labs"
+      ],
+      "unknowns_zh": [
+        "Labs首发精确日期未在已读正文确认",
+        "生成或发布各环节的人审机制",
+        "当前客户端/文件规格及价格"
+      ],
+      "disposition": "applied"
+    }
+  ],
+  "source_dispositions": [
+    {
+      "id": "oa-agent-help",
+      "prior_verdict": "accept",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "oa-agent-launch",
+      "prior_verdict": "accept",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "oa-dr-launch",
+      "prior_verdict": "accept",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "oa-dr-help",
+      "prior_verdict": "accept",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "cl-cowork",
+      "prior_verdict": "accept",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "cl-safety",
+      "prior_verdict": "accept",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "cl-releases",
+      "prior_verdict": "accept",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "cl-research",
+      "prior_verdict": "fix",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "cl-research-launch",
+      "prior_verdict": "accept",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "g-dr",
+      "prior_verdict": "accept",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "p-projects",
+      "prior_verdict": "accept",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "p-projects-change",
+      "prior_verdict": "fix",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "p-feb-change",
+      "prior_verdict": "fix",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "p-pro",
+      "prior_verdict": "fix",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "p-plans",
+      "prior_verdict": "fix",
+      "disposition": "applied or retained; QA observation appended"
+    },
+    {
+      "id": "p-labs",
+      "prior_verdict": "unknown",
+      "disposition": "unknown retained, no retry"
+    }
+  ],
+  "canonical_written": false,
+  "products_executed": false,
+  "model_called": false,
+  "network_requests_in_revision": 0
+}

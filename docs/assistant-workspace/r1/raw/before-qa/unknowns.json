@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "id": "assistant-chatgpt-agent",
+      "unknowns": [
+        "精确停用日期",
+        "替代产品功能/计费是否完全等价"
+      ]
+    },
+    {
+      "id": "assistant-chatgpt-deep-research",
+      "unknowns": [
+        "当前账户可用性和剩余额度",
+        "具体模型版本",
+        "实时套餐价格"
+      ]
+    },
+    {
+      "id": "assistant-claude-cowork",
+      "unknowns": [
+        "用户实际界面是否统一",
+        "具体客户端build与地区",
+        "Linux本地浏览器/文件能力的完整矩阵"
+      ]
+    },
+    {
+      "id": "assistant-claude-research",
+      "unknowns": [
+        "动态底层模型配置是否已到本账户",
+        "实际额度和价格",
+        "连接工具自动调用的具体权限配置"
+      ]
+    },
+    {
+      "id": "assistant-gemini-apps-deep-research",
+      "unknowns": [
+        "首发日期未在本批证实",
+        "文档精确更新时间",
+        "当前地区/组织资格和额度"
+      ]
+    },
+    {
+      "id": "assistant-perplexity-projects",
+      "unknowns": [
+        "首次Projects发布日",
+        "当前套餐精确资格与价格",
+        "自动迁移在用户账号上的实际结果"
+      ]
+    },
+    {
+      "id": "assistant-perplexity-research",
+      "unknowns": [
+        "首发正文抓取失败，未据索引猜日期",
+        "准确模型路由和账户额度",
+        "审批机制完整矩阵"
+      ]
+    },
+    {
+      "id": "assistant-perplexity-create-files-apps",
+      "unknowns": [
+        "Labs首发精确日期未在已读正文确认",
+        "生成或发布各环节的人审机制",
+        "当前客户端/文件规格及价格"
+      ]
+    }
+  ],
+  "blockers": [
+    {
+      "url": "https://www.perplexity.ai/hub/blog/introducing-perplexity-deep-research",
+      "error": "web.open: cannot be opened (non-retryable error)",
+      "handling": "未绕过；不从未读取正文推定首次发布日期；使用其他已读取官方帮助页支持功能。"
+    }
+  ],
+  "never_run": [
+    "登录或开通",
+    "调用产品模型",
+    "账号数据读取",
+    "用户文件上传",
+    "真实自动化",
+    "Mac操作",
+    "对外发布或发送"
+  ],
+  "source_version_caveats": [
+    "OpenAI deep research搜索摘录含Work/Codex扩展，但本次打开页是Chat范围版本；不合并其不同额度和权限。",
+    "ChatGPT agent搜索与打开显示相对更新时间不同，不据其推导停用日。",
+    "Perplexity变更URL含February-6th但正文02/05/26；保留差异，不将其当首发日。"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "pass_local_revision_checks_pending_independent_recheck",
+  "entity_count": 8,
+  "source_count": 16,
+  "original_files_preserved": 9,
+  "original_hashes_match": true,
+  "checks": [
+    "JSON parse",
+    "source references",
+    "retirement remains null",
+    "ambiguous Perplexity normalized dates null",
+    "original 9 file hashes preserved"
+  ],
+  "product_operations": "never-run",
+  "network_requests_in_revision": 0,
+  "canonical_written": false,
+  "integration": "not_started_waiting_parent_baseline",
+  "limitations": [
+    "原始网页全文未保存",
+    "不再次请求两个失败来源",
+    "可用性仅文档，不是账户实测"
+  ]
+}

@@ -19601,3 +19601,1422 @@ original_teaching_template_not_executed
 }
 ```
 </details>
+
+## ChatGPT agent：历史agent mode文档冲突与迁移需求审计
+
+2025-07-17 agent mode；不是GPT模型ID或当前Work同义词。；documentation-only / never-run。文档状态：documentation_unavailability_notice_with_conflicting_legacy_text。未知：精确停用日期；替代产品功能/计费是否完全等价
+
+**证据边界：** documentation-only / never-run；原创合成练习，不是实测、全球全集或收益证据。
+
+### 合成输入
+
+仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+原创任务：历史agent mode文档冲突与迁移需求审计
+
+### 提示词
+
+仅纸面设计，不启动产品、不登录、不调用模型、不连接账号，不上传用户文件。
+离线写虚构目标：比较三家虚构文具供应商，不购买。
+把任务分成公开资料读取、比较表、采购动作三段。
+在历史说明上标注哪些需要人审。
+记录当前帮助页不可用提示与残留旧启动说明的冲突；历史/agent步骤不得当当前可执行教程，迁移需求另列待核实。
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 输出模板
+
+预期输出（非实测）：输出含历史/当前两栏及证据URL。；三段中采购动作明确禁用。；retirement=null；核验日期不是停用日期，不推断所有代理能力停用。
+
+### 风险与授权
+
+权限与确认：历史设计对重大操作请求授权，可接管/停止；本练习不进入账号。
+限制：旧启动文案与不可用提示并存；精确停用事件和账号适用范围未核实。；不能据新Work链接认定两者权限/计费等价。
+未知：精确停用日期；替代产品功能/计费是否完全等价
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+2025-07-17 agent mode；不是GPT模型ID或当前Work同义词。
+
+### 生命周期确认时间
+
+文档观察不等于已验证产品生命周期
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+当前官方帮助页顶部称不再可用，同页仍保留旧启动/套餐文案；仅确认文档冲突，不推断所有账号或所有代理能力的状态。
+文档状态：documentation_unavailability_notice_with_conflicting_legacy_text
+日期分型：{"announcement": "2025-07-17", "retirement": null, "document_update": "相对日期见来源"}
+文档观察（非事件日期）：ChatGPT agent；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": "相对日期 yesterday；不换算精确日期", "note": "原观察原样保留；不是事件日期"}]；顶部说已不再可用；同页下方保留旧启动与套餐文案，存在内部时态冲突。
+文档观察（非事件日期）：Introducing ChatGPT agent；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": null, "note": "原观察原样保留；不是事件日期"}]；2025-07-17 发布；现页面标为过时。历史产品用虚拟电脑，重大操作询问授权，可中断或接管。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 离线设计 1
+
+离线写虚构目标：比较三家虚构文具供应商，不购买。
+
+**验收：** 仅审查设计，不执行产品；输出含历史/当前两栏及证据URL。
+
+### 2. 离线设计 2
+
+把任务分成公开资料读取、比较表、采购动作三段。
+
+**验收：** 仅审查设计，不执行产品；三段中采购动作明确禁用。
+
+### 3. 离线设计 3
+
+在历史说明上标注哪些需要人审。
+
+**验收：** 仅审查设计，不执行产品；retirement=null；核验日期不是停用日期，不推断所有代理能力停用。
+
+### 4. 离线设计 4
+
+记录当前帮助页不可用提示与残留旧启动说明的冲突；历史/agent步骤不得当当前可执行教程，迁移需求另列待核实。
+
+**验收：** 仅审查设计，不执行产品；输出含历史/当前两栏及证据URL。
+
+- 对应技术（编辑学习关系）：[ChatGPT agent](https://2codework.github.io/modelatlas/?node=assistant-chatgpt-agent)
+- agent_boundary：historical_executable_agent_surface；不是基础模型；研究功能、工作区容器和执行产品表面不可混同。
+- cost：当前官方帮助页顶部称不再可用，同页仍保留旧启动/套餐文案；仅确认文档冲突，不推断所有账号或所有代理能力的状态。；价格unknown，未核验，不购买或升级。
+- 验收：输出含历史/当前两栏及证据URL。
+- 验收：三段中采购动作明确禁用。
+- 验收：retirement=null；核验日期不是停用日期，不推断所有代理能力停用。
+- 来源：ChatGPT agent — https://help.openai.com/en/articles/11752874-chatgpt-agent（核查：2026-10-28）
+顶部说已不再可用；同页下方保留旧启动与套餐文案，存在内部时态冲突。；来源QA：accept；仅文档边界，未操作产品。
+- 来源：Introducing ChatGPT agent — https://openai.com/index/introducing-chatgpt-agent/（核查：2026-10-28）
+2025-07-17 发布；现页面标为过时。历史产品用虚拟电脑，重大操作询问授权，可中断或接管。；来源QA：accept；仅文档边界，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "assistant-chatgpt-agent",
+  "name": "ChatGPT agent",
+  "entity_type": "historical_executable_agent_surface",
+  "version_scope_zh": "2025-07-17 agent mode；不是GPT模型ID或当前Work同义词。",
+  "lifecycle_status": "documentation_unavailability_notice_with_conflicting_legacy_text",
+  "dates": {
+    "announcement": "2025-07-17",
+    "retirement": null,
+    "document_update": "相对日期见来源"
+  },
+  "availability_zh": "当前官方帮助页顶部称不再可用，同页仍保留旧启动/套餐文案；仅确认文档冲突，不推断所有账号或所有代理能力的状态。",
+  "pricing": {
+    "amount": null,
+    "currency": null,
+    "status": "unknown_not_verified",
+    "note_zh": "不推算套餐价格；所需计划不等于已获账户资格，购买或升级不在授权范围。"
+  },
+  "permissions_and_human_confirmation_zh": [
+    "历史设计对重大操作请求授权，可接管/停止；本练习不进入账号。"
+  ],
+  "limitations_zh": [
+    "旧启动文案与不可用提示并存；精确停用事件和账号适用范围未核实。",
+    "不能据新Work链接认定两者权限/计费等价。"
+  ],
+  "learning_task": {
+    "original_synthetic": true,
+    "title_zh": "历史agent mode文档冲突与迁移需求审计",
+    "input_policy": "仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行",
+    "steps_zh": [
+      "离线写虚构目标：比较三家虚构文具供应商，不购买。",
+      "把任务分成公开资料读取、比较表、采购动作三段。",
+      "在历史说明上标注哪些需要人审。",
+      "记录当前帮助页不可用提示与残留旧启动说明的冲突；历史/agent步骤不得当当前可执行教程，迁移需求另列待核实。"
+    ],
+    "acceptance_zh": [
+      "输出含历史/当前两栏及证据URL。",
+      "三段中采购动作明确禁用。",
+      "retirement=null；核验日期不是停用日期，不推断所有代理能力停用。"
+    ],
+    "stop_condition_zh": "遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。"
+  },
+  "source_ids": [
+    "oa-agent-help",
+    "oa-agent-launch"
+  ],
+  "unknowns_zh": [
+    "精确停用日期",
+    "替代产品功能/计费是否完全等价"
+  ],
+  "execution": {
+    "status": "never-run",
+    "model_called": false,
+    "account_login": false,
+    "real_automation": false,
+    "user_files_uploaded": false,
+    "user_mac_operated": false
+  },
+  "admission_recommendation": "candidate_documentation_only"
+}
+```
+</details>
+
+## Deep research in ChatGPT：虚构图书馆的开放资料研究简报
+
+本批仅Chat中的研究功能；不与历史agent mode、API模型或Work研究额度合并。；documentation-only / never-run。文档状态：documented_current。未知：当前账户可用性和剩余额度；具体模型版本；实时套餐价格
+
+**证据边界：** documentation-only / never-run；原创合成练习，不是实测、全球全集或收益证据。
+
+### 合成输入
+
+仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+原创任务：虚构图书馆的开放资料研究简报
+
+### 提示词
+
+仅纸面设计，不启动产品、不登录、不调用模型、不连接账号，不上传用户文件。
+离线写研究问题：为虚构社区图书馆解释开放数据与版权标注区别。
+设计仅官方域名白名单，禁连接私有应用。
+拟定三节计划并安排人工核准。
+设计报告模板：结论/来源/日期/不确定性。
+人工抽检每条结论对应原始来源；不发布。
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 输出模板
+
+预期输出（非实测）：至少三条结论有逐条来源位。；公告日期与页面更新日期分栏。；不把版权建议写为确定法律结论。
+
+### 风险与授权
+
+权限与确认：用户可审改研究计划、调整可访问来源及中断。；Chat研究仅用应用读取动作；应用权限、角色和源系统权限共同约束。
+限制：引用仍需逐项核验；不保证所有应用支持研究。；搜索摘要与打开页面版本不完全一致；本条采用已打开Chat范围说明。
+未知：当前账户可用性和剩余额度；具体模型版本；实时套餐价格
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+本批仅Chat中的研究功能；不与历史agent mode、API模型或Work研究额度合并。
+
+### 生命周期确认时间
+
+文档观察不等于已验证产品生命周期
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+取决于套餐、地区及工作区；额度以产品计数器为准。
+文档状态：documented_current
+日期分型：{"announcement": "2025-02-02", "feature_update": "2026-02-10", "document_update": "相对日期见来源"}
+文档观察（非事件日期）：Introducing deep research；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": "2026-02-10 update block", "note": "原观察原样保留；不是事件日期"}]；首次公告为2025-02-02；2026-02-10是后续功能更新，不能替代首发日。
+文档观察（非事件日期）：Deep research in ChatGPT；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": "9 days ago（本次打开版本）", "note": "原观察原样保留；不是事件日期"}]；Chat 研究可审改计划、限定站点、核验引用；连接应用仅使用读取动作。套餐/地区/角色决定来源和额度。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 离线设计 1
+
+离线写研究问题：为虚构社区图书馆解释开放数据与版权标注区别。
+
+**验收：** 仅审查设计，不执行产品；至少三条结论有逐条来源位。
+
+### 2. 离线设计 2
+
+设计仅官方域名白名单，禁连接私有应用。
+
+**验收：** 仅审查设计，不执行产品；公告日期与页面更新日期分栏。
+
+### 3. 离线设计 3
+
+拟定三节计划并安排人工核准。
+
+**验收：** 仅审查设计，不执行产品；不把版权建议写为确定法律结论。
+
+### 4. 离线设计 4
+
+设计报告模板：结论/来源/日期/不确定性。
+
+**验收：** 仅审查设计，不执行产品；至少三条结论有逐条来源位。
+
+### 5. 离线设计 5
+
+人工抽检每条结论对应原始来源；不发布。
+
+**验收：** 仅审查设计，不执行产品；公告日期与页面更新日期分栏。
+
+- 对应技术（编辑学习关系）：[Deep research in ChatGPT](https://2codework.github.io/modelatlas/?node=assistant-chatgpt-deep-research)
+- agent_boundary：research_feature；不是基础模型；研究功能、工作区容器和执行产品表面不可混同。
+- cost：取决于套餐、地区及工作区；额度以产品计数器为准。；价格unknown，未核验，不购买或升级。
+- 验收：至少三条结论有逐条来源位。
+- 验收：公告日期与页面更新日期分栏。
+- 验收：不把版权建议写为确定法律结论。
+- 来源：Introducing deep research — https://openai.com/index/introducing-deep-research/（核查：2026-10-28）
+首次公告为2025-02-02；2026-02-10是后续功能更新，不能替代首发日。；来源QA：accept；仅文档边界，未操作产品。
+- 来源：Deep research in ChatGPT — https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt（核查：2026-10-28）
+Chat 研究可审改计划、限定站点、核验引用；连接应用仅使用读取动作。套餐/地区/角色决定来源和额度。；来源QA：accept；仅文档边界，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "assistant-chatgpt-deep-research",
+  "name": "Deep research in ChatGPT",
+  "entity_type": "research_feature",
+  "version_scope_zh": "本批仅Chat中的研究功能；不与历史agent mode、API模型或Work研究额度合并。",
+  "lifecycle_status": "documented_current",
+  "dates": {
+    "announcement": "2025-02-02",
+    "feature_update": "2026-02-10",
+    "document_update": "相对日期见来源"
+  },
+  "availability_zh": "取决于套餐、地区及工作区；额度以产品计数器为准。",
+  "pricing": {
+    "amount": null,
+    "currency": null,
+    "status": "unknown_not_verified",
+    "note_zh": "不推算套餐价格；所需计划不等于已获账户资格，购买或升级不在授权范围。"
+  },
+  "permissions_and_human_confirmation_zh": [
+    "用户可审改研究计划、调整可访问来源及中断。",
+    "Chat研究仅用应用读取动作；应用权限、角色和源系统权限共同约束。"
+  ],
+  "limitations_zh": [
+    "引用仍需逐项核验；不保证所有应用支持研究。",
+    "搜索摘要与打开页面版本不完全一致；本条采用已打开Chat范围说明。"
+  ],
+  "learning_task": {
+    "original_synthetic": true,
+    "title_zh": "虚构图书馆的开放资料研究简报",
+    "input_policy": "仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行",
+    "steps_zh": [
+      "离线写研究问题：为虚构社区图书馆解释开放数据与版权标注区别。",
+      "设计仅官方域名白名单，禁连接私有应用。",
+      "拟定三节计划并安排人工核准。",
+      "设计报告模板：结论/来源/日期/不确定性。",
+      "人工抽检每条结论对应原始来源；不发布。"
+    ],
+    "acceptance_zh": [
+      "至少三条结论有逐条来源位。",
+      "公告日期与页面更新日期分栏。",
+      "不把版权建议写为确定法律结论。"
+    ],
+    "stop_condition_zh": "遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。"
+  },
+  "source_ids": [
+    "oa-dr-launch",
+    "oa-dr-help"
+  ],
+  "unknowns_zh": [
+    "当前账户可用性和剩余额度",
+    "具体模型版本",
+    "实时套餐价格"
+  ],
+  "execution": {
+    "status": "never-run",
+    "model_called": false,
+    "account_login": false,
+    "real_automation": false,
+    "user_files_uploaded": false,
+    "user_mac_operated": false
+  },
+  "admission_recommendation": "candidate_documentation_only"
+}
+```
+</details>
+
+## Claude Cowork：虚构展览物资台账整理
+
+2026当前帮助页：云端会话、桌面桥接；新统一对话体验逐步上线。不是Claude模型。；documentation-only / never-run。文档状态：documented_current_surface_rollout。未知：用户实际界面是否统一；具体客户端build与地区；Linux本地浏览器/文件能力的完整矩阵
+
+**证据边界：** documentation-only / never-run；原创合成练习，不是实测、全球全集或收益证据。
+
+### 合成输入
+
+仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+原创任务：虚构展览物资台账整理
+
+### 提示词
+
+仅纸面设计，不启动产品、不登录、不调用模型、不连接账号，不上传用户文件。
+离线造三条物资记录：纸张10包×20元，笔5盒×30元，夹子8包×5元。
+拟定仅新建草稿，不覆盖/删除原文件的计划。
+设计表格、总额摘要、缺失字段清单三个交付件。
+审批点列明目录权限、连接工具、每项写入范围；不实际授权。
+人工计算合计390元，检查输出验收清单。
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 输出模板
+
+预期输出（非实测）：三行明细、金额公式、总额390元。；没有虚构真实采购、发票或供应商。；覆盖/删除/发送均禁止，权限范围可检查。
+
+### 风险与授权
+
+权限与确认：审批取决于Manual/Auto及连接工具策略，不承诺每次都问。；手动模式仍要核对已Always allow工具；不得把模式当唯一防线。；本练习禁computer use和连接器，限定合成输入及单独输出目录。
+限制：云隔离不代表本地文件不上传处理。；本地文件/浏览器需在线桥接；Linux可用描述与部分本地能力要求不同，不能推断同等功能。；删除防护不意味着所有写操作无风险。
+未知：用户实际界面是否统一；具体客户端build与地区；Linux本地浏览器/文件能力的完整矩阵
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+2026当前帮助页：云端会话、桌面桥接；新统一对话体验逐步上线。不是Claude模型。
+
+### 生命周期确认时间
+
+文档观察不等于已验证产品生命周期
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+付费Pro/Max/Team/Enterprise；web/mobile受组织开关与beta条件；本地能力需桌面在线。
+文档状态：documented_current_surface_rollout
+日期分型：{"research_preview": "2026-01-12", "desktop_ga": "2026-04-09", "cloud_surface_expansion": "2026-07-07", "unified_rollout": "2026-09-16"}
+文档观察（非事件日期）：Get started with Claude Cowork；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": "动态帮助页，精确日未核实", "note": "原观察原样保留；不是事件日期"}]；付费计划可用，表面和管理员条件有差异。当前云端执行，经桌面桥接本地资源；Manual/Auto/Skip等审批语义不同。
+文档观察（非事件日期）：Use Claude Cowork safely；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": "this week", "note": "原观察原样保留；不是事件日期"}]；云隔离不是权限隔离；连接文件会在服务器处理。电脑点击有不同于普通工具的权限风险，需防提示注入。
+文档观察（非事件日期）：Claude release notes；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": "over a week ago", "note": "原观察原样保留；不是事件日期"}]；Cowork 2026-01-12研究预览，04-09桌面GA，07-07云会话/web与mobile扩展，09-16开始统一对话体验。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 离线设计 1
+
+离线造三条物资记录：纸张10包×20元，笔5盒×30元，夹子8包×5元。
+
+**验收：** 仅审查设计，不执行产品；三行明细、金额公式、总额390元。
+
+### 2. 离线设计 2
+
+拟定仅新建草稿，不覆盖/删除原文件的计划。
+
+**验收：** 仅审查设计，不执行产品；没有虚构真实采购、发票或供应商。
+
+### 3. 离线设计 3
+
+设计表格、总额摘要、缺失字段清单三个交付件。
+
+**验收：** 仅审查设计，不执行产品；覆盖/删除/发送均禁止，权限范围可检查。
+
+### 4. 离线设计 4
+
+审批点列明目录权限、连接工具、每项写入范围；不实际授权。
+
+**验收：** 仅审查设计，不执行产品；三行明细、金额公式、总额390元。
+
+### 5. 离线设计 5
+
+人工计算合计390元，检查输出验收清单。
+
+**验收：** 仅审查设计，不执行产品；没有虚构真实采购、发票或供应商。
+
+- 对应技术（编辑学习关系）：[Claude Cowork](https://2codework.github.io/modelatlas/?node=assistant-claude-cowork)
+- agent_boundary：executable_agent_product_surface；不是基础模型；研究功能、工作区容器和执行产品表面不可混同。
+- cost：付费Pro/Max/Team/Enterprise；web/mobile受组织开关与beta条件；本地能力需桌面在线。；价格unknown，未核验，不购买或升级。
+- 验收：三行明细、金额公式、总额390元。
+- 验收：没有虚构真实采购、发票或供应商。
+- 验收：覆盖/删除/发送均禁止，权限范围可检查。
+- 来源：Get started with Claude Cowork — https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork（核查：2026-10-28）
+付费计划可用，表面和管理员条件有差异。当前云端执行，经桌面桥接本地资源；Manual/Auto/Skip等审批语义不同。；来源QA：accept；仅文档边界，未操作产品。
+- 来源：Use Claude Cowork safely — https://support.claude.com/en/articles/13364135-use-claude-cowork-safely（核查：2026-10-28）
+云隔离不是权限隔离；连接文件会在服务器处理。电脑点击有不同于普通工具的权限风险，需防提示注入。；来源QA：accept；仅文档边界，未操作产品。
+- 来源：Claude release notes — https://support.claude.com/en/articles/12138966-release-notes（核查：2026-10-28）
+Cowork 2026-01-12研究预览，04-09桌面GA，07-07云会话/web与mobile扩展，09-16开始统一对话体验。；来源QA：accept；仅文档边界，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "assistant-claude-cowork",
+  "name": "Claude Cowork",
+  "entity_type": "executable_agent_product_surface",
+  "version_scope_zh": "2026当前帮助页：云端会话、桌面桥接；新统一对话体验逐步上线。不是Claude模型。",
+  "lifecycle_status": "documented_current_surface_rollout",
+  "dates": {
+    "research_preview": "2026-01-12",
+    "desktop_ga": "2026-04-09",
+    "cloud_surface_expansion": "2026-07-07",
+    "unified_rollout": "2026-09-16"
+  },
+  "availability_zh": "付费Pro/Max/Team/Enterprise；web/mobile受组织开关与beta条件；本地能力需桌面在线。",
+  "pricing": {
+    "amount": null,
+    "currency": null,
+    "status": "unknown_not_verified",
+    "note_zh": "不推算套餐价格；所需计划不等于已获账户资格，购买或升级不在授权范围。"
+  },
+  "permissions_and_human_confirmation_zh": [
+    "审批取决于Manual/Auto及连接工具策略，不承诺每次都问。",
+    "手动模式仍要核对已Always allow工具；不得把模式当唯一防线。",
+    "本练习禁computer use和连接器，限定合成输入及单独输出目录。"
+  ],
+  "limitations_zh": [
+    "云隔离不代表本地文件不上传处理。",
+    "本地文件/浏览器需在线桥接；Linux可用描述与部分本地能力要求不同，不能推断同等功能。",
+    "删除防护不意味着所有写操作无风险。"
+  ],
+  "learning_task": {
+    "original_synthetic": true,
+    "title_zh": "虚构展览物资台账整理",
+    "input_policy": "仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行",
+    "steps_zh": [
+      "离线造三条物资记录：纸张10包×20元，笔5盒×30元，夹子8包×5元。",
+      "拟定仅新建草稿，不覆盖/删除原文件的计划。",
+      "设计表格、总额摘要、缺失字段清单三个交付件。",
+      "审批点列明目录权限、连接工具、每项写入范围；不实际授权。",
+      "人工计算合计390元，检查输出验收清单。"
+    ],
+    "acceptance_zh": [
+      "三行明细、金额公式、总额390元。",
+      "没有虚构真实采购、发票或供应商。",
+      "覆盖/删除/发送均禁止，权限范围可检查。"
+    ],
+    "stop_condition_zh": "遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。"
+  },
+  "source_ids": [
+    "cl-cowork",
+    "cl-safety",
+    "cl-releases"
+  ],
+  "unknowns_zh": [
+    "用户实际界面是否统一",
+    "具体客户端build与地区",
+    "Linux本地浏览器/文件能力的完整矩阵"
+  ],
+  "execution": {
+    "status": "never-run",
+    "model_called": false,
+    "account_login": false,
+    "real_automation": false,
+    "user_files_uploaded": false,
+    "user_mac_operated": false
+  },
+  "admission_recommendation": "candidate_documentation_only"
+}
+```
+</details>
+
+## Research in Claude：虚构社团的公开资料证据对照
+
+Research检索编排功能；web/desktop与mobile来源不同，不是独立模型或Cowork别名。；documentation-only / never-run。文档状态：documented_current。未知：动态底层模型配置是否已到本账户；实际额度和价格；连接工具自动调用的具体权限配置
+
+**证据边界：** documentation-only / never-run；原创合成练习，不是实测、全球全集或收益证据。
+
+### 合成输入
+
+仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+原创任务：虚构社团的公开资料证据对照
+
+### 提示词
+
+仅纸面设计，不启动产品、不登录、不调用模型、不连接账号，不上传用户文件。
+写一个合成问题：比较两种公开科学展览说明结构。
+为web研究拟定只查官方教育机构来源的约束。
+列出待核验主张、来源、反例三栏。
+说明若换到mobile，任何连接器资料都不应默认存在。
+核对引文而非仅看报告语气，输出草稿不发送。
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 输出模板
+
+预期输出（非实测）：至少一条相反证据或信息缺口。；每项证据区分web来源与未接入内部资料。；不宣称已读取账号或本地MCP。
+
+### 风险与授权
+
+权限与确认：已启用连接器可被研究自动调用，不会逐次询问；因此练习先设计零连接器范围。；发布/分享属于另一步骤，必须人审。
+限制：mobile研究仅web且可能不提醒连接器被跳过。；不支持Claude Desktop本地MCP工具用于Research。；功能可能更快消耗对话额度；底层模型会变化。
+未知：动态底层模型配置是否已到本账户；实际额度和价格；连接工具自动调用的具体权限配置
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+Research检索编排功能；web/desktop与mobile来源不同，不是独立模型或Cowork别名。
+
+### 生命周期确认时间
+
+文档观察不等于已验证产品生命周期
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+Pro/Max/Team/Enterprise，需开启web search；组织模型授权也可能影响。
+文档状态：documented_current
+日期分型：{"announcement": "2025-04-15", "document_update": "QA观察：over 2 weeks ago；原观察over a week ago保留在before-qa及来源观察历史；精确日未知"}
+文档观察（非事件日期）：Use research on Claude；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": "over a week ago", "note": "原观察原样保留；不是事件日期"}, {"stage": "independent_qa", "observed_at": "2026-10-28", "document_updated": "over 2 weeks ago", "note": "QA观察的文档元数据；不作为发布/迁移/停用日期"}]；Research需付费及web search；移动端仅web，web/desktop可用已连接工具。研究调用连接工具不逐次确认，不支持桌面本地MCP。
+文档观察（非事件日期）：Claude takes research to new places；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": null, "note": "原观察原样保留；不是事件日期"}]；2025-04-15宣布Research及Google Workspace集成；Research是多轮检索研究能力。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 离线设计 1
+
+写一个合成问题：比较两种公开科学展览说明结构。
+
+**验收：** 仅审查设计，不执行产品；至少一条相反证据或信息缺口。
+
+### 2. 离线设计 2
+
+为web研究拟定只查官方教育机构来源的约束。
+
+**验收：** 仅审查设计，不执行产品；每项证据区分web来源与未接入内部资料。
+
+### 3. 离线设计 3
+
+列出待核验主张、来源、反例三栏。
+
+**验收：** 仅审查设计，不执行产品；不宣称已读取账号或本地MCP。
+
+### 4. 离线设计 4
+
+说明若换到mobile，任何连接器资料都不应默认存在。
+
+**验收：** 仅审查设计，不执行产品；至少一条相反证据或信息缺口。
+
+### 5. 离线设计 5
+
+核对引文而非仅看报告语气，输出草稿不发送。
+
+**验收：** 仅审查设计，不执行产品；每项证据区分web来源与未接入内部资料。
+
+- 对应技术（编辑学习关系）：[Research in Claude](https://2codework.github.io/modelatlas/?node=assistant-claude-research)
+- agent_boundary：research_feature；不是基础模型；研究功能、工作区容器和执行产品表面不可混同。
+- cost：Pro/Max/Team/Enterprise，需开启web search；组织模型授权也可能影响。；价格unknown，未核验，不购买或升级。
+- 验收：至少一条相反证据或信息缺口。
+- 验收：每项证据区分web来源与未接入内部资料。
+- 验收：不宣称已读取账号或本地MCP。
+- 来源：Use research on Claude — https://support.claude.com/en/articles/11088861-use-research-on-claude（核查：2026-10-28）
+Research需付费及web search；移动端仅web，web/desktop可用已连接工具。研究调用连接工具不逐次确认，不支持桌面本地MCP。；来源QA：fix；仅文档边界，未操作产品。
+- 来源：Claude takes research to new places — https://www.anthropic.com/news/research（核查：2026-10-28）
+2025-04-15宣布Research及Google Workspace集成；Research是多轮检索研究能力。；来源QA：accept；仅文档边界，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "assistant-claude-research",
+  "name": "Research in Claude",
+  "entity_type": "research_feature",
+  "version_scope_zh": "Research检索编排功能；web/desktop与mobile来源不同，不是独立模型或Cowork别名。",
+  "lifecycle_status": "documented_current",
+  "dates": {
+    "announcement": "2025-04-15",
+    "document_update": "QA观察：over 2 weeks ago；原观察over a week ago保留在before-qa及来源观察历史；精确日未知"
+  },
+  "availability_zh": "Pro/Max/Team/Enterprise，需开启web search；组织模型授权也可能影响。",
+  "pricing": {
+    "amount": null,
+    "currency": null,
+    "status": "unknown_not_verified",
+    "note_zh": "不推算套餐价格；所需计划不等于已获账户资格，购买或升级不在授权范围。"
+  },
+  "permissions_and_human_confirmation_zh": [
+    "已启用连接器可被研究自动调用，不会逐次询问；因此练习先设计零连接器范围。",
+    "发布/分享属于另一步骤，必须人审。"
+  ],
+  "limitations_zh": [
+    "mobile研究仅web且可能不提醒连接器被跳过。",
+    "不支持Claude Desktop本地MCP工具用于Research。",
+    "功能可能更快消耗对话额度；底层模型会变化。"
+  ],
+  "learning_task": {
+    "original_synthetic": true,
+    "title_zh": "虚构社团的公开资料证据对照",
+    "input_policy": "仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行",
+    "steps_zh": [
+      "写一个合成问题：比较两种公开科学展览说明结构。",
+      "为web研究拟定只查官方教育机构来源的约束。",
+      "列出待核验主张、来源、反例三栏。",
+      "说明若换到mobile，任何连接器资料都不应默认存在。",
+      "核对引文而非仅看报告语气，输出草稿不发送。"
+    ],
+    "acceptance_zh": [
+      "至少一条相反证据或信息缺口。",
+      "每项证据区分web来源与未接入内部资料。",
+      "不宣称已读取账号或本地MCP。"
+    ],
+    "stop_condition_zh": "遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。"
+  },
+  "source_ids": [
+    "cl-research",
+    "cl-research-launch"
+  ],
+  "unknowns_zh": [
+    "动态底层模型配置是否已到本账户",
+    "实际额度和价格",
+    "连接工具自动调用的具体权限配置"
+  ],
+  "execution": {
+    "status": "never-run",
+    "model_called": false,
+    "account_login": false,
+    "real_automation": false,
+    "user_files_uploaded": false,
+    "user_mac_operated": false
+  },
+  "admission_recommendation": "candidate_documentation_only"
+}
+```
+</details>
+
+## Deep Research in Gemini Apps：虚构博物馆研究计划审稿
+
+Gemini Apps用户界面；不等同Gemini API Deep Research agent或Workspace Studio。；documentation-only / never-run。文档状态：documented_current。未知：首发日期未在本批证实；文档精确更新时间；当前地区/组织资格和额度
+
+**证据边界：** documentation-only / never-run；原创合成练习，不是实测、全球全集或收益证据。
+
+### 合成输入
+
+仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+原创任务：虚构博物馆研究计划审稿
+
+### 提示词
+
+仅纸面设计，不启动产品、不登录、不调用模型、不连接账号，不上传用户文件。
+设计问题：解释雨水收集展品的三种展示方式，不涉及建筑施工建议。
+拟定默认Search来源、禁止Gmail和Drive的来源清单。
+把计划改成原理、公开实例、未知风险三节。
+为报告设引用/日期/事实与建议分栏。
+输出前人工审查；Export to Docs或分享均不执行。
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 输出模板
+
+预期输出（非实测）：清楚区分研究计划和已完成报告。；无假定账号数据、无施工安全承诺。；来源与未核实项独立列出。
+
+### 风险与授权
+
+权限与确认：可编辑计划，再点Start research；源选择不是所有写动作授权。；Gmail/Drive须Workspace应用连接；本练习只设计公开Search来源，不连接。
+限制：每日/并发限额；不保证固定完成时间。；Ultra视觉报告包含Workspace来源时有功能限制。；历史报告获取受Keep Activity设置影响。
+未知：首发日期未在本批证实；文档精确更新时间；当前地区/组织资格和额度
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+Gemini Apps用户界面；不等同Gemini API Deep Research agent或Workspace Studio。
+
+### 生命周期确认时间
+
+文档观察不等于已验证产品生命周期
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+帮助页要求18岁以上且登录；Thinking报告面向所有用户，Pro/Ultra有较高额度及Pro选项。
+文档状态：documented_current
+日期分型：{"announcement": null, "document_update": null}
+文档观察（非事件日期）：Use Deep Research in Gemini Apps；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": null, "note": "原观察原样保留；不是事件日期"}]；18岁以上登录用户；可改计划后启动研究；默认Search，可选择其他来源。Pro/Ultra有较高额度；Workspace来源须连接。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 离线设计 1
+
+设计问题：解释雨水收集展品的三种展示方式，不涉及建筑施工建议。
+
+**验收：** 仅审查设计，不执行产品；清楚区分研究计划和已完成报告。
+
+### 2. 离线设计 2
+
+拟定默认Search来源、禁止Gmail和Drive的来源清单。
+
+**验收：** 仅审查设计，不执行产品；无假定账号数据、无施工安全承诺。
+
+### 3. 离线设计 3
+
+把计划改成原理、公开实例、未知风险三节。
+
+**验收：** 仅审查设计，不执行产品；来源与未核实项独立列出。
+
+### 4. 离线设计 4
+
+为报告设引用/日期/事实与建议分栏。
+
+**验收：** 仅审查设计，不执行产品；清楚区分研究计划和已完成报告。
+
+### 5. 离线设计 5
+
+输出前人工审查；Export to Docs或分享均不执行。
+
+**验收：** 仅审查设计，不执行产品；无假定账号数据、无施工安全承诺。
+
+- 对应技术（编辑学习关系）：[Deep Research in Gemini Apps](https://2codework.github.io/modelatlas/?node=assistant-gemini-apps-deep-research)
+- agent_boundary：research_feature；不是基础模型；研究功能、工作区容器和执行产品表面不可混同。
+- cost：帮助页要求18岁以上且登录；Thinking报告面向所有用户，Pro/Ultra有较高额度及Pro选项。；价格unknown，未核验，不购买或升级。
+- 验收：清楚区分研究计划和已完成报告。
+- 验收：无假定账号数据、无施工安全承诺。
+- 验收：来源与未核实项独立列出。
+- 来源：Use Deep Research in Gemini Apps — https://support.google.com/gemini/answer/15719111?hl=en（核查：2026-10-28）
+18岁以上登录用户；可改计划后启动研究；默认Search，可选择其他来源。Pro/Ultra有较高额度；Workspace来源须连接。；来源QA：accept；仅文档边界，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "assistant-gemini-apps-deep-research",
+  "name": "Deep Research in Gemini Apps",
+  "entity_type": "research_feature",
+  "version_scope_zh": "Gemini Apps用户界面；不等同Gemini API Deep Research agent或Workspace Studio。",
+  "lifecycle_status": "documented_current",
+  "dates": {
+    "announcement": null,
+    "document_update": null
+  },
+  "availability_zh": "帮助页要求18岁以上且登录；Thinking报告面向所有用户，Pro/Ultra有较高额度及Pro选项。",
+  "pricing": {
+    "amount": null,
+    "currency": null,
+    "status": "unknown_not_verified",
+    "note_zh": "不推算套餐价格；所需计划不等于已获账户资格，购买或升级不在授权范围。"
+  },
+  "permissions_and_human_confirmation_zh": [
+    "可编辑计划，再点Start research；源选择不是所有写动作授权。",
+    "Gmail/Drive须Workspace应用连接；本练习只设计公开Search来源，不连接。"
+  ],
+  "limitations_zh": [
+    "每日/并发限额；不保证固定完成时间。",
+    "Ultra视觉报告包含Workspace来源时有功能限制。",
+    "历史报告获取受Keep Activity设置影响。"
+  ],
+  "learning_task": {
+    "original_synthetic": true,
+    "title_zh": "虚构博物馆研究计划审稿",
+    "input_policy": "仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行",
+    "steps_zh": [
+      "设计问题：解释雨水收集展品的三种展示方式，不涉及建筑施工建议。",
+      "拟定默认Search来源、禁止Gmail和Drive的来源清单。",
+      "把计划改成原理、公开实例、未知风险三节。",
+      "为报告设引用/日期/事实与建议分栏。",
+      "输出前人工审查；Export to Docs或分享均不执行。"
+    ],
+    "acceptance_zh": [
+      "清楚区分研究计划和已完成报告。",
+      "无假定账号数据、无施工安全承诺。",
+      "来源与未核实项独立列出。"
+    ],
+    "stop_condition_zh": "遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。"
+  },
+  "source_ids": [
+    "g-dr"
+  ],
+  "unknowns_zh": [
+    "首发日期未在本批证实",
+    "文档精确更新时间",
+    "当前地区/组织资格和额度"
+  ],
+  "execution": {
+    "status": "never-run",
+    "model_called": false,
+    "account_login": false,
+    "real_automation": false,
+    "user_files_uploaded": false,
+    "user_mac_operated": false
+  },
+  "admission_recommendation": "candidate_documentation_only"
+}
+```
+</details>
+
+## Perplexity Projects（原 Spaces）：虚构公益阅读项目的资料边界设计
+
+Computer中的持久文件/上下文/协作工作区；Spaces为历史名称，迁移关系仅限官方明确的threads/files/history。新增能力不等于全部历史功能或权限自动继承。；documentation-only / never-run。文档状态：renamed_migrated。未知：首次Projects发布日；当前套餐精确资格与价格；自动迁移在用户账号上的实际结果
+
+**证据边界：** documentation-only / never-run；原创合成练习，不是实测、全球全集或收益证据。
+
+### 合成输入
+
+仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+原创任务：虚构公益阅读项目的资料边界设计
+
+### 提示词
+
+仅纸面设计，不启动产品、不登录、不调用模型、不连接账号，不上传用户文件。
+离线拟定项目：虚构阅读周，目标是形成议程草稿。
+写两份合成材料：A场次30人，B场次20人；标注素材版本。
+设计文件目录、项目指令、引用格式和私有默认。
+制作权限矩阵：作者、审阅者、连接器主体；不实际邀请。
+设计缺失访问权限时停止并报告的测试。
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 输出模板
+
+预期输出（非实测）：同一事实可回溯素材版本。；50人合计准确但不推断真实报名。；不存在共享就获得他人邮箱的权限假设。
+
+### 风险与授权
+
+权限与确认：共享项目与成员各自连接权限有区别；不应自动继承他人连接器或私人记忆。；本练习只设计私有项目，不邀请成员、不接Slack/Teams、不启用自动化。
+限制：工作区本身不是可执行模型；Computer执行和项目容器要区分。；持久记忆可能带入旧上下文；需明确来源。；自动迁移不扩展到所有连接器、私人记忆、权限或组织文件库；组织文件库其他生命周期事件不能并入Spaces迁移。
+未知：首次Projects发布日；当前套餐精确资格与价格；自动迁移在用户账号上的实际结果
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+Computer中的持久文件/上下文/协作工作区；Spaces为历史名称，迁移关系仅限官方明确的threads/files/history。新增能力不等于全部历史功能或权限自动继承。
+
+### 生命周期确认时间
+
+文档观察不等于已验证产品生命周期
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+官方产品页列web/mobile/desktop/Slack/Teams；具体计划、组织策略、连接源需核验。
+文档状态：renamed_migrated
+日期分型：{"documented_migration_update": null, "raw_date": "08/04/26", "normalized_date": null, "date_status": "unknown", "date_caveat": "本页未独立证实月日顺序；不可猜测ISO日期", "original_spaces_launch": null, "projects_first_launch": null}
+文档观察（非事件日期）：Projects；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": null, "note": "原观察原样保留；不是事件日期"}]；官方明确Spaces现为Projects，threads/files/history自动迁移；Projects为Computer工作区。成员私人连接与记忆不合并，fork不继承作者权限；其他能力不作全量继承推断。
+文档观察（非事件日期）：Shared workspaces…；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": null, "note": "原观察原样保留；不是事件日期"}]；变更记录描述Projects与Spaces迁移；页面原日期08/04/26月日序未核实，不能据此断言ISO事件日，也不是Spaces首发日。
+文档观察（非事件日期）：Which Perplexity Subscription Plan is right for you?；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": "2026-09-02", "note": "原观察原样保留；不是事件日期"}, {"stage": "independent_qa", "observed_at": "2026-10-28", "document_updated": "2026-10-08", "note": "QA观察的文档元数据；不作为发布/迁移/停用日期"}]；Research与文件/app生成额度按套餐；Free有有限Research但无文件/app生成；Pro有每30天生成额度。API单独计费。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 离线设计 1
+
+离线拟定项目：虚构阅读周，目标是形成议程草稿。
+
+**验收：** 仅审查设计，不执行产品；同一事实可回溯素材版本。
+
+### 2. 离线设计 2
+
+写两份合成材料：A场次30人，B场次20人；标注素材版本。
+
+**验收：** 仅审查设计，不执行产品；50人合计准确但不推断真实报名。
+
+### 3. 离线设计 3
+
+设计文件目录、项目指令、引用格式和私有默认。
+
+**验收：** 仅审查设计，不执行产品；不存在共享就获得他人邮箱的权限假设。
+
+### 4. 离线设计 4
+
+制作权限矩阵：作者、审阅者、连接器主体；不实际邀请。
+
+**验收：** 仅审查设计，不执行产品；同一事实可回溯素材版本。
+
+### 5. 离线设计 5
+
+设计缺失访问权限时停止并报告的测试。
+
+**验收：** 仅审查设计，不执行产品；50人合计准确但不推断真实报名。
+
+- 对应技术（编辑学习关系）：[Perplexity Projects（原 Spaces）](https://2codework.github.io/modelatlas/?node=assistant-perplexity-projects)
+- agent_boundary：research_workspace；不是基础模型；研究功能、工作区容器和执行产品表面不可混同。
+- cost：官方产品页列web/mobile/desktop/Slack/Teams；具体计划、组织策略、连接源需核验。；价格unknown，未核验，不购买或升级。
+- 验收：同一事实可回溯素材版本。
+- 验收：50人合计准确但不推断真实报名。
+- 验收：不存在共享就获得他人邮箱的权限假设。
+- 来源：Projects — https://www.perplexity.ai/en-GB/hub/products/projects（核查：2026-10-28）
+官方明确Spaces现为Projects，threads/files/history自动迁移；Projects为Computer工作区。成员私人连接与记忆不合并，fork不继承作者权限；其他能力不作全量继承推断。；来源QA：accept；仅文档边界，未操作产品。
+- 来源：Shared workspaces… — https://www.perplexity.ai/changelog/shared-workspaces-personal-computer-for-windows-and-model-council（核查：2026-10-28）
+变更记录描述Projects与Spaces迁移；页面原日期08/04/26月日序未核实，不能据此断言ISO事件日，也不是Spaces首发日。；来源QA：fix；仅文档边界，未操作产品。
+- 来源：Which Perplexity Subscription Plan is right for you? — https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you（核查：2026-10-28）
+Research与文件/app生成额度按套餐；Free有有限Research但无文件/app生成；Pro有每30天生成额度。API单独计费。；来源QA：fix；仅文档边界，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "assistant-perplexity-projects",
+  "name": "Perplexity Projects（原 Spaces）",
+  "entity_type": "research_workspace",
+  "version_scope_zh": "Computer中的持久文件/上下文/协作工作区；Spaces为历史名称，迁移关系仅限官方明确的threads/files/history。新增能力不等于全部历史功能或权限自动继承。",
+  "lifecycle_status": "renamed_migrated",
+  "dates": {
+    "documented_migration_update": null,
+    "raw_date": "08/04/26",
+    "normalized_date": null,
+    "date_status": "unknown",
+    "date_caveat": "本页未独立证实月日顺序；不可猜测ISO日期",
+    "original_spaces_launch": null,
+    "projects_first_launch": null
+  },
+  "availability_zh": "官方产品页列web/mobile/desktop/Slack/Teams；具体计划、组织策略、连接源需核验。",
+  "pricing": {
+    "amount": null,
+    "currency": null,
+    "status": "unknown_not_verified",
+    "note_zh": "不推算套餐价格；所需计划不等于已获账户资格，购买或升级不在授权范围。"
+  },
+  "permissions_and_human_confirmation_zh": [
+    "共享项目与成员各自连接权限有区别；不应自动继承他人连接器或私人记忆。",
+    "本练习只设计私有项目，不邀请成员、不接Slack/Teams、不启用自动化。"
+  ],
+  "limitations_zh": [
+    "工作区本身不是可执行模型；Computer执行和项目容器要区分。",
+    "持久记忆可能带入旧上下文；需明确来源。",
+    "自动迁移不扩展到所有连接器、私人记忆、权限或组织文件库；组织文件库其他生命周期事件不能并入Spaces迁移。"
+  ],
+  "learning_task": {
+    "original_synthetic": true,
+    "title_zh": "虚构公益阅读项目的资料边界设计",
+    "input_policy": "仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行",
+    "steps_zh": [
+      "离线拟定项目：虚构阅读周，目标是形成议程草稿。",
+      "写两份合成材料：A场次30人，B场次20人；标注素材版本。",
+      "设计文件目录、项目指令、引用格式和私有默认。",
+      "制作权限矩阵：作者、审阅者、连接器主体；不实际邀请。",
+      "设计缺失访问权限时停止并报告的测试。"
+    ],
+    "acceptance_zh": [
+      "同一事实可回溯素材版本。",
+      "50人合计准确但不推断真实报名。",
+      "不存在共享就获得他人邮箱的权限假设。"
+    ],
+    "stop_condition_zh": "遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。"
+  },
+  "source_ids": [
+    "p-projects",
+    "p-projects-change",
+    "p-plans"
+  ],
+  "unknowns_zh": [
+    "首次Projects发布日",
+    "当前套餐精确资格与价格",
+    "自动迁移在用户账号上的实际结果"
+  ],
+  "execution": {
+    "status": "never-run",
+    "model_called": false,
+    "account_login": false,
+    "real_automation": false,
+    "user_files_uploaded": false,
+    "user_mac_operated": false
+  },
+  "admission_recommendation": "candidate_documentation_only"
+}
+```
+</details>
+
+## Perplexity Research / Deep Research：虚构采购前的证据可信度表
+
+Research研究模式；Deep Research在升级记录继续使用，保留命名时态，不重复计数。；documentation-only / never-run。文档状态：documented_current_naming_variation。未知：首发正文抓取失败，未据索引猜日期；准确模型路由和账户额度；审批机制完整矩阵
+
+**证据边界：** documentation-only / never-run；原创合成练习，不是实测、全球全集或收益证据。
+
+### 合成输入
+
+仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+原创任务：虚构采购前的证据可信度表
+
+### 提示词
+
+仅纸面设计，不启动产品、不登录、不调用模型、不连接账号，不上传用户文件。
+设计无采购动作问题：比较可重复使用包装的三类材料特性。
+限定官方技术资料，不使用电商账户。
+制作主张/测量条件/来源/未知项表。
+要求把没有同条件数据的比较标为不可直接比较。
+人工逐条核验引用，再决定是否另行研究，不下单。
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 输出模板
+
+预期输出（非实测）：至少两项测量条件缺口被保留。；无无依据的最佳产品排名。；报告与实际采购决策分开。
+
+### 风险与授权
+
+权限与确认：研究报告不是发布授权；来源访问仍需相应权限。；本批未核实该模式对每类工具的审批机制，教程不声称所有动作都会确认。
+限制：自动选择模型；不能等同某一个模型ID。；升级性能说法是厂商宣称，本批未跑benchmark。；命名和额度随页面版本变化。
+未知：首发正文抓取失败，未据索引猜日期；准确模型路由和账户额度；审批机制完整矩阵
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+Research研究模式；Deep Research在升级记录继续使用，保留命名时态，不重复计数。
+
+### 生命周期确认时间
+
+文档观察不等于已验证产品生命周期
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+官方套餐表包含Free有限Research及付费更高额度；不把旧无限次数当当前事实。
+文档状态：documented_current_naming_variation
+日期分型：{"first_launch": null, "upgrade_visible_date": null, "raw_date": "02/05/26", "normalized_date": null, "date_status": "unknown", "url_date_hint": "February-6th-2026", "date_caveat": "URL提供二月上下文，但与页面可见日期冲突，精确升级事件日期未知。"}
+文档观察（非事件日期）：Upgraded Deep Research, Model Council；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": null, "note": "原观察原样保留；不是事件日期"}]；页面显示02/05/26而URL含February-6th-2026；精确事件日未知。支持Labs旧名关系，不证明准确改名时刻、旧资产迁移或权限等价。
+文档观察（非事件日期）：What is Perplexity Pro?；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": "2026-07-21", "note": "原观察原样保留；不是事件日期"}, {"stage": "independent_qa", "observed_at": "2026-10-28", "document_updated": "2026-10-26", "note": "QA观察的文档元数据；不作为发布/迁移/停用日期"}]；Research自动选模型做深入报告；Create files and apps可生成报告、表格、仪表板、简单web应用。
+文档观察（非事件日期）：Which Perplexity Subscription Plan is right for you?；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": "2026-09-02", "note": "原观察原样保留；不是事件日期"}, {"stage": "independent_qa", "observed_at": "2026-10-28", "document_updated": "2026-10-08", "note": "QA观察的文档元数据；不作为发布/迁移/停用日期"}]；Research与文件/app生成额度按套餐；Free有有限Research但无文件/app生成；Pro有每30天生成额度。API单独计费。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 离线设计 1
+
+设计无采购动作问题：比较可重复使用包装的三类材料特性。
+
+**验收：** 仅审查设计，不执行产品；至少两项测量条件缺口被保留。
+
+### 2. 离线设计 2
+
+限定官方技术资料，不使用电商账户。
+
+**验收：** 仅审查设计，不执行产品；无无依据的最佳产品排名。
+
+### 3. 离线设计 3
+
+制作主张/测量条件/来源/未知项表。
+
+**验收：** 仅审查设计，不执行产品；报告与实际采购决策分开。
+
+### 4. 离线设计 4
+
+要求把没有同条件数据的比较标为不可直接比较。
+
+**验收：** 仅审查设计，不执行产品；至少两项测量条件缺口被保留。
+
+### 5. 离线设计 5
+
+人工逐条核验引用，再决定是否另行研究，不下单。
+
+**验收：** 仅审查设计，不执行产品；无无依据的最佳产品排名。
+
+- 对应技术（编辑学习关系）：[Perplexity Research / Deep Research](https://2codework.github.io/modelatlas/?node=assistant-perplexity-research)
+- agent_boundary：research_feature；不是基础模型；研究功能、工作区容器和执行产品表面不可混同。
+- cost：官方套餐表包含Free有限Research及付费更高额度；不把旧无限次数当当前事实。；价格unknown，未核验，不购买或升级。
+- 验收：至少两项测量条件缺口被保留。
+- 验收：无无依据的最佳产品排名。
+- 验收：报告与实际采购决策分开。
+- 来源：Upgraded Deep Research, Model Council — https://www.perplexity.ai/changelog/what-we-shipped---february-6th-2026（核查：2026-10-28）
+页面显示02/05/26而URL含February-6th-2026；精确事件日未知。支持Labs旧名关系，不证明准确改名时刻、旧资产迁移或权限等价。；来源QA：fix；仅文档边界，未操作产品。
+- 来源：What is Perplexity Pro? — https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro（核查：2026-10-28）
+Research自动选模型做深入报告；Create files and apps可生成报告、表格、仪表板、简单web应用。；来源QA：fix；仅文档边界，未操作产品。
+- 来源：Which Perplexity Subscription Plan is right for you? — https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you（核查：2026-10-28）
+Research与文件/app生成额度按套餐；Free有有限Research但无文件/app生成；Pro有每30天生成额度。API单独计费。；来源QA：fix；仅文档边界，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "assistant-perplexity-research",
+  "name": "Perplexity Research / Deep Research",
+  "entity_type": "research_feature",
+  "version_scope_zh": "Research研究模式；Deep Research在升级记录继续使用，保留命名时态，不重复计数。",
+  "lifecycle_status": "documented_current_naming_variation",
+  "dates": {
+    "first_launch": null,
+    "upgrade_visible_date": null,
+    "raw_date": "02/05/26",
+    "normalized_date": null,
+    "date_status": "unknown",
+    "url_date_hint": "February-6th-2026",
+    "date_caveat": "URL提供二月上下文，但与页面可见日期冲突，精确升级事件日期未知。"
+  },
+  "availability_zh": "官方套餐表包含Free有限Research及付费更高额度；不把旧无限次数当当前事实。",
+  "pricing": {
+    "amount": null,
+    "currency": null,
+    "status": "unknown_not_verified",
+    "note_zh": "不推算套餐价格；所需计划不等于已获账户资格，购买或升级不在授权范围。"
+  },
+  "permissions_and_human_confirmation_zh": [
+    "研究报告不是发布授权；来源访问仍需相应权限。",
+    "本批未核实该模式对每类工具的审批机制，教程不声称所有动作都会确认。"
+  ],
+  "limitations_zh": [
+    "自动选择模型；不能等同某一个模型ID。",
+    "升级性能说法是厂商宣称，本批未跑benchmark。",
+    "命名和额度随页面版本变化。"
+  ],
+  "learning_task": {
+    "original_synthetic": true,
+    "title_zh": "虚构采购前的证据可信度表",
+    "input_policy": "仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行",
+    "steps_zh": [
+      "设计无采购动作问题：比较可重复使用包装的三类材料特性。",
+      "限定官方技术资料，不使用电商账户。",
+      "制作主张/测量条件/来源/未知项表。",
+      "要求把没有同条件数据的比较标为不可直接比较。",
+      "人工逐条核验引用，再决定是否另行研究，不下单。"
+    ],
+    "acceptance_zh": [
+      "至少两项测量条件缺口被保留。",
+      "无无依据的最佳产品排名。",
+      "报告与实际采购决策分开。"
+    ],
+    "stop_condition_zh": "遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。"
+  },
+  "source_ids": [
+    "p-feb-change",
+    "p-pro",
+    "p-plans"
+  ],
+  "unknowns_zh": [
+    "首发正文抓取失败，未据索引猜日期",
+    "准确模型路由和账户额度",
+    "审批机制完整矩阵"
+  ],
+  "execution": {
+    "status": "never-run",
+    "model_called": false,
+    "account_login": false,
+    "real_automation": false,
+    "user_files_uploaded": false,
+    "user_mac_operated": false
+  },
+  "admission_recommendation": "candidate_documentation_only"
+}
+```
+</details>
+
+## Perplexity Create files and apps（原 Labs）：虚构展览预算的表格与静态看板验收
+
+Labs为历史名，当前创建文件与简单应用的功能；不是独立LLM或无限制通用代理。；documentation-only / never-run。文档状态：renamed。未知：Labs首发精确日期未在已读正文确认；生成或发布各环节的人审机制；当前客户端/文件规格及价格；Labs历史代码/资产说明本轮无法独立复验，原始观察仅作历史记录
+
+**证据边界：** documentation-only / never-run；原创合成练习，不是实测、全球全集或收益证据。
+
+### 合成输入
+
+仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+原创任务：虚构展览预算的表格与静态看板验收
+
+### 提示词
+
+仅纸面设计，不启动产品、不登录、不调用模型、不连接账号，不上传用户文件。
+离线造预算：展板200元、材料150元、预留50元；预算上限500元。
+设计CSV字段、总额及剩余额公式。
+要求只生成下载草稿与静态看板设计，不部署。
+用人工算术核对总额400元、剩余100元。
+列出代码审查项：无外网请求、无密钥、无访问账号。
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 输出模板
+
+预期输出（非实测）：CSV可解析、单位一致、总额400/剩余100。；看板与表格同源且无隐藏外部请求。；公开发布从未执行，输出显式标草稿。
+
+### 风险与授权
+
+权限与确认：代码/资产生成与发布、对外分享、连接账号分开审批。；文档未充分说明每次代码/部署的确认，学习设计一律禁外部网络、凭据和公开发布。
+限制：生成代码及公式必须检查；历史营销时间不作SLA。；简单web应用不等于生产安全应用。；套餐页面的高额度措辞不作无限量保证。；p-labs历史正文QA复核超时，证据状态unknown；改名关系由p-feb-change独立支持，不声称旧资产全部迁移、执行环境和权限相同。
+未知：Labs首发精确日期未在已读正文确认；生成或发布各环节的人审机制；当前客户端/文件规格及价格；Labs历史代码/资产说明本轮无法独立复验，原始观察仅作历史记录
+停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+
+### 来源核查日期
+
+2026-10-28
+
+### 生命周期
+
+unknown
+
+### 适用版本
+
+Labs为历史名，当前创建文件与简单应用的功能；不是独立LLM或无限制通用代理。
+
+### 生命周期确认时间
+
+文档观察不等于已验证产品生命周期
+
+### 替代案例
+
+
+
+### 历史与适用边界
+
+Pro及更高档有文件/app生成额度，Free套餐表无该功能；API购买不等于web权益。
+文档状态：renamed
+日期分型：{"first_launch": null, "rename_evidence_date": null, "raw_date": "02/05/26", "normalized_date": null, "date_status": "unknown", "url_date_hint": "February-6th-2026", "document_update": "QA观察Pro帮助页Last modified on October 26, 2026；仅文档元数据", "date_caveat": "不能从文档改名证据推断准确生效时刻。"}
+文档观察（非事件日期）：Upgraded Deep Research, Model Council；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": null, "note": "原观察原样保留；不是事件日期"}]；页面显示02/05/26而URL含February-6th-2026；精确事件日未知。支持Labs旧名关系，不证明准确改名时刻、旧资产迁移或权限等价。
+文档观察（非事件日期）：What is Perplexity Pro?；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": "2026-07-21", "note": "原观察原样保留；不是事件日期"}, {"stage": "independent_qa", "observed_at": "2026-10-28", "document_updated": "2026-10-26", "note": "QA观察的文档元数据；不作为发布/迁移/停用日期"}]；Research自动选模型做深入报告；Create files and apps可生成报告、表格、仪表板、简单web应用。
+文档观察（非事件日期）：Which Perplexity Subscription Plan is right for you?；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": "2026-09-02", "note": "原观察原样保留；不是事件日期"}, {"stage": "independent_qa", "observed_at": "2026-10-28", "document_updated": "2026-10-08", "note": "QA观察的文档元数据；不作为发布/迁移/停用日期"}]；Research与文件/app生成额度按套餐；Free有有限Research但无文件/app生成；Pro有每30天生成额度。API单独计费。
+文档观察（非事件日期）：Introducing Perplexity Labs；[{"stage": "original_research", "observed_at": "2026-10-28", "document_updated": null, "note": "原观察原样保留；不是事件日期"}]；原观察曾描述Labs代码执行/资产与命名，但QA本轮(400) Timeout fetching且无原始全文快照，无法独立复验。只保留历史观察，不作为当前执行环境或资产迁移事实。
+
+### 最佳实践证据状态
+
+original_teaching_template_not_executed
+
+### 1. 离线设计 1
+
+离线造预算：展板200元、材料150元、预留50元；预算上限500元。
+
+**验收：** 仅审查设计，不执行产品；CSV可解析、单位一致、总额400/剩余100。
+
+### 2. 离线设计 2
+
+设计CSV字段、总额及剩余额公式。
+
+**验收：** 仅审查设计，不执行产品；看板与表格同源且无隐藏外部请求。
+
+### 3. 离线设计 3
+
+要求只生成下载草稿与静态看板设计，不部署。
+
+**验收：** 仅审查设计，不执行产品；公开发布从未执行，输出显式标草稿。
+
+### 4. 离线设计 4
+
+用人工算术核对总额400元、剩余100元。
+
+**验收：** 仅审查设计，不执行产品；CSV可解析、单位一致、总额400/剩余100。
+
+### 5. 离线设计 5
+
+列出代码审查项：无外网请求、无密钥、无访问账号。
+
+**验收：** 仅审查设计，不执行产品；看板与表格同源且无隐藏外部请求。
+
+- 对应技术（编辑学习关系）：[Perplexity Create files and apps（原 Labs）](https://2codework.github.io/modelatlas/?node=assistant-perplexity-create-files-apps)
+- agent_boundary：artifact_creation_feature；不是基础模型；研究功能、工作区容器和执行产品表面不可混同。
+- cost：Pro及更高档有文件/app生成额度，Free套餐表无该功能；API购买不等于web权益。；价格unknown，未核验，不购买或升级。
+- 验收：CSV可解析、单位一致、总额400/剩余100。
+- 验收：看板与表格同源且无隐藏外部请求。
+- 验收：公开发布从未执行，输出显式标草稿。
+- 来源：Upgraded Deep Research, Model Council — https://www.perplexity.ai/changelog/what-we-shipped---february-6th-2026（核查：2026-10-28）
+页面显示02/05/26而URL含February-6th-2026；精确事件日未知。支持Labs旧名关系，不证明准确改名时刻、旧资产迁移或权限等价。；来源QA：fix；仅文档边界，未操作产品。
+- 来源：What is Perplexity Pro? — https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro（核查：2026-10-28）
+Research自动选模型做深入报告；Create files and apps可生成报告、表格、仪表板、简单web应用。；来源QA：fix；仅文档边界，未操作产品。
+- 来源：Which Perplexity Subscription Plan is right for you? — https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you（核查：2026-10-28）
+Research与文件/app生成额度按套餐；Free有有限Research但无文件/app生成；Pro有每30天生成额度。API单独计费。；来源QA：fix；仅文档边界，未操作产品。
+- 来源：Introducing Perplexity Labs — https://www.perplexity.ai/en-GB/hub/blog/introducing-perplexity-labs（核查：2026-10-28）
+原观察曾描述Labs代码执行/资产与命名，但QA本轮(400) Timeout fetching且无原始全文快照，无法独立复验。只保留历史观察，不作为当前执行环境或资产迁移事实。；来源QA：unknown；仅文档边界，未操作产品。
+
+<details><summary>完整研究记录（保留所有原字段）</summary>
+
+```json
+{
+  "id": "assistant-perplexity-create-files-apps",
+  "name": "Perplexity Create files and apps（原 Labs）",
+  "entity_type": "artifact_creation_feature",
+  "version_scope_zh": "Labs为历史名，当前创建文件与简单应用的功能；不是独立LLM或无限制通用代理。",
+  "lifecycle_status": "renamed",
+  "dates": {
+    "first_launch": null,
+    "rename_evidence_date": null,
+    "raw_date": "02/05/26",
+    "normalized_date": null,
+    "date_status": "unknown",
+    "url_date_hint": "February-6th-2026",
+    "document_update": "QA观察Pro帮助页Last modified on October 26, 2026；仅文档元数据",
+    "date_caveat": "不能从文档改名证据推断准确生效时刻。"
+  },
+  "availability_zh": "Pro及更高档有文件/app生成额度，Free套餐表无该功能；API购买不等于web权益。",
+  "pricing": {
+    "amount": null,
+    "currency": null,
+    "status": "unknown_not_verified",
+    "note_zh": "不推算套餐价格；所需计划不等于已获账户资格，购买或升级不在授权范围。"
+  },
+  "permissions_and_human_confirmation_zh": [
+    "代码/资产生成与发布、对外分享、连接账号分开审批。",
+    "文档未充分说明每次代码/部署的确认，学习设计一律禁外部网络、凭据和公开发布。"
+  ],
+  "limitations_zh": [
+    "生成代码及公式必须检查；历史营销时间不作SLA。",
+    "简单web应用不等于生产安全应用。",
+    "套餐页面的高额度措辞不作无限量保证。",
+    "p-labs历史正文QA复核超时，证据状态unknown；改名关系由p-feb-change独立支持，不声称旧资产全部迁移、执行环境和权限相同。"
+  ],
+  "learning_task": {
+    "original_synthetic": true,
+    "title_zh": "虚构展览预算的表格与静态看板验收",
+    "input_policy": "仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行",
+    "steps_zh": [
+      "离线造预算：展板200元、材料150元、预留50元；预算上限500元。",
+      "设计CSV字段、总额及剩余额公式。",
+      "要求只生成下载草稿与静态看板设计，不部署。",
+      "用人工算术核对总额400元、剩余100元。",
+      "列出代码审查项：无外网请求、无密钥、无访问账号。"
+    ],
+    "acceptance_zh": [
+      "CSV可解析、单位一致、总额400/剩余100。",
+      "看板与表格同源且无隐藏外部请求。",
+      "公开发布从未执行，输出显式标草稿。"
+    ],
+    "stop_condition_zh": "遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。"
+  },
+  "source_ids": [
+    "p-feb-change",
+    "p-pro",
+    "p-plans",
+    "p-labs"
+  ],
+  "unknowns_zh": [
+    "Labs首发精确日期未在已读正文确认",
+    "生成或发布各环节的人审机制",
+    "当前客户端/文件规格及价格",
+    "Labs历史代码/资产说明本轮无法独立复验，原始观察仅作历史记录"
+  ],
+  "execution": {
+    "status": "never-run",
+    "model_called": false,
+    "account_login": false,
+    "real_automation": false,
+    "user_files_uploaded": false,
+    "user_mac_operated": false
+  },
+  "admission_recommendation": "candidate_documentation_only"
+}
+```
+</details>
