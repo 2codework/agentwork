@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "meeting_id": "DEMO-M1",
+  "items": [
+    {
+      "item_id": "I1",
+      "fact_id": "F1",
+      "quote": "提议先测试两版说明页，尚未决定。",
+      "kind": "suggestion",
+      "owner": null,
+      "due_date": null,
+      "depends_on": [],
+      "acceptance": null
+    },
+    {
+      "item_id": "I2",
+      "fact_id": "F2",
+      "quote": "乙表示可以协助，但未承诺负责。",
+      "kind": "offer",
+      "owner": null,
+      "due_date": null,
+      "depends_on": [],
+      "acceptance": null
+    },
+    {
+      "item_id": "I3",
+      "fact_id": "F3",
+      "quote": "发布日期尚未确定。",
+      "kind": "open_question",
+      "owner": null,
+      "due_date": null,
+      "depends_on": [],
+      "acceptance": null
+    },
+    {
+      "item_id": "I4",
+      "fact_id": "F4",
+      "quote": "隐私审核未完成，完成前不得发布。",
+      "kind": "prerequisite",
+      "owner": null,
+      "due_date": null,
+      "depends_on": [],
+      "acceptance": "隐私审核状态为完成"
+    },
+    {
+      "item_id": "I5",
+      "fact_id": "F5",
+      "quote": "决定由角色甲在2026-11-02前整理测试方案，完成标准为列出两版说明页及比较维度。",
+      "kind": "decision",
+      "owner": "ROLE-A",
+      "due_date": "2026-11-02",
+      "depends_on": [],
+      "acceptance": "列出两版说明页及比较维度"
+    },
+    {
+      "item_id": "I6",
+      "fact_id": "F6",
+      "quote": "发布须待隐私审核完成且发布日期确认。",
+      "kind": "blocked_action",
+      "owner": null,
+      "due_date": null,
+      "depends_on": [
+        "F3",
+        "F4"
+      ],
+      "acceptance": "隐私审核完成且发布日期已确认"
+    }
+  ]
+}

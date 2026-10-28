@@ -1,0 +1,64 @@
+{
+  "status": "design-fixes-requested-implementation-not-frozen",
+  "reviewed_at": "2026-10-28T22:02:01.316996+00:00",
+  "input_sha256": {
+    "PLAN.zh.md": "0b5d6ed479c37232dc4099d267d924486e04bc5bd8de3407f57b58eef167498c",
+    "lab.py-in-progress-readonly": "b4b9a4e055ea9a391f6afdf02c58bd22c4e11f5d0f3d5576f87c04305c2b17d4"
+  },
+  "findings": [
+    {
+      "id": "D1",
+      "priority": "must-fix",
+      "location": "PLAN §3/§8; lab.py input_schema/validate",
+      "issue": "固定事实可同时篡改为自洽伪造：input被当作答案键，允许1..20事实，未锚定F1–F6语义。",
+      "required": "固定六条完整事实与人工预标注契约绑定可信审查过的源码常量；拒绝事实/标签/负责人/日期/依赖/验收字符串改变。允许格式变化时仍对原字节哈希。明确源码被同时篡改不在安全保证内，hash/golden不认证作者或审阅者。",
+      "tests": [
+        "F1 kind改decision且submission同步改应拒绝",
+        "F1新增owner/date且同步改应拒绝",
+        "删去F4和F6依赖且同步改应拒绝",
+        "新增F7且同步提交应拒绝",
+        "空白变化不改语义，但旧回执过期"
+      ]
+    },
+    {
+      "id": "D2",
+      "priority": "must-fix",
+      "location": "PLAN §8; lab.py read_json",
+      "issue": "bounded read不等于安全文件类型；FIFO打开或读取可无限阻塞，设备/符号链接策略未定义。",
+      "required": "明确仅接受常规本地文件，拒绝FIFO/socket/设备与符号链接（含父目录策略需说明）；使用不会阻塞的安全打开/检查策略并限制读取MAX_BYTES+1，失败返回2且只输出稳定代码。不是通用文件系统沙箱。",
+      "tests": [
+        "目录/缺文件/超限/损坏UTF8退出2",
+        "FIFO读取应快速拒绝而非等待数据",
+        "符号链接按声明策略拒绝",
+        "输入内容中的路径/URL不打开"
+      ]
+    },
+    {
+      "id": "D3",
+      "priority": "must-fix",
+      "location": "PLAN §7; lab.py read_json/main",
+      "issue": "标准库json解析超长数字可抛ValueError，当前只捕获特定JSONDecodeError，可能输出traceback而非规范invalid-input。",
+      "required": "对受限输入解析明确处理ValueError/深度与数值异常；不得输出用户全文或绝对路径。",
+      "tests": [
+        "5000位整数JSON退出2、单一规范JSON输出、无traceback",
+        "深嵌套小于64KiB输入退出2",
+        "NaN/Infinity/重复键拒绝"
+      ]
+    },
+    {
+      "id": "D4",
+      "priority": "clarify",
+      "location": "PLAN §4/§5/§6",
+      "issue": "reviewed-draft golden与禁止自动人审之间需要明确区分；当前check-golden仅good/bad，设计expected还列reviewed-draft。",
+      "required": "check-golden不得为用户生成approve；测试专用合成回执可在隔离临时目录构造，但明确仅测试机械状态转换，不声称有人审阅。明确合法reject退出0仍非批准、hash非签名、approved字段是自报回执状态。",
+      "tests": [
+        "pass/0不等于reviewed-draft",
+        "needs-revision/0且approved=false",
+        "失效回执fail/1且approved=false",
+        "无review文件invalid-input/2",
+        "所有模式dispatch_allowed=false"
+      ]
+    }
+  ],
+  "actions": "Read-only design and in-progress source review; no implementation execution or mutation; no canonical changes; root/design author notified."
+}

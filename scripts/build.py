@@ -8,6 +8,7 @@ import creative_workflows
 import office_agents
 import assistant_workspace
 import regional_office
+import offline_office_lab
 from pathlib import Path
 from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
@@ -72,6 +73,7 @@ def build():
     office_agents.publish(ROOT,dest)
     assistant_workspace.publish(ROOT,dest)
     regional_office.publish(ROOT,dest)
+    offline_office_lab.publish(ROOT,dest)
     (dest/'.nojekyll').touch()
     shutil.copy2(ROOT/'BOOK.md',dest/'BOOK.md')
     asset_versions.pin(dest)

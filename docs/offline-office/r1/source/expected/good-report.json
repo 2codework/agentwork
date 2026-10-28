@@ -1,0 +1,13 @@
+{
+  "mode": "rule-simulation",
+  "status": "pass",
+  "dispatch_allowed": false,
+  "errors": [],
+  "input_sha256": "f9aa67124ac40a6330ef87603e48b306651d77df53d7880351312f89fa5c3325",
+  "submission_sha256": "b07d81f4fb9e0bdf0231cc1edccc0d0953f34188404fd7624c8f36e3751f5ae5",
+  "counts": {
+    "facts": 6,
+    "items": 6,
+    "errors": 0
+  }
+}

@@ -1,0 +1,24 @@
+test_bad_exact_three (test_lab.LabTests.test_bad_exact_three) ... ok
+test_bad_submission_cannot_approve (test_lab.LabTests.test_bad_submission_cannot_approve) ... ok
+test_file_and_json_failures_exit_two (test_lab.LabTests.test_file_and_json_failures_exit_two) ... ok
+test_fixed_input_cannot_be_rewritten_with_submission (test_lab.LabTests.test_fixed_input_cannot_be_rewritten_with_submission) ... ok
+test_good_exact (test_lab.LabTests.test_good_exact) ... ok
+test_input_schema_mutations (test_lab.LabTests.test_input_schema_mutations) ... ok
+test_lab_source_capability_audit (test_lab.LabTests.test_lab_source_capability_audit) ... ok
+test_missing_cli_arguments (test_lab.LabTests.test_missing_cli_arguments) ... ok
+test_no_default_approval (test_lab.LabTests.test_no_default_approval) ... ok
+test_no_network_and_inputs_unchanged (test_lab.LabTests.test_no_network_and_inputs_unchanged) ... ok
+test_open_race_detected (test_lab.LabTests.test_open_race_detected) ... ok
+test_raw_whitespace_invalidates_each_approval (test_lab.LabTests.test_raw_whitespace_invalidates_each_approval) ... ok
+test_reject_zero_not_approved (test_lab.LabTests.test_reject_zero_not_approved) ... ok
+test_review_approve_exact (test_lab.LabTests.test_review_approve_exact) ... ok
+test_review_invalid_fields (test_lab.LabTests.test_review_invalid_fields) ... ok
+test_semantic_mutations (test_lab.LabTests.test_semantic_mutations) ... ok
+test_special_files_and_symlinks_refused (test_lab.LabTests.test_special_files_and_symlinks_refused) ... ok
+test_stale_each_hash (test_lab.LabTests.test_stale_each_hash) ... ok
+test_submission_schema_mutations (test_lab.LabTests.test_submission_schema_mutations) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.039s
+
+OK

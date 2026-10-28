@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "sealed_at": "2026-10-28T22:06:27.708189+00:00",
+  "input_sha256": {
+    "package_lab.py": "154bae2f049171435ff7bcd69850104298f1b7d42f2a78cbfd00d03357831a7a",
+    "CHANGELOG.zh.md": "5c18c6623e48b25bbf8ee5ddcf37923e1c846146d8bc8a095a60d8581b0209d8",
+    "lab.py": "aa26200ed333ab9cb7f05d3f461a07ae2c322bf28329d54ee88a85365769de33",
+    "README.zh.md": "6a638886b613a28cd903805304ac8f1e7fb294df5f2b77bb91863da8c93c661c",
+    "tests/test_lab.py": "b6d395dea38618c888ad2b1f93bc85a580dfffe4600046d8a64eb4f8085f833a",
+    "fixtures/review-template.json": "ff257fa818abf5d94524a665348849a0c47b5dcd62def0e6bb847667fdc8ac24",
+    "fixtures/submission-template.json": "58bd43afa4af8e1b5fb4c2a8a48044c99e30a13436d3bfd4cbfd447d8b2206a5",
+    "fixtures/submission-bad.json": "56e927b8309ef70aa42ef56e44ff028778f149be15cfb974e72f1915355db6eb",
+    "fixtures/submission-good.json": "b07d81f4fb9e0bdf0231cc1edccc0d0953f34188404fd7624c8f36e3751f5ae5",
+    "fixtures/meeting.json": "f9aa67124ac40a6330ef87603e48b306651d77df53d7880351312f89fa5c3325",
+    "expected/good-report.json": "14b4387ad2c728418de35395540c516681034f4e9eb7f3b24b56e573ec8f575a",
+    "expected/reviewed-draft.json": "2fc90d5215964f0a58c76785a92b7cdba3a6257fa2e9bb9de911ad26415acbb9",
+    "expected/bad-report.json": "804123d9709f9620bcdbebe808494043e998d39dc8fa5948f379e3832b0850bd"
+  },
+  "archive_sha256": "9f20ed0318765e8e02938f334e71b83cfe3a626afc3c675410c9e2777f575484",
+  "resolved_findings": {
+    "D1": "Fixed complete six-fact contract anchored in reviewed source FIXED_ROWS; jointly changed input/submission rejected.",
+    "D2": "Regular file, final symlink and special-file checks; O_NOFOLLOW/O_NONBLOCK plus inode/device race check; FIFO rejected promptly.",
+    "D3": "ValueError/RecursionError produce invalid-input exit2; malformed encoding/json and numeric limits tested.",
+    "D4": "README explicitly separates synthetic review tests from manual user review; check-golden only good/bad; no automatic approve generation."
+  },
+  "independent_tests": {
+    "cli_cases_per_copy": 25,
+    "copies": [
+      "frozen source",
+      "independently verified and unpacked ZIP"
+    ],
+    "schema_type_mutations": 330,
+    "uncaught_exceptions": 0,
+    "author_tests_independently_rerun": 19,
+    "archive_members": 13,
+    "two_rebuilds_match_original_zip": true,
+    "source_and_fixture_bytes_unchanged": true,
+    "all_business_outputs_dispatch_allowed": false,
+    "ast_import_allowlist": [
+      "argparse",
+      "hashlib",
+      "json",
+      "os",
+      "stat",
+      "re",
+      "sys",
+      "datetime",
+      "pathlib"
+    ]
+  },
+  "limitations": [
+    "Only Linux Python3.12 actually exercised; Python3.10+ and other POSIX environments not runtime-certified; missing safe-open flags fail closed.",
+    "Upper directory and reviewed source must be trusted; not a malicious-filesystem sandbox.",
+    "Hashes bind bytes, not identity/signature; HUMAN-DEMO is not authenticated reviewer identity.",
+    "Synthetic approve/reject state tests are not real human approval and grant no dispatch authority.",
+    "Original design review retained as historical finding; final README/CHANGELOG describe resolved implementation.",
+    "No network/product/model/SDK execution, credentials, Mac operation, canonical integration, push or deployment."
+  ],
+  "report_scope": "Original offline rule simulation only; not LLM semantic extraction/MCP compliance/product effectiveness or production authorization proof."
+}

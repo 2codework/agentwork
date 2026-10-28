@@ -1,0 +1,20 @@
+{
+  "algorithm": "sha256",
+  "archive": "meeting-action-lab-r1.zip",
+  "archive_sha256": "9f20ed0318765e8e02938f334e71b83cfe3a626afc3c675410c9e2777f575484",
+  "members": {
+    "meeting-action-lab/CHANGELOG.zh.md": "5c18c6623e48b25bbf8ee5ddcf37923e1c846146d8bc8a095a60d8581b0209d8",
+    "meeting-action-lab/README.zh.md": "6a638886b613a28cd903805304ac8f1e7fb294df5f2b77bb91863da8c93c661c",
+    "meeting-action-lab/expected/bad-report.json": "804123d9709f9620bcdbebe808494043e998d39dc8fa5948f379e3832b0850bd",
+    "meeting-action-lab/expected/good-report.json": "14b4387ad2c728418de35395540c516681034f4e9eb7f3b24b56e573ec8f575a",
+    "meeting-action-lab/expected/reviewed-draft.json": "2fc90d5215964f0a58c76785a92b7cdba3a6257fa2e9bb9de911ad26415acbb9",
+    "meeting-action-lab/fixtures/meeting.json": "f9aa67124ac40a6330ef87603e48b306651d77df53d7880351312f89fa5c3325",
+    "meeting-action-lab/fixtures/review-template.json": "ff257fa818abf5d94524a665348849a0c47b5dcd62def0e6bb847667fdc8ac24",
+    "meeting-action-lab/fixtures/submission-bad.json": "56e927b8309ef70aa42ef56e44ff028778f149be15cfb974e72f1915355db6eb",
+    "meeting-action-lab/fixtures/submission-good.json": "b07d81f4fb9e0bdf0231cc1edccc0d0953f34188404fd7624c8f36e3751f5ae5",
+    "meeting-action-lab/fixtures/submission-template.json": "58bd43afa4af8e1b5fb4c2a8a48044c99e30a13436d3bfd4cbfd447d8b2206a5",
+    "meeting-action-lab/lab.py": "aa26200ed333ab9cb7f05d3f461a07ae2c322bf28329d54ee88a85365769de33",
+    "meeting-action-lab/package_lab.py": "154bae2f049171435ff7bcd69850104298f1b7d42f2a78cbfd00d03357831a7a",
+    "meeting-action-lab/tests/test_lab.py": "b6d395dea38618c888ad2b1f93bc85a580dfffe4600046d8a64eb4f8085f833a"
+  }
+}

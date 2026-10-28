@@ -1,0 +1,132 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "good",
+      "exit": 0,
+      "status": "pass"
+    },
+    {
+      "name": "three-fixed-errors",
+      "exit": 1,
+      "status": "fail"
+    },
+    {
+      "name": "self-consistent-forgery-kind",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "self-consistent-forgery-owner",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "self-consistent-forgery-due_date",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "self-consistent-forgery-acceptance",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "delete-prerequisite-and-submission",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "huge-integer",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "nan",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "duplicate-key",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "deep-json",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "bad-utf8",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "oversize",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "broken-json",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "directory",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "missing-file",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "last-component-symlink",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "fifo-nonblocking-reject",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "pre-review",
+      "exit": 0,
+      "status": "pass"
+    },
+    {
+      "name": "synthetic-approve-transition",
+      "exit": 0,
+      "status": "reviewed-draft"
+    },
+    {
+      "name": "reject-exit0-not-approved",
+      "exit": 0,
+      "status": "needs-revision"
+    },
+    {
+      "name": "whitespace-input-stales-receipt",
+      "exit": 1,
+      "status": "fail"
+    },
+    {
+      "name": "whitespace-submission-stales-receipt",
+      "exit": 1,
+      "status": "fail"
+    },
+    {
+      "name": "invalid-receipt",
+      "exit": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "golden-has-no-human-review",
+      "exit": 0,
+      "status": "pass"
+    }
+  ],
+  "package_unchanged": true,
+  "receipt_scope": "synthetic state transition tests only; not actual human review"
+}

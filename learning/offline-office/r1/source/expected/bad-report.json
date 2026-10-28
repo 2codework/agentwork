@@ -1,0 +1,32 @@
+{
+  "mode": "rule-simulation",
+  "status": "fail",
+  "dispatch_allowed": false,
+  "errors": [
+    {
+      "item_id": "I1",
+      "fact_id": "F1",
+      "field": "kind",
+      "code": "KIND_MISMATCH"
+    },
+    {
+      "item_id": "I2",
+      "fact_id": "F2",
+      "field": "owner",
+      "code": "UNCONFIRMED_OWNER"
+    },
+    {
+      "item_id": "I6",
+      "fact_id": "F6",
+      "field": "depends_on",
+      "code": "DEPENDENCY_MISMATCH"
+    }
+  ],
+  "input_sha256": "f9aa67124ac40a6330ef87603e48b306651d77df53d7880351312f89fa5c3325",
+  "submission_sha256": "56e927b8309ef70aa42ef56e44ff028778f149be15cfb974e72f1915355db6eb",
+  "counts": {
+    "facts": 6,
+    "items": 6,
+    "errors": 3
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "meeting_id": "DEMO-M1",
+  "items": [
+    {
+      "item_id": "I1",
+      "fact_id": "F1",
+      "quote": "",
+      "kind": "suggestion",
+      "owner": null,
+      "due_date": null,
+      "depends_on": [],
+      "acceptance": null
+    },
+    {
+      "item_id": "I2",
+      "fact_id": "F2",
+      "quote": "",
+      "kind": "offer",
+      "owner": null,
+      "due_date": null,
+      "depends_on": [],
+      "acceptance": null
+    },
+    {
+      "item_id": "I3",
+      "fact_id": "F3",
+      "quote": "",
+      "kind": "open_question",
+      "owner": null,
+      "due_date": null,
+      "depends_on": [],
+      "acceptance": null
+    },
+    {
+      "item_id": "I4",
+      "fact_id": "F4",
+      "quote": "",
+      "kind": "prerequisite",
+      "owner": null,
+      "due_date": null,
+      "depends_on": [],
+      "acceptance": null
+    },
+    {
+      "item_id": "I5",
+      "fact_id": "F5",
+      "quote": "",
+      "kind": "decision",
+      "owner": null,
+      "due_date": null,
+      "depends_on": [],
+      "acceptance": null
+    },
+    {
+      "item_id": "I6",
+      "fact_id": "F6",
+      "quote": "",
+      "kind": "blocked_action",
+      "owner": null,
+      "due_date": null,
+      "depends_on": [],
+      "acceptance": null
+    }
+  ]
+}

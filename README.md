@@ -73,3 +73,7 @@ python -m unittest discover -s learning/mcp/raw/tests -v
 ## 区域办公平台学习补包
 
 [7套区域办公平台人监督练习](REGIONAL_OFFICE.md)：Dify、Coze Studio、飞书 aily、钉钉宜搭、Zoho、百炼与腾讯云。准确区分托管/自托管/功能；来源、许可、租户和地域限制保留，全部 documentation-only / never-run。原研究与独立QA在 `learning/regional-office/r1/`，别名仅供搜索，不合并产品身份。
+
+## 原创离线会议练习
+
+从站点主导航“原创离线练习”或 `meeting-action-log` 案例打开 [练习页](docs/offline-office-lab.html)，下载 [固定源码ZIP](learning/offline-office/r1/meeting-action-lab-r1.zip) 与 [中文教程](learning/offline-office/r1/source/README.zh.md)。固定六条合成事实的标准库规则模拟，仅Linux已测；非模型、MCP或产品实测，不产生真实批准/外发。源码及独立QA原字节封存于 `learning/offline-office/r1/`。
