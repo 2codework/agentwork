@@ -22,6 +22,8 @@ jobs:
         with:
           node-version: '24'
           package-manager-cache: false
+      - name: Checked-in checkpoint file-set and hashes (not QA attestation)
+        run: python scripts/check_checkpoint.py .
       - name: Build and validate content schema
         run: python scripts/build.py
       - name: Python regression tests
@@ -40,3 +42,5 @@ jobs:
         run: |
           git diff --exit-code -- BOOK.md site/ docs/
           test -z "$(git ls-files --others --exclude-standard -- BOOK.md site/ docs/)"
+      - name: Final checkpoint file-set and hashes (not QA attestation)
+        run: python scripts/check_checkpoint.py .

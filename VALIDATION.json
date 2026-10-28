@@ -7,7 +7,7 @@
     "new_cases": 9,
     "new_ordinary_tool_nodes": 6
   },
-  "python_tests_passed": 68,
+  "python_tests_passed": 86,
   "node_tests_passed": 12,
   "mcp_tests_passed": 18,
   "mcp_validator_cases_passed": 12,
@@ -22,7 +22,7 @@
   "remote_publication": "not pushed",
   "manifest_scope": "all repo files excluding .git, caches, pyc and this VALIDATION.json",
   "sha256": {
-    ".github/workflows/checks.yml": "c770d9b81939a8f60ff267441c847afddcd9a1db9ab7c2b8b6be1661c2b48d44",
+    ".github/workflows/checks.yml": "a758000c4e08b491c99d246bd3a600d914cd8d3daca378ab71329ffdcb03b716",
     ".github/workflows/checks.yml.example": "152a8005cc5b77220c6af75b199f93a6f1062374cd8ac7f8dd321666ed4c1f93",
     ".gitignore": "60c9bdd905fcf45ac485c680d32e9773962cf061b6f041dcddd033911558a672",
     "BOOK.md": "a06f55d669a06e5dbce5097c22d21b79ce22ec95cae1aeaf9d58b71ed499a0f6",
@@ -123,6 +123,7 @@
     "research/roles.md": "095abd18cf8bbf434ffcd4ef5678070e7de50d1a0db9d8752c3a7780e2acd6c5",
     "scripts/asset_versions.py": "846bff8cae6e0883f1e6c554378a03a24ecb33cb891454875de9e3db4c2e350e",
     "scripts/build.py": "cda1364b2a186f8db0c954c03dfc93576fe1a39bebec8fdb82b986bdc9a8467f",
+    "scripts/check_checkpoint.py": "773bb40c286fa3659eed12b44f56ab66e7aa836afc1963e0e21456277cdaf164",
     "scripts/check_pages.py": "06daeb19830e6a8723bb60f157ca4e25e9828e0253a0bf1aec0b61e7a687908e",
     "scripts/creative_workflows.py": "90370eb6cafbe816134922266ce90033c4a017e1514a42f9c1588ad90911a370",
     "scripts/mcp_learning.py": "5006177f72c4f7fee32eb1a7a79b09ff434f7c742402c2206e22bcc322fbbf25",
@@ -171,6 +172,7 @@
     "tests/test_asset_versions.py": "4afe5c2ffb45d42c2f675b91f4877f815c22cb015456f4e6959e958ec0f1ea99",
     "tests/test_build.py": "bc802eca2c3453d0671aad2606acefb98bc31a81c9dbea52e060f9f68e2b014f",
     "tests/test_check_pages.py": "9a042c0922cc9299f2572c24bd3f0da50134405ea1869222b045f09578248b0a",
+    "tests/test_checkpoint.py": "cdfb9353abc35141ca31b6fbb72261177a9eb7f0865d06d405287ba0c4e3eae4",
     "tests/test_creative.py": "ee31cbbead422645782863041628ee01c686acc43fe98ddfa07cd3cb64129868",
     "tests/test_creative_workflows.py": "28e726fe457064d8192111c5a47b81ba973ebc18f8e7049307574d1d27ba16bd",
     "tests/test_mcp_learning.py": "924d943f503051b7d9c962b536e2da483f4e35b36e1e4394c7682c5d32aad039",
@@ -180,5 +182,11 @@
     "web/index.html": "ba223e2d718611864e234b631feb9abb70993c4927347ef1ba96caff58503518",
     "web/reader.js": "4d919c9514587551770f690833d1e82faa70c6bcc903ee550d25e835eb9fcd9d",
     "web/style.css": "ff5e0aa1987242f4f9a4702eb9ce40e544bf631cabb00b1a2c41d54cf09d5ce2"
+  },
+  "checkpoint_gate_validation": {
+    "status": "local isolated candidate passed",
+    "synthetic_fixture_tests_passed": 18,
+    "scope": "file-set and SHA-256 consistency only; not authentication or QA attestation",
+    "remote_ci": "not run for this candidate"
   }
 }
