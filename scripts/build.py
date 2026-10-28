@@ -2,6 +2,7 @@
 import json, re, shutil, sys
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
 from normalize import normalize
+import asset_versions
 import mcp_learning
 from pathlib import Path
 from urllib.parse import urlparse
@@ -59,6 +60,7 @@ def build():
     mcp_learning.publish(ROOT,dest)
     (dest/'.nojekyll').touch()
     shutil.copy2(ROOT/'BOOK.md',dest/'BOOK.md')
+    asset_versions.pin(dest)
     shutil.copytree(dest,ROOT/'docs',dirs_exist_ok=True)
     print(f'Built {len(data["cases"])} cases + {len(data["chapters"])} research chapters → site/')
 def write_book(data):
