@@ -7,6 +7,7 @@ import mcp_learning
 import creative_workflows
 import office_agents
 import assistant_workspace
+import regional_office
 from pathlib import Path
 from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
@@ -58,6 +59,7 @@ def build():
     office_cases, _ = office_agents.load(ROOT)
     data["cases"].extend(office_cases)
     data["cases"].extend(assistant_workspace.load(ROOT))
+    data["cases"].extend(regional_office.load(ROOT))
     validate(data)
     write_book(data)
     dest = ROOT/'site'
@@ -69,6 +71,7 @@ def build():
     creative_workflows.publish(ROOT,dest)
     office_agents.publish(ROOT,dest)
     assistant_workspace.publish(ROOT,dest)
+    regional_office.publish(ROOT,dest)
     (dest/'.nojekyll').touch()
     shutil.copy2(ROOT/'BOOK.md',dest/'BOOK.md')
     asset_versions.pin(dest)

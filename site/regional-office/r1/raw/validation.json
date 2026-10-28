@@ -1,0 +1,163 @@
+{
+  "status": "passed-local-structural-checks",
+  "checked_at": "2026-10-28T21:35:31Z",
+  "checks": [
+    "7 unique entities, non-foundation-model",
+    "16 sources resolve; weaker excerpt evidence explicitly labeled",
+    "7 original synthetic exercises all never-run",
+    "14 fixed-snapshot alias checks, zero named matches",
+    "2 baseline SHA256 recomputations match",
+    "all permissions, tenant, lifecycle, price unknown, inputs, steps, acceptance, risks present"
+  ],
+  "dedup_method": "case-insensitive alias substring over nested id/name/title; detects named gap, not every semantic overlap",
+  "dedup_checks": [
+    {
+      "baseline": "agentwork",
+      "head": "e8ed62aeee4680c3f671e2d8a4604281cb2539e2",
+      "entity_id": "regional-dify",
+      "aliases": [
+        "dify"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "agentwork",
+      "head": "e8ed62aeee4680c3f671e2d8a4604281cb2539e2",
+      "entity_id": "regional-coze-studio",
+      "aliases": [
+        "coze studio",
+        "coze-studio",
+        "扣子"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "agentwork",
+      "head": "e8ed62aeee4680c3f671e2d8a4604281cb2539e2",
+      "entity_id": "regional-feishu-aily-enterprise",
+      "aliases": [
+        "aily",
+        "飞书企业工作伙伴"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "agentwork",
+      "head": "e8ed62aeee4680c3f671e2d8a4604281cb2539e2",
+      "entity_id": "regional-dingtalk-yida-assistant",
+      "aliases": [
+        "宜搭 ai 助理",
+        "钉钉ai助理",
+        "dingtalk ai"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "agentwork",
+      "head": "e8ed62aeee4680c3f671e2d8a4604281cb2539e2",
+      "entity_id": "regional-zoho-zia-agents",
+      "aliases": [
+        "zia agents",
+        "zia agent studio"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "agentwork",
+      "head": "e8ed62aeee4680c3f671e2d8a4604281cb2539e2",
+      "entity_id": "regional-bailian-agent-app",
+      "aliases": [
+        "百炼",
+        "bailian",
+        "model studio agent"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "agentwork",
+      "head": "e8ed62aeee4680c3f671e2d8a4604281cb2539e2",
+      "entity_id": "regional-tencent-agent-platform",
+      "aliases": [
+        "腾讯云智能体开发平台",
+        "大模型知识引擎",
+        "tencent lke"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "modelatlas",
+      "head": "0a55ebed240ea6e83c73fd4253fc898b35513ba4",
+      "entity_id": "regional-dify",
+      "aliases": [
+        "dify"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "modelatlas",
+      "head": "0a55ebed240ea6e83c73fd4253fc898b35513ba4",
+      "entity_id": "regional-coze-studio",
+      "aliases": [
+        "coze studio",
+        "coze-studio",
+        "扣子"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "modelatlas",
+      "head": "0a55ebed240ea6e83c73fd4253fc898b35513ba4",
+      "entity_id": "regional-feishu-aily-enterprise",
+      "aliases": [
+        "aily",
+        "飞书企业工作伙伴"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "modelatlas",
+      "head": "0a55ebed240ea6e83c73fd4253fc898b35513ba4",
+      "entity_id": "regional-dingtalk-yida-assistant",
+      "aliases": [
+        "宜搭 ai 助理",
+        "钉钉ai助理",
+        "dingtalk ai"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "modelatlas",
+      "head": "0a55ebed240ea6e83c73fd4253fc898b35513ba4",
+      "entity_id": "regional-zoho-zia-agents",
+      "aliases": [
+        "zia agents",
+        "zia agent studio"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "modelatlas",
+      "head": "0a55ebed240ea6e83c73fd4253fc898b35513ba4",
+      "entity_id": "regional-bailian-agent-app",
+      "aliases": [
+        "百炼",
+        "bailian",
+        "model studio agent"
+      ],
+      "matches": []
+    },
+    {
+      "baseline": "modelatlas",
+      "head": "0a55ebed240ea6e83c73fd4253fc898b35513ba4",
+      "entity_id": "regional-tencent-agent-platform",
+      "aliases": [
+        "腾讯云智能体开发平台",
+        "大模型知识引擎",
+        "tencent lke"
+      ],
+      "matches": []
+    }
+  ],
+  "canonical_mutation": false,
+  "runtime_tests": "never-run"
+}

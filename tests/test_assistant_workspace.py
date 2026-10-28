@@ -37,7 +37,7 @@ class AssistantTests(unittest.TestCase):
   self.s[0]['url']='https://user:pass@example.com'
   with self.assertRaises(ValueError):A.adapt(self.r,self.s)
  def test_generated_total_and_book(self):
-  data=json.loads((ROOT/'site/data.json').read_text());self.assertEqual(len(data['cases']),125);self.assertEqual(len([x for x in data['cases'] if x.get('office_agent')]),11)
+  data=json.loads((ROOT/'site/data.json').read_text());self.assertEqual(len(data['cases']),132);self.assertEqual(len([x for x in data['cases'] if x.get('office_agent')]),11)
   book=(ROOT/'BOOK.md').read_text()
   for c in A.adapt(self.r,self.s):
    self.assertIn(c['title'],book);self.assertIn(c['risks'],book);self.assertIn(c['historical_context'],book)

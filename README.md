@@ -69,3 +69,7 @@ python -m unittest discover -s learning/mcp/raw/tests -v
 ```
 
 不新增未经核验的版本事件或模型能力断言。保留全部旧案例、节点、日期覆盖层与互链；源网页的权利与适用条件不因本教程而改变。此仓库维护源码；线上对应提交以 Actions / Pages 结果为准，本地测试不等于线上验收。
+
+## 区域办公平台学习补包
+
+[7套区域办公平台人监督练习](REGIONAL_OFFICE.md)：Dify、Coze Studio、飞书 aily、钉钉宜搭、Zoho、百炼与腾讯云。准确区分托管/自托管/功能；来源、许可、租户和地域限制保留，全部 documentation-only / never-run。原研究与独立QA在 `learning/regional-office/r1/`，别名仅供搜索，不合并产品身份。

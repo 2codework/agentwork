@@ -1,0 +1,66 @@
+{
+  "global_unknowns": [
+    "No accounts, tenant entitlements, billing quotes, model APIs, file uploads, purchases, installation or Mac operations used.",
+    "Public documentation support is not runtime verification.",
+    "Regional context describes ecosystem, not guaranteed access or legal/compliance eligibility.",
+    "No upstream product release/source commit fixed unless explicitly stated; public sources are rolling documents."
+  ],
+  "by_entity": [
+    {
+      "id": "regional-dify",
+      "unknowns": [
+        "选定部署版本节点兼容性",
+        "真实企业身份强度及数据驻留",
+        "具体模型/插件费用"
+      ]
+    },
+    {
+      "id": "regional-coze-studio",
+      "unknowns": [
+        "实际选定版本安全补丁状态",
+        "细粒度组织权限能力",
+        "Coze托管版地域/定价不在本条结论内"
+      ]
+    },
+    {
+      "id": "regional-feishu-aily-enterprise",
+      "unknowns": [
+        "新版名称迁移及版本日期",
+        "租户套餐、地域和机器人资源限额",
+        "用户撤权后的缓存/索引行为"
+      ]
+    },
+    {
+      "id": "regional-dingtalk-yida-assistant",
+      "unknowns": [
+        "当前套餐与配额",
+        "界面版本与创建范围限制是否已变化",
+        "委托权限页502，授权细节须将来重新核验"
+      ]
+    },
+    {
+      "id": "regional-zoho-zia-agents",
+      "unknowns": [
+        "租户数据中心可用性",
+        "确切积分及BYOK双重费用",
+        "Viewer文字与矩阵差异"
+      ]
+    },
+    {
+      "id": "regional-bailian-agent-app",
+      "unknowns": [
+        "当前Agent版本及国际资格",
+        "具体模型/调用/存储价格",
+        "账号可用模型及数据驻留"
+      ]
+    },
+    {
+      "id": "regional-tencent-agent-platform",
+      "unknowns": [
+        "具体可用地域/计费",
+        "租户默认权限当前状态",
+        "应用级逐次确认机制未核实"
+      ]
+    }
+  ]
+}

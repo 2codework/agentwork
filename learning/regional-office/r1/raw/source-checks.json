@@ -1,0 +1,177 @@
+{
+  "checked_at": "2026-10-28T21:35:31Z",
+  "sources": [
+    {
+      "id": "dify-repo",
+      "title": "Dify official repository",
+      "url": "https://github.com/langgenius/dify",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "opened",
+      "supported_claim": "Agent/RAG/workflow platform; cloud and self-hosted deployment.",
+      "limits": ""
+    },
+    {
+      "id": "dify-license",
+      "title": "Dify LICENSE",
+      "url": "https://github.com/langgenius/dify/blob/main/LICENSE",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "opened",
+      "supported_claim": "Modified Apache-2.0 with additional multi-tenant and frontend branding conditions.",
+      "limits": "Mutable main; no upstream source commit pinned; not legal advice."
+    },
+    {
+      "id": "dify-human",
+      "title": "Dify Human Input",
+      "url": "https://docs.dify.ai/en/cloud/use-dify/nodes/human-input",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "opened",
+      "supported_claim": "Human Input pauses workflow; email link accepts anyone holding link; first response closes request; trigger-started flows cannot use web-app delivery.",
+      "limits": ""
+    },
+    {
+      "id": "coze-repo",
+      "title": "Coze Studio official repository",
+      "url": "https://github.com/coze-dev/coze-studio",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "opened",
+      "supported_claim": "Visual agent/workflow platform; requires model configuration and separate plugin keys; PAT authentication; README warns of public-network security risks and commercial feature differences.",
+      "limits": "main is mutable; model-management UI requires image >=0.5.0, not a claim of latest release."
+    },
+    {
+      "id": "coze-license",
+      "title": "Coze Studio LICENSE-APACHE",
+      "url": "https://github.com/coze-dev/coze-studio/blob/main/LICENSE-APACHE",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "opened",
+      "supported_claim": "Apache-2.0 license file exists and repository explicitly identifies that license.",
+      "limits": ""
+    },
+    {
+      "id": "aily-channel",
+      "title": "通过飞书机器人与智能体对话",
+      "url": "https://aily.feishu.cn/hc/1u7kleqg_uv8vbhxz",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "opened",
+      "supported_claim": "Enterprise work partner supports app/user identities; personal resource authorization cards; channel configuration and publishing differ.",
+      "limits": "Navigation now uses 豆包工作伙伴 while article names aily 企业工作伙伴; exact migration date unknown."
+    },
+    {
+      "id": "aily-scope",
+      "title": "aily 智能伙伴可用范围",
+      "url": "https://aily.feishu.cn/hc/1u7kleqg_zxb4guqj",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "search-excerpt",
+      "supported_claim": "Enterprise administrators control available user/department ranges.",
+      "limits": "Do not generalize personal assistant controls to every enterprise work partner mode."
+    },
+    {
+      "id": "dingtalk-yida",
+      "title": "创建 AI 助理 — 宜搭",
+      "url": "https://docs.aliwork.com/docs/yida_support/_12/du6zs1ze7inyxws3/duw7gpd4punhyrgb",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "opened",
+      "supported_claim": "Named 宜搭 AI 助理; non-admin creation application; within-organization restriction; data analysis/form filling; initial scope choice; knowledge refresh requires republishing.",
+      "limits": ""
+    },
+    {
+      "id": "dingtalk-delegation",
+      "title": "AI 助理技能访问用户授权的资源",
+      "url": "https://opensource.dingtalk.com/developerpedia/docs/develop/permission/ai_assistant/ai_assistant_get_oauth_authcode/",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "search-excerpt-open-failed",
+      "supported_claim": "Delegated scopes and OAuth user approval; denying approval prevents obtaining authorization code.",
+      "limits": "Direct open returned 502 Bad Gateway; detailed official indexed excerpt only, weaker than full-page fetch."
+    },
+    {
+      "id": "zia-roles",
+      "title": "Zia Agents Roles & Permissions",
+      "url": "https://www.zoho.com/agents/resources/help/platform-reference/roles-permissions.html",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "opened",
+      "supported_claim": "Four predefined roles; Collaborator cannot deploy, admins can; role customization unavailable.",
+      "limits": "Prose and matrix are not perfectly aligned on viewer/query and role creation; avoid stronger interpretation."
+    },
+    {
+      "id": "zia-settings",
+      "title": "Zia Agents Settings",
+      "url": "https://www.zoho.com/agents/resources/help/platform-reference/settings.html",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "opened",
+      "supported_claim": "Organization/team controls, integrations, credits and BYOK settings; admin setup required.",
+      "limits": ""
+    },
+    {
+      "id": "bailian-faq",
+      "title": "阿里云百炼 Agent Studio FAQ",
+      "url": "https://docs.agent.bailian.aliyun.com/zh/resources/faq",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "opened",
+      "supported_claim": "Visual Agent differs from Assistant API; knowledge/plugin/MCP support; application tests can incur charges.",
+      "limits": ""
+    },
+    {
+      "id": "bailian-permissions",
+      "title": "百炼权限管理",
+      "url": "https://help.aliyun.com/zh/model-studio/permission-management-overview",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "opened",
+      "supported_claim": "Workspace model/user permissions; RAM/OpenAPI permissions separate; workspace cannot span geographic regions.",
+      "limits": ""
+    },
+    {
+      "id": "bailian-international",
+      "title": "Model Studio application introduction (international)",
+      "url": "https://www.alibabacloud.com/help/zh/model-studio/application-introduction",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "opened",
+      "supported_claim": "Page updated 2026-10-11: Singapore pre-2025-04-21 application customers restriction; Agent 1.0/workflow preview warning.",
+      "limits": "This is international/legacy application scope, not evidence every China/Agent Studio feature has identical restrictions."
+    },
+    {
+      "id": "tencent-permissions",
+      "title": "腾讯云智能体开发平台 平台端用户权限",
+      "url": "https://cloud.tencent.cn/document/product/1759/122574",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "opened",
+      "supported_claim": "2026-07-10 update; workspace user/role permissions are unioned; new members have defaults; data and publish controls supported.",
+      "limits": ""
+    },
+    {
+      "id": "tencent-lifecycle",
+      "title": "“权限管理”升级为“企业、工作空间与权限”",
+      "url": "https://cloud.tencent.cn/document/product/1759/105796",
+      "publisher": "official",
+      "checked_at": "2026-10-28T21:35:31Z",
+      "status": "search-excerpt",
+      "supported_claim": "2025-08-17 migration notice; product formerly 大模型知识引擎.",
+      "limits": "Historical permission guidance; do not blindly grant legacy broad-access policy."
+    }
+  ],
+  "failed_probes": [
+    {
+      "url": "https://github.com/coze-dev/coze-studio/blob/main/LICENSE",
+      "error": "404 Not Found",
+      "resolution": "official repository points to LICENSE-APACHE; read that file instead"
+    },
+    {
+      "url": "https://docs.dify.ai/en/cloud/workspace/manage-members",
+      "error": "not accessible via this tool",
+      "resolution": "No roles claim based on this URL; no bypass attempted"
+    }
+  ]
+}
