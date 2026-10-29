@@ -66,3 +66,17 @@ test('Back/Forward reopens old anchor inside moved evidence instead of landing i
  assert.equal(restored.open,true);
  assert.equal(all(restored).find(n=>n.id===anchor.id).scrolled,true);
 });
+
+test('three introductory jumps occupy separate explicit grid rows with unchanged destinations',()=>{
+ const f=fixture(root);f.run("navigate({case:'gap-express-targeted'})");
+ const group=all(f.ids.content).find(n=>n.className==='reader-intro-jumps');
+ assert.ok(group);assert.equal(group.children.length,3);
+ assert.deepEqual(group.children.map(n=>[n.tagName,n.textContent,n.href]),[
+  ['A','任务与预期产物','#case-task-introduction'],
+  ['A','开始前确认','#case-start-requirements'],
+  ['A','原介绍与证据状态','#case-original-introduction']
+ ]);
+ const css=fs.readFileSync(path.join(root,'web/style.css'),'utf8');
+ const rule=css.match(/\.detail-toc \.reader-intro-jumps\{([^}]+)\}/);
+ assert.ok(rule);assert.match(rule[1],/display:grid/);assert.match(rule[1],/grid-template-columns:minmax\(0,1fr\)/);assert.match(rule[1],/gap:3px/);assert.match(rule[1],/grid-column:1 \/ -1/);
+});

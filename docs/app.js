@@ -70,7 +70,7 @@ function addCaseIntroduction(body,nav,c,safety){
  // Keep the breadcrumb first; the old body and footer retain their relative order.
  const first=body.children[1]||null;
  body.insertBefore(intro,first);body.insertBefore(prerequisites,first);body.insertBefore(original,first);
- const quick=el('div');
+ const quick=el('div',undefined,'reader-intro-jumps');
  for(const [id,label]of [['case-task-introduction','任务与预期产物'],['case-start-requirements','开始前确认'],['case-original-introduction','原介绍与证据状态']]){
   const a=el('a',label);a.href='#'+id;a.addEventListener('click',e=>{e.preventDefault();history.replaceState(history.state,'',routeURL(route)+'#'+id);revealReadingTarget($(id));});quick.append(a);
  }

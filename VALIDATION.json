@@ -1,7 +1,7 @@
 {
-  "version": "agentwork-legacy-reader-intro-r2",
+  "version": "agentwork-reader-jump-layout-r1",
   "checked_at": "2026-10-29",
-  "baseline_commit": "6d004348e89663effe7a09b99d9e183a88ef3c16",
+  "baseline_commit": "55c97b890587c263cc2f8c73622c6462cbd1acf2",
   "manifest_scope": "all repo files excluding .git, caches, pyc and this VALIDATION.json",
   "counts": {
     "beginner_workflows": 10,
@@ -18,7 +18,7 @@
     "status": "isolated_candidate_not_published",
     "offline_checks": {
       "python": 248,
-      "node": 123,
+      "node": 124,
       "mcp": 18,
       "creative_tests": 25,
       "creative_golden": 24,
@@ -31,7 +31,7 @@
       "product_expected_invalid_copies": 10,
       "deterministic_rebuild": "two byte-identical serial builds"
     },
-    "scope": "Legacy single-case introduction only. Original node IDs and full anchor text preserved; data, BOOK, source materials, task-first ten workflows, ZIP, licenses and CSS byte-identical. No body reorder. r2 additionally separates two music prompt backlinks and localizes the music prepare display label; original music data and copy bytes unchanged.",
+    "scope": "Only three legacy-reader introduction jump links use a scoped single-column grid with 3px gaps; href/IDs/text/old 3123 anchor targets/source data unchanged.",
     "browser": "Not run; actual reader usability pending root acceptance"
   },
   "sha256": {
@@ -59,7 +59,7 @@
     "docs/REGIONAL_OFFICE.md": "02887594860aee1213af381a87bf8eafa3fa97193331dc9e76b1698e128f3872",
     "docs/RESEARCH_SNAPSHOT.json": "b3323a834605969e171798494c17cc0115563d8a028e5229992cd02f21fa035f",
     "docs/VERIFICATION.md": "df3e7855e110326691d35c99d6d4f4e3741dfb8060deed1104f33d6166b2b4f0",
-    "docs/app.js": "702452c183c7ebd3c1576ae82a0abea2ffc6f2701cae6f543257b50435351b33",
+    "docs/app.js": "768f74eb2576bd73a85b8d1df18a29890ad042e8d7a152f22bb2d08cf85d9ed6",
     "docs/assistant-workspace/r1/qa/HASH.sha256": "368efb8b26d474a7fd1ed93db83e276665fd145cd2ef6fd5c1a42e6183788d8a",
     "docs/assistant-workspace/r1/qa/README.md": "1a8c3665c24e7cbfa55fafe178c2edec761d5d00d809a36866007b8b1031e29a",
     "docs/assistant-workspace/r1/qa/REVISION-RECHECK.json": "b8880e7df59a609107a6afe749d1e0409266abb03fc984c8011c384153eeb50c",
@@ -193,7 +193,7 @@
     "docs/learning/mcp/raw/tests/test_contract.py": "552b75ae3a301e962ecc0021a64631fbc224d1480b64e9e8b543eafe920533a3",
     "docs/learning/mcp/raw/validate.py": "e6a42789520a69f543b0b2c677f90bdc05b0f0535c258fdc8d1474124d921ce0",
     "docs/learning/mcp/raw/verification.json": "fc71db8da368d20e477c430a9ae3f809a0007095c387b8ac604f8e0f5d0dca68",
-    "docs/library.html": "ee7c2a4ebcef3628595d402bb5caed69ee3ea2ed5072a59174b2cfaa431afd48",
+    "docs/library.html": "749d2fb0f9b370a7e785578c19b60c97e12bb5d13041226bb175f7304c7cfba5",
     "docs/mcp-offline-labs.zip": "6abe0d208035c2e7e2031edfbe766c849ef9902718b3aa8080cdc5e6955aad09",
     "docs/office-agents/r1/qa/audit.md": "0ee5af38ecc8d7f752dcecc84a21b0517a1584465013b31ff3ee3e588bad0311",
     "docs/office-agents/r1/qa/final-hashes.json": "bf3d5d71f59e7e7b9fdaefaeee9af31339e46d9eff7a78f828162bee01cd4d62",
@@ -628,7 +628,7 @@
     "docs/regional-office/r1/raw/source-checks.json": "a37259fb2f0b9dedadf889bfaae283f0ace68de94899e129f97422f19570c570",
     "docs/regional-office/r1/raw/unknowns.json": "99184e10f08d27561a450b9d61f9694521a2d8a74442324af7c7b418b6b43da3",
     "docs/regional-office/r1/raw/validation.json": "03b1a1c2d07cc39801ea6ac769cb36308fe61a22aa494d65eacf2878315f7337",
-    "docs/style.css": "e0d15d5b75e202328be23adde561099c3d70e6b9d2254620cf609c08ac32642d",
+    "docs/style.css": "0d44a30cc0b4fa6729d2d05911eec9e6d8c70fe8742408c04da57013ef0bcd7a",
     "docs/task-first-data.json": "f849a0ec92ef944b7c41939f7c6f549c8b4c51e3b896aa6a099313d2647caf3a",
     "docs/task-first.css": "cd55a927b5e5fb8cdcfeb2febc2759887cd37fae049f32a376ded1adea164657",
     "docs/task-first.js": "9f5818985da92c4ce9d0a14abd3d99ca019579869ad475ce91bc570fe4e724da",
@@ -1400,7 +1400,7 @@
     "site/.nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "site/BOOK.md": "6383c06931dcb9e88cf540e463a9fb3d3af4a172603863d84600f31f86d5ac42",
     "site/REGIONAL_OFFICE.md": "02887594860aee1213af381a87bf8eafa3fa97193331dc9e76b1698e128f3872",
-    "site/app.js": "702452c183c7ebd3c1576ae82a0abea2ffc6f2701cae6f543257b50435351b33",
+    "site/app.js": "768f74eb2576bd73a85b8d1df18a29890ad042e8d7a152f22bb2d08cf85d9ed6",
     "site/assistant-workspace/r1/qa/HASH.sha256": "368efb8b26d474a7fd1ed93db83e276665fd145cd2ef6fd5c1a42e6183788d8a",
     "site/assistant-workspace/r1/qa/README.md": "1a8c3665c24e7cbfa55fafe178c2edec761d5d00d809a36866007b8b1031e29a",
     "site/assistant-workspace/r1/qa/REVISION-RECHECK.json": "b8880e7df59a609107a6afe749d1e0409266abb03fc984c8011c384153eeb50c",
@@ -1534,7 +1534,7 @@
     "site/learning/mcp/raw/tests/test_contract.py": "552b75ae3a301e962ecc0021a64631fbc224d1480b64e9e8b543eafe920533a3",
     "site/learning/mcp/raw/validate.py": "e6a42789520a69f543b0b2c677f90bdc05b0f0535c258fdc8d1474124d921ce0",
     "site/learning/mcp/raw/verification.json": "fc71db8da368d20e477c430a9ae3f809a0007095c387b8ac604f8e0f5d0dca68",
-    "site/library.html": "ee7c2a4ebcef3628595d402bb5caed69ee3ea2ed5072a59174b2cfaa431afd48",
+    "site/library.html": "749d2fb0f9b370a7e785578c19b60c97e12bb5d13041226bb175f7304c7cfba5",
     "site/mcp-offline-labs.zip": "6abe0d208035c2e7e2031edfbe766c849ef9902718b3aa8080cdc5e6955aad09",
     "site/office-agents/r1/qa/audit.md": "0ee5af38ecc8d7f752dcecc84a21b0517a1584465013b31ff3ee3e588bad0311",
     "site/office-agents/r1/qa/final-hashes.json": "bf3d5d71f59e7e7b9fdaefaeee9af31339e46d9eff7a78f828162bee01cd4d62",
@@ -1969,7 +1969,7 @@
     "site/regional-office/r1/raw/source-checks.json": "a37259fb2f0b9dedadf889bfaae283f0ace68de94899e129f97422f19570c570",
     "site/regional-office/r1/raw/unknowns.json": "99184e10f08d27561a450b9d61f9694521a2d8a74442324af7c7b418b6b43da3",
     "site/regional-office/r1/raw/validation.json": "03b1a1c2d07cc39801ea6ac769cb36308fe61a22aa494d65eacf2878315f7337",
-    "site/style.css": "e0d15d5b75e202328be23adde561099c3d70e6b9d2254620cf609c08ac32642d",
+    "site/style.css": "0d44a30cc0b4fa6729d2d05911eec9e6d8c70fe8742408c04da57013ef0bcd7a",
     "site/task-first-data.json": "f849a0ec92ef944b7c41939f7c6f549c8b4c51e3b896aa6a099313d2647caf3a",
     "site/task-first.css": "cd55a927b5e5fb8cdcfeb2febc2759887cd37fae049f32a376ded1adea164657",
     "site/task-first.js": "9f5818985da92c4ce9d0a14abd3d99ca019579869ad475ce91bc570fe4e724da",
@@ -2077,7 +2077,7 @@
     "tests/fixtures/music-original-nine.json": "3fc5db326922fb8edcea802f6beacbfb55ba11c193532caa1b60cbf65ff5d81e",
     "tests/fixtures/regional-office-baseline.json": "bd4ae92e2b896dcf902bc2e870402a73f5b9a2500dc30923a2b379a8383f814b",
     "tests/legacy-dom-fixture.js": "af263ee6cffd6383ed445af2f1ef6f1114b7ee931b2fe5a0c3f958be44f1b36f",
-    "tests/legacy-intro.test.js": "ac5412fcdbd1ef10a35edbdba2884adb3dba312e36f94a704f2df9618fb2be92",
+    "tests/legacy-intro.test.js": "eb47617e7c4195944b949860f98292f224351d18aab6f65b27f46ab64eb536cd",
     "tests/music-task-ui.test.js": "cb049b5f51c017f5d2914d7a18dcfa63a7ad273fb6e1c59d5a9dc6df4857e396",
     "tests/office-ui.test.js": "7c52a7c1cd6b24c1d5fd8c855bd74b2a27ec57d753c442aef03a6c9532e90497",
     "tests/offline-office-ui.test.js": "6d5a3be6837289b495435c9b9eeabc32c0a0a69eb18cb773083e0aac7a594fa3",
@@ -2117,7 +2117,7 @@
     "tests/test_regional_office.py": "26fbdce7fe054cf12c69a42e9695f8e02b0ffb5920a280b4486654ef6ffa2a1d",
     "tests/test_task_first.py": "3bfc1b07805e22211297aabb2f34fb7645c4470a5cb5f12b6bc854faf58e8b4e",
     "tests/test_task_first_publish.py": "8b1b325b2438487403826ff4c0592dd41ce5e99fd6834c359ff2a226f144d1f2",
-    "web/app.js": "702452c183c7ebd3c1576ae82a0abea2ffc6f2701cae6f543257b50435351b33",
+    "web/app.js": "768f74eb2576bd73a85b8d1df18a29890ad042e8d7a152f22bb2d08cf85d9ed6",
     "web/creative-delivery-lab.html": "50e78af2b1fe3070a417832b44dd6d7bba491d291482ad87e295fcaf4c4c7bfb",
     "web/index.html": "a810a3b0edadbd4ff7cbd87be3697b5414683dfd1517bd8461ac9bacd1f63b7d",
     "web/library.html": "25a69203480fdcbbf8e4c18a434751288b9fdc7a4cacb12e7adcb94cd40e5811",
@@ -2130,7 +2130,7 @@
     "web/product-library.js": "85aea1f49230bc95c307a900e7113c092429f734c0e508c7ec6f1b2540b254d0",
     "web/product-markdown.js": "0fffed10eefdd27b2117bb7f017ce8cc44be9b78a18f2e18b6bf5792a39d668e",
     "web/reader.js": "1a69c8a672dfd2c6d6776077df645725f2abf9ef4175c43f48b48089a2b4f35c",
-    "web/style.css": "e0d15d5b75e202328be23adde561099c3d70e6b9d2254620cf609c08ac32642d",
+    "web/style.css": "0d44a30cc0b4fa6729d2d05911eec9e6d8c70fe8742408c04da57013ef0bcd7a",
     "web/task-first.css": "cd55a927b5e5fb8cdcfeb2febc2759887cd37fae049f32a376ded1adea164657",
     "web/task-first.js": "9f5818985da92c4ce9d0a14abd3d99ca019579869ad475ce91bc570fe4e724da"
   },
@@ -2141,6 +2141,5 @@
   "depends_on": {
     "candidate": "agentwork-express-rubric-fix-r1",
     "validation_sha256": "417da496f3a2f47922f1157072f0d9979ebd1ef674da56eed3f4514d09e9e134"
-  },
-  "dependency": "agentwork-legacy-reader-intro-r1"
+  }
 }
