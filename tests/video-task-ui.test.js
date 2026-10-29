@@ -14,7 +14,7 @@ const src=n=>n.attrs.src||n.src||'';
 const STEPS=['prepare','tool','setup','prompt','example','check'];
 
 test('video, rough cut and fact preservation find the eleventh actual task',async()=>{
- const w=videoTask();assert.equal(data.workflows.length,11);assert.equal(w.video_workflow,true);
+ const w=videoTask();assert.equal(data.workflows.length,12);assert.equal(w.video_workflow,true);
  for(const q of ['视频','粗剪','保留事实',w.title]){
   const b=await boot('?q='+encodeURIComponent(q)+'&category='+encodeURIComponent(w.category));
   assert.equal(b.ids.status.textContent,'');assert.ok(all(b.ids.screen).some(n=>n.attrs['data-workflow-id']===w.id),q);

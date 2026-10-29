@@ -1,0 +1,18 @@
+{
+  "workflows": {
+    "meeting-actions": "9941dd1a8a080164321a6142a4a084b4dde1e861fdcf3e4685d8016c4bfa2144",
+    "weekly-report": "37b5bbdfef1ab4eff43f1b5b7fea0fd093f11a65cba550fbf3798197e6817567",
+    "clean-orders": "14f12e738a5030ff1fb34658f7187fa87308af4b3807ac3e707ce193ae3c8be2",
+    "six-slide-outline": "1a6ded24814d65f64faa5be829905ea3e86967094f2a8c0cc0c97de9a47cf68d",
+    "competitor-research": "46e885e58825cd07bdd5641e24bc21c971dbdc49fc5853f4a615481cd555c5aa",
+    "fix-small-bug": "3ef46aca1f3566d05316376b37934ba6fa3911cc25f90832090545edb65ea478",
+    "customer-reply": "5528f3d92cac17b50f43b72f74d5247896611f3326a89edfae879bbd5f6370d0",
+    "three-day-content": "8c83baf892fd1b7fd1c6931feceed7c3ba166b358a12c55a71da95024bae3162",
+    "design-handoff": "cb082e34db6976afe6fe46f5f89b087798795490d60482cc210b20cf1c235c2c",
+    "music-intro-ab": "9542abc8ce09cf07a0934b74456f70409158194530bd798a8bc21674fe0bf3ac",
+    "video-fact-preserving-cut": "8a79fa0253c1386eab40f86e017f0a2bf9cc5bf63748ceacf01e375f98bdba8b"
+  },
+  "guides": "03dbbdedb5533ea40dd0b4b1f79ff81a7c12293ac035c5422f79334fa87882d4",
+  "chooser": "8b62f5a718016ebdeff6d8c9f44d2f21e59916d2cfe8ef026db05c57e86a79cb",
+  "legacy_case_ids": "9d5cdb13c64e7d7a638e20662c192942b03502c660dac08b5afa6b9dff2c9662"
+}

@@ -11,7 +11,7 @@ const click=n=>{assert.ok(n,'navigation target exists');n.events.click({preventD
 const href=n=>n.attrs.href||n.href||'';
 
 test('music is an actual searchable homepage task, including category and exact title',async()=>{
- const w=music();assert.equal(data.workflows.length,11);assert.equal(w.music_workflow,true);
+ const w=music();assert.equal(data.workflows.length,12);assert.equal(w.music_workflow,true);
  for(const q of ['音乐','配乐',w.title]){const b=await boot('?q='+encodeURIComponent(q));assert.equal(b.ids.status.textContent,'');const cards=all(b.ids.screen).filter(n=>n.attrs['data-workflow-id']);assert.ok(cards.some(n=>n.attrs['data-workflow-id']===w.id),q);}
  const b=await boot('?q=音乐&category='+encodeURIComponent(w.category));assert.ok(all(b.ids.screen).some(n=>n.attrs['data-workflow-id']===w.id));
 });

@@ -1,0 +1,45 @@
+{
+  "schema": "study-public-projection/1",
+  "source_manifest_sha256": "5ad23f1ec5ca600232e9e94559cd801a5228fe48e2185f695c9195bf67bf6a18",
+  "public_original_sha256": {
+    "card-prompt.txt": "4fd7d5e227f963acd8c67721288396dd4a3a141117194c168d71dbb6f40f1936",
+    "README.zh-CN.md": "35d557c89df60323e1b53974c5b90649a318b088c43d74a92450056e89a0816f",
+    "sources.md": "001c6cec049b2ca9a007b01f85dd30e3c501fe0160e9d62b7edc7307e51c2253",
+    "self-test-questions.txt": "15368ea83cb90b811d0225feddc59819632879fbf8645481149e8644b9b111bd",
+    "send-once.txt": "fd436013220b93ba00e25aea53bde68ec1ac9337fe70e5ac4dac5f07afb30ec9",
+    "error-log.md": "1755acdcd0d125f3eb59869842f80903adb18afdbffd3bb37ce157d499663c3c",
+    "reference-cards.md": "0f7037085ac0036183dd869dcd096397a3207f84389b3da3c3f0b11b6cd835ce",
+    "self-test-answers.md": "a11442b9f8664c0b87da962212308e39d5cb210157f5a6418b8ac1453ad31bf6",
+    "correction-prompt.txt": "3a4fbd9f990df4564c190fbf88ef395900955e26247b87e2280c1406e879f9e8",
+    "material.txt": "eec7570a8c4bd68b05d560fcf5eb58d87aed7500dac243e16c70f798e0d3f408"
+  },
+  "mapping": "PROJECTION.md",
+  "interaction_mode": "paste-material",
+  "product_execution": "not_run",
+  "user_answers_present": false,
+  "learning_outcomes_measured": false,
+  "transformed": {
+    "README.zh-CN.md": [
+      "workflow.json"
+    ],
+    "sources.md": [
+      "source-ledger.json"
+    ]
+  },
+  "public_file_sha256": {
+    "PROJECTION.md": "1f70ca08104b14f89c4cc69408da253a52eebfc7579f343dab9cd35075b14f7b",
+    "README.zh-CN.md": "35d557c89df60323e1b53974c5b90649a318b088c43d74a92450056e89a0816f",
+    "card-prompt.txt": "4fd7d5e227f963acd8c67721288396dd4a3a141117194c168d71dbb6f40f1936",
+    "correction-prompt.txt": "3a4fbd9f990df4564c190fbf88ef395900955e26247b87e2280c1406e879f9e8",
+    "error-log.md": "1755acdcd0d125f3eb59869842f80903adb18afdbffd3bb37ce157d499663c3c",
+    "material.txt": "eec7570a8c4bd68b05d560fcf5eb58d87aed7500dac243e16c70f798e0d3f408",
+    "reference-cards.md": "0f7037085ac0036183dd869dcd096397a3207f84389b3da3c3f0b11b6cd835ce",
+    "self-test-answers.md": "a11442b9f8664c0b87da962212308e39d5cb210157f5a6418b8ac1453ad31bf6",
+    "self-test-questions.txt": "15368ea83cb90b811d0225feddc59819632879fbf8645481149e8644b9b111bd",
+    "send-once.txt": "fd436013220b93ba00e25aea53bde68ec1ac9337fe70e5ac4dac5f07afb30ec9",
+    "source-ledger.json": "946196ef4275c1396eceeacfd08a502cc5733e3aa38857d978b2e3fbff448f72",
+    "sources.md": "001c6cec049b2ca9a007b01f85dd30e3c501fe0160e9d62b7edc7307e51c2253",
+    "workflow.json": "17a2279b032b338fd11221a76ebd021b38536b8cc859532c5ddbb19e9c955218"
+  },
+  "user_results": "not_collected"
+}

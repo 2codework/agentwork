@@ -1,0 +1,152 @@
+{
+  "schema": "study-workflow/1",
+  "id": "study-three-cards",
+  "interaction_mode": "paste-material",
+  "status": "ready",
+  "title": "把模型、应用和API做成三张复习卡，再独立自测",
+  "outcome": "三张经你核对的复习卡、两题真实原答与错误日志；不预填成绩，也不代表永久掌握。",
+  "product": "Gemini 网页版（普通文字聊天）",
+  "product_id": "google-gemini-text",
+  "category": "学习与复习",
+  "keywords": [
+    "学习",
+    "复习卡",
+    "模型应用API",
+    "模型",
+    "应用",
+    "API",
+    "自测",
+    "复习",
+    "学习卡",
+    "知识卡片",
+    "三张卡"
+  ],
+  "material_label": "一页原创固定材料，完整消息一次复制，不上传附件",
+  "audience": "想分清聊天应用、模型与API的初学者；使用普通文字聊天或纸面练习，不需要编程。",
+  "prerequisites": [
+    "本课限定18岁及以上、已有可用个人Google账户；先核对地区、入口与额度。这是课程范围，不是所有Gemini文字功能的年龄要求。",
+    "只用本课固定材料；准备自己的文本文件或纸面记录，不需要API密钥、MCP或安装Skill。"
+  ],
+  "access_cost": "新增预算为0，仅用已有账户现有额度。出现升级、购买或额度不足提示即停，不开试用、不绑账单，不承诺本课免费请求次数。最多一次制卡和一次针对性纠错是停止上限，不代表两次免费额度。",
+  "privacy": "只粘贴本课原创固定材料；不上传附件、不接网盘，不输入私人笔记或公司文档，不为完成本课改变隐私开关。自行核对账号的数据设置；不可用时只做纸面版。",
+  "source_ids": [
+    "study-source-01",
+    "study-source-02",
+    "study-source-03",
+    "study-source-04",
+    "study-source-05",
+    "study-source-06",
+    "study-source-07",
+    "study-source-08",
+    "study-source-09"
+  ],
+  "source_steps": {
+    "prepare": 1,
+    "tool": 2,
+    "setup": 3,
+    "prompt": 4,
+    "example": 5,
+    "check": 6
+  },
+  "product_execution": "not_run",
+  "user_answers_present": false,
+  "learning_outcomes_measured": false,
+  "sections": {
+    "prepare": {
+      "title": "准备固定学习材料",
+      "body": "打开同目录 `material.txt`，完整读一遍L1–L8。它是一页篇幅的原创文字材料，不是截图或固定纸张分页文件。不要换成私人笔记、公司文档或加入外部知识。本次所有卡片与纠错**只以这份材料核对**。\n\n准备一个自己的文本文件保存三卡，另打开 `error-log.md` 作记录。暂时不要打开 `reference-cards.md`；它在第4步用于制卡核对。自测作答前不要打开 `self-test-answers.md`；若提前看过这份自测答案，才如实记“已看答案”。阅读第4步作者参考卡属于正常学习，不因此标为提前看过自测答案。",
+      "source_step": 1,
+      "source_ids": [
+        "study-source-04",
+        "study-source-05",
+        "study-source-06",
+        "study-source-07"
+      ]
+    },
+    "tool": {
+      "title": "打开普通聊天并确认条件",
+      "body": "本路线选 [Gemini官方网页](https://gemini.google.com/)，只用普通文字聊天，不选音乐、深度研究、联网搜索、连接应用等特殊功能。\n\n- 本课为减少账号差异，限定**18岁及以上、已有可用个人Google账户**的读者；这是课程范围，不是声称所有Gemini普通文字功能都要求18岁。本人在官网完成登录，不把密码、验证码交给AI。官方也允许某些未登录功能，但本课不依赖它；工作/学校账户须另核对组织支持与管理员设置。[普通聊天帮助](https://support.google.com/gemini/answer/13275745?co=GENIE.Platform%3DDesktop&hl=en)\n- 核对[官方地区表](https://support.google.com/gemini/answer/13575153?hl=en)。网页与移动端可能不同；当前中国大陆条目标注Workspace only，本路线不承诺大陆个人账户能用。不可用就做纸面版，不绕过地区或组织限制。\n- 使用已有账户的现有额度，**新增预算为0**。普通使用有无AI付费计划的额度层级，具体可用量会变；不承诺本课免费请求次数。出现升级、购买、额度不足提示就停，不开试用、不绑账单。[额度说明](https://support.google.com/gemini/answer/16275805?hl=en)\n- 普通浏览器即可。输入只有本课原创材料；不上传附件、不接网盘、不改隐私开关来完成本课。你仍应自行核对账号的数据设置。没有入口、不能登录或额度不足，可手写三卡再做自测，标“纸面练习”，不能记成产品执行成功。",
+      "source_step": 2,
+      "source_ids": [
+        "study-source-01",
+        "study-source-02",
+        "study-source-03",
+        "study-source-08"
+      ]
+    },
+    "setup": {
+      "title": "新建对话，准备一次提交",
+      "body": "在网页左上点 **New chat / 新对话**；若未显示，先展开 **Menu / 菜单**。只用普通文字聊天，保持这个新对话打开。\n\n**现在先不提交。** 下一步优先使用已经组合好完整提示与材料的 `send-once.txt`。如果输入框已有草稿，下一步用整段替换，不要追加成两份材料。\n\n不要复制作者参考或自测答案进去；不要选择音乐、外部搜索或连接功能。[普通文字操作依据](https://support.google.com/gemini/answer/13275745?co=GENIE.Platform%3DDesktop&hl=en)",
+      "source_step": 3,
+      "source_ids": [
+        "study-source-01",
+        "study-source-02",
+        "study-source-03",
+        "study-source-08"
+      ]
+    },
+    "prompt": {
+      "title": "生成三卡，再逐条核对",
+      "body": "**推荐简路：复制完整的 `send-once.txt`。** 它已包含全部制卡要求和完整L1–L8。用整段**替换输入框现有内容**，不要追加，不要再拼一遍材料，也不要把占位括号当真材料。确认同一条消息中任务和材料都完整后，按Submit发送一次。",
+      "source_step": 4,
+      "source_ids": [
+        "study-source-04",
+        "study-source-05",
+        "study-source-06",
+        "study-source-07"
+      ],
+      "prompt_asset": "send-once.txt",
+      "reference_asset": "reference-cards.md",
+      "manual_body": "备用逐块法（按原指南）：下面的括号是替换说明，不是可直接提交的材料。优先使用上方已拼好的完整消息；逐块法与完整消息二选一，不要重复追加。\n\n在网页左上点 **New chat / 新对话**；若未显示，先展开 **Menu / 菜单**。在普通聊天输入框粘贴：\n\n```text\n【固定材料】\n（这里粘贴 material.txt 的完整全文，不是只写文件名）\n【固定材料结束】\n```\n\n此时**暂不提交**。不要复制作者参考或自测答案进去；不要选择任何外部搜索/连接功能。官方确认了新对话、输入与Submit的普通文字操作；界面文案可能随语言调整。[操作依据](https://support.google.com/gemini/answer/13275745?co=GENIE.Platform%3DDesktop&hl=en)\n\n把 `card-prompt.txt` 的**全部内容**粘到刚才【固定材料】之前，确认同一条消息里既有任务要求又有完整L1–L8，再按Submit发送一次。",
+      "after_send": "等待结果后，把实际三卡原样保存为自己的 `my-cards.txt`。先按下面四项查，不要只看它说“已完成”：\n\n1. 恰好三卡，分别是聊天应用、模型、API；每卡有正面、背面、例子、易混点与依据行号。\n2. “应用=人用入口、模型=生成核心、API=程序请求接口”没有混淆。\n3. 没有把API写成更聪明/本课必需；没有猜版本、价格或额度。\n4. 每条依据行号确实支持文字；写着L2却讲L2没有的内容仍算缺依据。\n\n需要比对时打开 `reference-cards.md`，它是**作者参考**，不是示范运行结果。实际输出不符时保留原稿，标出问题，用材料和参考手动修正自己的卡片，不必多生成几遍。如果模型开始搜索或引用材料外信息，不把那些内容收入卡片；停止此轮，回到纸面核对。提示“不联网”不是技术上保证产品永不检索。\n\n阅读这一步的作者参考卡属于正常学习，不因此记为提前看过自测答案；只有在独立自测作答前看过 `self-test-answers.md`，才如实记“已看答案”。"
+    },
+    "example": {
+      "title": "先独立自测，再核对纠错",
+      "body": "先关闭聊天输出、材料和所有参考文件。只打开 `self-test-questions.txt`，自己在纸上或文本文件写两题答案。**不要让AI代答，也不要先开答案。** 不知道就写不知道，不凭印象补版本或价格。",
+      "source_step": 5,
+      "source_ids": [
+        "study-source-04",
+        "study-source-05",
+        "study-source-06",
+        "study-source-07"
+      ],
+      "questions_asset": "self-test-questions.txt",
+      "answers_asset": "self-test-answers.md",
+      "after_self_test": "写完后，才打开 `self-test-answers.md`，按答案要点回查 `material.txt` 的L行号。把真实原答、具体混淆和修正写入 `error-log.md`；不能把作者答案复制成自己的原答。\n\n若仍有一个混淆，选日志中**真实的一条原答**，回到含固定材料的同一聊天，将 `correction-prompt.txt` 的占位行替换为该原答，再完整粘贴发送一次。它只处理这一条，不代做其他题。若对话已丢失，重新建立普通新对话，把完整材料与纠错提示放同一消息；不只给“如上”两个字。\n\n收到纠错后仍由你对照L行号：正确就用自己的话重写解释；无依据就标“纠错不可靠”，回到材料，不上网搜来补分。没有真实错误时跳过该请求，不虚构错误来使用AI。\n\n**停手边界：**本课最多一次制卡请求和一次针对性纠错请求；这是停止上限，不代表有两次免费额度。失败/额度不足/状态不明时先检查是否已有结果，不反复点发送，不升级套餐。仍不清楚的地方记待复习，结束本轮。",
+      "correction_asset": "correction-prompt.txt",
+      "error_log_asset": "error-log.md"
+    },
+    "check": {
+      "title": "记录表现，安排下次复习",
+      "body": "这不是资格考试，不给自动分数。你自己依据真实作答填写：\n\n- **本次要点齐全：**三卡经过材料核对；题1能分开应用/模型且不猜版本；题2能纠正两项误区、说出程序接入场景并对价格保留未知。仍只表示这次练习范围内答出了要点，不是永久掌握。\n- **待复习：**任何一项漏答或解释不清，就只复习相应卡片，把具体原因写日志。\n- **非独立作答：**先看答案或AI代答，记录这一事实；不能把结果当独立掌握证据。\n\n建议自己在纸上写一个明天方便的时间（这是本课建议，不是系统提醒，也不是保证最优的记忆规律）。届时隐藏卡背与答案，用三卡的正面问题回忆，再用自己的话重答两题；核对后在日志追加真实结果，不覆盖今天的原答。若仍错，继续标待复习，不强行打勾。",
+      "source_step": 6,
+      "source_ids": [
+        "study-source-04",
+        "study-source-05",
+        "study-source-06",
+        "study-source-07"
+      ]
+    }
+  },
+  "assets": [
+    "card-prompt.txt",
+    "README.zh-CN.md",
+    "sources.md",
+    "self-test-questions.txt",
+    "send-once.txt",
+    "error-log.md",
+    "reference-cards.md",
+    "self-test-answers.md",
+    "correction-prompt.txt",
+    "material.txt"
+  ],
+  "material_asset": "material.txt",
+  "send_once_asset": "send-once.txt",
+  "reference_asset": "reference-cards.md",
+  "questions_asset": "self-test-questions.txt",
+  "answers_asset": "self-test-answers.md",
+  "correction_asset": "correction-prompt.txt",
+  "error_log_asset": "error-log.md",
+  "source_artifact": "README.zh-CN.md",
+  "user_results": "not_collected"
+}

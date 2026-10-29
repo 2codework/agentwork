@@ -1,0 +1,78 @@
+{
+  "schema": "study-sources/1",
+  "read_date_utc": "2026-10-29",
+  "sources": [
+    {
+      "id": "study-source-01",
+      "title": "Gemini普通聊天",
+      "url": "https://support.google.com/gemini/answer/13275745?co=GENIE.Platform%3DDesktop&hl=en",
+      "checked_at": "2026-10-29",
+      "supports": "网页输入、Submit、New chat；部分未登录能力与账号区别",
+      "limits": "不证明你的账号可用，也不保证制卡正确；本课限定18+个人账户是编辑范围"
+    },
+    {
+      "id": "study-source-02",
+      "title": "Gemini地区",
+      "url": "https://support.google.com/gemini/answer/13575153?hl=en",
+      "checked_at": "2026-10-29",
+      "supports": "网页地区清单；中国大陆标Workspace only",
+      "limits": "不把中文界面等同大陆个人账号支持，不推断移动端相同"
+    },
+    {
+      "id": "study-source-03",
+      "title": "Gemini额度",
+      "url": "https://support.google.com/gemini/answer/16275805?hl=en",
+      "checked_at": "2026-10-29",
+      "supports": "无AI计划与付费计划有不同限额；额度动态调整",
+      "limits": "不保证两次免费请求，不要求购买任何计划"
+    },
+    {
+      "id": "study-source-04",
+      "title": "Anthropic原文",
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "checked_at": "2026-10-29",
+      "supports": "模型作为系统构件；复用ModelAtlas foundation-01概念来源",
+      "limits": "2024原文带工具变化提示，不用作当前Gemini产品操作依据"
+    },
+    {
+      "id": "study-source-05",
+      "title": "OpenAI API Quickstart",
+      "url": "https://developers.openai.com/api/docs/quickstart",
+      "checked_at": "2026-10-29",
+      "supports": "程序通过API请求模型并接收输出；复用ModelAtlas API课来源",
+      "limits": "不是“API更聪明”的证据；本课不教API安装/密钥/运行/计费"
+    },
+    {
+      "id": "study-source-06",
+      "title": "ModelAtlas基础材料",
+      "url": "https://2codework.github.io/modelatlas/foundations-source.json",
+      "checked_at": "2026-10-29",
+      "supports": "本课复用模型/聊天应用区分的项目内教学出处",
+      "limits": "本次读取本地已接纳副本，不是重新测量模型能力"
+    },
+    {
+      "id": "study-source-07",
+      "title": "ModelAtlas应用/API入门",
+      "url": "https://2codework.github.io/modelatlas/learn.html#step-3",
+      "checked_at": "2026-10-29",
+      "supports": "已接纳“API是程序向服务提交请求接口”、按任务选路线的白话说明",
+      "limits": "API定义在此是AI服务语境的入门概括，不是所有API形态的完整定义"
+    },
+    {
+      "id": "study-source-08",
+      "title": "Gemini官方网页",
+      "url": "https://gemini.google.com/",
+      "checked_at": "2026-10-29",
+      "supports": "已接受读者指南所列入口或项目内教学链接；不新增产品运行或学习效果证明。",
+      "limits": "不是账号可用性、输出正确性或真实学习成绩的保证。"
+    },
+    {
+      "id": "study-source-09",
+      "title": "ModelAtlas基础第一课",
+      "url": "https://2codework.github.io/modelatlas/foundations.html#foundation-01",
+      "checked_at": "2026-10-29",
+      "supports": "已接受读者指南所列入口或项目内教学链接；不新增产品运行或学习效果证明。",
+      "limits": "不是账号可用性、输出正确性或真实学习成绩的保证。"
+    }
+  ]
+}

@@ -11,3 +11,6 @@
 /* Local synthetic input preview; no embedded external player. */
 .video-input{display:block;width:100%;max-width:100%;height:auto;background:#172b29;border-radius:8px;margin:18px 0}
 .video-download{display:block;margin:12px 0;overflow-wrap:anywhere}
+
+/* Plain-text study materials; no account or answer-entry form. */
+.study-download{display:block;margin:12px 0;overflow-wrap:anywhere}
