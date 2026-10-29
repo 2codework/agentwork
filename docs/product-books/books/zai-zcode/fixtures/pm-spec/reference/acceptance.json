@@ -1,0 +1,35 @@
+[
+  {
+    "id": "A1",
+    "remaining_minutes": 1440,
+    "self_refund": true,
+    "given": "预约有效且未取消，时间口径尚需确认，合成剩余1440分钟",
+    "when": "请求自助取消",
+    "then": "允许全退并仅一次释放占用席位"
+  },
+  {
+    "id": "A2",
+    "remaining_minutes": 1439,
+    "self_refund": false,
+    "given": "预约有效且未取消，合成剩余1439分钟",
+    "when": "请求自助取消",
+    "then": "拒绝自助退款，不能宣称已退款"
+  },
+  {
+    "id": "A3",
+    "action": "repeat_cancel",
+    "additional_refunds": 0,
+    "given": "同一预约已成功取消并已退款一次且已释放席位",
+    "when": "再次提交同一取消请求",
+    "then": "additional_refunds=0，additional_released_seats=0",
+    "additional_released_seats": 0
+  },
+  {
+    "id": "A4",
+    "action": "successful_cancel",
+    "released_seats": 1,
+    "given": "预约有效且占用1个席位，取消/退款流程成功",
+    "when": "完成首次成功取消",
+    "then": "占用席位从1变0，released_seats=1"
+  }
+]

@@ -1,0 +1,1 @@
+只汇总paid且amount_cents为非负十进制整数的行。无效行进入errors.csv，取消行忽略；输出行序保留。

@@ -1,0 +1,52 @@
+--- a/architecture.json
++++ b/architecture.json
+@@ -0,0 +1,41 @@
++{
++  "entry": "app.py:3",
++  "flow": [
++    "app.process",
++    "parser.parse",
++    "scoring.score"
++  ],
++  "examples": [
++    {
++      "input": "1, 2,3",
++      "output": {
++        "count": 3,
++        "total": 6
++      }
++    },
++    {
++      "input": "",
++      "output": {
++        "count": 0,
++        "total": 0
++      }
++    },
++    {
++      "input": "bad",
++      "error": "ValueError"
++    }
++  ],
++  "unknowns": [
++    "No caller or persistence layer supplied."
++  ],
++  "change_seams": [
++    {
++      "file": "parser.py",
++      "purpose": "input validation"
++    },
++    {
++      "file": "scoring.py",
++      "purpose": "additional metrics"
++    }
++  ]
++}
+--- a/ONBOARDING.md
++++ b/ONBOARDING.md
+@@ -0,0 +1,5 @@
++# CSV-like scoring pipeline
++入口 app.py:3 的 process 将文本交给 parser.parse，再调用 scoring.score。
++解析器忽略空片段，把其余片段转为整数；非法文本抛 ValueError。
++空字符串是 count=0,total=0；没有数据库、网络调用或持久化代码证据。
++输入验证改 parser.py；增加统计项改 scoring.py。先补相应边界测试，再评估下游兼容性。

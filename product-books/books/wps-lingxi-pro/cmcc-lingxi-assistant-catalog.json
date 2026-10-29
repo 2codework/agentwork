@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "product": {
+    "product_id": "cmcc-lingxi-assistant",
+    "vendor": "中移（杭州）信息技术有限公司",
+    "name": "中国移动灵犀AI助手",
+    "display_name": "中国移动灵犀AI助手",
+    "status": "researched",
+    "version_scope": "未核验具体版本号",
+    "sources": [
+      {
+        "id": "cmcc-home",
+        "title": "中国移动灵犀AI助手",
+        "url": "https://ai.soho.komect.com/",
+        "accessed_at": "2026-10-29",
+        "claim_scope": "工作区、模型、工具确认；页脚中移（杭州）信息技术有限公司"
+      },
+      {
+        "id": "cmcc-privacy",
+        "title": "中国移动灵犀AI助手隐私政策",
+        "url": "https://ai.soho.komect.com/ai/llm/lingxi-assistant-docs/legal/privacy-policy",
+        "accessed_at": "2026-10-29",
+        "claim_scope": "独立产品的隐私政策，不套用WPS条款"
+      },
+      {
+        "id": "cmcc-download",
+        "title": "中国移动灵犀AI助手下载",
+        "url": "https://ai.soho.komect.com/download",
+        "accessed_at": "2026-10-29",
+        "claim_scope": "列出macOS/Windows/Linux；中国大陆手机号验证码登录；未下载，未验证最低版本"
+      }
+    ]
+  },
+  "recipes": [],
+  "coverage_status": "catalog_only_playbooks_pending",
+  "catalog": {
+    "id": "cmcc-lingxi-assistant",
+    "name": "中国移动灵犀AI助手",
+    "vendor": "中移（杭州）信息技术有限公司",
+    "official_url": "https://ai.soho.komect.com/",
+    "sources": [
+      "cmcc-home",
+      "cmcc-privacy",
+      "cmcc-download"
+    ],
+    "match": "工作区工具型桌面 Agent，也符合办公语境",
+    "tutorial_status": "catalog_only_playbooks_pending",
+    "platform": "官网下载页列macOS、Windows、Linux；最低系统版本未确认",
+    "account": "官网说明中国大陆手机号验证码登录；未登录",
+    "version": "未核验具体版本号",
+    "capability_boundary": "工作区/模型/附加资料/查看执行/授权工具与文件；扩展智能体按账号可用范围，不保证所有用户均可安装。未把营销描述当实测。",
+    "privacy_cost": "独立隐私政策适用；本轮未核实价格和额度，不承诺免费；不套用WPS不训练声明。 已读取政策含云电脑权限语境，不能无条件套用于全部原生桌面行为。"
+  }
+}

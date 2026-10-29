@@ -1,0 +1,423 @@
+{
+  "schema_version": "1.0",
+  "role_facets": {
+    "cx01-shipping-bug": {
+      "product_id": "openai-codex",
+      "role_tags": [
+        "产品",
+        "开发",
+        "测试"
+      ],
+      "source_role": "产品：给出满 50 元而非超过 50 元的规则；验收 49.99/50/50.01。；开发：只修 fee；QA：复核偏远附加费不受免邮影响。",
+      "source_role_sha256": "b28aeec6943de2fe472ea14361bafcf726dd9bc9ee5235f7adf12791cfe04d3d",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "cx02-discount-tests": {
+      "product_id": "openai-codex",
+      "role_tags": [
+        "测试",
+        "产品",
+        "开发"
+      ],
+      "source_role": "QA：从金额舍入政策设计边界，不只覆盖普通折扣。；产品：确认半分向上取整；开发：不改生产代码，评估测试是否杀死回归。",
+      "source_role_sha256": "20190a2d9489f31155db06d9a211aab60315865225e98cb522aae9aa9abb7597",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "cx03-tenant-review": {
+      "product_id": "openai-codex",
+      "role_tags": [
+        "安全",
+        "测试",
+        "开发",
+        "产品"
+      ],
+      "source_role": "安全/QA：提供租户隔离契约；仅审核合成读取函数。；开发：确认调用方是否有额外权限；产品：判定跨租户信息暴露的严重性。",
+      "source_role_sha256": "ef6f6d7a3825bb641c3d67e5e58c0a697bb7f86763be092da21c28b32c698dcd",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "cx04-legacy-map": {
+      "product_id": "openai-codex",
+      "role_tags": [
+        "开发",
+        "产品",
+        "业务分析",
+        "测试"
+      ],
+      "source_role": "新开发：需要入口、数据流和可修改位置。；产品/分析：提供样例，确认空输入含义；QA：复跑样例验证文档。",
+      "source_role_sha256": "9efe51ea0e72ef486291811b5ef0cf3e599b0cc8a7bf7840377280f2daa27731",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "cx05-money-migration": {
+      "product_id": "openai-codex",
+      "role_tags": [
+        "产品",
+        "开发",
+        "运维",
+        "测试",
+        "业务分析"
+      ],
+      "source_role": "产品：确认币种与一周兼容窗口，批准切换。；开发/运维：提供依赖与回滚责任；QA/分析：验证笔数、金额守恒。",
+      "source_role_sha256": "3f8f3db40ca7065d012717a9f17fa92478aceeeb1534596ecd3f773dcd86b9d8",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "cx06-sales-script": {
+      "product_id": "openai-codex",
+      "role_tags": [
+        "业务分析",
+        "运营",
+        "测试"
+      ],
+      "source_role": "分析：定义退款负号、重复 id 与取消口径。；运营：提供脱敏导出；QA：手算总额并提供冲突重复反例。",
+      "source_role_sha256": "d6a03481da0b4b7e187804246e58cf802bf6b1dc7bc6fa944ad58b77ef395ce7",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "cx07-triage-prototype": {
+      "product_id": "openai-codex",
+      "role_tags": [
+        "产品",
+        "设计",
+        "测试",
+        "开发"
+      ],
+      "source_role": "产品：提供两条合成工单、筛选与空态需求，不能要求接入 CRM。；设计/QA：键盘可用性与空态检查；开发：审阅无外部资源和无数据发送。",
+      "source_role_sha256": "76939bad5e4f6806f0f6b35cc620690aff58d64b0fd49abcda39f83768b9df9e",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "cx08-ci-diagnosis": {
+      "product_id": "openai-codex",
+      "role_tags": [
+        "运维",
+        "开发",
+        "测试",
+        "产品"
+      ],
+      "source_role": "运维/开发：提供脱敏 workflow、目录树和完整失败段。；QA：区分测试失败与找不到工作目录；产品：了解修复不改业务逻辑。",
+      "source_role_sha256": "00c35fcaa7f74fad4e7915d05598b3585364ea64882a56acac79813e8668f1e5",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "zai-zcode-refund-fix": {
+      "product_id": "zai-zcode",
+      "role_tags": [
+        "开发"
+      ],
+      "source_role": "后端开发",
+      "source_role_sha256": "d7ba2d72a14c98f0aeb54e7192ae454c2fb559bd830b982565b1a34800c00f39",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "zai-zcode-pm-spec": {
+      "product_id": "zai-zcode",
+      "role_tags": [
+        "产品"
+      ],
+      "source_role": "产品经理",
+      "source_role_sha256": "0dba913873a02fb328f1f1f9fecac2537ee5bf3f0ee849a27c97520724427af3",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "zai-zcode-qa-boundaries": {
+      "product_id": "zai-zcode",
+      "role_tags": [
+        "测试"
+      ],
+      "source_role": "测试工程师",
+      "source_role_sha256": "c00a08a3d007ce29b7f611766ba648e5ce36569bc58ebad50e8c1d66a83479b6",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "zai-zcode-ops-csv": {
+      "product_id": "zai-zcode",
+      "role_tags": [
+        "数据运营"
+      ],
+      "source_role": "数据运营",
+      "source_role_sha256": "953d6141e93474bd14274a1761684b702c0f043cc5f5e10c505dbbd3a9489d58",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "zai-zcode-design-handoff": {
+      "product_id": "zai-zcode",
+      "role_tags": [
+        "开发",
+        "设计"
+      ],
+      "source_role": "前端/设计协作",
+      "source_role_sha256": "f17220592b7e60dbd95aef06ce21637f8edc53fbc1544d6412f759ec5c54a743",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "zai-zcode-docs-maintenance": {
+      "product_id": "zai-zcode",
+      "role_tags": [
+        "技术文档维护"
+      ],
+      "source_role": "技术文档维护",
+      "source_role_sha256": "7d7c3958e151b82f83397f8d94b259324a3b8c92fd73503738851d4747db262c",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "zai-zcode-security-review": {
+      "product_id": "zai-zcode",
+      "role_tags": [
+        "安全"
+      ],
+      "source_role": "安全/代码评审",
+      "source_role_sha256": "8503605cecee143136de7ece1b5d5df303713a4a45afb4b91d2957ba89e367eb",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "zai-zcode-release-gate": {
+      "product_id": "zai-zcode",
+      "role_tags": [
+        "工程管理",
+        "发布协调"
+      ],
+      "source_role": "工程经理/发布协调",
+      "source_role_sha256": "9c8e6ed2094a4c95deb6230fc13a06698f8b19491d30ba815911167d22916169",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "workbuddy-meeting": {
+      "product_id": "tencent-workbuddy",
+      "role_tags": [
+        "行政"
+      ],
+      "source_role": "行政",
+      "source_role_sha256": "e79890c96ee6f0c5d40152490d9647d7f0db59e22e8f68734e9db9dcf193a940",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "workbuddy-content": {
+      "product_id": "tencent-workbuddy",
+      "role_tags": [
+        "内容运营"
+      ],
+      "source_role": "内容运营",
+      "source_role_sha256": "70a3c398dfd4eab9aac5ff159ee16b5290f7639da15bddc7d876be136fd4c3f4",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "workbuddy-project": {
+      "product_id": "tencent-workbuddy",
+      "role_tags": [
+        "项目经理"
+      ],
+      "source_role": "项目经理",
+      "source_role_sha256": "11888e7c9cd66fe38cdf28438c27003dab7883a10ec67c0272c24ef7c1c2e664",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "workbuddy-data": {
+      "product_id": "tencent-workbuddy",
+      "role_tags": [
+        "业务分析"
+      ],
+      "source_role": "业务分析",
+      "source_role_sha256": "fef75a6e81d291574fec62fbc2331169b62c4d19f7112f748a4c1f84af72e446",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "workbuddy-support": {
+      "product_id": "tencent-workbuddy",
+      "role_tags": [
+        "客户支持"
+      ],
+      "source_role": "客户支持",
+      "source_role_sha256": "73c20614bb204536aa65cf72af1a599a2d147ecb8e390175beda5c5f2e30c1b7",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "workbuddy-research": {
+      "product_id": "tencent-workbuddy",
+      "role_tags": [
+        "研究助理"
+      ],
+      "source_role": "研究助理",
+      "source_role_sha256": "a8e05830139f79a30ef0d1be615fb517a5dfff2d076f16ed033484dec3c7e2d6",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "workbuddy-design": {
+      "product_id": "tencent-workbuddy",
+      "role_tags": [
+        "设计运营"
+      ],
+      "source_role": "设计运营",
+      "source_role_sha256": "942e7bb79e046ce31badb03f42a07e376094104ea96d7e31466824b17eeb464f",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "workbuddy-dev": {
+      "product_id": "tencent-workbuddy",
+      "role_tags": [
+        "开发"
+      ],
+      "source_role": "开发协作",
+      "source_role_sha256": "d03a12306aec887963cc2f391354fd31e02ba7ba2c8c2d104e1f56bbaddb273c",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "wps-lingxi-pro-sales-review": {
+      "product_id": "wps-lingxi-pro",
+      "role_tags": [
+        "销售运营"
+      ],
+      "source_role": "销售运营",
+      "source_role_sha256": "0266a0d05b26acf7fd9ca70c8a7af6a25bc01ac9e813646a5e73262cee0e2a1e",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "wps-lingxi-pro-budget-variance": {
+      "product_id": "wps-lingxi-pro",
+      "role_tags": [
+        "财务分析"
+      ],
+      "source_role": "财务分析",
+      "source_role_sha256": "ae98f475dbcf466c9bd40928c5b2a35b144332cab50e990e45d3731b374f4e44",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "wps-lingxi-pro-meeting-actions": {
+      "product_id": "wps-lingxi-pro",
+      "role_tags": [
+        "项目管理"
+      ],
+      "source_role": "项目管理",
+      "source_role_sha256": "a049dca9d8f1e021c1397ca1eaa894eb05bc8542b23da8b3001da75fda4897da",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "wps-lingxi-pro-hr-onboarding": {
+      "product_id": "wps-lingxi-pro",
+      "role_tags": [
+        "人力运营"
+      ],
+      "source_role": "人力运营",
+      "source_role_sha256": "fb3d12fe43cf53c3fd162023ee5a58ae10834ab875f64020b02fc1da2a027466",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "wps-lingxi-pro-support-faq": {
+      "product_id": "wps-lingxi-pro",
+      "role_tags": [
+        "客户支持"
+      ],
+      "source_role": "客户支持",
+      "source_role_sha256": "73c20614bb204536aa65cf72af1a599a2d147ecb8e390175beda5c5f2e30c1b7",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "wps-lingxi-pro-procurement-matrix": {
+      "product_id": "wps-lingxi-pro",
+      "role_tags": [
+        "采购运营"
+      ],
+      "source_role": "采购运营",
+      "source_role_sha256": "375425fbe8aba00f96a29fdf911e66aa7a1dc2942f4a1b3991c23d14d1cd304f",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "wps-lingxi-pro-marketing-deck": {
+      "product_id": "wps-lingxi-pro",
+      "role_tags": [
+        "市场运营"
+      ],
+      "source_role": "市场运营",
+      "source_role_sha256": "eaa2488d6fde29b4cd2be444561fdbfd40c877581c94c0e1e8a9feb762f4e3c9",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    },
+    "wps-lingxi-pro-operations-sop": {
+      "product_id": "wps-lingxi-pro",
+      "role_tags": [
+        "业务流程管理"
+      ],
+      "source_role": "业务流程管理",
+      "source_role_sha256": "6d28841976cda8b32c169f7a8382130af754d798f5da062ef89c16674e102ee1",
+      "basis": "仅把原岗位/职责归为简短可检索标签，原role正文原样保留；QA归入测试。"
+    }
+  },
+  "handbook_routes": [
+    {
+      "product_id": "openai-codex",
+      "href": "HANDBOOK.md",
+      "kind": "handbook",
+      "target_id": "guide-0",
+      "source_path": "books/openai-codex/HANDBOOK.md",
+      "source_sha256": "c7802e4b1d4bcf7502631e1ba55fcc4ca63e8a2ffc77a1b4b5939f0c36c51b02"
+    },
+    {
+      "product_id": "zai-zcode",
+      "href": "GETTING_STARTED.md",
+      "kind": "handbook",
+      "target_id": "guide-0",
+      "source_path": "books/zai-zcode/GETTING_STARTED.md",
+      "source_sha256": "0f089e1ca011fa9ad6b79106e658bcbe9bad219e5105de05b038a315fefb45aa"
+    },
+    {
+      "product_id": "zai-zcode",
+      "href": "BOOK.md",
+      "kind": "handbook",
+      "target_id": "guide-1",
+      "source_path": "books/zai-zcode/BOOK.md",
+      "source_sha256": "cd503c22b827d51465f74292db8c720985ee38d4fdb1fcc2afbee9cd20428710"
+    },
+    {
+      "product_id": "tencent-workbuddy",
+      "href": "recipes/meeting/recipe.md",
+      "kind": "recipe",
+      "target_id": "workbuddy-meeting",
+      "source_path": "books/tencent-workbuddy/recipes/meeting/recipe.md",
+      "source_sha256": "d6a12e2f21d51e77a8432f13b8d53418ece1dba8235aeed998c8540cb9827253"
+    },
+    {
+      "product_id": "tencent-workbuddy",
+      "href": "recipes/content/recipe.md",
+      "kind": "recipe",
+      "target_id": "workbuddy-content",
+      "source_path": "books/tencent-workbuddy/recipes/content/recipe.md",
+      "source_sha256": "bd4536700b258335c551f1c464866555632ac11f63f0431054357e139e97eaa4"
+    },
+    {
+      "product_id": "tencent-workbuddy",
+      "href": "recipes/project/recipe.md",
+      "kind": "recipe",
+      "target_id": "workbuddy-project",
+      "source_path": "books/tencent-workbuddy/recipes/project/recipe.md",
+      "source_sha256": "8e2331431a916678fee4638f185735b060b8b6af9ee90b859856183b3de8ef37"
+    },
+    {
+      "product_id": "tencent-workbuddy",
+      "href": "recipes/data/recipe.md",
+      "kind": "recipe",
+      "target_id": "workbuddy-data",
+      "source_path": "books/tencent-workbuddy/recipes/data/recipe.md",
+      "source_sha256": "bd5c0ee8215e5727ddde010282c9e816a98d8a96085b3caeec4249483973edde"
+    },
+    {
+      "product_id": "tencent-workbuddy",
+      "href": "recipes/support/recipe.md",
+      "kind": "recipe",
+      "target_id": "workbuddy-support",
+      "source_path": "books/tencent-workbuddy/recipes/support/recipe.md",
+      "source_sha256": "5879e9a074d0048fb1d8fc27d56fdce52606c9982bbe49a2868f3966e4b07bab"
+    },
+    {
+      "product_id": "tencent-workbuddy",
+      "href": "recipes/research/recipe.md",
+      "kind": "recipe",
+      "target_id": "workbuddy-research",
+      "source_path": "books/tencent-workbuddy/recipes/research/recipe.md",
+      "source_sha256": "36ff24902606d492b9a15317ea0272706ae02f78ae2406e8ed78851bf55efcfa"
+    },
+    {
+      "product_id": "tencent-workbuddy",
+      "href": "recipes/design/recipe.md",
+      "kind": "recipe",
+      "target_id": "workbuddy-design",
+      "source_path": "books/tencent-workbuddy/recipes/design/recipe.md",
+      "source_sha256": "cd84015a018203b37d47732cd2596377108a098c79037e5daa55d98d526ba6b5"
+    },
+    {
+      "product_id": "tencent-workbuddy",
+      "href": "recipes/dev/recipe.md",
+      "kind": "recipe",
+      "target_id": "workbuddy-dev",
+      "source_path": "books/tencent-workbuddy/recipes/dev/recipe.md",
+      "source_sha256": "c3cd55594a4728da2356ffb6dcf8c371b996eef6697fdcfd0c84e30ef9228dcf"
+    },
+    {
+      "product_id": "tencent-workbuddy",
+      "href": "MANUAL.md",
+      "kind": "handbook",
+      "target_id": "guide-0",
+      "source_path": "books/tencent-workbuddy/MANUAL.md",
+      "source_sha256": "5b01a6f58f15d39c078f7cb8f76f75c59b64e4e8cc09bdf19fe96f5e345ba9c2"
+    },
+    {
+      "product_id": "wps-lingxi-pro",
+      "href": "README.md",
+      "kind": "handbook",
+      "target_id": "guide-0",
+      "source_path": "books/wps-lingxi-pro/README.md",
+      "source_sha256": "395267f2024bf5c317ccd80a99aa64abea6deb5f1f61a88872ba7519f6fb922c"
+    }
+  ]
+}

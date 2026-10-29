@@ -1,0 +1,9 @@
+{
+  "budget_total": 22000,
+  "actual_total": 24000,
+  "variance_total": 2000,
+  "over_budget_departments": [
+    "研发"
+  ],
+  "rd_variance_pct": 25
+}

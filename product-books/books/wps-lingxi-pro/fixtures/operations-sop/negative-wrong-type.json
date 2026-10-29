@@ -1,0 +1,7 @@
+{
+  "routes": {
+    "invalid_type": true
+  },
+  "scan_required": true,
+  "boundary_2kg": "A"
+}

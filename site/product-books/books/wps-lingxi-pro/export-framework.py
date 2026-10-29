@@ -1,0 +1,11 @@
+import pathlib,json,hashlib
+P=pathlib.Path(__file__).parent;d=json.loads((P/'playbooks.json').read_text());smap={s['id']:dict(id=s['id'],title=s['title'],url=s['url'],accessed_at=s['checked_at'],claim_scope=s['evidence']) for s in d['sources']};protocol={p['id']:p for p in d['onboarding']}
+refs={'wps-lingxi-pro-meeting-actions':'meeting-action-log','wps-lingxi-pro-support-faq':'support-triage','wps-lingxi-pro-budget-variance':'roles-r16','wps-lingxi-pro-hr-onboarding':'roles-r06'}
+recipes=[]
+for r in d['recipes']:
+ recipes.append(dict(recipe_id=r['id'],task_id=refs.get(r['id']),title=r['title'],role=r['role'],business_goal=r['expected']['task_deliverable'],input_artifacts=[dict(path=r['input']['path'],sha256=hashlib.sha256((P/r['input']['path']).read_bytes()).hexdigest(),description='完整合成教学输入，非真实业务资料')],prompt=r['prompt'],steps=[dict(title=s['protocol_ref'],instruction=protocol[s['protocol_ref']]['action']+' '+s['detail'],check='按本题rubric复核；此步骤证据类型为 '+protocol[s['protocol_ref']]['basis'],failure_recovery=r['failure_recovery']) for s in r['steps']],expected_output_origin='author_reference',expected_output=r['expected'],objective_checks=r['rubric']['automatic']['checks'],human_rubric=r['rubric']['human'],authorization=r['permissions'],cost=r['cost'],privacy=r['privacy'],version_scope=d['product_profile']['version_baseline'],sources=[smap[s] for s in r['sources']],evidence_tier='documentation_review',product_execution='not_run',observed_results=None))
+product=dict(product_id='wps-lingxi-pro',vendor='珠海金山办公软件有限公司',name='WPS 灵犀专业版',display_name='WPS 灵犀专业版',status='researched',version_scope=d['product_profile']['version_baseline'],sources=[smap[s] for s in d['product_profile']['sources']])
+(P/'product-book.json').write_text(json.dumps(dict(schema_version='1.0',product=product,recipes=recipes),ensure_ascii=False,indent=2)+'\n')
+for c in d['identity_resolution']['candidates'][1:]:
+ x=dict(schema_version='1.0',product=dict(product_id=c['id'],vendor=c['vendor'],name=c['name'],display_name=c['name'],status='researched',version_scope=c['version'],sources=[smap[s] for s in c['sources']]),recipes=[],coverage_status='catalog_only_playbooks_pending',catalog=c)
+ (P/(c['id']+'-catalog.json')).write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n')

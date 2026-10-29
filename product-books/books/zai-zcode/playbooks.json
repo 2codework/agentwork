@@ -1,0 +1,706 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-29",
+  "status": "multiple_distinct_products_catalogued",
+  "selected_product_id": null,
+  "product_execution": "not_run",
+  "content_license_status": "pending_owner_confirmation_unchanged",
+  "ambiguity": "目录分别收录两个官方产品，不推断用户选了哪一家。",
+  "candidates": [
+    {
+      "product_id": "zai-zcode",
+      "id_namespace": "agentwork_editorial_not_vendor_id",
+      "official_name": "ZCode",
+      "vendor": "Z.ai / 智谱",
+      "official_url": "https://zcode.z.ai/en",
+      "repository": "https://github.com/zai-org/ZCode",
+      "identity_evidence": [
+        "zai-company",
+        "zai-home",
+        "zai-repo"
+      ],
+      "user_intent_match": "unconfirmed",
+      "versions": [
+        {
+          "channel": "desktop_download_and_changelog",
+          "version": "3.16.3",
+          "release_date": "2026-10-23",
+          "sources": [
+            "zai-changelog",
+            "zai-install"
+          ]
+        },
+        {
+          "channel": "source_README",
+          "version": "3.16.2",
+          "update_date": "2026-10-19",
+          "sources": [
+            "zai-readme"
+          ]
+        },
+        {
+          "channel": "GitHub_releases_rendered_latest",
+          "version": "3.14.3",
+          "sources": [
+            "zai-releases"
+          ]
+        }
+      ],
+      "platforms": [
+        "macOS Apple Silicon",
+        "macOS Intel",
+        "Windows x64",
+        "Windows ARM64",
+        "Linux x64",
+        "Linux ARM64"
+      ],
+      "scope": "软件开发工作区；不能由代码能力推导为任意CRM/ERP/Office原生操作能力。",
+      "catalogue_status": "playbooks_available"
+    },
+    {
+      "product_id": "amir-hayek-zcode",
+      "id_namespace": "agentwork_editorial_not_vendor_id",
+      "official_name": "Zcode",
+      "vendor": "Amir Hayek",
+      "official_url": "https://zcodeapp.com/",
+      "repository": "https://github.com/hayek/Zcode-releases",
+      "identity_evidence": [
+        "hayek-home",
+        "hayek-releases-repo"
+      ],
+      "user_intent_match": "unconfirmed",
+      "versions": [
+        {
+          "channel": "official_home_download",
+          "version": "0.28.0 beta",
+          "sources": [
+            "hayek-home"
+          ]
+        }
+      ],
+      "platforms": [
+        "macOS Tahoe 26.2 or newer"
+      ],
+      "prerequisites": [
+        "Full Xcode installation for build/run/test"
+      ],
+      "scope": "Mac上的Apple原生应用构建工作区；不包含代码编辑器；外部AI代理通过终端和skill接入。",
+      "catalogue_status": "identity_only_tutorials_pending"
+    }
+  ],
+  "deduplication": {
+    "checked_at": "2026-10-29",
+    "method": "读取当前canonical JSON，全字段不区分大小写搜索zcode/z-code/z code；记录文件哈希及条目数",
+    "files": [
+      {
+        "path": "/workspace/scratch/6fb8d22046cb/github-migration-r1/public/agentwork/docs/data.json",
+        "sha256": "6921f8d3effc9ccb8976b873ccdcee953c0e60d257d94cf3d2778d1c541a22fd",
+        "record_count": 138,
+        "matched_records": []
+      },
+      {
+        "path": "/workspace/scratch/6fb8d22046cb/github-migration-r1/public/modelatlas/docs/data.json",
+        "sha256": "0384f0d93ce7cdb3a81bbb913afb53fb75667f5f350bfc0a46d02e743b710b7a",
+        "record_count": 254,
+        "matched_records": []
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "zai-company",
+      "url": "https://www.zhipuai.cn/zh",
+      "evidence": "primary",
+      "checked_at": "2026-10-29",
+      "note": "智谱官网产品列表链接 zcode.z.ai，关联品牌 Z.ai。"
+    },
+    {
+      "id": "zai-home",
+      "url": "https://zcode.z.ai/en",
+      "evidence": "primary",
+      "checked_at": "2026-10-29",
+      "note": "ZCode 官方产品入口。"
+    },
+    {
+      "id": "zai-repo",
+      "url": "https://github.com/zai-org/ZCode",
+      "evidence": "primary",
+      "checked_at": "2026-10-29",
+      "note": "仓库自述为 Z.ai coding agent harness，链接 zcode.z.ai。"
+    },
+    {
+      "id": "zai-readme",
+      "url": "https://github.com/zai-org/ZCode/blob/main/README.en.md",
+      "evidence": "primary",
+      "checked_at": "2026-10-29",
+      "note": "README 更新记录 2026-10-19 v3.16.2；桌面、浏览器、终端界面。"
+    },
+    {
+      "id": "zai-releases",
+      "url": "https://github.com/zai-org/ZCode/releases",
+      "evidence": "primary",
+      "checked_at": "2026-10-29",
+      "note": "本次渲染最新标签为 v3.14.3；不等同桌面分发最新。"
+    },
+    {
+      "id": "zai-changelog",
+      "url": "https://zcode.z.ai/en/changelog",
+      "evidence": "primary",
+      "checked_at": "2026-10-29",
+      "note": "桌面 changelog 3.16.3，2026-10-23；与源码渠道版本分开记录。"
+    },
+    {
+      "id": "zai-install",
+      "url": "https://zcode.z.ai/en/docs/install",
+      "evidence": "primary",
+      "checked_at": "2026-10-29",
+      "note": "当前下载3.16.3；macOS Apple Silicon/Intel，Windows x64/ARM64，Linux x64/ARM64。"
+    },
+    {
+      "id": "zai-welcome",
+      "url": "https://zcode.z.ai/en/docs/welcome",
+      "evidence": "primary",
+      "checked_at": "2026-10-29",
+      "note": "官方定位为开发环境，规划、编码、调试和验证。"
+    },
+    {
+      "id": "zai-agent",
+      "url": "https://zcode.z.ai/en/docs/agents",
+      "evidence": "primary",
+      "checked_at": "2026-10-29",
+      "note": "工作区、文件引用、AGENTS.md、执行模式等文档。"
+    },
+    {
+      "id": "zai-task",
+      "url": "https://zcode.z.ai/en/docs/task-management",
+      "evidence": "primary",
+      "checked_at": "2026-10-29",
+      "note": "任务和文件管理文档。"
+    },
+    {
+      "id": "zai-safety",
+      "url": "https://zcode.z.ai/en/docs/safety-confirm",
+      "evidence": "primary",
+      "checked_at": "2026-10-29",
+      "note": "安全确认文档；不把文档描述视作实测安全保证。"
+    },
+    {
+      "id": "hayek-home",
+      "url": "https://zcodeapp.com/",
+      "evidence": "primary",
+      "checked_at": "2026-10-29",
+      "note": "官网署名 Amir Hayek，0.28.0 beta，Mac上开发Apple平台应用，需完整Xcode。"
+    },
+    {
+      "id": "hayek-releases-repo",
+      "url": "https://github.com/hayek/Zcode-releases",
+      "evidence": "primary",
+      "checked_at": "2026-10-29",
+      "note": "官网Download指向该发布仓库的0.28.0安装包；仅阅读发布仓库，未安装。"
+    },
+    {
+      "id": "zai-models",
+      "url": "https://zcode.z.ai/en/docs/configuration",
+      "note": "模型连接与套餐边界；Coding Plan仅编码场景。",
+      "evidence": "primary",
+      "checked_at": "2026-10-29"
+    },
+    {
+      "id": "zai-browser",
+      "url": "https://zcode.z.ai/en/docs/browser-use",
+      "note": "内置浏览器限桌面；可打开本地HTML；目前不支持文件上传。",
+      "evidence": "primary",
+      "checked_at": "2026-10-29"
+    },
+    {
+      "id": "zai-usage",
+      "url": "https://zcode.z.ai/en/docs/usage-stats",
+      "note": "App Usage与Coding Plan两类用量口径不同。",
+      "evidence": "primary",
+      "checked_at": "2026-10-29"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "zai-zcode-refund-fix",
+      "product_id": "zai-zcode",
+      "title": "智谱/Z.ai ZCode｜开发者：修复退款金额边界",
+      "roles": [
+        "后端开发"
+      ],
+      "business_goal": "让订单退款函数不因超额/负数产生错账；只模拟整数分。",
+      "evidence": "synthetic",
+      "product_execution": "not_run",
+      "reference_output_origin": "author_created_not_product_output",
+      "checked_at": "2026-10-29",
+      "applicable_versions": "桌面文档快照2026-10-29；下载页3.16.3；UI可能跨版本变化，未运行该版本。",
+      "lifecycle": "unknown",
+      "practice_status": "原创教学设计，非效果认证或行业最佳实践",
+      "fixture_root": "fixtures/refund-fix",
+      "input_files": [
+        "refund.py",
+        "README.md"
+      ],
+      "expected_files": [
+        "refund.py",
+        "test_refund.py",
+        "rationale.md"
+      ],
+      "prompt": "阅读@refund.py和@README.md。修复边界，保持函数名。补test_refund.py覆盖正常、零额、刚好全退、超额、负数、浮点、布尔。不要接支付接口。输出rationale.md记录变更理由。\n仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "official_operation_path": [
+        "完成GETTING_STARTED.md前置检查，将input目录复制为独立练习工作区；不要把reference给Agent。",
+        "在ZCode选项目目录，新建任务，用@引用本项输入文件；按复杂度选Plan或Ask before changes。",
+        "粘贴本项原创提示，先审计划；仅对列明路径的修改和离线检查逐次Allow，越界Reject。",
+        "在工作区文件树预览输出；把实际结果与本项检查、reference和人工rubric比较，不能用Agent自述代替检查。"
+      ],
+      "objective_checks": [
+        "在输出目录运行 python -m unittest -v；所有8个子场景均覆盖。",
+        "diff只涉及refund.py、test_refund.py与rationale.md；无网络/支付调用。",
+        "负例：bool、浮点、负金额、超额都必须ValueError；不能为了通过而把无效输入截为0。"
+      ],
+      "human_rubric": [
+        "0-2分：规则与异常类型准确；满分覆盖bool陷阱。",
+        "0-2分：测试断言输出而非只检查无报错；总分至少3且无越权。"
+      ],
+      "failure_recovery": [
+        "若现有环境没有Python则标blocked，不安装。",
+        "测试失败先复制traceback，按单个边界修复；不要更改需求以迎合实现。"
+      ],
+      "permissions": "仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "cost_boundary": "练习只处理小型合成输入；先查看Usage Stats与所选模型通道额度。设两轮修正上限，超限暂停复盘，不自动升级套餐或换收费通道。额度/价格以账户即时页面为准。",
+      "privacy_boundary": "输入均为作者合成。模型可能接收上下文；不上传真实客户、仓库秘密或浏览器登录态。不把本地工作区等同数据不出设备。",
+      "sources": [
+        "zai-agent",
+        "zai-task",
+        "zai-safety",
+        "zai-models",
+        "zai-usage"
+      ],
+      "runner_implemented": false,
+      "reference_format": "作者参考文件：md, py",
+      "expected_product_artifact_format": "获准实际执行时须生成：refund.py, test_refund.py, rationale.md；格式同文件扩展名，不以聊天总结替代。"
+    },
+    {
+      "id": "zai-zcode-pm-spec",
+      "product_id": "zai-zcode",
+      "title": "智谱/Z.ai ZCode｜产品经理：需求拆成可验收开发规格",
+      "roles": [
+        "产品经理"
+      ],
+      "business_goal": "把含糊的预约取消规则交给研发，避免擅自决定争议项。",
+      "evidence": "synthetic",
+      "product_execution": "not_run",
+      "reference_output_origin": "author_created_not_product_output",
+      "checked_at": "2026-10-29",
+      "applicable_versions": "桌面文档快照2026-10-29；下载页3.16.3；UI可能跨版本变化，未运行该版本。",
+      "lifecycle": "unknown",
+      "practice_status": "原创教学设计，非效果认证或行业最佳实践",
+      "fixture_root": "fixtures/pm-spec",
+      "input_files": [
+        "brief.md"
+      ],
+      "expected_files": [
+        "spec.md",
+        "acceptance.json"
+      ],
+      "prompt": "依据@brief.md编写spec.md和acceptance.json。只做开发规格，不冒充订单系统执行。显式列出时区与管理员权限待决；验收包含24小时等于边界、提前23小时59分、重复取消和名额释放。\n仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "official_operation_path": [
+        "完成GETTING_STARTED.md前置检查，将input目录复制为独立练习工作区；不要把reference给Agent。",
+        "在ZCode选项目目录，新建任务，用@引用本项输入文件；按复杂度选Plan或Ask before changes。",
+        "粘贴本项原创提示，先审计划；仅对列明路径的修改和离线检查逐次Allow，越界Reject。",
+        "在工作区文件树预览输出；把实际结果与本项检查、reference和人工rubric比较，不能用Agent自述代替检查。"
+      ],
+      "objective_checks": [
+        "acceptance.json可解析，恰有A1-A4且A1/A2结果不同。",
+        "spec.md明确时区、管理员待决，不填假结论。",
+        "负例：A2不得全退；A3不得二次退款/再次释放席位；未知时区和管理员例外不得自动定案。"
+      ],
+      "human_rubric": [
+        "0-2分：Given/When/Then能让QA写测试。",
+        "0-2分：退款失败/重复请求有讨论但不偷增已批准需求；>=3通过。"
+      ],
+      "failure_recovery": [
+        "如果模型自行选UTC，要求移到假设并保留阻塞，不把假设称已确认。",
+        "规则冲突时只列冲突及决策人，不生成生产策略。"
+      ],
+      "permissions": "仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "cost_boundary": "练习只处理小型合成输入；先查看Usage Stats与所选模型通道额度。设两轮修正上限，超限暂停复盘，不自动升级套餐或换收费通道。额度/价格以账户即时页面为准。",
+      "privacy_boundary": "输入均为作者合成。模型可能接收上下文；不上传真实客户、仓库秘密或浏览器登录态。不把本地工作区等同数据不出设备。",
+      "sources": [
+        "zai-agent",
+        "zai-task",
+        "zai-safety",
+        "zai-models",
+        "zai-usage"
+      ],
+      "runner_implemented": false,
+      "reference_format": "作者参考文件：json, md",
+      "expected_product_artifact_format": "获准实际执行时须生成：spec.md, acceptance.json；格式同文件扩展名，不以聊天总结替代。"
+    },
+    {
+      "id": "zai-zcode-qa-boundaries",
+      "product_id": "zai-zcode",
+      "title": "智谱/Z.ai ZCode｜测试：为优惠券函数建立回归集",
+      "roles": [
+        "测试工程师"
+      ],
+      "business_goal": "让测试发现门槛比较错误，而不是机械覆盖代码。",
+      "evidence": "synthetic",
+      "product_execution": "not_run",
+      "reference_output_origin": "author_created_not_product_output",
+      "checked_at": "2026-10-29",
+      "applicable_versions": "桌面文档快照2026-10-29；下载页3.16.3；UI可能跨版本变化，未运行该版本。",
+      "lifecycle": "unknown",
+      "practice_status": "原创教学设计，非效果认证或行业最佳实践",
+      "fixture_root": "fixtures/qa-boundaries",
+      "input_files": [
+        "coupon.py",
+        "rules.md"
+      ],
+      "expected_files": [
+        "test_coupon.py",
+        "bug.md"
+      ],
+      "prompt": "读取@coupon.py与@rules.md。只创建test_coupon.py与bug.md，使用unittest表驱动三个边界。运行前说明预期10000会失败。记录bug.md含期望/实际/最小复现，不能修代码或把失败改绿。\n仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "official_operation_path": [
+        "完成GETTING_STARTED.md前置检查，将input目录复制为独立练习工作区；不要把reference给Agent。",
+        "在ZCode选项目目录，新建任务，用@引用本项输入文件；按复杂度选Plan或Ask before changes。",
+        "粘贴本项原创提示，先审计划；仅对列明路径的修改和离线检查逐次Allow，越界Reject。",
+        "在工作区文件树预览输出；把实际结果与本项检查、reference和人工rubric比较，不能用Agent自述代替检查。"
+      ],
+      "objective_checks": [
+        "python -m unittest -v应非零退出，10000子场景失败；这是练习预期，不是产品失败。",
+        "coupon.py内容必须与input逐字一致。",
+        "负例：原实现10000返回10000，测试必须失败；把期望改成10000或改coupon.py均判不通过。"
+      ],
+      "human_rubric": [
+        "0-2分：测试由业务规则而非错误实现推导。",
+        "0-2分：bug能复现且不夸大影响范围；>=3通过。"
+      ],
+      "failure_recovery": [
+        "若全部通过，检查是否擅改源文件或错误期望，恢复input后重跑。",
+        "若导入失败，核对工作目录，不将环境失败记为业务缺陷。"
+      ],
+      "permissions": "仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "cost_boundary": "练习只处理小型合成输入；先查看Usage Stats与所选模型通道额度。设两轮修正上限，超限暂停复盘，不自动升级套餐或换收费通道。额度/价格以账户即时页面为准。",
+      "privacy_boundary": "输入均为作者合成。模型可能接收上下文；不上传真实客户、仓库秘密或浏览器登录态。不把本地工作区等同数据不出设备。",
+      "sources": [
+        "zai-agent",
+        "zai-task",
+        "zai-safety",
+        "zai-models",
+        "zai-usage"
+      ],
+      "runner_implemented": false,
+      "reference_format": "作者参考文件：md, py",
+      "expected_product_artifact_format": "获准实际执行时须生成：test_coupon.py, bug.md；格式同文件扩展名，不以聊天总结替代。"
+    },
+    {
+      "id": "zai-zcode-ops-csv",
+      "product_id": "zai-zcode",
+      "title": "智谱/Z.ai ZCode｜数据运营：离线汇总订单CSV",
+      "roles": [
+        "数据运营"
+      ],
+      "business_goal": "审计口径一致地计算已支付销售额，并隔离坏数据。",
+      "evidence": "synthetic",
+      "product_execution": "not_run",
+      "reference_output_origin": "author_created_not_product_output",
+      "checked_at": "2026-10-29",
+      "applicable_versions": "桌面文档快照2026-10-29；下载页3.16.3；UI可能跨版本变化，未运行该版本。",
+      "lifecycle": "unknown",
+      "practice_status": "原创教学设计，非效果认证或行业最佳实践",
+      "fixture_root": "fixtures/ops-csv",
+      "input_files": [
+        "orders.csv",
+        "README.md"
+      ],
+      "expected_files": [
+        "summarize.py",
+        "summary.json",
+        "errors.csv"
+      ],
+      "prompt": "为@orders.csv写stdlib Python summarize.py。输出summary.json与errors.csv，坏数据不按0默默吞掉。不要用云表格、数据库或pip。脚本应在重复执行时覆盖同名输出而非追加翻倍。\n仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "official_operation_path": [
+        "完成GETTING_STARTED.md前置检查，将input目录复制为独立练习工作区；不要把reference给Agent。",
+        "在ZCode选项目目录，新建任务，用@引用本项输入文件；按复杂度选Plan或Ask before changes。",
+        "粘贴本项原创提示，先审计划；仅对列明路径的修改和离线检查逐次Allow，越界Reject。",
+        "在工作区文件树预览输出；把实际结果与本项检查、reference和人工rubric比较，不能用Agent自述代替检查。"
+      ],
+      "objective_checks": [
+        "运行python summarize.py两次，summary.json解析为paid_count=2,revenue_cents=2000。",
+        "errors.csv仅一条O4；原始orders.csv哈希不变。",
+        "负例：O2取消不计收入；O4非法金额不得默默计0；第二次运行不增行、不翻倍。"
+      ],
+      "human_rubric": [
+        "0-2分：金额用整数分且不含取消订单。",
+        "0-2分：错误隔离/重复运行/输入不变均明确；>=3通过。"
+      ],
+      "failure_recovery": [
+        "CSV列缺失应停下报告schema不符，不能猜列。",
+        "写权限失败改输出到获准的新目录，不chmod生产路径。"
+      ],
+      "permissions": "仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "cost_boundary": "练习只处理小型合成输入；先查看Usage Stats与所选模型通道额度。设两轮修正上限，超限暂停复盘，不自动升级套餐或换收费通道。额度/价格以账户即时页面为准。",
+      "privacy_boundary": "输入均为作者合成。模型可能接收上下文；不上传真实客户、仓库秘密或浏览器登录态。不把本地工作区等同数据不出设备。",
+      "sources": [
+        "zai-agent",
+        "zai-task",
+        "zai-safety",
+        "zai-models",
+        "zai-usage"
+      ],
+      "runner_implemented": false,
+      "reference_format": "作者参考文件：csv, json, py",
+      "expected_product_artifact_format": "获准实际执行时须生成：summarize.py, summary.json, errors.csv；格式同文件扩展名，不以聊天总结替代。"
+    },
+    {
+      "id": "zai-zcode-design-handoff",
+      "product_id": "zai-zcode",
+      "title": "智谱/Z.ai ZCode｜设计交接：令牌规格落地静态卡片",
+      "roles": [
+        "前端/设计协作"
+      ],
+      "business_goal": "把设计参数落实成可评审HTML，不声称能直接编辑Figma。",
+      "evidence": "synthetic",
+      "product_execution": "not_run",
+      "reference_output_origin": "author_created_not_product_output",
+      "checked_at": "2026-10-29",
+      "applicable_versions": "桌面文档快照2026-10-29；下载页3.16.3；UI可能跨版本变化，未运行该版本。",
+      "lifecycle": "unknown",
+      "practice_status": "原创教学设计，非效果认证或行业最佳实践",
+      "fixture_root": "fixtures/design-handoff",
+      "input_files": [
+        "tokens.json",
+        "brief.md"
+      ],
+      "expected_files": [
+        "index.html",
+        "handoff.md"
+      ],
+      "prompt": "按@tokens.json与@brief.md生成独立index.html。按钮用原生button和可见focus样式。点击后显示已预约并disabled，此为纯本地演示不是实际下单。附handoff.md逐条对应设计要求和人工核查项。\n仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "official_operation_path": [
+        "完成GETTING_STARTED.md前置检查，将input目录复制为独立练习工作区；不要把reference给Agent。",
+        "在ZCode选项目目录，新建任务，用@引用本项输入文件；按复杂度选Plan或Ask before changes。",
+        "粘贴本项原创提示，先审计划；仅对列明路径的修改和离线检查逐次Allow，越界Reject。",
+        "在工作区文件树预览输出；把实际结果与本项检查、reference和人工rubric比较，不能用Agent自述代替检查。",
+        "本地工作区HTML右键Open in built-in browser；本任务不导入Chrome数据、不上传文件、不访问真实订单页。"
+      ],
+      "objective_checks": [
+        "静态检查存在lang、viewport、button、role=status、focus-visible；没有http外链。",
+        "浏览器人工在320×700、1280×800检查；Tab→Enter→重复点击：只出现一次状态，不产生网络请求。",
+        "负例：重复点击不重复状态；禁止远程请求；无可见键盘焦点或320px横向溢出即不通过。"
+      ],
+      "human_rubric": [
+        "0-2分：层级清楚、文本不截断。",
+        "0-2分：焦点/禁用/演示标记清楚；>=3通过且键盘路径必过。"
+      ],
+      "failure_recovery": [
+        "如果浏览器控制禁用：Settings → Browser开启后新建任务；旧会话不沿用开关。",
+        "如果仅源码检查，不填视觉通过；人工另开页面验收。"
+      ],
+      "permissions": "仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "cost_boundary": "练习只处理小型合成输入；先查看Usage Stats与所选模型通道额度。设两轮修正上限，超限暂停复盘，不自动升级套餐或换收费通道。额度/价格以账户即时页面为准。",
+      "privacy_boundary": "输入均为作者合成。模型可能接收上下文；不上传真实客户、仓库秘密或浏览器登录态。不把本地工作区等同数据不出设备。",
+      "sources": [
+        "zai-agent",
+        "zai-task",
+        "zai-safety",
+        "zai-models",
+        "zai-usage",
+        "zai-browser"
+      ],
+      "runner_implemented": false,
+      "reference_format": "作者参考文件：html, md",
+      "expected_product_artifact_format": "获准实际执行时须生成：index.html, handoff.md；格式同文件扩展名，不以聊天总结替代。"
+    },
+    {
+      "id": "zai-zcode-docs-maintenance",
+      "product_id": "zai-zcode",
+      "title": "智谱/Z.ai ZCode｜技术写作：从真实CLI同步README",
+      "roles": [
+        "技术文档维护"
+      ],
+      "business_goal": "修复文档漂移并给新同事可复制的离线例子。",
+      "evidence": "synthetic",
+      "product_execution": "not_run",
+      "reference_output_origin": "author_created_not_product_output",
+      "checked_at": "2026-10-29",
+      "applicable_versions": "桌面文档快照2026-10-29；下载页3.16.3；UI可能跨版本变化，未运行该版本。",
+      "lifecycle": "unknown",
+      "practice_status": "原创教学设计，非效果认证或行业最佳实践",
+      "fixture_root": "fixtures/docs-maintenance",
+      "input_files": [
+        "tool.py",
+        "README.md"
+      ],
+      "expected_files": [
+        "README.md"
+      ],
+      "prompt": "依据@tool.py修订@README.md。先查看argparse定义，写准确命令、期望输出、漏参数报错和依赖说明。不要为迎合旧文档给代码新增--user，不修改tool.py。\n仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "official_operation_path": [
+        "完成GETTING_STARTED.md前置检查，将input目录复制为独立练习工作区；不要把reference给Agent。",
+        "在ZCode选项目目录，新建任务，用@引用本项输入文件；按复杂度选Plan或Ask before changes。",
+        "粘贴本项原创提示，先审计划；仅对列明路径的修改和离线检查逐次Allow，越界Reject。",
+        "在工作区文件树预览输出；把实际结果与本项检查、reference和人工rubric比较，不能用Agent自述代替检查。"
+      ],
+      "objective_checks": [
+        "python tool.py --name Ada的stdout恰为Hello, Ada!换行。",
+        "python tool.py退出码2；tool.py不变；README不再推荐--user。",
+        "负例：缺--name非零；--user Ada必须拒绝；不得为旧文档兼容而擅改代码。"
+      ],
+      "human_rubric": [
+        "0-2分：说明能直接复现。",
+        "0-2分：错误路径与版本边界清晰，无虚构安装依赖；>=3通过。"
+      ],
+      "failure_recovery": [
+        "若文档与运行矛盾先保留命令/退出码，辨别python解释器和cwd。",
+        "不把本机路径或用户名写进公开示例。"
+      ],
+      "permissions": "仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "cost_boundary": "练习只处理小型合成输入；先查看Usage Stats与所选模型通道额度。设两轮修正上限，超限暂停复盘，不自动升级套餐或换收费通道。额度/价格以账户即时页面为准。",
+      "privacy_boundary": "输入均为作者合成。模型可能接收上下文；不上传真实客户、仓库秘密或浏览器登录态。不把本地工作区等同数据不出设备。",
+      "sources": [
+        "zai-agent",
+        "zai-task",
+        "zai-safety",
+        "zai-models",
+        "zai-usage"
+      ],
+      "runner_implemented": false,
+      "reference_format": "作者参考文件：md",
+      "expected_product_artifact_format": "获准实际执行时须生成：README.md；格式同文件扩展名，不以聊天总结替代。"
+    },
+    {
+      "id": "zai-zcode-security-review",
+      "product_id": "zai-zcode",
+      "title": "智谱/Z.ai ZCode｜安全评审：路径穿越风险与修复计划",
+      "roles": [
+        "安全/代码评审"
+      ],
+      "business_goal": "在本地合成片段中找出越界风险，输出可追踪评审，不跑攻击。",
+      "evidence": "synthetic",
+      "product_execution": "not_run",
+      "reference_output_origin": "author_created_not_product_output",
+      "checked_at": "2026-10-29",
+      "applicable_versions": "桌面文档快照2026-10-29；下载页3.16.3；UI可能跨版本变化，未运行该版本。",
+      "lifecycle": "unknown",
+      "practice_status": "原创教学设计，非效果认证或行业最佳实践",
+      "fixture_root": "fixtures/security-review",
+      "input_files": [
+        "download.py",
+        "scope.md"
+      ],
+      "expected_files": [
+        "review.json",
+        "fix-plan.md"
+      ],
+      "prompt": "对@download.py做静态安全审阅，生成review.json与fix-plan.md。风险要引用函数/行和不受信输入到文件读取的路径，给无攻击执行的合成测试建议。不要读/etc或任何真实敏感目录。区分确认的代码缺少检查与未经验证的线上可利用性。\n仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "official_operation_path": [
+        "完成GETTING_STARTED.md前置检查，将input目录复制为独立练习工作区；不要把reference给Agent。",
+        "在ZCode选项目目录，新建任务，用@引用本项输入文件；按复杂度选Plan或Ask before changes。",
+        "粘贴本项原创提示，先审计划；仅对列明路径的修改和离线检查逐次Allow，越界Reject。",
+        "在工作区文件树预览输出；把实际结果与本项检查、reference和人工rubric比较，不能用Agent自述代替检查。"
+      ],
+      "objective_checks": [
+        "review.json含SEC-1、download.py、line=3；明确production_exploitability=not tested。",
+        "download.py不变；无敏感文件读取或网络命令。",
+        "负例：只做字符串startswith或忽略symlink风险的方案不能判完整；线上可利用性不得写已证实。"
+      ],
+      "human_rubric": [
+        "0-2分：源到sink路径准确，不用危言耸听替代证据。",
+        "0-2分：包含symlink/竞态残余风险与测试建议；>=3通过。"
+      ],
+      "failure_recovery": [
+        "若Agent想读取真实敏感文件立即Reject，改为临时目录测试设计。",
+        "若输出称已修复，要求改成未实现计划并核diff。"
+      ],
+      "permissions": "仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "cost_boundary": "练习只处理小型合成输入；先查看Usage Stats与所选模型通道额度。设两轮修正上限，超限暂停复盘，不自动升级套餐或换收费通道。额度/价格以账户即时页面为准。",
+      "privacy_boundary": "输入均为作者合成。模型可能接收上下文；不上传真实客户、仓库秘密或浏览器登录态。不把本地工作区等同数据不出设备。",
+      "sources": [
+        "zai-agent",
+        "zai-task",
+        "zai-safety",
+        "zai-models",
+        "zai-usage"
+      ],
+      "runner_implemented": false,
+      "reference_format": "作者参考文件：json, md",
+      "expected_product_artifact_format": "获准实际执行时须生成：review.json, fix-plan.md；格式同文件扩展名，不以聊天总结替代。"
+    },
+    {
+      "id": "zai-zcode-release-gate",
+      "product_id": "zai-zcode",
+      "title": "智谱/Z.ai ZCode｜交付负责人：本地变更生成发布评审包",
+      "roles": [
+        "工程经理/发布协调"
+      ],
+      "business_goal": "明确哪些变化可交付、哪些阻塞，不自动提交或部署。",
+      "evidence": "synthetic",
+      "product_execution": "not_run",
+      "reference_output_origin": "author_created_not_product_output",
+      "checked_at": "2026-10-29",
+      "applicable_versions": "桌面文档快照2026-10-29；下载页3.16.3；UI可能跨版本变化，未运行该版本。",
+      "lifecycle": "unknown",
+      "practice_status": "原创教学设计，非效果认证或行业最佳实践",
+      "fixture_root": "fixtures/release-gate",
+      "input_files": [
+        "changes.json",
+        "policy.md"
+      ],
+      "expected_files": [
+        "release-notes.md",
+        "gate.json"
+      ],
+      "prompt": "根据@changes.json与@policy.md写发布说明和gate.json。说明面向用户，闸门面向工程；准确反映C2未测，因此整体blocked。不能把C1通过推广为全量通过，不能生成实际git提交/发布动作。\n仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "official_operation_path": [
+        "完成GETTING_STARTED.md前置检查，将input目录复制为独立练习工作区；不要把reference给Agent。",
+        "在ZCode选项目目录，新建任务，用@引用本项输入文件；按复杂度选Plan或Ask before changes。",
+        "粘贴本项原创提示，先审计划；仅对列明路径的修改和离线检查逐次Allow，越界Reject。",
+        "在工作区文件树预览输出；把实际结果与本项检查、reference和人工rubric比较，不能用Agent自述代替检查。"
+      ],
+      "objective_checks": [
+        "gate.json decision=blocked, blocking_ids=[C2], published=false。",
+        "release-notes明确C1的pass来自输入记录，而非Agent独立实测。",
+        "负例：存在not_run的C2不得ready/published=true；不得把输入测试记录写成独立实测。"
+      ],
+      "human_rubric": [
+        "0-2分：用户影响描述准确，不夸张收益。",
+        "0-2分：阻塞项、下一步与发布授权边界完整；>=3通过。"
+      ],
+      "failure_recovery": [
+        "若报告写ready，返回policy逐条重判。",
+        "如果缺测试日志，保留not_run，不补造时间戳或截图。"
+      ],
+      "permissions": "仅编辑当前合成练习目录；不联网、不装依赖、不访问凭据、不提交不推送不发布。任何命令先展示完整命令和工作目录。失败时保留错误证据，不以跳过测试制造通过。",
+      "cost_boundary": "练习只处理小型合成输入；先查看Usage Stats与所选模型通道额度。设两轮修正上限，超限暂停复盘，不自动升级套餐或换收费通道。额度/价格以账户即时页面为准。",
+      "privacy_boundary": "输入均为作者合成。模型可能接收上下文；不上传真实客户、仓库秘密或浏览器登录态。不把本地工作区等同数据不出设备。",
+      "sources": [
+        "zai-agent",
+        "zai-task",
+        "zai-safety",
+        "zai-models",
+        "zai-usage"
+      ],
+      "runner_implemented": false,
+      "reference_format": "作者参考文件：json, md",
+      "expected_product_artifact_format": "获准实际执行时须生成：release-notes.md, gate.json；格式同文件扩展名，不以聊天总结替代。"
+    }
+  ],
+  "aliases": {
+    "zcode": {
+      "status": "ambiguous",
+      "product_ids": [
+        "zai-zcode",
+        "amir-hayek-zcode"
+      ],
+      "default": null
+    }
+  },
+  "coverage_gaps": [
+    "Amir Hayek Zcode仅身份/能力/版本限制已收录，尚无完整岗位手册。",
+    "未覆盖Z.ai所有历史版本、远程、Bot、MCP、插件市场和多代理配置。",
+    "CRM/ERP/邮件/日历/在线表格的原生集成未核验；相关岗位这里只做开发规格、离线数据脚本、静态原型和仓库文档，不冒充办公系统全流程。"
+  ]
+}

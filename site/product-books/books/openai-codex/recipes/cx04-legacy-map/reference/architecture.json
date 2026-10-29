@@ -1,0 +1,41 @@
+{
+  "entry": "app.py:3",
+  "flow": [
+    "app.process",
+    "parser.parse",
+    "scoring.score"
+  ],
+  "examples": [
+    {
+      "input": "1, 2,3",
+      "output": {
+        "count": 3,
+        "total": 6
+      }
+    },
+    {
+      "input": "",
+      "output": {
+        "count": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": "bad",
+      "error": "ValueError"
+    }
+  ],
+  "unknowns": [
+    "No caller or persistence layer supplied."
+  ],
+  "change_seams": [
+    {
+      "file": "parser.py",
+      "purpose": "input validation"
+    },
+    {
+      "file": "scoring.py",
+      "purpose": "additional metrics"
+    }
+  ]
+}

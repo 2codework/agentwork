@@ -1,0 +1,3 @@
+channel,spend,registrations,attendees
+邮件,1000,100,40
+社区,500,50,0

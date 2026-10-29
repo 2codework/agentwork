@@ -1,0 +1,7 @@
+order_id,amount,status
+SYN-01,10.00,paid
+SYN-02, 20.50 ,paid
+SYN-01,10.00,paid
+SYN-03,-3.00,paid
+SYN-04,abc,paid
+SYN-05,8.00,cancelled

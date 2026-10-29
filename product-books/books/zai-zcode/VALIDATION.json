@@ -1,0 +1,90 @@
+{
+  "status": "pass",
+  "schema": "Draft2020-12",
+  "product_execution": "not_run",
+  "reference_validation_only": true,
+  "recipe_count": 8,
+  "source_count": 16,
+  "results": [
+    {
+      "recipe_id": "zai-zcode-refund-fix",
+      "author_fixture_check": "pass",
+      "evidence": "test_invalid (test_refund.RefundTests.test_invalid) ... ok\ntest_valid (test_refund.RefundTests.test_valid) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n",
+      "product_execution": "not_run",
+      "human_rubric": "not_run"
+    },
+    {
+      "recipe_id": "zai-zcode-pm-spec",
+      "author_fixture_check": "pass",
+      "evidence": "Four acceptance records and threshold checked; human requirements review not_run.",
+      "product_execution": "not_run",
+      "human_rubric": "not_run"
+    },
+    {
+      "recipe_id": "zai-zcode-qa-boundaries",
+      "author_fixture_check": "pass",
+      "evidence": "Expected failing boundary confirmed: test_boundary (test_coupon.CouponTests.test_boundary) ... \n  test_boundary (test_coupon.CouponTests.test_boundary) (cents=10000) ... FAIL\n\n======================================================================\nFAIL: test_boundary (test_coupon.CouponTests.test_boundary) (cents=10000)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/scratch/6fb8d22046cb/agentwork-zcode-playbooks-r4/tmpmz_qfomk/test_coupon.py\", line 6, in test_boundary\n    with self.subTest(cents=cents): self.assertEqual(payable(cents),want)\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 10000 != 9000\n\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nFAILED (failures=1)\n",
+      "product_execution": "not_run",
+      "human_rubric": "not_run"
+    },
+    {
+      "recipe_id": "zai-zcode-ops-csv",
+      "author_fixture_check": "pass",
+      "evidence": "Two repeated runs yielded count=2,revenue=2000; only O4 quarantined.",
+      "product_execution": "not_run",
+      "human_rubric": "not_run"
+    },
+    {
+      "recipe_id": "zai-zcode-design-handoff",
+      "author_fixture_check": "pass",
+      "evidence": "Static markup only checked; actual browser layout/keyboard rubric not_run.",
+      "product_execution": "not_run",
+      "human_rubric": "not_run"
+    },
+    {
+      "recipe_id": "zai-zcode-docs-maintenance",
+      "author_fixture_check": "pass",
+      "evidence": "CLI sample and missing-argument code 2 checked.",
+      "product_execution": "not_run",
+      "human_rubric": "not_run"
+    },
+    {
+      "recipe_id": "zai-zcode-security-review",
+      "author_fixture_check": "pass",
+      "evidence": "Finding structure and source line checked; exploit execution not_run.",
+      "product_execution": "not_run",
+      "human_rubric": "not_run"
+    },
+    {
+      "recipe_id": "zai-zcode-release-gate",
+      "author_fixture_check": "pass",
+      "evidence": "Blocked gate assertions checked; release not_run.",
+      "product_execution": "not_run",
+      "human_rubric": "not_run"
+    }
+  ],
+  "canonical_deduplication": {
+    "checked_at": "2026-10-29",
+    "method": "读取当前canonical JSON，全字段不区分大小写搜索zcode/z-code/z code；记录文件哈希及条目数",
+    "files": [
+      {
+        "path": "/workspace/scratch/6fb8d22046cb/github-migration-r1/public/agentwork/docs/data.json",
+        "sha256": "6921f8d3effc9ccb8976b873ccdcee953c0e60d257d94cf3d2778d1c541a22fd",
+        "record_count": 138,
+        "matched_records": []
+      },
+      {
+        "path": "/workspace/scratch/6fb8d22046cb/github-migration-r1/public/modelatlas/docs/data.json",
+        "sha256": "0384f0d93ce7cdb3a81bbb913afb53fb75667f5f350bfc0a46d02e743b710b7a",
+        "record_count": 254,
+        "matched_records": []
+      }
+    ]
+  },
+  "limits": [
+    "No vendor binary/model/account/API executed",
+    "Browser visual QA not_run",
+    "Human rubric not_run",
+    "Reference checks do not measure ZCode performance"
+  ]
+}

@@ -1,0 +1,1 @@
+创建 summarize.py，公开 summarize(path) 返回 {net_cents:{region:整数分},duplicate_rows:整数}，并支持 python summarize.py orders.csv 输出 JSON。只用 Python stdlib，按 policy.md 对退款、取消、重复和冲突处理。写 expected.json 作为手算样例；不改 CSV，不接真实业务数据库。说明此处净额不是财务利润/审计报表。

@@ -1,0 +1,5 @@
+row_id,order_id,region,currency,gross,refund,net,source
+1,O01,东,CNY,120,20,100,orders.csv:1
+2,O02,西,CNY,80,0,80,orders.csv:2
+4,O03,东,CNY,100,10,90,orders.csv:4
+5,O04,西,USD,50,0,50,orders.csv:5

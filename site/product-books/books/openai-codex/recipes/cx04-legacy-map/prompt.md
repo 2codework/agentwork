@@ -1,0 +1,1 @@
+仅新增 ONBOARDING.md 和 architecture.json，不改三个 Python 模块。解释入口、完整调用顺序、输入格式、三个 samples 的结果/异常、可扩展位置与未知边界。JSON 字段 entry(文件:行)、flow(完整符号数组)、examples(input/output 或 error)、unknowns、change_seams。Markdown 写给入职开发和产品同事。每个事实必须由文件或执行例子支持，不要假设数据库、部署方式或性能规模。

@@ -1,0 +1,5 @@
+{
+  "feasible": false,
+  "total_hours": 8,
+  "reason": "indivisible_modules_and_dependencies"
+}

@@ -1,0 +1,3 @@
+Run python -m unittest discover -s tests -p test_*.py
+Error: working directory service does not exist
+Exit code: 1

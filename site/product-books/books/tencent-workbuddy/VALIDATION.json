@@ -1,0 +1,14 @@
+{
+  "structure": "passed",
+  "complete_author_reference_cases": 8,
+  "complete_reference_files": 28,
+  "input_hashes_verified": 17,
+  "negative_tests_passed": 66,
+  "content_body_basic_cjk_count": 180,
+  "author_data_oracle": "passed",
+  "product_execution": "not_run",
+  "ui_execution": "not_run",
+  "runner_implemented": false,
+  "scope": "研究包/参考文件结构与作者数值锚点；未自动判定人工事实/语气/引用覆盖，不是产品验收",
+  "real_run_evidence_gate": "not_passed_not_run"
+}

@@ -1,0 +1,8 @@
+row_id,order_id,region,currency,gross,refund
+1,O01,东,CNY,120,20
+2,O02,西,CNY,80,0
+3,O02,西,CNY,80,0
+4,O03,东,CNY,100,10
+5,O04,西,USD,50,0
+6,O05,东,CNY,,0
+7,O06,西,CNY,40,60

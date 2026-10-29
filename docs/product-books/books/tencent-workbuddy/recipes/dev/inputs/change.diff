@@ -1,0 +1,6 @@
+--- a/fee.py
++++ b/fee.py
+@@ -1,2 +1,2 @@
+ def shipping_fee(total):
+-    return 0 if total >= 100 else 10
++    return 0 if total > 100 else 10

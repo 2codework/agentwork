@@ -1,0 +1,13 @@
+{
+  "findings": [
+    {
+      "id": "SEC-1",
+      "file": "download.py",
+      "line": 3,
+      "issue": "untrusted name is joined then read without containment validation",
+      "confidence": "code-level confirmed",
+      "production_exploitability": "not tested",
+      "function": "load"
+    }
+  ]
+}

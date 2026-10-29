@@ -11,6 +11,7 @@ import assistant_workspace
 import regional_office
 import offline_office_lab
 import creative_delivery_lab
+import product_books
 from pathlib import Path
 from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
@@ -79,6 +80,7 @@ def build():
     offline_office_lab.publish(ROOT,dest)
     creative_gaps.publish(ROOT,dest)
     creative_delivery_lab.publish(ROOT,dest)
+    product_books.publish(ROOT,dest)
     (dest/'.nojekyll').touch()
     shutil.copy2(ROOT/'BOOK.md',dest/'BOOK.md')
     asset_versions.pin(dest)

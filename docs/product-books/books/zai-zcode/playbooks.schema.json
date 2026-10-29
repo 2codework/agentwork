@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "status",
+    "aliases",
+    "recipes",
+    "sources"
+  ],
+  "properties": {
+    "status": {
+      "const": "multiple_distinct_products_catalogued"
+    },
+    "recipes": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "product_id",
+          "prompt",
+          "input_files",
+          "expected_files",
+          "objective_checks",
+          "human_rubric",
+          "failure_recovery",
+          "sources"
+        ],
+        "properties": {
+          "product_id": {
+            "const": "zai-zcode"
+          },
+          "product_execution": {
+            "const": "not_run"
+          },
+          "reference_output_origin": {
+            "const": "author_created_not_product_output"
+          },
+          "objective_checks": {
+            "type": "array",
+            "minItems": 2
+          },
+          "human_rubric": {
+            "type": "array",
+            "minItems": 2
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "maxItems": 16
+    }
+  }
+}

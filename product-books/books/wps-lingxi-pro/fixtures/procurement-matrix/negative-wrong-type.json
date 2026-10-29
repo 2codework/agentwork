@@ -1,0 +1,14 @@
+{
+  "eligible": {
+    "invalid_type": true
+  },
+  "rejected": [
+    "乙"
+  ],
+  "totals": {
+    "甲": 2000,
+    "乙": 1900,
+    "丙": 2200
+  },
+  "lowest_eligible": "甲"
+}

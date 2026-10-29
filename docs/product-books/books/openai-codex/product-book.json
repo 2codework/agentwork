@@ -1,0 +1,1705 @@
+{
+  "schema_version": "1.0",
+  "product": {
+    "product_id": "openai-codex",
+    "vendor": "OpenAI",
+    "name": "Codex",
+    "display_name": "Codex · 可审阅的软件业务任务",
+    "status": "researched",
+    "version_scope": "2026-10-29 official documentation snapshot; actual client/model/account/workspace unexecuted. Prefer existing CLI/IDE local. Cloud/app differ; no universal UI or unlimited-free claim.",
+    "sources": [
+      {
+        "id": "cli",
+        "title": "Codex CLI",
+        "url": "https://learn.chatgpt.com/docs/codex/cli",
+        "accessed_at": "2026-10-29",
+        "claim_scope": "本地读代码、编辑、命令、codex 交互入口与检查点；不是 API CLI。"
+      },
+      {
+        "id": "ide",
+        "title": "Codex IDE extension",
+        "url": "https://learn.chatgpt.com/docs/codex/ide",
+        "accessed_at": "2026-10-29",
+        "claim_scope": "编辑器文件/选择区上下文、本地改动审阅及云委派；集成方式因 IDE 不同。"
+      },
+      {
+        "id": "cloud",
+        "title": "Codex Cloud",
+        "url": "https://learn.chatgpt.com/docs/cloud",
+        "accessed_at": "2026-10-29",
+        "claim_scope": "仓库与工具构成环境，独立任务工作区，审阅结果；环境设置和 GitHub 访问需要授权。"
+      },
+      {
+        "id": "app",
+        "title": "ChatGPT desktop app",
+        "url": "https://learn.chatgpt.com/docs/app",
+        "accessed_at": "2026-10-29",
+        "claim_scope": "当前桌面入口文档；选择工作位置与项目、审阅文件。旧 Codex app 入口已重定向。"
+      },
+      {
+        "id": "pricing",
+        "title": "Pricing",
+        "url": "https://learn.chatgpt.com/docs/pricing",
+        "accessed_at": "2026-10-29",
+        "claim_scope": "订阅计划/credits/额度与 API 计费不同；Free/Go 桌面能力受 rollout 限制，不代表各表面无限免费。"
+      },
+      {
+        "id": "auth",
+        "title": "Authentication",
+        "url": "https://learn.chatgpt.com/docs/auth",
+        "accessed_at": "2026-10-29",
+        "claim_scope": "ChatGPT 与 API key 登录、cloud 的 ChatGPT 需求、工作区角色与本地权限分别约束。"
+      },
+      {
+        "id": "permissions",
+        "title": "Permissions",
+        "url": "https://learn.chatgpt.com/docs/permission-modes",
+        "accessed_at": "2026-10-29",
+        "claim_scope": "sandbox 和 approvals 两层；自动审批不扩大 sandbox，版本/环境/组织策略影响可用模式。"
+      },
+      {
+        "id": "prompting",
+        "title": "Prompting",
+        "url": "https://learn.chatgpt.com/docs/prompting",
+        "accessed_at": "2026-10-29",
+        "claim_scope": "目标、上下文、产物和边界；插件/连接可用性依赖计划与工作区。"
+      },
+      {
+        "id": "practice",
+        "title": "Best practices",
+        "url": "https://learn.chatgpt.com/guides/best-practices",
+        "accessed_at": "2026-10-29",
+        "claim_scope": "复杂任务先计划、AGENTS.md 持久约定、测试与人工审阅。"
+      }
+    ],
+    "version_scope_details": {
+      "checked_at": "2026-10-29T05:34:00Z",
+      "scope": "official documentation snapshot; client/model/account not executed",
+      "client_version": null,
+      "model": null,
+      "plan": null,
+      "workspace_policy": null,
+      "surfaces": [
+        "Codex CLI",
+        "Codex IDE extension",
+        "ChatGPT desktop app Codex entry",
+        "Codex Cloud"
+      ],
+      "preferred_exercise_surface": "already-installed CLI or IDE local",
+      "caveat": "old Codex app/quickstart/security routes redirect; no universal UI or free unlimited guarantee"
+    }
+  },
+  "recipes": [
+    {
+      "recipe_id": "cx01-shipping-bug",
+      "task_id": null,
+      "title": "修复免邮阈值导致的客服投诉",
+      "role": "产品：给出满 50 元而非超过 50 元的规则；验收 49.99/50/50.01。；开发：只修 fee；QA：复核偏远附加费不受免邮影响。",
+      "business_goal": "电商订单刚好达到免邮门槛仍被收费，做最小可回滚修复。",
+      "input_artifacts": [
+        {
+          "path": "recipes/cx01-shipping-bug/fixture/AGENTS.md",
+          "sha256": "9a920422c3ded2fb23211670145105cc44007b56949012c1bc53f13d0368c8d7",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx01-shipping-bug/fixture/policy.md",
+          "sha256": "4b63a5959257e9854715d9dcc0bbe48c48ce7ea7047fc6cf64f304ed517e4ab0",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx01-shipping-bug/fixture/shipping.py",
+          "sha256": "3f1e0e4e87b5adc3c1de5c9d8987277921a13527dfe3d98ddd430c92080f8730",
+          "description": "原创合成任务输入；不要混入参考答案"
+        }
+      ],
+      "prompt": "请读取 policy.md 与 shipping.py，修复满额免邮边界。只改 shipping.py，保留函数接口、整数分计算和负值错误；不要引入库或联网。先指出导致 5000 分错误的行，给最小 patch，运行你实际能执行的边界检查，最终分开列出“已运行”与“建议运行”。若不能执行请明确 not_run，不要声称测试通过。",
+      "steps": [
+        {
+          "title": "准备合成副本",
+          "instruction": "只复制 fixture 到获准的新目录，保留原件；不要把 reference 给被测代理。",
+          "check": "输入 hash 一致，文件已人工检查且无真实敏感数据。",
+          "failure_recovery": "目录或权限不清即停止；不读取私人 sessions 或密钥。"
+        },
+        {
+          "title": "选执行表面并核对范围",
+          "instruction": "已有 CLI 中进入副本运行 codex，核对 /status 与 /permissions；或在已有 IDE 集成打开副本。记录版本/模型/计划/工作区；不安装。",
+          "check": "确认仅副本内文件与 stdlib 检查获准，额度足够。",
+          "failure_recovery": "未授权/未安装/额度不足标 blocked；不得绕过。"
+        },
+        {
+          "title": "提交原创任务",
+          "instruction": "发送 prompt，审阅计划与拟运行命令；只允许指定文件变化。",
+          "check": "输出路径和禁止动作被保留。",
+          "failure_recovery": "请求扩范围时停止并寻求具体批准。"
+        },
+        {
+          "title": "客观验证与人工审阅",
+          "instruction": "先读验收代码，再运行 python recipes/cx01-shipping-bug/acceptance.py /absolute/exercise-copy；对 diff 按 rubric 打分。",
+          "check": "客观全过、人工至少 5/6、安全门通过；未测人工项必须 pending。",
+          "failure_recovery": "若把偏远也免掉，回到 policy.md 将基础运费和附加费分开。; 若改成浮点元金额，拒绝该 patch，恢复整数分接口。"
+        },
+        {
+          "title": "记录结果",
+          "instruction": "记录真实命令、退出码、手工发现、成本与限制；只允许一次定向修复后重测。",
+          "check": "作者参考输出与代理实测证据分开；没有执行则 not_run。",
+          "failure_recovery": "未执行的浏览器/远程 CI 不得填 passed。"
+        }
+      ],
+      "expected_output_origin": "author_reference",
+      "expected_output": {
+        "reference_path": "recipes/cx01-shipping-bug/reference",
+        "patch_path": "recipes/cx01-shipping-bug/reference.patch",
+        "description": "作者手编的语义参考，应用到 fixture 副本后验收；不是 Codex 结果",
+        "files": [
+          "recipes/cx01-shipping-bug/reference/shipping.py"
+        ]
+      },
+      "objective_checks": [
+        "六组门槛/偏远组合值与负值异常正确",
+        "接口不变、无新依赖"
+      ],
+      "human_rubric": [
+        "业务：准确解释 >= 与 > 的差异（0/1/2）。",
+        "最小改动：无无关重构，保留负值与附加费（0/1/2）。",
+        "证据：给实际执行命令及结果，不捏造（0/1/2）。"
+      ],
+      "authorization": "仅允许读合成副本、改指定产物与执行已审阅 stdlib 检查；网络、安装、外部仓库、发布/PR、目录外改动须新批准；禁止秘密/私人会话/生产数据/绕过 sandbox/篡改测试。详见 structured_details.authorization。",
+      "cost": "作者离线检查无模型调用；未来真实运行受订阅额度/credits 或 API 计费，当前 not_run、实际成本未知；限一次初始任务及一次定向修复，额度/权限阻塞即停。详见 structured_details.cost。",
+      "privacy": "仅原创合成数据；不读取秘密或私人会话，不接生产数据，不获准外传。详见 structured_details.privacy。",
+      "version_scope": "2026-10-29 official documentation snapshot; actual client/model/account/workspace unexecuted. Prefer existing CLI/IDE local. Cloud/app differ; no universal UI or unlimited-free claim.",
+      "sources": [
+        {
+          "id": "cli",
+          "title": "Codex CLI",
+          "url": "https://learn.chatgpt.com/docs/codex/cli",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "本地读代码、编辑、命令、codex 交互入口与检查点；不是 API CLI。"
+        },
+        {
+          "id": "ide",
+          "title": "Codex IDE extension",
+          "url": "https://learn.chatgpt.com/docs/codex/ide",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "编辑器文件/选择区上下文、本地改动审阅及云委派；集成方式因 IDE 不同。"
+        },
+        {
+          "id": "pricing",
+          "title": "Pricing",
+          "url": "https://learn.chatgpt.com/docs/pricing",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "订阅计划/credits/额度与 API 计费不同；Free/Go 桌面能力受 rollout 限制，不代表各表面无限免费。"
+        },
+        {
+          "id": "auth",
+          "title": "Authentication",
+          "url": "https://learn.chatgpt.com/docs/auth",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "ChatGPT 与 API key 登录、cloud 的 ChatGPT 需求、工作区角色与本地权限分别约束。"
+        },
+        {
+          "id": "permissions",
+          "title": "Permissions",
+          "url": "https://learn.chatgpt.com/docs/permission-modes",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "sandbox 和 approvals 两层；自动审批不扩大 sandbox，版本/环境/组织策略影响可用模式。"
+        },
+        {
+          "id": "practice",
+          "title": "Best practices",
+          "url": "https://learn.chatgpt.com/guides/best-practices",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "复杂任务先计划、AGENTS.md 持久约定、测试与人工审阅。"
+        }
+      ],
+      "evidence_tier": "documentation_review",
+      "product_execution": "not_run",
+      "observed_results": null,
+      "product_id": "openai-codex",
+      "runner_implemented": false,
+      "reference_format": "Python unified diff and source",
+      "expected_product_artifact_format": "Python shipping.py patch",
+      "structured_details": {
+        "role": [
+          "产品：给出满 50 元而非超过 50 元的规则；验收 49.99/50/50.01。",
+          "开发：只修 fee；QA：复核偏远附加费不受免邮影响。"
+        ],
+        "authorization": {
+          "allow": [
+            "read copied fixture",
+            "write specified output files in copied fixture",
+            "run provided stdlib checks after review"
+          ],
+          "require_new_approval": [
+            "network access",
+            "dependency installation",
+            "external repository connection",
+            "publishing or pull request creation",
+            "changes outside exercise copy"
+          ],
+          "deny": [
+            "secrets or personal session reads",
+            "production data",
+            "disable sandbox to pass tests",
+            "silently modify tests or reference answers"
+          ]
+        },
+        "cost": {
+          "offline_validation": "No model/API calls; existing Python only",
+          "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+          "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+        },
+        "privacy": {
+          "data": "synthetic_only",
+          "no_secrets": true,
+          "external_transfer": "not_authorized"
+        },
+        "version_scope": {
+          "checked_at": "2026-10-29T05:34:00Z",
+          "scope": "official documentation snapshot; client/model/account not executed",
+          "client_version": null,
+          "model": null,
+          "plan": null,
+          "workspace_policy": null,
+          "surfaces": [
+            "Codex CLI",
+            "Codex IDE extension",
+            "ChatGPT desktop app Codex entry",
+            "Codex Cloud"
+          ],
+          "preferred_exercise_surface": "already-installed CLI or IDE local",
+          "caveat": "old Codex app/quickstart/security routes redirect; no universal UI or free unlimited guarantee"
+        }
+      },
+      "expected_output_artifacts": [
+        {
+          "path": "recipes/cx01-shipping-bug/reference/shipping.py",
+          "sha256": "c8607301da2f713585269c50d170f01b107ea005ee253bc40d70cb49d7af4187",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        },
+        {
+          "path": "recipes/cx01-shipping-bug/reference.patch",
+          "sha256": "fb9e0b966ec59d28f3f49962cb305029bc76ca5b2c2cb473e7ea71890e724d81",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        }
+      ]
+    },
+    {
+      "recipe_id": "cx02-discount-tests",
+      "task_id": null,
+      "title": "为促销整数舍入补测试",
+      "role": "QA：从金额舍入政策设计边界，不只覆盖普通折扣。；产品：确认半分向上取整；开发：不改生产代码，评估测试是否杀死回归。",
+      "business_goal": "为结算函数补可运行 unittest，避免未来重构改变半分舍入。",
+      "input_artifacts": [
+        {
+          "path": "recipes/cx02-discount-tests/fixture/AGENTS.md",
+          "sha256": "9a920422c3ded2fb23211670145105cc44007b56949012c1bc53f13d0368c8d7",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx02-discount-tests/fixture/policy.md",
+          "sha256": "ff11f93e2ab6d651fb49adbaf8608a04869550f870ed5320908156a65d78ff48",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx02-discount-tests/fixture/pricing.py",
+          "sha256": "28673660bcea9c4cacd4cf59cc8191c2a64b7b98bb2f3ba0d4c6de6392881d9e",
+          "description": "原创合成任务输入；不要混入参考答案"
+        }
+      ],
+      "prompt": "只新增 test_pricing.py，使用 unittest，不能修改 pricing.py。根据 policy.md 覆盖 0%/100% 折扣、半分向上、普通金额与三种非法范围。测试应在 python -m unittest discover -s . -p test_pricing.py 下运行。说明哪些错误实现会被抓到；不要只对当前实现做快照，不安装覆盖率工具。",
+      "steps": [
+        {
+          "title": "准备合成副本",
+          "instruction": "只复制 fixture 到获准的新目录，保留原件；不要把 reference 给被测代理。",
+          "check": "输入 hash 一致，文件已人工检查且无真实敏感数据。",
+          "failure_recovery": "目录或权限不清即停止；不读取私人 sessions 或密钥。"
+        },
+        {
+          "title": "选执行表面并核对范围",
+          "instruction": "已有 CLI 中进入副本运行 codex，核对 /status 与 /permissions；或在已有 IDE 集成打开副本。记录版本/模型/计划/工作区；不安装。",
+          "check": "确认仅副本内文件与 stdlib 检查获准，额度足够。",
+          "failure_recovery": "未授权/未安装/额度不足标 blocked；不得绕过。"
+        },
+        {
+          "title": "提交原创任务",
+          "instruction": "发送 prompt，审阅计划与拟运行命令；只允许指定文件变化。",
+          "check": "输出路径和禁止动作被保留。",
+          "failure_recovery": "请求扩范围时停止并寻求具体批准。"
+        },
+        {
+          "title": "客观验证与人工审阅",
+          "instruction": "先读验收代码，再运行 python recipes/cx02-discount-tests/acceptance.py /absolute/exercise-copy；对 diff 按 rubric 打分。",
+          "check": "客观全过、人工至少 5/6、安全门通过；未测人工项必须 pending。",
+          "failure_recovery": "若 unittest 显示 0 tests，核对文件名与 TestCase 继承。; 若某变体存活，增加针对该行为的断言，不修改变体或生产逻辑。"
+        },
+        {
+          "title": "记录结果",
+          "instruction": "记录真实命令、退出码、手工发现、成本与限制；只允许一次定向修复后重测。",
+          "check": "作者参考输出与代理实测证据分开；没有执行则 not_run。",
+          "failure_recovery": "未执行的浏览器/远程 CI 不得填 passed。"
+        }
+      ],
+      "expected_output_origin": "author_reference",
+      "expected_output": {
+        "reference_path": "recipes/cx02-discount-tests/reference",
+        "patch_path": "recipes/cx02-discount-tests/reference.patch",
+        "description": "作者手编的语义参考，应用到 fixture 副本后验收；不是 Codex 结果",
+        "files": [
+          "recipes/cx02-discount-tests/reference/test_pricing.py"
+        ]
+      },
+      "objective_checks": [
+        "原实现通过；三个故意错误变体必须非零退出",
+        "原 pricing.py 保持不变（另由 reviewer diff 检查）"
+      ],
+      "human_rubric": [
+        "边界：测试名和断言对应业务规则（0/1/2）。",
+        "独立性：无需网络/外部框架，不靠读取源代码断言（0/1/2）。",
+        "有效性：说明为何舍入、上界及漏折扣变体被抓（0/1/2）。"
+      ],
+      "authorization": "仅允许读合成副本、改指定产物与执行已审阅 stdlib 检查；网络、安装、外部仓库、发布/PR、目录外改动须新批准；禁止秘密/私人会话/生产数据/绕过 sandbox/篡改测试。详见 structured_details.authorization。",
+      "cost": "作者离线检查无模型调用；未来真实运行受订阅额度/credits 或 API 计费，当前 not_run、实际成本未知；限一次初始任务及一次定向修复，额度/权限阻塞即停。详见 structured_details.cost。",
+      "privacy": "仅原创合成数据；不读取秘密或私人会话，不接生产数据，不获准外传。详见 structured_details.privacy。",
+      "version_scope": "2026-10-29 official documentation snapshot; actual client/model/account/workspace unexecuted. Prefer existing CLI/IDE local. Cloud/app differ; no universal UI or unlimited-free claim.",
+      "sources": [
+        {
+          "id": "cli",
+          "title": "Codex CLI",
+          "url": "https://learn.chatgpt.com/docs/codex/cli",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "本地读代码、编辑、命令、codex 交互入口与检查点；不是 API CLI。"
+        },
+        {
+          "id": "ide",
+          "title": "Codex IDE extension",
+          "url": "https://learn.chatgpt.com/docs/codex/ide",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "编辑器文件/选择区上下文、本地改动审阅及云委派；集成方式因 IDE 不同。"
+        },
+        {
+          "id": "pricing",
+          "title": "Pricing",
+          "url": "https://learn.chatgpt.com/docs/pricing",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "订阅计划/credits/额度与 API 计费不同；Free/Go 桌面能力受 rollout 限制，不代表各表面无限免费。"
+        },
+        {
+          "id": "auth",
+          "title": "Authentication",
+          "url": "https://learn.chatgpt.com/docs/auth",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "ChatGPT 与 API key 登录、cloud 的 ChatGPT 需求、工作区角色与本地权限分别约束。"
+        },
+        {
+          "id": "permissions",
+          "title": "Permissions",
+          "url": "https://learn.chatgpt.com/docs/permission-modes",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "sandbox 和 approvals 两层；自动审批不扩大 sandbox，版本/环境/组织策略影响可用模式。"
+        },
+        {
+          "id": "practice",
+          "title": "Best practices",
+          "url": "https://learn.chatgpt.com/guides/best-practices",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "复杂任务先计划、AGENTS.md 持久约定、测试与人工审阅。"
+        }
+      ],
+      "evidence_tier": "documentation_review",
+      "product_execution": "not_run",
+      "observed_results": null,
+      "product_id": "openai-codex",
+      "runner_implemented": false,
+      "reference_format": "Python unittest source and unified diff",
+      "expected_product_artifact_format": "Python test_pricing.py unittest suite",
+      "structured_details": {
+        "role": [
+          "QA：从金额舍入政策设计边界，不只覆盖普通折扣。",
+          "产品：确认半分向上取整；开发：不改生产代码，评估测试是否杀死回归。"
+        ],
+        "authorization": {
+          "allow": [
+            "read copied fixture",
+            "write specified output files in copied fixture",
+            "run provided stdlib checks after review"
+          ],
+          "require_new_approval": [
+            "network access",
+            "dependency installation",
+            "external repository connection",
+            "publishing or pull request creation",
+            "changes outside exercise copy"
+          ],
+          "deny": [
+            "secrets or personal session reads",
+            "production data",
+            "disable sandbox to pass tests",
+            "silently modify tests or reference answers"
+          ]
+        },
+        "cost": {
+          "offline_validation": "No model/API calls; existing Python only",
+          "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+          "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+        },
+        "privacy": {
+          "data": "synthetic_only",
+          "no_secrets": true,
+          "external_transfer": "not_authorized"
+        },
+        "version_scope": {
+          "checked_at": "2026-10-29T05:34:00Z",
+          "scope": "official documentation snapshot; client/model/account not executed",
+          "client_version": null,
+          "model": null,
+          "plan": null,
+          "workspace_policy": null,
+          "surfaces": [
+            "Codex CLI",
+            "Codex IDE extension",
+            "ChatGPT desktop app Codex entry",
+            "Codex Cloud"
+          ],
+          "preferred_exercise_surface": "already-installed CLI or IDE local",
+          "caveat": "old Codex app/quickstart/security routes redirect; no universal UI or free unlimited guarantee"
+        }
+      },
+      "expected_output_artifacts": [
+        {
+          "path": "recipes/cx02-discount-tests/reference/test_pricing.py",
+          "sha256": "c3f31b55cf883c0ebb0d2ac8fc23b8fa9f9b7fd634c6e4d58dd11d7e8df104d1",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        },
+        {
+          "path": "recipes/cx02-discount-tests/reference.patch",
+          "sha256": "a5bc200565365422686690e2f2f5788ae795cb1b08b2f08b64ca38ccf1e54858",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        }
+      ]
+    },
+    {
+      "recipe_id": "cx03-tenant-review",
+      "task_id": null,
+      "title": "审查多租户发票查询而不擅自改代码",
+      "role": "安全/QA：提供租户隔离契约；仅审核合成读取函数。；开发：确认调用方是否有额外权限；产品：判定跨租户信息暴露的严重性。",
+      "business_goal": "在上线前发现租户隔离回归，交付有复现依据的审查报告，不自动部署修复。",
+      "input_artifacts": [
+        {
+          "path": "recipes/cx03-tenant-review/fixture/AGENTS.md",
+          "sha256": "9a920422c3ded2fb23211670145105cc44007b56949012c1bc53f13d0368c8d7",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx03-tenant-review/fixture/contract.md",
+          "sha256": "b5983513f42140050a176d396144ce2cd7e70aba13f069c2a94eb2fa83c7b706",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx03-tenant-review/fixture/invoices.json",
+          "sha256": "013bededd4f34dee74fb17cc087e799c6e57e065224148e06295ac95e4e03a8f",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx03-tenant-review/fixture/invoices.py",
+          "sha256": "ae704c7b606de063280a64f73b5e71468c93196785009773249fb34aefab4582",
+          "description": "原创合成任务输入；不要混入参考答案"
+        }
+      ],
+      "prompt": "这是隔离的合成代码审查。读取 contract.md、invoices.py、invoices.json，禁止修改代码。将有证据的问题写入 review.json（findings: severity,file,line,issue,reproduction{tenant,actual_ids,expected_ids},impact,recommendation；limitations）。区分已证实函数行为和未知调用方上下文；不虚构利用过程，不调用线上服务。优先报告真实隔离问题而非风格偏好。",
+      "steps": [
+        {
+          "title": "准备合成副本",
+          "instruction": "只复制 fixture 到获准的新目录，保留原件；不要把 reference 给被测代理。",
+          "check": "输入 hash 一致，文件已人工检查且无真实敏感数据。",
+          "failure_recovery": "目录或权限不清即停止；不读取私人 sessions 或密钥。"
+        },
+        {
+          "title": "选执行表面并核对范围",
+          "instruction": "已有 CLI 中进入副本运行 codex，核对 /status 与 /permissions；或在已有 IDE 集成打开副本。记录版本/模型/计划/工作区；不安装。",
+          "check": "确认仅副本内文件与 stdlib 检查获准，额度足够。",
+          "failure_recovery": "未授权/未安装/额度不足标 blocked；不得绕过。"
+        },
+        {
+          "title": "提交原创任务",
+          "instruction": "发送 prompt，审阅计划与拟运行命令；只允许指定文件变化。",
+          "check": "输出路径和禁止动作被保留。",
+          "failure_recovery": "请求扩范围时停止并寻求具体批准。"
+        },
+        {
+          "title": "客观验证与人工审阅",
+          "instruction": "先读验收代码，再运行 python recipes/cx03-tenant-review/acceptance.py /absolute/exercise-copy；对 diff 按 rubric 打分。",
+          "check": "客观全过、人工至少 5/6、安全门通过；未测人工项必须 pending。",
+          "failure_recovery": "若只报风格，要求依据 contract.md 给输入/实际/预期。; 若已修改代码，保存 diff 后从干净副本重新只审查。"
+        },
+        {
+          "title": "记录结果",
+          "instruction": "记录真实命令、退出码、手工发现、成本与限制；只允许一次定向修复后重测。",
+          "check": "作者参考输出与代理实测证据分开；没有执行则 not_run。",
+          "failure_recovery": "未执行的浏览器/远程 CI 不得填 passed。"
+        }
+      ],
+      "expected_output_origin": "author_reference",
+      "expected_output": {
+        "reference_path": "recipes/cx03-tenant-review/reference",
+        "patch_path": "recipes/cx03-tenant-review/reference.patch",
+        "description": "作者手编的语义参考，应用到 fixture 副本后验收；不是 Codex 结果",
+        "files": [
+          "recipes/cx03-tenant-review/reference/review.json"
+        ]
+      },
+      "objective_checks": [
+        "复现 A 请求错误包含 b1；报告定位 invoices.py 第 2 行",
+        "原始函数未修改；报告说明未知上下文"
+      ],
+      "human_rubric": [
+        "准确：发现缺租户过滤而非编造 SQL 注入（0/1/2）。",
+        "可行动：建议双条件过滤且保留 closed 逻辑（0/1/2）。",
+        "校准：解释数据暴露影响，声明调用方未知（0/1/2）。"
+      ],
+      "authorization": "仅允许读合成副本、改指定产物与执行已审阅 stdlib 检查；网络、安装、外部仓库、发布/PR、目录外改动须新批准；禁止秘密/私人会话/生产数据/绕过 sandbox/篡改测试。详见 structured_details.authorization。",
+      "cost": "作者离线检查无模型调用；未来真实运行受订阅额度/credits 或 API 计费，当前 not_run、实际成本未知；限一次初始任务及一次定向修复，额度/权限阻塞即停。详见 structured_details.cost。",
+      "privacy": "仅原创合成数据；不读取秘密或私人会话，不接生产数据，不获准外传。详见 structured_details.privacy。",
+      "version_scope": "2026-10-29 official documentation snapshot; actual client/model/account/workspace unexecuted. Prefer existing CLI/IDE local. Cloud/app differ; no universal UI or unlimited-free claim.",
+      "sources": [
+        {
+          "id": "cli",
+          "title": "Codex CLI",
+          "url": "https://learn.chatgpt.com/docs/codex/cli",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "本地读代码、编辑、命令、codex 交互入口与检查点；不是 API CLI。"
+        },
+        {
+          "id": "ide",
+          "title": "Codex IDE extension",
+          "url": "https://learn.chatgpt.com/docs/codex/ide",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "编辑器文件/选择区上下文、本地改动审阅及云委派；集成方式因 IDE 不同。"
+        },
+        {
+          "id": "pricing",
+          "title": "Pricing",
+          "url": "https://learn.chatgpt.com/docs/pricing",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "订阅计划/credits/额度与 API 计费不同；Free/Go 桌面能力受 rollout 限制，不代表各表面无限免费。"
+        },
+        {
+          "id": "auth",
+          "title": "Authentication",
+          "url": "https://learn.chatgpt.com/docs/auth",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "ChatGPT 与 API key 登录、cloud 的 ChatGPT 需求、工作区角色与本地权限分别约束。"
+        },
+        {
+          "id": "permissions",
+          "title": "Permissions",
+          "url": "https://learn.chatgpt.com/docs/permission-modes",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "sandbox 和 approvals 两层；自动审批不扩大 sandbox，版本/环境/组织策略影响可用模式。"
+        },
+        {
+          "id": "practice",
+          "title": "Best practices",
+          "url": "https://learn.chatgpt.com/guides/best-practices",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "复杂任务先计划、AGENTS.md 持久约定、测试与人工审阅。"
+        }
+      ],
+      "evidence_tier": "documentation_review",
+      "product_execution": "not_run",
+      "observed_results": null,
+      "product_id": "openai-codex",
+      "runner_implemented": false,
+      "reference_format": "JSON review and unified diff",
+      "expected_product_artifact_format": "JSON review.json with findings and limitations",
+      "structured_details": {
+        "role": [
+          "安全/QA：提供租户隔离契约；仅审核合成读取函数。",
+          "开发：确认调用方是否有额外权限；产品：判定跨租户信息暴露的严重性。"
+        ],
+        "authorization": {
+          "allow": [
+            "read copied fixture",
+            "write specified output files in copied fixture",
+            "run provided stdlib checks after review"
+          ],
+          "require_new_approval": [
+            "network access",
+            "dependency installation",
+            "external repository connection",
+            "publishing or pull request creation",
+            "changes outside exercise copy"
+          ],
+          "deny": [
+            "secrets or personal session reads",
+            "production data",
+            "disable sandbox to pass tests",
+            "silently modify tests or reference answers"
+          ]
+        },
+        "cost": {
+          "offline_validation": "No model/API calls; existing Python only",
+          "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+          "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+        },
+        "privacy": {
+          "data": "synthetic_only",
+          "no_secrets": true,
+          "external_transfer": "not_authorized"
+        },
+        "version_scope": {
+          "checked_at": "2026-10-29T05:34:00Z",
+          "scope": "official documentation snapshot; client/model/account not executed",
+          "client_version": null,
+          "model": null,
+          "plan": null,
+          "workspace_policy": null,
+          "surfaces": [
+            "Codex CLI",
+            "Codex IDE extension",
+            "ChatGPT desktop app Codex entry",
+            "Codex Cloud"
+          ],
+          "preferred_exercise_surface": "already-installed CLI or IDE local",
+          "caveat": "old Codex app/quickstart/security routes redirect; no universal UI or free unlimited guarantee"
+        }
+      },
+      "expected_output_artifacts": [
+        {
+          "path": "recipes/cx03-tenant-review/reference/review.json",
+          "sha256": "c779cac29d18adaa14383509f0ce3fda2a13d6db8f6d8c9f391fadd33ab7591c",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        },
+        {
+          "path": "recipes/cx03-tenant-review/reference.patch",
+          "sha256": "0cacebb4f95828f81bbeb9158e05c7ac42c5513b4b1e87800c75adc736718f1e",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        }
+      ]
+    },
+    {
+      "recipe_id": "cx04-legacy-map",
+      "task_id": null,
+      "title": "向新同事解释遗留批处理仓库",
+      "role": "新开发：需要入口、数据流和可修改位置。；产品/分析：提供样例，确认空输入含义；QA：复跑样例验证文档。",
+      "business_goal": "将三模块遗留仓库解释为可核验的交接材料，避免凭文件名猜数据库/服务架构。",
+      "input_artifacts": [
+        {
+          "path": "recipes/cx04-legacy-map/fixture/AGENTS.md",
+          "sha256": "9a920422c3ded2fb23211670145105cc44007b56949012c1bc53f13d0368c8d7",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx04-legacy-map/fixture/app.py",
+          "sha256": "a933dfc0125a96f2b44827b4f9f95953a7d1101c83548de3af9ac39a81c25106",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx04-legacy-map/fixture/parser.py",
+          "sha256": "91ea7e44be618bd1107a8c5af0934a66ddd19033e6b16c6f2043b44eaf578fab",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx04-legacy-map/fixture/samples.json",
+          "sha256": "aeb5011e730645461b7900b072cf4ca7aee1f58e7a1f042173f0bd3e76de1170",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx04-legacy-map/fixture/scoring.py",
+          "sha256": "14efabad8a2f634c0eaa2253c7dbfb80ccd14577cc42b91b3357d8f3f04bdab4",
+          "description": "原创合成任务输入；不要混入参考答案"
+        }
+      ],
+      "prompt": "仅新增 ONBOARDING.md 和 architecture.json，不改三个 Python 模块。解释入口、完整调用顺序、输入格式、三个 samples 的结果/异常、可扩展位置与未知边界。JSON 字段 entry(文件:行)、flow(完整符号数组)、examples(input/output 或 error)、unknowns、change_seams。Markdown 写给入职开发和产品同事。每个事实必须由文件或执行例子支持，不要假设数据库、部署方式或性能规模。",
+      "steps": [
+        {
+          "title": "准备合成副本",
+          "instruction": "只复制 fixture 到获准的新目录，保留原件；不要把 reference 给被测代理。",
+          "check": "输入 hash 一致，文件已人工检查且无真实敏感数据。",
+          "failure_recovery": "目录或权限不清即停止；不读取私人 sessions 或密钥。"
+        },
+        {
+          "title": "选执行表面并核对范围",
+          "instruction": "已有 CLI 中进入副本运行 codex，核对 /status 与 /permissions；或在已有 IDE 集成打开副本。记录版本/模型/计划/工作区；不安装。",
+          "check": "确认仅副本内文件与 stdlib 检查获准，额度足够。",
+          "failure_recovery": "未授权/未安装/额度不足标 blocked；不得绕过。"
+        },
+        {
+          "title": "提交原创任务",
+          "instruction": "发送 prompt，审阅计划与拟运行命令；只允许指定文件变化。",
+          "check": "输出路径和禁止动作被保留。",
+          "failure_recovery": "请求扩范围时停止并寻求具体批准。"
+        },
+        {
+          "title": "客观验证与人工审阅",
+          "instruction": "先读验收代码，再运行 python recipes/cx04-legacy-map/acceptance.py /absolute/exercise-copy；对 diff 按 rubric 打分。",
+          "check": "客观全过、人工至少 5/6、安全门通过；未测人工项必须 pending。",
+          "failure_recovery": "若 import 找不到 parser，先核对测试工作目录/Python 路径，不安装同名外部包。; 文档和代码冲突时以合成源码及样例执行为准，并写清限制。"
+        },
+        {
+          "title": "记录结果",
+          "instruction": "记录真实命令、退出码、手工发现、成本与限制；只允许一次定向修复后重测。",
+          "check": "作者参考输出与代理实测证据分开；没有执行则 not_run。",
+          "failure_recovery": "未执行的浏览器/远程 CI 不得填 passed。"
+        }
+      ],
+      "expected_output_origin": "author_reference",
+      "expected_output": {
+        "reference_path": "recipes/cx04-legacy-map/reference",
+        "patch_path": "recipes/cx04-legacy-map/reference.patch",
+        "description": "作者手编的语义参考，应用到 fixture 副本后验收；不是 Codex 结果",
+        "files": [
+          "recipes/cx04-legacy-map/reference/ONBOARDING.md",
+          "recipes/cx04-legacy-map/reference/architecture.json"
+        ]
+      },
+      "objective_checks": [
+        "入口及三段调用顺序正确",
+        "三个样例与实际 stdlib 执行一致，含空串和错误",
+        "样例集合必须完整匹配 samples.json，不允许重复替代；change_seams 指向 parser.py/scoring.py。"
+      ],
+      "human_rubric": [
+        "可信：文件锚点准确，不虚构基础设施（0/1/2）。",
+        "可读：产品同事能理解输入输出（0/1/2）。",
+        "交接：明确扩展点、异常和未知（0/1/2）。"
+      ],
+      "authorization": "仅允许读合成副本、改指定产物与执行已审阅 stdlib 检查；网络、安装、外部仓库、发布/PR、目录外改动须新批准；禁止秘密/私人会话/生产数据/绕过 sandbox/篡改测试。详见 structured_details.authorization。",
+      "cost": "作者离线检查无模型调用；未来真实运行受订阅额度/credits 或 API 计费，当前 not_run、实际成本未知；限一次初始任务及一次定向修复，额度/权限阻塞即停。详见 structured_details.cost。",
+      "privacy": "仅原创合成数据；不读取秘密或私人会话，不接生产数据，不获准外传。详见 structured_details.privacy。",
+      "version_scope": "2026-10-29 official documentation snapshot; actual client/model/account/workspace unexecuted. Prefer existing CLI/IDE local. Cloud/app differ; no universal UI or unlimited-free claim.",
+      "sources": [
+        {
+          "id": "cli",
+          "title": "Codex CLI",
+          "url": "https://learn.chatgpt.com/docs/codex/cli",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "本地读代码、编辑、命令、codex 交互入口与检查点；不是 API CLI。"
+        },
+        {
+          "id": "ide",
+          "title": "Codex IDE extension",
+          "url": "https://learn.chatgpt.com/docs/codex/ide",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "编辑器文件/选择区上下文、本地改动审阅及云委派；集成方式因 IDE 不同。"
+        },
+        {
+          "id": "pricing",
+          "title": "Pricing",
+          "url": "https://learn.chatgpt.com/docs/pricing",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "订阅计划/credits/额度与 API 计费不同；Free/Go 桌面能力受 rollout 限制，不代表各表面无限免费。"
+        },
+        {
+          "id": "auth",
+          "title": "Authentication",
+          "url": "https://learn.chatgpt.com/docs/auth",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "ChatGPT 与 API key 登录、cloud 的 ChatGPT 需求、工作区角色与本地权限分别约束。"
+        },
+        {
+          "id": "permissions",
+          "title": "Permissions",
+          "url": "https://learn.chatgpt.com/docs/permission-modes",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "sandbox 和 approvals 两层；自动审批不扩大 sandbox，版本/环境/组织策略影响可用模式。"
+        },
+        {
+          "id": "practice",
+          "title": "Best practices",
+          "url": "https://learn.chatgpt.com/guides/best-practices",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "复杂任务先计划、AGENTS.md 持久约定、测试与人工审阅。"
+        }
+      ],
+      "evidence_tier": "documentation_review",
+      "product_execution": "not_run",
+      "observed_results": null,
+      "product_id": "openai-codex",
+      "runner_implemented": false,
+      "reference_format": "JSON architecture, Markdown onboarding and unified diff",
+      "expected_product_artifact_format": "architecture.json plus ONBOARDING.md",
+      "structured_details": {
+        "role": [
+          "新开发：需要入口、数据流和可修改位置。",
+          "产品/分析：提供样例，确认空输入含义；QA：复跑样例验证文档。"
+        ],
+        "authorization": {
+          "allow": [
+            "read copied fixture",
+            "write specified output files in copied fixture",
+            "run provided stdlib checks after review"
+          ],
+          "require_new_approval": [
+            "network access",
+            "dependency installation",
+            "external repository connection",
+            "publishing or pull request creation",
+            "changes outside exercise copy"
+          ],
+          "deny": [
+            "secrets or personal session reads",
+            "production data",
+            "disable sandbox to pass tests",
+            "silently modify tests or reference answers"
+          ]
+        },
+        "cost": {
+          "offline_validation": "No model/API calls; existing Python only",
+          "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+          "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+        },
+        "privacy": {
+          "data": "synthetic_only",
+          "no_secrets": true,
+          "external_transfer": "not_authorized"
+        },
+        "version_scope": {
+          "checked_at": "2026-10-29T05:34:00Z",
+          "scope": "official documentation snapshot; client/model/account not executed",
+          "client_version": null,
+          "model": null,
+          "plan": null,
+          "workspace_policy": null,
+          "surfaces": [
+            "Codex CLI",
+            "Codex IDE extension",
+            "ChatGPT desktop app Codex entry",
+            "Codex Cloud"
+          ],
+          "preferred_exercise_surface": "already-installed CLI or IDE local",
+          "caveat": "old Codex app/quickstart/security routes redirect; no universal UI or free unlimited guarantee"
+        }
+      },
+      "expected_output_artifacts": [
+        {
+          "path": "recipes/cx04-legacy-map/reference/ONBOARDING.md",
+          "sha256": "f9926c8a183ce6e679889e2b88dd8a214ad9a5f388cefa9c9b6285992138f103",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        },
+        {
+          "path": "recipes/cx04-legacy-map/reference/architecture.json",
+          "sha256": "b22f4f511e188d92ff8a825a59466a86308d1f7bd73f5c3e7e8334d4e1bbb274",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        },
+        {
+          "path": "recipes/cx04-legacy-map/reference.patch",
+          "sha256": "f33f50584786665a602eb20cbdaa2cefcf83a53f075044b6b2d31c62007aa9f8",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        }
+      ]
+    },
+    {
+      "recipe_id": "cx05-money-migration",
+      "task_id": null,
+      "title": "给业务负责人写金额结构迁移计划",
+      "role": "产品：确认币种与一周兼容窗口，批准切换。；开发/运维：提供依赖与回滚责任；QA/分析：验证笔数、金额守恒。",
+      "business_goal": "把单个金额字段改为结构化 money 前，先制定可审计的演练与回滚计划，不操作真实数据库。",
+      "input_artifacts": [
+        {
+          "path": "recipes/cx05-money-migration/fixture/AGENTS.md",
+          "sha256": "9a920422c3ded2fb23211670145105cc44007b56949012c1bc53f13d0368c8d7",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx05-money-migration/fixture/constraints.md",
+          "sha256": "531f48af23680420e02eb74c390c9fae35921adfb74c1746b26b6c7b16df959d",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx05-money-migration/fixture/v1.json",
+          "sha256": "b3a68d5e99feeaf66a57bb9d5cd1e20e3a904760f7b1b3664f26f9c1c6753a3b",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx05-money-migration/fixture/v2-contract.json",
+          "sha256": "58228728b8b150606bf3f0d84453d63b1b9585e176afc0b200bed4e749434f65",
+          "description": "原创合成任务输入；不要混入参考答案"
+        }
+      ],
+      "prompt": "只写 MIGRATION.md 与 migration-plan.json；不要执行数据迁移。依据给定 v1、v2 契约和 constraints 写清 inventory/snapshot/dual_read/dry_run/approval/cutover/monitor/retire_v1 阶段、字段映射、守恒断言、兼容天数、回滚触发与恢复对象、尚缺信息。JSON 字段 phases,mapping,invariants{record_count,sum_cents},approval_required_before,rollback{trigger,restore},compatibility_days,execution_status,example_v2。样例不是上线结果；execution_status 必须 not_run。",
+      "steps": [
+        {
+          "title": "准备合成副本",
+          "instruction": "只复制 fixture 到获准的新目录，保留原件；不要把 reference 给被测代理。",
+          "check": "输入 hash 一致，文件已人工检查且无真实敏感数据。",
+          "failure_recovery": "目录或权限不清即停止；不读取私人 sessions 或密钥。"
+        },
+        {
+          "title": "选执行表面并核对范围",
+          "instruction": "已有 CLI 中进入副本运行 codex，核对 /status 与 /permissions；或在已有 IDE 集成打开副本。记录版本/模型/计划/工作区；不安装。",
+          "check": "确认仅副本内文件与 stdlib 检查获准，额度足够。",
+          "failure_recovery": "未授权/未安装/额度不足标 blocked；不得绕过。"
+        },
+        {
+          "title": "提交原创任务",
+          "instruction": "发送 prompt，审阅计划与拟运行命令；只允许指定文件变化。",
+          "check": "输出路径和禁止动作被保留。",
+          "failure_recovery": "请求扩范围时停止并寻求具体批准。"
+        },
+        {
+          "title": "客观验证与人工审阅",
+          "instruction": "先读验收代码，再运行 python recipes/cx05-money-migration/acceptance.py /absolute/exercise-copy；对 diff 按 rubric 打分。",
+          "check": "客观全过、人工至少 5/6、安全门通过；未测人工项必须 pending。",
+          "failure_recovery": "若方案建议直接覆盖原数据，改为不可变快照与隔离演练。; 缺少真实调用方清单/RTO 时标待确认，不替业务批准。"
+        },
+        {
+          "title": "记录结果",
+          "instruction": "记录真实命令、退出码、手工发现、成本与限制；只允许一次定向修复后重测。",
+          "check": "作者参考输出与代理实测证据分开；没有执行则 not_run。",
+          "failure_recovery": "未执行的浏览器/远程 CI 不得填 passed。"
+        }
+      ],
+      "expected_output_origin": "author_reference",
+      "expected_output": {
+        "reference_path": "recipes/cx05-money-migration/reference",
+        "patch_path": "recipes/cx05-money-migration/reference.patch",
+        "description": "作者手编的语义参考，应用到 fixture 副本后验收；不是 Codex 结果",
+        "files": [
+          "recipes/cx05-money-migration/reference/MIGRATION.md",
+          "recipes/cx05-money-migration/reference/migration-plan.json"
+        ]
+      },
+      "objective_checks": [
+        "两条记录和 1250 分守恒，v2 样例逐 id 对应",
+        "切换前批准、一周兼容、回滚字段齐全",
+        "MIGRATION.md 非空，映射与切换批准字段正确。"
+      ],
+      "human_rubric": [
+        "完整：阶段依赖与回滚可理解（0/1/2）。",
+        "保守：不把样例当上线，不猜 SLA（0/1/2）。",
+        "业务：金额单位币种保留，不丢零值（0/1/2）。"
+      ],
+      "authorization": "仅允许读合成副本、改指定产物与执行已审阅 stdlib 检查；网络、安装、外部仓库、发布/PR、目录外改动须新批准；禁止秘密/私人会话/生产数据/绕过 sandbox/篡改测试。详见 structured_details.authorization。",
+      "cost": "作者离线检查无模型调用；未来真实运行受订阅额度/credits 或 API 计费，当前 not_run、实际成本未知；限一次初始任务及一次定向修复，额度/权限阻塞即停。详见 structured_details.cost。",
+      "privacy": "仅原创合成数据；不读取秘密或私人会话，不接生产数据，不获准外传。详见 structured_details.privacy。",
+      "version_scope": "2026-10-29 official documentation snapshot; actual client/model/account/workspace unexecuted. Prefer existing CLI/IDE local. Cloud/app differ; no universal UI or unlimited-free claim.",
+      "sources": [
+        {
+          "id": "cli",
+          "title": "Codex CLI",
+          "url": "https://learn.chatgpt.com/docs/codex/cli",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "本地读代码、编辑、命令、codex 交互入口与检查点；不是 API CLI。"
+        },
+        {
+          "id": "ide",
+          "title": "Codex IDE extension",
+          "url": "https://learn.chatgpt.com/docs/codex/ide",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "编辑器文件/选择区上下文、本地改动审阅及云委派；集成方式因 IDE 不同。"
+        },
+        {
+          "id": "pricing",
+          "title": "Pricing",
+          "url": "https://learn.chatgpt.com/docs/pricing",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "订阅计划/credits/额度与 API 计费不同；Free/Go 桌面能力受 rollout 限制，不代表各表面无限免费。"
+        },
+        {
+          "id": "auth",
+          "title": "Authentication",
+          "url": "https://learn.chatgpt.com/docs/auth",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "ChatGPT 与 API key 登录、cloud 的 ChatGPT 需求、工作区角色与本地权限分别约束。"
+        },
+        {
+          "id": "permissions",
+          "title": "Permissions",
+          "url": "https://learn.chatgpt.com/docs/permission-modes",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "sandbox 和 approvals 两层；自动审批不扩大 sandbox，版本/环境/组织策略影响可用模式。"
+        },
+        {
+          "id": "practice",
+          "title": "Best practices",
+          "url": "https://learn.chatgpt.com/guides/best-practices",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "复杂任务先计划、AGENTS.md 持久约定、测试与人工审阅。"
+        }
+      ],
+      "evidence_tier": "documentation_review",
+      "product_execution": "not_run",
+      "observed_results": null,
+      "product_id": "openai-codex",
+      "runner_implemented": false,
+      "reference_format": "JSON migration plan, Markdown narrative and unified diff",
+      "expected_product_artifact_format": "migration-plan.json plus MIGRATION.md; plan only",
+      "structured_details": {
+        "role": [
+          "产品：确认币种与一周兼容窗口，批准切换。",
+          "开发/运维：提供依赖与回滚责任；QA/分析：验证笔数、金额守恒。"
+        ],
+        "authorization": {
+          "allow": [
+            "read copied fixture",
+            "write specified output files in copied fixture",
+            "run provided stdlib checks after review"
+          ],
+          "require_new_approval": [
+            "network access",
+            "dependency installation",
+            "external repository connection",
+            "publishing or pull request creation",
+            "changes outside exercise copy"
+          ],
+          "deny": [
+            "secrets or personal session reads",
+            "production data",
+            "disable sandbox to pass tests",
+            "silently modify tests or reference answers"
+          ]
+        },
+        "cost": {
+          "offline_validation": "No model/API calls; existing Python only",
+          "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+          "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+        },
+        "privacy": {
+          "data": "synthetic_only",
+          "no_secrets": true,
+          "external_transfer": "not_authorized"
+        },
+        "version_scope": {
+          "checked_at": "2026-10-29T05:34:00Z",
+          "scope": "official documentation snapshot; client/model/account not executed",
+          "client_version": null,
+          "model": null,
+          "plan": null,
+          "workspace_policy": null,
+          "surfaces": [
+            "Codex CLI",
+            "Codex IDE extension",
+            "ChatGPT desktop app Codex entry",
+            "Codex Cloud"
+          ],
+          "preferred_exercise_surface": "already-installed CLI or IDE local",
+          "caveat": "old Codex app/quickstart/security routes redirect; no universal UI or free unlimited guarantee"
+        }
+      },
+      "expected_output_artifacts": [
+        {
+          "path": "recipes/cx05-money-migration/reference/MIGRATION.md",
+          "sha256": "ae81ef169bfa178af58a237f89e9bee5a74c97ad20faac1b6a568972326ae169",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        },
+        {
+          "path": "recipes/cx05-money-migration/reference/migration-plan.json",
+          "sha256": "48b1a9e7903de0873c453b375b751a9d9b56095c98260ad7b4691de39e946914",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        },
+        {
+          "path": "recipes/cx05-money-migration/reference.patch",
+          "sha256": "32d578c94935149e3c388b15027dd9fa8c58e5b3b05f2a041188046fd999f0a8",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        }
+      ]
+    },
+    {
+      "recipe_id": "cx06-sales-script",
+      "task_id": null,
+      "title": "从合成订单导出生成区域净额脚本",
+      "role": "分析：定义退款负号、重复 id 与取消口径。；运营：提供脱敏导出；QA：手算总额并提供冲突重复反例。",
+      "business_goal": "把可重复的销售口径落为 stdlib 脚本，而非仅给一句汇总数字。",
+      "input_artifacts": [
+        {
+          "path": "recipes/cx06-sales-script/fixture/AGENTS.md",
+          "sha256": "9a920422c3ded2fb23211670145105cc44007b56949012c1bc53f13d0368c8d7",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx06-sales-script/fixture/orders.csv",
+          "sha256": "355eba83032013b918dfbb0d47782d9b2050fd21546a35fb3fef60545f4097a2",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx06-sales-script/fixture/policy.md",
+          "sha256": "81ec9ece4ed17fb10b27e20cf4190c4a0cbc251d8e22b3e30fc6fb5769133f6f",
+          "description": "原创合成任务输入；不要混入参考答案"
+        }
+      ],
+      "prompt": "创建 summarize.py，公开 summarize(path) 返回 {net_cents:{region:整数分},duplicate_rows:整数}，并支持 python summarize.py orders.csv 输出 JSON。只用 Python stdlib，按 policy.md 对退款、取消、重复和冲突处理。写 expected.json 作为手算样例；不改 CSV，不接真实业务数据库。说明此处净额不是财务利润/审计报表。",
+      "steps": [
+        {
+          "title": "准备合成副本",
+          "instruction": "只复制 fixture 到获准的新目录，保留原件；不要把 reference 给被测代理。",
+          "check": "输入 hash 一致，文件已人工检查且无真实敏感数据。",
+          "failure_recovery": "目录或权限不清即停止；不读取私人 sessions 或密钥。"
+        },
+        {
+          "title": "选执行表面并核对范围",
+          "instruction": "已有 CLI 中进入副本运行 codex，核对 /status 与 /permissions；或在已有 IDE 集成打开副本。记录版本/模型/计划/工作区；不安装。",
+          "check": "确认仅副本内文件与 stdlib 检查获准，额度足够。",
+          "failure_recovery": "未授权/未安装/额度不足标 blocked；不得绕过。"
+        },
+        {
+          "title": "提交原创任务",
+          "instruction": "发送 prompt，审阅计划与拟运行命令；只允许指定文件变化。",
+          "check": "输出路径和禁止动作被保留。",
+          "failure_recovery": "请求扩范围时停止并寻求具体批准。"
+        },
+        {
+          "title": "客观验证与人工审阅",
+          "instruction": "先读验收代码，再运行 python recipes/cx06-sales-script/acceptance.py /absolute/exercise-copy；对 diff 按 rubric 打分。",
+          "check": "客观全过、人工至少 5/6、安全门通过；未测人工项必须 pending。",
+          "failure_recovery": "若重复叠加或退款加正数，先手算四个有效 id 再修。; 遇到缺字段真实数据应停并补数据契约，不能默认视零。"
+        },
+        {
+          "title": "记录结果",
+          "instruction": "记录真实命令、退出码、手工发现、成本与限制；只允许一次定向修复后重测。",
+          "check": "作者参考输出与代理实测证据分开；没有执行则 not_run。",
+          "failure_recovery": "未执行的浏览器/远程 CI 不得填 passed。"
+        }
+      ],
+      "expected_output_origin": "author_reference",
+      "expected_output": {
+        "reference_path": "recipes/cx06-sales-script/reference",
+        "patch_path": "recipes/cx06-sales-script/reference.patch",
+        "description": "作者手编的语义参考，应用到 fixture 副本后验收；不是 Codex 结果",
+        "files": [
+          "recipes/cx06-sales-script/reference/expected.json",
+          "recipes/cx06-sales-script/reference/summarize.py"
+        ]
+      },
+      "objective_checks": [
+        "north=800、south=700、重复 1 行",
+        "冲突重复/负值/未知状态拒绝，原 CSV 不变",
+        "expected.json 与 CLI 输出对象均为 north=800/south=700/duplicate_rows=1；0 分有效输入通过。"
+      ],
+      "human_rubric": [
+        "口径：正确区分净额与利润（0/1/2）。",
+        "健壮：错误输入给明确失败，不静默吞掉（0/1/2）。",
+        "可复用：函数与 CLI 均清晰，金额全程整数（0/1/2）。"
+      ],
+      "authorization": "仅允许读合成副本、改指定产物与执行已审阅 stdlib 检查；网络、安装、外部仓库、发布/PR、目录外改动须新批准；禁止秘密/私人会话/生产数据/绕过 sandbox/篡改测试。详见 structured_details.authorization。",
+      "cost": "作者离线检查无模型调用；未来真实运行受订阅额度/credits 或 API 计费，当前 not_run、实际成本未知；限一次初始任务及一次定向修复，额度/权限阻塞即停。详见 structured_details.cost。",
+      "privacy": "仅原创合成数据；不读取秘密或私人会话，不接生产数据，不获准外传。详见 structured_details.privacy。",
+      "version_scope": "2026-10-29 official documentation snapshot; actual client/model/account/workspace unexecuted. Prefer existing CLI/IDE local. Cloud/app differ; no universal UI or unlimited-free claim.",
+      "sources": [
+        {
+          "id": "cli",
+          "title": "Codex CLI",
+          "url": "https://learn.chatgpt.com/docs/codex/cli",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "本地读代码、编辑、命令、codex 交互入口与检查点；不是 API CLI。"
+        },
+        {
+          "id": "ide",
+          "title": "Codex IDE extension",
+          "url": "https://learn.chatgpt.com/docs/codex/ide",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "编辑器文件/选择区上下文、本地改动审阅及云委派；集成方式因 IDE 不同。"
+        },
+        {
+          "id": "pricing",
+          "title": "Pricing",
+          "url": "https://learn.chatgpt.com/docs/pricing",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "订阅计划/credits/额度与 API 计费不同；Free/Go 桌面能力受 rollout 限制，不代表各表面无限免费。"
+        },
+        {
+          "id": "auth",
+          "title": "Authentication",
+          "url": "https://learn.chatgpt.com/docs/auth",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "ChatGPT 与 API key 登录、cloud 的 ChatGPT 需求、工作区角色与本地权限分别约束。"
+        },
+        {
+          "id": "permissions",
+          "title": "Permissions",
+          "url": "https://learn.chatgpt.com/docs/permission-modes",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "sandbox 和 approvals 两层；自动审批不扩大 sandbox，版本/环境/组织策略影响可用模式。"
+        },
+        {
+          "id": "practice",
+          "title": "Best practices",
+          "url": "https://learn.chatgpt.com/guides/best-practices",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "复杂任务先计划、AGENTS.md 持久约定、测试与人工审阅。"
+        }
+      ],
+      "evidence_tier": "documentation_review",
+      "product_execution": "not_run",
+      "observed_results": null,
+      "product_id": "openai-codex",
+      "runner_implemented": false,
+      "reference_format": "Python script, expected JSON and unified diff",
+      "expected_product_artifact_format": "summarize.py function/CLI plus expected.json",
+      "structured_details": {
+        "role": [
+          "分析：定义退款负号、重复 id 与取消口径。",
+          "运营：提供脱敏导出；QA：手算总额并提供冲突重复反例。"
+        ],
+        "authorization": {
+          "allow": [
+            "read copied fixture",
+            "write specified output files in copied fixture",
+            "run provided stdlib checks after review"
+          ],
+          "require_new_approval": [
+            "network access",
+            "dependency installation",
+            "external repository connection",
+            "publishing or pull request creation",
+            "changes outside exercise copy"
+          ],
+          "deny": [
+            "secrets or personal session reads",
+            "production data",
+            "disable sandbox to pass tests",
+            "silently modify tests or reference answers"
+          ]
+        },
+        "cost": {
+          "offline_validation": "No model/API calls; existing Python only",
+          "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+          "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+        },
+        "privacy": {
+          "data": "synthetic_only",
+          "no_secrets": true,
+          "external_transfer": "not_authorized"
+        },
+        "version_scope": {
+          "checked_at": "2026-10-29T05:34:00Z",
+          "scope": "official documentation snapshot; client/model/account not executed",
+          "client_version": null,
+          "model": null,
+          "plan": null,
+          "workspace_policy": null,
+          "surfaces": [
+            "Codex CLI",
+            "Codex IDE extension",
+            "ChatGPT desktop app Codex entry",
+            "Codex Cloud"
+          ],
+          "preferred_exercise_surface": "already-installed CLI or IDE local",
+          "caveat": "old Codex app/quickstart/security routes redirect; no universal UI or free unlimited guarantee"
+        }
+      },
+      "expected_output_artifacts": [
+        {
+          "path": "recipes/cx06-sales-script/reference/expected.json",
+          "sha256": "85e1439bc62d5b056856b99a056d574d9157ac834e95256c9d3236307802b2a9",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        },
+        {
+          "path": "recipes/cx06-sales-script/reference/summarize.py",
+          "sha256": "8e7fe46dce9089c62352129fe6ad9542354659bcbffccb35240a7f92b40f72e1",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        },
+        {
+          "path": "recipes/cx06-sales-script/reference.patch",
+          "sha256": "dffb779a0ae92f82fc23664c1e223d17d40dd352a6e564d7c7d4bc324662dccd",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        }
+      ]
+    },
+    {
+      "recipe_id": "cx07-triage-prototype",
+      "task_id": null,
+      "title": "把客服需求变成离线产品原型",
+      "role": "产品：提供两条合成工单、筛选与空态需求，不能要求接入 CRM。；设计/QA：键盘可用性与空态检查；开发：审阅无外部资源和无数据发送。",
+      "business_goal": "让业务方通过单 HTML 原型讨论需求，不假装已上线完整客服系统。",
+      "input_artifacts": [
+        {
+          "path": "recipes/cx07-triage-prototype/fixture/AGENTS.md",
+          "sha256": "9a920422c3ded2fb23211670145105cc44007b56949012c1bc53f13d0368c8d7",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx07-triage-prototype/fixture/brief.md",
+          "sha256": "f5d889a670d1bcf29accdbbdd35028b5e2c7822cce9a4f4da42a89f35efa2002",
+          "description": "原创合成任务输入；不要混入参考答案"
+        }
+      ],
+      "prompt": "按 brief.md 制作单文件 index.html 与 MANUAL-QA.md。不能联网、不能安装、不能添加表单提交或持久化。使用原生语义元素，工单显示用 textContent 而非拼接外来 HTML。交付时区分静态结构检查与尚未执行的浏览器/键盘/屏幕阅读器验证，不声称仅靠源码检查已可访问。",
+      "steps": [
+        {
+          "title": "准备合成副本",
+          "instruction": "只复制 fixture 到获准的新目录，保留原件；不要把 reference 给被测代理。",
+          "check": "输入 hash 一致，文件已人工检查且无真实敏感数据。",
+          "failure_recovery": "目录或权限不清即停止；不读取私人 sessions 或密钥。"
+        },
+        {
+          "title": "选执行表面并核对范围",
+          "instruction": "已有 CLI 中进入副本运行 codex，核对 /status 与 /permissions；或在已有 IDE 集成打开副本。记录版本/模型/计划/工作区；不安装。",
+          "check": "确认仅副本内文件与 stdlib 检查获准，额度足够。",
+          "failure_recovery": "未授权/未安装/额度不足标 blocked；不得绕过。"
+        },
+        {
+          "title": "提交原创任务",
+          "instruction": "发送 prompt，审阅计划与拟运行命令；只允许指定文件变化。",
+          "check": "输出路径和禁止动作被保留。",
+          "failure_recovery": "请求扩范围时停止并寻求具体批准。"
+        },
+        {
+          "title": "客观验证与人工审阅",
+          "instruction": "先读验收代码，再运行 python recipes/cx07-triage-prototype/acceptance.py /absolute/exercise-copy；对 diff 按 rubric 打分。",
+          "check": "客观全过、人工至少 5/6、安全门通过；未测人工项必须 pending。",
+          "failure_recovery": "若要真实 CRM/账户登录，先停止并另立授权/数据契约；本练习不扩展。; JS/视觉未测时标 manual_pending，不允许用静态通过替代。"
+        },
+        {
+          "title": "记录结果",
+          "instruction": "记录真实命令、退出码、手工发现、成本与限制；只允许一次定向修复后重测。",
+          "check": "作者参考输出与代理实测证据分开；没有执行则 not_run。",
+          "failure_recovery": "未执行的浏览器/远程 CI 不得填 passed。"
+        }
+      ],
+      "expected_output_origin": "author_reference",
+      "expected_output": {
+        "reference_path": "recipes/cx07-triage-prototype/reference",
+        "patch_path": "recipes/cx07-triage-prototype/reference.patch",
+        "description": "作者手编的语义参考，应用到 fixture 副本后验收；不是 Codex 结果",
+        "files": [
+          "recipes/cx07-triage-prototype/reference/MANUAL-QA.md",
+          "recipes/cx07-triage-prototype/reference/index.html"
+        ]
+      },
+      "objective_checks": [
+        "HTML 语言、label/select 关联、三筛选值与 aria-live 存在",
+        "不包含网络/存储/提交常见入口；静态检查不证明行为",
+        "MANUAL-QA.md 非空；内容仍需人工审阅，浏览器/读屏未执行。"
+      ],
+      "human_rubric": [
+        "业务：手动确认两工单筛选、计数与空态（0/1/2；未做记未评）。",
+        "体验：320px、键盘焦点和读屏手动验证（0/1/2；未做记未评）。",
+        "范围：明确仅原型，不声称 CRM 集成/上线（0/1/2）。"
+      ],
+      "authorization": "仅允许读合成副本、改指定产物与执行已审阅 stdlib 检查；网络、安装、外部仓库、发布/PR、目录外改动须新批准；禁止秘密/私人会话/生产数据/绕过 sandbox/篡改测试。详见 structured_details.authorization。",
+      "cost": "作者离线检查无模型调用；未来真实运行受订阅额度/credits 或 API 计费，当前 not_run、实际成本未知；限一次初始任务及一次定向修复，额度/权限阻塞即停。详见 structured_details.cost。",
+      "privacy": "仅原创合成数据；不读取秘密或私人会话，不接生产数据，不获准外传。详见 structured_details.privacy。",
+      "version_scope": "2026-10-29 official documentation snapshot; actual client/model/account/workspace unexecuted. Prefer existing CLI/IDE local. Cloud/app differ; no universal UI or unlimited-free claim.",
+      "sources": [
+        {
+          "id": "cli",
+          "title": "Codex CLI",
+          "url": "https://learn.chatgpt.com/docs/codex/cli",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "本地读代码、编辑、命令、codex 交互入口与检查点；不是 API CLI。"
+        },
+        {
+          "id": "ide",
+          "title": "Codex IDE extension",
+          "url": "https://learn.chatgpt.com/docs/codex/ide",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "编辑器文件/选择区上下文、本地改动审阅及云委派；集成方式因 IDE 不同。"
+        },
+        {
+          "id": "pricing",
+          "title": "Pricing",
+          "url": "https://learn.chatgpt.com/docs/pricing",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "订阅计划/credits/额度与 API 计费不同；Free/Go 桌面能力受 rollout 限制，不代表各表面无限免费。"
+        },
+        {
+          "id": "auth",
+          "title": "Authentication",
+          "url": "https://learn.chatgpt.com/docs/auth",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "ChatGPT 与 API key 登录、cloud 的 ChatGPT 需求、工作区角色与本地权限分别约束。"
+        },
+        {
+          "id": "permissions",
+          "title": "Permissions",
+          "url": "https://learn.chatgpt.com/docs/permission-modes",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "sandbox 和 approvals 两层；自动审批不扩大 sandbox，版本/环境/组织策略影响可用模式。"
+        },
+        {
+          "id": "practice",
+          "title": "Best practices",
+          "url": "https://learn.chatgpt.com/guides/best-practices",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "复杂任务先计划、AGENTS.md 持久约定、测试与人工审阅。"
+        }
+      ],
+      "evidence_tier": "documentation_review",
+      "product_execution": "not_run",
+      "observed_results": null,
+      "product_id": "openai-codex",
+      "runner_implemented": false,
+      "reference_format": "HTML prototype, Markdown manual QA and unified diff",
+      "expected_product_artifact_format": "index.html plus MANUAL-QA.md; no hosted deployment",
+      "structured_details": {
+        "role": [
+          "产品：提供两条合成工单、筛选与空态需求，不能要求接入 CRM。",
+          "设计/QA：键盘可用性与空态检查；开发：审阅无外部资源和无数据发送。"
+        ],
+        "authorization": {
+          "allow": [
+            "read copied fixture",
+            "write specified output files in copied fixture",
+            "run provided stdlib checks after review"
+          ],
+          "require_new_approval": [
+            "network access",
+            "dependency installation",
+            "external repository connection",
+            "publishing or pull request creation",
+            "changes outside exercise copy"
+          ],
+          "deny": [
+            "secrets or personal session reads",
+            "production data",
+            "disable sandbox to pass tests",
+            "silently modify tests or reference answers"
+          ]
+        },
+        "cost": {
+          "offline_validation": "No model/API calls; existing Python only",
+          "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+          "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+        },
+        "privacy": {
+          "data": "synthetic_only",
+          "no_secrets": true,
+          "external_transfer": "not_authorized"
+        },
+        "version_scope": {
+          "checked_at": "2026-10-29T05:34:00Z",
+          "scope": "official documentation snapshot; client/model/account not executed",
+          "client_version": null,
+          "model": null,
+          "plan": null,
+          "workspace_policy": null,
+          "surfaces": [
+            "Codex CLI",
+            "Codex IDE extension",
+            "ChatGPT desktop app Codex entry",
+            "Codex Cloud"
+          ],
+          "preferred_exercise_surface": "already-installed CLI or IDE local",
+          "caveat": "old Codex app/quickstart/security routes redirect; no universal UI or free unlimited guarantee"
+        }
+      },
+      "expected_output_artifacts": [
+        {
+          "path": "recipes/cx07-triage-prototype/reference/MANUAL-QA.md",
+          "sha256": "0fbc989a0536d07a7dd1ff07d8e2fb0e6f0a8eadb0b4a0f5a7bd5ca0e1367f23",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        },
+        {
+          "path": "recipes/cx07-triage-prototype/reference/index.html",
+          "sha256": "61c10a63376840713795bd756015d66de1697163f681e6df27e94b3782e84382",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        },
+        {
+          "path": "recipes/cx07-triage-prototype/reference.patch",
+          "sha256": "81937905071f9cb7d7c8ff5df1550586b61943858cc6fee5ab230f67b215e61b",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        }
+      ]
+    },
+    {
+      "recipe_id": "cx08-ci-diagnosis",
+      "task_id": null,
+      "title": "从合成 CI 日志定位错误工作目录",
+      "role": "运维/开发：提供脱敏 workflow、目录树和完整失败段。；QA：区分测试失败与找不到工作目录；产品：了解修复不改业务逻辑。",
+      "business_goal": "修复 CI 中工作目录拼写错误，不靠删除测试或放宽退出码让构建变绿。",
+      "input_artifacts": [
+        {
+          "path": "recipes/cx08-ci-diagnosis/fixture/.github/workflows/test.yml",
+          "sha256": "d7e9b437db6bd86bbc3afbe3691239bd24dde293f7989d73b5d0ef9c844b88f1",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx08-ci-diagnosis/fixture/AGENTS.md",
+          "sha256": "9a920422c3ded2fb23211670145105cc44007b56949012c1bc53f13d0368c8d7",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx08-ci-diagnosis/fixture/ci.log",
+          "sha256": "30da92342b3dcb4e03398d519b0f491ade70271c96324f889330870233a37192",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx08-ci-diagnosis/fixture/services/billing/billing.py",
+          "sha256": "859cb6b0c69f0e06bb5ae054c70fb7148c1955b918465157dbc4882c71830125",
+          "description": "原创合成任务输入；不要混入参考答案"
+        },
+        {
+          "path": "recipes/cx08-ci-diagnosis/fixture/services/billing/tests/test_billing.py",
+          "sha256": "734e2f99b54701458d5b5b9efddc0bd706702fbe134ef6e0eaad04db7bfd21bf",
+          "description": "原创合成任务输入；不要混入参考答案"
+        }
+      ],
+      "prompt": "读取 ci.log、workflow 与 services 目录，给出失败发生在测试前还是测试内的证据。仅修 workflow 工作目录并写 DIAGNOSIS.md。不升级 Actions，不加 continue-on-error，不删除测试，不触发远程流水线。允许本地执行现有 stdlib unittest；最终分别说明本地测试结果与 GitHub Actions 未运行。",
+      "steps": [
+        {
+          "title": "准备合成副本",
+          "instruction": "只复制 fixture 到获准的新目录，保留原件；不要把 reference 给被测代理。",
+          "check": "输入 hash 一致，文件已人工检查且无真实敏感数据。",
+          "failure_recovery": "目录或权限不清即停止；不读取私人 sessions 或密钥。"
+        },
+        {
+          "title": "选执行表面并核对范围",
+          "instruction": "已有 CLI 中进入副本运行 codex，核对 /status 与 /permissions；或在已有 IDE 集成打开副本。记录版本/模型/计划/工作区；不安装。",
+          "check": "确认仅副本内文件与 stdlib 检查获准，额度足够。",
+          "failure_recovery": "未授权/未安装/额度不足标 blocked；不得绕过。"
+        },
+        {
+          "title": "提交原创任务",
+          "instruction": "发送 prompt，审阅计划与拟运行命令；只允许指定文件变化。",
+          "check": "输出路径和禁止动作被保留。",
+          "failure_recovery": "请求扩范围时停止并寻求具体批准。"
+        },
+        {
+          "title": "客观验证与人工审阅",
+          "instruction": "先读验收代码，再运行 python recipes/cx08-ci-diagnosis/acceptance.py /absolute/exercise-copy；对 diff 按 rubric 打分。",
+          "check": "客观全过、人工至少 5/6、安全门通过；未测人工项必须 pending。",
+          "failure_recovery": "若仍 0 tests，检查发现目录与文件模式；不把 0 tests 当成功。; 线上失败需要新的脱敏日志；不能本地猜测权限/网络后直接放宽策略。"
+        },
+        {
+          "title": "记录结果",
+          "instruction": "记录真实命令、退出码、手工发现、成本与限制；只允许一次定向修复后重测。",
+          "check": "作者参考输出与代理实测证据分开；没有执行则 not_run。",
+          "failure_recovery": "未执行的浏览器/远程 CI 不得填 passed。"
+        }
+      ],
+      "expected_output_origin": "author_reference",
+      "expected_output": {
+        "reference_path": "recipes/cx08-ci-diagnosis/reference",
+        "patch_path": "recipes/cx08-ci-diagnosis/reference.patch",
+        "description": "作者手编的语义参考，应用到 fixture 副本后验收；不是 Codex 结果",
+        "files": [
+          "recipes/cx08-ci-diagnosis/reference/.github/workflows/test.yml",
+          "recipes/cx08-ci-diagnosis/reference/DIAGNOSIS.md"
+        ]
+      },
+      "objective_checks": [
+        "working-directory 正确且无吞错设置",
+        "原测试命令在实际目录发现并通过 1 测试；托管 CI 未运行"
+      ],
+      "human_rubric": [
+        "诊断：依据日志区分环境路径和业务断言（0/1/2）。",
+        "修复：仅必要路径变更，不掩盖错误（0/1/2）。",
+        "证据：不把本地 unittest 等同远程 CI 成功（0/1/2）。"
+      ],
+      "authorization": "仅允许读合成副本、改指定产物与执行已审阅 stdlib 检查；网络、安装、外部仓库、发布/PR、目录外改动须新批准；禁止秘密/私人会话/生产数据/绕过 sandbox/篡改测试。详见 structured_details.authorization。",
+      "cost": "作者离线检查无模型调用；未来真实运行受订阅额度/credits 或 API 计费，当前 not_run、实际成本未知；限一次初始任务及一次定向修复，额度/权限阻塞即停。详见 structured_details.cost。",
+      "privacy": "仅原创合成数据；不读取秘密或私人会话，不接生产数据，不获准外传。详见 structured_details.privacy。",
+      "version_scope": "2026-10-29 official documentation snapshot; actual client/model/account/workspace unexecuted. Prefer existing CLI/IDE local. Cloud/app differ; no universal UI or unlimited-free claim.",
+      "sources": [
+        {
+          "id": "cli",
+          "title": "Codex CLI",
+          "url": "https://learn.chatgpt.com/docs/codex/cli",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "本地读代码、编辑、命令、codex 交互入口与检查点；不是 API CLI。"
+        },
+        {
+          "id": "ide",
+          "title": "Codex IDE extension",
+          "url": "https://learn.chatgpt.com/docs/codex/ide",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "编辑器文件/选择区上下文、本地改动审阅及云委派；集成方式因 IDE 不同。"
+        },
+        {
+          "id": "pricing",
+          "title": "Pricing",
+          "url": "https://learn.chatgpt.com/docs/pricing",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "订阅计划/credits/额度与 API 计费不同；Free/Go 桌面能力受 rollout 限制，不代表各表面无限免费。"
+        },
+        {
+          "id": "auth",
+          "title": "Authentication",
+          "url": "https://learn.chatgpt.com/docs/auth",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "ChatGPT 与 API key 登录、cloud 的 ChatGPT 需求、工作区角色与本地权限分别约束。"
+        },
+        {
+          "id": "permissions",
+          "title": "Permissions",
+          "url": "https://learn.chatgpt.com/docs/permission-modes",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "sandbox 和 approvals 两层；自动审批不扩大 sandbox，版本/环境/组织策略影响可用模式。"
+        },
+        {
+          "id": "practice",
+          "title": "Best practices",
+          "url": "https://learn.chatgpt.com/guides/best-practices",
+          "accessed_at": "2026-10-29",
+          "claim_scope": "复杂任务先计划、AGENTS.md 持久约定、测试与人工审阅。"
+        }
+      ],
+      "evidence_tier": "documentation_review",
+      "product_execution": "not_run",
+      "observed_results": null,
+      "product_id": "openai-codex",
+      "runner_implemented": false,
+      "reference_format": "YAML workflow patch, Markdown diagnosis and unified diff",
+      "expected_product_artifact_format": "workflow YAML patch plus DIAGNOSIS.md; hosted CI not run",
+      "structured_details": {
+        "role": [
+          "运维/开发：提供脱敏 workflow、目录树和完整失败段。",
+          "QA：区分测试失败与找不到工作目录；产品：了解修复不改业务逻辑。"
+        ],
+        "authorization": {
+          "allow": [
+            "read copied fixture",
+            "write specified output files in copied fixture",
+            "run provided stdlib checks after review"
+          ],
+          "require_new_approval": [
+            "network access",
+            "dependency installation",
+            "external repository connection",
+            "publishing or pull request creation",
+            "changes outside exercise copy"
+          ],
+          "deny": [
+            "secrets or personal session reads",
+            "production data",
+            "disable sandbox to pass tests",
+            "silently modify tests or reference answers"
+          ]
+        },
+        "cost": {
+          "offline_validation": "No model/API calls; existing Python only",
+          "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+          "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+        },
+        "privacy": {
+          "data": "synthetic_only",
+          "no_secrets": true,
+          "external_transfer": "not_authorized"
+        },
+        "version_scope": {
+          "checked_at": "2026-10-29T05:34:00Z",
+          "scope": "official documentation snapshot; client/model/account not executed",
+          "client_version": null,
+          "model": null,
+          "plan": null,
+          "workspace_policy": null,
+          "surfaces": [
+            "Codex CLI",
+            "Codex IDE extension",
+            "ChatGPT desktop app Codex entry",
+            "Codex Cloud"
+          ],
+          "preferred_exercise_surface": "already-installed CLI or IDE local",
+          "caveat": "old Codex app/quickstart/security routes redirect; no universal UI or free unlimited guarantee"
+        }
+      },
+      "expected_output_artifacts": [
+        {
+          "path": "recipes/cx08-ci-diagnosis/reference/.github/workflows/test.yml",
+          "sha256": "1334328dff64d34f6c744e501245ba0418d69dc0a297e757f7ef07dabcebdbb4",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        },
+        {
+          "path": "recipes/cx08-ci-diagnosis/reference/DIAGNOSIS.md",
+          "sha256": "e3e65f55ed99d6178180b593c7084ca0d129110351e5a583f709bb0090eec537",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        },
+        {
+          "path": "recipes/cx08-ci-diagnosis/reference.patch",
+          "sha256": "af45d4f439010c122dabfcbd6bfffa0cf91edeb1d1c1f8e53cffa39449ab1156",
+          "description": "作者合成参考文件/patch，非 Codex 输出"
+        }
+      ]
+    }
+  ]
+}

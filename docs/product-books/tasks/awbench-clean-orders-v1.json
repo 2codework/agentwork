@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "product_id": null,
+  "expected_output_origin": "author_reference",
+  "authorization": "仅本地读取合成输入与检查自备输出；不得外发、提交、支付或操作真实账号。",
+  "cost": "标准库离线检查不需要API或账号；产品费用另见产品手册，未验证。",
+  "privacy": "全部输入为原创安全合成材料，不含真实个人数据。",
+  "version_scope": "AgentWork 自编离线契约 r1 / Python 3.10+；非任何厂商产品执行。",
+  "sources": [],
+  "evidence_tier": "synthetic_contract",
+  "product_execution": "not_run",
+  "observed_results": null,
+  "human_rubric": [
+    "事实忠实，不补写未知内容。",
+    "表达清楚且保留人工授权边界。"
+  ],
+  "steps": [
+    {
+      "title": "保存输入",
+      "instruction": "下载下列完整合成输入，并核对SHA-256；保留原件。",
+      "check": "输入哈希与页面一致。",
+      "failure_recovery": "不一致时重新取得本版本输入，不混用旧文件。"
+    },
+    {
+      "title": "准备输出",
+      "instruction": "可先手工完成；若使用产品，遵循对应产品书。把结果另存为UTF-8 JSON，不覆盖参考答案。",
+      "check": "输出仅包含本任务要求的结构。",
+      "failure_recovery": "不确定的信息标记未知，不能猜测或作出真实业务承诺。"
+    },
+    {
+      "title": "离线验收",
+      "instruction": "运行 python3 scripts/product_books.py check TASK_ID output.json；再人工审核量表。",
+      "check": "检查器退出0仅表示固定合成契约通过，非产品效果或真实部署。",
+      "failure_recovery": "依据失败字段修正输出，保留原始结果和修订记录；不得修改输入或参考答案迎合结果。"
+    }
+  ],
+  "task_id": "awbench-clean-orders-v1",
+  "title": "清洗订单并核对有效收入",
+  "role": "运营分析",
+  "business_goal": "去重、排除无效金额和取消单，保留拒绝理由",
+  "prompt": "CSV第一行为表头，数据行从2计。去除amount两侧空白，金额转换为整数分。按order_id保留首次，拒绝重复、负数、非金额和cancelled。输出accepted、rejected（row/reason）、total_cents；保留输入顺序。",
+  "expected_output": {
+    "accepted": [
+      {
+        "order_id": "SYN-01",
+        "amount_cents": 1000
+      },
+      {
+        "order_id": "SYN-02",
+        "amount_cents": 2050
+      }
+    ],
+    "rejected": [
+      {
+        "row": 4,
+        "reason": "duplicate"
+      },
+      {
+        "row": 5,
+        "reason": "negative"
+      },
+      {
+        "row": 6,
+        "reason": "invalid_amount"
+      },
+      {
+        "row": 7,
+        "reason": "cancelled"
+      }
+    ],
+    "total_cents": 3050
+  },
+  "input_artifacts": [
+    {
+      "path": "fixtures/orders.csv",
+      "sha256": "6b4a8b214f03a5f0e1259e6940b37c79d85f70e34b905e6a14c4b3b303018240",
+      "description": "原创完整合成输入；与旧学习包ID和字节独立。"
+    }
+  ],
+  "objective_checks": [
+    {
+      "id": "exact-reference-contract",
+      "kind": "json_equal",
+      "description": "JSON结构和值须等于作者参考契约；对象键顺序不计，数组顺序计。只适用于固定练习，不能概括产品质量。"
+    }
+  ],
+  "runner_implemented": false,
+  "reference_format": "UTF-8 JSON 作者语义参考",
+  "expected_product_artifact_format": "UTF-8 JSON 任务提交；不要求Office成品，不执行代码"
+}

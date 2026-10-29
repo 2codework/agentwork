@@ -1,0 +1,14 @@
+{
+  "ticket_ids": [
+    "T1",
+    "T2",
+    "T3"
+  ],
+  "manual_review": [
+    "T2"
+  ],
+  "trial_days": 7,
+  "trial_uses": 20,
+  "refund_promised": false,
+  "permanent_free_promised": false
+}

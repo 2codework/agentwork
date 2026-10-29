@@ -1,0 +1,10 @@
+{
+  "routes": {
+    "P1": "A",
+    "P2": "A",
+    "P3": "B",
+    "P4": "人工暂停"
+  },
+  "scan_required": true,
+  "boundary_2kg": "A"
+}

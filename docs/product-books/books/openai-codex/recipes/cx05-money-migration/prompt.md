@@ -1,0 +1,1 @@
+只写 MIGRATION.md 与 migration-plan.json；不要执行数据迁移。依据给定 v1、v2 契约和 constraints 写清 inventory/snapshot/dual_read/dry_run/approval/cutover/monitor/retire_v1 阶段、字段映射、守恒断言、兼容天数、回滚触发与恢复对象、尚缺信息。JSON 字段 phases,mapping,invariants{record_count,sum_cents},approval_required_before,rollback{trigger,restore},compatibility_days,execution_status,example_v2。样例不是上线结果；execution_status 必须 not_run。

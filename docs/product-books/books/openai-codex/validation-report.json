@@ -1,0 +1,82 @@
+{
+  "scope": "author_reference_stdlib_validation_only",
+  "checked_at": "2026-10-29",
+  "codex_executed": false,
+  "llm_or_paid_api_executed": false,
+  "hosted_ci_executed": false,
+  "browser_or_accessibility_executed": false,
+  "recipes": [
+    {
+      "recipe_id": "cx01-shipping-bug",
+      "product_execution": "not_run",
+      "observed_product_results": null,
+      "human_review": "not_run",
+      "baseline_expected_rejection": true,
+      "author_reference_check": "passed",
+      "stdout": "PASS: seven business boundary checks"
+    },
+    {
+      "recipe_id": "cx02-discount-tests",
+      "product_execution": "not_run",
+      "observed_product_results": null,
+      "human_review": "not_run",
+      "baseline_expected_rejection": true,
+      "author_reference_check": "passed",
+      "stdout": "PASS: suite passes original and kills three intentional mutants"
+    },
+    {
+      "recipe_id": "cx03-tenant-review",
+      "product_execution": "not_run",
+      "observed_product_results": null,
+      "human_review": "not_run",
+      "baseline_expected_rejection": true,
+      "author_reference_check": "passed",
+      "stdout": "PASS: reproduction, source preservation and report anchors; severity prose needs human review"
+    },
+    {
+      "recipe_id": "cx04-legacy-map",
+      "product_execution": "not_run",
+      "observed_product_results": null,
+      "human_review": "not_run",
+      "baseline_expected_rejection": true,
+      "author_reference_check": "passed",
+      "stdout": "PASS: anchors and all documented examples agree with code"
+    },
+    {
+      "recipe_id": "cx05-money-migration",
+      "product_execution": "not_run",
+      "observed_product_results": null,
+      "human_review": "not_run",
+      "baseline_expected_rejection": true,
+      "author_reference_check": "passed",
+      "stdout": "PASS: conservation, mapping, approval ordering and rollback fields; feasibility remains human-reviewed"
+    },
+    {
+      "recipe_id": "cx06-sales-script",
+      "product_execution": "not_run",
+      "observed_product_results": null,
+      "human_review": "not_run",
+      "baseline_expected_rejection": true,
+      "author_reference_check": "passed",
+      "stdout": "PASS: totals, dedup, conflicting and invalid inputs; CSV unchanged"
+    },
+    {
+      "recipe_id": "cx07-triage-prototype",
+      "product_execution": "not_run",
+      "observed_product_results": null,
+      "human_review": "not_run",
+      "baseline_expected_rejection": true,
+      "author_reference_check": "passed",
+      "stdout": "PASS: static structure only; JavaScript behavior and visual/accessibility QA NOT RUN"
+    },
+    {
+      "recipe_id": "cx08-ci-diagnosis",
+      "product_execution": "not_run",
+      "observed_product_results": null,
+      "human_review": "not_run",
+      "baseline_expected_rejection": true,
+      "author_reference_check": "passed",
+      "stdout": "PASS: local Python test command; hosted CI NOT RUN; YAML structure checked narrowly"
+    }
+  ]
+}

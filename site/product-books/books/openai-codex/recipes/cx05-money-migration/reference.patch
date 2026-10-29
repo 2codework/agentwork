@@ -1,0 +1,56 @@
+--- a/migration-plan.json
++++ b/migration-plan.json
+@@ -0,0 +1,44 @@
++{
++  "phases": [
++    "inventory",
++    "snapshot",
++    "dual_read",
++    "dry_run",
++    "approval",
++    "cutover",
++    "monitor",
++    "retire_v1"
++  ],
++  "mapping": {
++    "id": "id",
++    "amount_cents": "money.amount_cents",
++    "currency": "CNY"
++  },
++  "invariants": {
++    "record_count": 2,
++    "sum_cents": 1250
++  },
++  "approval_required_before": "cutover",
++  "rollback": {
++    "trigger": "count or amount mismatch",
++    "restore": "v1 reader plus immutable snapshot"
++  },
++  "compatibility_days": 7,
++  "execution_status": "not_run",
++  "example_v2": [
++    {
++      "id": "o1",
++      "money": {
++        "amount_cents": 1250,
++        "currency": "CNY"
++      }
++    },
++    {
++      "id": "o2",
++      "money": {
++        "amount_cents": 0,
++        "currency": "CNY"
++      }
++    }
++  ]
++}
+--- a/MIGRATION.md
++++ b/MIGRATION.md
+@@ -0,0 +1,6 @@
++# 金额字段迁移：仅计划
++先清点读写调用方与负责人；保存不可变 v1 快照。新增双读兼容，旧读者保留 7 天。
++在隔离副本将 amount_cents 映射至 money.amount_cents 并加 currency=CNY，不进行浮点换算。
++演练核对 2 笔、1250 分及逐 id 一致。QA 提供差异；产品与运维批准后才能切换。
++监控计数、金额与读取失败；不一致即回滚 v1 reader 和快照；满足一周兼容及负责人验收后才退役 v1。
++真实依赖清单、RTO/RPO 和上线时间尚未提供，需补齐，未执行迁移。

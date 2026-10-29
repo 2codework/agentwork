@@ -5,6 +5,9 @@ import hashlib
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+import product_negative_fixtures
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -87,18 +90,24 @@ def check(root=ROOT):
     parsed = {}
     json_count = 0
     negative_count = 0
+    product_negative_count = 0
+    product_registry = product_negative_fixtures.registry()
     registry=json.dumps(CREATIVE_NEGATIVE_FIXTURES,sort_keys=True,separators=(',',':')).encode()
     require(hashlib.sha256(registry).hexdigest()==NEGATIVE_REGISTRY_SHA, 'negative fixture registry changed')
     for directory in (generated, pages):
         present={name for name in CREATIVE_NEGATIVE_FIXTURES if (directory/name).is_file()}
         if (directory/'creative-delivery').exists() or (root/'learning/creative-delivery/r1').exists():
             require(present==set(CREATIVE_NEGATIVE_FIXTURES), 'negative fixture closed set missing')
+        if (directory/'product-books/books/wps-lingxi-pro/product-book.json').is_file():
+            require({name for name in product_registry if (directory/name).is_file()}==set(product_registry),'product negative closed set missing')
         for path in directory.rglob('*.json'):
             if negative_fixture(path,directory):
                 negative_count += 1
                 continue
-            json.loads(path.read_text(encoding='utf-8'), object_pairs_hook=unique_object,
-                       parse_constant=invalid_constant)
+            if product_negative_fixtures.check(path,directory):
+                product_negative_count += 1
+                continue
+            product_negative_fixtures.loads(path.read_text(encoding='utf-8'))
             json_count += 1
         for path in directory.rglob('*.html'):
             parser = Links()
@@ -119,7 +128,7 @@ def check(root=ROOT):
             require(target.is_file(), f'broken local link: {link}')
             if url.fragment and target in parsed:
                 require(unquote(url.fragment) in parsed[target].ids, f'broken anchor: {link}')
-    print(f'Pages parity: {len(generated_files)} files; strict-valid JSON: {json_count}; fixed invalid teaching fixtures: {negative_count} (3 kinds per copy); HTML: {len(parsed)}. External links not fetched.')
+    print(f'Pages parity: {len(generated_files)} files; strict-valid JSON: {json_count}; fixed invalid teaching fixtures: {negative_count} (3 kinds per copy); product expected-invalid fixtures: {product_negative_count}; HTML: {len(parsed)}. External links not fetched.')
 
 
 if __name__ == '__main__':

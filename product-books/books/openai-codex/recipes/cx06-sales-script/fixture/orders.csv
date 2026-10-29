@@ -1,0 +1,6 @@
+id,region,amount_cents,status
+a,north,1000,paid
+b,south,700,paid
+c,north,200,refund
+a,north,1000,paid
+d,south,300,cancelled

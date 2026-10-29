@@ -1,0 +1,88 @@
+{
+  "status": "pass",
+  "scope": "local author-material/contract/evaluator tests only",
+  "recipes": [
+    {
+      "recipe_id": "wps-lingxi-pro-sales-review",
+      "complete_reference": "present",
+      "framework_contract": "pass",
+      "negative_fixtures": "pass",
+      "reproducible_edge_fixture": "pass",
+      "product_execution": "not_run",
+      "native_artifact_review": "not_run"
+    },
+    {
+      "recipe_id": "wps-lingxi-pro-budget-variance",
+      "complete_reference": "present",
+      "framework_contract": "pass",
+      "negative_fixtures": "pass",
+      "reproducible_edge_fixture": "pass",
+      "product_execution": "not_run",
+      "native_artifact_review": "not_run"
+    },
+    {
+      "recipe_id": "wps-lingxi-pro-meeting-actions",
+      "complete_reference": "present",
+      "framework_contract": "pass",
+      "negative_fixtures": "pass",
+      "reproducible_edge_fixture": "pass",
+      "product_execution": "not_run",
+      "native_artifact_review": "not_run"
+    },
+    {
+      "recipe_id": "wps-lingxi-pro-hr-onboarding",
+      "complete_reference": "present",
+      "framework_contract": "pass",
+      "negative_fixtures": "pass",
+      "reproducible_edge_fixture": "pass",
+      "product_execution": "not_run",
+      "native_artifact_review": "not_run"
+    },
+    {
+      "recipe_id": "wps-lingxi-pro-support-faq",
+      "complete_reference": "present",
+      "framework_contract": "pass",
+      "negative_fixtures": "pass",
+      "reproducible_edge_fixture": "pass",
+      "product_execution": "not_run",
+      "native_artifact_review": "not_run"
+    },
+    {
+      "recipe_id": "wps-lingxi-pro-procurement-matrix",
+      "complete_reference": "present",
+      "framework_contract": "pass",
+      "negative_fixtures": "pass",
+      "reproducible_edge_fixture": "pass",
+      "product_execution": "not_run",
+      "native_artifact_review": "not_run"
+    },
+    {
+      "recipe_id": "wps-lingxi-pro-marketing-deck",
+      "complete_reference": "present",
+      "framework_contract": "pass",
+      "negative_fixtures": "pass",
+      "reproducible_edge_fixture": "pass",
+      "product_execution": "not_run",
+      "native_artifact_review": "not_run"
+    },
+    {
+      "recipe_id": "wps-lingxi-pro-operations-sop",
+      "complete_reference": "present",
+      "framework_contract": "pass",
+      "negative_fixtures": "pass",
+      "reproducible_edge_fixture": "pass",
+      "product_execution": "not_run",
+      "native_artifact_review": "not_run"
+    }
+  ],
+  "strict_json_tests": [
+    "duplicate rejected",
+    "NaN rejected",
+    "Infinity rejected",
+    "oversize rejected",
+    "bool not number",
+    "nested extra key rejected"
+  ],
+  "product_execution": "not_run",
+  "native_artifacts_created": false
+}

@@ -1,0 +1,16 @@
+{
+  "version": "r3",
+  "prior_revisions": "r1/r2 preserved",
+  "remediations": [
+    "8 fully standalone edge prompts with explicit target/rules/formulas/missing-data behavior",
+    "full product profile and onboarding exported",
+    "all baseline and edge inputs/prompts/references explicit hashed artifacts with inline content",
+    "string native format contract plus preserved array",
+    "finite parsed float and bounded read",
+    "missing-rule/link/hash regression checks",
+    "read-only framework validate_record 8 pass"
+  ],
+  "execution": "not_run",
+  "content_license": "pending",
+  "integration": "root_only"
+}

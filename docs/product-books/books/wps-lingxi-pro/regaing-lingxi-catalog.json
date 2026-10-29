@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "product": {
+    "product_id": "regaing-lingxi",
+    "vendor": "记得科技（网站页脚名称；未进一步核验法人）",
+    "name": "灵犀AI助手 LingXi AI",
+    "display_name": "灵犀AI助手 LingXi AI",
+    "status": "researched",
+    "version_scope": "官网beta；未运行，未将npm搜索版本当安装版本",
+    "sources": [
+      {
+        "id": "regaing-home",
+        "title": "灵犀AI助手 LingXi AI",
+        "url": "https://lingxi.regaing.com/",
+        "accessed_at": "2026-10-29",
+        "claim_scope": "记得科技；桌面/CLI/VS Code/HTTP，桌面下载可用性有限"
+      }
+    ]
+  },
+  "recipes": [],
+  "coverage_status": "catalog_only_playbooks_pending",
+  "catalog": {
+    "id": "regaing-lingxi",
+    "name": "灵犀AI助手 LingXi AI",
+    "vendor": "记得科技（网站页脚名称；未进一步核验法人）",
+    "official_url": "https://lingxi.regaing.com/",
+    "sources": [
+      "regaing-home"
+    ],
+    "match": "开发与办公 Agent；独立 CLI 包，不能合并为WPS",
+    "tutorial_status": "catalog_only_playbooks_pending",
+    "platform": "官网列桌面/CLI/VS Code/HTTP；检查时Windows/Linux安装包不可用，macOS即将推出；CLI标Node.js22+，未安装",
+    "account": "账号与API接入前置条件未充分核验，不能套用WPS或中国移动账号",
+    "version": "官网beta；未运行，未将npm搜索版本当安装版本",
+    "capability_boundary": "办公文件、代码工具、模型接入、MCP是厂商声明；未核实每端能力等价。",
+    "privacy_cost": "网站宣传本地优先不等于零网络处理；API模型可能有独立计费与数据处理，未配置Key。"
+  }
+}

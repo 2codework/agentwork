@@ -1,0 +1,5 @@
+case,input,expected,execution_status
+C1,99,10,not_run
+C2,100,0,not_run
+C3,101,0,not_run
+C4,-1,拒绝方式待需求明确,not_run

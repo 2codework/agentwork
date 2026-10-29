@@ -1,0 +1,8 @@
+{
+  "slide_count": 6,
+  "email_attendance_rate_pct": 40,
+  "community_attendance_rate_pct": 60,
+  "email_cost_per_attendee": 25,
+  "community_cost_per_attendee": 16.6667,
+  "revenue_known": false
+}

@@ -1,0 +1,1 @@
+读取 ci.log、workflow 与 services 目录，给出失败发生在测试前还是测试内的证据。仅修 workflow 工作目录并写 DIAGNOSIS.md。不升级 Actions，不加 continue-on-error，不删除测试，不触发远程流水线。允许本地执行现有 stdlib unittest；最终分别说明本地测试结果与 GitHub Actions 未运行。

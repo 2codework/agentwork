@@ -1,0 +1,96 @@
+{
+  "checked_at": "2026-10-29T05:34:00Z",
+  "retrieval": "official-domain web search then actual page open; bundled public manual refreshed and relevant sections read",
+  "sources": [
+    {
+      "id": "cli",
+      "title": "Codex CLI",
+      "url": "https://learn.chatgpt.com/docs/codex/cli",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "status": "opened",
+      "claim_scope": "本地读代码、编辑、命令、codex 交互入口与检查点；不是 API CLI。",
+      "evidence_type": "official_documentation",
+      "not_evidence_of": "account-specific entitlement or successful task execution"
+    },
+    {
+      "id": "ide",
+      "title": "Codex IDE extension",
+      "url": "https://learn.chatgpt.com/docs/codex/ide",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "status": "opened",
+      "claim_scope": "编辑器文件/选择区上下文、本地改动审阅及云委派；集成方式因 IDE 不同。",
+      "evidence_type": "official_documentation",
+      "not_evidence_of": "account-specific entitlement or successful task execution"
+    },
+    {
+      "id": "cloud",
+      "title": "Codex Cloud",
+      "url": "https://learn.chatgpt.com/docs/cloud",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "status": "opened",
+      "claim_scope": "仓库与工具构成环境，独立任务工作区，审阅结果；环境设置和 GitHub 访问需要授权。",
+      "evidence_type": "official_documentation",
+      "not_evidence_of": "account-specific entitlement or successful task execution"
+    },
+    {
+      "id": "app",
+      "title": "ChatGPT desktop app",
+      "url": "https://learn.chatgpt.com/docs/app",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "status": "opened",
+      "claim_scope": "当前桌面入口文档；选择工作位置与项目、审阅文件。旧 Codex app 入口已重定向。",
+      "evidence_type": "official_documentation",
+      "not_evidence_of": "account-specific entitlement or successful task execution"
+    },
+    {
+      "id": "pricing",
+      "title": "Pricing",
+      "url": "https://learn.chatgpt.com/docs/pricing",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "status": "opened",
+      "claim_scope": "订阅计划/credits/额度与 API 计费不同；Free/Go 桌面能力受 rollout 限制，不代表各表面无限免费。",
+      "evidence_type": "official_documentation",
+      "not_evidence_of": "account-specific entitlement or successful task execution"
+    },
+    {
+      "id": "auth",
+      "title": "Authentication",
+      "url": "https://learn.chatgpt.com/docs/auth",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "status": "opened",
+      "claim_scope": "ChatGPT 与 API key 登录、cloud 的 ChatGPT 需求、工作区角色与本地权限分别约束。",
+      "evidence_type": "official_documentation",
+      "not_evidence_of": "account-specific entitlement or successful task execution"
+    },
+    {
+      "id": "permissions",
+      "title": "Permissions",
+      "url": "https://learn.chatgpt.com/docs/permission-modes",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "status": "opened",
+      "claim_scope": "sandbox 和 approvals 两层；自动审批不扩大 sandbox，版本/环境/组织策略影响可用模式。",
+      "evidence_type": "official_documentation",
+      "not_evidence_of": "account-specific entitlement or successful task execution"
+    },
+    {
+      "id": "prompting",
+      "title": "Prompting",
+      "url": "https://learn.chatgpt.com/docs/prompting",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "status": "opened",
+      "claim_scope": "目标、上下文、产物和边界；插件/连接可用性依赖计划与工作区。",
+      "evidence_type": "official_documentation",
+      "not_evidence_of": "account-specific entitlement or successful task execution"
+    },
+    {
+      "id": "practice",
+      "title": "Best practices",
+      "url": "https://learn.chatgpt.com/guides/best-practices",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "status": "opened",
+      "claim_scope": "复杂任务先计划、AGENTS.md 持久约定、测试与人工审阅。",
+      "evidence_type": "official_documentation",
+      "not_evidence_of": "account-specific entitlement or successful task execution"
+    }
+  ]
+}

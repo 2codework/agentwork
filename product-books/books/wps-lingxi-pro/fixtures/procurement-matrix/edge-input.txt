@@ -1,0 +1,4 @@
+vendor,unit_price,lead_days,warranty_months
+甲,100,10,12
+乙,95,18,12
+丙,110,7,

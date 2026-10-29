@@ -1,0 +1,60 @@
+{
+  "status": "identity_only_tutorials_pending",
+  "product": {
+    "product_id": "amir-hayek-zcode",
+    "id_namespace": "agentwork_editorial_not_vendor_id",
+    "official_name": "Zcode",
+    "vendor": "Amir Hayek",
+    "official_url": "https://zcodeapp.com/",
+    "repository": "https://github.com/hayek/Zcode-releases",
+    "identity_evidence": [
+      "hayek-home",
+      "hayek-releases-repo"
+    ],
+    "user_intent_match": "unconfirmed",
+    "versions": [
+      {
+        "channel": "official_home_download",
+        "version": "0.28.0 beta",
+        "sources": [
+          "hayek-home"
+        ]
+      }
+    ],
+    "platforms": [
+      "macOS Tahoe 26.2 or newer"
+    ],
+    "prerequisites": [
+      "Full Xcode installation for build/run/test"
+    ],
+    "scope": "Mac上的Apple原生应用构建工作区；不包含代码编辑器；外部AI代理通过终端和skill接入。",
+    "catalogue_status": "identity_only_tutorials_pending"
+  },
+  "aliases": {
+    "zcode": {
+      "status": "ambiguous",
+      "product_ids": [
+        "zai-zcode",
+        "amir-hayek-zcode"
+      ],
+      "default": null
+    }
+  },
+  "sources": [
+    {
+      "id": "hayek-home",
+      "title": "hayek-home",
+      "url": "https://zcodeapp.com/",
+      "accessed_at": "2026-10-29",
+      "claim_scope": "官网署名 Amir Hayek，0.28.0 beta，Mac上开发Apple平台应用，需完整Xcode。"
+    },
+    {
+      "id": "hayek-releases-repo",
+      "title": "hayek-releases-repo",
+      "url": "https://github.com/hayek/Zcode-releases",
+      "accessed_at": "2026-10-29",
+      "claim_scope": "官网Download指向该发布仓库的0.28.0安装包；仅阅读发布仓库，未安装。"
+    }
+  ],
+  "product_execution": "not_run"
+}

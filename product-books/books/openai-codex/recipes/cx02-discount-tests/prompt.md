@@ -1,0 +1,1 @@
+只新增 test_pricing.py，使用 unittest，不能修改 pricing.py。根据 policy.md 覆盖 0%/100% 折扣、半分向上、普通金额与三种非法范围。测试应在 python -m unittest discover -s . -p test_pricing.py 下运行。说明哪些错误实现会被抓到；不要只对当前实现做快照，不安装覆盖率工具。

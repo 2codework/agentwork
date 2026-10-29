@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "count": 8,
+  "framework_path": "/workspace/scratch/6fb8d22046cb/agentwork-product-bench-r2/agentwork/scripts/product_books.py",
+  "scope": "validate_record read-only import, no integration",
+  "product_execution": "not_run"
+}

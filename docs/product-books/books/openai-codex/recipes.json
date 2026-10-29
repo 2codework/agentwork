@@ -1,0 +1,668 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-29T05:34:00Z",
+  "suite": "agentwork-codex-playbooks-r2",
+  "execution_status": "not_run",
+  "recipes": [
+    {
+      "id": "cx01-shipping-bug",
+      "title": "修复免邮阈值导致的客服投诉",
+      "roles": [
+        "产品：给出满 50 元而非超过 50 元的规则；验收 49.99/50/50.01。",
+        "开发：只修 fee；QA：复核偏远附加费不受免邮影响。"
+      ],
+      "business_goal": "电商订单刚好达到免邮门槛仍被收费，做最小可回滚修复。",
+      "product": "OpenAI Codex",
+      "status": "not_run",
+      "reference_provenance": "author_created_synthetic_not_codex_output",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "recommended_surface": "CLI local (already installed and authenticated); IDE local alternative",
+      "surface_prerequisites": [
+        "Python 3.10+ available; stdlib only",
+        "authorized synthetic project copy",
+        "eligible account, selected workspace and usage budget checked by learner",
+        "no installation or credential setup performed by this package"
+      ],
+      "fixture_path": "recipes/cx01-shipping-bug/fixture",
+      "reference_path": "recipes/cx01-shipping-bug/reference",
+      "prompt_path": "recipes/cx01-shipping-bug/prompt.md",
+      "acceptance_path": "recipes/cx01-shipping-bug/acceptance.py",
+      "estimated_learning_minutes": 20,
+      "objective_checks": [
+        "六组门槛/偏远组合值与负值异常正确",
+        "接口不变、无新依赖"
+      ],
+      "human_rubric": [
+        "业务：准确解释 >= 与 > 的差异（0/1/2）。",
+        "最小改动：无无关重构，保留负值与附加费（0/1/2）。",
+        "证据：给实际执行命令及结果，不捏造（0/1/2）。"
+      ],
+      "recovery": [
+        "若把偏远也免掉，回到 policy.md 将基础运费和附加费分开。",
+        "若改成浮点元金额，拒绝该 patch，恢复整数分接口。"
+      ],
+      "source_ids": [
+        "cli",
+        "ide",
+        "practice",
+        "permissions",
+        "auth",
+        "pricing"
+      ],
+      "safety": {
+        "allow": [
+          "read copied fixture",
+          "write specified output files in copied fixture",
+          "run provided stdlib checks after review"
+        ],
+        "require_new_approval": [
+          "network access",
+          "dependency installation",
+          "external repository connection",
+          "publishing or pull request creation",
+          "changes outside exercise copy"
+        ],
+        "deny": [
+          "secrets or personal session reads",
+          "production data",
+          "disable sandbox to pass tests",
+          "silently modify tests or reference answers"
+        ]
+      },
+      "cost": {
+        "offline_validation": "No model/API calls; existing Python only",
+        "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+        "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+      },
+      "run_record": {
+        "surface": null,
+        "client_version": null,
+        "model": null,
+        "account_plan": null,
+        "workspace_policy": null,
+        "commands": [],
+        "actual_output": null,
+        "cost_actual": null
+      },
+      "runner_implemented": false
+    },
+    {
+      "id": "cx02-discount-tests",
+      "title": "为促销整数舍入补测试",
+      "roles": [
+        "QA：从金额舍入政策设计边界，不只覆盖普通折扣。",
+        "产品：确认半分向上取整；开发：不改生产代码，评估测试是否杀死回归。"
+      ],
+      "business_goal": "为结算函数补可运行 unittest，避免未来重构改变半分舍入。",
+      "product": "OpenAI Codex",
+      "status": "not_run",
+      "reference_provenance": "author_created_synthetic_not_codex_output",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "recommended_surface": "CLI local (already installed and authenticated); IDE local alternative",
+      "surface_prerequisites": [
+        "Python 3.10+ available; stdlib only",
+        "authorized synthetic project copy",
+        "eligible account, selected workspace and usage budget checked by learner",
+        "no installation or credential setup performed by this package"
+      ],
+      "fixture_path": "recipes/cx02-discount-tests/fixture",
+      "reference_path": "recipes/cx02-discount-tests/reference",
+      "prompt_path": "recipes/cx02-discount-tests/prompt.md",
+      "acceptance_path": "recipes/cx02-discount-tests/acceptance.py",
+      "estimated_learning_minutes": 20,
+      "objective_checks": [
+        "原实现通过；三个故意错误变体必须非零退出",
+        "原 pricing.py 保持不变（另由 reviewer diff 检查）"
+      ],
+      "human_rubric": [
+        "边界：测试名和断言对应业务规则（0/1/2）。",
+        "独立性：无需网络/外部框架，不靠读取源代码断言（0/1/2）。",
+        "有效性：说明为何舍入、上界及漏折扣变体被抓（0/1/2）。"
+      ],
+      "recovery": [
+        "若 unittest 显示 0 tests，核对文件名与 TestCase 继承。",
+        "若某变体存活，增加针对该行为的断言，不修改变体或生产逻辑。"
+      ],
+      "source_ids": [
+        "cli",
+        "ide",
+        "practice",
+        "permissions",
+        "auth",
+        "pricing"
+      ],
+      "safety": {
+        "allow": [
+          "read copied fixture",
+          "write specified output files in copied fixture",
+          "run provided stdlib checks after review"
+        ],
+        "require_new_approval": [
+          "network access",
+          "dependency installation",
+          "external repository connection",
+          "publishing or pull request creation",
+          "changes outside exercise copy"
+        ],
+        "deny": [
+          "secrets or personal session reads",
+          "production data",
+          "disable sandbox to pass tests",
+          "silently modify tests or reference answers"
+        ]
+      },
+      "cost": {
+        "offline_validation": "No model/API calls; existing Python only",
+        "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+        "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+      },
+      "run_record": {
+        "surface": null,
+        "client_version": null,
+        "model": null,
+        "account_plan": null,
+        "workspace_policy": null,
+        "commands": [],
+        "actual_output": null,
+        "cost_actual": null
+      },
+      "runner_implemented": false
+    },
+    {
+      "id": "cx03-tenant-review",
+      "title": "审查多租户发票查询而不擅自改代码",
+      "roles": [
+        "安全/QA：提供租户隔离契约；仅审核合成读取函数。",
+        "开发：确认调用方是否有额外权限；产品：判定跨租户信息暴露的严重性。"
+      ],
+      "business_goal": "在上线前发现租户隔离回归，交付有复现依据的审查报告，不自动部署修复。",
+      "product": "OpenAI Codex",
+      "status": "not_run",
+      "reference_provenance": "author_created_synthetic_not_codex_output",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "recommended_surface": "CLI local (already installed and authenticated); IDE local alternative",
+      "surface_prerequisites": [
+        "Python 3.10+ available; stdlib only",
+        "authorized synthetic project copy",
+        "eligible account, selected workspace and usage budget checked by learner",
+        "no installation or credential setup performed by this package"
+      ],
+      "fixture_path": "recipes/cx03-tenant-review/fixture",
+      "reference_path": "recipes/cx03-tenant-review/reference",
+      "prompt_path": "recipes/cx03-tenant-review/prompt.md",
+      "acceptance_path": "recipes/cx03-tenant-review/acceptance.py",
+      "estimated_learning_minutes": 20,
+      "objective_checks": [
+        "复现 A 请求错误包含 b1；报告定位 invoices.py 第 2 行",
+        "原始函数未修改；报告说明未知上下文"
+      ],
+      "human_rubric": [
+        "准确：发现缺租户过滤而非编造 SQL 注入（0/1/2）。",
+        "可行动：建议双条件过滤且保留 closed 逻辑（0/1/2）。",
+        "校准：解释数据暴露影响，声明调用方未知（0/1/2）。"
+      ],
+      "recovery": [
+        "若只报风格，要求依据 contract.md 给输入/实际/预期。",
+        "若已修改代码，保存 diff 后从干净副本重新只审查。"
+      ],
+      "source_ids": [
+        "cli",
+        "ide",
+        "practice",
+        "permissions",
+        "auth",
+        "pricing"
+      ],
+      "safety": {
+        "allow": [
+          "read copied fixture",
+          "write specified output files in copied fixture",
+          "run provided stdlib checks after review"
+        ],
+        "require_new_approval": [
+          "network access",
+          "dependency installation",
+          "external repository connection",
+          "publishing or pull request creation",
+          "changes outside exercise copy"
+        ],
+        "deny": [
+          "secrets or personal session reads",
+          "production data",
+          "disable sandbox to pass tests",
+          "silently modify tests or reference answers"
+        ]
+      },
+      "cost": {
+        "offline_validation": "No model/API calls; existing Python only",
+        "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+        "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+      },
+      "run_record": {
+        "surface": null,
+        "client_version": null,
+        "model": null,
+        "account_plan": null,
+        "workspace_policy": null,
+        "commands": [],
+        "actual_output": null,
+        "cost_actual": null
+      },
+      "runner_implemented": false
+    },
+    {
+      "id": "cx04-legacy-map",
+      "title": "向新同事解释遗留批处理仓库",
+      "roles": [
+        "新开发：需要入口、数据流和可修改位置。",
+        "产品/分析：提供样例，确认空输入含义；QA：复跑样例验证文档。"
+      ],
+      "business_goal": "将三模块遗留仓库解释为可核验的交接材料，避免凭文件名猜数据库/服务架构。",
+      "product": "OpenAI Codex",
+      "status": "not_run",
+      "reference_provenance": "author_created_synthetic_not_codex_output",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "recommended_surface": "CLI local (already installed and authenticated); IDE local alternative",
+      "surface_prerequisites": [
+        "Python 3.10+ available; stdlib only",
+        "authorized synthetic project copy",
+        "eligible account, selected workspace and usage budget checked by learner",
+        "no installation or credential setup performed by this package"
+      ],
+      "fixture_path": "recipes/cx04-legacy-map/fixture",
+      "reference_path": "recipes/cx04-legacy-map/reference",
+      "prompt_path": "recipes/cx04-legacy-map/prompt.md",
+      "acceptance_path": "recipes/cx04-legacy-map/acceptance.py",
+      "estimated_learning_minutes": 20,
+      "objective_checks": [
+        "入口及三段调用顺序正确",
+        "三个样例与实际 stdlib 执行一致，含空串和错误",
+        "样例集合必须完整匹配 samples.json，不允许重复替代；change_seams 指向 parser.py/scoring.py。"
+      ],
+      "human_rubric": [
+        "可信：文件锚点准确，不虚构基础设施（0/1/2）。",
+        "可读：产品同事能理解输入输出（0/1/2）。",
+        "交接：明确扩展点、异常和未知（0/1/2）。"
+      ],
+      "recovery": [
+        "若 import 找不到 parser，先核对测试工作目录/Python 路径，不安装同名外部包。",
+        "文档和代码冲突时以合成源码及样例执行为准，并写清限制。"
+      ],
+      "source_ids": [
+        "cli",
+        "ide",
+        "practice",
+        "permissions",
+        "auth",
+        "pricing"
+      ],
+      "safety": {
+        "allow": [
+          "read copied fixture",
+          "write specified output files in copied fixture",
+          "run provided stdlib checks after review"
+        ],
+        "require_new_approval": [
+          "network access",
+          "dependency installation",
+          "external repository connection",
+          "publishing or pull request creation",
+          "changes outside exercise copy"
+        ],
+        "deny": [
+          "secrets or personal session reads",
+          "production data",
+          "disable sandbox to pass tests",
+          "silently modify tests or reference answers"
+        ]
+      },
+      "cost": {
+        "offline_validation": "No model/API calls; existing Python only",
+        "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+        "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+      },
+      "run_record": {
+        "surface": null,
+        "client_version": null,
+        "model": null,
+        "account_plan": null,
+        "workspace_policy": null,
+        "commands": [],
+        "actual_output": null,
+        "cost_actual": null
+      },
+      "runner_implemented": false
+    },
+    {
+      "id": "cx05-money-migration",
+      "title": "给业务负责人写金额结构迁移计划",
+      "roles": [
+        "产品：确认币种与一周兼容窗口，批准切换。",
+        "开发/运维：提供依赖与回滚责任；QA/分析：验证笔数、金额守恒。"
+      ],
+      "business_goal": "把单个金额字段改为结构化 money 前，先制定可审计的演练与回滚计划，不操作真实数据库。",
+      "product": "OpenAI Codex",
+      "status": "not_run",
+      "reference_provenance": "author_created_synthetic_not_codex_output",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "recommended_surface": "CLI local (already installed and authenticated); IDE local alternative",
+      "surface_prerequisites": [
+        "Python 3.10+ available; stdlib only",
+        "authorized synthetic project copy",
+        "eligible account, selected workspace and usage budget checked by learner",
+        "no installation or credential setup performed by this package"
+      ],
+      "fixture_path": "recipes/cx05-money-migration/fixture",
+      "reference_path": "recipes/cx05-money-migration/reference",
+      "prompt_path": "recipes/cx05-money-migration/prompt.md",
+      "acceptance_path": "recipes/cx05-money-migration/acceptance.py",
+      "estimated_learning_minutes": 30,
+      "objective_checks": [
+        "两条记录和 1250 分守恒，v2 样例逐 id 对应",
+        "切换前批准、一周兼容、回滚字段齐全",
+        "MIGRATION.md 非空，映射与切换批准字段正确。"
+      ],
+      "human_rubric": [
+        "完整：阶段依赖与回滚可理解（0/1/2）。",
+        "保守：不把样例当上线，不猜 SLA（0/1/2）。",
+        "业务：金额单位币种保留，不丢零值（0/1/2）。"
+      ],
+      "recovery": [
+        "若方案建议直接覆盖原数据，改为不可变快照与隔离演练。",
+        "缺少真实调用方清单/RTO 时标待确认，不替业务批准。"
+      ],
+      "source_ids": [
+        "cli",
+        "ide",
+        "practice",
+        "permissions",
+        "auth",
+        "pricing"
+      ],
+      "safety": {
+        "allow": [
+          "read copied fixture",
+          "write specified output files in copied fixture",
+          "run provided stdlib checks after review"
+        ],
+        "require_new_approval": [
+          "network access",
+          "dependency installation",
+          "external repository connection",
+          "publishing or pull request creation",
+          "changes outside exercise copy"
+        ],
+        "deny": [
+          "secrets or personal session reads",
+          "production data",
+          "disable sandbox to pass tests",
+          "silently modify tests or reference answers"
+        ]
+      },
+      "cost": {
+        "offline_validation": "No model/API calls; existing Python only",
+        "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+        "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+      },
+      "run_record": {
+        "surface": null,
+        "client_version": null,
+        "model": null,
+        "account_plan": null,
+        "workspace_policy": null,
+        "commands": [],
+        "actual_output": null,
+        "cost_actual": null
+      },
+      "runner_implemented": false
+    },
+    {
+      "id": "cx06-sales-script",
+      "title": "从合成订单导出生成区域净额脚本",
+      "roles": [
+        "分析：定义退款负号、重复 id 与取消口径。",
+        "运营：提供脱敏导出；QA：手算总额并提供冲突重复反例。"
+      ],
+      "business_goal": "把可重复的销售口径落为 stdlib 脚本，而非仅给一句汇总数字。",
+      "product": "OpenAI Codex",
+      "status": "not_run",
+      "reference_provenance": "author_created_synthetic_not_codex_output",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "recommended_surface": "CLI local (already installed and authenticated); IDE local alternative",
+      "surface_prerequisites": [
+        "Python 3.10+ available; stdlib only",
+        "authorized synthetic project copy",
+        "eligible account, selected workspace and usage budget checked by learner",
+        "no installation or credential setup performed by this package"
+      ],
+      "fixture_path": "recipes/cx06-sales-script/fixture",
+      "reference_path": "recipes/cx06-sales-script/reference",
+      "prompt_path": "recipes/cx06-sales-script/prompt.md",
+      "acceptance_path": "recipes/cx06-sales-script/acceptance.py",
+      "estimated_learning_minutes": 20,
+      "objective_checks": [
+        "north=800、south=700、重复 1 行",
+        "冲突重复/负值/未知状态拒绝，原 CSV 不变",
+        "expected.json 与 CLI 输出对象均为 north=800/south=700/duplicate_rows=1；0 分有效输入通过。"
+      ],
+      "human_rubric": [
+        "口径：正确区分净额与利润（0/1/2）。",
+        "健壮：错误输入给明确失败，不静默吞掉（0/1/2）。",
+        "可复用：函数与 CLI 均清晰，金额全程整数（0/1/2）。"
+      ],
+      "recovery": [
+        "若重复叠加或退款加正数，先手算四个有效 id 再修。",
+        "遇到缺字段真实数据应停并补数据契约，不能默认视零。"
+      ],
+      "source_ids": [
+        "cli",
+        "ide",
+        "practice",
+        "permissions",
+        "auth",
+        "pricing"
+      ],
+      "safety": {
+        "allow": [
+          "read copied fixture",
+          "write specified output files in copied fixture",
+          "run provided stdlib checks after review"
+        ],
+        "require_new_approval": [
+          "network access",
+          "dependency installation",
+          "external repository connection",
+          "publishing or pull request creation",
+          "changes outside exercise copy"
+        ],
+        "deny": [
+          "secrets or personal session reads",
+          "production data",
+          "disable sandbox to pass tests",
+          "silently modify tests or reference answers"
+        ]
+      },
+      "cost": {
+        "offline_validation": "No model/API calls; existing Python only",
+        "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+        "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+      },
+      "run_record": {
+        "surface": null,
+        "client_version": null,
+        "model": null,
+        "account_plan": null,
+        "workspace_policy": null,
+        "commands": [],
+        "actual_output": null,
+        "cost_actual": null
+      },
+      "runner_implemented": false
+    },
+    {
+      "id": "cx07-triage-prototype",
+      "title": "把客服需求变成离线产品原型",
+      "roles": [
+        "产品：提供两条合成工单、筛选与空态需求，不能要求接入 CRM。",
+        "设计/QA：键盘可用性与空态检查；开发：审阅无外部资源和无数据发送。"
+      ],
+      "business_goal": "让业务方通过单 HTML 原型讨论需求，不假装已上线完整客服系统。",
+      "product": "OpenAI Codex",
+      "status": "not_run",
+      "reference_provenance": "author_created_synthetic_not_codex_output",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "recommended_surface": "CLI local (already installed and authenticated); IDE local alternative",
+      "surface_prerequisites": [
+        "Python 3.10+ available; stdlib only",
+        "authorized synthetic project copy",
+        "eligible account, selected workspace and usage budget checked by learner",
+        "no installation or credential setup performed by this package"
+      ],
+      "fixture_path": "recipes/cx07-triage-prototype/fixture",
+      "reference_path": "recipes/cx07-triage-prototype/reference",
+      "prompt_path": "recipes/cx07-triage-prototype/prompt.md",
+      "acceptance_path": "recipes/cx07-triage-prototype/acceptance.py",
+      "estimated_learning_minutes": 30,
+      "objective_checks": [
+        "HTML 语言、label/select 关联、三筛选值与 aria-live 存在",
+        "不包含网络/存储/提交常见入口；静态检查不证明行为",
+        "MANUAL-QA.md 非空；内容仍需人工审阅，浏览器/读屏未执行。"
+      ],
+      "human_rubric": [
+        "业务：手动确认两工单筛选、计数与空态（0/1/2；未做记未评）。",
+        "体验：320px、键盘焦点和读屏手动验证（0/1/2；未做记未评）。",
+        "范围：明确仅原型，不声称 CRM 集成/上线（0/1/2）。"
+      ],
+      "recovery": [
+        "若要真实 CRM/账户登录，先停止并另立授权/数据契约；本练习不扩展。",
+        "JS/视觉未测时标 manual_pending，不允许用静态通过替代。"
+      ],
+      "source_ids": [
+        "cli",
+        "ide",
+        "practice",
+        "permissions",
+        "auth",
+        "pricing"
+      ],
+      "safety": {
+        "allow": [
+          "read copied fixture",
+          "write specified output files in copied fixture",
+          "run provided stdlib checks after review"
+        ],
+        "require_new_approval": [
+          "network access",
+          "dependency installation",
+          "external repository connection",
+          "publishing or pull request creation",
+          "changes outside exercise copy"
+        ],
+        "deny": [
+          "secrets or personal session reads",
+          "production data",
+          "disable sandbox to pass tests",
+          "silently modify tests or reference answers"
+        ]
+      },
+      "cost": {
+        "offline_validation": "No model/API calls; existing Python only",
+        "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+        "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+      },
+      "run_record": {
+        "surface": null,
+        "client_version": null,
+        "model": null,
+        "account_plan": null,
+        "workspace_policy": null,
+        "commands": [],
+        "actual_output": null,
+        "cost_actual": null
+      },
+      "runner_implemented": false
+    },
+    {
+      "id": "cx08-ci-diagnosis",
+      "title": "从合成 CI 日志定位错误工作目录",
+      "roles": [
+        "运维/开发：提供脱敏 workflow、目录树和完整失败段。",
+        "QA：区分测试失败与找不到工作目录；产品：了解修复不改业务逻辑。"
+      ],
+      "business_goal": "修复 CI 中工作目录拼写错误，不靠删除测试或放宽退出码让构建变绿。",
+      "product": "OpenAI Codex",
+      "status": "not_run",
+      "reference_provenance": "author_created_synthetic_not_codex_output",
+      "checked_at": "2026-10-29T05:34:00Z",
+      "recommended_surface": "CLI local (already installed and authenticated); IDE local alternative",
+      "surface_prerequisites": [
+        "Python 3.10+ available; stdlib only",
+        "authorized synthetic project copy",
+        "eligible account, selected workspace and usage budget checked by learner",
+        "no installation or credential setup performed by this package"
+      ],
+      "fixture_path": "recipes/cx08-ci-diagnosis/fixture",
+      "reference_path": "recipes/cx08-ci-diagnosis/reference",
+      "prompt_path": "recipes/cx08-ci-diagnosis/prompt.md",
+      "acceptance_path": "recipes/cx08-ci-diagnosis/acceptance.py",
+      "estimated_learning_minutes": 20,
+      "objective_checks": [
+        "working-directory 正确且无吞错设置",
+        "原测试命令在实际目录发现并通过 1 测试；托管 CI 未运行"
+      ],
+      "human_rubric": [
+        "诊断：依据日志区分环境路径和业务断言（0/1/2）。",
+        "修复：仅必要路径变更，不掩盖错误（0/1/2）。",
+        "证据：不把本地 unittest 等同远程 CI 成功（0/1/2）。"
+      ],
+      "recovery": [
+        "若仍 0 tests，检查发现目录与文件模式；不把 0 tests 当成功。",
+        "线上失败需要新的脱敏日志；不能本地猜测权限/网络后直接放宽策略。"
+      ],
+      "source_ids": [
+        "cli",
+        "ide",
+        "practice",
+        "permissions",
+        "auth",
+        "pricing"
+      ],
+      "safety": {
+        "allow": [
+          "read copied fixture",
+          "write specified output files in copied fixture",
+          "run provided stdlib checks after review"
+        ],
+        "require_new_approval": [
+          "network access",
+          "dependency installation",
+          "external repository connection",
+          "publishing or pull request creation",
+          "changes outside exercise copy"
+        ],
+        "deny": [
+          "secrets or personal session reads",
+          "production data",
+          "disable sandbox to pass tests",
+          "silently modify tests or reference answers"
+        ]
+      },
+      "cost": {
+        "offline_validation": "No model/API calls; existing Python only",
+        "codex_run": "not_run; may consume subscription quota/credits or API usage if learner later elects to run",
+        "limit": "one initial task and at most one targeted repair, then inspect manually; stop on quota/permission blocker"
+      },
+      "run_record": {
+        "surface": null,
+        "client_version": null,
+        "model": null,
+        "account_plan": null,
+        "workspace_policy": null,
+        "commands": [],
+        "actual_output": null,
+        "cost_actual": null
+      },
+      "runner_implemented": false
+    }
+  ]
+}

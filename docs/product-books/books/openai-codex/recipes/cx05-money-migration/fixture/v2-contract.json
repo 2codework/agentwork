@@ -1,0 +1,1 @@
+{"required":["id","money"],"money":{"amount_cents":"nonnegative integer","currency":"CNY"},"compatibility":"v1 reader stays during transition"}

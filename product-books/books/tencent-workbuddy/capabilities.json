@@ -1,0 +1,90 @@
+[
+  {
+    "capability": "本地文件",
+    "documented": "可在授权目录读写；常规写入可能不逐项询问",
+    "limits": "只用副本，inputs哈希检查；不以提示词替代权限",
+    "source_ids": [
+      "identity",
+      "files"
+    ],
+    "checked_at": "2026-10-29T05:32:00Z",
+    "status": "documented_not_run"
+  },
+  {
+    "capability": "会议纪要",
+    "documented": "文本转结构化纪要；音频需先转写",
+    "limits": "本包只给TXT，不承诺原生录音端到端能力",
+    "source_ids": [
+      "files",
+      "create"
+    ],
+    "checked_at": "2026-10-29T05:32:00Z",
+    "status": "documented_not_run"
+  },
+  {
+    "capability": "内容与文档",
+    "documented": "按目标受众生成与继续修改",
+    "limits": "正确性、版权、排版与宣传审核仍由人完成",
+    "source_ids": [
+      "documents",
+      "content"
+    ],
+    "checked_at": "2026-10-29T05:32:00Z",
+    "status": "documented_not_run"
+  },
+  {
+    "capability": "数据分析",
+    "documented": "CSV/Excel输入与指标分析",
+    "limits": "币种、去重口径、公式需验算；无准确率承诺",
+    "source_ids": [
+      "data",
+      "results"
+    ],
+    "checked_at": "2026-10-29T05:32:00Z",
+    "status": "documented_not_run"
+  },
+  {
+    "capability": "连接器",
+    "documented": "可授权外部服务查询或操作",
+    "limits": "本包不开通；第三方账户权限与凭据、业务数据边界另审",
+    "source_ids": [
+      "connector",
+      "permission"
+    ],
+    "checked_at": "2026-10-29T05:32:00Z",
+    "status": "documented_not_run"
+  },
+  {
+    "capability": "Git协作",
+    "documented": "Git目录分支与隔离并行开发",
+    "limits": "普通目录分支选择置灰；本例仅diff文件，不演示实际worktree",
+    "source_ids": [
+      "git",
+      "permission"
+    ],
+    "checked_at": "2026-10-29T05:32:00Z",
+    "status": "documented_not_run"
+  },
+  {
+    "capability": "云助理与本地",
+    "documented": "官网分别介绍云托管与本地文件处理",
+    "limits": "云持续运行不等于本地电脑关机仍执行；本包仅本地路线",
+    "source_ids": [
+      "identity",
+      "files"
+    ],
+    "checked_at": "2026-10-29T05:32:00Z",
+    "status": "documented_not_run"
+  },
+  {
+    "capability": "模型费用",
+    "documented": "体验与多个付费档次，权益有别",
+    "limits": "不固化优惠、免费额度、速度或每例成本，运行前核价",
+    "source_ids": [
+      "pricing",
+      "release"
+    ],
+    "checked_at": "2026-10-29T05:32:00Z",
+    "status": "documented_not_run"
+  }
+]

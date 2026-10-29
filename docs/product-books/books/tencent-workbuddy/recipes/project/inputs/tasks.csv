@@ -1,0 +1,5 @@
+id,task,owner,due,status,depends_on,evidence
+P1,接口定义,甲,2026-11-03,done,,记录R1
+P2,联调,乙,2026-11-06,blocked,P1,测试账号未开
+P3,上线审批,丙,2026-11-07,todo,P2,
+P4,帮助页,待定,2026-11-05,in_progress,,

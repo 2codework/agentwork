@@ -1,0 +1,67 @@
+{
+  "status": "pass",
+  "scope": "original local content/contracts only",
+  "results": [
+    {
+      "recipe": "wps-lingxi-pro-sales-review",
+      "standalone_prompt_contract": "pass",
+      "missing_rule_mutations": "rejected",
+      "explicit_artifacts_hash_and_content": "pass",
+      "product_execution": "not_run"
+    },
+    {
+      "recipe": "wps-lingxi-pro-budget-variance",
+      "standalone_prompt_contract": "pass",
+      "missing_rule_mutations": "rejected",
+      "explicit_artifacts_hash_and_content": "pass",
+      "product_execution": "not_run"
+    },
+    {
+      "recipe": "wps-lingxi-pro-meeting-actions",
+      "standalone_prompt_contract": "pass",
+      "missing_rule_mutations": "rejected",
+      "explicit_artifacts_hash_and_content": "pass",
+      "product_execution": "not_run"
+    },
+    {
+      "recipe": "wps-lingxi-pro-hr-onboarding",
+      "standalone_prompt_contract": "pass",
+      "missing_rule_mutations": "rejected",
+      "explicit_artifacts_hash_and_content": "pass",
+      "product_execution": "not_run"
+    },
+    {
+      "recipe": "wps-lingxi-pro-support-faq",
+      "standalone_prompt_contract": "pass",
+      "missing_rule_mutations": "rejected",
+      "explicit_artifacts_hash_and_content": "pass",
+      "product_execution": "not_run"
+    },
+    {
+      "recipe": "wps-lingxi-pro-procurement-matrix",
+      "standalone_prompt_contract": "pass",
+      "missing_rule_mutations": "rejected",
+      "explicit_artifacts_hash_and_content": "pass",
+      "product_execution": "not_run"
+    },
+    {
+      "recipe": "wps-lingxi-pro-marketing-deck",
+      "standalone_prompt_contract": "pass",
+      "missing_rule_mutations": "rejected",
+      "explicit_artifacts_hash_and_content": "pass",
+      "product_execution": "not_run"
+    },
+    {
+      "recipe": "wps-lingxi-pro-operations-sop",
+      "standalone_prompt_contract": "pass",
+      "missing_rule_mutations": "rejected",
+      "explicit_artifacts_hash_and_content": "pass",
+      "product_execution": "not_run"
+    }
+  ],
+  "parser_exponent_overflow": "rejected",
+  "memory_bound": "stat then bounded read",
+  "native_execution": "not_run",
+  "product_execution": "not_run",
+  "artifact_link_mutations": "all 8 reject missing full-reference link, missing edge-prompt link, tampered hash"
+}

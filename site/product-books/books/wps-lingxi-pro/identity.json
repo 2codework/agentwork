@@ -1,0 +1,56 @@
+{
+  "query": "灵犀",
+  "resolution": "multiple_distinct_products_catalogued",
+  "canonical_alias_assignment": null,
+  "candidate_tutorial_scope": "wps-lingxi-pro",
+  "publication_gate": "Keep bare 灵犀 ambiguous; catalogue three independently verified products, each with vendor-qualified identity.",
+  "candidates": [
+    {
+      "id": "wps-lingxi-pro",
+      "name": "WPS 灵犀专业版",
+      "vendor": "珠海金山办公软件有限公司",
+      "official_url": "https://www.lingxi.cn/",
+      "sources": [
+        "lx-home",
+        "lx-docs",
+        "lx-privacy"
+      ],
+      "match": "办公成品型 Agent，与语境相符但不唯一",
+      "tutorial_status": "eight_authored_recipes_not_run"
+    },
+    {
+      "id": "cmcc-lingxi-assistant",
+      "name": "中国移动灵犀AI助手",
+      "vendor": "中移（杭州）信息技术有限公司",
+      "official_url": "https://ai.soho.komect.com/",
+      "sources": [
+        "cmcc-home",
+        "cmcc-privacy",
+        "cmcc-download"
+      ],
+      "match": "工作区工具型桌面 Agent，也符合办公语境",
+      "tutorial_status": "catalog_only_playbooks_pending",
+      "platform": "官网下载页列macOS、Windows、Linux；最低系统版本未确认",
+      "account": "官网说明中国大陆手机号验证码登录；未登录",
+      "version": "未核验具体版本号",
+      "capability_boundary": "工作区/模型/附加资料/查看执行/授权工具与文件；扩展智能体按账号可用范围，不保证所有用户均可安装。未把营销描述当实测。",
+      "privacy_cost": "独立隐私政策适用；本轮未核实价格和额度，不承诺免费；不套用WPS不训练声明。 已读取政策含云电脑权限语境，不能无条件套用于全部原生桌面行为。"
+    },
+    {
+      "id": "regaing-lingxi",
+      "name": "灵犀AI助手 LingXi AI",
+      "vendor": "记得科技（网站页脚名称；未进一步核验法人）",
+      "official_url": "https://lingxi.regaing.com/",
+      "sources": [
+        "regaing-home"
+      ],
+      "match": "开发与办公 Agent；独立 CLI 包，不能合并为WPS",
+      "tutorial_status": "catalog_only_playbooks_pending",
+      "platform": "官网列桌面/CLI/VS Code/HTTP；检查时Windows/Linux安装包不可用，macOS即将推出；CLI标Node.js22+，未安装",
+      "account": "账号与API接入前置条件未充分核验，不能套用WPS或中国移动账号",
+      "version": "官网beta；未运行，未将npm搜索版本当安装版本",
+      "capability_boundary": "办公文件、代码工具、模型接入、MCP是厂商声明；未核实每端能力等价。",
+      "privacy_cost": "网站宣传本地优先不等于零网络处理；API模型可能有独立计费与数据处理，未配置Key。"
+    }
+  ]
+}

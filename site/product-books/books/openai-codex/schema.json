@@ -1,0 +1,310 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentWork Codex source-reviewed unexecuted candidate",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "product",
+    "recipes"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "product": {
+      "type": "object",
+      "required": [
+        "product_id",
+        "vendor",
+        "name",
+        "display_name",
+        "status",
+        "version_scope",
+        "sources"
+      ],
+      "properties": {
+        "product_id": {
+          "const": "openai-codex"
+        },
+        "vendor": {
+          "const": "OpenAI"
+        },
+        "name": {
+          "const": "Codex"
+        },
+        "display_name": {
+          "type": "string"
+        },
+        "status": {
+          "const": "researched"
+        },
+        "version_scope": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "maxItems": 16,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "title",
+              "url",
+              "accessed_at",
+              "claim_scope"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "accessed_at": {
+                "type": "string"
+              },
+              "claim_scope": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "version_scope_details": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    "recipes": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "required": [
+          "recipe_id",
+          "task_id",
+          "title",
+          "role",
+          "business_goal",
+          "input_artifacts",
+          "prompt",
+          "steps",
+          "expected_output_origin",
+          "expected_output",
+          "objective_checks",
+          "human_rubric",
+          "authorization",
+          "cost",
+          "privacy",
+          "version_scope",
+          "sources",
+          "evidence_tier",
+          "product_execution",
+          "observed_results",
+          "product_id",
+          "runner_implemented",
+          "reference_format",
+          "expected_product_artifact_format",
+          "structured_details",
+          "expected_output_artifacts"
+        ],
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "pattern": "^cx[0-9]{2}-[a-z-]+$"
+          },
+          "task_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "business_goal": {
+            "type": "string"
+          },
+          "input_artifacts": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "path",
+                "sha256",
+                "description"
+              ],
+              "properties": {
+                "path": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "steps": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "object",
+              "required": [
+                "title",
+                "instruction",
+                "check",
+                "failure_recovery"
+              ],
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "instruction": {
+                  "type": "string"
+                },
+                "check": {
+                  "type": "string"
+                },
+                "failure_recovery": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "expected_output_origin": {
+            "const": "author_reference"
+          },
+          "expected_output": {
+            "type": "object"
+          },
+          "objective_checks": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          "human_rubric": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "string"
+            }
+          },
+          "authorization": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "string"
+          },
+          "privacy": {
+            "type": "string"
+          },
+          "version_scope": {
+            "type": "string"
+          },
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title",
+                "url",
+                "accessed_at",
+                "claim_scope"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "accessed_at": {
+                  "type": "string"
+                },
+                "claim_scope": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "evidence_tier": {
+            "const": "documentation_review"
+          },
+          "product_execution": {
+            "const": "not_run"
+          },
+          "observed_results": {
+            "type": "null"
+          },
+          "product_id": {
+            "type": "string"
+          },
+          "reference_format": {
+            "type": "string"
+          },
+          "expected_product_artifact_format": {
+            "type": "string"
+          },
+          "runner_implemented": {
+            "const": false
+          },
+          "structured_details": {
+            "type": "object"
+          },
+          "expected_output_artifacts": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "path",
+                "sha256",
+                "description"
+              ],
+              "properties": {
+                "path": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

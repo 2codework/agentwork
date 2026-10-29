@@ -1,0 +1,1 @@
+这是隔离的合成代码审查。读取 contract.md、invoices.py、invoices.json，禁止修改代码。将有证据的问题写入 review.json（findings: severity,file,line,issue,reproduction{tenant,actual_ids,expected_ids},impact,recommendation；limitations）。区分已证实函数行为和未知调用方上下文；不虚构利用过程，不调用线上服务。优先报告真实隔离问题而非风格偏好。

@@ -1,0 +1,5 @@
+action_id,action,owner,due,status,source
+A1,提交两间场地报价,周禾,2026-11-05,明确承诺,meeting.txt:M2
+A2,确认场地,待确认,待确认,待确认,meeting.txt:M1
+A3,确认主持人,待确认,待确认,待确认,meeting.txt:M5
+A4,确认录制法律与讲者同意,待确认,待确认,待确认,meeting.txt:M4

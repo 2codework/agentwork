@@ -1,0 +1,25 @@
+{
+  "findings": [
+    {
+      "severity": "high",
+      "file": "invoices.py",
+      "line": 2,
+      "issue": "missing tenant filter",
+      "reproduction": {
+        "tenant": "A",
+        "actual_ids": [
+          "a1",
+          "b1"
+        ],
+        "expected_ids": [
+          "a1"
+        ]
+      },
+      "impact": "Tenant A can see tenant B open invoice metadata.",
+      "recommendation": "Filter by both tenant_id and open status; preserve closed filtering."
+    }
+  ],
+  "limitations": [
+    "Only synthetic repository reviewed; authentication outside this function is unknown."
+  ]
+}

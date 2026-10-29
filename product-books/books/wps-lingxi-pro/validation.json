@@ -1,0 +1,83 @@
+{
+  "status": "pass",
+  "scope": "artifact structure and original evaluator selftests only",
+  "product_execution": "not_run",
+  "official_ui_execution": "not_run",
+  "recipe_count": 8,
+  "checks": [
+    {
+      "recipe": "wps-lingxi-pro-sales-review",
+      "structure": "pass",
+      "evaluator_expected_fixture_selftest": "pass",
+      "evaluator_missing_key_negative": "pass",
+      "evaluator_wrong_type_negative": "pass",
+      "product_execution": "not_run",
+      "human_artifact_review": "not_run"
+    },
+    {
+      "recipe": "wps-lingxi-pro-budget-variance",
+      "structure": "pass",
+      "evaluator_expected_fixture_selftest": "pass",
+      "evaluator_missing_key_negative": "pass",
+      "evaluator_wrong_type_negative": "pass",
+      "product_execution": "not_run",
+      "human_artifact_review": "not_run"
+    },
+    {
+      "recipe": "wps-lingxi-pro-meeting-actions",
+      "structure": "pass",
+      "evaluator_expected_fixture_selftest": "pass",
+      "evaluator_missing_key_negative": "pass",
+      "evaluator_wrong_type_negative": "pass",
+      "product_execution": "not_run",
+      "human_artifact_review": "not_run"
+    },
+    {
+      "recipe": "wps-lingxi-pro-hr-onboarding",
+      "structure": "pass",
+      "evaluator_expected_fixture_selftest": "pass",
+      "evaluator_missing_key_negative": "pass",
+      "evaluator_wrong_type_negative": "pass",
+      "product_execution": "not_run",
+      "human_artifact_review": "not_run"
+    },
+    {
+      "recipe": "wps-lingxi-pro-support-faq",
+      "structure": "pass",
+      "evaluator_expected_fixture_selftest": "pass",
+      "evaluator_missing_key_negative": "pass",
+      "evaluator_wrong_type_negative": "pass",
+      "product_execution": "not_run",
+      "human_artifact_review": "not_run"
+    },
+    {
+      "recipe": "wps-lingxi-pro-procurement-matrix",
+      "structure": "pass",
+      "evaluator_expected_fixture_selftest": "pass",
+      "evaluator_missing_key_negative": "pass",
+      "evaluator_wrong_type_negative": "pass",
+      "product_execution": "not_run",
+      "human_artifact_review": "not_run"
+    },
+    {
+      "recipe": "wps-lingxi-pro-marketing-deck",
+      "structure": "pass",
+      "evaluator_expected_fixture_selftest": "pass",
+      "evaluator_missing_key_negative": "pass",
+      "evaluator_wrong_type_negative": "pass",
+      "product_execution": "not_run",
+      "human_artifact_review": "not_run"
+    },
+    {
+      "recipe": "wps-lingxi-pro-operations-sop",
+      "structure": "pass",
+      "evaluator_expected_fixture_selftest": "pass",
+      "evaluator_missing_key_negative": "pass",
+      "evaluator_wrong_type_negative": "pass",
+      "product_execution": "not_run",
+      "human_artifact_review": "not_run"
+    }
+  ],
+  "hr_constraint_exhaustive_check": "no feasible ordering for 3/3/2 capacities and indivisible modules",
+  "source_count": 10
+}

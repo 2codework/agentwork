@@ -1,0 +1,162 @@
+[
+  {
+    "id": "identity",
+    "title": "腾讯云产品页",
+    "url": "https://cloud.tencent.com/product/workbuddy",
+    "summary": "腾讯产品身份；本地、云助理与项目为不同执行表面。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "overview",
+    "title": "产品介绍",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Product-Guide",
+    "summary": "自然语言、授权文件处理与研究任务。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "corporate",
+    "title": "腾讯跨应用说明",
+    "url": "https://www.tencent.com/zh-cn/you-work-across-six-apps-your-ai-should-too/",
+    "summary": "人机双写与连接器；人保留最终决定。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "release",
+    "title": "更新日志",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/Changelog",
+    "summary": "顶部5.9.3发布于2026-10-27，不证明租户已升级。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "windows",
+    "title": "Windows安装",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Win-Guide",
+    "summary": "Win10+x64，ARM64看当版；官网登录。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "mac",
+    "title": "Mac安装",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Mac-Guide",
+    "summary": "macOS12+；M芯片ARM64，Intel X64。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "create",
+    "title": "创建任务",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/Create-Task",
+    "summary": "选择工作空间、上传文件、描述目标与约束。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "results",
+    "title": "结果查看",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/Results",
+    "summary": "右侧产物、网页、工作空间文件与变更。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "permission",
+    "title": "权限沙箱",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Permission-Modes",
+    "summary": "默认权限不等于只读；工作空间内常规写入通常可直接执行。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "pricing",
+    "title": "定价",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/Pricing",
+    "summary": "体验与付费版并存，积分与模型权益不同。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "files",
+    "title": "文件处理",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-One",
+    "summary": "会议文本整理；音频需先转写；批量改名先预览。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "documents",
+    "title": "文档生成",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Two",
+    "summary": "生成文档、按素材做演示、后续修改。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "data",
+    "title": "数据分析",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Three",
+    "summary": "CSV/Excel拖入或指定路径；明确指标与维度。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "content",
+    "title": "自媒体",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Four",
+    "summary": "按受众、平台和风格生成内容。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "git",
+    "title": "Git集成",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Worktree-Task",
+    "summary": "Git工作空间有分支选择；普通目录置灰；切换任务有确认。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  },
+  {
+    "id": "connector",
+    "title": "连接器",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Connector",
+    "summary": "逐连接器授权；业务数据按需读；外部写入需明确指令。",
+    "checked_at": "2026-10-29T05:32:00Z",
+    "authority": "official",
+    "verification": "web_search_then_open",
+    "quote_policy": "原创简述，不存网页全文"
+  }
+]

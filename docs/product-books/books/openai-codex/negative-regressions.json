@@ -1,0 +1,123 @@
+{
+  "scope": "author_reference_negative_regressions_only",
+  "product_execution": "not_run",
+  "runner_implemented": false,
+  "count": 23,
+  "cases": [
+    {
+      "recipe_id": "cx01-shipping-bug",
+      "negative_case": "missing shipping.py",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx02-discount-tests",
+      "negative_case": "missing test_pricing.py",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx03-tenant-review",
+      "negative_case": "missing review.json",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx04-legacy-map",
+      "negative_case": "missing ONBOARDING.md",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx04-legacy-map",
+      "negative_case": "missing architecture.json",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx05-money-migration",
+      "negative_case": "missing MIGRATION.md",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx05-money-migration",
+      "negative_case": "missing migration-plan.json",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx06-sales-script",
+      "negative_case": "missing expected.json",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx06-sales-script",
+      "negative_case": "missing summarize.py",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx07-triage-prototype",
+      "negative_case": "missing MANUAL-QA.md",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx07-triage-prototype",
+      "negative_case": "missing index.html",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx08-ci-diagnosis",
+      "negative_case": "missing .github/workflows/test.yml",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx08-ci-diagnosis",
+      "negative_case": "missing DIAGNOSIS.md",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx04-legacy-map",
+      "negative_case": "duplicate examples omit supplied inputs",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx04-legacy-map",
+      "negative_case": "missing change_seams",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx05-money-migration",
+      "negative_case": "wrong field mapping",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx06-sales-script",
+      "negative_case": "wrong expected JSON",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx06-sales-script",
+      "negative_case": "CLI emits wrong JSON",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx06-sales-script",
+      "negative_case": "incorrectly rejects zero cents",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx05-money-migration",
+      "negative_case": "empty migration prose",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx07-triage-prototype",
+      "negative_case": "empty manual checklist",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx01-shipping-bug",
+      "negative_case": "protected policy modified",
+      "rejected": true
+    },
+    {
+      "recipe_id": "cx01-shipping-bug",
+      "negative_case": "unexpected output path",
+      "rejected": true
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-29",
+  "baseline": "canonical, supersedes early r1 artifact search",
+  "inputs": [
+    {
+      "path": "/workspace/scratch/6fb8d22046cb/github-migration-r1/public/agentwork/docs/data.json",
+      "sha256": "6921f8d3effc9ccb8976b873ccdcee953c0e60d257d94cf3d2778d1c541a22fd",
+      "cases_count": 138,
+      "nodes_count": 0,
+      "lingxi_hits": []
+    },
+    {
+      "path": "/workspace/scratch/6fb8d22046cb/github-migration-r1/public/modelatlas/docs/data.json",
+      "sha256": "0384f0d93ce7cdb3a81bbb913afb53fb75667f5f350bfc0a46d02e743b710b7a",
+      "cases_count": 0,
+      "nodes_count": 254,
+      "lingxi_hits": []
+    }
+  ],
+  "semantic_relationships": [
+    {
+      "recipe": "wps-lingxi-pro-meeting-actions",
+      "related_existing_case": "meeting-action-log",
+      "relationship": "shared business task; new vendor-qualified documented input/output workflow and executable sidecar evaluation; retain original generic case"
+    },
+    {
+      "recipe": "wps-lingxi-pro-support-faq",
+      "related_existing_case": "support-triage",
+      "relationship": "related support workflow, not a product duplicate"
+    },
+    {
+      "recipe": "wps-lingxi-pro-budget-variance",
+      "related_existing_case": "roles-r16",
+      "relationship": "same task family; product tutorial adds concrete input/prompt/documented steps/expected rubric"
+    },
+    {
+      "recipe": "wps-lingxi-pro-hr-onboarding",
+      "related_existing_case": "roles-r06",
+      "relationship": "related HR process; new constrained scheduling negative example, not employee selection"
+    }
+  ],
+  "decision": "No lingxi/灵犀 identity hits in canonical 138 cases / 254 nodes. Preserve generic exercises and link related task families; no replacement or canonical edit performed."
+}

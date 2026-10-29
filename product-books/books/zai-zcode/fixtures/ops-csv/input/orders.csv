@@ -1,0 +1,5 @@
+order_id,status,amount_cents
+O1,paid,1200
+O2,cancelled,900
+O3,paid,800
+O4,paid,invalid

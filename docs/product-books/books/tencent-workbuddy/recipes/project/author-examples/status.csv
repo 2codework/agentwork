@@ -1,0 +1,5 @@
+id,deadline_class,state,issue
+P1,已完成,done,证据R1
+P2,今日到期,blocked,测试账号未开
+P3,未来到期,todo,依赖P2的风险
+P4,逾期,in_progress,负责人待定

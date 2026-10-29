@@ -1,0 +1,94 @@
+[
+  {
+    "id": "lx-home",
+    "url": "https://www.lingxi.cn/",
+    "title": "WPS 灵犀官网",
+    "checked_at": "2026-10-29",
+    "evidence": "产品归属、可编辑办公文件；非效果验证",
+    "kind": "official_product_documentation",
+    "execution": "not_run"
+  },
+  {
+    "id": "lx-docs",
+    "url": "https://www.lingxi.cn/docs",
+    "title": "灵犀专业版产品文档",
+    "checked_at": "2026-10-29",
+    "evidence": "入门/任务对话/基础能力/模式/执行环境/权限/版本历史；仅记录短能力与操作事实",
+    "kind": "official_product_documentation",
+    "execution": "not_run"
+  },
+  {
+    "id": "lx-download",
+    "url": "https://www.lingxi.cn/download",
+    "title": "WPS 灵犀下载",
+    "checked_at": "2026-10-29",
+    "evidence": "Windows 10+；macOS 12+，Apple/Intel；移动端/网页入口",
+    "kind": "official_product_documentation",
+    "execution": "not_run"
+  },
+  {
+    "id": "lx-privacy",
+    "url": "https://privacy.wps.cn/policies/privacy/lingxi?lang=zh-CN",
+    "title": "灵犀隐私保护政策",
+    "checked_at": "2026-10-29",
+    "evidence": "2026-09-10生效；服务处理对话、文件、记忆等；供应商承诺不作模型训练，不等于本地离线",
+    "kind": "official_product_documentation",
+    "execution": "not_run",
+    "retrieval_limitation": "本轮web search返回政策正文摘录与2026-09-10日期；直接open正文0行。独立审查未能重复读取正文，精确政策日期/具体承诺标search_index_only，需执行前直接确认。"
+  },
+  {
+    "id": "lx-price",
+    "url": "https://lingxi.kdocs.cn/cashier",
+    "title": "灵犀权益页",
+    "checked_at": "2026-10-29",
+    "evidence": "页面正文不可读；不据此断言价格/额度",
+    "kind": "official_product_documentation",
+    "execution": "not_run"
+  },
+  {
+    "id": "cmcc-home",
+    "url": "https://ai.soho.komect.com/",
+    "title": "中国移动灵犀AI助手",
+    "checked_at": "2026-10-29",
+    "evidence": "工作区、模型、工具确认；页脚中移（杭州）信息技术有限公司",
+    "kind": "official_product_documentation",
+    "execution": "not_run"
+  },
+  {
+    "id": "cmcc-privacy",
+    "url": "https://ai.soho.komect.com/ai/llm/lingxi-assistant-docs/legal/privacy-policy",
+    "title": "中国移动灵犀AI助手隐私政策",
+    "checked_at": "2026-10-29",
+    "evidence": "独立产品的隐私政策，不套用WPS条款",
+    "kind": "official_product_documentation",
+    "execution": "not_run",
+    "scope_caution": "政策含云电脑继承权限语境；不据此认定本地桌面全部行为或所有端隐私范围相同。"
+  },
+  {
+    "id": "regaing-home",
+    "url": "https://lingxi.regaing.com/",
+    "title": "灵犀AI助手 LingXi AI",
+    "checked_at": "2026-10-29",
+    "evidence": "记得科技；桌面/CLI/VS Code/HTTP，桌面下载可用性有限",
+    "kind": "official_product_documentation",
+    "execution": "not_run"
+  },
+  {
+    "id": "lx-ios",
+    "url": "https://apps.apple.com/cn/app/id6785917228",
+    "title": "WPS 灵犀 App Store 条目",
+    "checked_at": "2026-10-29",
+    "evidence": "金山办公软件开发者；跨设备办公说明，仅商店供应商声明",
+    "kind": "vendor_app_store_listing",
+    "execution": "not_run"
+  },
+  {
+    "id": "cmcc-download",
+    "url": "https://ai.soho.komect.com/download",
+    "title": "中国移动灵犀AI助手下载",
+    "checked_at": "2026-10-29",
+    "evidence": "列出macOS/Windows/Linux；中国大陆手机号验证码登录；未下载，未验证最低版本",
+    "kind": "official_product_documentation",
+    "execution": "not_run"
+  }
+]

@@ -1,0 +1,4 @@
+row_id,order_id,reason,action,source
+3,O02,与row2完全重复,保留最早row2并排除此行,orders.csv:3
+6,O05,缺gross,隔离不补造,orders.csv:6
+7,O06,refund60大于gross40,隔离不截零,orders.csv:7

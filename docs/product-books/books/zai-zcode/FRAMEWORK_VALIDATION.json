@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "checks": "8 framework records plus product/source/identity/channel preservation and semantic completeness assertions",
+  "validator_path": "/workspace/scratch/6fb8d22046cb/agentwork-product-bench-r1/agentwork/scripts/product_books.py",
+  "validator_sha256": "5ab71d1741332b87e9e5cb040a044c563225d91a412094783215410987b818d6",
+  "product_execution": "not_run",
+  "runner_implemented": false,
+  "observed_results": null
+}

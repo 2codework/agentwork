@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-10-29",
+  "files": [
+    {
+      "path": "/workspace/scratch/6fb8d22046cb/github-migration-r1/public/agentwork/docs/data.json",
+      "sha256": "6921f8d3effc9ccb8976b873ccdcee953c0e60d257d94cf3d2778d1c541a22fd"
+    },
+    {
+      "path": "/workspace/scratch/6fb8d22046cb/github-migration-r1/public/agentwork/ASSISTANT_WORKSPACE.md",
+      "sha256": "c700b4ffb67b8c0cf8a4259697a72172c2be01796c0b511b4867231b60ec99a4"
+    },
+    {
+      "path": "/workspace/scratch/6fb8d22046cb/github-migration-r1/public/agentwork/OFFICE_AGENTS.md",
+      "sha256": "d8503268ad6e98ca7dda94612472f6f5df22ab1f6edf6ff2d7eba09466f5d1f4"
+    },
+    {
+      "path": "/workspace/scratch/6fb8d22046cb/github-migration-r1/public/agentwork/REGIONAL_OFFICE.md",
+      "sha256": "02887594860aee1213af381a87bf8eafa3fa97193331dc9e76b1698e128f3872"
+    }
+  ],
+  "method": "读取材料并检索WorkBuddy；case主题与ID对照",
+  "direct_workbuddy_case_found": false,
+  "claim_limit": "AgentWork138案例、ModelAtlas254节点双基线字面检索；不能证明无语义重复。",
+  "baselines": [
+    {
+      "product": "agentwork",
+      "path": "/workspace/scratch/6fb8d22046cb/github-migration-r1/public/agentwork/docs/data.json",
+      "count": 138,
+      "sha256": "6921f8d3effc9ccb8976b873ccdcee953c0e60d257d94cf3d2778d1c541a22fd",
+      "literal_workbuddy_hit": false
+    },
+    {
+      "product": "modelatlas",
+      "path": "/workspace/scratch/6fb8d22046cb/github-migration-r1/public/modelatlas/docs/data.json",
+      "count": 254,
+      "sha256": "0384f0d93ce7cdb3a81bbb913afb53fb75667f5f350bfc0a46d02e743b710b7a",
+      "literal_workbuddy_hit": false
+    }
+  ]
+}
