@@ -1,0 +1,5 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),p=require('../web/product-books.js');
+const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/product-books-data.json')));
+test('all four Chinese card summaries are bound to exact source version scopes',()=>{assert.equal(Object.keys(p.CATALOG_SUMMARIES).length,4);for(const book of data.books){const source=book.product,entry=p.CATALOG_SUMMARIES[source.product_id];assert.equal(entry.source_version_scope,source.version_scope);assert.equal(p.catalogSummary(source),entry.summary);assert.match(entry.summary,/[\u4e00-\u9fff]/);assert.ok(entry.summary.length<90);assert.ok(!/最新|实测通过|无限免费|最佳/.test(entry.summary));}});
+test('changed or unregistered source version never receives a stale claimed summary',()=>{const source={...data.books[0].product,version_scope:'new unknown version'};assert.match(p.catalogSummary(source),/版本说明已有变化/);assert.match(p.catalogSummary({product_id:'unknown',version_scope:'unknown'}),/不等于产品实测/);});
