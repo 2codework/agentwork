@@ -17,4 +17,4 @@ class Creative(unittest.TestCase):
   self.d['cases'][0]['source_ids']=['missing']
   with self.assertRaisesRegex(ValueError,'Missing'):N.normalize('creative-music',self.d)
  def test_reader_loaded_before_app(self):
-  html=(R/'web/index.html').read_text();self.assertLess(html.index('reader.js'),html.index('app.js'))
+  html=(R/'web/library.html').read_text();self.assertLess(html.index('reader.js'),html.index('app.js'))

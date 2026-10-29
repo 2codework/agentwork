@@ -1,0 +1,148 @@
+{
+  "schema_version": "phase-presentation/1",
+  "note": "Derived reading phases; original author records remain unchanged in workflows/workflows.json.",
+  "workflows": {
+    "meeting-actions": {
+      "source_record_sha256": "0ed98ded2528433eb26ef65f108671bd59d4c3d2e5e792c0b2cde74b07c2a8bd",
+      "source_fields": [
+        "first_time",
+        "steps"
+      ],
+      "first_time": [
+        "还没有软件：由你本人打开 [WorkBuddy 官网](https://www.workbuddy.cn/)，点“立即下载”并选择你的系统。Windows 10及以上的x64设备可按 [官方安装图解](https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Win-Guide) 完成；公司电脑先取得安装许可，不关闭安全软件。",
+        "打开客户端点“登录”，在自动打开的官网页面选择可用的登录方式（如微信扫码）；由你本人完成，密码和验证码不发给AI。成功后回到客户端的创建任务页。",
+        "先确认账户可用额度。本页不承诺免费；如果暂时不能安装或登录，先打开下载的文本，读提示词和参考结果做纸面练习，这不等于完成了产品任务。"
+      ],
+      "setup_steps": [
+        "打开已有的 WorkBuddy 桌面客户端，进入创建任务页。",
+        "将第 1 步下载的 meeting.txt 拖进任务输入框；只附加这个小文件，不选择整个桌面或公司共享盘。此时先不发送任务。"
+      ],
+      "prompt_steps": [
+        "先在输入框确认已附加第 1 步的示例文件，核对文件名后再发送。",
+        "复制下面完整提示词，粘贴到刚才附加文件的同一输入框并发送。"
+      ],
+      "result_steps": [
+        "先在对话中检查全文；需要文件时在右侧结果区查看产物。不要只看“已完成”三个字。"
+      ]
+    },
+    "weekly-report": {
+      "source_record_sha256": "796dd9100f2f2e4b6a2ab4e3b6effd00115d67064b770cd5113b0074b877c675",
+      "source_fields": [
+        "first_time",
+        "steps"
+      ],
+      "first_time": [
+        "还没有软件：由你本人打开 [WorkBuddy 官网](https://www.workbuddy.cn/)，点“立即下载”并选择你的系统。Windows 10及以上的x64设备可按 [官方安装图解](https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Win-Guide) 完成；公司电脑先取得安装许可，不关闭安全软件。",
+        "打开客户端点“登录”，在自动打开的官网页面选择可用的登录方式（如微信扫码）；由你本人完成，密码和验证码不发给AI。成功后回到客户端的创建任务页。",
+        "先确认账户可用额度。本页不承诺免费；如果暂时不能安装或登录，先打开下载的文本，读提示词和参考结果做纸面练习，这不等于完成了产品任务。"
+      ],
+      "setup_steps": [
+        "打开已有的 WorkBuddy 桌面客户端，进入创建任务页。",
+        "将第 1 步下载的 week-notes.txt 拖进任务输入框；只附加这个小文件，不选择整个桌面或公司共享盘。此时先不发送任务。"
+      ],
+      "prompt_steps": [
+        "先在输入框确认已附加第 1 步的示例文件，核对文件名后再发送。",
+        "复制下面完整提示词，粘贴到刚才附加文件的同一输入框并发送。"
+      ],
+      "result_steps": [
+        "先在对话中检查全文；需要文件时在右侧结果区查看产物。不要只看“已完成”三个字。"
+      ]
+    },
+    "clean-orders": {
+      "source_record_sha256": "4cec952e922d71bd1186550cf0b3a21b3b8d8c325a5c9ccac010ee166bd53b40",
+      "source_fields": [
+        "first_time",
+        "steps"
+      ],
+      "first_time": [
+        "还没有软件：由你本人打开 [WorkBuddy 官网](https://www.workbuddy.cn/)，点“立即下载”并选择你的系统。Windows 10及以上的x64设备可按 [官方安装图解](https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Win-Guide) 完成；公司电脑先取得安装许可，不关闭安全软件。",
+        "打开客户端点“登录”，在自动打开的官网页面选择可用的登录方式（如微信扫码）；由你本人完成，密码和验证码不发给AI。成功后回到客户端的创建任务页。",
+        "先确认账户可用额度。本页不承诺免费；如果暂时不能安装或登录，先打开下载的文本，读提示词和参考结果做纸面练习，这不等于完成了产品任务。"
+      ],
+      "setup_steps": [
+        "打开已有的 WorkBuddy 桌面客户端，进入创建任务页。",
+        "将第 1 步下载的 orders.csv 拖进任务输入框；只附加这个小文件，不选择整个桌面或公司共享盘。此时先不发送任务。"
+      ],
+      "prompt_steps": [
+        "先在输入框确认已附加第 1 步的示例文件，核对文件名后再发送。",
+        "复制下面完整提示词，粘贴到刚才附加文件的同一输入框并发送。"
+      ],
+      "result_steps": [
+        "先在对话中检查全文；需要文件时在右侧结果区查看产物。不要只看“已完成”三个字。"
+      ]
+    },
+    "six-slide-outline": {
+      "source_record_sha256": "d21789e9a71eeb10e52a038c48a7437351a471d1ee80ff744f335174823c8751",
+      "source_fields": [
+        "first_time",
+        "steps"
+      ],
+      "first_time": [
+        "还没有软件：由你本人打开 [WPS灵犀官网](https://www.lingxi.cn/)，从“下载 灵犀专业版”进入 [官方下载页](https://www.lingxi.cn/download)，选择匹配系统的包。官方指南推荐Windows 10+；公司电脑先确认安装许可。",
+        "按 [快速开始](https://www.lingxi.cn/docs) 完成安装后，由你本人使用WPS账号或页面提供的验证码等方式登录，再到左上角“+”开始。不要把账号凭据发给AI。",
+        "官网也有“使用网页版”入口（https://lingxi.kdocs.cn），官方说明支持对话和文档处理；可先在那里练习文字大纲。但本页的“+”、附件和可编辑PPT步骤按专业版桌面文档编写，不把桌面全部能力照搬到网页。",
+        "先确认智点与功能权益；不能使用时先读完整样稿，不为练习被动购买。"
+      ],
+      "setup_steps": [
+        "打开已有的 WPS 灵犀专业版，点击左上角“+”新建任务。",
+        "点输入框旁的附件按钮，选择第 1 步下载的 brief.txt；也可以将这个文件拖进对话框。此时先不发送任务。"
+      ],
+      "prompt_steps": [
+        "先在输入框确认已附加第 1 步的示例文件，核对文件名后再发送。",
+        "复制下面完整提示词，粘贴到刚才附加 brief.txt 的对话框并发送。无须去找模板、插件市场或模型 API。"
+      ],
+      "result_steps": [
+        "在对话中看结果；如果生成了文件，点击文件链接下载，再用你已有的办公软件打开检查。"
+      ]
+    },
+    "competitor-research": {
+      "source_record_sha256": "38cd3b60bf24e8baa2976a2e8cc88c5ca61fa8cfa4fa863a1acbe352bc99a309",
+      "source_fields": [
+        "first_time",
+        "steps"
+      ],
+      "first_time": [
+        "还没有软件：由你本人打开 [WorkBuddy 官网](https://www.workbuddy.cn/)，点“立即下载”并选择你的系统。Windows 10及以上的x64设备可按 [官方安装图解](https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Win-Guide) 完成；公司电脑先取得安装许可，不关闭安全软件。",
+        "打开客户端点“登录”，在自动打开的官网页面选择可用的登录方式（如微信扫码）；由你本人完成，密码和验证码不发给AI。成功后回到客户端的创建任务页。",
+        "先确认账户可用额度。本页不承诺免费；如果暂时不能安装或登录，先打开下载的文本，读提示词和参考结果做纸面练习，这不等于完成了产品任务。"
+      ],
+      "setup_steps": [
+        "打开已有的 WorkBuddy 桌面客户端，进入创建任务页。",
+        "将第 1 步下载的 research-brief.txt 拖进任务输入框；只附加这个小文件，不选择整个桌面或公司共享盘。此时先不发送任务。"
+      ],
+      "prompt_steps": [
+        "先在输入框确认已附加第 1 步的示例文件，核对文件名后再发送。",
+        "复制下面完整提示词，粘贴到刚才附加文件的同一输入框并发送。"
+      ],
+      "result_steps": [
+        "先在对话中检查全文；需要文件时在右侧结果区查看产物。不要只看“已完成”三个字。"
+      ]
+    },
+    "fix-small-bug": {
+      "source_record_sha256": "cba1f209847341ca0693d6cd9a8c57810d1769eee2869e95847f5e08ef528b8a",
+      "source_fields": [
+        "first_time",
+        "steps"
+      ],
+      "first_time": [
+        "还没有Codex：这条适合愿意使用终端的读者。先看 [Codex CLI官方快速开始](https://learn.chatgpt.com/docs/codex/cli)，由你本人选择对应系统的安装方式并完成；这里不代你运行安装脚本。Windows用户不要照抄其他系统命令。",
+        "Python 3 若尚不可用，先只做代码阅读，不让 AI 为这项练习安装额外依赖。"
+      ],
+      "setup_steps": [
+        "把第 1 步下载的 shipping.py、test_shipping.py、README.txt 放进一个新建空文件夹，例如“运费练习”；不要放入参考答案。",
+        "复制这个文件夹为“运费练习-副本”，原输入留作备份。",
+        "在副本文件夹打开终端，先确认能看到 shipping.py、test_shipping.py、README.txt，再输入 codex 并回车。",
+        "首次打开 Codex 时，按提示选择“Sign in with ChatGPT”或你获准的现有方式，由你本人完成登录。只用已有权益，不要求新建 API key；组织禁用时找管理员，不绕过。",
+        "Codex打开后输入 /status 核对当前目录，输入 /permissions 查看权限；只允许这个副本目录的读写和测试，不开启全盘权限。"
+      ],
+      "prompt_steps": [
+        "先核对当前目录是练习副本，且能看到 shipping.py、test_shipping.py、README.txt。",
+        "复制下面完整提示词，粘贴到已经打开练习副本的 Codex 会话并发送。",
+        "遇到命令确认时核对是当前副本目录的 python -m unittest -v；不批准安装、联网、提交或部署。"
+      ],
+      "result_steps": [
+        "查看文件差异和测试输出，再到第 6 步逐项验收。"
+      ]
+    }
+  }
+}

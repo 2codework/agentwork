@@ -1,0 +1,30 @@
+AUTHOR REFERENCE ONLY; NOT CODEX RUN
+BEFORE
+test_above_threshold (test_shipping.ShippingTests.test_above_threshold) ... ok
+test_below_threshold (test_shipping.ShippingTests.test_below_threshold) ... ok
+test_empty_order (test_shipping.ShippingTests.test_empty_order) ... ok
+test_exact_threshold (test_shipping.ShippingTests.test_exact_threshold) ... FAIL
+
+======================================================================
+FAIL: test_exact_threshold (test_shipping.ShippingTests.test_exact_threshold)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/tmp7gx9d41y/test_shipping.py", line 10, in test_exact_threshold
+    self.assertEqual(shipping_fee(5000), 0)
+AssertionError: 600 != 0
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=1)
+
+AFTER
+test_above_threshold (test_shipping.ShippingTests.test_above_threshold) ... ok
+test_below_threshold (test_shipping.ShippingTests.test_below_threshold) ... ok
+test_empty_order (test_shipping.ShippingTests.test_empty_order) ... ok
+test_exact_threshold (test_shipping.ShippingTests.test_exact_threshold) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK

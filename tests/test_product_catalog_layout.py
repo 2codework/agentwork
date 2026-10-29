@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 class ProductCatalogLayout(unittest.TestCase):
  def test_catalog_intro_one_line_heading_source_and_no_forced_line_break(self):
-  html=(ROOT/'web/product-books.html').read_text();heading=re.search(r'<h1 id="catalog-title">(.*?)</h1>',html).group(1)
+  html=(ROOT/'web/product-library.html').read_text();heading=re.search(r'<h1 id="catalog-title">(.*?)</h1>',html).group(1)
   self.assertEqual('产品使用书',heading);self.assertNotIn('<br',heading)
   description=re.search(r'<p id="catalog-description">(.*?)</p>',html).group(1);self.assertLess(len(description),60)
  def test_scoped_desktop_grid_and_narrow_single_column(self):

@@ -1,0 +1,101 @@
+[
+  {
+    "id": "S1",
+    "title": "Use ChatGPT",
+    "url": "https://learn.chatgpt.com/docs/use-chatgpt",
+    "checked_on": "2026-10-29",
+    "authority": "official",
+    "supports": "可附加文档、表格、PDF、图片和数据导出，做总结、比较、抽取；工具连接属于插件入口。",
+    "verification": "页面正文已读取；不是安装或运行验证"
+  },
+  {
+    "id": "S2",
+    "title": "Work with files",
+    "url": "https://learn.chatgpt.com/docs/artifacts-viewer",
+    "checked_on": "2026-10-29",
+    "authority": "official",
+    "supports": "Web Work 支持附加源文件、查看和下载产物；CLI 没有可视化文件预览。",
+    "verification": "页面正文已读取；不是安装或运行验证"
+  },
+  {
+    "id": "S3",
+    "title": "Docs MCP",
+    "url": "https://developers.openai.com/learn/docs-mcp",
+    "checked_on": "2026-10-29",
+    "authority": "official",
+    "supports": "官方公共只读文档服务；给出 Codex add/list 命令及 TOML；不代为调用 OpenAI API。",
+    "verification": "页面正文已读取；不是安装或运行验证"
+  },
+  {
+    "id": "S4",
+    "title": "Model Context Protocol",
+    "url": "https://learn.chatgpt.com/docs/extend/mcp?surface=cli",
+    "checked_on": "2026-10-29",
+    "authority": "official",
+    "supports": "Codex host 的配置、CLI/IDE 入口、enabled 开关；Web 不读本地配置，Web 用插件。",
+    "verification": "页面正文已读取；不是安装或运行验证"
+  },
+  {
+    "id": "S5",
+    "title": "Build skills",
+    "url": "https://learn.chatgpt.com/docs/build-skills",
+    "checked_on": "2026-10-29",
+    "authority": "official",
+    "supports": "本地 .agents/skills 发现规则；SKILL.md 元数据；$skill-creator、/skills、$ 与 ChatGPT @ 的区别；停用配置。",
+    "verification": "页面正文已读取；不是安装或运行验证"
+  },
+  {
+    "id": "S6",
+    "title": "Build skills — Plugins",
+    "url": "https://developers.openai.com/plugins/build/skills",
+    "checked_on": "2026-10-29",
+    "authority": "official",
+    "supports": "Skill 可不依赖 MCP；工作流边界和测试类型；ChatGPT Work @skill-creator。",
+    "verification": "页面正文已读取；不是安装或运行验证"
+  },
+  {
+    "id": "S7",
+    "title": "Plugins",
+    "url": "https://learn.chatgpt.com/docs/plugins",
+    "checked_on": "2026-10-29",
+    "authority": "official",
+    "supports": "插件安装、连接、重新开会话；IDE 不提供插件浏览安装；卸载插件不等于断开独立 MCP 连接。",
+    "verification": "页面正文已读取；不是安装或运行验证"
+  },
+  {
+    "id": "S8",
+    "title": "Pricing",
+    "url": "https://learn.chatgpt.com/docs/pricing",
+    "checked_on": "2026-10-29",
+    "authority": "official",
+    "supports": "套餐与可用入口有差异；Plus 明列 CLI/IDE；订阅用量与 API 计费不可混为一谈；/status 查看 CLI 用量。",
+    "verification": "页面正文已读取；不是安装或运行验证"
+  },
+  {
+    "id": "S9",
+    "title": "Codex CLI",
+    "url": "https://learn.chatgpt.com/docs/codex/cli",
+    "checked_on": "2026-10-29",
+    "authority": "official",
+    "supports": "CLI 从项目目录启动；首次运行进行账户登录；本指南不执行安装或登录。",
+    "verification": "页面正文已读取；不是安装或运行验证"
+  },
+  {
+    "id": "S10",
+    "title": "Quickstart",
+    "url": "https://learn.chatgpt.com/docs/quickstart",
+    "checked_on": "2026-10-29",
+    "authority": "official",
+    "supports": "官方网页起点 chatgpt.com；登录后选择 Chat 或 Work，开始聊天并提供材料。",
+    "verification": "页面正文已读取；非运行验证"
+  },
+  {
+    "id": "S11",
+    "title": "ChatGPT official entry",
+    "url": "https://chatgpt.com/",
+    "checked_on": "2026-10-29",
+    "authority": "official",
+    "supports": "实际官方起始页面显示 Log in、Sign up for free 和计划价格入口；不是第三方镜像。",
+    "verification": "公开页面已读取，未登录或注册"
+  }
+]

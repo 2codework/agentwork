@@ -1,0 +1,11 @@
+{
+  "DELTA.md": "300151c494a4af3c6ecf5c3b2d5c6650d480fba653f8b0c8089887c1eb65060d",
+  "GUIDE.zh-CN.md": "1de3475e966dbfe47401fb09e24de206488b2826ea6f2da5f5f1190cc21630a9",
+  "README.md": "f34e56bf0ea8e2038dc840a55b437f3c3baece118292ef87d11bf34c55f1aeeb",
+  "SCHEMA.md": "224df95ccd1f696d5d210b2de3d1b84fafd1cf53e480b1327b2045c0736b618c",
+  "build.py": "a6b4ab3d7a238b10cd50c81f3d5be3db651a72c9b9f68c6305b3e100f86697db",
+  "connections.json": "ff49aaaf0b357542eaa3ee1b66e6e210a08e42d6aceab7e8c80d857cb6d3dca1",
+  "sources.json": "f637327f4d8cf36fe57fff0f55dd01b740b233c907e8b0c3ae011d1d52cf9875",
+  "validate.py": "fa54bbccd31fd9c56444cbbccf096791294302794dc5d10ce8c3eb6ba3cceac6",
+  "validation-report.json": "1c3e22517267a57cb058d9e6671b574ee7920c89f3242464d9ade70f03a23085"
+}

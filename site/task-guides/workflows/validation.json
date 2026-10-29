@@ -1,0 +1,13 @@
+{
+  "workflow_count": 6,
+  "product_run": false,
+  "author_reference_checks": {
+    "code": {
+      "before_exit": 1,
+      "after_exit": 0,
+      "tests": 4
+    },
+    "numbers": "passed"
+  },
+  "artifact_checks": "6 complete recipes, paths and embedded inputs agree, 6 input ZIPs exist"
+}

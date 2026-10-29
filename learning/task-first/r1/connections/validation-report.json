@@ -1,0 +1,311 @@
+{
+  "scope": "author-side static checks only; no product runtime/install/login/API execution",
+  "checks": [
+    {
+      "check": "three complete routes",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required id",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required title",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required audience",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required outcome",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required product",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required connection",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required accounts_cost",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required minimum_access",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required steps",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required prompt",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required test_input",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required expected_observations",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required recovery",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required disconnect",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required platform_notes",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool required source_ids",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool valid source refs",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool recovery pairs",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool prompt verbatim in Markdown",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required id",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required title",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required audience",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required outcome",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required product",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required connection",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required accounts_cost",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required minimum_access",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required steps",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required prompt",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required test_input",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required expected_observations",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required recovery",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required disconnect",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required platform_notes",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp required source_ids",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp valid source refs",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp recovery pairs",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp prompt verbatim in Markdown",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required id",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required title",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required audience",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required outcome",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required product",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required connection",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required accounts_cost",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required minimum_access",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required steps",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required prompt",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required test_input",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required expected_observations",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required recovery",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required disconnect",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required platform_notes",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill required source_ids",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill valid source refs",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill recovery pairs",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill prompt verbatim in Markdown",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool official start URL",
+      "passed": true
+    },
+    {
+      "check": "no-extra-tool first-time onboarding",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp official start URL",
+      "passed": true
+    },
+    {
+      "check": "official-docs-mcp first-time onboarding",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill official start URL",
+      "passed": true
+    },
+    {
+      "check": "repeatable-office-skill first-time onboarding",
+      "passed": true
+    },
+    {
+      "check": "internal narration absent in learner opening",
+      "passed": true
+    },
+    {
+      "check": "TOML parses exact official URL",
+      "passed": true
+    },
+    {
+      "check": "Skill complete metadata",
+      "passed": true
+    },
+    {
+      "check": "Skill location repo-scoped",
+      "passed": true
+    },
+    {
+      "check": "Skill explicit invocation",
+      "passed": true
+    },
+    {
+      "check": "No runtime proof claim",
+      "passed": true
+    },
+    {
+      "check": "source dates explicit",
+      "passed": true
+    },
+    {
+      "check": "official URLs only",
+      "passed": true
+    },
+    {
+      "check": "No license declaration added",
+      "passed": true
+    },
+    {
+      "check": "Windows TOML parses",
+      "passed": true
+    },
+    {
+      "check": "example correction labeled",
+      "passed": true
+    },
+    {
+      "check": "generic file correction included",
+      "passed": true
+    }
+  ],
+  "result": "PASS",
+  "count": 76
+}

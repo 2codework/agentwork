@@ -1,0 +1,11 @@
+虚构委托｜春芽书店准备选一款办公AI
+比较对象：腾讯 WorkBuddy 与 WPS 灵犀专业版。
+用途：把会议文字整理成待办；把材料整理成PPT；偶尔分析订单CSV。
+不比较：模型跑分、自动发消息、购买、真实客户数据上传。
+请优先查两家的官方文档，不凭广告判断谁效果更好。
+起始网址：
+https://www.workbuddy.cn/docs/workbuddy/Create-Task
+https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-One
+https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Three
+https://www.lingxi.cn/docs
+需要核实的问题：怎样提交文件？是否支持办公产物？有哪些费用或账户条件需要本人再确认？

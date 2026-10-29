@@ -54,7 +54,7 @@ class EntryParser(HTMLParser):
 class EntryLabelsTests(unittest.TestCase):
     def entries(self):
         for folder in ('web', 'site', 'docs'):
-            yield folder, EntryParser((ROOT / folder / 'index.html').read_text()).entries
+            yield folder, EntryParser((ROOT / folder / 'library.html').read_text()).entries
 
     def test_brand_clear_and_decoration_hidden(self):
         for folder, entries in self.entries():
@@ -74,7 +74,7 @@ class EntryLabelsTests(unittest.TestCase):
                 self.assertEqual(label.tag, 'label')
                 self.assertEqual(label.attrs['for'], 'search')
                 self.assertEqual(label.name(), '搜索实践')
-                html = (ROOT / folder / 'index.html').read_text()
+                html = (ROOT / folder / 'library.html').read_text()
                 self.assertIn('id="search" type="search"', html)
                 self.assertIn('id="clear" type="button">清空筛选', html)
                 self.assertNotIn('class="hero"', html)

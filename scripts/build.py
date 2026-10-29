@@ -12,6 +12,7 @@ import regional_office
 import offline_office_lab
 import creative_delivery_lab
 import product_books
+import task_first
 from pathlib import Path
 from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,6 +50,7 @@ def validate(data):
     return data
 
 def build():
+    task_first.preflight_build(ROOT)
     data = validate(json.loads((ROOT/'content/cases.json').read_text()))
     data['chapters'] = []
     for p in sorted((ROOT/'research').glob('*.json')):
@@ -81,6 +83,7 @@ def build():
     creative_gaps.publish(ROOT,dest)
     creative_delivery_lab.publish(ROOT,dest)
     product_books.publish(ROOT,dest)
+    task_first.publish(ROOT,dest)
     (dest/'.nojekyll').touch()
     shutil.copy2(ROOT/'BOOK.md',dest/'BOOK.md')
     asset_versions.pin(dest)

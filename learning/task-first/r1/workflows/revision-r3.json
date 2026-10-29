@@ -1,0 +1,77 @@
+{
+  "version": "r3",
+  "change_scope": "仅恢复竞品研究提交材料方法的两条来源支持说明；六格原文与提示词保留",
+  "parent_version": "r2",
+  "product_executed": false,
+  "brief_question_checklist": [
+    {
+      "question": "怎样提交文件？",
+      "answer_location": "新增“怎样提交材料”两条，有各自官方链接",
+      "passed": true
+    },
+    {
+      "question": "三种任务分别是否支持？",
+      "answer_location": "完整保留会议/PPT/CSV × WorkBuddy/WPS六格，支持或待核实",
+      "passed": true
+    },
+    {
+      "question": "费用或账户条件有什么待确认？",
+      "answer_location": "还不能决定的事：账户权限、额度、WorkBuddy套餐、WPS个人费用",
+      "passed": true
+    },
+    {
+      "question": "下一步怎样验证？",
+      "answer_location": "六格每格下一步，加同一材料验证建议",
+      "passed": true
+    },
+    {
+      "question": "事实依据、核查日期与未实测界限是否明确？",
+      "answer_location": "具体官方链接、2026-10-29、仅文档核查非实测声明",
+      "passed": true
+    }
+  ],
+  "unchanged_other_recipes": 5,
+  "all_six_input_zip_byte_identical": true,
+  "all_inputs_code_and_test_logs_byte_identical": true,
+  "changed_content_files": [
+    "build.py",
+    "competitor-research.md",
+    "outputs/competitor-research/sample.md",
+    "workflows.json"
+  ],
+  "unchanged_files_excluding_manifest": [
+    "README.md",
+    "clean-orders.md",
+    "downloads/clean-orders-inputs.zip",
+    "downloads/competitor-research-inputs.zip",
+    "downloads/fix-small-bug-inputs.zip",
+    "downloads/meeting-actions-inputs.zip",
+    "downloads/six-slide-outline-inputs.zip",
+    "downloads/weekly-report-inputs.zip",
+    "fix-small-bug.md",
+    "inputs/clean-orders/orders.csv",
+    "inputs/competitor-research/research-brief.txt",
+    "inputs/fix-small-bug/README.txt",
+    "inputs/fix-small-bug/shipping.py",
+    "inputs/fix-small-bug/test_shipping.py",
+    "inputs/meeting-actions/meeting.txt",
+    "inputs/six-slide-outline/brief.txt",
+    "inputs/weekly-report/week-notes.txt",
+    "meeting-actions.md",
+    "outputs/clean-orders/clean-orders.csv",
+    "outputs/clean-orders/exceptions.csv",
+    "outputs/clean-orders/sample.md",
+    "outputs/fix-small-bug/author-test-log.txt",
+    "outputs/fix-small-bug/sample.md",
+    "outputs/fix-small-bug/shipping.py",
+    "outputs/meeting-actions/sample.md",
+    "outputs/six-slide-outline/sample.md",
+    "outputs/weekly-report/sample.md",
+    "revision-r2.json",
+    "six-slide-outline.md",
+    "sources.json",
+    "validation.json",
+    "weekly-report.md"
+  ],
+  "manifest_note": "MANIFEST.sha256重新计算；继承revision-r2.json为历史记录，其中unchanged_files是写入当时的中间比较，不代表最终清单字节一致。"
+}

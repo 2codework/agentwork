@@ -1,0 +1,92 @@
+[
+  {
+    "id": "wb-start",
+    "title": "WorkBuddy Windows安装与登录",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Win-Guide",
+    "evidence_location": "lines 212–260",
+    "evidence": "系统要求、官方下载、客户端登录及返回入口",
+    "checked_at": "2026-10-29",
+    "verification": "official page opened in web tool",
+    "product_executed": false
+  },
+  {
+    "id": "wb-create",
+    "title": "WorkBuddy 创建任务",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/Create-Task",
+    "evidence_location": "lines 239–269",
+    "evidence": "工作空间、上传、输入、结果区入口",
+    "checked_at": "2026-10-29",
+    "verification": "official page opened in web tool",
+    "product_executed": false
+  },
+  {
+    "id": "wb-meeting",
+    "title": "WorkBuddy 文件与会议文本",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-One",
+    "evidence_location": "lines 253–267",
+    "evidence": "会议文字粘贴/文件拖拽；音频先转写",
+    "checked_at": "2026-10-29",
+    "verification": "official page opened in web tool",
+    "product_executed": false
+  },
+  {
+    "id": "wb-docs",
+    "title": "WorkBuddy 文档生成",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Two",
+    "evidence_location": "lines 214,240–249",
+    "evidence": "报告及按文字素材、页数、受众制作PPT的官方路线；不证明任何实际产物通过验收",
+    "checked_at": "2026-10-29",
+    "verification": "official page opened in web tool",
+    "product_executed": false
+  },
+  {
+    "id": "wb-data",
+    "title": "WorkBuddy 数据分析",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Three",
+    "evidence_location": "lines 218–267",
+    "evidence": "CSV/Excel提交与公开来源研究路线",
+    "checked_at": "2026-10-29",
+    "verification": "official page opened in web tool",
+    "product_executed": false
+  },
+  {
+    "id": "wb-price",
+    "title": "WorkBuddy 定价",
+    "url": "https://www.workbuddy.cn/docs/workbuddy/Pricing",
+    "evidence_location": "定价详情",
+    "evidence": "套餐和积分；具体权益不作账户保证",
+    "checked_at": "2026-10-29",
+    "verification": "official page opened in web tool",
+    "product_executed": false
+  },
+  {
+    "id": "lx-docs",
+    "title": "WPS 灵犀专业版文档",
+    "url": "https://www.lingxi.cn/docs",
+    "evidence_location": "lines 98–102,143–175,192–204",
+    "evidence": "账号条件、附件、+新任务、文件下载、PPT与办公文件能力",
+    "checked_at": "2026-10-29",
+    "verification": "official page opened in web tool",
+    "product_executed": false
+  },
+  {
+    "id": "cx-cli",
+    "title": "Codex CLI",
+    "url": "https://learn.chatgpt.com/docs/codex/cli",
+    "evidence_location": "lines 940–1024,1098–1099",
+    "evidence": "项目目录运行codex，检查目录与权限、编辑与运行已有工具",
+    "checked_at": "2026-10-29",
+    "verification": "official page opened in web tool",
+    "product_executed": false
+  },
+  {
+    "id": "zcode-agents",
+    "title": "ZCode Agent（选型参考，未选作新手办公入口）",
+    "url": "https://zcode.z.ai/en/docs/agents",
+    "evidence_location": "lines 40–43",
+    "evidence": "代码任务入口；已有模型连接与客户端仍为前提",
+    "checked_at": "2026-10-29",
+    "verification": "official page opened in web tool",
+    "product_executed": false
+  }
+]
