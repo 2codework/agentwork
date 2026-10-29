@@ -1,0 +1,133 @@
+{
+  "official_sources": [
+    {
+      "id": "wb-start",
+      "title": "WorkBuddy Windows安装与登录",
+      "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Win-Guide",
+      "evidence_location": "lines 212–260",
+      "evidence": "系统要求、官方下载、客户端登录及返回入口",
+      "checked_at": "2026-10-29",
+      "verification": "official page opened in web tool",
+      "product_executed": false,
+      "verification_in_this_revision": "reused_previous_verified_official_source; no new browsing or product execution"
+    },
+    {
+      "id": "wb-create",
+      "title": "WorkBuddy 创建任务",
+      "url": "https://www.workbuddy.cn/docs/workbuddy/Create-Task",
+      "evidence_location": "lines 239–269",
+      "evidence": "工作空间、上传、输入、结果区入口",
+      "checked_at": "2026-10-29",
+      "verification": "official page opened in web tool",
+      "product_executed": false,
+      "verification_in_this_revision": "reused_previous_verified_official_source; no new browsing or product execution"
+    },
+    {
+      "id": "wb-price",
+      "title": "WorkBuddy 定价",
+      "url": "https://www.workbuddy.cn/docs/workbuddy/Pricing",
+      "evidence_location": "定价详情",
+      "evidence": "套餐和积分；具体权益不作账户保证",
+      "checked_at": "2026-10-29",
+      "verification": "official page opened in web tool",
+      "product_executed": false,
+      "verification_in_this_revision": "reused_previous_verified_official_source; no new browsing or product execution"
+    },
+    {
+      "id": "wb-results",
+      "title": "结果查看",
+      "url": "https://www.workbuddy.cn/docs/workbuddy/Results",
+      "summary": "右侧产物、网页、工作空间文件与变更。",
+      "checked_at": "2026-10-29T05:32:00Z",
+      "authority": "official",
+      "verification": "web_search_then_open",
+      "quote_policy": "原创简述，不存网页全文",
+      "verification_in_this_revision": "reused_previous_verified_official_source; no new browsing or product execution"
+    }
+  ],
+  "reuse_note": "source_sha256 refers to the local evidence ledger bytes, not a downloaded web-page snapshot; page checks and dates are inherited, not newly performed.",
+  "source_files": [
+    {
+      "path": "task-first-workflows-r3/sources.json",
+      "sha256": "6e3e89a2e0bcd649b560cea5c27babf144e0c0a3cf377382ce36461d624ec90e"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/sources.json",
+      "sha256": "70caade8e137d66f1b2a523509004eb3befde8e6b648cf504674a34f54826052"
+    },
+    {
+      "path": "task-first-workflows-r3/workflows.json",
+      "sha256": "d329c822d76873b67a22fcc14e9a19b8c93fb36e0a678efd08199cf4bc9ec000"
+    }
+  ],
+  "accepted_input_and_reference_files": [
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/support/inputs/policy.md",
+      "sha256": "486b038871ed02852efaf599c2818b3a642a0d649500376ac4e9077ac193f62e"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/support/inputs/tickets.csv",
+      "sha256": "971f670e9524560e81be52169569ffeb57cb1c9e0bb9607f52cd4e769659c867"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/support/author-reference-complete/audit.md",
+      "sha256": "17b413d08007df6f056d89b87b825038f7778ed4fd1c22adae35854b6cbdd461"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/support/author-reference-complete/replies.md",
+      "sha256": "bcbf6b40ad73cc624d49c1ce729945c868eb9ccbab1516c4ffd3cad59326a863"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/support/author-reference-complete/routing.csv",
+      "sha256": "c8af3694530a3cb130701066ebaddda12957f54927e2b667db571c918d7d112a"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/content/inputs/assets.csv",
+      "sha256": "3b0f99a92c02617b18da8b0f811fe5bdded2f75e4de96436d7916057e425980a"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/content/inputs/brief.md",
+      "sha256": "cbd4a1b0a16bc8e3057a7c60fc17bd18a08b7bd9cc15263c1566371cfa02d778"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/content/author-reference-complete/audit.md",
+      "sha256": "348c6e8583d66ccdc728695b41c9d23c1cb68aa93bb54031f545a7e3f0e78507"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/content/author-reference-complete/calendar.csv",
+      "sha256": "0cd7624874ac8471da89bb56ef4d7b5d89a597dcb035b22a7c74bf14c53bdee2"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/content/author-reference-complete/post.md",
+      "sha256": "8ab83311023a44adbb021ccfb6324dd76e69629736b7421321e0932a27032053"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/content/author-reference-complete/review.md",
+      "sha256": "f95bf2efdcc6d4722a0d6af3635fb52a824ef4b14511829f78c8827fade5727d"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/design/inputs/handoff.csv",
+      "sha256": "55ceafd5d150ddbaee5fd714e9e8a46a3c8325d920e274aa5f399b95815a6a18"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/design/inputs/notes.md",
+      "sha256": "8cadee628784707b9ac4371d624c955a1e55d724d96a7184b2c886cda892adbc"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/design/inputs/spec.md",
+      "sha256": "adff86d6b3528fd638626d2569652ce1f9576ed0a361316b27509432ce84d600"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/design/author-reference-complete/acceptance.csv",
+      "sha256": "e8db3aa4d7d9e6031bcfe3ec1ac3a779cd5d84ae069810d5a7fc1cf505913c0a"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/design/author-reference-complete/audit.md",
+      "sha256": "b7b4bc68d3eaed581a0038bd00daa8bf29bf688257a7ab74aab6e93f8403a271"
+    },
+    {
+      "path": "agentwork-workbuddy-playbooks-r2/recipes/design/author-reference-complete/handoff.md",
+      "sha256": "a2c0be23aee981221f0b776901f5d5e6fb62539f01082f3ea02799348db06073"
+    }
+  ]
+}

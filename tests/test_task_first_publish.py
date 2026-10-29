@@ -8,7 +8,7 @@ def snapshot(root):
  return {p.relative_to(root).as_posix():('link',os.readlink(p)) if p.is_symlink() else ('file',hashlib.sha256(p.read_bytes()).hexdigest()) if p.is_file() else ('dir',) for p in root.rglob('*') if '__pycache__' not in p.parts}
 class PublishPreflight(unittest.TestCase):
  def test_all_output_targets_reject_before_any_mutation(self):
-  names=['task-first-data.json','index.html','product-books.html','library.html','product-library.html','task-first.js','product-bench-offline-r1.zip','task-guides/workflows/downloads/clean-orders-inputs.zip']
+  names=['task-first-data.json','index.html','product-books.html','library.html','product-library.html','task-first.js','product-bench-offline-r1.zip','task-guides/workflows/downloads/clean-orders-inputs.zip','task-guides/office-expansion/downloads/customer-reply-reference.zip','task-guides/office-expansion/outputs/design-handoff/acceptance.csv']
   with tempfile.TemporaryDirectory() as t:
    root=Path(t);sentinel=root/'sentinel';sentinel.write_bytes(b'EXTERNAL SAFE')
    for folder in ['site','docs']:

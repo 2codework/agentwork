@@ -5,7 +5,7 @@ sys.path.insert(0,str(ROOT/'scripts'))
 import task_first as tf
 class TaskFirst(unittest.TestCase):
  def test_six_complete_workflows_and_three_connections(self):
-  d=tf.catalog();self.assertEqual(d['status'],'ready');self.assertEqual(len(d['workflows']),6);self.assertEqual(len(d['guides']),3)
+  d=tf.catalog();self.assertEqual(d['status'],'ready');self.assertEqual(len([w for w in d['workflows'] if not w.get('office_expansion')]),6);self.assertEqual(len([w for w in d['workflows'] if w.get('office_expansion')]),3);self.assertEqual(len(d['workflows']),9);self.assertEqual(len(d['guides']),3)
   for w in d['workflows']:
    self.assertTrue(w['first_time']);self.assertTrue(w['prompt']);self.assertTrue(w['sample_output']);self.assertTrue(w['recovery'])
  def test_every_download_and_source_artifact_resolves(self):

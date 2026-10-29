@@ -1,10 +1,11 @@
 """Task-first beginner reading layer. No product execution or external calls."""
 import hashlib,json,re,shutil,sys
+import office_expansion
 from pathlib import Path
 from urllib.parse import urlsplit
 from product_books import inventory,local,load,require,registered_bytes,no_symlink_ancestors,safe_name
 ROOT=Path(__file__).resolve().parents[1]
-CATEGORIES={'meeting-actions':'文档与会议','weekly-report':'文档与会议','clean-orders':'表格与数据','six-slide-outline':'内容创作','competitor-research':'客户与销售','fix-small-bug':'代码与产品'}
+CATEGORIES={'meeting-actions':'文档与会议','weekly-report':'文档与会议','clean-orders':'表格与数据','six-slide-outline':'内容创作','competitor-research':'客户与销售','fix-small-bug':'代码与产品','customer-reply':'客户与销售','three-day-content':'内容创作','design-handoff':'代码与产品'}
 PRODUCT_IDS={'腾讯 WorkBuddy':'tencent-workbuddy','WPS 灵犀专业版':'wps-lingxi-pro','OpenAI Codex CLI（已有终端工具）':'openai-codex'}
 def text(obj,key):
     require(isinstance(obj,dict) and isinstance(obj.get(key),str) and obj[key].strip(),'missing readable field: '+key)
@@ -47,6 +48,9 @@ def preflight_page_assets(page,assets):
 def preflight_build(root):
     # Known task-publisher inputs and both output inventories are checked before writes.
     source=registered_bytes(root/'learning/task-first/r1')
+    if load(local(root/'learning/task-first/r1','index.json')).get('office_expansion_pack'):
+        require(load(local(root/'learning/task-first/r1','index.json'))['office_expansion_pack']=='office-expansion/proposed-workflows.json','unknown office expansion pack')
+        office_expansion.catalog(root)
     webfiles=inventory(root/'web')
     registered=set(load(local(root,'publication-destinations.json'))['directories']['site'])
     require(set(webfiles).issubset(registered),'unregistered planned web output')
@@ -92,6 +96,9 @@ def catalog(root=ROOT):
         w['asset_base']='task-guides/'+str(path.parent.relative_to(folder))+'/'
         w['source_artifact']='task-guides/'+idx['workflow_pack'];w['source_details']=resolve(w['sources'],registry)
         workflows.append(w)
+    if 'office_expansion_pack' in idx:
+        require(idx['office_expansion_pack']=='office-expansion/proposed-workflows.json','unknown office expansion pack')
+        workflows.extend(office_expansion.catalog(root))
     cp=local(folder,idx['connection_pack']);connection=load(cp);cs=sources_registry(connection['sources']);guides=[];seen=set()
     for original in connection['routes']:
         g=dict(original)
@@ -110,7 +117,7 @@ def catalog(root=ROOT):
     for card in connection['chooser']['cards']:require(card['route_id'] is None or card['route_id'] in seen,'unresolved chooser route')
     legacy=load(root/'site/data.json')
     require(len(legacy['cases'])==138,'legacy case count changed')
-    return {'schema_version':'task-first/1.0','status':idx['status'],'workflows':workflows,'guides':guides,'chooser':connection['chooser'],'categories':list(dict.fromkeys(CATEGORIES[w['id']] for w in workflows)),'legacy_case_ids':[c['id'] for c in legacy['cases']],'source_scope':{'workflow_pack':idx['workflow_pack'],'connection_pack':idx['connection_pack'],'verification':'documentation_and_author_examples_not_product_execution'}}
+    return {'schema_version':'task-first/1.0','status':idx['status'],'workflows':workflows,'guides':guides,'chooser':connection['chooser'],'categories':list(dict.fromkeys(CATEGORIES[w['id']] for w in workflows)),'legacy_case_ids':[c['id'] for c in legacy['cases']],'source_scope':{'workflow_pack':idx['workflow_pack'],'connection_pack':idx['connection_pack'],'office_expansion_pack':idx.get('office_expansion_pack'),'verification':'documentation_and_author_examples_not_product_execution'}}
 def pin_page(dest,filename,attribute,datafile):
     page=dest/filename;html=page.read_text()
     def tag(match):
