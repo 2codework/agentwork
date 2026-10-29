@@ -1,6 +1,6 @@
 """Task-first beginner reading layer. No product execution or external calls."""
 import hashlib,json,re,shutil,sys
-import office_expansion,music_task,video_task,study_task
+import office_expansion,music_task,video_task,study_task,poster_task
 from pathlib import Path
 from urllib.parse import urlsplit
 from product_books import inventory,local,load,require,registered_bytes,no_symlink_ancestors,safe_name
@@ -57,6 +57,8 @@ def preflight_build(root):
     video_task.catalog(root)
     require(load(local(root/'learning/task-first/r1','index.json')).get('study_pack')=='study/workflow.json','unknown study pack')
     study_task.catalog(root)
+    require(load(local(root/'learning/task-first/r1','index.json')).get('poster_pack')=='poster/workflow.json','unknown poster pack')
+    poster_task.catalog(root)
     webfiles=inventory(root/'web')
     registered=set(load(local(root,'publication-destinations.json'))['directories']['site'])
     require(set(webfiles).issubset(registered),'unregistered planned web output')
@@ -111,6 +113,8 @@ def catalog(root=ROOT):
     workflows.append(video_task.catalog(root))
     require(idx.get('study_pack')=='study/workflow.json','unknown study pack')
     workflows.append(study_task.catalog(root))
+    require(idx.get('poster_pack')=='poster/workflow.json','unknown poster pack')
+    workflows.append(poster_task.catalog(root))
     cp=local(folder,idx['connection_pack']);connection=load(cp);cs=sources_registry(connection['sources']);guides=[];seen=set()
     for original in connection['routes']:
         g=dict(original)

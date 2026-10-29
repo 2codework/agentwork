@@ -14,3 +14,9 @@
 
 /* Plain-text study materials; no account or answer-entry form. */
 .study-download{display:block;margin:12px 0;overflow-wrap:anywhere}
+
+/* Local authored poster input/reference; never a generated-result preview. */
+.poster-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.poster-figure{margin:20px 0;min-width:0}.poster-figure figcaption{font-weight:700;line-height:1.6;margin-bottom:10px}.poster-figure img{display:block;width:100%;max-width:540px;height:auto;border:1px solid var(--line);border-radius:6px}
+.poster-download{display:block;margin:12px 0;overflow-wrap:anywhere}
+@media(max-width:680px){.poster-pair{grid-template-columns:minmax(0,1fr)}}

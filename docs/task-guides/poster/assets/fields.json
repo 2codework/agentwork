@@ -1,0 +1,176 @@
+{
+  "canvas_px": [
+    1080,
+    1440
+  ],
+  "brand_color": "#176B5B",
+  "allowed_region_xyxy": [
+    320,
+    984,
+    960,
+    1090
+  ],
+  "allowed_region_semantics": "left/top inclusive; right/bottom exclusive in exported PNG pixel coordinates",
+  "only_allowed_svg_node": "event-time",
+  "fields": [
+    {
+      "id": "event-name",
+      "before": "社区读书会",
+      "after": "社区读书会",
+      "editable_in_svg_source": true,
+      "change_allowed": false,
+      "attributes": {
+        "id": "event-name",
+        "x": "146",
+        "y": "117",
+        "font-size": "30",
+        "font-weight": "700",
+        "letter-spacing": "3"
+      }
+    },
+    {
+      "id": "edition",
+      "before": "阅读 · 交流 · 想象",
+      "after": "阅读 · 交流 · 想象",
+      "editable_in_svg_source": true,
+      "change_allowed": false,
+      "attributes": {
+        "id": "edition",
+        "x": "984",
+        "y": "114",
+        "font-size": "20",
+        "text-anchor": "end",
+        "letter-spacing": "2"
+      }
+    },
+    {
+      "id": "invitation",
+      "before": "翻开一页，让想象起飞",
+      "after": "翻开一页，让想象起飞",
+      "editable_in_svg_source": true,
+      "change_allowed": false,
+      "attributes": {
+        "id": "invitation",
+        "x": "96",
+        "y": "249",
+        "font-size": "28",
+        "class": "muted",
+        "letter-spacing": "3"
+      }
+    },
+    {
+      "id": "book-name",
+      "before": "《纸飞机与星图》",
+      "after": "《纸飞机与星图》",
+      "editable_in_svg_source": true,
+      "change_allowed": false,
+      "attributes": {
+        "id": "book-name",
+        "x": "89",
+        "y": "364",
+        "font-size": "80",
+        "font-weight": "700"
+      }
+    },
+    {
+      "id": "subtitle",
+      "before": "一起读一本书，交换一个新想法。",
+      "after": "一起读一本书，交换一个新想法。",
+      "editable_in_svg_source": true,
+      "change_allowed": false,
+      "attributes": {
+        "id": "subtitle",
+        "x": "96",
+        "y": "430",
+        "font-size": "28",
+        "class": "muted"
+      }
+    },
+    {
+      "id": "time-label",
+      "before": "活动时间",
+      "after": "活动时间",
+      "editable_in_svg_source": true,
+      "change_allowed": false,
+      "attributes": {
+        "id": "time-label",
+        "x": "132",
+        "y": "1048",
+        "font-size": "28",
+        "style": "fill:#F6F3EA"
+      }
+    },
+    {
+      "id": "event-time",
+      "before": "周六14:00",
+      "after": "周日15:00",
+      "editable_in_svg_source": true,
+      "change_allowed": true,
+      "attributes": {
+        "id": "event-time",
+        "x": "340",
+        "y": "1054",
+        "font-size": "58",
+        "font-weight": "700",
+        "letter-spacing": "2",
+        "style": "fill:#F6F3EA"
+      }
+    },
+    {
+      "id": "place-label",
+      "before": "活动地点",
+      "after": "活动地点",
+      "editable_in_svg_source": true,
+      "change_allowed": false,
+      "attributes": {
+        "id": "place-label",
+        "x": "98",
+        "y": "1193",
+        "font-size": "27",
+        "class": "muted"
+      }
+    },
+    {
+      "id": "place",
+      "before": "社区阅读室",
+      "after": "社区阅读室",
+      "editable_in_svg_source": true,
+      "change_allowed": false,
+      "attributes": {
+        "id": "place",
+        "x": "287",
+        "y": "1193",
+        "font-size": "34",
+        "font-weight": "700"
+      }
+    },
+    {
+      "id": "disclosure",
+      "before": "原始输入：作者编写的合成教学素材",
+      "after": "原始输入：作者编写的合成教学素材",
+      "editable_in_svg_source": true,
+      "change_allowed": false,
+      "attributes": {
+        "id": "disclosure",
+        "x": "96",
+        "y": "1313",
+        "font-size": "23",
+        "class": "muted"
+      }
+    },
+    {
+      "id": "not-product-output",
+      "before": "非真实活动",
+      "after": "非真实活动",
+      "editable_in_svg_source": true,
+      "change_allowed": false,
+      "attributes": {
+        "id": "not-product-output",
+        "x": "96",
+        "y": "1353",
+        "font-size": "21",
+        "class": "muted"
+      }
+    }
+  ]
+}

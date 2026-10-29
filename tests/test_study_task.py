@@ -7,8 +7,8 @@ sha=lambda b:hashlib.sha256(b).hexdigest()
 def record(v):return sha(json.dumps(v,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode())
 class Study(unittest.TestCase):
  def test_original_eleven_objects_guides_oldcases_exact(self):
-  old=json.loads((ROOT/'tests/fixtures/study-original-eleven.json').read_text());new=task_first.catalog();self.assertEqual(len(new['workflows']),12)
-  self.assertEqual({w['id']:record(w) for w in new['workflows'] if not w.get('study_workflow')},old['workflows'])
+  old=json.loads((ROOT/'tests/fixtures/study-original-eleven.json').read_text());new=task_first.catalog();self.assertEqual(len(new['workflows']),13)
+  self.assertEqual({w['id']:record(w) for w in new['workflows'] if not w.get('study_workflow') and not w.get('poster_workflow')},old['workflows'])
   for k in ['guides','chooser','legacy_case_ids']:self.assertEqual(record(new[k]),old[k])
  def test_public_original_ten_files_and_published_copies_exact(self):
   folder=ROOT/'learning/task-first/r1/study';projection=json.loads((folder/'projection.json').read_text());original=projection['public_original_sha256'];self.assertEqual(set(original),set(study_task.ASSETS))

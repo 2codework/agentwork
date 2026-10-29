@@ -5,12 +5,12 @@ sys.path.insert(0,str(ROOT/'scripts'))
 import task_first as tf
 class TaskFirst(unittest.TestCase):
  def test_six_complete_workflows_and_three_connections(self):
-  d=tf.catalog();self.assertEqual(d['status'],'ready');self.assertEqual(len([w for w in d['workflows'] if not w.get('office_expansion') and not w.get('music_workflow') and not w.get('video_workflow') and not w.get('study_workflow')]),6);self.assertEqual(len([w for w in d['workflows'] if w.get('office_expansion')]),3);self.assertEqual(len(d['workflows']),12);self.assertEqual(len(d['guides']),3)
-  for w in [w for w in d['workflows'] if not w.get('music_workflow') and not w.get('video_workflow') and not w.get('study_workflow')]:
+  d=tf.catalog();self.assertEqual(d['status'],'ready');self.assertEqual(len([w for w in d['workflows'] if not w.get('office_expansion') and not w.get('music_workflow') and not w.get('video_workflow') and not w.get('study_workflow') and not w.get('poster_workflow')]),6);self.assertEqual(len([w for w in d['workflows'] if w.get('office_expansion')]),3);self.assertEqual(len(d['workflows']),13);self.assertEqual(len(d['guides']),3)
+  for w in [w for w in d['workflows'] if not w.get('music_workflow') and not w.get('video_workflow') and not w.get('study_workflow') and not w.get('poster_workflow')]:
    self.assertTrue(w['first_time']);self.assertTrue(w['prompt']);self.assertTrue(w['sample_output']);self.assertTrue(w['recovery'])
  def test_every_download_and_source_artifact_resolves(self):
   d=tf.catalog()
-  for w in [w for w in d['workflows'] if not w.get('music_workflow') and not w.get('video_workflow') and not w.get('study_workflow')]:
+  for w in [w for w in d['workflows'] if not w.get('music_workflow') and not w.get('video_workflow') and not w.get('study_workflow') and not w.get('poster_workflow')]:
    for a in w['input_files']:
     p=ROOT/'site'/(w['asset_base']+a['path']);self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),a['sha256'])
    self.assertTrue((ROOT/'site'/(w['asset_base']+w['download_bundle'])).is_file())

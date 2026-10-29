@@ -1,0 +1,41 @@
+{
+  "schema": "poster-sources/1",
+  "read_date_utc": "2026-10-29",
+  "sources": [
+    {
+      "id": "poster-source-01",
+      "title": "Images in ChatGPT",
+      "url": "https://help.openai.com/en/articles/11084440-images-in-chatgpt",
+      "checked_at": "2026-10-29",
+      "scope": "沿用已接受读者指南的官方依据；不是产品执行或效果保证。"
+    },
+    {
+      "id": "poster-source-02",
+      "title": "Image Inputs FAQ",
+      "url": "https://help.openai.com/en/articles/8400551-chatgpt-image-inputs-faq",
+      "checked_at": "2026-10-29",
+      "scope": "沿用已接受读者指南的官方依据；不是产品执行或效果保证。"
+    },
+    {
+      "id": "poster-source-03",
+      "title": "Free Tier FAQ",
+      "url": "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq",
+      "checked_at": "2026-10-29",
+      "scope": "沿用已接受读者指南的官方依据；不是产品执行或效果保证。"
+    },
+    {
+      "id": "poster-source-04",
+      "title": "支持国家/地区",
+      "url": "https://help.openai.com/en/articles/7947663-chatgpt-supported-countries",
+      "checked_at": "2026-10-29",
+      "scope": "沿用已接受读者指南的官方依据；不是产品执行或效果保证。"
+    },
+    {
+      "id": "poster-source-05",
+      "title": "chatgpt.com",
+      "url": "https://chatgpt.com",
+      "checked_at": "2026-10-29",
+      "scope": "沿用已接受读者指南的官方依据；不是产品执行或效果保证。"
+    }
+  ]
+}

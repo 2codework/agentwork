@@ -14,7 +14,7 @@ const href=n=>n.attrs.href||n.href||'';
 const STEPS=['prepare','tool','setup','prompt','example','check'];
 
 test('study cards and model application API are searchable as the twelfth task',async()=>{
- const w=studyTask();assert.equal(data.workflows.length,12);assert.equal(w.study_workflow,true);assert.equal(w.schema,'study-workflow/1');assert.equal(w.interaction_mode,'paste-material');
+ const w=studyTask();assert.equal(data.workflows.length,13);assert.equal(w.study_workflow,true);assert.equal(w.schema,'study-workflow/1');assert.equal(w.interaction_mode,'paste-material');
  for(const q of ['学习','复习卡','模型应用API',w.title]){const b=await boot('?q='+encodeURIComponent(q)+'&category='+encodeURIComponent(w.category));assert.equal(b.ids.status.textContent,'');assert.ok(all(b.ids.screen).some(n=>n.attrs['data-workflow-id']===w.id),q);}
 });
 

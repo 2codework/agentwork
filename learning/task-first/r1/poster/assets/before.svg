@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1440" viewBox="0 0 1080 1440" role="img" aria-labelledby="title desc">
+  <title id="title">社区读书会：纸飞机与星图，合成教学海报</title>
+  <desc id="desc">原创文字排版与纸飞机星图图形。原始输入为作者编写的合成教学素材，非真实活动。时间为唯一允许修改字段。</desc>
+  <style>
+    text { font-family: 'Noto Sans CJK SC', sans-serif; fill: #176B5B; }
+    .muted { fill: #56756A; }
+  </style>
+  <rect width="1080" height="1440" fill="#F6F3EA"/>
+  <rect x="0" y="0" width="1080" height="18" fill="#176B5B"/>
+  <circle cx="110" cy="105" r="13" fill="#176B5B"/>
+  <text id="event-name" x="146" y="117" font-size="30" font-weight="700" letter-spacing="3">社区读书会</text>
+  <text id="edition" x="984" y="114" font-size="20" text-anchor="end" letter-spacing="2">阅读 · 交流 · 想象</text>
+  <line x1="96" y1="161" x2="984" y2="161" stroke="#176B5B" stroke-opacity=".25"/>
+  <text id="invitation" x="96" y="249" font-size="28" class="muted" letter-spacing="3">翻开一页，让想象起飞</text>
+  <text id="book-name" x="89" y="364" font-size="80" font-weight="700">《纸飞机与星图》</text>
+  <text id="subtitle" x="96" y="430" font-size="28" class="muted">一起读一本书，交换一个新想法。</text>
+  <g id="original-illustration" fill="none" stroke="#176B5B" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="549" cy="676" r="196" stroke-opacity=".13" stroke-width="2"/>
+    <circle cx="549" cy="676" r="157" stroke-opacity=".1" stroke-width="2"/>
+    <path d="M195 812 C302 822 321 724 401 762 C444 784 430 829 390 820" stroke-width="3" stroke-dasharray="8 13" stroke-opacity=".55"/>
+    <path d="M325 653 L795 523 L615 819 L546 691 Z" fill="#E3EBDF" stroke-width="4"/>
+    <path d="M325 653 L546 691 L795 523 M546 691 L615 819 M546 691 L523 767 L583 746" stroke-width="4"/>
+    <path d="M546 691 L795 523 L523 767 Z" fill="#176B5B" stroke-width="3"/>
+    <path d="M748 734 L833 672 L900 719 L865 817" stroke-width="2" stroke-opacity=".45"/>
+    <circle cx="748" cy="734" r="5" fill="#176B5B"/>
+    <circle cx="833" cy="672" r="5" fill="#176B5B"/>
+    <circle cx="900" cy="719" r="5" fill="#176B5B"/>
+    <circle cx="865" cy="817" r="5" fill="#176B5B"/>
+    <path d="M252 543 v28 M238 557 h28 M870 505 v26 M857 518 h26 M739 886 v22 M728 897 h22" stroke-width="3"/>
+  </g>
+  <rect x="96" y="954" width="888" height="164" rx="22" fill="#176B5B"/>
+  <text id="time-label" x="132" y="1048" font-size="28" style="fill:#F6F3EA">活动时间</text>
+  <line x1="295" y1="996" x2="295" y2="1076" stroke="#F6F3EA" stroke-opacity=".35"/>
+  <text id="event-time" x="340" y="1054" font-size="58" font-weight="700" letter-spacing="2" style="fill:#F6F3EA">周六14:00</text>
+  <text id="place-label" x="98" y="1193" font-size="27" class="muted">活动地点</text>
+  <text id="place" x="287" y="1193" font-size="34" font-weight="700">社区阅读室</text>
+  <line x1="96" y1="1250" x2="984" y2="1250" stroke="#176B5B" stroke-opacity=".25"/>
+  <text id="disclosure" x="96" y="1313" font-size="23" class="muted">原始输入：作者编写的合成教学素材</text>
+  <text id="not-product-output" x="96" y="1353" font-size="21" class="muted">非真实活动</text>
+</svg>

@@ -7,8 +7,8 @@ sha=lambda b:hashlib.sha256(b).hexdigest()
 def record(v):return sha(json.dumps(v,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode())
 class Video(unittest.TestCase):
  def test_original_ten_objects_guides_and_old_ids_remain_exact(self):
-  old=json.loads((ROOT/'tests/fixtures/video-original-ten.json').read_text());new=task_first.catalog();self.assertEqual(len(new['workflows']),12)
-  self.assertEqual({w['id']:record(w) for w in new['workflows'] if not w.get('video_workflow') and not w.get('study_workflow')},old['workflows'])
+  old=json.loads((ROOT/'tests/fixtures/video-original-ten.json').read_text());new=task_first.catalog();self.assertEqual(len(new['workflows']),13)
+  self.assertEqual({w['id']:record(w) for w in new['workflows'] if not w.get('video_workflow') and not w.get('study_workflow') and not w.get('poster_workflow')},old['workflows'])
   for k in ['guides','chooser','legacy_case_ids']:self.assertEqual(record(new[k]),old[k])
  def test_source_assets_exact_size_hash_and_published_bytes(self):
   folder=ROOT/'learning/task-first/r1/video';projection=json.loads((folder/'projection.json').read_text());video_task.catalog(ROOT)

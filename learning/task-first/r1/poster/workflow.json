@@ -1,0 +1,107 @@
+{
+  "schema": "poster-workflow/1",
+  "interaction_mode": "image-edit-original",
+  "id": "poster-change-time",
+  "title": "只改海报活动时间，核对其他内容不变",
+  "outcome": "由你检查的真实图片编辑结果与独立来源日志；作者理想对照不是AI成品或效果保证。",
+  "product": "ChatGPT 网页图片编辑",
+  "product_id": "chatgpt-images",
+  "category": "设计与创作",
+  "keywords": [
+    "海报",
+    "改图",
+    "设计",
+    "海报编辑",
+    "修改时间",
+    "图片编辑",
+    "ChatGPT",
+    "中文海报"
+  ],
+  "material_label": "原创合成海报 before.png（只上传这张原图）",
+  "audience": "有合规支持地区账户、可用图片编辑入口与额度，并愿意逐字核对的新手。",
+  "prerequisites": [
+    "先核对支持地区、账户图片编辑入口与上传/生成额度；不承诺中国大陆个人用户可用。",
+    "只使用本课原始PNG；作者对照不能冒充自己的产品输出。无需API、MCP、Skill或安装软件。"
+  ],
+  "access_cost": "上传与图片生成有独立限额；本课不要求升级、不承诺免费次数或固定成本。额度、收费或权限提示优先停止，最多两次是本课止损上限，不代表可用额度。",
+  "privacy": "只上传本课原创合成 before.png，不上传作者 after-authored 对照或真实私人材料；不分享、不发布，保留未覆盖的原图和真实来源记录。",
+  "source_ids": [
+    "poster-source-01",
+    "poster-source-02",
+    "poster-source-03",
+    "poster-source-04",
+    "poster-source-05"
+  ],
+  "product_execution": "not_run",
+  "output_generated": false,
+  "sections": {
+    "prepare": {
+      "title": "确认条件，准备原始海报",
+      "body": "使用你有权使用的ChatGPT账户，在 [chatgpt.com](https://chatgpt.com) 打开网页。官方称Images覆盖各套餐，但具体入口受账户条件影响；上传和图片生成有各自限额，不等于文字对话额度。本课不指定默认模型、不要求升级、不承诺每日次数或固定成本。看见限额/付款/不可用提示就停，不反复提交。[Images](https://help.openai.com/en/articles/11084440-images-in-chatgpt)／[Free额度说明](https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq)\n\n先对照[官方支持地区列表](https://help.openai.com/en/articles/7947663-chatgpt-supported-countries)。本次核验列表未列中国大陆；这不是所有中文读者的默认可用路线，不改区或绕过限制。支持地区的中文读者仍需逐字查错：官方也提示非拉丁文字和空间定位有局限。[图片输入限制](https://help.openai.com/en/articles/8400551-chatgpt-image-inputs-faq)\n\n下载[before.png](task-guides/poster/assets/before.png)到设备并打开，确认原时间是周六14:00。它是1080×1440的原创合成海报。另开[after-authored.png](task-guides/poster/assets/after-authored.png)作目标对照，但**不要把作者对照上传后要求“照抄结果”**，本练习要编辑原图。两份当前文件都是作者编写，不是AI产品输出。\n\n记住三个必留字段：书名《纸飞机与星图》、地点社区阅读室、品牌主色#176B5B；[完整字段表](task-guides/poster/assets/FIELDS.zh-CN.md)中的其余文字、图形和布局也都不变。保留原文件，避免覆盖。",
+      "source_step": 1,
+      "source_ids": [
+        "poster-source-05",
+        "poster-source-01",
+        "poster-source-03",
+        "poster-source-04",
+        "poster-source-02"
+      ]
+    },
+    "tool": {
+      "title": "只上传原图，选区不是锁定",
+      "body": "在输入框 **+ → Add photos & files** 上传before.png；也可拖入输入区或粘贴图片。官方支持PNG/JPEG/非动画GIF，单张20MB；本PNG远小于上限。看见正确图片缩略图再继续，不上传SVG当作可编辑项目。[上传说明](https://help.openai.com/en/articles/8400551-chatgpt-image-inputs-faq)\n\n可以直接用下一步提示描述修改。若你能点开会话图片进入编辑器并看到 **Select**，只标出下方绿色卡片右侧的时间文字，不圈左侧“活动时间”标签。圈错时 **Undo/Redo** 修正的是选区，**Cancel** 可放弃重选；不是承诺撤销已生成的图片。网页上没有看到相同按钮就不用猜，走直接描述路线；若连图片编辑都不可用则停止。\n\n**官方明确选区不一定精确，修改可能超出选区。** 圈得小不意味着其他像素被保护。本课不选Aspect ratio，以免主动改变版式。[编辑器说明](https://help.openai.com/en/articles/11084440-images-in-chatgpt)",
+      "source_step": 2,
+      "source_ids": [
+        "poster-source-02",
+        "poster-source-01"
+      ]
+    },
+    "setup": {
+      "title": "发送一次局部修改请求",
+      "body": "确认只有原始图被附上后复制下面全文。若回复只是文字分析、没有编辑结果，不把它算作成品；继续前先确认账户具备图片编辑能力。",
+      "source_step": 3,
+      "source_ids": [
+        "poster-source-01",
+        "poster-source-02"
+      ],
+      "after": "这是对结果的约束，不是技术保证。尤其“品牌色不变”和“原尺寸”必须自己核验；模型回答“完全保持”不构成证据。",
+      "prompt_asset": "prompt.txt"
+    },
+    "prompt": {
+      "title": "对照真实输出，逐项检查",
+      "body": "把原图、目标对照和真实输出放在相同显示尺寸下比较：\n\n- 先读新时间，必须只有周日15:00；不能残留旧字、出现乱码，或只把文字贴成遮挡块。\n- 按完整字段表逐字核书名、地点、标语、底部来源文字，特别留意中文偏旁、标点及空格。\n- 对照纸飞机轮廓、星点连接、分隔线、圆角、边距、文字位置与换行。任何非目标变化先记失败，不把“更好看”当作合格。\n- 下载后查看实际宽高：若不是1080×1440就记尺寸不通过，不通过截图或缩放伪装一致。\n- 颜色肉眼相近只能记“视觉近似”。没有实际读到颜色数值或做同尺寸无缩放像素对比，就把#176B5B精确保持、区外0像素变化记为**未核验**，不能写通过。\n\n作者before↔after的技术结果是仅时间区变化；这**不证明ChatGPT结果同样如此**。本课可记录“文字/视觉布局通过、精确像素要求未通过或未知”，但严格“其余完全不变”需求只能在全部证据满足后通过。",
+      "source_step": 4,
+      "source_ids": [
+        "poster-source-01",
+        "poster-source-02"
+      ]
+    },
+    "example": {
+      "title": "有限重试，失败就停止",
+      "body": "若时间字错但其余看起来未变，且额度明确允许，可进行第2次也是最后一次尝试。建议重新附上未改动before.png，避免在已经失真的输出上继续叠加。把实际错误填入：",
+      "source_step": 5,
+      "source_ids": [
+        "poster-source-01",
+        "poster-source-02"
+      ],
+      "after": "**额度/收费/权限提示优先于“两次机会”**：一次后额度不足就立刻停，不充值、不自动等候重试。第二次仍错，或已经明显整页变化，停止生成并保留失败记录。原图未覆盖即可放弃结果；编辑器Undo/Redo不能被当作永久版本恢复或退款机制。\n\n需要严格保持像素/源排版时，改走[原生SVG源](task-guides/poster/assets/before.svg)的人工文字修改路线更可控，但具体编辑器/字体/导出方式要另核；本课不把这条路线假装成已通过的ChatGPT操作，也不要求新手安装软件或写代码。",
+      "correction_asset": "correction-prompt.txt"
+    },
+    "check": {
+      "title": "保存并记录真实来源",
+      "body": "在真实结果图片的控制项选 **Save** 下载，别点Share。实际扩展名、尺寸和下载结果以文件为准；本课不保证一定是PNG、原分辨率或含可编辑层。重新打开文件，重复第4步关键检查。[保存说明](https://help.openai.com/en/articles/11084440-images-in-chatgpt)\n\n填写[验收与来源日志](task-guides/poster/CHECKLIST.zh-CN.md)：输入文件、实际产品入口、操作日期、完整提示、尝试次数、输出文件名/格式/尺寸、观察到的变化、人工修改及最终状态。可写“原始输入为作者合成海报；本次由ChatGPT编辑活动时间；其余项按记录核验”，不要仅凭页脚就声称整张输出未用AI。\n\n只有实际得到文件并检查后才能写“已下载/已完成”。目前教材没有ChatGPT实跑输出；作者after不能代替你的结果，文档也没有授予公开发布或商业全面清权保证。",
+      "source_step": 6,
+      "source_ids": [
+        "poster-source-01"
+      ]
+    }
+  },
+  "images": {
+    "input": "assets/before.png",
+    "authored_reference": "assets/after-authored.png",
+    "width": 1080,
+    "height": 1440
+  },
+  "checklist_asset": "CHECKLIST.zh-CN.md",
+  "fields_asset": "assets/FIELDS.zh-CN.md"
+}
