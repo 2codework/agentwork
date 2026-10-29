@@ -22,7 +22,7 @@ test('music search, step changes, back history and task return preserve exact or
  for(let round=0;round<2;round++){
   for(const step of ['prepare','tool','setup','prompt','example','check']){
    const state=p.readRoute(b.location.search);assert.equal(state.q,q);assert.equal(state.category,category);assert.equal(state.work,w.id);assert.equal(state.step,step);
-   const selected=all(b.ids.screen).filter(n=>n.attrs['aria-current']==='step');assert.equal(selected.length,1);assert.ok(selected[0].textContent.includes(w.sections[step].title));
+   const selected=all(b.ids.screen).filter(n=>n.attrs['aria-current']==='step');assert.equal(selected.length,1);assert.ok(selected[0].textContent.includes(step==='prepare'?'准备创作要求':w.sections[step].title));
    if(step!=='check')click(all(b.ids.screen).find(n=>n.tagName==='A'&&n.textContent.startsWith('下一步')));
   }
   const checkURL=b.location.search;b.location.search=p.taskLink(w.id,{q,category},'setup').split('index.html')[1];b.events.popstate();assert.equal(section(b).attrs['data-step'],'setup');
@@ -35,7 +35,7 @@ test('music search, step changes, back history and task return preserve exact or
 test('music uses six local labels and no inherited attachment or author-audio claims',async()=>{
  const w=music();for(const key of ['prepare','tool','setup','prompt','example','check']){
   const b=await boot('?work='+w.id+'&step='+key,true);assert.equal(b.ids.status.textContent,'');const s=section(b);assert.equal(s.attrs['data-step'],key);
-  assert.ok(all(s).some(n=>n.tagName==='H2'&&n.textContent===w.sections[key].title));
+  assert.ok(all(s).some(n=>n.tagName==='H2'&&n.textContent===(key==='prepare'?'准备创作要求':w.sections[key].title)));
   assert.doesNotMatch(s.textContent,/确认已附加示例文件|下载下面的练习材料，先不上传真实工作资料|这是作者写好的核对样例|作者完整参考（未在产品运行）/);
   assert.equal(all(b.ids.screen).find(n=>n.attrs.class==='step-menu').open,false);
   assert.equal(all(b.ids.screen).filter(n=>n.attrs['data-step']).length,1);
@@ -84,4 +84,22 @@ test('music text injection stays inert and never creates an upload or generation
  const b=await boot('?work='+w.id+'&step=example',false,'/agentwork/index.html','',fixture),s=section(b);
  assert.ok(s.textContent.includes(attack));assert.equal(all(s).filter(n=>['IMG','SCRIPT','IFRAME','AUDIO','INPUT'].includes(n.tagName)).length,0);
  assert.ok(!all(s).some(n=>href(n).startsWith('javascript:')));
+});
+
+test('music prompt backlinks have separate paragraph containers and retain exact context routes',async()=>{
+ const w=music(),q='音乐 候选',route={q,category:w.category,tool:w.product_id};
+ const b=await boot(p.taskLink(w.id,route,'prompt').split('index.html')[1]),s=section(b);
+ const setup=all(s).find(n=>n.tagName==='A'&&n.textContent==='还没设置 A 对话？先新建对话再选音乐模式');
+ const costs=all(s).find(n=>n.tagName==='A'&&n.textContent==='账号、费用与权限详情');
+ assert.equal(setup.parentElement.tagName,'P');assert.equal(costs.parentElement.tagName,'P');
+ assert.notEqual(setup.parentElement,costs.parentElement);assert.equal(setup.parentElement.children.length,1);assert.equal(costs.parentElement.children.length,1);
+ assert.equal(href(setup),p.taskLink(w.id,route,'setup'));assert.equal(href(costs),p.taskLink(w.id,route,'tool'));
+});
+test('music preparation has Chinese display label and first brief definition without changing input copy',async()=>{
+ const w=music(),b=await boot('?work='+w.id+'&step=prepare'),s=section(b);
+ assert.match(s.textContent,/准备创作要求/);assert.match(s.textContent,/下面的创作要求（brief）/);
+ assert.doesNotMatch(b.ids.screen.textContent,/准备文字 brief/);
+ const file=w.assets.find(a=>a.name==='brief.txt'),block=all(s).find(n=>n.attrs['data-music-asset']==='brief.txt');
+ await all(block).find(n=>n.tagName==='BUTTON').events.click();assert.equal(b.copied.at(-1),file.content);
+ assert.equal(w.sections.prepare.title,'准备文字 brief');
 });
