@@ -43,6 +43,11 @@ function caseReadingIntro(c){
  }
  return {goal,outputs:plan?.expected_artifacts?.length?plan.expected_artifacts:[c.output],structured:Boolean(plan)};
 }
+const OFFLINE_LESSON_IDS=new Set(['mcp-lab-roles','mcp-lab-initialize','mcp-lab-tools','mcp-lab-resources-prompts','mcp-lab-errors','mcp-lab-cancel','mcp-lab-scope','mcp-lab-injection','mcp-lab-skill','mcp-lab-debug','mcp-lab-migration','mcp-lab-modern']);
+const OFFLINE_PREREQUISITES=['能阅读JSON对象与数组','Python 3.10+，仅标准库；无需账号、网络、SDK或模型'];
+function exactOfflinePrerequisites(c){
+ return OFFLINE_LESSON_IDS.has(c.id)&&c.verification_status==='offline_contract_only'&&typeof c.lesson_markdown==='string'&&Boolean(c.lesson_markdown)&&Array.isArray(c.prerequisites)&&c.prerequisites.length===OFFLINE_PREREQUISITES.length&&c.prerequisites.every((v,i)=>v===OFFLINE_PREREQUISITES[i]);
+}
 function addCaseIntroduction(body,nav,c,safety){
  const original=el('details');original.id='case-original-introduction';
  original.append(el('summary','原案例介绍、证据说明与适用状态（完整原文）'));
@@ -61,11 +66,13 @@ function addCaseIntroduction(body,nav,c,safety){
  const outputs=el('ul');info.outputs.filter(Boolean).forEach(v=>outputs.append(el('li',v)));intro.append(outputs);
  const prerequisites=el('section');prerequisites.id='case-start-requirements';
  prerequisites.append(el('h2','开始前确认'),el('p','请自行核对实际账号、素材和操作授权；本页练习不替你授予或管理权限。'));
+ const offline=exactOfflinePrerequisites(c);
+ if(offline){prerequisites.append(el('strong','这份离线练习的前置知识与环境'));const ul=el('ul');c.prerequisites.forEach(v=>ul.append(el('li',v)));prerequisites.append(ul);}
  const seen=new Set();
  for(const [key,label]of [['cost','账号、地区与费用'],['permissions','操作授权'],['permission_boundary','权限边界'],['license','素材与许可'],['risks','风险与停止条件']]){
   const values=Array.isArray(c[key])?c[key]:[c[key]];const fresh=values.filter(v=>typeof v==='string'&&v&&!seen.has(v));if(fresh.length){prerequisites.append(el('strong',label));fresh.forEach(value=>{seen.add(value);prerequisites.append(el('p',value,'research-value'));});}
  }
- if(!c.cost)prerequisites.append(el('p','原资料没有单列费用；不能据此认为免费或无需账号。','muted'));
+ if(!c.cost)prerequisites.append(el('p',offline?'本课使用已有的本地 Python 环境，不接入外部服务；自行扩展到其他服务时，另行核对授权和费用。':'原资料没有单列费用；不能据此认为免费或无需账号。','muted'));
  if(c.original_exercise_plan?.stop_conditions?.length){const ul=el('ul');c.original_exercise_plan.stop_conditions.forEach(v=>ul.append(el('li',v)));prerequisites.append(el('strong','遇到以下情况先停止'),ul);}
  // Keep the breadcrumb first; the old body and footer retain their relative order.
  const first=body.children[1]||null;
