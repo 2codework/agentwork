@@ -1,0 +1,50 @@
+{
+  "schema_version": "creative-cut-submission/1",
+  "project_id": "paper-demo",
+  "revision": "paper-demo-r2",
+  "edit_sha256": "055936e3b2a4db5a3df1807008432781d9514736e06c0b601bc19f660e7ff4ef",
+  "tracks": [
+    {
+      "track_id": "shots",
+      "revision": "paper-demo-r2",
+      "fragments": []
+    },
+    {
+      "track_id": "captions",
+      "revision": "paper-demo-r2",
+      "fragments": []
+    },
+    {
+      "track_id": "music",
+      "revision": "paper-demo-r2",
+      "fragments": []
+    },
+    {
+      "track_id": "graphics",
+      "revision": "paper-demo-r2",
+      "fragments": []
+    }
+  ],
+  "delivery": {
+    "revision": "paper-demo-r2",
+    "edit_sha256": "055936e3b2a4db5a3df1807008432781d9514736e06c0b601bc19f660e7ff4ef",
+    "tracks": [
+      {
+        "track_id": "shots",
+        "sha256": "2935efc9fef08dfce942ea43b62f5c8d4db16b92767edc422fa6f359139a6e90"
+      },
+      {
+        "track_id": "captions",
+        "sha256": "c7b0c22f1b82a2db68d286e264989fd288d93a14a12c2b910e84b6096156f72f"
+      },
+      {
+        "track_id": "music",
+        "sha256": "ffd5285fc97146be8e599dae1c281a1393b5abc8752e9217d6553a98210258ba"
+      },
+      {
+        "track_id": "graphics",
+        "sha256": "9e14dcd3a2c4da52670c08058a4a98a86c599e5b7b40cd09667df235426042d6"
+      }
+    ]
+  }
+}

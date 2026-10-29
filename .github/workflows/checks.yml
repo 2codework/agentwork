@@ -36,6 +36,8 @@ jobs:
         run: |
           python learning/mcp/raw/validate.py
           python -m unittest discover -s learning/mcp/raw/tests -v
+      - name: Frozen creative delivery lab (original rules, not product evaluation)
+        run: python -B scripts/creative_delivery_lab.py --check
       - name: Pages parity, JSON and local links
         run: python scripts/check_pages.py
       - name: Generated files must be committed and current

@@ -1,0 +1,185 @@
+{
+  "evidence": "r3 contract prescribed expectations; not production output",
+  "cases": {
+    "good": {
+      "exit_code": 0,
+      "primary": [],
+      "derived": []
+    },
+    "F01": {
+      "exit_code": 1,
+      "primary": [
+        "DEST_INTERVAL_MISMATCH"
+      ],
+      "derived": []
+    },
+    "F02": {
+      "exit_code": 1,
+      "primary": [
+        "REMOVED_ITEM_RETAINED"
+      ],
+      "derived": []
+    },
+    "F03": {
+      "exit_code": 1,
+      "primary": [
+        "SOURCE_INTERVAL_MISMATCH"
+      ],
+      "derived": []
+    },
+    "F04": {
+      "exit_code": 1,
+      "primary": [
+        "MISSING_FRAGMENT"
+      ],
+      "derived": []
+    },
+    "F05": {
+      "exit_code": 1,
+      "primary": [
+        "SOURCE_INTERVAL_MISMATCH"
+      ],
+      "derived": [
+        "SOURCE_DEST_LENGTH_MISMATCH"
+      ]
+    },
+    "F06a": {
+      "exit_code": 1,
+      "primary": [
+        "OUT_OF_BOUNDS"
+      ],
+      "derived": [
+        "DEST_INTERVAL_MISMATCH"
+      ]
+    },
+    "F06b": {
+      "exit_code": 1,
+      "primary": [
+        "REVISION_MISMATCH"
+      ],
+      "derived": []
+    },
+    "F07a": {
+      "exit_code": 1,
+      "primary": [
+        "MISSING_FRAGMENT"
+      ],
+      "derived": []
+    },
+    "F07b": {
+      "exit_code": 1,
+      "primary": [
+        "SHOT_COVERAGE_GAP"
+      ],
+      "derived": [
+        "DEST_INTERVAL_MISMATCH",
+        "SOURCE_DEST_LENGTH_MISMATCH"
+      ]
+    },
+    "F08": {
+      "exit_code": 1,
+      "primary": [
+        "TEXT_CHANGED"
+      ],
+      "derived": []
+    },
+    "F09": {
+      "exit_code": 1,
+      "primary": [
+        "TRACK_DIGEST_MISMATCH"
+      ],
+      "derived": []
+    },
+    "F10a": {
+      "exit_code": 1,
+      "primary": [
+        "DUPLICATE_ID"
+      ],
+      "derived": []
+    },
+    "F10b": {
+      "exit_code": 1,
+      "primary": [
+        "UNKNOWN_ASSET"
+      ],
+      "derived": []
+    },
+    "F10c": {
+      "exit_code": 1,
+      "primary": [
+        "UNEXPECTED_TRACK"
+      ],
+      "derived": []
+    },
+    "F11a": {
+      "exit_code": 2,
+      "primary": [
+        "SCHEMA_TYPE"
+      ],
+      "derived": []
+    },
+    "F11b": {
+      "exit_code": 2,
+      "primary": [
+        "SCHEMA_VALUE"
+      ],
+      "derived": []
+    },
+    "F11c": {
+      "exit_code": 2,
+      "primary": [
+        "SCHEMA_TYPE"
+      ],
+      "derived": []
+    },
+    "F11d": {
+      "exit_code": 1,
+      "primary": [
+        "INVALID_INTERVAL"
+      ],
+      "derived": []
+    },
+    "F11e": {
+      "exit_code": 1,
+      "primary": [
+        "OUT_OF_BOUNDS"
+      ],
+      "derived": [
+        "DEST_INTERVAL_MISMATCH",
+        "SOURCE_DEST_LENGTH_MISMATCH"
+      ]
+    },
+    "F12a": {
+      "exit_code": 2,
+      "primary": [
+        "JSON_DUPLICATE_KEY"
+      ],
+      "derived": []
+    },
+    "F12b": {
+      "exit_code": 2,
+      "primary": [
+        "JSON_NONFINITE"
+      ],
+      "derived": []
+    },
+    "F12c": {
+      "exit_code": 2,
+      "primary": [
+        "SCHEMA_KEYS"
+      ],
+      "derived": []
+    },
+    "F12d": {
+      "exit_code": 2,
+      "primary": [
+        "INPUT_TOO_LARGE"
+      ],
+      "derived": []
+    }
+  },
+  "unit_only": {
+    "F13": "CAPTION_EDIT_REQUIRES_AUTHORING",
+    "F14": "FIXED_FIXTURE_MISMATCH"
+  }
+}

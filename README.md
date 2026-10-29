@@ -77,3 +77,13 @@ python -m unittest discover -s learning/mcp/raw/tests -v
 ## 原创离线会议练习
 
 从站点主导航“原创离线练习”或 `meeting-action-log` 案例打开 [练习页](docs/offline-office-lab.html)，下载 [固定源码ZIP](learning/offline-office/r1/meeting-action-lab-r1.zip) 与 [中文教程](learning/offline-office/r1/source/README.zh.md)。固定六条合成事实的标准库规则模拟，仅Linux已测；非模型、MCP或产品实测，不产生真实批准/外发。源码及独立QA原字节封存于 `learning/offline-office/r1/`。
+
+## 原创离线创意交付练习
+
+[24秒删去4秒后的跨轨交付](docs/creative-delivery-lab.html)：分镜、字幕、音乐占位和图卡的源/目的时间及版本一致性。下载[冻结36成员ZIP](learning/creative-delivery/r1/creative-delivery-lab-r1.zip)；仅已有Python标准库、合成JSON，无模型或真实媒体。作者25测试与24项golden、独立QA只验证自编规则，不是创作产品效果、版权许可或发布批准。138案例及原MCP/会议练习不变。
+
+```sh
+python -B scripts/creative_delivery_lab.py --check
+```
+
+构建及CI检查固定包字节、空目录解包25测试/24golden；页面检查将3种故意非法JSON负例按精确路径、SHA及拒绝原因单列，不把它们统计为有效JSON。所有其它JSON仍严格验证。源码位置`learning/creative-delivery/r1/source/`，历史验证摘要与限制见其`provenance/`；历史机器路径不是网站链接。接入候选本地通过不等于线上已发布。

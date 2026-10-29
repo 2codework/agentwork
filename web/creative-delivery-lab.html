@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'sha256-RT/nfdEm4a6VKfetXau2n+U+e3Y0Ti7U+2cDs1acGm8='; base-uri 'none'; form-action 'none'">
+<meta name="description" content="用纯Python标准库校验24秒删为20秒后，分镜、字幕、音乐与图卡是否仍引用正确源片段。原创合成离线练习，不读取真实媒体。">
+<title>跨轨删段交付 · 原创离线练习 | AgentWork</title>
+<link rel="stylesheet" href="offline-office-lab.css">
+<style>main{min-width:0}table{width:100%;border-collapse:collapse;table-layout:fixed;margin:1rem 0}caption{text-align:left;font-weight:700;margin-bottom:.5rem}th,td{text-align:left;vertical-align:top;border:1px solid #becac7;padding:.65rem;overflow-wrap:anywhere}thead{background:#e5eee7}th:first-child{width:18%}.track-note{font-size:.95rem}.rule{padding:.7rem 1rem;border:1px solid #becac7;background:white}.hash{font-size:.8rem}@media(max-width:560px){table{font-size:.85rem}th,td{padding:.35rem}th:first-child{width:16%}h3{font-size:1.1rem}}</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到练习正文</a>
+<header><a href="index.html">AgentWork 首页</a><nav aria-label="练习导航"><a href="#timeline">四轨前后表</a><a href="#practice">动手校验</a><a href="#download">下载与复验</a><a href="#limits">证据边界</a></nav></header>
+<main id="main">
+<p class="eyebrow">原创 · 离线 · Python 标准库</p>
+<h1>删去4秒后，跨轨交付还一致吗？</h1>
+<p class="lead">把24秒的合成项目改为20秒：镜头删了，字幕是否还留着？目的时间对了，是否引用错原片？用一份自编JSON时间轴，检查分镜、字幕、音乐与图卡的版本和源区间，而不是只看总时长。</p>
+<aside aria-label="安全与执行边界"><h2>这是规则模拟，不是真实剪辑</h2><p><strong><code>publish_allowed=false</code>，即使结构校验pass也不许可发布。</strong>页面只提供静态材料与下载，不执行代码、不上传输入、不请求账号。没有模型调用、SDK、真实媒体或音画播放。</p><p>需要已有Python 3.10+，仅标准库，无pip、API key或自动安装。作者实际验证环境为Linux / Python 3.12.14；Windows、macOS及其他Python版本未验证。缺少POSIX <code>O_NOFOLLOW</code> / <code>O_NONBLOCK</code>时退出2，不降级。</p></aside>
+<section id="timeline">
+<h2>1. 先读剪切规则：24秒 → 20秒</h2>
+<p>项目<code>paper-demo-r1</code>全部由原创文字占位组成，不包含视频、音乐或图像文件。删除原时间<code>[8000,12000)</code>，生成<code>paper-demo-r2</code>。以下数值均为<strong>毫秒，左闭右开</strong>，速度恒为1，不包含变速、叠化或帧率转换。</p>
+<p class="rule">前保留窗<code>k1=[0,8000)</code>不移动；后保留窗<code>k2=[12000,24000)</code>平移−4000ms。<code>k1/k2</code>是保留窗编号，不是幸存片段重新编号。素材ID和源坐标不能随目的时间一起猜改。</p>
+<table><caption>分镜轨 shots · 必须无缝覆盖20秒</caption><thead><tr><th scope="col">条目</th><th scope="col">原timeline</th><th scope="col">r2目的区间</th><th scope="col">r2源区间</th></tr></thead><tbody>
+<tr><th scope="row">S1</th><td>[0,8000)</td><td>S1.k1<br>[0,8000)</td><td>[0,8000)</td></tr>
+<tr><th scope="row">S2</th><td>[8000,16000)</td><td>S2.k2<br>[8000,12000)</td><td><strong>[4000,8000)</strong></td></tr>
+<tr><th scope="row">S3</th><td>[16000,24000)</td><td>S3.k2<br>[12000,20000)</td><td>[0,8000)</td></tr>
+</tbody></table>
+<p class="track-note"><strong>源offset例：</strong>S2原素材从0ms开始；剪掉该镜头前4000ms后，目的时间仍从8000ms开始，但源入点必须是4000ms。把源区间写成[0,4000)，总时长仍正确，却会引用已经删掉的内容。</p>
+<table><caption>字幕轨 captions · C2删除，存活文本不改</caption><thead><tr><th scope="col">条目</th><th scope="col">原timeline</th><th scope="col">r2目的区间</th><th scope="col">内容与源区间</th></tr></thead><tbody>
+<tr><th scope="row">C1</th><td>[1000,3000)</td><td>C1.k1<br>[1000,3000)</td><td>纸圆来了。<br>[0,2000)</td></tr>
+<tr><th scope="row">C2</th><td>[9000,11000)</td><td>完全删除</td><td>方块转身。<br>无输出片段</td></tr>
+<tr><th scope="row">C3</th><td>[13000,15000)</td><td>C3.k2<br>[9000,11000)</td><td>两者并排。<br>[0,2000)</td></tr>
+<tr><th scope="row">C4</th><td>[21000,23000)</td><td>C4.k2<br>[17000,19000)</td><td>停在这里。<br>[0,2000)</td></tr>
+</tbody></table>
+<p class="track-note">跨剪口字幕不自动拆字或续写。F13仅在纯函数单元测试中构造这种情况，返回<code>CAPTION_EDIT_REQUIRES_AUTHORING</code>；固定CLI题目没有跨剪口字幕，也没有允许换题的<code>--input</code> / <code>--edit</code>参数。</p>
+<table><caption>音乐轨 music · 一条源记录保留为两段</caption><thead><tr><th scope="col">条目</th><th scope="col">原timeline</th><th scope="col">r2目的区间</th><th scope="col">r2源区间</th></tr></thead><tbody>
+<tr><th scope="row">M1</th><td>[0,24000)</td><td>M1.k1<br>[0,8000)</td><td>[0,8000)</td></tr>
+<tr><th scope="row">M1</th><td>同一源记录</td><td>M1.k2<br>[8000,20000)</td><td>[12000,24000)</td></tr>
+</tbody></table>
+<p class="track-note">8000ms接点的源坐标从8000跳至12000。结构正确不证明没有爆音、音乐接续自然或对白完整；这里没有实际音频可试听。</p>
+<table><caption>图卡轨 graphics · 时间与版本一起核对</caption><thead><tr><th scope="col">条目</th><th scope="col">原timeline</th><th scope="col">r2目的区间</th><th scope="col">文字与源区间</th></tr></thead><tbody>
+<tr><th scope="row">G1</th><td>[0,4000)</td><td>G1.k1<br>[0,4000)</td><td>纸圆与方块<br>[0,4000)</td></tr>
+<tr><th scope="row">G2</th><td>[18000,22000)</td><td>G2.k2<br>[14000,18000)</td><td>练习结束<br>[0,4000)</td></tr>
+</tbody></table>
+<p>共10个保留片段。四轨及交付清单都必须引用完整版本名<code>paper-demo-r2</code>。每轨摘要覆盖完整track对象（包括revision），不含delivery；重算摘要不能掩盖错源区间或改错文字。详见<a href="creative-delivery/r1/source/CONTRACT.zh-CN.md">冻结r3契约</a>。</p>
+</section>
+<section id="practice"><h2>2. 手填提交，先观察一处错误</h2>
+<ol><li>阅读<a href="creative-delivery/r1/source/fixtures/source.json">固定source</a>与<a href="creative-delivery/r1/source/fixtures/edit.json">固定edit</a>。将<code>fixtures/submission-template.json</code>复制到新文件<code>my-submission.json</code>，手工填写四轨；模板缺少片段，预期不能通过。</li><li>在解包后的<code>creative-delivery-lab</code>目录运行以下命令。输出到终端，不要重定向覆盖输入。</li></ol>
+<pre><code>python3 -B lab.py validate --submission fixtures/submission-F07b.json
+python3 -B lab.py validate --submission fixtures/submission-F08.json
+python3 -B lab.py validate --submission fixtures/submission-good.json
+python3 -B lab.py validate --submission my-submission.json</code></pre>
+<h3>看primary主因，不重复计算同一个故障</h3>
+<ul><li><strong>F07b：</strong>仅把S2.k2目的起点8000改成8001，出现1ms空洞。<code>SHOT_COVERAGE_GAP</code>为primary；<code>DEST_INTERVAL_MISMATCH</code>和<code>SOURCE_DEST_LENGTH_MISMATCH</code>为derived，<code>cause_id</code>指回主因。</li><li><strong>F08：</strong>将存活C3“两者并排。”改为“纸圆并排。”，出现<code>TEXT_CHANGED</code>。时间正确不等于内容正确。</li><li><strong>F09：</strong>只有音乐交付摘要故意沿用旧版本。其他单错夹具都先做指定变异，再统一重算摘要；不要把摘要通过误当内容通过。</li></ul>
+<p>24项golden为作者good加23个坏例；期望按冻结契约预先定义，不是生产校验器自行生成的正确性证明。<a href="creative-delivery/r1/source/expected/HAND_ORACLE.r3.json">独立手算oracle</a>给出10个保留片段；good是作者答案，<strong>不是模型生成结果</strong>。F14在临时副本联合篡改题目与提交，须被代码内题目信任根拒绝。</p>
+<h3>退出码和固定边界</h3>
+<dl><dt>0：仅本课结构规则pass</dt><dd>不代表音画检查、法律授权、发布或真实产品成功。</dd><dt>1：内容或关系校验fail</dt><dd>按错误位置和cause_id修正自己的提交，再重跑。</dd><dt>2：参数、文件、编码、JSON或schema无效</dt><dd>缺CLI参数或非法参数由argparse向stderr写用法；不输出正常JSON报告。</dd></dl>
+<pre><code>mode=rule-simulation
+publish_allowed=false
+media_rendered=false
+human_av_review=not_performed
+legal_clearance=not_assessed</code></pre>
+<p>没有approve、外发或发布状态机。正常报告始终保留8000ms剪口待人工观看与试听的提示；本课没有执行这项音画验收。</p>
+</section>
+<section id="download"><h2>3. 下载源码，再独立复验</h2>
+<p><a class="button" href="creative-delivery/r1/creative-delivery-lab-r1.zip" download="creative-delivery-lab-r1.zip">下载原创练习 ZIP（不自动运行）</a></p>
+<ul><li><a href="creative-delivery/r1/source/README.zh.md">完整中文教程</a> · <a href="creative-delivery/r1/source/lab.py">只读校验器源码</a> · <a href="creative-delivery/r1/source/timeline.py">纯时间轴算法</a></li><li><a href="creative-delivery/r1/source/CONTRACT.zh-CN.md">r3自编契约</a> · <a href="creative-delivery/r1/source/expected/cases.json">预先固定的失败期望</a></li></ul>
+<p>36成员ZIP的SHA256：</p><pre class="hash"><code>c1cdcd93b0cee224d76bc589d5622840e3030409da82ea3973e927a8e3049cbf</code></pre>
+<p>核对哈希后解包到自己控制的新目录。哈希仅校验字节与版本一致，<strong>不是身份认证、数字签名或素材真实性证明</strong>。</p>
+<pre><code>python3 -B lab.py check-golden
+python3 -B -m unittest discover -s tests -v
+python3 -B package_lab.py --out ../my-new-package-a
+python3 -B package_lab.py --out ../my-new-package-b</code></pre>
+<p>父目录须已存在，输出目录须不存在；拒绝覆盖。仅固定作者允许成员，固定ZIP_STORED、排序、时间戳与权限，不收集自己的提交、缓存或日志。两次打包应字节相同。测试仅在临时目录写合成数据并清理，不修改原题目。</p>
+</section>
+<section id="limits"><h2>4. 证据与停止边界</h2>
+<p><strong>已执行的是这一个自编lab：</strong>作者25项测试、24项golden通过；独立实现QA覆盖50次CLI检查及1394项补充检查，解包25项测试与24项golden通过，并验证可复现ZIP。这些结果不转移给既有案例、模型、MCP、音视频或设计产品，不证明部署收益或行业最佳实践。</p>
+<p>CLI只读固定题目和显式提交的普通文件；限64KiB（65536字节），严格字段、数量、深度和类型，拒绝重复JSON键、非有限数、末段symlink、FIFO及设备文件，核对读入文件身份。上级目录应由学习者控制；<strong>不是恶意文件系统沙箱</strong>，同步篡改源码与答案不在保证范围。</p>
+<p>这是自编JSON契约，<strong>不是WebVTT、SRT、OTIO</strong>，不声称格式兼容或可访问性合规。所有文字素材均为合成占位，<code>synthetic_fixture</code>只是教学来源记录，<strong>不是版权声明的法律授权证明</strong>。若需要真实媒体、账号、模型、上传、收费、法律判断或发布，停止本课范围并另行明确授权。</p>
+<h3>回到关联案例继续学习</h3>
+<ul><li><a href="index.html?case=video-archive-reproducible">视频：项目归档与局部重做</a></li><li><a href="index.html?case=video-caption-accessibility">视频：双语字幕与无障碍版本</a></li><li><a href="index.html?case=music-accessible-captions">音乐：可访问性字幕从ASR到人工验收</a></li><li><a href="index.html?case=design-asset-provenance">设计：资产权利与内容凭证交付</a>（仅交付关联，本课不核验真实许可）</li></ul>
+<p>关联只表示学习顺序；不会把原案例改成“已运行产品”。</p>
+</section>
+</main><footer>AgentWork · 小而可复验的规则练习，不夸大成效。</footer>
+</body></html>

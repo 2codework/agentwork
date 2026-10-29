@@ -1,0 +1,10 @@
+{
+  "schema_version": "creative-cut-edit/1",
+  "project_id": "paper-demo",
+  "edit_id": "cut-middle-4s",
+  "from_revision": "paper-demo-r1",
+  "to_revision": "paper-demo-r2",
+  "remove_start_ms": 8000,
+  "remove_end_ms": 12000,
+  "target_duration_ms": 20000
+}

@@ -1,0 +1,144 @@
+{
+  "schema_version": "creative-cut-submission/1",
+  "project_id": "paper-demo",
+  "revision": "paper-demo-r2",
+  "edit_sha256": "055936e3b2a4db5a3df1807008432781d9514736e06c0b601bc19f660e7ff4ef",
+  "tracks": [
+    {
+      "track_id": "shots",
+      "revision": "paper-demo-r2",
+      "fragments": [
+        {
+          "fragment_id": "S1.k1",
+          "original_id": "S1",
+          "asset_id": "asset-s1",
+          "start_ms": 0,
+          "end_ms": 8000,
+          "source_start_ms": 0,
+          "source_end_ms": 8000,
+          "text": "纸圆进入"
+        },
+        {
+          "fragment_id": "S3.k2",
+          "original_id": "S3",
+          "asset_id": "asset-s3",
+          "start_ms": 12000,
+          "end_ms": 20000,
+          "source_start_ms": 0,
+          "source_end_ms": 8000,
+          "text": "两者停下"
+        }
+      ]
+    },
+    {
+      "track_id": "captions",
+      "revision": "paper-demo-r2",
+      "fragments": [
+        {
+          "fragment_id": "C1.k1",
+          "original_id": "C1",
+          "asset_id": "asset-c1",
+          "start_ms": 1000,
+          "end_ms": 3000,
+          "source_start_ms": 0,
+          "source_end_ms": 2000,
+          "text": "纸圆来了。"
+        },
+        {
+          "fragment_id": "C3.k2",
+          "original_id": "C3",
+          "asset_id": "asset-c3",
+          "start_ms": 9000,
+          "end_ms": 11000,
+          "source_start_ms": 0,
+          "source_end_ms": 2000,
+          "text": "两者并排。"
+        },
+        {
+          "fragment_id": "C4.k2",
+          "original_id": "C4",
+          "asset_id": "asset-c4",
+          "start_ms": 17000,
+          "end_ms": 19000,
+          "source_start_ms": 0,
+          "source_end_ms": 2000,
+          "text": "停在这里。"
+        }
+      ]
+    },
+    {
+      "track_id": "music",
+      "revision": "paper-demo-r2",
+      "fragments": [
+        {
+          "fragment_id": "M1.k1",
+          "original_id": "M1",
+          "asset_id": "asset-m1",
+          "start_ms": 0,
+          "end_ms": 8000,
+          "source_start_ms": 0,
+          "source_end_ms": 8000,
+          "text": "原创音乐文字占位，不代表实际音频"
+        },
+        {
+          "fragment_id": "M1.k2",
+          "original_id": "M1",
+          "asset_id": "asset-m1",
+          "start_ms": 8000,
+          "end_ms": 20000,
+          "source_start_ms": 12000,
+          "source_end_ms": 24000,
+          "text": "原创音乐文字占位，不代表实际音频"
+        }
+      ]
+    },
+    {
+      "track_id": "graphics",
+      "revision": "paper-demo-r2",
+      "fragments": [
+        {
+          "fragment_id": "G1.k1",
+          "original_id": "G1",
+          "asset_id": "asset-g1",
+          "start_ms": 0,
+          "end_ms": 4000,
+          "source_start_ms": 0,
+          "source_end_ms": 4000,
+          "text": "纸圆与方块"
+        },
+        {
+          "fragment_id": "G2.k2",
+          "original_id": "G2",
+          "asset_id": "asset-g2",
+          "start_ms": 14000,
+          "end_ms": 18000,
+          "source_start_ms": 0,
+          "source_end_ms": 4000,
+          "text": "练习结束"
+        }
+      ]
+    }
+  ],
+  "delivery": {
+    "revision": "paper-demo-r2",
+    "edit_sha256": "055936e3b2a4db5a3df1807008432781d9514736e06c0b601bc19f660e7ff4ef",
+    "tracks": [
+      {
+        "track_id": "shots",
+        "sha256": "112ed80c29de170059ad13e18965c366c2926f418909dc95537219c5a0e35d81"
+      },
+      {
+        "track_id": "captions",
+        "sha256": "21c1fbfe89f366a8a1ef1e47a5843135c0241b3c0f2dd9f32819c40b86e9dd53"
+      },
+      {
+        "track_id": "music",
+        "sha256": "4f3a523dac4d544f702a7730e764b6cfbf8fb0d53244d2b0e444f1615949d47c"
+      },
+      {
+        "track_id": "graphics",
+        "sha256": "26c6054a4cd113ff86d7593beae13c7d9ea7f9f1edc0b506d9c4ff6d27f58f8c"
+      }
+    ]
+  }
+}

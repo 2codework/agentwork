@@ -1,0 +1,270 @@
+{
+  "oracle_kind": "independent-hand-calculation-not-production-output",
+  "status": "source-offset-and-asset-conventions-confirmed-by-plan-author",
+  "schema_note": "This is a review oracle, not the proposed submission schema or executable golden report.",
+  "source_revision": "paper-demo-r1",
+  "target_revision": "paper-demo-r2",
+  "source_duration_ms": 24000,
+  "destination_duration_ms": 20000,
+  "deleted_source_timeline_ms": [
+    8000,
+    12000
+  ],
+  "interval_convention": "left-closed-right-open; positive length only",
+  "kept_windows": [
+    {
+      "id": "k1",
+      "source_timeline_ms": [
+        0,
+        8000
+      ],
+      "destination_ms": [
+        0,
+        8000
+      ]
+    },
+    {
+      "id": "k2",
+      "source_timeline_ms": [
+        12000,
+        24000
+      ],
+      "destination_ms": [
+        8000,
+        20000
+      ]
+    }
+  ],
+  "fragments": [
+    {
+      "track": "shots",
+      "id": "S1.k1",
+      "source_id": "S1",
+      "asset_id": "asset-s1",
+      "window": "k1",
+      "source_timeline_ms": [
+        0,
+        8000
+      ],
+      "src_ms": [
+        0,
+        8000
+      ],
+      "dest_ms": [
+        0,
+        8000
+      ],
+      "text": "纸圆进入"
+    },
+    {
+      "track": "shots",
+      "id": "S2.k2",
+      "source_id": "S2",
+      "asset_id": "asset-s2",
+      "window": "k2",
+      "source_timeline_ms": [
+        12000,
+        16000
+      ],
+      "src_ms": [
+        4000,
+        8000
+      ],
+      "dest_ms": [
+        8000,
+        12000
+      ],
+      "text": "方块转动"
+    },
+    {
+      "track": "shots",
+      "id": "S3.k2",
+      "source_id": "S3",
+      "asset_id": "asset-s3",
+      "window": "k2",
+      "source_timeline_ms": [
+        16000,
+        24000
+      ],
+      "src_ms": [
+        0,
+        8000
+      ],
+      "dest_ms": [
+        12000,
+        20000
+      ],
+      "text": "两者停下"
+    },
+    {
+      "track": "captions",
+      "id": "C1.k1",
+      "source_id": "C1",
+      "asset_id": "asset-c1",
+      "window": "k1",
+      "source_timeline_ms": [
+        1000,
+        3000
+      ],
+      "src_ms": [
+        0,
+        2000
+      ],
+      "dest_ms": [
+        1000,
+        3000
+      ],
+      "text": "纸圆来了。"
+    },
+    {
+      "track": "captions",
+      "id": "C3.k2",
+      "source_id": "C3",
+      "asset_id": "asset-c3",
+      "window": "k2",
+      "source_timeline_ms": [
+        13000,
+        15000
+      ],
+      "src_ms": [
+        0,
+        2000
+      ],
+      "dest_ms": [
+        9000,
+        11000
+      ],
+      "text": "两者并排。"
+    },
+    {
+      "track": "captions",
+      "id": "C4.k2",
+      "source_id": "C4",
+      "asset_id": "asset-c4",
+      "window": "k2",
+      "source_timeline_ms": [
+        21000,
+        23000
+      ],
+      "src_ms": [
+        0,
+        2000
+      ],
+      "dest_ms": [
+        17000,
+        19000
+      ],
+      "text": "停在这里。"
+    },
+    {
+      "track": "music",
+      "id": "M1.k1",
+      "source_id": "M1",
+      "asset_id": "asset-m1",
+      "window": "k1",
+      "source_timeline_ms": [
+        0,
+        8000
+      ],
+      "src_ms": [
+        0,
+        8000
+      ],
+      "dest_ms": [
+        0,
+        8000
+      ],
+      "text": "原创音乐文字占位，不代表实际音频"
+    },
+    {
+      "track": "music",
+      "id": "M1.k2",
+      "source_id": "M1",
+      "asset_id": "asset-m1",
+      "window": "k2",
+      "source_timeline_ms": [
+        12000,
+        24000
+      ],
+      "src_ms": [
+        12000,
+        24000
+      ],
+      "dest_ms": [
+        8000,
+        20000
+      ],
+      "text": "原创音乐文字占位，不代表实际音频"
+    },
+    {
+      "track": "graphics",
+      "id": "G1.k1",
+      "source_id": "G1",
+      "asset_id": "asset-g1",
+      "window": "k1",
+      "source_timeline_ms": [
+        0,
+        4000
+      ],
+      "src_ms": [
+        0,
+        4000
+      ],
+      "dest_ms": [
+        0,
+        4000
+      ],
+      "text": "纸圆与方块"
+    },
+    {
+      "track": "graphics",
+      "id": "G2.k2",
+      "source_id": "G2",
+      "asset_id": "asset-g2",
+      "window": "k2",
+      "source_timeline_ms": [
+        18000,
+        22000
+      ],
+      "src_ms": [
+        0,
+        4000
+      ],
+      "dest_ms": [
+        14000,
+        18000
+      ],
+      "text": "练习结束"
+    }
+  ],
+  "removed": [
+    {
+      "source_id": "C2",
+      "asset_id": "asset-c2",
+      "source_timeline_ms": [
+        9000,
+        11000
+      ],
+      "src_ms": [
+        0,
+        2000
+      ],
+      "text": "方块转身。",
+      "fragments": []
+    }
+  ],
+  "text_note": "r3 fixes exact text for all fragments. Timeline values remain the independently hand-calculated r1 review values; only the newly specified music placeholder text is filled here.",
+  "fixed_report_boundaries": {
+    "mode": "rule-simulation",
+    "publish_allowed": false,
+    "media_rendered": false,
+    "human_av_review": "not_performed",
+    "legal_clearance": "not_assessed"
+  },
+  "human_review_destination_ms": [
+    8000
+  ],
+  "digest_note": "No invented digest or production-generated expected value. Exact serialization domain and fixed source/edit bytes must be finalized before independently hashing fixtures.",
+  "reviewed_contract": "creative-delivery-lab-plan-r3/CONTRACT.zh-CN.md",
+  "reviewed_contract_sha256": "4159c5c4a399a1e2eabd47b99429d982e7ba2c3a238eff4db07d10e98231568b"
+}
