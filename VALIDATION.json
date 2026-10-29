@@ -1,7 +1,7 @@
 {
-  "version": "agentwork-office-expansion-integration-r1",
+  "version": "agentwork-reference-order-r1",
   "checked_at": "2026-10-29",
-  "baseline_commit": "437fdbb97d2096eca98e3ae16587f56cdf5cd0e5",
+  "baseline_commit": "5ec708909d7ac4ed7dc2bf24655689c3ccf15490",
   "manifest_scope": "all repo files excluding .git, caches, pyc and this VALIDATION.json",
   "counts": {
     "beginner_workflows": 9,
@@ -17,7 +17,7 @@
     "status": "isolated_candidate_not_published",
     "offline_checks": {
       "python": 236,
-      "node": 87,
+      "node": 108,
       "mcp": 18,
       "creative_tests": 25,
       "creative_golden": 24,
@@ -28,10 +28,10 @@
       "deterministic_rebuild": "two byte-identical builds",
       "preserved_existing_zips": "byte_identical"
     },
-    "browser": "Not run for this candidate; root visual/keyboard/download acceptance pending",
+    "browser": "Not run; root actual reading-order acceptance pending",
     "sources": "Portable projection of root-admitted task-first-office-expansion-r2; raw package retained outside public candidate. Public CI checks projected files and fixed admission pins, not unpublished raw files.",
     "execution": "documentation and author examples only; no product execution, installation, login, or external calls",
-    "scope": "Three admitted text-only office workflows; exact old six objects and all old source artifacts preserved; seven source phases mapped to existing six-step reader"
+    "scope": "Presentation-only primary-deliverable order and Chinese labels across nine author examples; design input reading order; source/data/phase hashes and all source content remain exact"
   },
   "sha256": {
     ".github/workflows/checks.yml": "031409aa64ddf377d741d2fa54de73c0af1da005e9a86b8a6878846402e3deaa",
@@ -169,7 +169,7 @@
     "docs/creative-workflows/r2/qa-dispositions.json": "344eed6b6596c6e1fed8cef4a7e9ecde8018e25b694a76918afdeb5dfa5e4643",
     "docs/creative-workflows/r2/validation.json": "f0f2dad0b87f63a62eddfea8c38accea026ec2dea774934a28958b2b56d0b13f",
     "docs/data.json": "6921f8d3effc9ccb8976b873ccdcee953c0e60d257d94cf3d2778d1c541a22fd",
-    "docs/index.html": "efef358189a8d47ff6575a13cedcca6d6afbd3eaa2675940285b026328170f64",
+    "docs/index.html": "3cfd4f505d49036878c2b7afa05479b56b37e98091c428d72baf4447940f42f8",
     "docs/learning/mcp/overlay.json": "65b51f88d5f371e92bc799b76ed2c04a6e629dae219137f4ac0f17a79cc33ade",
     "docs/learning/mcp/raw/README.md": "06a6b350077bd39e50bed3e9a6b5a78a845b05649ad1290b197b0c6c47f8b585",
     "docs/learning/mcp/raw/cases.json": "baf6efc3565bfb09a45986f7c1fbcf50e5d5e194e98fa985231d369380266cb1",
@@ -607,7 +607,7 @@
     "docs/product-books/tasks/awbench-support-draft-v1.json": "15e93e400ac211d228048afe4091f07144854c7aa705b0859c7b9b86fc5a01d8",
     "docs/product-books-data.json": "d8f3822d1b73e984e9afc50bcfd75995184683510f4eaa7157c9331af5e108d8",
     "docs/product-books.css": "7c526ddfc2b623a50513a865dc2d4fb5fe092bb194ece0afd22aed7f90aa6a8d",
-    "docs/product-books.html": "7ee8cef3b4e172b219591fca0606f6195821dfea7f6bc9acc12cee1d3c82da32",
+    "docs/product-books.html": "fee33da67f31720f1269c47ca5ae8b905d5afe1bffa8aecc6c10eea060d5ef05",
     "docs/product-books.js": "9e67d29f92af90210217c713f7954ac9026e820bddafbede5d616a90408620cd",
     "docs/product-library.html": "4ee46ac49462dfe219ea9c65be376b9b91f157ba5a57b08a244762a85b45713b",
     "docs/product-library.js": "85aea1f49230bc95c307a900e7113c092429f734c0e508c7ec6f1b2540b254d0",
@@ -630,7 +630,7 @@
     "docs/style.css": "e0d15d5b75e202328be23adde561099c3d70e6b9d2254620cf609c08ac32642d",
     "docs/task-first-data.json": "6368108096f8dbfff34a15d831fbd3f959a9306aa56986d77399a5479c8f94e6",
     "docs/task-first.css": "cd55a927b5e5fb8cdcfeb2febc2759887cd37fae049f32a376ded1adea164657",
-    "docs/task-first.js": "638fc5a0ccc849c38fe454a6238a84d100bc693d00b2a68497f08a09d486ff80",
+    "docs/task-first.js": "9edbc02237c1e63e2d69dbc6027a1d9a26d59b5ba4e9529bac94bc1c3397b313",
     "docs/task-guides/connections/DELTA.md": "300151c494a4af3c6ecf5c3b2d5c6650d480fba653f8b0c8089887c1eb65060d",
     "docs/task-guides/connections/GUIDE.zh-CN.md": "1de3475e966dbfe47401fb09e24de206488b2826ea6f2da5f5f1190cc21630a9",
     "docs/task-guides/connections/README.md": "f34e56bf0ea8e2038dc840a55b437f3c3baece118292ef87d11bf34c55f1aeeb",
@@ -1487,7 +1487,7 @@
     "site/creative-workflows/r2/qa-dispositions.json": "344eed6b6596c6e1fed8cef4a7e9ecde8018e25b694a76918afdeb5dfa5e4643",
     "site/creative-workflows/r2/validation.json": "f0f2dad0b87f63a62eddfea8c38accea026ec2dea774934a28958b2b56d0b13f",
     "site/data.json": "6921f8d3effc9ccb8976b873ccdcee953c0e60d257d94cf3d2778d1c541a22fd",
-    "site/index.html": "efef358189a8d47ff6575a13cedcca6d6afbd3eaa2675940285b026328170f64",
+    "site/index.html": "3cfd4f505d49036878c2b7afa05479b56b37e98091c428d72baf4447940f42f8",
     "site/learning/mcp/overlay.json": "65b51f88d5f371e92bc799b76ed2c04a6e629dae219137f4ac0f17a79cc33ade",
     "site/learning/mcp/raw/README.md": "06a6b350077bd39e50bed3e9a6b5a78a845b05649ad1290b197b0c6c47f8b585",
     "site/learning/mcp/raw/cases.json": "baf6efc3565bfb09a45986f7c1fbcf50e5d5e194e98fa985231d369380266cb1",
@@ -1925,7 +1925,7 @@
     "site/product-books/tasks/awbench-support-draft-v1.json": "15e93e400ac211d228048afe4091f07144854c7aa705b0859c7b9b86fc5a01d8",
     "site/product-books-data.json": "d8f3822d1b73e984e9afc50bcfd75995184683510f4eaa7157c9331af5e108d8",
     "site/product-books.css": "7c526ddfc2b623a50513a865dc2d4fb5fe092bb194ece0afd22aed7f90aa6a8d",
-    "site/product-books.html": "7ee8cef3b4e172b219591fca0606f6195821dfea7f6bc9acc12cee1d3c82da32",
+    "site/product-books.html": "fee33da67f31720f1269c47ca5ae8b905d5afe1bffa8aecc6c10eea060d5ef05",
     "site/product-books.js": "9e67d29f92af90210217c713f7954ac9026e820bddafbede5d616a90408620cd",
     "site/product-library.html": "4ee46ac49462dfe219ea9c65be376b9b91f157ba5a57b08a244762a85b45713b",
     "site/product-library.js": "85aea1f49230bc95c307a900e7113c092429f734c0e508c7ec6f1b2540b254d0",
@@ -1948,7 +1948,7 @@
     "site/style.css": "e0d15d5b75e202328be23adde561099c3d70e6b9d2254620cf609c08ac32642d",
     "site/task-first-data.json": "6368108096f8dbfff34a15d831fbd3f959a9306aa56986d77399a5479c8f94e6",
     "site/task-first.css": "cd55a927b5e5fb8cdcfeb2febc2759887cd37fae049f32a376ded1adea164657",
-    "site/task-first.js": "638fc5a0ccc849c38fe454a6238a84d100bc693d00b2a68497f08a09d486ff80",
+    "site/task-first.js": "9edbc02237c1e63e2d69dbc6027a1d9a26d59b5ba4e9529bac94bc1c3397b313",
     "site/task-guides/connections/DELTA.md": "300151c494a4af3c6ecf5c3b2d5c6650d480fba653f8b0c8089887c1eb65060d",
     "site/task-guides/connections/GUIDE.zh-CN.md": "1de3475e966dbfe47401fb09e24de206488b2826ea6f2da5f5f1190cc21630a9",
     "site/task-guides/connections/README.md": "f34e56bf0ea8e2038dc840a55b437f3c3baece118292ef87d11bf34c55f1aeeb",
@@ -2043,8 +2043,10 @@
     "tests/product-reader-ui.test.js": "d009bf979ef28ab6d74a1d04af48d56e3744d1a68a891af80752f44955ce5ca5",
     "tests/progress.test.js": "4edfc0a0e968dfb404f54267bf39adbb43a60c0f3fd3529231cd6aeb2047c6ac",
     "tests/reader.test.js": "e117bc13982b5c365833a14dddc95e1e2ae811be72ca223de912a6014fb75bca",
+    "tests/reference-order.test.js": "eef0fc5fd349fbf3bae92ab28681bac5d5ae7034d2893610b24c9c1643792a4b",
     "tests/regional-ui.test.js": "1d33f52f2f97198f4eddc1a91e5b45dcdb924ba8d8ffeebea97bc7d79d8aed4e",
-    "tests/task-first.test.js": "958eeb91d8f65fd0bcf4da297f11db5da0bc3511169ab8b8bebb665b09d58680",
+    "tests/task-first.test.js": "1973d4a3c00c8f30215989ca453f878992c18965a7e9753606c878c0f08196fa",
+    "tests/task-search.test.js": "f84b6953289edc2c56b49a769ae940e6ea4d6faf9a3ac20487fbe173e50387e2",
     "tests/test_asset_versions.py": "4afe5c2ffb45d42c2f675b91f4877f815c22cb015456f4e6959e958ec0f1ea99",
     "tests/test_assistant_platform_families.py": "8c3d7697648bed4901d551c50f3ffb529a0e38ff0d4d9480e4d3b0a4ea31ae3e",
     "tests/test_assistant_workspace.py": "2294c4781b01e17ce5301fbfeecc3598676988bcf818d001e861cfc38eee3384",
@@ -2085,6 +2087,10 @@
     "web/reader.js": "1a69c8a672dfd2c6d6776077df645725f2abf9ef4175c43f48b48089a2b4f35c",
     "web/style.css": "e0d15d5b75e202328be23adde561099c3d70e6b9d2254620cf609c08ac32642d",
     "web/task-first.css": "cd55a927b5e5fb8cdcfeb2febc2759887cd37fae049f32a376ded1adea164657",
-    "web/task-first.js": "638fc5a0ccc849c38fe454a6238a84d100bc693d00b2a68497f08a09d486ff80"
+    "web/task-first.js": "9edbc02237c1e63e2d69dbc6027a1d9a26d59b5ba4e9529bac94bc1c3397b313"
+  },
+  "baseline_candidate": {
+    "name": "agentwork-task-search-r1",
+    "allowlist_sha256": "83afbcb0e786c61262bec6b0d8ce68fed8b214d188734f9503c9af26f347ad28"
   }
 }
