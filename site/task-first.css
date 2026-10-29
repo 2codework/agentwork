@@ -20,3 +20,10 @@
 .poster-figure{margin:20px 0;min-width:0}.poster-figure figcaption{font-weight:700;line-height:1.6;margin-bottom:10px}.poster-figure img{display:block;width:100%;max-width:540px;height:auto;border:1px solid var(--line);border-radius:6px}
 .poster-download{display:block;margin:12px 0;overflow-wrap:anywhere}
 @media(max-width:680px){.poster-pair{grid-template-columns:minmax(0,1fr)}}
+
+/* Ephemeral local counting only; scoped to the content workflow check phase. */
+.content-counter{border:1px solid var(--line);border-radius:8px;padding:18px;margin:20px 0;min-width:0}
+.content-counter label{display:block;font-weight:700;margin:12px 0 8px}
+.content-counter textarea{display:block;box-sizing:border-box;width:100%;max-width:100%;min-height:140px;padding:12px;font:inherit;line-height:1.6;resize:vertical}
+.content-counter textarea:focus-visible{outline:3px solid var(--accent,#126657);outline-offset:2px}
+@media(max-width:680px){.content-counter{padding:12px}}

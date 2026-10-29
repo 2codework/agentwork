@@ -95,5 +95,17 @@ test('all other twelve tasks retain their complete six-phase DOM',async()=>{
  const crypto=require('node:crypto'),baseline=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/poster-other-tasks-dom-baseline.json')));
  const shape=n=>({tag:n.tagName,text:n._text,attrs:n.attrs,open:n.open,children:n.children.map(shape)});
  assert.equal(Object.keys(baseline).length,72);
- for(const w of data.workflows.filter(w=>!w.poster_workflow))for(const step of STEPS){const b=await boot('?work='+w.id+'&step='+step);assert.equal(crypto.createHash('sha256').update(JSON.stringify(shape(b.ids.screen))).digest('hex'),baseline[w.id+'/'+step],w.id+'/'+step);}
+ for(const w of data.workflows.filter(w=>!w.poster_workflow))for(const step of STEPS){const b=await boot('?work='+w.id+'&step='+step);
+  // Approved finite addition: validate the complete blank counter before removing
+  // exactly this one section for the unchanged historical DOM SHA assertion.
+  if(w.id==='three-day-content'&&step==='check'){
+   const boxes=all(b.ids.screen).filter(n=>n.attrs['data-content-counter']);assert.equal(boxes.length,1);
+   const box=boxes[0],parent=box.parentElement;assert.equal(box.attrs['data-content-counter'],'three-day-content');assert.equal(parent.attrs['data-step'],'check');
+   assert.equal(parent.children[parent.children.indexOf(box)-1].tagName,'UL');
+   assert.equal(crypto.createHash('sha256').update(JSON.stringify(shape(box))).digest('hex'),'003c32abb789d62b5465da6d70ac9ec0cb93f266652dd1700a4405c56a92ad03');
+   assert.equal(all(box).find(n=>n.tagName==='TEXTAREA').value,'');
+   parent.children=parent.children.filter(n=>n!==box);
+  }
+  assert.equal(crypto.createHash('sha256').update(JSON.stringify(shape(b.ids.screen))).digest('hex'),baseline[w.id+'/'+step],w.id+'/'+step);
+ }
 });
