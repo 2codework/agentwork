@@ -61,7 +61,7 @@ class EntryLabelsTests(unittest.TestCase):
             with self.subTest(folder=folder):
                 brand = entries['brand']
                 self.assertEqual(brand.tag, 'a')
-                self.assertEqual(brand.attrs['href'], '?view=cases')
+                self.assertEqual(brand.attrs['href'], '?view=home')
                 self.assertEqual(brand.text().strip(), 'AW AgentWork')
                 self.assertEqual(brand.name(), 'AgentWork 首页')
                 self.assertEqual(brand.text(accessible=True).strip(), 'AgentWork')
