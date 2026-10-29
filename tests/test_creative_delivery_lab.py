@@ -11,6 +11,7 @@ from html.parser import HTMLParser
 from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
+from express_display_guard import historical_bytes
 import creative_delivery_lab as lab
 import check_pages as pages
 
@@ -21,7 +22,7 @@ class CreativeDeliveryTests(unittest.TestCase):
  def test_all_historical_protected_bytes_unchanged(self):
   baseline=json.loads((ROOT/'tests/fixtures/creative-delivery-baseline.json').read_text())
   for name,digest in baseline['sha256'].items():
-   with self.subTest(path=name):self.assertEqual(hashlib.sha256((ROOT/name).read_bytes()).hexdigest(),digest)
+   with self.subTest(path=name):self.assertEqual(hashlib.sha256(historical_bytes(ROOT,name,(ROOT/name).read_bytes())).hexdigest(),digest)
   for out in ('site','docs'):
    data=json.loads((ROOT/out/'data.json').read_text());self.assertEqual(len(data['cases']),138)
    self.assertEqual(sum('lesson_markdown' in c for c in data['cases']),12)

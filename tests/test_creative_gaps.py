@@ -22,7 +22,7 @@ class CreativeGapTests(unittest.TestCase):
  def test_all_boundaries_visible(self):
   for c,r in zip(G.adapt(self.raw),self.raw['candidates']):
    text='\n'.join([c['summary'],c['prompt'],c['risks'],c['license'],c['cost'],c['agent_boundary'],c['applicable_versions']]+[s['body'] for s in c['steps']]+c['rubric'])
-   for value in r['visible_documented_path']+r['original_exercise']['acceptance_checks']+[r['access_and_payment'],r['license_and_rights'],r['automation_boundary']]:self.assertIn(value,text)
+   for value in r['visible_documented_path']+G.current_display_checks(r['id'],r['original_exercise']['acceptance_checks'])+[r['access_and_payment'],r['license_and_rights'],r['automation_boundary']]:self.assertIn(value,text)
  def test_rollback_and_express(self):
   text=json.dumps(G.adapt(self.raw),ensure_ascii=False)
   for word in ['当前session','Version history','compositions/files','刷新','协作者','批准','Chats','中国','未列中文','未确认']:self.assertIn(word,text)

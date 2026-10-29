@@ -1,0 +1,279 @@
+{
+  "id": "gap-express-targeted",
+  "title": "设计AI助手：局部修改与人工接管",
+  "summary": "分类：conversational_ai_assistant。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。 不同于已覆盖Firefly图像API、Photoshop API和Canva模板填充；补会话中保持设计不变量与手工接管。",
+  "roles": [
+    "创意学习者",
+    "设计师"
+  ],
+  "industries": [
+    "设计",
+    "创意教育"
+  ],
+  "evidence": "synthetic",
+  "synthetic": true,
+  "steps": [
+    {
+      "title": "待执行步骤 1",
+      "body": "在主页用提示生成虚构活动海报并补齐占位信息",
+      "check": "未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。"
+    },
+    {
+      "title": "待执行步骤 2",
+      "body": "选择候选后只修改指定文字/元素，保留其余布局",
+      "check": "未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。"
+    },
+    {
+      "title": "待执行步骤 3",
+      "body": "需要时Open in editor并关闭AI Assistant转手工编辑；只准备下载审稿",
+      "check": "未执行不标通过；对照整体验收、许可与人工审批条件逐项记录。"
+    },
+    {
+      "title": "原创练习步骤 1（未执行）",
+      "body": "在纸上列活动字段、允许修改区与三项不变量；先确认地区、账户与语言资格，不能访问则停留在离线练习。",
+      "check": "本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。"
+    },
+    {
+      "title": "原创练习步骤 2（未执行）",
+      "body": "写一条生成请求和一条局部修改请求，分开审查，不让修改要求扩展成整页重做。",
+      "check": "本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。"
+    },
+    {
+      "title": "原创练习步骤 3（未执行）",
+      "body": "设计对话编辑与手工接管对照表：哪些变化接受，哪些需Open in editor进一步修正。",
+      "check": "本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。"
+    },
+    {
+      "title": "原创练习步骤 4（未执行）",
+      "body": "准备独立变更说明供协作者阅读；Chats私有不能作为交付依据。",
+      "check": "本步骤仅计划；以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "express-overview",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-overview.html",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "claim": "Beta会话设计/局部调整；个人Free/Premium渐进开放，桌面web；不支持Teams/Enterprise/Education；地区与语言有限。；原观察：opened_primary；独立QA：opened_primary；限制：",
+      "raw_source": {
+        "id": "express-overview",
+        "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-overview.html",
+        "checked_at": "2026-10-28",
+        "publication_or_update_date": "2026-10-22",
+        "date_semantics": "page_update_or_explicit_announcement_only",
+        "status": "opened_primary",
+        "supported_claim": "Beta会话设计/局部调整；个人Free/Premium渐进开放，桌面web；不支持Teams/Enterprise/Education；地区与语言有限。",
+        "limitations": "",
+        "independent_qa": {
+          "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-overview.html",
+          "qa_status": "opened_primary",
+          "evidence_locator": "L712–750",
+          "qa_observation_zh": "2026-10-22更新；Beta会话助手；个人Free/Premium渐进、桌面web；排除所列地区，语言列表不含中文；Chats不与协作者共享。",
+          "source_id": "express-overview",
+          "checked_at": "2026-10-28"
+        }
+      }
+    },
+    {
+      "title": "express-how",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/get-started-with-the-adobe-express-ai-assistant.html",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "claim": "主页提示、补信息、四候选、对话修改/手工编辑/Download；Chats不共享给协作者。；原观察：opened_primary；独立QA：opened_primary；限制：",
+      "raw_source": {
+        "id": "express-how",
+        "url": "https://helpx.adobe.com/express/web/ai-assistant/get-started-with-the-adobe-express-ai-assistant.html",
+        "checked_at": "2026-10-28",
+        "publication_or_update_date": "2026-10-22",
+        "date_semantics": "page_update_or_explicit_announcement_only",
+        "status": "opened_primary",
+        "supported_claim": "主页提示、补信息、四候选、对话修改/手工编辑/Download；Chats不共享给协作者。",
+        "limitations": "",
+        "independent_qa": {
+          "url": "https://helpx.adobe.com/express/web/ai-assistant/get-started-with-the-adobe-express-ai-assistant.html",
+          "qa_status": "opened_primary",
+          "evidence_locator": "L712–750",
+          "qa_observation_zh": "提示→补资料→四候选→对话/手工修改→下载/分享文档流程。实际分享仍需批准。",
+          "source_id": "express-how",
+          "checked_at": "2026-10-28"
+        }
+      }
+    },
+    {
+      "title": "express-history",
+      "url": "https://news.adobe.com/news/2025/10/adobe-max-2025-express-ai-assistant",
+      "evidence": "primary",
+      "checked_at": "2026-10-28",
+      "claim": "官方2025-10-28宣布beta；未来企业功能描述不是现行可用证据。；原观察：opened_primary；独立QA：opened_primary；限制：",
+      "raw_source": {
+        "id": "express-history",
+        "url": "https://news.adobe.com/news/2025/10/adobe-max-2025-express-ai-assistant",
+        "checked_at": "2026-10-28",
+        "publication_or_update_date": "2025-10-28",
+        "date_semantics": "page_update_or_explicit_announcement_only",
+        "status": "opened_primary",
+        "supported_claim": "官方2025-10-28宣布beta；未来企业功能描述不是现行可用证据。",
+        "limitations": "",
+        "independent_qa": {
+          "url": "https://news.adobe.com/news/2025/10/adobe-max-2025-express-ai-assistant",
+          "qa_status": "opened_primary",
+          "evidence_locator": "L3; L8–13",
+          "qa_observation_zh": "2025-10-28 Beta公告，未来企业计划不能当当前权限；会话及手工编辑。",
+          "source_id": "express-history",
+          "checked_at": "2026-10-28"
+        }
+      }
+    },
+    {
+      "title": "express-faq-redirect",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-faq.html",
+      "evidence": "reference",
+      "checked_at": "2026-10-28",
+      "claim": "搜索缓存有10月5日额度细则，但打开重定向overview且无credits文本，未确认额度。；原观察：redirect_with_search_body_conflict；独立QA：not_retried_prior_redirect_conflict；限制：不得将缓存的每日次数/积分豁免直接纳入现行指南。",
+      "raw_source": {
+        "id": "express-faq-redirect",
+        "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-faq.html",
+        "checked_at": "2026-10-28",
+        "publication_or_update_date": null,
+        "date_semantics": "unknown",
+        "status": "redirect_with_search_body_conflict",
+        "supported_claim": "搜索缓存有10月5日额度细则，但打开重定向overview且无credits文本，未确认额度。",
+        "limitations": "不得将缓存的每日次数/积分豁免直接纳入现行指南。",
+        "independent_qa": {
+          "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-faq.html",
+          "qa_status": "not_retried_prior_redirect_conflict",
+          "evidence_locator": "original source-checks record",
+          "qa_observation_zh": "保留原重定向/搜索缓存冲突；本轮不重试该页，不确认精确积分/价格，不标原页成功。",
+          "source_id": "express-faq-redirect",
+          "checked_at": "2026-10-28"
+        }
+      }
+    }
+  ],
+  "source_ids": [
+    "express-overview",
+    "express-how",
+    "express-history",
+    "express-faq-redirect"
+  ],
+  "input": "只用原创/授权且无个人敏感信息的合成教学素材\n原创具体任务：为虚构社区读书会设计海报，只把时间从周六14:00改为周日15:00；书名、地点与自定品牌色必须保留。\n以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。",
+  "prompt": "仅设计教学练习，不运行产品、购买/试用、上传、克隆声音、外发或发布。\n分类：conversational_ai_assistant。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。\n原始输入：只用原创/授权且无个人敏感信息的合成教学素材\n目标：不同于已覆盖Firefly图像API、Photoshop API和Canva模板填充；补会话中保持设计不变量与手工接管。\n步骤依据：\n在主页用提示生成虚构活动海报并补齐占位信息\n选择候选后只修改指定文字/元素，保留其余布局\n需要时Open in editor并关闭AI Assistant转手工编辑；只准备下载审稿\n预期验收：\n把日期/地址/品牌色列为不变量并逐项对照\n检查字体、对比度、文字溢出与非目标区变化\n协作者不能看到私有Chats，因此交付独立变更说明，而非假设聊天会共享\n缺账号/许可/预算/素材授权则停止并列缺项；不能将软件权限当操作授权。\n\n原创纸面练习（never-run）：为虚构社区读书会设计海报，只把时间从周六14:00改为周日15:00；书名、地点与自定品牌色必须保留。\n以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。\n1. 在纸上列活动字段、允许修改区与三项不变量；先确认地区、账户与语言资格，不能访问则停留在离线练习。\n2. 写一条生成请求和一条局部修改请求，分开审查，不让修改要求扩展成整页重做。\n3. 设计对话编辑与手工接管对照表：哪些变化接受，哪些需Open in editor进一步修正。\n4. 准备独立变更说明供协作者阅读；Chats私有不能作为交付依据。\n停止条件：账户/地区不支持；费用规则不清且下一步可能收费；非目标文字、色彩或图层被改变；字体或Stock素材许可未知",
+  "output": "待审练习记录：输入资产与授权清单；版本/账号/预算检查；逐步操作计划；预期验收表（未观察）；失败恢复与人工批准点；来源/未知项清单。不得虚构实测输出。\n待产出而非已产出：结构化活动字段表；修改前后不变量表；图像/字体权利台账；不依赖私有Chats的交付说明",
+  "rubric": [
+    "把日期/地址/品牌色列为不变量并逐项对照",
+    "检查字体、对比度、文字溢出与非目标区变化",
+    "协作者不能看到私有Chats，因此交付独立变更说明，而非假设聊天会共享",
+    "预期交付物（未观察）：结构化活动字段表",
+    "预期交付物（未观察）：修改前后不变量表",
+    "预期交付物（未观察）：图像/字体权利台账",
+    "预期交付物（未观察）：不依赖私有Chats的交付说明",
+    "停止条件：账户/地区不支持",
+    "停止条件：费用规则不清且下一步可能收费",
+    "停止条件：非目标文字、色彩或图层被改变",
+    "停止条件：字体或Stock素材许可未知"
+  ],
+  "risks": "称会话AI助手，不称基础模型或无限自治Agent。只设计受控提示和人工审批；不承诺跨应用自动化/API。\n许可：Adobe服务与素材/字体规则另核；本轮未核完全部生成与Stock许可，商业再分发资格unknown，不替代法务审查。\n账号与费用：个人Free/Premium、桌面web、渐进Beta；Teams/Enterprise/Education不支持。现行页排除中国等地区，支持English/Bahasa Indonesia/Brazilian Portuguese/Hindi，未列中文。具体积分规则本次未确认。\n原创练习停止条件：账户/地区不支持；费用规则不清且下一步可能收费；非目标文字、色彩或图层被改变；字体或Stock素材许可未知",
+  "license": "Adobe服务与素材/字体规则另核；本轮未核完全部生成与Stock许可，商业再分发资格unknown，不替代法务审查。",
+  "cost": "个人Free/Premium、桌面web、渐进Beta；Teams/Enterprise/Education不支持。现行页排除中国等地区，支持English/Bahasa Indonesia/Brazilian Portuguese/Hindi，未列中文。具体积分规则本次未确认。",
+  "agent_boundary": "分类：conversational_ai_assistant。仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。 称会话AI助手，不称基础模型或无限自治Agent。只设计受控提示和人工审批；不承诺跨应用自动化/API。",
+  "permissions": "本练习仅纸面设计；执行、上传、计费、恢复协作项目、下载受限素材和对外发布均未获本练习自动授权。",
+  "failure_recovery": "在输入、账号、许可、预算或输出核验不满足时停止，保留原件，不把失败静默替换为成功。\n把日期/地址/品牌色列为不变量并逐项对照\n检查字体、对比度、文字溢出与非目标区变化\n协作者不能看到私有Chats，因此交付独立变更说明，而非假设聊天会共享",
+  "checked_at": "2026-10-28",
+  "evidence_note": "仅文档依据和原创待执行练习；documentation-only / never-run。两项AI应用能力不是基础模型，四项普通工具不是Agent。不代表全行业全集。对应技术链接是编辑学习关系，不证明产品能力或实测成效。",
+  "lifecycle": "unknown",
+  "lifecycle_as_of": "未核查",
+  "applicable_versions": "2025-10-28 beta公告仅作历史；2026-10-22现行帮助页仍Beta。旧FAQ缓存计费表与直接打开结果冲突。；精确首发日期unknown，来源更新日期不是产品首发。",
+  "replacement_case": "",
+  "historical_context": "2025-10-28 beta公告仅作历史；2026-10-22现行帮助页仍Beta。旧FAQ缓存计费表与直接打开结果冲突。",
+  "practice_status": "documentation-only / never-run；原创教学提案，不是实测最佳实践。",
+  "modelatlas_node_ids": [
+    "creative-express-ai-assistant"
+  ],
+  "modelatlas_links": [
+    {
+      "id": "creative-express-ai-assistant",
+      "title": "Adobe Express AI Assistant（对应技术/工具）",
+      "url": "https://2codework.github.io/modelatlas/?node=creative-express-ai-assistant",
+      "status": "editorial_mapping"
+    }
+  ],
+  "creative_learning": {
+    "entity_type": "conversational_ai_assistant",
+    "execution_status": "never-run",
+    "proof_level": "documentation-only",
+    "mapping_relation": "editorial_learning_relation",
+    "link_semantics": "editorial_mapping_not_product_execution"
+  },
+  "raw_record": {
+    "id": "gap-express-targeted",
+    "title": "设计AI助手：局部修改与人工接管",
+    "domain": "设计",
+    "product_name": "Adobe Express AI Assistant",
+    "entity_type": "conversational_ai_assistant",
+    "is_foundation_model": false,
+    "gap_vs_existing": "不同于已覆盖Firefly图像API、Photoshop API和Canva模板填充；补会话中保持设计不变量与手工接管。",
+    "learning_value": "高：补真实设计助手，同时公开地域/账号障碍",
+    "visible_documented_path": [
+      "在主页用提示生成虚构活动海报并补齐占位信息",
+      "选择候选后只修改指定文字/元素，保留其余布局",
+      "需要时Open in editor并关闭AI Assistant转手工编辑；只准备下载审稿"
+    ],
+    "original_exercise": {
+      "status": "proposed_not_executed",
+      "fixture": "只用原创/授权且无个人敏感信息的合成教学素材",
+      "acceptance_checks": [
+        "把日期/地址/品牌色列为不变量并逐项对照",
+        "检查字体、对比度、文字溢出与非目标区变化",
+        "协作者不能看到私有Chats，因此交付独立变更说明，而非假设聊天会共享"
+      ]
+    },
+    "access_and_payment": "个人Free/Premium、桌面web、渐进Beta；Teams/Enterprise/Education不支持。现行页排除中国等地区，支持English/Bahasa Indonesia/Brazilian Portuguese/Hindi，未列中文。具体积分规则本次未确认。",
+    "license_and_rights": "Adobe服务与素材/字体规则另核；本轮未核完全部生成与Stock许可，商业再分发资格unknown，不替代法务审查。",
+    "automation_boundary": "称会话AI助手，不称基础模型或无限自治Agent。只设计受控提示和人工审批；不承诺跨应用自动化/API。",
+    "lifecycle": {
+      "status": "documented_beta",
+      "release_date": null,
+      "date_note": "unknown；不从checked_at或手册版本反推出首发日期",
+      "history": "2025-10-28 beta公告仅作历史；2026-10-22现行帮助页仍Beta。旧FAQ缓存计费表与直接打开结果冲突。"
+    },
+    "source_ids": [
+      "express-overview",
+      "express-how",
+      "express-history",
+      "express-faq-redirect"
+    ],
+    "verification": {
+      "documentation_review": true,
+      "product_run": false,
+      "account_login": false,
+      "api_key_used": false,
+      "output_quality_verified": false
+    },
+    "integration_proposal": {
+      "agentwork": "新增带人工闸门的学习案例，标synthetic；不要宣称agent已执行",
+      "modelatlas": "产品/应用功能节点，不归入基础模型；Kdenlive复用现有vid-kdenlive而非重复工具节点"
+    }
+  },
+  "original_exercise_plan": {
+    "task": "为虚构社区读书会设计海报，只把时间从周六14:00改为周日15:00；书名、地点与自定品牌色必须保留。",
+    "steps": [
+      "在纸上列活动字段、允许修改区与三项不变量；先确认地区、账户与语言资格，不能访问则停留在离线练习。",
+      "写一条生成请求和一条局部修改请求，分开审查，不让修改要求扩展成整页重做。",
+      "设计对话编辑与手工接管对照表：哪些变化接受，哪些需Open in editor进一步修正。",
+      "准备独立变更说明供协作者阅读；Chats私有不能作为交付依据。"
+    ],
+    "expected_artifacts": [
+      "结构化活动字段表",
+      "修改前后不变量表",
+      "图像/字体权利台账",
+      "不依赖私有Chats的交付说明"
+    ],
+    "stop_conditions": [
+      "账户/地区不支持",
+      "费用规则不清且下一步可能收费",
+      "非目标文字、色彩或图层被改变",
+      "字体或Stock素材许可未知"
+    ]
+  }
+}
