@@ -7,3 +7,7 @@
 /* Later phases prioritise the current action; no repeated outcome card. */
 .compact-task-heading{max-width:none;margin-bottom:18px}.compact-task-heading h1{font-size:28px;margin-bottom:6px}.compact-task-heading>p{font-size:14px;margin-bottom:4px}.compact-reference{font-size:14px}.reading-panel .requirement-box a{font-size:14px}
 @media(max-width:679px){.compact-task-heading h1{font-size:24px}.compact-task-heading{margin-bottom:16px}}
+
+/* Local synthetic input preview; no embedded external player. */
+.video-input{display:block;width:100%;max-width:100%;height:auto;background:#172b29;border-radius:8px;margin:18px 0}
+.video-download{display:block;margin:12px 0;overflow-wrap:anywhere}

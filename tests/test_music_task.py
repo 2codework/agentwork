@@ -8,8 +8,8 @@ def record(obj):return sha(json.dumps(obj,ensure_ascii=False,sort_keys=True,sepa
 class Music(unittest.TestCase):
  def test_original_nine_complete_records_and_guides_are_unchanged(self):
   before=json.loads((ROOT/'tests/fixtures/music-original-nine.json').read_text());after=task_first.catalog()
-  self.assertEqual(len(after['workflows']),10)
-  self.assertEqual({w['id']:record(w) for w in after['workflows'] if not w.get('music_workflow')},before['workflows'])
+  self.assertEqual(len(after['workflows']),11)
+  self.assertEqual({w['id']:record(w) for w in after['workflows'] if not w.get('music_workflow') and not w.get('video_workflow')},before['workflows'])
   for key in ['guides','chooser','legacy_case_ids']:self.assertEqual(record(after[key]),before[key])
  def test_exact_admitted_assets_and_downloads(self):
   w=music_task.catalog(ROOT);self.assertEqual(w['connection_guide_ids'],[]);self.assertEqual(len(w['assets']),6)

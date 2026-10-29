@@ -1,0 +1,43 @@
+[
+  {
+    "id": "F1",
+    "start_s": 19.057229166666666,
+    "end_s": 28.0721875,
+    "full_text": "In this practice test, both planes use one sheet of the same size and type of paper. Only the fold design changes.",
+    "segments": [
+      3,
+      4
+    ],
+    "pcm_rms_dbfs": -17.526422147736586,
+    "text_in_synthesis_input": true,
+    "non_silent_samples": true,
+    "auditory_intelligibility": "not_listened_not_verified"
+  },
+  {
+    "id": "F2",
+    "start_s": 44.4604375,
+    "end_s": 50.34972916666667,
+    "full_text": "Each design gets three throws, so this practice session has six throws in total.",
+    "segments": [
+      9
+    ],
+    "pcm_rms_dbfs": -18.35957800135587,
+    "text_in_synthesis_input": true,
+    "non_silent_samples": true,
+    "auditory_intelligibility": "not_listened_not_verified"
+  },
+  {
+    "id": "F3",
+    "start_s": 67.76370833333333,
+    "end_s": 76.83895833333334,
+    "full_text": "Record all six distances, including short flights. Do not discard a result just because it looks disappointing.",
+    "segments": [
+      13,
+      14
+    ],
+    "pcm_rms_dbfs": -18.08222886953263,
+    "text_in_synthesis_input": true,
+    "non_silent_samples": true,
+    "auditory_intelligibility": "not_listened_not_verified"
+  }
+]

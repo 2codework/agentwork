@@ -1,0 +1,10 @@
+{
+  "purpose": "download_integrity_not_listening_or_product_verification",
+  "files": {
+    "TIMELINE.zh-CN.md": "dc6b7282b78a9ce656311c233daa77ea67883dc7c0849bec6ef995340e684a5b",
+    "captions.en.srt": "964a85277296eb09a893d68f4031f5a2d6255bd39c6e5de522989ed844049eb4",
+    "facts.json": "3ba3acbf07bad9e41fc1c0d86aeb06cec12097069e75c886ade3b6a1df65a821",
+    "paper-plane-synthetic-input-90s.mp4": "b1cc953778cff1667dffa48639ada5e91edbd4d299f1602c5cd9657f73355a2b",
+    "script.en.txt": "d4999dd309f25725b622d3ecbaea1d453b0bbab9e07528013ff17dbf4e9144f5"
+  }
+}

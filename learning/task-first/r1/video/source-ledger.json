@@ -1,0 +1,119 @@
+{
+  "schema": "video-sources/1",
+  "read_date_utc": "2026-10-29",
+  "sources": [
+    {
+      "id": "video-source-01",
+      "title": "Descript Web",
+      "url": "https://help.descript.com/getting-started/descript-for-web",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-02",
+      "title": "支持转录语言",
+      "url": "https://help.descript.com/script-editing/supported-transcription-languages",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-03",
+      "title": "套餐价格",
+      "url": "https://www.descript.com/pricing",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-04",
+      "title": "Underlord",
+      "url": "https://help.descript.com/getting-started/underlord-beta-your-ai-co-editor-in-descript",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-05",
+      "title": "创建项目",
+      "url": "https://help.descript.com/getting-started/create-a-new-project",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-06",
+      "title": "本地上传",
+      "url": "https://help.descript.com/add-and-manage-media/local",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-07",
+      "title": "支持格式",
+      "url": "https://help.descript.com/add-and-manage-media/supported-file-types",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-08",
+      "title": "Correct",
+      "url": "https://help.descript.com/script-editing/correct-your-transcript",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-09",
+      "title": "文本剪辑",
+      "url": "https://help.descript.com/getting-started/edit-like-a-doc",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-10",
+      "title": "Revert",
+      "url": "https://help.descript.com/ai-assistant/revert",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-11",
+      "title": "Version history",
+      "url": "https://help.descript.com/working-in-projects/version-history",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-12",
+      "title": "本地视频导出",
+      "url": "https://help.descript.com/export-and-share/video-gif",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-13",
+      "title": "Flite官方项目",
+      "url": "https://github.com/festvox/flite",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-14",
+      "title": "许可说明",
+      "url": "https://github.com/festvox/flite/blob/master/COPYING",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-15",
+      "title": "cmu_us_slt官方源文件",
+      "url": "https://raw.githubusercontent.com/festvox/flite/master/lang/cmu_us_slt/cmu_us_slt.c",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    },
+    {
+      "id": "video-source-16",
+      "title": "web.descript.com",
+      "url": "https://web.descript.com",
+      "checked_at": "2026-10-29",
+      "basis": "已接受读者指南中的正式来源；不表示本网站执行产品或完成主观听评。"
+    }
+  ],
+  "verification_boundary": "按已接受指南保留来源与核验日期；不把核验日期当产品发布日期。"
+}

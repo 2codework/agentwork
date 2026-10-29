@@ -1,6 +1,6 @@
 """Task-first beginner reading layer. No product execution or external calls."""
 import hashlib,json,re,shutil,sys
-import office_expansion,music_task
+import office_expansion,music_task,video_task
 from pathlib import Path
 from urllib.parse import urlsplit
 from product_books import inventory,local,load,require,registered_bytes,no_symlink_ancestors,safe_name
@@ -53,6 +53,8 @@ def preflight_build(root):
         office_expansion.catalog(root)
     require(load(local(root/'learning/task-first/r1','index.json')).get('music_pack')=='music/workflow.json','unknown music pack')
     music_task.catalog(root)
+    require(load(local(root/'learning/task-first/r1','index.json')).get('video_pack')=='video/workflow.json','unknown video pack')
+    video_task.catalog(root)
     webfiles=inventory(root/'web')
     registered=set(load(local(root,'publication-destinations.json'))['directories']['site'])
     require(set(webfiles).issubset(registered),'unregistered planned web output')
@@ -103,6 +105,8 @@ def catalog(root=ROOT):
         workflows.extend(office_expansion.catalog(root))
     require(idx.get('music_pack')=='music/workflow.json','unknown music pack')
     workflows.append(music_task.catalog(root))
+    require(idx.get('video_pack')=='video/workflow.json','unknown video pack')
+    workflows.append(video_task.catalog(root))
     cp=local(folder,idx['connection_pack']);connection=load(cp);cs=sources_registry(connection['sources']);guides=[];seen=set()
     for original in connection['routes']:
         g=dict(original)

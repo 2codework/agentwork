@@ -1,0 +1,54 @@
+{
+  "schema": "video-public-projection/1",
+  "source_manifest_sha256": "61b51ae723e13432fff35a9e00bed185cbd91d239869db7dcbd0829a086432b6",
+  "reader_original_sha256": {
+    "CHECKLIST.zh-CN.md": "ad6d07972ef5a48ac200f6e9b1e40575e525d5645fcbb79d858b569b77b24f36",
+    "GUIDE.zh-CN.md": "2545333ebb2f07e19c0571a7b412fa7635fedaae707f10975195e4892607ffc1",
+    "README.zh-CN.md": "1ec3cd7e169db830c4d78289b3a514ab9a53ad7184d2ef1b38fbcb3bf628f7e5",
+    "SOURCES.zh-CN.md": "d63117bfb78eeff41760f19820bbb5e19de7d4a3c17b652cc2a2a2f214a2ef88",
+    "assets/SHA256.json": "72130cfe218fcc32dd57aa434aaf96efbc258521a40b5b803e2a48185528cc12",
+    "assets/TIMELINE.zh-CN.md": "dc6b7282b78a9ce656311c233daa77ea67883dc7c0849bec6ef995340e684a5b",
+    "assets/captions.en.srt": "964a85277296eb09a893d68f4031f5a2d6255bd39c6e5de522989ed844049eb4",
+    "assets/facts.json": "3ba3acbf07bad9e41fc1c0d86aeb06cec12097069e75c886ade3b6a1df65a821",
+    "assets/paper-plane-synthetic-input-90s.mp4": "b1cc953778cff1667dffa48639ada5e91edbd4d299f1602c5cd9657f73355a2b",
+    "assets/script.en.txt": "d4999dd309f25725b622d3ecbaea1d453b0bbab9e07528013ff17dbf4e9144f5"
+  },
+  "source_checked_at": "2026-10-29",
+  "mapping": "PROJECTION.md",
+  "product_execution": "not_run",
+  "output_generated": false,
+  "listening_test": "pending",
+  "prompt_extraction": {
+    "source": "GUIDE.zh-CN.md",
+    "source_step": 3,
+    "format": "unique text fenced block, exact body including final newline",
+    "target": "prompt.txt",
+    "sha256": "c0d13905d1e9624d99c9efcd6355732d4dd7bf7c21bddb2410613b504237d5b2"
+  },
+  "caption_conversion": {
+    "source": "assets/captions.en.srt",
+    "target": "assets/captions.en.vtt",
+    "cue_count": 17,
+    "operation": "WEBVTT header; timestamp milliseconds comma to dot only; cue IDs and text preserved",
+    "source_sha256": "964a85277296eb09a893d68f4031f5a2d6255bd39c6e5de522989ed844049eb4",
+    "target_sha256": "8cbfff7dc1c0c8c7dd48a8341631445b4622e3d19ea3c802daff848a81f07d83"
+  },
+  "omitted": "Internal diagnostics, coordination and package-level working notes are not public assets. Original private package remains unchanged.",
+  "public_file_sha256": {
+    "CHECKLIST.zh-CN.md": "ad6d07972ef5a48ac200f6e9b1e40575e525d5645fcbb79d858b569b77b24f36",
+    "GUIDE.zh-CN.md": "2545333ebb2f07e19c0571a7b412fa7635fedaae707f10975195e4892607ffc1",
+    "PROJECTION.md": "c68e45ba0476cdf69caa435ef36e6409088a5b567d666fef537da0ea1ca0619e",
+    "README.zh-CN.md": "1ec3cd7e169db830c4d78289b3a514ab9a53ad7184d2ef1b38fbcb3bf628f7e5",
+    "SOURCES.zh-CN.md": "d63117bfb78eeff41760f19820bbb5e19de7d4a3c17b652cc2a2a2f214a2ef88",
+    "assets/SHA256.json": "72130cfe218fcc32dd57aa434aaf96efbc258521a40b5b803e2a48185528cc12",
+    "assets/TIMELINE.zh-CN.md": "dc6b7282b78a9ce656311c233daa77ea67883dc7c0849bec6ef995340e684a5b",
+    "assets/captions.en.srt": "964a85277296eb09a893d68f4031f5a2d6255bd39c6e5de522989ed844049eb4",
+    "assets/captions.en.vtt": "8cbfff7dc1c0c8c7dd48a8341631445b4622e3d19ea3c802daff848a81f07d83",
+    "assets/facts.json": "3ba3acbf07bad9e41fc1c0d86aeb06cec12097069e75c886ade3b6a1df65a821",
+    "assets/paper-plane-synthetic-input-90s.mp4": "b1cc953778cff1667dffa48639ada5e91edbd4d299f1602c5cd9657f73355a2b",
+    "assets/script.en.txt": "d4999dd309f25725b622d3ecbaea1d453b0bbab9e07528013ff17dbf4e9144f5",
+    "prompt.txt": "c0d13905d1e9624d99c9efcd6355732d4dd7bf7c21bddb2410613b504237d5b2",
+    "source-ledger.json": "78f90d157a54f29a6301494f7a8468084d021c3fbe8aca95a78cbbd7348d3713",
+    "workflow.json": "b2ac06e97f0bc29a10d6b119411b655fd959924d0c3665f3e25f9c2b14c3a2fe"
+  }
+}

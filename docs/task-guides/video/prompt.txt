@@ -1,0 +1,27 @@
+Make a rough cut of the current 90-second English practice video.
+This input already contains generic synthetic narration and original text cards.
+Keep the existing audio and video only. Do not create any new speech.
+Target duration: 45 seconds. Keep normal playback speed and the current aspect ratio.
+
+These three facts must remain audible with their meaning intact:
+F1: Both planes use one sheet of the same size and type of paper.
+    Only the fold design changes.
+F2: Each design gets three throws; there are six throws in total.
+F3: Record all six distances, including short flights.
+    Do not discard a result because it looks disappointing.
+
+Keep the instruction to keep people out of the flight path if possible.
+Remove repeated explanation, the long introduction, unnecessary pauses,
+and the trailing silence first. Do not invent results or claim a winner.
+Keep the synthetic-practice disclosure on the existing cards visible.
+Do not change a fact card to contradict the audio.
+
+Do not use AI speech, voice cloning, Regenerate, translation, stock media,
+B-roll generation, background music, effects, speed changes, or web search.
+Do not modify other compositions, create a share link, or publish anything.
+
+If 45 seconds cannot be reached without losing a required fact, cutting words
+unnaturally, or generating new speech, preserve the facts and report the
+unmet duration target. Never silently remove a number, a qualifier, or a negation.
+After editing, list removed sections, resulting duration, and the locations
+of F1, F2 and F3. I will verify the actual media myself; your report is not proof.
