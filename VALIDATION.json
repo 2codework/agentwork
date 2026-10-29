@@ -1,7 +1,7 @@
 {
-  "version": "agentwork-offline-prerequisite-intro-r1",
+  "version": "agentwork-lesson-type-guard-r1",
   "checked_at": "2026-10-29",
-  "baseline_commit": "a5aea2f6c5a8004faf63b6e741905963431aaeb9",
+  "baseline_commit": "1b3b9da462e7419dec183d1956f5bf0c67528d24",
   "manifest_scope": "all repo files excluding .git, caches, pyc and this VALIDATION.json",
   "counts": {
     "beginner_workflows": 10,
@@ -17,8 +17,8 @@
   "proof": {
     "status": "isolated_candidate_not_published",
     "offline_checks": {
-      "python": 248,
-      "node": 128,
+      "python": 252,
+      "node": 133,
       "mcp": 18,
       "creative_tests": 25,
       "creative_golden": 24,
@@ -29,9 +29,10 @@
       "permissions_cases": 54,
       "original_expected_invalid_copies": 6,
       "product_expected_invalid_copies": 10,
-      "deterministic_rebuild": "two byte-identical serial builds"
+      "deterministic_rebuild": "two byte-identical serial builds",
+      "exact_valid_detail_dom": 138
     },
-    "scope": "Twelve exact offline lesson prerequisite arrays and status enable original environment guidance plus bounded external-service fee note. Other 126 prerequisite sections and 3123 original anchors unchanged; sources/data/BOOK/ZIP/licenses/ten tasks unchanged.",
+    "scope": "Only optional lesson_markdown type guard: missing valid, present must be nonblank string; invalid runtime case isolated. Valid 138 complete DOM and 3123 old anchors unchanged. Source/data/BOOK/ZIP/licenses/CSS/ten tasks unchanged.",
     "browser": "Not run; actual reader usability pending root acceptance"
   },
   "sha256": {
@@ -59,7 +60,7 @@
     "docs/REGIONAL_OFFICE.md": "02887594860aee1213af381a87bf8eafa3fa97193331dc9e76b1698e128f3872",
     "docs/RESEARCH_SNAPSHOT.json": "b3323a834605969e171798494c17cc0115563d8a028e5229992cd02f21fa035f",
     "docs/VERIFICATION.md": "df3e7855e110326691d35c99d6d4f4e3741dfb8060deed1104f33d6166b2b4f0",
-    "docs/app.js": "6819c2cda144d6b3c92887a37f3f39f1d451dfd68f318678318f315dd4640ab7",
+    "docs/app.js": "43e272ac107610a397f4dd082a7fd6b3887ec2436b334b1d22348d85dda06ba9",
     "docs/assistant-workspace/r1/qa/HASH.sha256": "368efb8b26d474a7fd1ed93db83e276665fd145cd2ef6fd5c1a42e6183788d8a",
     "docs/assistant-workspace/r1/qa/README.md": "1a8c3665c24e7cbfa55fafe178c2edec761d5d00d809a36866007b8b1031e29a",
     "docs/assistant-workspace/r1/qa/REVISION-RECHECK.json": "b8880e7df59a609107a6afe749d1e0409266abb03fc984c8011c384153eeb50c",
@@ -193,7 +194,7 @@
     "docs/learning/mcp/raw/tests/test_contract.py": "552b75ae3a301e962ecc0021a64631fbc224d1480b64e9e8b543eafe920533a3",
     "docs/learning/mcp/raw/validate.py": "e6a42789520a69f543b0b2c677f90bdc05b0f0535c258fdc8d1474124d921ce0",
     "docs/learning/mcp/raw/verification.json": "fc71db8da368d20e477c430a9ae3f809a0007095c387b8ac604f8e0f5d0dca68",
-    "docs/library.html": "94871359f1d85e0d6f25fcc4eec28a49f9ff58d27b35154b806a2d600ec5153b",
+    "docs/library.html": "ccbae4c9e3c76292b87a88993ca137b55ec4b9a2a5d8731db0a7e3b55eaf4a74",
     "docs/mcp-offline-labs.zip": "6abe0d208035c2e7e2031edfbe766c849ef9902718b3aa8080cdc5e6955aad09",
     "docs/office-agents/r1/qa/audit.md": "0ee5af38ecc8d7f752dcecc84a21b0517a1584465013b31ff3ee3e588bad0311",
     "docs/office-agents/r1/qa/final-hashes.json": "bf3d5d71f59e7e7b9fdaefaeee9af31339e46d9eff7a78f828162bee01cd4d62",
@@ -1381,7 +1382,7 @@
     "research/roles.md": "095abd18cf8bbf434ffcd4ef5678070e7de50d1a0db9d8752c3a7780e2acd6c5",
     "scripts/asset_versions.py": "846bff8cae6e0883f1e6c554378a03a24ecb33cb891454875de9e3db4c2e350e",
     "scripts/assistant_workspace.py": "25ff69d7b149a55e09e0a845ee93b8c282b362bb2085ba8eba369e94b1c56b8d",
-    "scripts/build.py": "65f098f3ae1c464e693676c6e3846d43c19daf9c4e532279158b638e01b96552",
+    "scripts/build.py": "90860cafd33ec2407f6e39a38408b03f9c5db37158c9c402634a5920a1f61a9c",
     "scripts/check_checkpoint.py": "773bb40c286fa3659eed12b44f56ab66e7aa836afc1963e0e21456277cdaf164",
     "scripts/check_pages.py": "c4a931ba85b012df9c68436bbcd4a066bdcb3d7e51da56c8841ada94cc5c11c3",
     "scripts/creative_delivery_lab.py": "54f4dcf5a861175f4cee4e5d057228d6136381717ef39e9dcfdefd06da5a7297",
@@ -1400,7 +1401,7 @@
     "site/.nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "site/BOOK.md": "6383c06931dcb9e88cf540e463a9fb3d3af4a172603863d84600f31f86d5ac42",
     "site/REGIONAL_OFFICE.md": "02887594860aee1213af381a87bf8eafa3fa97193331dc9e76b1698e128f3872",
-    "site/app.js": "6819c2cda144d6b3c92887a37f3f39f1d451dfd68f318678318f315dd4640ab7",
+    "site/app.js": "43e272ac107610a397f4dd082a7fd6b3887ec2436b334b1d22348d85dda06ba9",
     "site/assistant-workspace/r1/qa/HASH.sha256": "368efb8b26d474a7fd1ed93db83e276665fd145cd2ef6fd5c1a42e6183788d8a",
     "site/assistant-workspace/r1/qa/README.md": "1a8c3665c24e7cbfa55fafe178c2edec761d5d00d809a36866007b8b1031e29a",
     "site/assistant-workspace/r1/qa/REVISION-RECHECK.json": "b8880e7df59a609107a6afe749d1e0409266abb03fc984c8011c384153eeb50c",
@@ -1534,7 +1535,7 @@
     "site/learning/mcp/raw/tests/test_contract.py": "552b75ae3a301e962ecc0021a64631fbc224d1480b64e9e8b543eafe920533a3",
     "site/learning/mcp/raw/validate.py": "e6a42789520a69f543b0b2c677f90bdc05b0f0535c258fdc8d1474124d921ce0",
     "site/learning/mcp/raw/verification.json": "fc71db8da368d20e477c430a9ae3f809a0007095c387b8ac604f8e0f5d0dca68",
-    "site/library.html": "94871359f1d85e0d6f25fcc4eec28a49f9ff58d27b35154b806a2d600ec5153b",
+    "site/library.html": "ccbae4c9e3c76292b87a88993ca137b55ec4b9a2a5d8731db0a7e3b55eaf4a74",
     "site/mcp-offline-labs.zip": "6abe0d208035c2e7e2031edfbe766c849ef9902718b3aa8080cdc5e6955aad09",
     "site/office-agents/r1/qa/audit.md": "0ee5af38ecc8d7f752dcecc84a21b0517a1584465013b31ff3ee3e588bad0311",
     "site/office-agents/r1/qa/final-hashes.json": "bf3d5d71f59e7e7b9fdaefaeee9af31339e46d9eff7a78f828162bee01cd4d62",
@@ -2074,15 +2075,17 @@
     "tests/fixtures/express-current-display-baseline.json": "83c6373e2c1035edbd2b2ab83b95d149870b1869f9e040071e07b0d36d61602f",
     "tests/fixtures/express-original-display.json": "cb65de46c2ee19ceeb586bce3912526a72b9b2cd2034ee88a6b0bf161429acfa",
     "tests/fixtures/legacy-case-anchors.json": "13198d0f9962a5667ef21a7b3b3c5d5c40543e6c2261d3ef886edab7b8f3c61e",
+    "tests/fixtures/lesson-type-valid-dom-baseline.json": "a91d6204aa0fe6e93a7615b0b997c9c6abfe7dcdd5a295ec69730833e9f54f39",
     "tests/fixtures/music-original-nine.json": "3fc5db326922fb8edcea802f6beacbfb55ba11c193532caa1b60cbf65ff5d81e",
     "tests/fixtures/nonlesson-prerequisites-baseline.json": "21dab97329bf24f0ccf9d6f9876277bc1d061e765d9fd1b39ae3b18442b44b76",
     "tests/fixtures/regional-office-baseline.json": "bd4ae92e2b896dcf902bc2e870402a73f5b9a2500dc30923a2b379a8383f814b",
     "tests/legacy-dom-fixture.js": "af263ee6cffd6383ed445af2f1ef6f1114b7ee931b2fe5a0c3f958be44f1b36f",
     "tests/legacy-intro.test.js": "eb47617e7c4195944b949860f98292f224351d18aab6f65b27f46ab64eb536cd",
+    "tests/lesson-type-guard.test.js": "38357e8512d0e56843968a4b5f04d25497e1ba5cb08243f07eee17138efac150",
     "tests/music-task-ui.test.js": "cb049b5f51c017f5d2914d7a18dcfa63a7ad273fb6e1c59d5a9dc6df4857e396",
     "tests/office-ui.test.js": "7c52a7c1cd6b24c1d5fd8c855bd74b2a27ec57d753c442aef03a6c9532e90497",
     "tests/offline-office-ui.test.js": "6d5a3be6837289b495435c9b9eeabc32c0a0a69eb18cb773083e0aac7a594fa3",
-    "tests/offline-prerequisite-intro.test.js": "8912723c699cb81b811dc771711a162b49a0a6b30deb352ac06d510338afc82f",
+    "tests/offline-prerequisite-intro.test.js": "1587cdd1aee12a181ebd58ad5e16affa80196306f0b12b8acc70f22df61fba93",
     "tests/product-books.test.js": "daf96789164f572367147cf43d132831b8d53389ffc4a08eadc0e73cc4a3a48c",
     "tests/product-catalog.test.js": "8734f564a4af6d4786ebe421f0cf4db5c6e64421665d77d8bfded46feac8f8da",
     "tests/product-reader-ui.test.js": "d009bf979ef28ab6d74a1d04af48d56e3744d1a68a891af80752f44955ce5ca5",
@@ -2105,6 +2108,7 @@
     "tests/test_creative_workflows.py": "28e726fe457064d8192111c5a47b81ba973ebc18f8e7049307574d1d27ba16bd",
     "tests/test_entry_labels.py": "ebfd32620a0e1d6fe3d732795cb997a0abed03f69ffa5ca4e649b2680eb3e816",
     "tests/test_express_current_display.py": "00fe4d4b7b0777a5e045b0661753bc4274c2e23d2329b46414b51b439df088ee",
+    "tests/test_lesson_type_guard.py": "e0e6b3627f49de893c9ba1b45ecc5220b03f511eb70a3237b322a09476c9d473",
     "tests/test_mcp_learning.py": "924d943f503051b7d9c962b536e2da483f4e35b36e1e4394c7682c5d32aad039",
     "tests/test_music_task.py": "f666c3a14d04e6d285a93d2fca334e6e95710c4a39314373bb31e6c54db20d20",
     "tests/test_normalize.py": "4d0dd52a923168a3b27be16e9512e12f0fba9f674d0c821568fc73cb7134ccba",
@@ -2119,7 +2123,7 @@
     "tests/test_regional_office.py": "26fbdce7fe054cf12c69a42e9695f8e02b0ffb5920a280b4486654ef6ffa2a1d",
     "tests/test_task_first.py": "3bfc1b07805e22211297aabb2f34fb7645c4470a5cb5f12b6bc854faf58e8b4e",
     "tests/test_task_first_publish.py": "8b1b325b2438487403826ff4c0592dd41ce5e99fd6834c359ff2a226f144d1f2",
-    "web/app.js": "6819c2cda144d6b3c92887a37f3f39f1d451dfd68f318678318f315dd4640ab7",
+    "web/app.js": "43e272ac107610a397f4dd082a7fd6b3887ec2436b334b1d22348d85dda06ba9",
     "web/creative-delivery-lab.html": "50e78af2b1fe3070a417832b44dd6d7bba491d291482ad87e295fcaf4c4c7bfb",
     "web/index.html": "a810a3b0edadbd4ff7cbd87be3697b5414683dfd1517bd8461ac9bacd1f63b7d",
     "web/library.html": "25a69203480fdcbbf8e4c18a434751288b9fdc7a4cacb12e7adcb94cd40e5811",
@@ -2143,6 +2147,5 @@
   "depends_on": {
     "candidate": "agentwork-express-rubric-fix-r1",
     "validation_sha256": "417da496f3a2f47922f1157072f0d9979ebd1ef674da56eed3f4514d09e9e134"
-  },
-  "dependency": "agentwork-reader-jump-layout-r1"
+  }
 }

@@ -25,6 +25,8 @@ def validate(data):
     for c in data['cases']:
         assert re.fullmatch(r'[a-z0-9-]{1,80}', c['id']) and c['id'] not in seen, 'Invalid/duplicate ID'
         seen.add(c['id'])
+        if 'lesson_markdown' in c and not (isinstance(c['lesson_markdown'], str) and c['lesson_markdown'].strip()):
+            raise ValueError('Invalid lesson_markdown for case '+c['id']+': expected nonblank string when present')
         for k in ['title', 'summary', 'evidence']:
             assert isinstance(c[k], str) and c[k].strip(), k
         assert c['evidence'] in ['synthetic', 'primary', 'secondary'], 'Invalid evidence'

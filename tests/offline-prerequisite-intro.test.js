@@ -24,7 +24,7 @@ test('negation, missing reordered duplicate or wrong-type arrays, unrecognized I
   c=>c.prerequisites=required.join('\n'),c=>c.prerequisites=null,c=>c.prerequisites[1]={text:required[1]},
   c=>c.id='mcp-lab-unknown',c=>c.verification_status='product_run',c=>c.verification_status=null,c=>c.lesson_markdown=''
  ];
- for(const change of changes){const c=structuredClone(base);change(c);f.ctx.current=c;assert.equal(f.run('exactOfflinePrerequisites(current)'),false);const t=text(render(f,c));assert.ok(t.includes('不能据此认为免费或无需账号'));assert.ok(!t.includes(note));assert.ok(!t.includes('这份离线练习的前置知识与环境'));}
+ for(const change of changes){const c=structuredClone(base);change(c);f.ctx.current=c;assert.equal(f.run('exactOfflinePrerequisites(current)'),false);const req=render(f,c),t=text(req||f.ids.content);if(c.lesson_markdown===''){assert.equal(req,undefined);assert.match(t,/课程正文格式异常/);}else assert.ok(t.includes('不能据此认为免费或无需账号'));assert.ok(!t.includes(note));assert.ok(!t.includes('这份离线练习的前置知识与环境'));}
 });
 test('specific future cost text takes priority over the missing-cost note',()=>{
  const f=fixture(root),c=structuredClone(f.ctx.fixtureData.cases.find(c=>c.id==='mcp-lab-tools'));c.cost='新增服务另行计费，不代表本地课程费用';const t=text(render(f,c));assert.ok(t.includes(c.cost));assert.ok(!t.includes(note));assert.ok(t.includes(required[1]));
