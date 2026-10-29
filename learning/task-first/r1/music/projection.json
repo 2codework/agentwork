@@ -1,0 +1,46 @@
+{
+  "schema": "music-public-projection/1",
+  "source_manifest_sha256": "c4875405285ab7ef7d40f9f2a8e26f153085c77bbdb7893820c5bca51df9f47c",
+  "source_report_sha256": "06045af91d693101678ac22fec0ca84210089049da48c591b4b6c77f83895cbd",
+  "source_ledger_sha256": "b02296c475feca9ce855506e540c9c813bb0e027d68418db8e003f6e8da9ed27",
+  "source_checked_at": "2026-10-29",
+  "mapping": "PROJECTION.md",
+  "product_execution": "not_run",
+  "audio_generated": false,
+  "listening_test": "not_run",
+  "unchanged_assets": {
+    "brief.txt": "59b47e4871599dd02f93db778398628a302be3d0fb3e6f28a93b59d3e135249e",
+    "prompt-A-r1.txt": "80c8c03c50708a8808644576479fb1a97728935a89bb01f1e3cd7c802cae5c59",
+    "prompt-B-r1.txt": "14f76724d650bcd70757b86dc14b4a0d84707e63a78ffbc363e09ec258c24295",
+    "listening-record.csv": "b1fef3a250bed1b74145ee0e9a4bcfb918e234731a6c598c9141e1b929c4f98b",
+    "decision-template.txt": "404b262d1c17ce5ee80f2b4146e0ee7283c0c887f13d4a5c86988cb0ebc1063e",
+    "folder-example.txt": "448d2ab4a2ee04e1680b7527bcf73695658355bf8047fe83b0b5dea67eee3cbd"
+  },
+  "transformed": {
+    "REPORT.zh-CN.md": [
+      "workflow.json",
+      "reader.md"
+    ],
+    "source-ledger.json": [
+      "source-ledger.json"
+    ]
+  },
+  "omitted": [
+    "CURRENT-CATALOG-CHECK.zh-CN.md",
+    "REVISION.zh-CN.md",
+    "VALIDATION.json",
+    "r1-to-r2.diff"
+  ],
+  "public_file_sha256": {
+    "PROJECTION.md": "51126a5d09f2dc9e68136c503106d3323e335f44f75c1f9f265118c6918737d0",
+    "brief.txt": "59b47e4871599dd02f93db778398628a302be3d0fb3e6f28a93b59d3e135249e",
+    "decision-template.txt": "404b262d1c17ce5ee80f2b4146e0ee7283c0c887f13d4a5c86988cb0ebc1063e",
+    "folder-example.txt": "448d2ab4a2ee04e1680b7527bcf73695658355bf8047fe83b0b5dea67eee3cbd",
+    "listening-record.csv": "b1fef3a250bed1b74145ee0e9a4bcfb918e234731a6c598c9141e1b929c4f98b",
+    "prompt-A-r1.txt": "80c8c03c50708a8808644576479fb1a97728935a89bb01f1e3cd7c802cae5c59",
+    "prompt-B-r1.txt": "14f76724d650bcd70757b86dc14b4a0d84707e63a78ffbc363e09ec258c24295",
+    "reader.md": "6ed724eb396e5ec5a1acbacbb30c887506a2600e331ed694df879de02d533bde",
+    "source-ledger.json": "d311e51f92b4cbbcd54614d206af121d0ebd3913f0fb2d4223a0212ced72a8cf",
+    "workflow.json": "0b42cc3cbe24cde6ae6c3592db5a1b4e3abb65430f1dc6b6aa5e835fef7b0cd4"
+  }
+}

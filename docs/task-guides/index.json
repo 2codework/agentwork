@@ -90,7 +90,19 @@
     "office-expansion/projection.json": "47800b77d49977054bef89b8a9e6f1c53e743489dfe7c514417e617055b997a8",
     "office-expansion/proposed-workflows.json": "d5a49839f47319d5a79974e4568157889cb4d64768587d9b1c9605afbd8360f6",
     "office-expansion/sources.json": "28213bc70f19e62711a887ec24633a9f43c98b36d50e88acb9a1198ab0503097",
-    "office-expansion/three-day-content.md": "e22c2232b12d4a9ebecd4ee29389aa73442334733a3a5901bc004bc478796b74"
+    "office-expansion/three-day-content.md": "e22c2232b12d4a9ebecd4ee29389aa73442334733a3a5901bc004bc478796b74",
+    "music/listening-record.csv": "b1fef3a250bed1b74145ee0e9a4bcfb918e234731a6c598c9141e1b929c4f98b",
+    "music/workflow.json": "0b42cc3cbe24cde6ae6c3592db5a1b4e3abb65430f1dc6b6aa5e835fef7b0cd4",
+    "music/source-ledger.json": "d311e51f92b4cbbcd54614d206af121d0ebd3913f0fb2d4223a0212ced72a8cf",
+    "music/reader.md": "6ed724eb396e5ec5a1acbacbb30c887506a2600e331ed694df879de02d533bde",
+    "music/folder-example.txt": "448d2ab4a2ee04e1680b7527bcf73695658355bf8047fe83b0b5dea67eee3cbd",
+    "music/decision-template.txt": "404b262d1c17ce5ee80f2b4146e0ee7283c0c887f13d4a5c86988cb0ebc1063e",
+    "music/PROJECTION.md": "51126a5d09f2dc9e68136c503106d3323e335f44f75c1f9f265118c6918737d0",
+    "music/prompt-B-r1.txt": "14f76724d650bcd70757b86dc14b4a0d84707e63a78ffbc363e09ec258c24295",
+    "music/projection.json": "5accade6df21b2dc7c7d3f100646a377287fed31cfa502c09f053e763ca00b9e",
+    "music/brief.txt": "59b47e4871599dd02f93db778398628a302be3d0fb3e6f28a93b59d3e135249e",
+    "music/prompt-A-r1.txt": "80c8c03c50708a8808644576479fb1a97728935a89bb01f1e3cd7c802cae5c59"
   },
-  "office_expansion_pack": "office-expansion/proposed-workflows.json"
+  "office_expansion_pack": "office-expansion/proposed-workflows.json",
+  "music_pack": "music/workflow.json"
 }

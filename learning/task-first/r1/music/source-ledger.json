@@ -1,0 +1,116 @@
+{
+  "schema": "music-public-sources/1",
+  "checked_at": "2026-10-29",
+  "verification_scope": "official_documentation_not_product_execution",
+  "sources": [
+    {
+      "id": "app-help",
+      "url": "https://support.google.com/gemini/answer/16901237?co=GENIE.Platform%3DDesktop&hl=en",
+      "locator": "What you need / Create music / Download",
+      "short_quote": "short (about 1 minute)",
+      "supported_scope": "支持具体无代码入口、18岁/Keep Activity条件、MP3导出与约1分钟short；非精确20秒。",
+      "title": "Gemini Apps：创建与下载音乐",
+      "checked_at": "2026-10-29"
+    },
+    {
+      "id": "app-update",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
+      "locator": "Sep 04, 2026 announcement",
+      "short_quote": "Lyria 3.5, our best-sounding music generation model, is now available in the Gemini app and the Gemini API.",
+      "supported_scope": "3.5进入App/API；不能用“全球”覆盖具体账号地区门槛。",
+      "title": "Gemini Apps 音乐更新公告",
+      "checked_at": "2026-10-29"
+    },
+    {
+      "id": "api-music",
+      "url": "https://ai.google.dev/gemini-api/docs/music-generation",
+      "locator": "Model table / Limitations",
+      "short_quote": "The Lyria 3 Clip model always generates a 30-second clip.",
+      "supported_scope": "API Clip固定30秒；3.5分钟级；与App入口分开。",
+      "title": "Gemini API 音乐生成文档",
+      "checked_at": "2026-10-29"
+    },
+    {
+      "id": "api-live",
+      "url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+      "locator": "Introduction",
+      "short_quote": "Lyria RealTime is an experimental model.",
+      "supported_scope": "实验流式WebSocket，不是App成曲下载；示例/规格采样率不外推App。",
+      "title": "Lyria RealTime 文档",
+      "checked_at": "2026-10-29"
+    },
+    {
+      "id": "lifecycle",
+      "url": "https://ai.google.dev/gemini-api/docs/deprecations/",
+      "locator": "Lyria models",
+      "short_quote": "No shutdown date announced",
+      "supported_scope": "3.5、Clip、Pro、RealTime表当前均无公布关停；Pro建议替代3.5。",
+      "title": "Gemini API 模型生命周期",
+      "checked_at": "2026-10-29"
+    },
+    {
+      "id": "app-regions",
+      "url": "https://support.google.com/gemini/answer/13575153?hl=en",
+      "locator": "Supported countries & territories",
+      "short_quote": "Mainland China (Workspace only)",
+      "supported_scope": "地区/账户限制，不能承诺大陆个人账户。",
+      "title": "Gemini 网页版支持地区",
+      "checked_at": "2026-10-29"
+    },
+    {
+      "id": "app-limits",
+      "url": "https://support.google.com/gemini/answer/16275805?gl=US&hl=en",
+      "locator": "Feature availability / Usage limit changes",
+      "short_quote": "Limits may change without notice, including due to capacity constraints.",
+      "supported_scope": "无付费计划表列音乐可用，但不保证固定免费次数；4次仅课程上限。",
+      "title": "Gemini Apps 功能与使用额度",
+      "checked_at": "2026-10-29"
+    },
+    {
+      "id": "api-pricing",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "locator": "Lyria 3.5 / Lyria 3",
+      "short_quote": "Lyria 3.5 (Full Song)",
+      "supported_scope": "当前表$0.08/song；Clip $0.04/song，免费层Not available，非App价格。",
+      "title": "Gemini API 定价",
+      "checked_at": "2026-10-29"
+    },
+    {
+      "id": "api-regions",
+      "url": "https://ai.google.dev/gemini-api/docs/available-regions",
+      "locator": "Available regions",
+      "short_quote": "The Gemini API and Google AI Studio are available in the following countries and territories.",
+      "supported_scope": "API单独地域门槛；未调用。",
+      "title": "Gemini API 支持地区",
+      "checked_at": "2026-10-29"
+    },
+    {
+      "id": "terms",
+      "url": "https://policies.google.com/terms",
+      "locator": "Your content",
+      "short_quote": "Google won’t claim ownership over that content.",
+      "supported_scope": "Google 不主张生成内容的所有权，不等于版权登记或不侵权担保。条款链接按地区返回不同国家版本；读者须核对自己适用的国家版本与生效日期，不能将某一地区版本视为全球条款。",
+      "title": "Google 服务条款",
+      "checked_at": "2026-10-29"
+    },
+    {
+      "id": "policy",
+      "url": "https://policies.google.com/terms/generative-ai/use-policy?hl=en",
+      "locator": "Prohibited use",
+      "short_quote": "Misrepresenting the provenance of generated content by claiming it was created solely by a human, in order to deceive.",
+      "supported_scope": "不得欺骗性宣称纯人工制作；非完整许可法律意见。",
+      "title": "生成式 AI 使用政策",
+      "checked_at": "2026-10-29"
+    },
+    {
+      "id": "privacy",
+      "url": "https://support.google.com/gemini/answer/13594961?hl=en",
+      "locator": "Privacy Hub heading",
+      "short_quote": "Last updated: October 26, 2026",
+      "supported_scope": "提示学员先读隐私，本文不用隐私资料作输入。",
+      "title": "Gemini Apps 隐私说明",
+      "checked_at": "2026-10-29"
+    }
+  ],
+  "read_date_utc": "2026-10-29"
+}

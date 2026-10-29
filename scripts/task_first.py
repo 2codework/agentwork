@@ -1,6 +1,6 @@
 """Task-first beginner reading layer. No product execution or external calls."""
 import hashlib,json,re,shutil,sys
-import office_expansion
+import office_expansion,music_task
 from pathlib import Path
 from urllib.parse import urlsplit
 from product_books import inventory,local,load,require,registered_bytes,no_symlink_ancestors,safe_name
@@ -51,6 +51,8 @@ def preflight_build(root):
     if load(local(root/'learning/task-first/r1','index.json')).get('office_expansion_pack'):
         require(load(local(root/'learning/task-first/r1','index.json'))['office_expansion_pack']=='office-expansion/proposed-workflows.json','unknown office expansion pack')
         office_expansion.catalog(root)
+    require(load(local(root/'learning/task-first/r1','index.json')).get('music_pack')=='music/workflow.json','unknown music pack')
+    music_task.catalog(root)
     webfiles=inventory(root/'web')
     registered=set(load(local(root,'publication-destinations.json'))['directories']['site'])
     require(set(webfiles).issubset(registered),'unregistered planned web output')
@@ -99,6 +101,8 @@ def catalog(root=ROOT):
     if 'office_expansion_pack' in idx:
         require(idx['office_expansion_pack']=='office-expansion/proposed-workflows.json','unknown office expansion pack')
         workflows.extend(office_expansion.catalog(root))
+    require(idx.get('music_pack')=='music/workflow.json','unknown music pack')
+    workflows.append(music_task.catalog(root))
     cp=local(folder,idx['connection_pack']);connection=load(cp);cs=sources_registry(connection['sources']);guides=[];seen=set()
     for original in connection['routes']:
         g=dict(original)
@@ -117,7 +121,7 @@ def catalog(root=ROOT):
     for card in connection['chooser']['cards']:require(card['route_id'] is None or card['route_id'] in seen,'unresolved chooser route')
     legacy=load(root/'site/data.json')
     require(len(legacy['cases'])==138,'legacy case count changed')
-    return {'schema_version':'task-first/1.0','status':idx['status'],'workflows':workflows,'guides':guides,'chooser':connection['chooser'],'categories':list(dict.fromkeys(CATEGORIES[w['id']] for w in workflows)),'legacy_case_ids':[c['id'] for c in legacy['cases']],'source_scope':{'workflow_pack':idx['workflow_pack'],'connection_pack':idx['connection_pack'],'office_expansion_pack':idx.get('office_expansion_pack'),'verification':'documentation_and_author_examples_not_product_execution'}}
+    return {'schema_version':'task-first/1.0','status':idx['status'],'workflows':workflows,'guides':guides,'chooser':connection['chooser'],'categories':list(dict.fromkeys(w['category'] for w in workflows)),'legacy_case_ids':[c['id'] for c in legacy['cases']],'source_scope':{'workflow_pack':idx['workflow_pack'],'connection_pack':idx['connection_pack'],'office_expansion_pack':idx.get('office_expansion_pack'),'verification':'documentation_and_author_examples_not_product_execution'}}
 def pin_page(dest,filename,attribute,datafile):
     page=dest/filename;html=page.read_text()
     def tag(match):

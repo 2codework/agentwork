@@ -1,0 +1,8 @@
+discovery-intro/
+  brief.txt
+  prompt-A-r1.txt
+  prompt-B-r1.txt
+  discovery-A-r1-original.mp3       # 学习者实跑后保存
+  discovery-B-r1-original.mp3       # 学习者实跑后保存
+  listening-record.csv
+  decision.txt
