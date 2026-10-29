@@ -1,7 +1,7 @@
 {
-  "version": "agentwork-poster-task-integration-r1",
+  "version": "agentwork-poster-fullsize-links-r1",
   "checked_at": "2026-10-29",
-  "baseline_commit": "933497664a090da50088bdd02b521e2d1913b120",
+  "baseline_commit": "b653dda043d2ac6c5d9ce2c4b05e3d9ead16fe5e",
   "manifest_scope": "all repo files excluding .git, caches, pyc and this VALIDATION.json",
   "counts": {
     "beginner_workflows": 13,
@@ -21,7 +21,7 @@
     "status": "isolated_candidate_not_published",
     "offline_checks": {
       "python": 273,
-      "node": 155,
+      "node": 158,
       "node_modes": "default complete command and serial complete command",
       "mcp_tests": 18,
       "mcp_cases": 12,
@@ -30,13 +30,14 @@
       "pages_files": 714,
       "strict_json": 505,
       "html": 16,
-      "double_build_files": 2256
+      "double_build_files": 2256,
+      "other_task_phase_dom_exact": 72
     },
     "product_execution": "not_run",
     "output_image_generated": false,
     "authored_reference": "not_product_output",
     "browser_qa": "not_run",
-    "scope": "Static source, asset integrity, safe DOM mock, exact preservation and quiescent build checks; not ChatGPT image-edit execution, pixel-retention guarantee or unbounded atomic build proof."
+    "scope": "Only registered poster before/reference PNG full-size native links; original image/source/data/13 workflow objects/copy payloads/other twelve tasks DOM unchanged."
   },
   "sha256": {
     ".github/workflows/checks.yml": "031409aa64ddf377d741d2fa54de73c0af1da005e9a86b8a6878846402e3deaa",
@@ -174,7 +175,7 @@
     "docs/creative-workflows/r2/qa-dispositions.json": "344eed6b6596c6e1fed8cef4a7e9ecde8018e25b694a76918afdeb5dfa5e4643",
     "docs/creative-workflows/r2/validation.json": "f0f2dad0b87f63a62eddfea8c38accea026ec2dea774934a28958b2b56d0b13f",
     "docs/data.json": "e4ff39b74c99cc39095c36ff84714c517161a9b7f43748a3418b7575b49c3cfc",
-    "docs/index.html": "5ec3368a114f933f2be8b57eee0299984b35416907d82bf7e024aabb588a15a0",
+    "docs/index.html": "4df07fa00b8bcc85e11bc4891d9129187636e7eef64af913b2ca5295b7c310bc",
     "docs/learning/mcp/overlay.json": "65b51f88d5f371e92bc799b76ed2c04a6e629dae219137f4ac0f17a79cc33ade",
     "docs/learning/mcp/raw/README.md": "06a6b350077bd39e50bed3e9a6b5a78a845b05649ad1290b197b0c6c47f8b585",
     "docs/learning/mcp/raw/cases.json": "baf6efc3565bfb09a45986f7c1fbcf50e5d5e194e98fa985231d369380266cb1",
@@ -612,7 +613,7 @@
     "docs/product-books/tasks/awbench-support-draft-v1.json": "15e93e400ac211d228048afe4091f07144854c7aa705b0859c7b9b86fc5a01d8",
     "docs/product-books-data.json": "d8f3822d1b73e984e9afc50bcfd75995184683510f4eaa7157c9331af5e108d8",
     "docs/product-books.css": "7c526ddfc2b623a50513a865dc2d4fb5fe092bb194ece0afd22aed7f90aa6a8d",
-    "docs/product-books.html": "f7ea17efed84f614c969a99ffe94ed6e2c95ddb9bad8cc598dd936b9cdaabb0c",
+    "docs/product-books.html": "55fe4ae0ddb989019cd6c936342375079f8a46e711c149a0b6e5b3445e93af38",
     "docs/product-books.js": "9e67d29f92af90210217c713f7954ac9026e820bddafbede5d616a90408620cd",
     "docs/product-library.html": "4ee46ac49462dfe219ea9c65be376b9b91f157ba5a57b08a244762a85b45713b",
     "docs/product-library.js": "85aea1f49230bc95c307a900e7113c092429f734c0e508c7ec6f1b2540b254d0",
@@ -635,7 +636,7 @@
     "docs/style.css": "0d44a30cc0b4fa6729d2d05911eec9e6d8c70fe8742408c04da57013ef0bcd7a",
     "docs/task-first-data.json": "5d817c85b212e783eb4932807ff5db4ff16b835f5c8af4de6038dc01f61d6e23",
     "docs/task-first.css": "cfff3587042744f7a99d624ae168c24d6477f877065660eb8faf2627bbaf3883",
-    "docs/task-first.js": "ccc4e08872a5d41190528dd3518bc02c19c0e2e4b932e0002f46e2a13558e9f2",
+    "docs/task-first.js": "e9b960f37c3ba291aa341539d5ee03360968007b9716f565aa5f4ec0cd730bc3",
     "docs/task-guides/connections/DELTA.md": "300151c494a4af3c6ecf5c3b2d5c6650d480fba653f8b0c8089887c1eb65060d",
     "docs/task-guides/connections/GUIDE.zh-CN.md": "1de3475e966dbfe47401fb09e24de206488b2826ea6f2da5f5f1190cc21630a9",
     "docs/task-guides/connections/README.md": "f34e56bf0ea8e2038dc840a55b437f3c3baece118292ef87d11bf34c55f1aeeb",
@@ -1612,7 +1613,7 @@
     "site/creative-workflows/r2/qa-dispositions.json": "344eed6b6596c6e1fed8cef4a7e9ecde8018e25b694a76918afdeb5dfa5e4643",
     "site/creative-workflows/r2/validation.json": "f0f2dad0b87f63a62eddfea8c38accea026ec2dea774934a28958b2b56d0b13f",
     "site/data.json": "e4ff39b74c99cc39095c36ff84714c517161a9b7f43748a3418b7575b49c3cfc",
-    "site/index.html": "5ec3368a114f933f2be8b57eee0299984b35416907d82bf7e024aabb588a15a0",
+    "site/index.html": "4df07fa00b8bcc85e11bc4891d9129187636e7eef64af913b2ca5295b7c310bc",
     "site/learning/mcp/overlay.json": "65b51f88d5f371e92bc799b76ed2c04a6e629dae219137f4ac0f17a79cc33ade",
     "site/learning/mcp/raw/README.md": "06a6b350077bd39e50bed3e9a6b5a78a845b05649ad1290b197b0c6c47f8b585",
     "site/learning/mcp/raw/cases.json": "baf6efc3565bfb09a45986f7c1fbcf50e5d5e194e98fa985231d369380266cb1",
@@ -2050,7 +2051,7 @@
     "site/product-books/tasks/awbench-support-draft-v1.json": "15e93e400ac211d228048afe4091f07144854c7aa705b0859c7b9b86fc5a01d8",
     "site/product-books-data.json": "d8f3822d1b73e984e9afc50bcfd75995184683510f4eaa7157c9331af5e108d8",
     "site/product-books.css": "7c526ddfc2b623a50513a865dc2d4fb5fe092bb194ece0afd22aed7f90aa6a8d",
-    "site/product-books.html": "f7ea17efed84f614c969a99ffe94ed6e2c95ddb9bad8cc598dd936b9cdaabb0c",
+    "site/product-books.html": "55fe4ae0ddb989019cd6c936342375079f8a46e711c149a0b6e5b3445e93af38",
     "site/product-books.js": "9e67d29f92af90210217c713f7954ac9026e820bddafbede5d616a90408620cd",
     "site/product-library.html": "4ee46ac49462dfe219ea9c65be376b9b91f157ba5a57b08a244762a85b45713b",
     "site/product-library.js": "85aea1f49230bc95c307a900e7113c092429f734c0e508c7ec6f1b2540b254d0",
@@ -2073,7 +2074,7 @@
     "site/style.css": "0d44a30cc0b4fa6729d2d05911eec9e6d8c70fe8742408c04da57013ef0bcd7a",
     "site/task-first-data.json": "5d817c85b212e783eb4932807ff5db4ff16b835f5c8af4de6038dc01f61d6e23",
     "site/task-first.css": "cfff3587042744f7a99d624ae168c24d6477f877065660eb8faf2627bbaf3883",
-    "site/task-first.js": "ccc4e08872a5d41190528dd3518bc02c19c0e2e4b932e0002f46e2a13558e9f2",
+    "site/task-first.js": "e9b960f37c3ba291aa341539d5ee03360968007b9716f565aa5f4ec0cd730bc3",
     "site/task-guides/connections/DELTA.md": "300151c494a4af3c6ecf5c3b2d5c6650d480fba653f8b0c8089887c1eb65060d",
     "site/task-guides/connections/GUIDE.zh-CN.md": "1de3475e966dbfe47401fb09e24de206488b2826ea6f2da5f5f1190cc21630a9",
     "site/task-guides/connections/README.md": "f34e56bf0ea8e2038dc840a55b437f3c3baece118292ef87d11bf34c55f1aeeb",
@@ -2226,6 +2227,7 @@
     "tests/fixtures/music-original-nine.json": "3fc5db326922fb8edcea802f6beacbfb55ba11c193532caa1b60cbf65ff5d81e",
     "tests/fixtures/nonlesson-prerequisites-baseline.json": "21dab97329bf24f0ccf9d6f9876277bc1d061e765d9fd1b39ae3b18442b44b76",
     "tests/fixtures/poster-original-twelve.json": "3ddea7d675cb45524930227549a93b123957d9f70346fd419fefb28385263af4",
+    "tests/fixtures/poster-other-tasks-dom-baseline.json": "76eb2beb6ee29730896ef17493fa22c0a3ec0d379529ada6656e72504700ca20",
     "tests/fixtures/regional-office-baseline.json": "bd4ae92e2b896dcf902bc2e870402a73f5b9a2500dc30923a2b379a8383f814b",
     "tests/fixtures/study-original-eleven.json": "3a30a0c52aeb8cf818367bd2d1b3f771e888598ee61bfab787215c9e1b13a746",
     "tests/fixtures/video-original-ten.json": "14ac789d425a27130557f1b84b2fb7d5e71e706ec7edff9c75b63af0ef4c437f",
@@ -2236,7 +2238,7 @@
     "tests/office-ui.test.js": "7c52a7c1cd6b24c1d5fd8c855bd74b2a27ec57d753c442aef03a6c9532e90497",
     "tests/offline-office-ui.test.js": "6d5a3be6837289b495435c9b9eeabc32c0a0a69eb18cb773083e0aac7a594fa3",
     "tests/offline-prerequisite-intro.test.js": "1587cdd1aee12a181ebd58ad5e16affa80196306f0b12b8acc70f22df61fba93",
-    "tests/poster-task-ui.test.js": "beb06cdae0285b0bd4b6c5681d07549529bf5a07090c8bf0e474435ab31e3090",
+    "tests/poster-task-ui.test.js": "700a529cf5bd910f03612ae11e68feac22d97a1f3a3805a39634dda0f6bfeb2f",
     "tests/product-books.test.js": "daf96789164f572367147cf43d132831b8d53389ffc4a08eadc0e73cc4a3a48c",
     "tests/product-catalog.test.js": "8734f564a4af6d4786ebe421f0cf4db5c6e64421665d77d8bfded46feac8f8da",
     "tests/product-reader-ui.test.js": "d009bf979ef28ab6d74a1d04af48d56e3744d1a68a891af80752f44955ce5ca5",
@@ -2294,7 +2296,7 @@
     "web/reader.js": "1a69c8a672dfd2c6d6776077df645725f2abf9ef4175c43f48b48089a2b4f35c",
     "web/style.css": "0d44a30cc0b4fa6729d2d05911eec9e6d8c70fe8742408c04da57013ef0bcd7a",
     "web/task-first.css": "cfff3587042744f7a99d624ae168c24d6477f877065660eb8faf2627bbaf3883",
-    "web/task-first.js": "ccc4e08872a5d41190528dd3518bc02c19c0e2e4b932e0002f46e2a13558e9f2"
+    "web/task-first.js": "e9b960f37c3ba291aa341539d5ee03360968007b9716f565aa5f4ec0cd730bc3"
   },
   "baseline_candidate": {
     "name": "agentwork-task-search-r1",

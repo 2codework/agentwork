@@ -65,3 +65,35 @@ test('poster branch rejects unknown input identity and content markup stays iner
  for(const [field,value]of [['interaction_mode','upload-anything'],['schema','poster-workflow/unknown'],['asset_base','https://evil.example/']]){const bad=structuredClone(data),v=bad.workflows.find(x=>x.id===w.id);v[field]=value;const page=await boot('?work='+w.id+'&step=setup',false,'/agentwork/index.html','',bad);assert.equal(all(section(page)).filter(n=>['IMG','BUTTON','INPUT'].includes(n.tagName)).length,0);}
  for(const [field,value]of [['before','https://evil.example/before.png'],['reference','../after.png'],['before','assets/unknown.png']]){const bad=structuredClone(data),v=bad.workflows.find(x=>x.id===w.id);v.images[field]=value;for(const key of ['prepare','prompt','setup']){const page=await boot('?work='+w.id+'&step='+key,false,'/agentwork/index.html','',bad);assert.ok(!all(section(page)).some(n=>n.tagName==='IMG'&&src(n)===value));assert.equal(all(section(page)).filter(n=>['IMG','BUTTON','INPUT'].includes(n.tagName)).length,0);}}
 });
+
+test('each displayed poster image has one native keyboard-reachable original-size link with truthful role',async()=>{
+ const w=posterTask(),allowed={'assets/before.png':'原始输入 before.png','assets/after-authored.png':'作者理想对照 after-authored.png（非产品输出）'};
+ for(const step of ['prepare','prompt']){
+  const b=await boot('?work='+w.id+'&step='+step),s=section(b),figs=all(s).filter(n=>n.attrs['data-poster-image']);
+  assert.equal(figs.length,step==='prepare'?1:2);
+  for(const fig of figs){
+   const name=fig.attrs['data-poster-image'],links=all(fig).filter(n=>n.attrs['data-poster-fullsize']);
+   assert.equal(links.length,1);const a=links[0];assert.equal(a.tagName,'A');assert.equal(a.textContent,'查看大图（新标签页）');
+   assert.equal(href(a),'task-guides/poster/'+name);assert.equal(new URL(href(a),'https://2codework.github.io/agentwork/').origin,'https://2codework.github.io');
+   assert.equal(a.attrs.target,'_blank');assert.equal(a.attrs.rel,'noopener noreferrer');assert.equal(a.attrs['aria-label'],allowed[name]+'：查看大图（新标签页）');
+   assert.ok(!('download' in a.attrs));assert.ok(!('tabindex' in a.attrs));assert.equal(a.events.click,undefined);
+   const img=all(fig).find(n=>n.tagName==='IMG');assert.ok(img.attrs.alt);assert.equal(src(img),href(a));assert.ok(all(fig).find(n=>n.tagName==='FIGCAPTION').textContent);
+   assert.ok(fs.existsSync(path.join(root,'site',href(a))));
+  }
+  b.events.popstate();assert.equal(all(section(b)).filter(n=>n.attrs['data-poster-fullsize']).length,figs.length);
+  assert.ok(all(s).some(n=>n.tagName==='A'&&'download' in n.attrs&&href(n).endsWith(step==='prepare'?'assets/before.png':'assets/after-authored.png')));
+ }
+});
+test('unregistered and unsafe image paths never gain a full-size link',async()=>{
+ const w=posterTask();
+ for(const value of ['https://evil.example/image.png','//evil.example/x.png','javascript:alert(1)','../before.png','assets/before.png?redirect=x','assets/before.png#x','assets/unknown.png','__proto__']){
+  const fixture=structuredClone(data),item=fixture.workflows.find(x=>x.id===w.id);item.images.before=value;
+  for(const step of ['prepare','prompt']){const b=await boot('?work='+w.id+'&step='+step,false,'/agentwork/index.html','',fixture);assert.equal(all(section(b)).filter(n=>n.attrs['data-poster-fullsize']).length,0,value);}
+ }
+});
+test('all other twelve tasks retain their complete six-phase DOM',async()=>{
+ const crypto=require('node:crypto'),baseline=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/poster-other-tasks-dom-baseline.json')));
+ const shape=n=>({tag:n.tagName,text:n._text,attrs:n.attrs,open:n.open,children:n.children.map(shape)});
+ assert.equal(Object.keys(baseline).length,72);
+ for(const w of data.workflows.filter(w=>!w.poster_workflow))for(const step of STEPS){const b=await boot('?work='+w.id+'&step='+step);assert.equal(crypto.createHash('sha256').update(JSON.stringify(shape(b.ids.screen))).digest('hex'),baseline[w.id+'/'+step],w.id+'/'+step);}
+});
