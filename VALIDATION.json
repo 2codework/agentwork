@@ -1,7 +1,7 @@
 {
-  "version": "agentwork-study-task-integration-r2",
+  "version": "agentwork-study-reading-copy-r1",
   "checked_at": "2026-10-29",
-  "baseline_commit": "8bcffa2d85671f7ffa60170d59bf2c17b0b374c6",
+  "baseline_commit": "9fcf3cd661a5967ecb72d97a4c937095f10167f2",
   "manifest_scope": "all repo files excluding .git, caches, pyc and this VALIDATION.json",
   "counts": {
     "beginner_workflows": 12,
@@ -20,7 +20,7 @@
     "status": "isolated_candidate_not_published",
     "offline_checks": {
       "python": 267,
-      "node": 147,
+      "node": 149,
       "node_modes": "default complete command and serial complete command",
       "mcp_tests": 18,
       "mcp_cases": 12,
@@ -35,7 +35,7 @@
     "learner_answers": "not_collected",
     "learning_outcomes": "not_measured",
     "browser_qa": "not_run",
-    "scope": "Static source, asset integrity, safe DOM mock, exact preservation and quiescent build checks; not Gemini execution, learning-outcome evaluation or unbounded atomic build proof."
+    "scope": "Only two exact study display sentence projections and visible send-once.txt download filename; source/data/copy payloads/other tasks unchanged."
   },
   "sha256": {
     ".github/workflows/checks.yml": "031409aa64ddf377d741d2fa54de73c0af1da005e9a86b8a6878846402e3deaa",
@@ -173,7 +173,7 @@
     "docs/creative-workflows/r2/qa-dispositions.json": "344eed6b6596c6e1fed8cef4a7e9ecde8018e25b694a76918afdeb5dfa5e4643",
     "docs/creative-workflows/r2/validation.json": "f0f2dad0b87f63a62eddfea8c38accea026ec2dea774934a28958b2b56d0b13f",
     "docs/data.json": "e4ff39b74c99cc39095c36ff84714c517161a9b7f43748a3418b7575b49c3cfc",
-    "docs/index.html": "0d35b3546fe2edcddfa7c07f9ada9b697259f0eb1805bd49bcdf1fae5895597c",
+    "docs/index.html": "6c6941be38a3fe30a0a3ac7cd535036e163d72f8e63d03ca92fc5ec9006fc216",
     "docs/learning/mcp/overlay.json": "65b51f88d5f371e92bc799b76ed2c04a6e629dae219137f4ac0f17a79cc33ade",
     "docs/learning/mcp/raw/README.md": "06a6b350077bd39e50bed3e9a6b5a78a845b05649ad1290b197b0c6c47f8b585",
     "docs/learning/mcp/raw/cases.json": "baf6efc3565bfb09a45986f7c1fbcf50e5d5e194e98fa985231d369380266cb1",
@@ -611,7 +611,7 @@
     "docs/product-books/tasks/awbench-support-draft-v1.json": "15e93e400ac211d228048afe4091f07144854c7aa705b0859c7b9b86fc5a01d8",
     "docs/product-books-data.json": "d8f3822d1b73e984e9afc50bcfd75995184683510f4eaa7157c9331af5e108d8",
     "docs/product-books.css": "7c526ddfc2b623a50513a865dc2d4fb5fe092bb194ece0afd22aed7f90aa6a8d",
-    "docs/product-books.html": "16ede6029ab79b58f035c95b1a47380704e082d42ba67cd1bab5dc0bb6e8cac4",
+    "docs/product-books.html": "05313642d0300e58da28a2f05781edd9986020ba5919d301b9b62056879d06c6",
     "docs/product-books.js": "9e67d29f92af90210217c713f7954ac9026e820bddafbede5d616a90408620cd",
     "docs/product-library.html": "4ee46ac49462dfe219ea9c65be376b9b91f157ba5a57b08a244762a85b45713b",
     "docs/product-library.js": "85aea1f49230bc95c307a900e7113c092429f734c0e508c7ec6f1b2540b254d0",
@@ -634,7 +634,7 @@
     "docs/style.css": "0d44a30cc0b4fa6729d2d05911eec9e6d8c70fe8742408c04da57013ef0bcd7a",
     "docs/task-first-data.json": "d98c61723fecfd4071f6b03af82f29aad7bda97b51080541eb56895a365d3597",
     "docs/task-first.css": "9a0b60b3af4274f85fb3abbba47f1db32651f151597a325b6996b26ab857553c",
-    "docs/task-first.js": "62882a70120a8456687a12419a9be030bd6d844615f5634bfa4478325db849ba",
+    "docs/task-first.js": "70b257496c9f36bf324e7ef5f30fed10239fb4534efc380f7b332f7d1db1e337",
     "docs/task-guides/connections/DELTA.md": "300151c494a4af3c6ecf5c3b2d5c6650d480fba653f8b0c8089887c1eb65060d",
     "docs/task-guides/connections/GUIDE.zh-CN.md": "1de3475e966dbfe47401fb09e24de206488b2826ea6f2da5f5f1190cc21630a9",
     "docs/task-guides/connections/README.md": "f34e56bf0ea8e2038dc840a55b437f3c3baece118292ef87d11bf34c55f1aeeb",
@@ -1576,7 +1576,7 @@
     "site/creative-workflows/r2/qa-dispositions.json": "344eed6b6596c6e1fed8cef4a7e9ecde8018e25b694a76918afdeb5dfa5e4643",
     "site/creative-workflows/r2/validation.json": "f0f2dad0b87f63a62eddfea8c38accea026ec2dea774934a28958b2b56d0b13f",
     "site/data.json": "e4ff39b74c99cc39095c36ff84714c517161a9b7f43748a3418b7575b49c3cfc",
-    "site/index.html": "0d35b3546fe2edcddfa7c07f9ada9b697259f0eb1805bd49bcdf1fae5895597c",
+    "site/index.html": "6c6941be38a3fe30a0a3ac7cd535036e163d72f8e63d03ca92fc5ec9006fc216",
     "site/learning/mcp/overlay.json": "65b51f88d5f371e92bc799b76ed2c04a6e629dae219137f4ac0f17a79cc33ade",
     "site/learning/mcp/raw/README.md": "06a6b350077bd39e50bed3e9a6b5a78a845b05649ad1290b197b0c6c47f8b585",
     "site/learning/mcp/raw/cases.json": "baf6efc3565bfb09a45986f7c1fbcf50e5d5e194e98fa985231d369380266cb1",
@@ -2014,7 +2014,7 @@
     "site/product-books/tasks/awbench-support-draft-v1.json": "15e93e400ac211d228048afe4091f07144854c7aa705b0859c7b9b86fc5a01d8",
     "site/product-books-data.json": "d8f3822d1b73e984e9afc50bcfd75995184683510f4eaa7157c9331af5e108d8",
     "site/product-books.css": "7c526ddfc2b623a50513a865dc2d4fb5fe092bb194ece0afd22aed7f90aa6a8d",
-    "site/product-books.html": "16ede6029ab79b58f035c95b1a47380704e082d42ba67cd1bab5dc0bb6e8cac4",
+    "site/product-books.html": "05313642d0300e58da28a2f05781edd9986020ba5919d301b9b62056879d06c6",
     "site/product-books.js": "9e67d29f92af90210217c713f7954ac9026e820bddafbede5d616a90408620cd",
     "site/product-library.html": "4ee46ac49462dfe219ea9c65be376b9b91f157ba5a57b08a244762a85b45713b",
     "site/product-library.js": "85aea1f49230bc95c307a900e7113c092429f734c0e508c7ec6f1b2540b254d0",
@@ -2037,7 +2037,7 @@
     "site/style.css": "0d44a30cc0b4fa6729d2d05911eec9e6d8c70fe8742408c04da57013ef0bcd7a",
     "site/task-first-data.json": "d98c61723fecfd4071f6b03af82f29aad7bda97b51080541eb56895a365d3597",
     "site/task-first.css": "9a0b60b3af4274f85fb3abbba47f1db32651f151597a325b6996b26ab857553c",
-    "site/task-first.js": "62882a70120a8456687a12419a9be030bd6d844615f5634bfa4478325db849ba",
+    "site/task-first.js": "70b257496c9f36bf324e7ef5f30fed10239fb4534efc380f7b332f7d1db1e337",
     "site/task-guides/connections/DELTA.md": "300151c494a4af3c6ecf5c3b2d5c6650d480fba653f8b0c8089887c1eb65060d",
     "site/task-guides/connections/GUIDE.zh-CN.md": "1de3475e966dbfe47401fb09e24de206488b2826ea6f2da5f5f1190cc21630a9",
     "site/task-guides/connections/README.md": "f34e56bf0ea8e2038dc840a55b437f3c3baece118292ef87d11bf34c55f1aeeb",
@@ -2189,7 +2189,7 @@
     "tests/reader.test.js": "e117bc13982b5c365833a14dddc95e1e2ae811be72ca223de912a6014fb75bca",
     "tests/reference-order.test.js": "0ff2429636b46d6acc0abf7e6feef19fa309ed73af84871d37b9e6e72caa1b3d",
     "tests/regional-ui.test.js": "1d33f52f2f97198f4eddc1a91e5b45dcdb924ba8d8ffeebea97bc7d79d8aed4e",
-    "tests/study-task-ui.test.js": "3e56a9413aa812fdde8b077c86738c2b76d8f457a5ea7a038418c6acaaed738f",
+    "tests/study-task-ui.test.js": "6ab5ab2c64ff99c852dfe24a4fc4db459aa892974583b703babf902701f594c9",
     "tests/task-first.test.js": "c6f68bb385882b526d9ac87aa6c9e7b43f0e2469dbdadcfad386fd2b0acb64bb",
     "tests/task-search.test.js": "1a1fe7ab07a94378d77cc2c79ab2c2b621dccacfe9a6846e1a50dbf34b8e8a97",
     "tests/test_asset_versions.py": "4afe5c2ffb45d42c2f675b91f4877f815c22cb015456f4e6959e958ec0f1ea99",
@@ -2238,7 +2238,7 @@
     "web/reader.js": "1a69c8a672dfd2c6d6776077df645725f2abf9ef4175c43f48b48089a2b4f35c",
     "web/style.css": "0d44a30cc0b4fa6729d2d05911eec9e6d8c70fe8742408c04da57013ef0bcd7a",
     "web/task-first.css": "9a0b60b3af4274f85fb3abbba47f1db32651f151597a325b6996b26ab857553c",
-    "web/task-first.js": "62882a70120a8456687a12419a9be030bd6d844615f5634bfa4478325db849ba"
+    "web/task-first.js": "70b257496c9f36bf324e7ef5f30fed10239fb4534efc380f7b332f7d1db1e337"
   },
   "baseline_candidate": {
     "name": "agentwork-task-search-r1",

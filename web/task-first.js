@@ -116,17 +116,25 @@ if(typeof document!=='undefined') (async()=>{
   return section;
  }
  const STUDY_FILES=['README.zh-CN.md','material.txt','card-prompt.txt','send-once.txt','reference-cards.md','self-test-questions.txt','self-test-answers.md','correction-prompt.txt','error-log.md','sources.md'];
+ function studyDisplayBody(w,key){
+  const body=w.sections[key].body;if(w.id!=='study-three-cards')return body;
+  const changes={
+   prepare:['打开同目录 \x60material.txt\x60，完整读一遍L1–L8。','先读下方固定材料的 L1–L8；也可下载 material.txt 后阅读。'],
+   prompt:['**推荐简路：复制完整的 \x60send-once.txt\x60。**','推荐简路：复制下方完整制卡消息。']
+  },change=changes[key];
+  return change&&typeof body==='string'&&body.startsWith(change[0])?change[1]+body.slice(change[0].length):body;
+ }
  function studySection(parent,w,key){
   const section=add(parent,'section',undefined,{id:'step-'+key,'data-step':key});
   if(w.schema!=='study-workflow/1'||w.interaction_mode!=='paste-material'||w.asset_base!=='task-guides/study/'){add(section,'h2','这份学习路线的输入方式未获登记');add(section,'p','暂不显示复制或操作入口，请返回任务列表。');return section;}
-  const phase=w.sections[key];add(section,'h2',phase.title);md(section,phase.body);
+  const phase=w.sections[key];add(section,'h2',phase.title);md(section,studyDisplayBody(w,key));
   function download(parent,name,label){if(STUDY_FILES.includes(name))add(parent,'a',label,{href:w.asset_base+name,download:'',class:'study-download'});}
   if(key==='prepare'){copy(section,'复制固定材料（只供阅读核对）',w.study_assets['material.txt']);download(section,'material.txt','下载固定材料');download(section,'error-log.md','下载空白错误日志');}
   if(key==='tool')add(section,'a','打开 Gemini 官方普通聊天',{href:'https://gemini.google.com/',target:'_blank',rel:'noopener noreferrer',class:'primary'});
   if(key==='setup')link(section,'工具条件未确认？回第 2 步',taskLink(w.id,route,'tool'),'study-download');
   if(key==='prompt'){
    link(section,'还没新建普通对话？先回第 3 步',taskLink(w.id,route,'setup'),'study-download');
-   copy(section,'复制完整制卡消息（提示与材料已合并）',w.study_assets['send-once.txt']);download(section,'send-once.txt','下载完整制卡消息');md(section,phase.after_send);
+   copy(section,'复制完整制卡消息（提示与材料已合并）',w.study_assets['send-once.txt']);download(section,'send-once.txt','下载完整制卡消息（send-once.txt）');md(section,phase.after_send);
    const reference=add(section,'details',undefined,{'data-study-reference':'true'});add(reference,'summary','核对作者参考三卡（正常学习，非产品实跑）');md(reference,w.study_assets['reference-cards.md']);download(reference,'reference-cards.md','下载作者参考卡');
    const manual=add(section,'details',undefined,{'data-study-manual':'true'});add(manual,'summary','备用：逐块放材料与提示（不与完整消息重复使用）');md(manual,phase.manual_body);copy(manual,'复制单独制卡提示（需另附完整材料）',w.study_assets['card-prompt.txt']);download(manual,'card-prompt.txt','下载单独制卡提示');
   }

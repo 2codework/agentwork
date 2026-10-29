@@ -78,3 +78,25 @@ test('exact application-model-API alias reaches the study card and preserves the
  const start=all(cards[0]).find(n=>n.tagName==='A');start.events.click({preventDefault(){}});assert.equal(new URLSearchParams(b.location.search).get('q'),query);
  const back=all(b.ids.screen).find(n=>n.tagName==='A'&&n.textContent==='← 选任务');assert.ok(back);back.events.click({preventDefault(){}});assert.equal(new URLSearchParams(b.location.search).get('q'),query);assert.equal(all(b.ids.screen).filter(n=>n.attrs['data-workflow-id']).length,1);
 });
+
+test('study only exact first sentences change; remaining prose and copied bytes stay original',async()=>{
+ const w=studyTask();
+ const oldPrepare='打开同目录 \x60material.txt\x60，完整读一遍L1–L8。',newPrepare='先读下方固定材料的 L1–L8；也可下载 material.txt 后阅读。';
+ const oldPrompt='**推荐简路：复制完整的 \x60send-once.txt\x60。**',newPrompt='推荐简路：复制下方完整制卡消息。';
+ for(const [key,oldText,newText]of [['prepare',oldPrepare,newPrepare],['prompt',oldPrompt,newPrompt]]){
+  assert.ok(w.sections[key].body.startsWith(oldText));
+  const b=await boot('?work='+w.id+'&step='+key),s=all(b.ids.screen).find(n=>n.attrs['data-step']===key);
+  assert.ok(s.textContent.includes(newText));assert.ok(s.textContent.includes(b.plain(w.sections[key].body.slice(oldText.length))));
+  assert.ok(!s.textContent.includes(oldText));if(key==='prompt'){assert.ok(!s.textContent.includes('\x60send-once.txt\x60'));assert.ok(all(s).some(n=>n.tagName==='A'&&n.textContent==='下载完整制卡消息（send-once.txt）'&&href(n)===w.asset_base+'send-once.txt'));}
+  const button=all(s).find(n=>n.tagName==='BUTTON'&&n.textContent===(key==='prepare'?'复制固定材料（只供阅读核对）':'复制完整制卡消息（提示与材料已合并）'));
+  await button.events.click();assert.equal(b.copied.at(-1),w.study_assets[key==='prepare'?'material.txt':'send-once.txt']);
+ }
+});
+test('study exact-prefix projection does not rewrite a changed sentence or a lookalike workflow',async()=>{
+ for(const change of [w=>w.sections.prepare.body='不同开头。'+w.sections.prepare.body,w=>w.id='study-three-cards-extra']){
+  const fixture=structuredClone(data),w=fixture.workflows.find(w=>w.id==='study-three-cards');change(w);
+  const b=await boot('?work='+w.id+'&step=prepare',false,'/agentwork/index.html','',fixture);
+  assert.ok(b.ids.screen.textContent.includes(b.plain(w.sections.prepare.body)));
+  assert.ok(!b.ids.screen.textContent.includes('先读下方固定材料的 L1–L8'));
+ }
+});
