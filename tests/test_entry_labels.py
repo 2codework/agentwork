@@ -35,7 +35,7 @@ class EntryParser(HTMLParser):
         node = Element(tag, attrs)
         self.stack[-1].children.append(node)
         for cls in node.attrs.get('class', '').split():
-            if cls in ('brand', 'cta', 'edition'):
+            if cls in ('brand', 'search-label', 'edition'):
                 if cls in self.entries:
                     raise AssertionError('duplicate entry: ' + cls)
                 self.entries[cls] = node
@@ -61,23 +61,23 @@ class EntryLabelsTests(unittest.TestCase):
             with self.subTest(folder=folder):
                 brand = entries['brand']
                 self.assertEqual(brand.tag, 'a')
-                self.assertEqual(brand.attrs['href'], '#')
+                self.assertEqual(brand.attrs['href'], '?view=cases')
                 self.assertEqual(brand.text().strip(), 'AW AgentWork')
                 self.assertEqual(brand.name(), 'AgentWork 首页')
                 self.assertEqual(brand.text(accessible=True).strip(), 'AgentWork')
                 self.assertEqual(brand.children[0].attrs.get('aria-hidden'), 'true')
 
-    def test_cta_single_label_and_decorative_arrow(self):
+    def test_search_replaces_hero_cta_with_explicit_accessible_label(self):
         for folder, entries in self.entries():
             with self.subTest(folder=folder):
-                cta = entries['cta']
-                self.assertEqual(cta.tag, 'a')
-                self.assertEqual(cta.attrs['href'], '#reader')
-                self.assertEqual(cta.text().strip(), '开始阅读 →')
-                self.assertEqual(cta.name(), '开始阅读')
-                decoration = [c for c in cta.children if isinstance(c, Element)]
-                self.assertEqual(len(decoration), 1)
-                self.assertEqual(decoration[0].attrs.get('aria-hidden'), 'true')
+                label = entries['search-label']
+                self.assertEqual(label.tag, 'label')
+                self.assertEqual(label.attrs['for'], 'search')
+                self.assertEqual(label.name(), '搜索实践')
+                html = (ROOT / folder / 'index.html').read_text()
+                self.assertIn('id="search" type="search"', html)
+                self.assertIn('id="clear" type="button">清空筛选', html)
+                self.assertNotIn('class="hero"', html)
 
     def test_edition_is_batch_independent(self):
         for folder, entries in self.entries():

@@ -65,6 +65,7 @@ class OfflineOfficeLabTests(unittest.TestCase):
   self.assertTrue(any(t=='main' and a.get('id')=='main' for t,a in page.tags))
   self.assertFalse(any(t in ('script','form','iframe') for t,a in page.tags))
   self.assertIn('#main',page.links);self.assertIn('offline-office/r1/meeting-action-lab-r1.zip',page.links)
-  self.assertIn('offline-office-lab.html',(ROOT/'web/index.html').read_text())
+  self.assertIn("['labs','离线练习']",(ROOT/'web/app.js').read_text())
+  self.assertIn('offline-office-lab.html',(ROOT/'web/app.js').read_text())
   for token in ['dispatch_allowed','false','Linux','macOS','未验证','input_sha256','submission_sha256','不是身份认证或签名','不是恶意文件系统沙箱','不是模型生成结果']:self.assertIn(token,html)
 if __name__=='__main__':unittest.main()

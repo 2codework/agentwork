@@ -23,5 +23,11 @@ class BuildTests(unittest.TestCase):
  def test_safe_rendering(self):
   js=(ROOT/'web/app.js').read_text();self.assertNotIn('innerHTML',js);self.assertNotIn('eval(',js)
  def test_no_remote_dependencies(self):
-  html=(ROOT/'web/index.html').read_text();self.assertNotIn('src="https:',html);self.assertNotIn('href="https:',html)
+  from html.parser import HTMLParser
+  class Assets(HTMLParser):
+   def handle_starttag(parser,tag,attrs):
+    a=dict(attrs)
+    if tag in ('script','img','iframe') or (tag=='link' and a.get('rel')=='stylesheet'):
+     url=a.get('src',a.get('href',''));self.assertFalse(url.startswith(('https:','http:','//')),url)
+  Assets().feed((ROOT/'web/index.html').read_text())
 if __name__=='__main__':unittest.main()
